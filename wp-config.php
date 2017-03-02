@@ -19,17 +19,34 @@
  */
 
 // ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'wp_leeu');
+if(trim($_SERVER['SERVER_NAME']) == 'localhost')
+{
+	/** The name of the database for WordPress */
+	define('DB_NAME', 'wp_leeu');
 
-/** MySQL database username */
-define('DB_USER', 'root');
+	/** MySQL database username */
+	define('DB_USER', 'root');
 
-/** MySQL database password */
-define('DB_PASSWORD', '');
+	/** MySQL database password */
+	define('DB_PASSWORD', '');
 
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
+	/** MySQL hostname */
+	define('DB_HOST', 'localhost');
+}
+else
+{
+	/** The name of the database for WordPress */
+	define('DB_NAME', 'wp_leeu');
+
+	/** MySQL database username */
+	define('DB_USER', 'root');
+
+	/** MySQL database password */
+	define('DB_PASSWORD', 'D3v20!4');
+
+	/** MySQL hostname */
+	define('DB_HOST', 'localhost');
+}
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
