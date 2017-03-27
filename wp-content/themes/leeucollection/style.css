@@ -1,0 +1,42 @@
+/*
+Theme Name: Leeu Collection
+Theme URI: 
+Author: Tanmay Vats & Saurav Bisht
+Author URI: https://wordpress.org/
+Description: Custom theme for group of hotels.
+Version: 1.3
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: 
+Text Domain: leeucollection
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+.header-menu-logo-wrapper,
+.footer-menu-wrapper
+{
+	display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+.menu-header-menu-left-container ul,
+.menu-header-menu-right-container ul,
+.social-links ul,
+.menu-footer-menu-left-container ul,
+.menu-footer-menu-right-container ul
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.menu-header-menu-left-container ul li,
+.menu-header-menu-right-container ul li,
+.social-links ul li,
+.menu-footer-menu-left-container ul li,
+.menu-footer-menu-right-container ul li
+{
+	display: inline-block;
+	margin: 50px 14px;
+}
