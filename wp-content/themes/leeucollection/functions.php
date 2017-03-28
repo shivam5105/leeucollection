@@ -418,7 +418,147 @@ function remove_menu_pages() {
     remove_menu_page('edit.php');
 }
 /**************/
+add_action('admin_head', 'custom_css_for_admin_only');
 
+function custom_css_for_admin_only()
+{
+	?>
+	<style type="text/css">
+		.post-type-hotel .level-1
+		{
+		    background: rgba(142, 169, 187, 0.26) !important;
+		}
+		.post-type-hotel .level-2
+		{
+		    background: rgba(132, 190, 48, 0.26) !important;
+		}
+		.post-type-hotel .level-3
+		{
+		    background: rgba(142, 142, 187, 0.26) !important;
+		}
+		.post-type-hotel .level-3
+		{
+		    background: rgba(175, 142, 187, 0.26) !important;
+		}
+		.post-type-hotel .level-4
+		{
+		    background: rgba(233, 255, 155, 0.37) !important;
+		}
+		.post-type-hotel .level-5
+		{
+		    background: rgba(106, 104, 111, 0.27) !important;
+		}
+		.post-type-hotel .level-6
+		{
+		    background: rgba(255, 217, 166, 0.27) !important;
+		}
+		.post-type-hotel .level-7
+		{
+		    background: rgba(91, 197, 217, 0.27) !important;
+		}
+		.post-type-hotel .level-8
+		{
+		    background: rgba(187, 157, 142, 0.26) !important;
+		}
+		.post-type-hotel .level-9
+		{
+		    background: rgba(187, 187, 142, 0.26) !important;
+		}
+		.post-type-hotel .level-10
+		{
+		    background: rgba(156, 187, 142, 0.26) !important;
+		}
+		.post-type-hotel .level-1 th,
+		.post-type-hotel .level-1 td:nth-child(2)
+		{
+			padding-left: 25px !important;
+		}
+		.post-type-hotel .level-2 th,
+		.post-type-hotel .level-2 td:nth-child(2)
+		{
+			padding-left: 50px !important;
+		}
+		.post-type-hotel .level-3 th,
+		.post-type-hotel .level-3 td:nth-child(2)
+		{
+			padding-left: 75px !important;
+		}
+		.post-type-hotel .level-4 th,
+		.post-type-hotel .level-4 td:nth-child(2)
+		{
+			padding-left: 100px !important;
+		}
+		.post-type-hotel .level-5 th,
+		.post-type-hotel .level-5 td:nth-child(2)
+		{
+			padding-left: 125px !important;
+		}
+		.post-type-hotel .level-6 th,
+		.post-type-hotel .level-6 td:nth-child(2)
+		{
+			padding-left: 150px !important;
+		}
+		.post-type-hotel .level-7 th,
+		.post-type-hotel .level-7 td:nth-child(2)
+		{
+			padding-left: 175px !important;
+		}
+		.post-type-hotel .level-8 th,
+		.post-type-hotel .level-8 td:nth-child(2)
+		{
+			padding-left: 200px !important;
+		}
+		.post-type-hotel .level-9 th,
+		.post-type-hotel .level-9 td:nth-child(2)
+		{
+			padding-left: 225px !important;
+		}
+		.post-type-hotel .level-10 th,
+		.post-type-hotel .level-10 td:nth-child(2)
+		{
+			padding-left: 250px !important;
+		}
+		.post-type-hotel .level-0 th,
+		.post-type-hotel .level-0 td
+		{
+		    border-top: 10px solid #e1e1e1 !important;
+		}
+		.post-type-hotel .level-0:first-child th,
+		.post-type-hotel .level-0:first-child td
+		{
+		    border-top: 0 !important;
+		}
+	</style>
+	<?php
+}
+
+add_action('admin_head', 'custom_visibility_of_admin_fields');
+
+function custom_visibility_of_admin_fields()
+{
+    ?>  
+    <script type="text/javascript">
+        var $ = jQuery.noConflict();
+        $(document).ready(function(){
+            var $select = $('select#page_template');
+
+            $select.on('change', function(event) {
+                var template = $(this).val();
+                if(template == "template-hotel.php")
+                {
+                    $("#location-categorydiv").show();
+                }
+                else
+                {
+                    $("#location-categorydiv").hide();
+                    $("#location-categorydiv [type='checkbox']").css({'color':'red !important'}).attr("checked", false);
+                    $("#location-categorydiv [type='checkbox']").removeAttr("checked");
+                }
+            });
+        });
+    </script>
+    <?php
+}
 class Crb_Main_Menu_Walker extends Walker_Nav_Menu {
     public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
         $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';

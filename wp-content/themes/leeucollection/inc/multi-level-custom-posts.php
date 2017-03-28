@@ -282,6 +282,12 @@ function location_taxonomy()
 	custom_taxonomy($data);
 }
 add_action( 'init', 'location_taxonomy');
+function enquiry_type_taxonomy()
+{
+	$data = array('post-slug' => 'hotel', 'name' => 'Enquiry Types' ,'singular_name' => 'Enquiry Type', 'slug' => 'enquiry-type', 'textdomain' => 'leeucollection');
+	custom_taxonomy($data);
+}
+add_action( 'init', 'enquiry_type_taxonomy');
 
 /** Custom Post Type Template Selector **/
 function cpt_add_meta_boxes() {
