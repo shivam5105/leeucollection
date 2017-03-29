@@ -24,7 +24,24 @@ Container::make('post_meta', 'Left Menu Image')
     ->set_context('side')
     ->set_priority('low')
     ->add_fields(array(
-        Field::make('image', 'crb_left_nav_image', '')->help_text('(Image Dimensions (WxH): w x h)'),
+        Field::make('image', 'crb_left_nav_image', '')->help_text('(Image Dimensions (WxH): 150 x 113)'),
+    ));
+
+//Additional Info
+Container::make('post_meta', 'Additional Titles')
+    ->show_on_post_type('hotel')
+    ->hide_on_template(array('template-hotel.php', 'default'))
+    ->add_fields(array(
+        Field::make('text', 'crb_alternate_title' , 'Alternate Title')->help_text('This will come on hotel page.'),
+        Field::make('text', 'crb_alternate_title_2' , 'Alternate Title 2')->help_text('This will come on room group page.'),
+    ));
+
+//Additional Info
+Container::make('post_meta', 'Additional Info')
+    ->show_on_post_type('hotel')
+    ->show_on_template(array('template-roomgroup.php','template-restaurant.php'))
+    ->add_fields(array(
+       Field::make("radio", "crb_show_view_all_link", "Show View All Link On Hotel Page")->add_options(array('1' => 'Yes','0' => 'No'))->set_default_value('1'),
     ));
 
 //Images Slider
@@ -33,7 +50,7 @@ Container::make('post_meta', 'Slider Images')
     ->show_on_template(array('template-hotel.php','template-room.php','template-restaurant.php'))
     ->add_fields(array(
         Field::make('complex', 'crb_slider_images', '')->add_fields(array(
-            Field::make('image', 'crb_slide_image', 'Slide Image')->help_text('(Image Dimensions (WxH): 821 x 478)'),
+            Field::make('image', 'crb_slide_image', 'Slide Image')->help_text('(Image Dimensions (WxH): 1240 x 600)'),
         )),
     ));
 
