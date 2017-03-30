@@ -32,17 +32,36 @@ Container::make('post_meta', 'Additional Titles')
     ->show_on_post_type('hotel')
     ->hide_on_template(array('template-hotel.php', 'default'))
     ->add_fields(array(
-        Field::make('text', 'crb_alternate_title' , 'Alternate Title')->help_text('This will come on hotel page.'),
+        Field::make('text', 'crb_alternate_title' , 'Alternate Title')->help_text('This will come on hotel detail page.'),
         Field::make('text', 'crb_alternate_title_2' , 'Alternate Title 2')->help_text('This will come on room group page.'),
     ));
 
 //Additional Info
 Container::make('post_meta', 'Additional Info')
     ->show_on_post_type('hotel')
-    ->show_on_template(array('template-roomgroup.php','template-restaurant.php'))
+    /*->show_on_template(array('template-roomgroup.php','template-restaurant.php'))*/
+    ->show_on_level(3)
     ->add_fields(array(
-       Field::make("radio", "crb_show_view_all_link", "Show View All Link On Hotel Page")->add_options(array('1' => 'Yes','0' => 'No'))->set_default_value('1'),
+        /*Field::make('select', 'crb_show_on_hotel_page', 'Show This Page On Hotel Detail Page')
+            ->add_options(array(
+                'yes' => 'Yes',
+                'no' => 'No',
+            ))->set_default_value('yes'),*/
+
+        Field::make('select', 'crb_show_view_all_link', 'Show View All Link On Hotel Detail Page')
+            ->add_options(array(
+                'yes' => 'Yes',
+                'no' => 'No',
+            ))/*->set_conditional_logic(array(
+                'relation' => 'AND', // Optional, defaults to "AND"
+                array(
+                    'field' => 'crb_show_on_hotel_page',
+                    'value' => 'yes', // Optional, defaults to "". Should be an array if "IN" or "NOT IN" operators are used.
+                    'compare' => '=', // Optional, defaults to "=". Available operators: =, <, >, <=, >=, IN, NOT IN
+                )
+            ))*/,
     ));
+
 
 //Images Slider
 Container::make('post_meta', 'Slider Images')

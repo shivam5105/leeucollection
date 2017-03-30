@@ -30,7 +30,7 @@
 						<li><a href="#">hotels</a>
 						<div class="sub-menu-wrapper">
 							<ul class="sub-menu">
-								<li><a href="#">FRANSCHHOEK, SOUTH AFRICA</a>
+								<li><a href="#">franschhoek, south africa</a>
 									<ul class="sub-menu">
 										<li><a href="#"><img src="img/submenu.jpg" alt=""><span>LEEU ESTATES</span></a></li>
 										<li><a href="#"><img src="img/submenu.jpg" alt=""><span>LE QUARTIER FRANCAIS</span></a></li>
@@ -39,7 +39,7 @@
 								</li>
 							</ul>
 							<ul class="sub-menu">
-								<li><a href="#">LAKE WINDERMERE, UK</a>
+								<li><a href="#">lake windermere, uk</a>
 									<ul class="sub-menu">
 										<li><a href="#"><img src="img/submenu-uk.jpg" alt=""><span>LEEU ESTATES</span></a></li>
 									</ul>
@@ -66,28 +66,28 @@
 		</nav>
 	</header> -->
 
-	<div class="header-menu-logo-wrapper">
-		<?php
-		if(has_nav_menu('header_menu_left'))
-		{
-			wp_nav_menu( array(
-				'theme_location' => 'header_menu_left',
-				'menu_class'     => 'header-menu-left',
-			    /*'walker' => new Crb_Main_Menu_Walker()*/
-			 ) );
-		}
-		?>
-		<div itemscope itemtype="http://schema.org/Organization">
-			<?php leeucollection_the_custom_logo(); ?>
+	<div itemscope itemtype="http://schema.org/Hotel">
+		<div class="header-menu-logo-wrapper">
+			<?php
+			if(has_nav_menu('header_menu_left'))
+			{
+				wp_nav_menu( array(
+					'theme_location' => 'header_menu_left',
+					'menu_class'     => 'header-menu-left',
+				    /*'walker' => new Crb_Main_Menu_Walker()*/
+				 ) );
+			}
+			?>
+			<div>
+				<?php leeucollection_the_custom_logo(); ?>
+			</div>
+			<?php
+			if(has_nav_menu('header_menu_right'))
+			{
+				wp_nav_menu( array(
+					'theme_location' => 'header_menu_right',
+					'menu_class'     => 'header-menu-right',
+				 ) );
+			}
+			?>
 		</div>
-		<?php
-		if(has_nav_menu('header_menu_right'))
-		{
-			wp_nav_menu( array(
-				'theme_location' => 'header_menu_right',
-				'menu_class'     => 'header-menu-right',
-			 ) );
-		}
-		?>
-	</div>
-

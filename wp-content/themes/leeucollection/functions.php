@@ -590,6 +590,7 @@ function tv_wp_list_categories($args = '')
 		'use_desc_for_title' => 1,
 		'no_anchor' => false,
 		'hide_last_separator' => false,
+		'reverse_order' => false,
 	);
 	$r = wp_parse_args($args, $defaults);
 	if (!isset($r['pad_counts']) && $r['show_count'] && $r['hierarchical']) $r['pad_counts'] = true;
@@ -695,11 +696,25 @@ function tv_wp_list_categories($args = '')
 			{
 				if ($r['no_anchor'] == true)
 				{
-					$output.= $show_option_all;
+					if($r['reverse_order'] == true)
+					{
+						$output = $show_option_all.$output;
+					}
+					else
+					{
+						$output.= $show_option_all;
+					}
 				}
 				else
 				{
-					$output.= "<a href='$posts_page'>$show_option_all</a>";
+					if($r['reverse_order'] == true)
+					{
+						$output = "<a href='$posts_page'>$show_option_all</a>".$output;
+					}
+					else
+					{
+						$output.= "<a href='$posts_page'>$show_option_all</a>";
+					}
 				}
 			}
 		}
@@ -782,7 +797,14 @@ class TV_Walker_Category extends Walker_Category
 		}
 		if ($args['no_anchor'] == true)
 		{
-			$link.= $cat_name;
+			if($args['reverse_order'] == true)
+			{
+				$link = $cat_name.$link;
+			}
+			else
+			{
+				$link.= $cat_name;
+			}
 		}
 		else
 		{
@@ -910,11 +932,25 @@ class TV_Walker_Category extends Walker_Category
 			}
 			else if(!empty($output) && $args['hide_last_separator'] == true)
 			{
-				$output.= $args['separator'] . "\t$link" . "\n";
+				if($args['reverse_order'] == true)
+				{
+					$output = "\t$link".$args['separator'].$output;
+				}
+				else
+				{
+					$output.= $args['separator'] . "\t$link" . "\n";
+				}
 			}
 			else
 			{
-				$output.= "\t$link" . $args['separator'] . "\n";
+				if($args['reverse_order'] == true)
+				{
+					$output = "\t$link" . $args['separator'] . "\n".$output;
+				}
+				else
+				{
+					$output.= "\t$link" . $args['separator'] . "\n";
+				}
 			}
 		}
 		else
@@ -925,16 +961,55 @@ class TV_Walker_Category extends Walker_Category
 			}
 			else if(!empty($output) && $args['hide_last_separator'] == true)
 			{
-				$output.= "<br />\t$link\n";
+				if($args['reverse_order'] == true)
+				{
+					$output = "<br />\t$link\n".$output;
+				}
+				else
+				{
+					$output.= "<br />\t$link\n";
+				}
 			}
 			else
 			{
-				$output.= "\t$link<br />\n";
+				if($args['reverse_order'] == true)
+				{
+					$output = "\t$link<br />\n".$output;
+				}
+				else
+				{
+					$output.= "\t$link<br />\n";
+				}
 			}
 		}
 	}
 }
+function get_hotel_location_list($post_id, $args1 = null)
+{
+	//$args1 - used for future purpose
 
+	$hotel_loc_taxonomy = "hotel-locations";
+	$args = array(
+			'orderby' => 'name',
+			'order' => 'ASC',
+			'fields' => 'ids'
+			);
+	$terms = wp_get_post_terms( $post_id, $hotel_loc_taxonomy, $args );
+
+	$hotel_location = tv_wp_list_categories( array(
+        'taxonomy' 				=> $hotel_loc_taxonomy,
+        'hierarchical' 			=> true,
+        'style'    				=> 'none',
+        'separator' 			=> ', ',
+        'title_li' 				=> '',
+        'no_anchor'				=> true,
+        'hide_last_separator' 	=> true,
+        'reverse_order' 		=> true,
+        'include' 				=> $terms,
+        'echo'					=> 0
+    ) );
+    return $hotel_location;
+}
 
 class Crb_Main_Menu_Walker extends Walker_Nav_Menu {
     public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
