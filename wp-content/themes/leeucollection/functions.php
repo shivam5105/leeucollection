@@ -1011,6 +1011,7 @@ class Crb_Main_Menu_Walker extends Walker_Nav_Menu {
         $nav_menu_image = carbon_get_post_meta($item->ID, 'nav_menu_image');
 
         $atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args, $depth );
+        $atts['style'] = ! empty( $nav_menu_image ) ? 'color: ' . $nav_menu_image . '; ' : '';
 
         $attributes = '';
         foreach ( $atts as $attr => $value ) {
