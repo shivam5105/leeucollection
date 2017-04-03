@@ -1,8 +1,7 @@
 <?php
 /*
-Template Name: Hotel
+Template Name: Hotel Landing
 */
-
 get_header(); ?>
 	<?php
 	$post_id = $post->ID;
@@ -10,176 +9,176 @@ get_header(); ?>
 
     $post_meta = ( $post ) ? get_post_meta( $post->ID ) : null;
     ?>
-    <div style="margin:0 auto; text-align: center;">
-    	<div itemprop="address">
-    		<?php echo $hotel_location; ?>
-    	</div>
-		<div>
-			<h1 itemprop="legalName"><?php echo $post->post_title;?></h1>
-		</div>
-    	
-		<?php
-    	$slider_data = carbon_get_post_meta($post->ID, "crb_slider_images", 'complex');
-		if(is_array($slider_data) && !empty($slider_data))
-		{
-			foreach ($slider_data as $slide_key => $slide_data)
-			{
-				$banner_url = wp_get_attachment_image_src( $slide_data['crb_slide_image'], '1240x600' );
-				$banner_url = $banner_url[0];
-				?>
-				<img itemprop="photo" src="<?php echo $banner_url; ?>" alt="" />
-				<?php
-			}
-		}
-		else
-		{
-			/*$banner_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );*/
-			$banner_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), '1240x600' );
-			$banner_url = $banner_url[0];
-			?>
-			<img itemprop="photo" src="<?php echo $banner_url; ?>" alt="" />
+    <section id="site-main">
+		<div class="container">
 			<?php
-		}?>
-		<div itemprop="description">
-			<?php echo $post->post_content; ?>
-		</div>
-		<table border='1' cellpadding="5" cellspacing="0" align="center" width="90%">
-			<tr>
-				<td width="25%" valign="top">
-					<?php
-					include_once("leeu_sidebar.php")
+			$has_slider = false;
+	    	$slider_data = carbon_get_post_meta($post->ID, "crb_slider_images", 'complex');
+			if(is_array($slider_data) && !empty($slider_data) && count($slider_data) > 1)
+			{
+				$has_slider = true;
+			}
+			?>
+			<div class="single_slider_wrapper scroll-anim mht_homebanner" data-anim="fade-up">
+				<?php
+				if($has_slider == true)
+				{
 					?>
-				</td>
-				<td valign="top">
+					<div class="next"></div>
 					<?php
-					if(!empty($child_post_array) && count($child_post_array) > 0)
+				}?>
+				<div class="owl-carousel single_slider owl-theme">
+					<?php
+					if(is_array($slider_data) && !empty($slider_data))
 					{
-						foreach($child_post_array as $child_key => $child_post)
+						foreach ($slider_data as $slide_key => $slide_data)
 						{
-							$child_post_id = $child_post->ID;
-							$child_post_meta = ( $child_post ) ? get_post_meta( $child_post_id ) : null;
-
-							$child_post_title = $child_post->post_title;
-							if(isset($child_post_meta['_crb_alternate_title']) && !empty($child_post_meta['_crb_alternate_title'][0]))
-							{
-								$child_post_title = $child_post_meta['_crb_alternate_title'][0];
-							}
+							$banner_url = wp_get_attachment_image_src( $slide_data['crb_slide_image'], '1240x600' );
+							$banner_url = $banner_url[0];
 							?>
-							<div>
-								<h2><?php echo $child_post_title; ?></h2>
-								<?php
-								if(isset($child_post_meta['_crb_show_view_all_link'][0]) && $child_post_meta['_crb_show_view_all_link'][0] == 'yes')
-								{
-									?>
-									<a href="<?php echo get_permalink($child_post_id); ?>">View All <?php echo $child_post->post_title; ?></a>
-									<br>
-									<?php
-								}
-								$args = array(
-									'order'=> 'ASC',
-									'post_parent' => $child_post_id,
-									'post_type' => 'hotel'
-									);
-
-								$child_post_array2 = get_children($args);
-								$child_post_img_url = wp_get_attachment_image_src(get_post_thumbnail_id($child_post_id),'821x478');
-								$child_post_img_url = $child_post_img_url[0];
-								if(!empty($child_post_array2))
-								{
-									foreach ($child_post_array2 as $child_key2 => $child_post2)
-									{
-										$child_post2_id = $child_post2->ID;
-
-										$child_post2_meta = ( $child_post2 ) ? get_post_meta( $child_post2_id ) : null;
-
-										$child_post2_img_url = wp_get_attachment_image_src(get_post_thumbnail_id($child_post2_id),'821x478');
-										$child_post2_img_url = $child_post2_img_url[0];
-										if(empty($child_post2_img_url))
-										{
-									    	$slider_data = carbon_get_post_meta($child_post2_id, "crb_slider_images", 'complex');
-											if(is_array($slider_data) && !empty($slider_data))
-											{
-												foreach ($slider_data as $slide_key => $slide_data)
-												{
-													$child_post2_img_url = wp_get_attachment_image_src( $slide_data['crb_slide_image'], '821x478' );
-													$child_post2_img_url = $child_post2_img_url[0];
-
-													break; /* Show One image of each post (room/restaurant etc) */
-												}
-											}
-										}
-										if(empty($child_post2_img_url))
-										{
-											//$child_post2_img_url = $child_post_img_url; /* If child do not have any image, then show parent image.*/
-										}
-										if(!empty($child_post2_img_url))
-										{
-											?>
-											<img itemprop="photo" src="<?php echo $child_post2_img_url; ?>" alt="" />
-											<?php
-										}
-										$slider_title 	= $child_post2->post_title;
-										$slider_desc 	= $child_post2->post_content;
-										if(isset($child_post2_meta['_crb_slider_bottom_heading']) && !empty($child_post2_meta['_crb_slider_bottom_heading'][0]))
-										{
-											$slider_title = $child_post2_meta['_crb_slider_bottom_heading'][0];
-										}
-										if(isset($child_post2_meta['_crb_slider_bottom_description']) && !empty($child_post2_meta['_crb_slider_bottom_description'][0]))
-										{
-											$slider_desc = $child_post2_meta['_crb_slider_bottom_description'][0];
-										}
-										if(!empty($slider_title) && !empty($slider_desc))
-										{
-											?>
-											<table border="1" width="100%" cellpadding="5" cellspacing="0">
-												<tr>
-													<td width="35%"><?php echo $slider_title; ?></td>
-													<td itemprop="disambiguatingDescription"><?php echo $slider_desc; ?></td>
-												</tr>
-											</table>
-											<?php
-										}
-									}
-								}
-								else
-								{
-									if(!empty($child_post_img_url))
-									{
-										?>
-										<img itemprop="photo" src="<?php echo $child_post_img_url; ?>" alt="" />
-										<?php
-									}
-									$slider_title 	= $child_post->post_title;
-									$slider_desc 	= $child_post->post_content;
-									if(isset($child_post_meta['_crb_slider_bottom_heading']) && !empty($child_post_meta['_crb_slider_bottom_heading'][0]))
-									{
-										$slider_title = $child_post_meta['_crb_slider_bottom_heading'][0];
-									}
-									if(isset($child_post_meta['_crb_slider_bottom_description']) && !empty($child_post_meta['_crb_slider_bottom_description'][0]))
-									{
-										$slider_desc = $child_post_meta['_crb_slider_bottom_description'][0];
-									}
-									if(!empty($slider_title) && !empty($slider_desc))
-									{
-										?>
-										<table border="1" width="100%" cellpadding="5" cellspacing="0">
-											<tr>
-												<td width="35%"><?php echo $slider_title; ?></td>
-												<td itemprop="disambiguatingDescription"><?php echo $slider_desc; ?></td>
-											</tr>
-										</table>
-										<?php
-									}
-								}
-								?>
+							<div class="banner-img mht_homebanner"  style="background-image:url('<?php echo $banner_url; ?>');">
+								<div class="banner-text text-center">
+									<div class="location-text" itemprop="address"><?php echo $hotel_location; ?></div>
+									<h1 itemprop="legalName"><?php echo $post->post_title;?></h1>
+								</div>
 							</div>
 							<?php
 						}
 					}
+					else
+					{
+						/*$banner_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );*/
+						$banner_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), '1240x600' );
+						$banner_url = $banner_url[0];
+						?>
+						<div class="banner-img mht_homebanner"  style="background-image:url('<?php echo $banner_url; ?>');">
+							<div class="banner-text text-center">
+								<div class="location-text" itemprop="address"><?php echo $hotel_location; ?></div>
+								<h1 itemprop="legalName"><?php echo $post->post_title;?></h1>
+							</div>
+						</div>
+						<?php
+					}?>
+
+				</div>
+				<?php
+				if($has_slider == true)
+				{
 					?>
-				</td>
-			</tr>
-		</table>
-    </div>
+					<div class="prev"></div>
+					<?php
+				}?>
+			</div>
+			<div class="intro-blurb scroll-anim" data-anim="fade-up">
+				<div class="col-10 col-centered">
+					<div class="text-center" itemprop="description">
+						<?php echo $post->post_content; ?>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="col-12 rm-pad room-listing-contain">
+				<div class="row listing-row">
+					<div class="col-2">
+						<div class="side-nav-contain">
+							<div class="scroll-anim" data-anim="fade-up">
+								<div class="side-nav-wrap">									
+									<?php
+									include_once("leeu_sidebar.php")
+									?>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="scroll-anim" data-anim="fade-up">
+						<div class="col-8">
+							<?php
+					    	$content_sections = carbon_get_post_meta($post->ID, "crb_content_section", 'complex');
+							if(is_array($content_sections) && !empty($content_sections))
+							{
+								foreach ($content_sections as $section_key => $content_section)
+								{
+									$section_heading 	= $content_section['crb_section_heading'];
+									$section_layout 	= $content_section['crb_section_layout'];
+									$section_link_text 	= $content_section['crb_section_link_text'];
+									$section_link 		= $content_section['crb_section_link'];
+									$section_show_link	= $content_section['crb_section_show_link'];
+									$section_sliders	= $content_section['crb_section_slider'];
+									?>
+									<div class="listing-box listing-row">
+										<div class="text-center scroll-anim" data-anim="fade-up">
+											<h2><?php echo $section_heading; ?></h2>
+										</div>
+										<div class="text-right page-link"> 
+											<?php
+											if($section_show_link == 'yes')
+											{
+												?>
+												<a href="<?php echo $section_link; ?>"><?php echo $section_link_text; ?></a>
+												<?php
+											}
+											?>
+										</div>
+										<div class="single_slider_wrapper">
+											<?php
+											if(is_array($section_sliders) && count($section_sliders) > 1)
+											{
+												?>
+												<div class="mht_homebanner next-wrapper">
+													<div class="next"></div>
+												</div>
+												<?php
+											}?>
+											<div class="owl-carousel single_slider owl-theme">
+												<?php
+												foreach($section_sliders as $slider_key => $section_slider)
+												{
+													$slide_image 	= $section_slider['crb_section_slide_image'];
+													$slide_title 	= $section_slider['crb_section_slide_title'];
+													$slide_desc 	= $section_slider['crb_section_slide_desc'];
+													$slide_image_url = wp_get_attachment_image_src( $slide_image, '821x478' );
+													$slide_image_url = $slide_image_url[0];
+													?>
+													<div class="slide-item">
+														<div class="banner-img mht_homebanner scroll-anim" data-anim="fade-up" style="background-image:url('<?php echo $slide_image_url; ?>');">
+														</div>
+														<div class="row detail-row">
+															<div class="col-3">
+																<div class="desc-heading"><?php echo $slide_title; ?></div>
+															</div>
+															<div class="col-9">
+																<div class="desc-content"> 
+																	<?php echo $slide_desc; ?>
+																</div>
+															</div>
+														</div>
+													</div>
+													<?php
+												}
+												?>
+											</div>
+											<?php
+											if(is_array($section_sliders) && count($section_sliders) > 1)
+											{
+												?>
+												<div class="mht_homebanner prev-wrapper">
+													<div class="prev"></div>
+												</div>
+												<?php
+											}?>
+										</div>
+									</div>
+									<?php
+								}
+							}
+							?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

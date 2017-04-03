@@ -126,7 +126,7 @@ window.carbon = window.carbon || {};
 			this.listenTo(this.model, 'change:value', this.revalidate);
 
 			// Listen to visibility change and hide/show the field
-			//this.listenTo(this.model, 'change:visible', this.toggleVisibility);
+			this.listenTo(this.model, 'change:visible', this.toggleVisibility);
 
 			// Set initial states
 			this.on('field:rendered', this.setWidth);

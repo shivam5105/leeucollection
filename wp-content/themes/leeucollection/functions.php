@@ -229,46 +229,21 @@ add_action( 'wp_head', 'leeucollection_javascript_detection', 0 );
  */
 function leeucollection_scripts() {
 	// Add custom fonts, used in the main stylesheet.
-	wp_enqueue_style( 'leeucollection-fonts', leeucollection_fonts_url(), array(), null );
+	//wp_enqueue_style( 'leeucollection-google-fonts', leeucollection_fonts_url(), array(), null );
 
 	// Add Genericons, used in the main stylesheet.
-	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.4.1' );
+	wp_enqueue_style( 'leeucollection-fonts', get_template_directory_uri() . '/fonts/stylesheet.css' );
+	wp_enqueue_style( 'leeucollection-owl-css', get_template_directory_uri() . '/css/owl.carousel.min.css' );
 
 	// Theme stylesheet.
 	wp_enqueue_style( 'leeucollection-style', get_stylesheet_uri() );
-
-	// Load the Internet Explorer specific stylesheet.
-	wp_enqueue_style( 'leeucollection-ie', get_template_directory_uri() . '/css/ie.css', array( 'leeucollection-style' ), '20160816' );
-	wp_style_add_data( 'leeucollection-ie', 'conditional', 'lt IE 10' );
-
-	// Load the Internet Explorer 8 specific stylesheet.
-	wp_enqueue_style( 'leeucollection-ie8', get_template_directory_uri() . '/css/ie8.css', array( 'leeucollection-style' ), '20160816' );
-	wp_style_add_data( 'leeucollection-ie8', 'conditional', 'lt IE 9' );
-
-	// Load the Internet Explorer 7 specific stylesheet.
-	wp_enqueue_style( 'leeucollection-ie7', get_template_directory_uri() . '/css/ie7.css', array( 'leeucollection-style' ), '20160816' );
-	wp_style_add_data( 'leeucollection-ie7', 'conditional', 'lt IE 8' );
 
 	// Load the html5 shiv.
 	wp_enqueue_script( 'leeucollection-html5', get_template_directory_uri() . '/js/html5.js', array(), '3.7.3' );
 	wp_script_add_data( 'leeucollection-html5', 'conditional', 'lt IE 9' );
 
-	wp_enqueue_script( 'leeucollection-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20160816', true );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-
-	if ( is_singular() && wp_attachment_is_image() ) {
-		wp_enqueue_script( 'leeucollection-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20160816' );
-	}
-
-	wp_enqueue_script( 'leeucollection-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20160816', true );
-
-	wp_localize_script( 'leeucollection-script', 'screenReaderText', array(
-		'expand'   => __( 'expand child menu', 'leeucollection' ),
-		'collapse' => __( 'collapse child menu', 'leeucollection' ),
-	) );
+	wp_enqueue_script( 'leeucollection-owl-carousel', get_template_directory_uri() . '/js/owl.carousel.min.js', array( 'jquery' ), '20160816', true );
+	wp_enqueue_script( 'leeucollection-custom', get_template_directory_uri() . '/js/custom.js');
 }
 add_action( 'wp_enqueue_scripts', 'leeucollection_scripts' );
 
@@ -1014,6 +989,7 @@ function get_hotel_location_list($post_id, $args1 = null)
 class Crb_Main_Menu_Walker extends Walker_Nav_Menu {
     public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
         $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
+        $indent = '';
 
         $classes = empty( $item->classes ) ? array() : (array) $item->classes;
         $classes[] = 'menu-item-' . $item->ID;
@@ -1032,10 +1008,7 @@ class Crb_Main_Menu_Walker extends Walker_Nav_Menu {
         $atts['rel']    = ! empty( $item->xfn )        ? $item->xfn        : '';
         $atts['href']   = ! empty( $item->url )        ? $item->url        : '';
 
-        // Adding a custom color to the links
-        $crb_color = carbon_get_post_meta($item->ID, 'crb_color');
-        $atts['style'] = ! empty( $crb_color ) ? 'color: ' . $crb_color . '; ' : '';
-        // --- END --- "Adding a custom color to the links"
+        $nav_menu_image = carbon_get_post_meta($item->ID, 'nav_menu_image');
 
         $atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args, $depth );
 
@@ -1055,6 +1028,14 @@ class Crb_Main_Menu_Walker extends Walker_Nav_Menu {
         $item_output .= $args->after;
 
         $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+    }
+    function start_lvl( &$output, $depth = 0, $args = array() ) {
+        $indent = str_repeat("\t", $depth);
+        $output .= "\n$indent<div class='sub-menu-wrap'><ul class='sub-menu'>\n";
+    }
+    function end_lvl( &$output, $depth = 0, $args = array() ) {
+        $indent = str_repeat("\t", $depth);
+        $output .= "$indent</ul></div>\n";
     }
 
 } // Walker_Nav_Menu

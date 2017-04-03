@@ -27,42 +27,6 @@ Container::make('post_meta', 'Left Menu Image')
         Field::make('image', 'crb_left_nav_image', '')->help_text('(Image Dimensions (WxH): 150 x 113)'),
     ));
 
-//Additional Info
-Container::make('post_meta', 'Additional Titles')
-    ->show_on_post_type('hotel')
-    ->hide_on_template(array('template-hotel.php', 'default'))
-    ->add_fields(array(
-        Field::make('text', 'crb_alternate_title' , 'Alternate Title')->help_text('This will come on hotel detail page.'),
-        Field::make('text', 'crb_alternate_title_2' , 'Alternate Title 2')->help_text('This will come on room group page.'),
-    ));
-
-//Additional Info
-Container::make('post_meta', 'Additional Info')
-    ->show_on_post_type('hotel')
-    /*->show_on_template(array('template-roomgroup.php','template-restaurant.php'))*/
-    ->show_on_level(3)
-    ->add_fields(array(
-        /*Field::make('select', 'crb_show_on_hotel_page', 'Show This Page On Hotel Detail Page')
-            ->add_options(array(
-                'yes' => 'Yes',
-                'no' => 'No',
-            ))->set_default_value('yes'),*/
-
-        Field::make('select', 'crb_show_view_all_link', 'Show View All Link On Hotel Detail Page')
-            ->add_options(array(
-                'yes' => 'Yes',
-                'no' => 'No',
-            ))/*->set_conditional_logic(array(
-                'relation' => 'AND', // Optional, defaults to "AND"
-                array(
-                    'field' => 'crb_show_on_hotel_page',
-                    'value' => 'yes', // Optional, defaults to "". Should be an array if "IN" or "NOT IN" operators are used.
-                    'compare' => '=', // Optional, defaults to "=". Available operators: =, <, >, <=, >=, IN, NOT IN
-                )
-            ))*/,
-    ));
-
-
 //Images Slider
 Container::make('post_meta', 'Slider Images')
     ->show_on_post_type('hotel')
@@ -72,6 +36,73 @@ Container::make('post_meta', 'Slider Images')
             Field::make('image', 'crb_slide_image', 'Slide Image')->help_text('(Image Dimensions (WxH): 1240 x 600)'),
         )),
     ));
+    
+//Content Section Hotel Home Page
+Container::make('post_meta', 'Content Section')
+    ->show_on_post_type('hotel')
+    ->show_on_level(1)
+    ->add_fields(array(
+        Field::make('complex', 'crb_content_section', '')->add_fields(array(
+            Field::make('text', 'crb_section_heading' , 'Heading'),
+
+            Field::make('radio', 'crb_section_layout', 'Section Layout')
+                ->add_options(array(
+                    '1' => '1 Column',
+                    '2' => '2 Columns',
+                ))->set_default_value('1'),
+
+            Field::make('radio', 'crb_section_show_link', 'Show View All Link?')
+                ->add_options(array(
+                    'yes' => 'Yes',
+                    'no' => 'No',
+                ))->set_default_value('no')->set_width('20'),
+            Field::make('text', 'crb_section_link_text' , 'View All Link Text')->set_width('40')->help_text('This will come on the right-top cornor of section.')->set_conditional_logic(array(
+                'relation' => 'AND', // Optional, defaults to "AND"
+                array(
+                    'field' => 'crb_section_show_link',
+                    'value' => 'yes', // Optional, defaults to "". Should be an array if "IN" or "NOT IN" operators are used.
+                    'compare' => '=', // Optional, defaults to "=". Available operators: =, <, >, <=, >=, IN, NOT IN
+                )
+            )),
+            Field::make('text', 'crb_section_link' , 'View All Link')->set_width('40')->set_conditional_logic(array(
+                'relation' => 'AND', // Optional, defaults to "AND"
+                array(
+                    'field' => 'crb_section_show_link',
+                    'value' => 'yes', // Optional, defaults to "". Should be an array if "IN" or "NOT IN" operators are used.
+                    'compare' => '=', // Optional, defaults to "=". Available operators: =, <, >, <=, >=, IN, NOT IN
+                )
+            )),
+
+            Field::make('complex', 'crb_section_slider', 'Slider')->add_fields(array(
+                Field::make('image', 'crb_section_slide_image', 'Image')->help_text('(Image Dimensions (WxH): 821 x 478)')->set_width('20'),
+                Field::make('text', 'crb_section_slide_title', 'Title')->set_width('25'),
+                Field::make('textarea', 'crb_section_slide_desc', 'Small Description')->set_width('55'),
+            )),
+        )),
+    ));
+
+/*
+//Additional Info
+Container::make('post_meta', 'Additional Info')
+    ->show_on_post_type('hotel')
+    ->show_on_level(3)
+    ->add_fields(array(
+
+        Field::make('select', 'crb_show_view_all_link', 'Show View All Link On Hotel Home Page')
+            ->add_options(array(
+                'yes' => 'Yes',
+                'no' => 'No',
+            ))->set_conditional_logic(array(
+                'relation' => 'AND', // Optional, defaults to "AND"
+                array(
+                    'field' => 'crb_show_on_hotel_page',
+                    'value' => 'yes', // Optional, defaults to "". Should be an array if "IN" or "NOT IN" operators are used.
+                    'compare' => '=', // Optional, defaults to "=". Available operators: =, <, >, <=, >=, IN, NOT IN
+                )
+            )),
+    ));
+
+
 
 //Slider Info
 Container::make('post_meta', 'Slider Info')
@@ -145,3 +176,4 @@ Container::make('post_meta', 'The Chef Section')
             Field::make('textarea', 'crb_chef_description', 'Chef Description')->set_width(80),
         )),
     ));
+*/
