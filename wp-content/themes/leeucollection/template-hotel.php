@@ -6,8 +6,10 @@ get_header(); ?>
 	<?php
 	$post_id = $post->ID;
 	$hotel_location = get_hotel_location_list($post_id);
-
-    $post_meta = ( $post ) ? get_post_meta( $post->ID ) : null;
+	$hotel_id 		= get_hotel_id($post_id);
+    $post_meta 		= ( $post ) ? get_post_meta( $post->ID ) : null;
+    
+	$top_most_parent_post = ($hotel_id == false) ? false : get_post($hotel_id);
     ?>
     <section id="site-main">
 		<div class="container">
@@ -36,12 +38,7 @@ get_header(); ?>
 							$banner_url = wp_get_attachment_image_src( $slide_data['crb_slide_image'], '1240x600' );
 							$banner_url = $banner_url[0];
 							?>
-							<div class="banner-img mht_homebanner"  style="background-image:url('<?php echo $banner_url; ?>');">
-								<div class="banner-text text-center">
-									<div class="location-text" itemprop="address"><?php echo $hotel_location; ?></div>
-									<h1 itemprop="legalName"><?php echo $post->post_title;?></h1>
-								</div>
-							</div>
+							<div class="banner-img mht_homebanner"  style="background-image:url('<?php echo $banner_url; ?>');"></div>
 							<?php
 						}
 					}
@@ -51,12 +48,7 @@ get_header(); ?>
 						$banner_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), '1240x600' );
 						$banner_url = $banner_url[0];
 						?>
-						<div class="banner-img mht_homebanner"  style="background-image:url('<?php echo $banner_url; ?>');">
-							<div class="banner-text text-center">
-								<div class="location-text" itemprop="address"><?php echo $hotel_location; ?></div>
-								<h1 itemprop="legalName"><?php echo $post->post_title;?></h1>
-							</div>
-						</div>
+						<div class="banner-img mht_homebanner"  style="background-image:url('<?php echo $banner_url; ?>');"></div>
 						<?php
 					}?>
 
@@ -68,6 +60,10 @@ get_header(); ?>
 					<div class="prev"></div>
 					<?php
 				}?>
+				<div class="banner-text text-center pos-abs-top">
+					<div class="location-text ucase" itemprop="address"><?php echo $hotel_location; ?></div>
+					<h1 itemprop="legalName" class="ucase"><?php echo $post->post_title;?></h1>
+				</div>
 			</div>
 			<div class="intro-blurb scroll-anim" data-anim="fade-up">
 				<div class="col-10 col-centered">
@@ -83,7 +79,7 @@ get_header(); ?>
 					<div class="col-2">
 						<div class="side-nav-contain">
 							<div class="scroll-anim" data-anim="fade-up">
-								<div class="side-nav-wrap">									
+								<div class="side-nav-wrap">
 									<?php
 									include_once("leeu_sidebar.php")
 									?>
@@ -105,10 +101,18 @@ get_header(); ?>
 									$section_link 		= $content_section['crb_section_link'];
 									$section_show_link	= $content_section['crb_section_show_link'];
 									$section_sliders	= $content_section['crb_section_slider'];
+
+									$slider_wrapper = "single_slider_wrapper";
+									$slider_theme 	= "single_slider";
+									if($section_layout == 2)
+									{
+										$slider_wrapper = "two-slide-carousel two-img-col";
+										$slider_theme 	= "two_slider";
+									}
 									?>
 									<div class="listing-box listing-row">
 										<div class="text-center scroll-anim" data-anim="fade-up">
-											<h2><?php echo $section_heading; ?></h2>
+											<h2 class="ucase"><?php echo $section_heading; ?></h2>
 										</div>
 										<div class="text-right page-link"> 
 											<?php
@@ -180,5 +184,4 @@ get_header(); ?>
 		</div>
 	</section>
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

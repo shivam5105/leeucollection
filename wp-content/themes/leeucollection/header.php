@@ -30,11 +30,11 @@
 						<?php
 						if(has_nav_menu('header_menu_left'))
 						{
-							/*wp_nav_menu( array(
+							wp_nav_menu( array(
 								'theme_location' => 'header_menu_left',
 								'menu_class'     => 'menu-left list-inline',
-							    'walker' => new Crb_Main_Menu_Walker()
-							 ) );*/
+							    'walker' => new TV_Main_Menu_Walker()
+							) );
 						}
 						?>
 					</div>

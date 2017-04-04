@@ -42,7 +42,7 @@
 				                  <input type="email" name="email" placeholder="Enter your email here" required="required">
 				               </div>
 				               <div class="form-group">
-				                  <button type="submit" class="submit-btn">sign up</button>
+				                  <button type="submit" class="submit-btn ucase">sign up</button>
 				               </div>
 				            </form>
 				         </div>

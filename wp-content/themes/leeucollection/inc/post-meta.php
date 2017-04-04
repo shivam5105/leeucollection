@@ -27,16 +27,6 @@ Container::make('post_meta', 'Left Menu Image')
         Field::make('image', 'crb_left_nav_image', '')->help_text('(Image Dimensions (WxH): 150 x 113)'),
     ));
 
-//Images Slider
-Container::make('post_meta', 'Slider Images')
-    ->show_on_post_type('hotel')
-    ->show_on_template(array('template-hotel.php','template-room.php','template-restaurant.php'))
-    ->add_fields(array(
-        Field::make('complex', 'crb_slider_images', '')->add_fields(array(
-            Field::make('image', 'crb_slide_image', 'Slide Image')->help_text('(Image Dimensions (WxH): 1240 x 600)'),
-        )),
-    ));
-    
 //Content Section Hotel Home Page
 Container::make('post_meta', 'Content Section')
     ->show_on_post_type('hotel')
@@ -80,38 +70,64 @@ Container::make('post_meta', 'Content Section')
             )),
         )),
     ));
-
-/*
-//Additional Info
-Container::make('post_meta', 'Additional Info')
+//Page Heading
+Container::make('post_meta', 'Page Heading')
     ->show_on_post_type('hotel')
-    ->show_on_level(3)
+    ->show_on_template(array('template-roomlisting.php','template-room.php'))
     ->add_fields(array(
-
-        Field::make('select', 'crb_show_view_all_link', 'Show View All Link On Hotel Home Page')
-            ->add_options(array(
-                'yes' => 'Yes',
-                'no' => 'No',
-            ))->set_conditional_logic(array(
-                'relation' => 'AND', // Optional, defaults to "AND"
-                array(
-                    'field' => 'crb_show_on_hotel_page',
-                    'value' => 'yes', // Optional, defaults to "". Should be an array if "IN" or "NOT IN" operators are used.
-                    'compare' => '=', // Optional, defaults to "=". Available operators: =, <, >, <=, >=, IN, NOT IN
-                )
-            )),
+        Field::make('text', 'crb_page_heading' , ''),
     ));
 
+//Page Heading
+Container::make('post_meta', 'Short Description')
+    ->show_on_post_type('hotel')
+    ->add_fields(array(
+        Field::make('textarea', 'crb_short_description' , ''),
+    ));
 
-
-//Slider Info
+//Images Slider
+Container::make('post_meta', 'Slider Images')
+    ->show_on_post_type('hotel')
+    ->show_on_template(array('template-hotel.php','template-room.php','template-restaurant.php'))
+    ->add_fields(array(
+        Field::make('complex', 'crb_slider_images', '')->add_fields(array(
+            Field::make('image', 'crb_slide_image', 'Slide Image')->help_text('(Image Dimensions (WxH): 1240 x 600)'),
+        )),
+    ));
+    
 Container::make('post_meta', 'Slider Info')
+    ->show_on_post_type('hotel')
+    ->show_on_template(array('template-room.php','template-restaurant.php'))
+    ->add_fields(array(
+        Field::make('text', 'crb_slider_bottom_heading' , 'Slider Heading')->help_text('This will come after slider (on bottom-left of slider).')->set_width('30'),
+        Field::make('textarea', 'crb_slider_bottom_description' , 'Slider Description')->help_text('This will come after slider (on bottom-right of slider).')->set_width('70'),
+    ));
+
+//Room Rates
+Container::make('post_meta', 'Room Rates')
     ->show_on_post_type('hotel')
     ->show_on_template('template-room.php')
     ->add_fields(array(
-        Field::make('text', 'crb_slider_bottom_heading' , 'Slider Heading')->help_text('This will come after slider (on bottom-left of slider).'),
-        Field::make('textarea', 'crb_slider_bottom_description' , 'Slider Description')->help_text('This will come after slider (on bottom-right of slider).'),
+        /*Field::make('complex', 'crb_rates', '')->add_fields(array(*/
+             Field::make('text', 'crb_rate_amount' , 'Amount')->help_text('Example: R9000.00')->set_width(20),
+             Field::make('text', 'crb_rate_for' , 'For')->set_default_value('per room/per night')->set_width(80)->help_text('Example: per room/per night'),
+             Field::make('text', 'crb_booking_buton_text' , 'Booking Button Text')->set_default_value('Book')->set_width(20),
+             Field::make('text', 'crb_booking_buton_link' , 'Booking Button Link')->set_width(80),
+        /*)),*/
     ));
+
+//Special Features
+Container::make('post_meta', 'Special Features')
+    ->show_on_post_type('hotel')
+    ->show_on_template('template-room.php')
+    ->add_fields(array(
+        /*Field::make('complex', 'crb_special_features', '')->add_fields(array(*/
+             Field::make('textarea', 'crb_special_feature' , ''),
+        /*)),*/
+    ));
+/*
+
+//Slider Info
 
 //Slider Info
 Container::make('post_meta', 'Slider Info')
@@ -123,28 +139,7 @@ Container::make('post_meta', 'Slider Info')
         Field::make('text', 'crb_booking_buton_link' , 'Booking Button Link')->set_width(80),
     ));
 
-//Room Rates
-Container::make('post_meta', 'Room Rates')
-    ->show_on_post_type('hotel')
-    ->show_on_template('template-room.php')
-    ->add_fields(array(
-        Field::make('complex', 'crb_rates', '')->add_fields(array(
-             Field::make('text', 'crb_rate_amount' , 'Amount')->help_text('Example: R9000.00')->set_width(20),
-             Field::make('text', 'crb_rate_for' , 'For')->set_default_value('per room/per night')->set_width(80)->help_text('Example: per room/per night'),
-             Field::make('text', 'crb_booking_buton_text' , 'Booking Button Text')->set_width(20)->set_default_value('Book'),
-             Field::make('text', 'crb_booking_buton_link' , 'Booking Button Link')->set_width(80),
-        )),
-    ));
 
-//Special Features
-Container::make('post_meta', 'Special Features')
-    ->show_on_post_type('hotel')
-    ->show_on_template('template-room.php')
-    ->add_fields(array(
-        Field::make('complex', 'crb_special_features', '')->add_fields(array(
-             Field::make('text', 'crb_feature' , 'Feature'),
-        )),
-    ));
 
 //Hours & Reservations
 Container::make('post_meta', 'Hours & Reservations')

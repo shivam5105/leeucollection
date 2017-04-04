@@ -1,6 +1,13 @@
 <?php
 
 $left_nav_logo = isset($post_meta['_crb_left_nav_image']) ? $post_meta['_crb_left_nav_image'] : null;
+
+if(empty($left_nav_logo) || $left_nav_logo == null || (is_array($left_nav_logo) && empty($left_nav_logo[0])))
+{
+	$top_most_parent_post_meta = ( $top_most_parent_post ) ? get_post_meta( $top_most_parent_post->ID ) : null;
+	$left_nav_logo 	= isset($top_most_parent_post_meta['_crb_left_nav_image']) ? $top_most_parent_post_meta['_crb_left_nav_image'] : null;
+}
+
 if($left_nav_logo != null)
 {
 	$left_nav_logo 		= $left_nav_logo[0];
@@ -12,21 +19,6 @@ if($left_nav_logo != null)
 	<?php
 }
 
-$args = array(
-	'order'=> 'ASC',
-	'post_parent' => $post_id,
-	'post_type' => 'hotel'
-	);
-
-$child_post_array = get_children($args);
-if(!empty($child_post_array) && count($child_post_array) > 0)
-{
-	echo "<ul class='side-nav'>";
-	foreach($child_post_array as $child_key => $child_post)
-	{
-		$child_post_link = get_permalink($child_post->ID);
-		echo "<li><a href='".$child_post_link."'>".$child_post->post_title."</a></li>";
-	}
-	echo "</ul>";
-}
+$post_id_for_nav = ($top_most_parent_post == false) ? $post_id : $top_most_parent_post->ID;
+left_sidebar_nav($post_id_for_nav,$post_id);
 ?>
