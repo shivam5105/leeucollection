@@ -102,12 +102,14 @@ get_header(); ?>
 									$section_show_link	= $content_section['crb_section_show_link'];
 									$section_sliders	= $content_section['crb_section_slider'];
 
-									$slider_wrapper = "single_slider_wrapper";
-									$slider_theme 	= "single_slider";
+									$slider_wrapper_class 	= "single_slider_wrapper";
+									$slider_theme_class 	= "single_slider";
+									$mht_homebanner_class 	= "mht_homebanner";
 									if($section_layout == 2)
 									{
-										$slider_wrapper = "two-slide-carousel two-img-col";
-										$slider_theme 	= "two_slider";
+										$slider_wrapper_class 	= "two-slide-carousel two-img-col";
+										$slider_theme_class 	= "two_slider";
+										$mht_homebanner_class 	= "";
 									}
 									?>
 									<div class="listing-box listing-row">
@@ -124,17 +126,17 @@ get_header(); ?>
 											}
 											?>
 										</div>
-										<div class="<?php echo $slider_wrapper; ?>">
+										<div class="<?php echo $slider_wrapper_class; ?>">
 											<?php
 											if(is_array($section_sliders) && count($section_sliders) > 1)
 											{
 												?>
-												<div class="mht_homebanner next-wrapper">
+												<div class="<?php echo $mht_homebanner_class; ?> next-wrapper">
 													<div class="next"></div>
 												</div>
 												<?php
 											}?>
-											<div class="owl-carousel <?php echo $slider_theme; ?> owl-theme">
+											<div class="owl-carousel <?php echo $slider_theme_class; ?> owl-theme">
 												<?php
 												foreach($section_sliders as $slider_key => $section_slider)
 												{
@@ -145,7 +147,7 @@ get_header(); ?>
 													$slide_image_url = $slide_image_url[0];
 													?>
 													<div class="slide-item">
-														<div class="banner-img mht_homebanner scroll-anim" data-anim="fade-up" style="background-image:url('<?php echo $slide_image_url; ?>');">
+														<div class="banner-img <?php echo $mht_homebanner_class; ?> scroll-anim" data-anim="fade-up" style="background-image:url('<?php echo $slide_image_url; ?>');">
 														</div>
 														<?php
 														if($section_layout == 2)
@@ -178,7 +180,7 @@ get_header(); ?>
 											if(is_array($section_sliders) && count($section_sliders) > 1)
 											{
 												?>
-												<div class="mht_homebanner prev-wrapper">
+												<div class="<?php echo $mht_homebanner_class; ?> prev-wrapper">
 													<div class="prev"></div>
 												</div>
 												<?php
