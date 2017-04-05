@@ -147,47 +147,108 @@ get_header(); ?>
 									</div>
 								</div>
 							</div>
-							<?php
+							<div class="hotel-menu">
+								<div class="text-center">
+									<div class="menu-head">MENU</div>
+								</div>
+								<?php
+								$menu_types_terms = get_terms(array(
+									'taxonomy' => 'menu-types',
+									'orderby' => 'name',
+									'order' => 'DESC',
+									));
+
+								$prev_menu_type_id = 0;
+
+								foreach($menu_types_terms as $menu_type)
+								{
+								    wp_reset_query();
+								    $args = array(
+										'orderby' => 'orderby',
+										'order' => 'ASC',
+										'post_parent' => $post_id,
+										'post_status' => 'publish',
+										'post_type' => 'hotel',
+								        'tax_query' => array(
+								            array(
+								                'taxonomy' => 'menu-types',
+								                'field' => 'term_id',
+								                'terms' => $menu_type->term_id,
+								            ),
+								        ),
+									);
+
+									$the_query = new WP_Query($args);
+									if($the_query->have_posts())
+									{
+										$cols = 2;
+										$X = 0;
+								        while($the_query->have_posts())
+										{
+											$X++;
+											$the_query->the_post();
+											$child_post 	= $post;
+											$child_post_id 	= $child_post->ID;
+
+											$child_post_img_url = wp_get_attachment_image_src(get_post_thumbnail_id($child_post_id),'821x478');
+											$child_post_img_url = $child_post_img_url[0];
+
+											$image_col_class 	= "two-img-col";
+											$item_col_class 	= "col-6";
+											$data_anim_delay 	= "";
+											if($prev_menu_type_id != 0)
+											{
+												$cols = 3;
+												$image_col_class 	= "three-img-col";
+												$item_col_class 	= "col-4";
+											}
+											if($X == 1)
+											{
+												?>
+												<div class="listing-row clearfix">
+													<div class="<?php echo $image_col_class; ?>">
+												<?php
+											}
+											else
+											{
+												$data_anim_delay = "data-anim-delay='".(100*($X-1))."'";
+											}
+											?>
+											<div class="<?php echo $item_col_class; ?> rm-pad">
+												<div class="link-wrapper-box">
+													<a class="main-link" href="<?php echo get_permalink($child_post_id); ?>"></a>
+													<div class="banner-img  scroll-anim" data-anim="fade-up" style="background-image:url('<?php echo $child_post_img_url; ?>');" <?php echo $data_anim_delay; ?>>
+													</div>
+													<div class="img-desc"><?php echo $child_post->post_title; ?></div>
+												</div>
+											</div>
+											<?php
+											if($X == $cols)
+											{
+													?>
+													</div>
+												</div>
+												<?php
+												$X = 0;
+											}
+								        }
+								    }
+								    $prev_menu_type_id = $menu_type->term_id;
+								}
+
 							$args = array(
 								'order'=> 'ASC',
-								'post_parent' => $post_id,
-								'post_status' => 'publish',
 								'post_type' => 'hotel'
 								);
 							$child_post_array = get_children($args);
 							if(!empty($child_post_array) && count($child_post_array) > 0)
 							{
-								?>
-								<div class="hotel-menu">
-									<div class="text-center">
-										<div class="menu-head">MENU</div>
-									</div>
-									<?php
 									foreach($child_post_array as $child_key => $child_post)
 									{
 										$child_post_id = $child_post->ID;
-										$child_post_img_url = wp_get_attachment_image_src(get_post_thumbnail_id($child_post_id),'821x478');
 
-										$child_post_img_url = $child_post_img_url[0];
-										?>
-										<div class="listing-row clearfix">
-											<div class="two-img-col">
-
-												<div class="col-6 rm-pad">
-													<div class="link-wrapper-box">
-														<a class="main-link" href="<?php echo get_permalink($child_post_id); ?>"></a>
-														<div class="banner-img  scroll-anim" data-anim="fade-up" style="background-image:url('<?php echo $child_post_img_url; ?>');">   
-														</div>
-														<div class="img-desc"><?php echo $child_post->post_title; ?></div>
-													</div>
-												</div>
-
-											</div>
-										</div>
-										<?php
 									}
 									?>
-								</div>
 								<?php
 							}
 							?>
