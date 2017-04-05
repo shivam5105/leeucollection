@@ -646,7 +646,7 @@ body.body-ready  .side-nav li.active > a{
     opacity: 0;
     visibility: hidden;
 }
-body.body-ready  .side-nav li.active > .side-sub-menu > li.active a{
+body.body-ready  .side-nav li.active > .side-sub-menu > li.active > a{
     opacity:1;
     color: #C19034;
     visibility: visible;
@@ -894,7 +894,7 @@ li.current.active .side-sub-menu li.current.active ~ li{
 }  
 .form-group.form-input-wrap{
     vertical-align: bottom;
-    width: 76%;
+    width: 75.6%;
     margin-right: 17px;
 }
 .form-group input{
@@ -1018,13 +1018,13 @@ input:-moz-placeholder { /* Firefox 18- */
     z-index: 1;
 }
 /**left nav child fix**/
-.side-sub-menu.child-2,.hotel-template-template-restaurant .side-sub-menu.child-1 li.current.active > a{
+.side-sub-menu.child-2,
+.hotel-template-template-restaurant .side-sub-menu.child-1 li.current.active > a , 
+.hotel-template-template-menudetail .side-sub-menu.child-1 li.current.active > a {
     display: none;
 }
-body.hotel-template-template-restaurant .side-sub-menu.child-2{
+body.hotel-template-template-restaurant .side-sub-menu.child-2 , body.hotel-template-template-menudetail .side-sub-menu.child-2 , 
+body.hotel-template-template-menudetail .side-sub-menu.child-2 li.current.active > a{
     display: block;
 }
 
-body.body-ready.hotel-template-template-restaurant .side-nav li.active > .side-sub-menu > li.active a{
-    color: #222944;
-}
