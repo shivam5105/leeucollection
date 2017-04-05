@@ -114,7 +114,7 @@ var Blank ={
 		}	
 	},
 	side_nav : function(){
-		$(".side-nav li.current").parents("li").addClass("current");
+		$(".side-nav li.current").parents("li.side-nav-li").addClass("current");
 		setTimeout(function(){ $('.side-nav .current').addClass('active'); }, 500);
 	},
 	home_page_init : function(){
