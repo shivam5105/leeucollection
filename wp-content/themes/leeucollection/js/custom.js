@@ -1,13 +1,13 @@
 var $ = jQuery.noConflict(),win_h,win_w,_wl,_wpos,_dh;
 var Blank ={	
 	win_prop : function(){
+		
 		win_h = $(window).height();
 		win_w = $(window).width();
 		_wl =  window.location.href;
 		_wpos = $(window).scrollTop()	
 		$('.mht').css({"min-height":win_h});
 		$('.mht_homebanner').css({"min-height":win_h - 101});
-
 		$('body').addClass('body-ready');
 	},
 	side_nav_fix :function(){
@@ -121,12 +121,12 @@ var Blank ={
 
 	},
 	common_init : function(){
+		$( "body,html" ).scrollTop( 0 );
 		Blank.win_prop();	
 		Blank.scrl_anim();
 		Blank.header_anim();
 		Blank.single_slider();
-		
-		Blank.side_nav();		
+		Blank.side_nav();	
 	},
 	common_init_window_load : function(){
 		Blank.side_nav_fix();
