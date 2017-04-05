@@ -855,7 +855,7 @@ li.current.active .side-sub-menu li.current.active ~ li{
 }
 .submit-btn , .cstm-btn{
     background: none;
-    min-height:50px;
+    padding: 16px 0;
     min-width:115px;
     border:1px solid #c7beb6;
     cursor:pointer;
@@ -863,10 +863,8 @@ li.current.active .side-sub-menu li.current.active ~ li{
 }
 .cstm-btn{
     min-width:132px;
-    min-height: 47px;
     display: inline-block;
     text-transform: uppercase;
-    line-height: 47px;
     position: relative;
 }
 .arrow-btn::after {
