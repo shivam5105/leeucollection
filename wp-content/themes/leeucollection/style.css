@@ -644,6 +644,7 @@ body.body-ready  .side-nav li.active > a{
 }
 body.body-ready  .side-nav li.active > a{
     opacity: 0;
+    visibility: hidden;
 }
 body.body-ready  .side-nav li.active > .side-sub-menu > li.active a{
     opacity:1;
