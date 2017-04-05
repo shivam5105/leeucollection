@@ -357,6 +357,20 @@ function location_taxonomy()
 
 add_action('init', 'location_taxonomy');
 
+function menu_type_taxonomy()
+{
+	$data = array(
+		'post-slug' => 'hotel',
+		'name' => 'Menu Types',
+		'singular_name' => 'Menu Type',
+		'slug' => 'menu-types',
+		'textdomain' => 'leeucollection'
+	);
+	custom_taxonomy($data);
+}
+
+add_action('init', 'menu_type_taxonomy');
+
 function enquiry_type_taxonomy()
 {
 	$data = array(

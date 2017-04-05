@@ -517,6 +517,16 @@ function custom_visibility_of_admin_fields()
     ?>  
     <script type="text/javascript">
         var $ = jQuery.noConflict();
+        var tv_hacks = {
+        	remove_locations : function(){
+                $("#hotel-locationsdiv").hide();
+                $("#hotel-locationsdiv [type='checkbox']").removeAttr("checked").attr("checked", false);
+        	},
+        	remove_menu_types : function(){
+                $("#menu-typesdiv").hide();
+                $("#menu-typesdiv [type='checkbox']").removeAttr("checked").attr("checked", false);
+        	},
+        };
         $(document).ready(function(){
             var $select = $('select#page_template');
 
@@ -525,12 +535,18 @@ function custom_visibility_of_admin_fields()
                 if(template == "template-hotel.php")
                 {
                     $("#hotel-locationsdiv").show();
+                    tv_hacks.remove_menu_types();
+                    
+                }
+                else if(template == "template-menudetail.php")
+                {
+                    $("#menu-typesdiv").show();
+                    tv_hacks.remove_locations();
                 }
                 else
                 {
-                    $("#hotel-locationsdiv").hide();
-                    $("#hotel-locationsdiv [type='checkbox']").css({'color':'red !important'}).attr("checked", false);
-                    $("#hotel-locationsdiv [type='checkbox']").removeAttr("checked");
+                    tv_hacks.remove_locations();
+                    tv_hacks.remove_menu_types();
                 }
             });
         });

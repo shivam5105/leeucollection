@@ -41,8 +41,8 @@ get_header(); ?>
 							</div>
 						</div>
 					</div>
-					<div class="scroll-anim" data-anim="fade-up">
-						<div class="col-8">
+					<div class="col-8">
+						<div class="scroll-anim" data-anim="fade-up">
 							<?php
 							$has_slider = false;
 					    	$slider_data = carbon_get_post_meta($post->ID, "crb_slider_images", 'complex');
@@ -118,88 +118,78 @@ get_header(); ?>
 											}?>
 										</div>
 									</div>
-											<div class="row detail-row hotel-info-row">
-												<div class="col-6">
-													<div class="leeu-text">HOURS & RESERVATIONS</div>
-													<?php
-													$hours_reservations = carbon_get_post_meta($post->ID, "crb_hours_reservations", 'complex');
-
-													foreach ($hours_reservations as $hr_key => $hours_reservation)
-													{
-														?>														
-														<div class="hotel-food-info">
-															<div class="food-head">
-																<?php echo $hours_reservation['crb_reservation_for']; ?>:
-															</div>
-															<div class="foo-desc">
-																<?php echo nl2br($hours_reservation['crb_reservation_time']); ?>
-															</div>
-														</div>
-														<?php
-													}
-													?>
-												</div>
-												<div class="col-6">
-													<div class="leeu-text">Policy</div>
-													<div class="hotel-info-desc"> 
-														<?php echo $post_meta['_crb_policy'][0]; ?>
+									<div class="row detail-row hotel-info-row">
+										<div class="col-6">
+											<div class="leeu-text">HOURS & RESERVATIONS</div>
+											<?php
+											$hours_reservations = carbon_get_post_meta($post->ID, "crb_hours_reservations", 'complex');
+											foreach ($hours_reservations as $hr_key => $hours_reservation)
+											{
+												?>
+												<div class="hotel-food-info">
+													<div class="food-head">
+														<?php echo $hours_reservation['crb_reservation_for']; ?>:
+													</div>
+													<div class="foo-desc">
+														<?php echo nl2br($hours_reservation['crb_reservation_time']); ?>
 													</div>
 												</div>
-											</div>
-								</div>
-							</div>
-							<div class="hotel-menu">
-								<div class="text-center">
-									<div class="menu-head">MENU</div>
-								</div>
-								<div class="listing-row clearfix">
-									<div class="two-img-col">
-										<div class="col-6 rm-pad">
-											<div class="banner-img  scroll-anim" data-anim="fade-up" style="background-image:url('img/breakfast-dn.jpg');">   
-											</div>
-											<div class="img-desc">Breakfast</div>
+												<?php
+											}
+											?>
 										</div>
-										<div class="col-6 rm-pad">
-											<div class="banner-img scroll-anim" data-anim="fade-up" data-anim-delay="100" style="background-image:url('img/lunch-dn.jpg');">                                                    
+										<div class="col-6">
+											<div class="leeu-text">Policy</div>
+											<div class="hotel-info-desc"> 
+												<?php echo $post_meta['_crb_policy'][0]; ?>
 											</div>
-											<div class="img-desc">Lunch</div>
-										</div>
-									</div>
-								</div>
-								<div class="listing-row clearfix">
-									<div class="two-img-col">
-										<div class="col-6 rm-pad">
-											<div class="banner-img  scroll-anim" data-anim="fade-up" style="background-image:url('img/dinner-dn.jpg');">   
-											</div>
-											<div class="img-desc">dinner</div>
-										</div>
-										<div class="col-6 rm-pad">
-											<div class="banner-img scroll-anim" data-anim="fade-up" data-anim-delay="100" style="background-image:url('img/dinner-ap.jpg');">                                                    
-											</div>
-											<div class="img-desc">APPETISERS</div>
-										</div>
-									</div>
-								</div>
-								<div class="listing-row clearfix">
-									<div class="three-img-col">
-										<div class="col-4 rm-pad">
-											<div class="banner-img  scroll-anim" data-anim="fade-up" style="background-image:url('img/art-tea.jpg');">   
-											</div>
-											<div class="img-desc">AFTERNOON TEA</div>
-										</div>
-										<div class="col-4 rm-pad">
-											<div class="banner-img scroll-anim" data-anim="fade-up" data-anim-delay="100" style="background-image:url('img/dn-cocktail.jpg');">                                                    
-											</div>
-											<div class="img-desc">COCKTAILS</div>
-										</div>
-										<div class="col-4 rm-pad">
-											<div class="banner-img scroll-anim" data-anim="fade-up" data-anim-delay="200" style="background-image:url('img/dn-wine.jpg');">                                                    
-											</div>
-											<div class="img-desc">WINE</div>
 										</div>
 									</div>
 								</div>
 							</div>
+							<?php
+							$args = array(
+								'order'=> 'ASC',
+								'post_parent' => $post_id,
+								'post_type' => 'hotel'
+								);
+							$child_post_array = get_children($args);
+							if(!empty($child_post_array) && count($child_post_array) > 0)
+							{
+								?>
+								<div class="hotel-menu">
+									<div class="text-center">
+										<div class="menu-head">MENU</div>
+									</div>
+									<?php
+									foreach($child_post_array as $child_key => $child_post)
+									{
+										$child_post_id = $child_post->ID;
+										$child_post_img_url = wp_get_attachment_image_src(get_post_thumbnail_id($child_post_id),'821x478');
+
+										$child_post_img_url = $child_post_img_url[0];
+										?>
+										<div class="listing-row clearfix">
+											<div class="two-img-col">
+
+												<div class="col-6 rm-pad">
+													<div class="link-wrapper-box">
+														<a class="main-link" href="<?php echo get_permalink($child_post_id); ?>"></a>
+														<div class="banner-img  scroll-anim" data-anim="fade-up" style="background-image:url('<?php echo $child_post_img_url; ?>');">   
+														</div>
+														<div class="img-desc"><?php echo $child_post->post_title; ?></div>
+													</div>
+												</div>
+
+											</div>
+										</div>
+										<?php
+									}
+									?>
+								</div>
+								<?php
+							}
+							?>
 						</div>
 					</div>
 				</div>
