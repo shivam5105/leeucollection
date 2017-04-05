@@ -105,11 +105,13 @@ get_header(); ?>
 									$slider_wrapper_class 	= "single_slider_wrapper";
 									$slider_theme_class 	= "single_slider";
 									$mht_homebanner_class 	= "mht_homebanner";
+									$data_anim_delay 		= "";
 									if($section_layout == 2)
 									{
 										$slider_wrapper_class 	= "two-slide-carousel two-img-col";
 										$slider_theme_class 	= "two_slider";
 										$mht_homebanner_class 	= "";
+										$data_anim_delay 		= "data-anim-delay='100'";
 									}
 									?>
 									<div class="listing-box listing-row">
@@ -138,8 +140,10 @@ get_header(); ?>
 											}?>
 											<div class="owl-carousel <?php echo $slider_theme_class; ?> owl-theme">
 												<?php
+												$slide_counter = 0;
 												foreach($section_sliders as $slider_key => $section_slider)
 												{
+													$slide_counter++;
 													$slide_image 	= $section_slider['crb_section_slide_image'];
 													$slide_title 	= $section_slider['crb_section_slide_title'];
 													$slide_desc 	= $section_slider['crb_section_slide_desc'];
@@ -147,7 +151,7 @@ get_header(); ?>
 													$slide_image_url = $slide_image_url[0];
 													?>
 													<div class="slide-item">
-														<div class="banner-img <?php echo $mht_homebanner_class; ?> scroll-anim" data-anim="fade-up" style="background-image:url('<?php echo $slide_image_url; ?>');">
+														<div class="banner-img <?php echo $mht_homebanner_class; ?> scroll-anim" data-anim="fade-up" style="background-image:url('<?php echo $slide_image_url; ?>');" <?php if($section_layout == 2 && $slide_counter > 1){ echo $data_anim_delay; }?>>
 														</div>
 														<?php
 														if($section_layout == 2)

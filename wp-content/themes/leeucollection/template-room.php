@@ -124,7 +124,7 @@ get_header(); ?>
 											if(is_array($post_meta['_crb_booking_buton_link']) && !empty($post_meta['_crb_booking_buton_link'][0]))
 											{
 												?>
-												<a href="<?php echo $post_meta['_crb_booking_buton_link'][0]; ?>" class="cstm-btn arrow-btn text-center"><?php echo $post_meta['_crb_booking_buton_text'][0]; ?></a>
+												<a href="<?php echo $post_meta['_crb_booking_buton_link'][0]; ?>" class="cstm-btn arrow-btn text-center" target="_blank"><?php echo $post_meta['_crb_booking_buton_text'][0]; ?></a>
 												<?php
 											}?>
 										</div>

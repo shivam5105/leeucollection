@@ -97,10 +97,20 @@ Container::make('post_meta', 'Slider Images')
     
 Container::make('post_meta', 'Slider Info')
     ->show_on_post_type('hotel')
-    ->show_on_template(array('template-room.php','template-restaurant.php'))
+    ->show_on_template(array('template-room.php'))
     ->add_fields(array(
         Field::make('text', 'crb_slider_bottom_heading' , 'Slider Heading')->help_text('This will come after slider (on bottom-left of slider).')->set_width('30'),
         Field::make('textarea', 'crb_slider_bottom_description' , 'Slider Description')->help_text('This will come after slider (on bottom-right of slider).')->set_width('70'),
+    ));
+
+//Slider Info
+Container::make('post_meta', 'Slider Info')
+    ->show_on_post_type('hotel')
+    ->show_on_template('template-restaurant.php')
+    ->add_fields(array(
+        Field::make('textarea', 'crb_slider_bottom_description' , 'Slider Description')->help_text('This will come after slider (on bottom-right of slider).'),
+        Field::make('text', 'crb_booking_buton_text' , 'Booking Button Text')->set_width(20)->set_default_value('Book'),
+        Field::make('text', 'crb_booking_buton_link' , 'Booking Button Link')->set_width(80),
     ));
 
 //Room Rates
@@ -125,21 +135,6 @@ Container::make('post_meta', 'Special Features')
              Field::make('textarea', 'crb_special_feature' , ''),
         /*)),*/
     ));
-/*
-
-//Slider Info
-
-//Slider Info
-Container::make('post_meta', 'Slider Info')
-    ->show_on_post_type('hotel')
-    ->show_on_template('template-restaurant.php')
-    ->add_fields(array(
-        Field::make('textarea', 'crb_slider_bottom_description' , 'Slider Description')->help_text('This will come after slider (on bottom-right of slider).'),
-        Field::make('text', 'crb_booking_buton_text' , 'Booking Button Text')->set_width(20)->set_default_value('Book'),
-        Field::make('text', 'crb_booking_buton_link' , 'Booking Button Link')->set_width(80),
-    ));
-
-
 
 //Hours & Reservations
 Container::make('post_meta', 'Hours & Reservations')
@@ -157,8 +152,15 @@ Container::make('post_meta', 'Policy')
     ->show_on_post_type('hotel')
     ->show_on_template('template-restaurant.php')
     ->add_fields(array(
-        Field::make('textarea', 'crb_policy' , 'Policy')->set_width(70),
+        Field::make('textarea', 'crb_policy' , 'Policy'),
     ));
+
+/*
+
+//Slider Info
+
+
+
 
 //The Chef
 Container::make('post_meta', 'The Chef Section')

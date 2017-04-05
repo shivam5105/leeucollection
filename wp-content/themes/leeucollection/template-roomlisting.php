@@ -67,6 +67,7 @@ get_header(); ?>
 
 							$banner_image_class = "";
 							$child_post_meta = ( $child_post ) ? get_post_meta( $child_post_id ) : null;
+							$data_anim_delay = "";
 
 							if($logic_loop <= 2)
 							{
@@ -87,6 +88,10 @@ get_header(); ?>
 								<div class="two-img-col">
 								<?php
 							}
+							else if($logic_loop == 3)
+							{
+								$data_anim_delay = "data-anim-delay='100'";
+							}
 							if($logic_loop > 1)
 							{
 								?>
@@ -94,7 +99,7 @@ get_header(); ?>
 								<?php
 							}
 							?>
-							<div class="banner-img <?php echo $banner_image_class; ?> scroll-anim" data-anim="fade-up" style="background-image:url('<?php echo $child_post_img_url; ?>');">
+							<div class="banner-img <?php echo $banner_image_class; ?> scroll-anim" data-anim="fade-up" style="background-image:url('<?php echo $child_post_img_url; ?>');" <?php echo $data_anim_delay; ?>>
 								<div class="inner-detail-wrapper">
 									<div class="inner-detail">
 										<div class="row">
