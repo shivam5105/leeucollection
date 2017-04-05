@@ -1101,28 +1101,34 @@ function get_hotel_id($post_id)
 		return false;
 	}
 }
-function left_sidebar_nav($post_id, $curr_post_id, $ul_class = "side-nav")
+function left_sidebar_nav($post_id, $curr_post_id, $depth = 0, $ul_class = "side-nav")
 {
 	$args = array(
 		'order'=> 'ASC',
 		'post_parent' => $post_id,
+		'post_status' => 'publish',
 		'post_type' => 'hotel'
 		);
 
 	$child_post_array = get_children($args);
 	if(!empty($child_post_array) && count($child_post_array) > 0)
 	{
-		echo "<ul class='".$ul_class."'>";
+		echo "<ul class='".$ul_class." child-".$depth."'>";
+		$depth++;
 		foreach($child_post_array as $child_key => $child_post)
 		{
 			$post_id = $child_post->ID;
+			if($child_post->post_parent == 0)
+			{
+				$depth = 0;
+			}
 			$child_post_link = get_permalink($post_id);
 			$li_class = ($curr_post_id == $post_id) ? "current" : "";
 			?>
 			<li class="<?php echo $li_class; ?>">
 				<a href="<?php echo $child_post_link; ?>"><?php echo $child_post->post_title; ?></a>
 				<?php
-				left_sidebar_nav($post_id, $curr_post_id, "side-sub-menu");
+				left_sidebar_nav($post_id, $curr_post_id, $depth, "side-sub-menu");
 				?>
 			</li>
 			<?php

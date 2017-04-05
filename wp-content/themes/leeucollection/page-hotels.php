@@ -37,6 +37,7 @@ get_header();
 			$args = array(
 				'order'=> 'ASC',
 				'post_parent' => 0,
+				'post_status' => 'publish',
 				'post_type' => 'hotel'
 				);
 

@@ -151,6 +151,7 @@ get_header(); ?>
 							$args = array(
 								'order'=> 'ASC',
 								'post_parent' => $post_id,
+								'post_status' => 'publish',
 								'post_type' => 'hotel'
 								);
 							$child_post_array = get_children($args);
