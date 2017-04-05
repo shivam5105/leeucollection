@@ -124,7 +124,7 @@ get_header(); ?>
 											}
 											?>
 										</div>
-										<div class="single_slider_wrapper">
+										<div class="<?php echo $slider_wrapper; ?>">
 											<?php
 											if(is_array($section_sliders) && count($section_sliders) > 1)
 											{
@@ -134,7 +134,7 @@ get_header(); ?>
 												</div>
 												<?php
 											}?>
-											<div class="owl-carousel single_slider owl-theme">
+											<div class="owl-carousel <?php echo $slider_theme; ?> owl-theme">
 												<?php
 												foreach($section_sliders as $slider_key => $section_slider)
 												{
@@ -147,16 +147,28 @@ get_header(); ?>
 													<div class="slide-item">
 														<div class="banner-img mht_homebanner scroll-anim" data-anim="fade-up" style="background-image:url('<?php echo $slide_image_url; ?>');">
 														</div>
-														<div class="row detail-row">
-															<div class="col-3">
-																<div class="desc-heading"><?php echo $slide_title; ?></div>
-															</div>
-															<div class="col-9">
-																<div class="desc-content"> 
-																	<?php echo $slide_desc; ?>
+														<?php
+														if($section_layout == 2)
+														{
+															?>
+															<div class="desc-heading ucase"><?php echo $slide_title; ?></div>
+															<?php
+														}
+														else
+														{
+															?>
+															<div class="row detail-row">
+																<div class="col-3">
+																	<div class="desc-heading"><?php echo $slide_title; ?></div>
+																</div>
+																<div class="col-9">
+																	<div class="desc-content"> 
+																		<?php echo $slide_desc; ?>
+																	</div>
 																</div>
 															</div>
-														</div>
+															<?php
+														}?>
 													</div>
 													<?php
 												}
