@@ -987,19 +987,22 @@ function get_hotel_location_list($post_id, $args1 = null)
 			'fields' => 'ids'
 			);
 	$terms = wp_get_post_terms( $post_id, $hotel_loc_taxonomy, $args );
-
-	$hotel_location = tv_wp_list_categories( array(
-        'taxonomy' 				=> $hotel_loc_taxonomy,
-        'hierarchical' 			=> true,
-        'style'    				=> 'none',
-        'separator' 			=> ', ',
-        'title_li' 				=> '',
-        'no_anchor'				=> true,
-        'hide_last_separator' 	=> true,
-        'reverse_order' 		=> true,
-        'include' 				=> $terms,
-        'echo'					=> 0
-    ) );
+	$hotel_location = "";
+	if(!empty($terms))
+	{
+		$hotel_location = tv_wp_list_categories( array(
+	        'taxonomy' 				=> $hotel_loc_taxonomy,
+	        'hierarchical' 			=> true,
+	        'style'    				=> 'none',
+	        'separator' 			=> ', ',
+	        'title_li' 				=> '',
+	        'no_anchor'				=> true,
+	        'hide_last_separator' 	=> true,
+	        'reverse_order' 		=> true,
+	        'include' 				=> $terms,
+	        'echo'					=> 0
+	    ) );
+	}
     return $hotel_location;
 }
 
@@ -1125,7 +1128,7 @@ function left_sidebar_nav($post_id, $curr_post_id, $depth = 0, $ul_class = "side
 			$child_post_link = get_permalink($post_id);
 			$li_class = ($curr_post_id == $post_id) ? "current" : "";
 			?>
-			<li class="<?php echo $li_class; ?>">
+			<li class="side-nav-li <?php echo $li_class; ?>">
 				<a href="<?php echo $child_post_link; ?>"><?php echo $child_post->post_title; ?></a>
 				<?php
 				left_sidebar_nav($post_id, $curr_post_id, $depth, "side-sub-menu");
