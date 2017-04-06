@@ -235,22 +235,6 @@ get_header(); ?>
 								    }
 								    $prev_menu_type_id = $menu_type->term_id;
 								}
-
-							$args = array(
-								'order'=> 'ASC',
-								'post_type' => 'hotel'
-								);
-							$child_post_array = get_children($args);
-							if(!empty($child_post_array) && count($child_post_array) > 0)
-							{
-									foreach($child_post_array as $child_key => $child_post)
-									{
-										$child_post_id = $child_post->ID;
-
-									}
-									?>
-								<?php
-							}
 							?>
 						</div>
 					</div>

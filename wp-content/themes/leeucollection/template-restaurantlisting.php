@@ -45,12 +45,14 @@ get_header(); ?>
 						<div class="scroll-anim" data-anim="fade-up">
 							<?php
 							$args = array(
-								'order'=> 'ASC',
-								'post_parent' => $post_id,
+								'post_type' => 'hotel',
+								'numberposts' => -1,
+								'orderby' => 'order',
+								'order' => 'ASC',
 								'post_status' => 'publish',
-								'post_type' => 'hotel'
-								);
-							$child_post_array = get_children($args);
+								'post_parent' => $post_id,
+							);
+							$child_post_array = get_posts($args);
 							if(!empty($child_post_array) && count($child_post_array) > 0)
 							{
 								$logic_loop = 0;

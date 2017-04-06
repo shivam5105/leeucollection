@@ -35,13 +35,15 @@ get_header();
 		<div>
 			<?php
 			$args = array(
-				'order'=> 'ASC',
-				'post_parent' => 0,
+				'post_type' => 'hotel',
+				'numberposts' => -1,
+				'orderby' => 'order',
+				'order' => 'ASC',
 				'post_status' => 'publish',
-				'post_type' => 'hotel'
-				);
+				'post_parent' => 0,
+			);
 
-			$child_post_array = get_children($args);
+			$child_post_array = get_posts($args);
 			if(!empty($child_post_array) && count($child_post_array) > 0)
 			{
 				foreach($child_post_array as $child_key => $child_post)

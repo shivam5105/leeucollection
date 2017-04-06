@@ -1104,16 +1104,23 @@ function get_hotel_id($post_id)
 		return false;
 	}
 }
-function left_sidebar_nav($post_id, $curr_post_id, $depth = 0, $ul_class = "side-nav")
+function left_sidebar_nav($post_id, $curr_post_id, $exclude_posts = array(), $depth = 0, $ul_class = "side-nav")
 {
 	$args = array(
-		'order'=> 'ASC',
-		'post_parent' => $post_id,
+		'post_type' => 'hotel',
+		'numberposts' => -1,
+		'orderby' => 'order',
+		'order' => 'ASC',
 		'post_status' => 'publish',
-		'post_type' => 'hotel'
-		);
-
-	$child_post_array = get_children($args);
+		'post_parent' => $post_id,
+		
+	);
+	if($exclude_posts != null && !empty($exclude_posts))
+	{
+		$args['exclude'] = $exclude_posts;
+	}
+	$child_post_array = get_posts($args);
+	
 	if(!empty($child_post_array) && count($child_post_array) > 0)
 	{
 		echo "<ul class='".$ul_class." child-".$depth."'>";
@@ -1131,7 +1138,7 @@ function left_sidebar_nav($post_id, $curr_post_id, $depth = 0, $ul_class = "side
 			<li class="side-nav-li <?php echo $li_class; ?>">
 				<a href="<?php echo $child_post_link; ?>"><?php echo $child_post->post_title; ?></a>
 				<?php
-				left_sidebar_nav($post_id, $curr_post_id, $depth, "side-sub-menu");
+				left_sidebar_nav($post_id, $curr_post_id, $exclude_posts, $depth, "side-sub-menu");
 				?>
 			</li>
 			<?php
@@ -1146,13 +1153,15 @@ function tv_redirect_to_detail()
     if(!empty($post) && $post->post_type == 'hotel')
     {
 		$args = array(
-			'order'=> 'ASC',
-			'post_parent' => $post->ID,
+			'post_type' => 'hotel',
+			'numberposts' => 2,
+			'orderby' => 'order',
+			'order' => 'ASC',
 			'post_status' => 'publish',
-			'post_type' => 'hotel'
-			);
+			'post_parent' => $post->ID,
+		);
 
-		$child_post_array = get_children($args);
+		$child_post_array = get_posts($args);
 		if(count($child_post_array) == 1)
 		{
 			foreach ($child_post_array as $key => $child_post)
