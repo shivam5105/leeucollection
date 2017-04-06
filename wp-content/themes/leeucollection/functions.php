@@ -1143,7 +1143,7 @@ function tv_redirect_to_detail()
 {
 	/* Redirecting to detail page if listing page has only 1 item/record. */
     global $post;
-    if($post->post_type == 'hotel')
+    if(!empty($post) && $post->post_type == 'hotel')
     {
 		$args = array(
 			'order'=> 'ASC',
