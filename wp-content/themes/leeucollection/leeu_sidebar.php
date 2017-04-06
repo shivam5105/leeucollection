@@ -44,7 +44,7 @@ if(!empty($post) && $post->post_parent > 0)
 		echo "<a href='".$post1_link."'>".$post1->post_title."</a>";
 		left_sidebar_nav($post_id_for_nav,$post_id,array(),$depth,"side-sub-menu");
 		echo "</li>";
-		echo "<li class='menu-view-all-link'><a href='".$post1_link."'>View All ".$post1->post_title."</a></li>";
+		/*echo "<li class='menu-view-all-link'><a href='".$post1_link."'>View All ".$post1->post_title."</a></li>";*/
 		echo "</ul>";
 	}
 }
