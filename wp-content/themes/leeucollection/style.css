@@ -238,6 +238,8 @@ padding-top: 41px;
     -ms-transition:all 0.3s ease-in 0s;
     transition:all 0.3s ease-in 0s;
     display: inline-block;
+    letter-spacing: 0.09em;
+    font-weight: 600;
 }
 .leeu-text + h2{
     text-transform: uppercase;
@@ -251,11 +253,11 @@ padding-top: 41px;
     height: 1px;
     background: #c19034;
     width: 0%;
-    bottom:0;
     -webkit-transition:all 0.3s ease-in 0s; 
     -moz-transition:all 0.3s ease-in 0s;
     -ms-transition:all 0.3s ease-in 0s;    
     transition:all 0.3s ease-in 0s;
+    bottom: -1px;
 } 
 
 #main-navigation ul li a:hover:before , #main-navigation ul li a:hover:after {
@@ -360,21 +362,21 @@ padding-top: 41px;
 }
 .page-link{
     margin-bottom:26px;
-    margin-top: -11px;
 }
 .page-link a{ 
     text-decoration: none;
     font-size: 11px;
     text-transform: uppercase;
     color: #AC9E94;
-    letter-spacing: 0.1em;
-    font-family: GillSans;  
+    letter-spacing: 0.09em;
+    font-family: GillSans;
+    font-weight: 600;  
 }
 .hotel-template-template-hotel .side-nav-contain{
     margin-top: 72px;
 }
 .listing-row{
-    margin-bottom: 43px;
+    margin-bottom: 73px;
 }
 .banner-img:hover .inner-detail-wrapper{
     opacity:1;
@@ -444,8 +446,9 @@ padding-top: 41px;
     font-size: 11px;
     text-transform: uppercase;
     color: #AC9E94;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.092em;
     font-family: GillSans;
+    font-weight: 600;
     position: relative;
     -webkit-transition:all 0.3s ease-in 0s; 
     -moz-transition:all 0.3s ease-in 0s; 
@@ -461,16 +464,16 @@ padding-top: 41px;
     height: 33px;
     left: -32px;
     position: absolute;
-    top: -21px;
+    top: -17px;
     width: 22px;
 }
 .linking-wrap li.book-link a::before {
     background: rgba(0, 0, 0, 0) url("images/pen-icon.png") repeat scroll 0 0;
     content: "";
     height: 33px;
-    left: -26px;
+    left: -23px;
     position: absolute;
-    top: -23px;
+    top: -21px;
     width: 33px;
 }
 .two-img-col .content-part{
@@ -618,7 +621,8 @@ div.sub-menu-wrapper{
     font-size: 11px;
     text-transform: uppercase;
     color: #AC9E94;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.092em;
+    font-weight: 600;
     font-family: GillSans;
      transition:all 0.6s ease 0s; 
 }
@@ -817,7 +821,10 @@ li.current.active .side-sub-menu li.current.active ~ li{
     text-transform: uppercase;
     color: #AC9E94;
     letter-spacing: 0.1em;
-    font-family: GillSans;    
+    font-family: GillSans; 
+    font-weight: 600;
+    margin-top: 70px;  
+
 }
 .footer-menu-row{
     margin-top: 37px;
@@ -827,8 +834,14 @@ li.current.active .side-sub-menu li.current.active ~ li{
     text-transform: uppercase;
     color: #AC9E94;
     letter-spacing: 0.1em;
-    font-family: GillSans;  
+    -webkit-transition:all 0.3s ease-in 0s; 
+    -moz-transition:all 0.3s ease-in 0s; 
+    -ms-transition:all 0.3s ease-in 0s;
+    transition:all 0.3s ease-in 0s;    
     text-decoration: none;    
+}
+#footer a:hover{
+    color: #c19034;
 }
 .footer-head{
     margin-bottom: 28px;
@@ -862,6 +875,7 @@ li.current.active .side-sub-menu li.current.active ~ li{
     border:1px solid #c7beb6;
     cursor:pointer;
     color: #AC9E94; 
+    font-weight: 600;
 }
 .cstm-btn{
     min-width:132px;
@@ -1026,5 +1040,9 @@ input:-moz-placeholder { /* Firefox 18- */
 body.hotel-template-template-restaurant .side-sub-menu.child-2 , body.hotel-template-template-menudetail .side-sub-menu.child-2 , 
 body.hotel-template-template-menudetail .side-sub-menu.child-2 li.current.active > a{
     display: block;
+}
+/**margin fix for room page**/
+.hotel-template-template-roomlisting .listing-row{
+    margin-bottom: 43px;
 }
 
