@@ -1139,3 +1139,27 @@ function left_sidebar_nav($post_id, $curr_post_id, $depth = 0, $ul_class = "side
 		echo "</ul>";
 	}
 }
+function tv_redirect_to_detail()
+{
+	/* Redirecting to detail page if listing page has only 1 item/record. */
+    global $post;
+    if($post->post_type == 'hotel')
+    {
+		$args = array(
+			'order'=> 'ASC',
+			'post_parent' => $post->ID,
+			'post_status' => 'publish',
+			'post_type' => 'hotel'
+			);
+
+		$child_post_array = get_children($args);
+		if(count($child_post_array) == 1)
+		{
+			foreach ($child_post_array as $key => $child_post)
+			{
+				wp_redirect( get_permalink($child_post->ID) );
+			}
+		}
+    } 
+}
+add_action('template_redirect', 'tv_redirect_to_detail');
