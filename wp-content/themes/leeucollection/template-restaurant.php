@@ -235,7 +235,8 @@ get_header(); ?>
 								    }
 								    $prev_menu_type_id = $menu_type->term_id;
 								}
-							?>
+								?>
+							</div>
 						</div>
 					</div>
 				</div>

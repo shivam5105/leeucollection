@@ -88,7 +88,7 @@ Container::make('post_meta', 'Short Description')
 //Images Slider
 Container::make('post_meta', 'Slider Images')
     ->show_on_post_type('hotel')
-    ->show_on_template(array('template-hotel.php','template-room.php','template-restaurant.php'))
+    ->show_on_template(array('template-hotel.php','template-room.php','template-restaurant.php','template-facilities.php'))
     ->add_fields(array(
         Field::make('complex', 'crb_slider_images', '')->add_fields(array(
             Field::make('image', 'crb_slide_image', 'Slide Image')->help_text('(Image Dimensions (WxH): 1240 x 600)'),
@@ -155,11 +155,24 @@ Container::make('post_meta', 'Policy')
         Field::make('textarea', 'crb_policy' , 'Policy'),
     ));
 
+
+//Hours & Reservations
+Container::make('post_meta', 'Facilities')
+    ->show_on_post_type('hotel')
+    ->show_on_template('template-facilities.php')
+    ->add_fields(array(
+        Field::make('complex', 'crb_facilities_section', '')->add_fields(array(
+            Field::make('text', 'crb_facilities_heading' , 'Heading')->set_width('40'),
+            Field::make('complex', 'crb_facilities', '')->add_fields(array(
+                Field::make('text', 'crb_facility' , 'Facility'),
+            ))->set_width('60'),
+        )),
+    ));
+
+
 /*
 
 //Slider Info
-
-
 
 
 //The Chef
