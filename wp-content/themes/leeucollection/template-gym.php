@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Facilities
+Template Name: The Gym
 */
 
 get_header(); ?>
@@ -105,47 +105,56 @@ get_header(); ?>
 								</div>
 							</div>
 						</div>
-
-						<div class="listing-box listing-row">
-							<div class="text-right page-link"> </div>
-							<?php
-							$col = 2;
-							$x = 0;
-							$facilities_section = carbon_get_post_meta($post->ID, 'crb_facilities_section', 'complex');
-							foreach ($facilities_section as $fs_key => $section_facility)
-							{
-								$facilities_heading = $section_facility['crb_facilities_heading'];
-								if($x == 0)
-								{
-									?>
-									<div class="row detail-row">
-									<?php
-								}?>
-								<div class="col-6">
-									<div class="desc-heading"><?php echo $facilities_heading; ?></div>
-									<div class="summary_details">
-										<?php
-										foreach ($section_facility['crb_facilities'] as $facility_key => $facilities)
-										{
-											?>
-											<p><?php echo $facilities['crb_facility']; ?></p>
-											<?php
-										}
-										?>
+						<div class="row detail-row">
+							<div class="col-3">
+								<div class="desc-heading"><?php echo @$post_meta['_crb_slider_bottom_heading'][0]; ?></div>
+							</div>
+							<div class="col-9">
+								<div class="desc-content"> 
+									<?php echo @$post_meta['_crb_slider_bottom_description'][0]; ?>
+								</div>
+							</div>
+						</div>
+						<div class="row detail-row mg-t-0">
+							<div class="col-3">
+								<div class="session_rate">SESSION RATE</div>
+							</div>
+						</div>
+						<?php
+						$rates_sections = carbon_get_post_meta($post->ID, "crb_rates_section", 'complex');
+						foreach ($rates_sections as $rs_key => $rates_section)
+						{
+							$rate_amount 	= $rates_section['crb_rate_amount'];
+							$rate_for 		= $rates_section['crb_rate_for'];
+							$rate_details	= $rates_section['crb_rate_details'];
+							?>							
+							<div class="row detail-row">
+								<div class="col-3">
+									<div class="price_value">
+										<p><?php echo $rate_amount?></p>
+										<p><?php echo $rate_for?></p>
 									</div>
 								</div>
-								<?php
-								$x++;
-								if($x == $col)
-								{
-									$x = 0;
-									?>
+								<div class="col-9">
+									<div class="desc-content"> 
+										<?php echo $rate_details?>
 									</div>
-									<?php
-								}
-							}
+								</div>
+							</div>
+							<?php
+						}
+						if(is_array($post_meta['_crb_booking_buton_link']) && !empty($post_meta['_crb_booking_buton_link'][0]))
+						{
 							?>
-						</div>
+							<div class="row detail-row">
+								<div class="col-3">
+									<div class="cstm-btn-wrapper">
+										<a href="<?php echo $post_meta['_crb_booking_buton_link'][0]; ?>" class="cstm-btn arrow-btn text-center" target="_blank"><?php echo $post_meta['_crb_booking_buton_text'][0]; ?></a>
+									</div>
+								</div>
+							</div>
+							<?php
+						}?>
 
 
 					</div>

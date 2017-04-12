@@ -29,12 +29,12 @@ get_header(); ?>
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-2">
+				<div class="col-2 rm-pad-left">
 					<div class="side-nav-contain">
 						<div class="scroll-anim" data-anim="fade-up">
 							<div class="side-nav-wrap">
 								<?php
-								include_once("leeu_sidebar.php")
+								include_once("leeu_sidebar.php");
 								?>
 							</div>
 						</div>
