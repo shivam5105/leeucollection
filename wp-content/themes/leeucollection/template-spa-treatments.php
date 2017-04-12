@@ -49,7 +49,7 @@ get_header(); ?>
 								{
 									?>
 									<div class="transformed_head">
-										<h2><?php echo $post_meta['_crb_page_sub_heading'][0];?></h2>
+										<h2 class="ucase"><?php echo $post_meta['_crb_page_sub_heading'][0];?></h2>
 									</div>
 									<?php
 								}
