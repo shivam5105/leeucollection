@@ -1593,15 +1593,3 @@ background:url(../img/arrow-icon-hover.png) no-repeat;
 .align_center span{
     text-transform:lowercase;
 }
-
-.d_b a{
-    display:block;
-    padding:6px 0;
-}
-
-.full_img img{
-    width:100%;
-}
-.transformed .summer_paragaraph p{
-    margin-bottom:0;
-}
