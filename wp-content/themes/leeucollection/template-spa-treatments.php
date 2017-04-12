@@ -59,7 +59,7 @@ get_header(); ?>
 									$service_duration 	= $services_section['crb_service_duration'];
 									$service_heading 	= $services_section['crb_service_heading'];
 									?>
-									<div class="service-wrapper">
+									<div class="service-wrapper clearfix">
 										<div class="col-10 pd-0">
 											<div class="transformed">
 												<div class="summer_heading">

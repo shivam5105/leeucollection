@@ -1,0 +1,121 @@
+<?php
+/*
+Template Name: Spa & Wellness
+*/
+
+get_header(); ?>
+	<?php
+	$post_id 	= $post->ID;
+	$hotel_id 	= get_hotel_id($post_id);
+    $post_meta 	= ( $post ) ? get_post_meta( $post->ID ) : null;
+
+	$top_most_parent_post = ($hotel_id == false) ? false : get_post($hotel_id);
+
+	$page_heading = (@$post_meta['_crb_page_heading'][0]) ? $post_meta['_crb_page_heading'][0] : $post->post_title;
+    ?>
+	<section id="site-main">
+		<div class="container">
+			<div class="leeu-heading-wrap scroll-anim" data-anim="fade-up">
+				<div class="row">
+					<div class="col-2 rm-pad"></div>
+					<div class="col-8 rm-pad">
+						<div class="text-center">
+							<div class="leeu-text ucase" itemprop="legalName"><?php echo $top_most_parent_post->post_title;?></div>
+							<h1 class="ucase" itemprop="name"><?php echo $page_heading; ?></h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="col-12 rm-pad room-listing-contain">
+				<div class="row listing-row">
+					<div class="col-2 rm-pad-left">
+						<div class="side-nav-contain">
+							<div class="scroll-anim" data-anim="fade-up">
+								<div class="side-nav-wrap">
+									<?php
+									include_once("leeu_sidebar.php");
+									?>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-8">
+						<div class="listing-box listing-row mgt-0">
+							<div class="scroll-anim" data-anim="fade-up">
+								<?php
+								$has_slider = false;
+						    	$slider_data = carbon_get_post_meta($post->ID, "crb_slider_images", 'complex');
+								if(is_array($slider_data) && !empty($slider_data) && count($slider_data) > 1)
+								{
+									$has_slider = true;
+								}
+								?>
+								<div class="listing-box">
+									<div class="single_slider_wrapper">
+										<?php
+										if($has_slider == true)
+										{
+											?>
+											<div class="mht_homebanner next-wrapper">
+												<div class="next"></div>
+											</div>
+											<?php
+										}?>
+										<div class="owl-carousel single_slider owl-theme">
+											<?php
+											if(is_array($slider_data) && !empty($slider_data))
+											{
+												foreach ($slider_data as $slide_key => $slide_data)
+												{
+													$banner_url = wp_get_attachment_image_src( $slide_data['crb_slide_image'], '1240x600' );
+													$banner_url = $banner_url[0];
+													?>
+													<div class="slide-item">
+														<div class="banner-img mht_homebanner scroll-anim" data-anim="fade-up" style="background-image:url('<?php echo $banner_url; ?>');">
+														</div>
+													</div>
+													<?php
+												}
+											}
+											else
+											{
+												/*$banner_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );*/
+												$banner_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), '1240x600' );
+												$banner_url = $banner_url[0];
+												?>
+												<div class="slide-item">
+													<div class="banner-img mht_homebanner scroll-anim" data-anim="fade-up" style="background-image:url('<?php echo $banner_url; ?>');">
+													</div>
+												</div>
+												<?php
+											}?>
+										</div>
+										<?php
+										if($has_slider == true)
+										{
+											?>
+											<div class="mht_homebanner prev-wrapper">
+												<div class="prev"></div>
+											</div>
+											<?php
+										}?>
+									</div>
+									<div class="row detail-row">
+										<div class="col-12">
+											<div class="desc-content text-center"> 
+												<?php echo @$post_meta['_crb_short_description'][0]; ?>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<?php get_footer(); ?>
