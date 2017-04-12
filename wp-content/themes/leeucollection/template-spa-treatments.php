@@ -42,7 +42,7 @@ get_header(); ?>
 						</div>
 					</div>
 					<div class="col-8">
-						<div class="listing-box listing-row">
+						<div class="listing-box">
 							<div class="scroll-anim" data-anim="fade-up">
 								<?php
 								if(is_array($post_meta['_crb_page_sub_heading']) && !empty($post_meta['_crb_page_sub_heading'][0]))
@@ -95,25 +95,6 @@ get_header(); ?>
 									<?php
 								}
 								?>
-								<div class="col-10 rm-pad">
-									<div class="transformed">
-										<div class="summer_heading">
-											<h3> The Summer Tree of Life Journey</h3>
-										</div>
-										<div class="summer_paragaraph">
-											<p>
-												Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus interdum 
-												imperdiet ultricies. Aliquam scelerisque, turpis ut iaculis suscipit, justo lorem vehicula magna, a pellentesque. Lorem urna justo semper ipsum dolor sit amet, scelerisque consectetur adipiscing elit. Aliquam scelerisque, turpis ut iaculis suscipit, justo lorem vehicula magna, a pellentesque. Lorem urna justo semper ipsum dolor sit amet, scelerisque consectetur adipiscing elit.
-											</p>
-										</div>
-									</div>
-								</div>
-								<div class="col-2">
-									<div class="timing_func">
-										<p>90 mins</p>
-										<p>R1000</p>
-									</div>
-								</div>
 							</div>
 						</div>
 

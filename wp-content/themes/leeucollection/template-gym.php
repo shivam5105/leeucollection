@@ -42,7 +42,7 @@ get_header(); ?>
 						</div>
 					</div>
 					<div class="col-8">
-						<div class="listing-box listing-row mgt-0">
+						<div class="listing-box mgt-0">
 							<div class="scroll-anim" data-anim="fade-up">
 								<?php
 								$has_slider = false;
@@ -115,7 +115,7 @@ get_header(); ?>
 								</div>
 							</div>
 						</div>
-						<div class="row detail-row mg-t-0">
+						<div class="row detail-row mgt-0">
 							<div class="col-3">
 								<div class="session_rate">SESSION RATE</div>
 							</div>
