@@ -1350,7 +1350,7 @@ body.hotel-template-template-menudetail .side-sub-menu.child-2 li.current.active
     vertical-align: top;
     width: 17px;
 }
-label.valid {
+#mc-form label {
     display: block !important;
     margin-top: 11px;
 }
