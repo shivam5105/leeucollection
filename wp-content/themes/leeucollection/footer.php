@@ -16,19 +16,19 @@
 							if($fb != "")
 							{
 								?>
-								<li><a target="blank" href="<?php echo $fb; ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/facebook.svg" alt=""></a></li>
+								<li><a target="blank" href="<?php echo $fb; ?>"><?php include('facebook-svg.php'); ?></a></li>
 								<?php
 							}
 							if($twt != "")
 							{
 								?>
-								<li><a target="blank" href="<?php echo $twt; ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/twitter.svg" alt=""></a></li>
+								<li><a target="blank" href="<?php echo $twt; ?>"><?php include('twitter-svg.php'); ?></a></li>
 								<?php
 							}
 							if($insta != "")
 							{
 								?>
-								<li><a target="blank" href="<?php echo $insta; ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/instagram.svg" alt=""></a></li>
+								<li><a target="blank" href="<?php echo $insta; ?>"><?php include('instagram-svg.php'); ?></a></li>
 								<?php
 							}?>
 						</ul>

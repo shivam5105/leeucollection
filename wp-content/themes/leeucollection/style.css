@@ -273,7 +273,7 @@ padding-top: 41px;
     position: relative;
 }
 #main-navigation ul.menu-right li:last-child::before {
-    background: rgba(0, 0, 0, 0) url("../img/book-icon.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("images/book-icon.png") no-repeat scroll 0 0;
     content: "";
     height: 25px;
     left: -20px;
@@ -464,7 +464,7 @@ padding-top: 41px;
     color: #C19034;
 }
 .linking-wrap li.see-more-link a::before {
-    background: rgba(0, 0, 0, 0) url("../img/text-book-icon.png") repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("images/text-book-icon.png") repeat scroll 0 0;
     content: "";
     height: 33px;
     left: -32px;
@@ -473,7 +473,7 @@ padding-top: 41px;
     width: 22px;
 }
 .linking-wrap li.book-link a::before {
-    background: rgba(0, 0, 0, 0) url("../img/pen-icon.png") repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("images/pen-icon.png") repeat scroll 0 0;
     content: "";
     height: 33px;
     left: -23px;
@@ -772,7 +772,7 @@ li.current.active .side-sub-menu li.current.active ~ li{
 .two-slide-carousel .next:before , .two-slide-carousel .prev:before{
     content:"";
     position: absolute;
-    background: url('../img/arrow-icon.png') no-repeat;
+    background: url('images/arrow-icon.png') no-repeat;
     width: 29px;
     height: 10px;
     top:50%;
@@ -907,7 +907,7 @@ li.current.active .side-sub-menu li.current.active ~ li{
     position: relative;
 }
 .arrow-btn::after {
-    background: rgba(0, 0, 0, 0) url("../img/arrow-icon.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("images/arrow-icon.png") no-repeat scroll 0 0;
     content: "";
     display: inline-block;
     height: 10px;
@@ -924,7 +924,7 @@ li.current.active .side-sub-menu li.current.active ~ li{
     width: 29px;
 }
 .arrow-btn:hover:after{
-     background: rgba(0, 0, 0, 0) url("../img/arrow-icon-hover.png") no-repeat scroll 0 0;
+     background: rgba(0, 0, 0, 0) url("images/arrow-icon-hover.png") no-repeat scroll 0 0;
      -webkit-transform: translateY(1px) translateX(0px);
     -moz-transform: translateY(1px) translateX(0px); 
     -ms-transform: translateY(1px) translateX(0px);
@@ -1113,7 +1113,7 @@ body.hotel-template-template-menudetail .side-sub-menu.child-2 li.current.active
     margin-top: 28px;
 }
 .slider-txt-link .cstm-btn-wrapper .arrow-btn::after {
-    background: rgba(0, 0, 0, 0) url("../img/arrow-icon-white.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("images/arrow-icon-white.png") no-repeat scroll 0 0;
 }
 .slider-txt-link,.slider-txt-con,.slider-txt-head{
     transform:translateY(20px);
@@ -1325,12 +1325,12 @@ body.hotel-template-template-menudetail .side-sub-menu.child-2 li.current.active
     padding-top: 25px;
 }
 .booking-form-object select { 
-  background: url('../img/book-form-arrow.png') no-repeat;
+  background: url('images/book-form-arrow.png') no-repeat;
   background-position: right center;
   padding-bottom: 9px;
 }  
 .booking-form-object input{
-   background: url('../img/cal-icon.png') no-repeat;
+   background: url('images/cal-icon.png') no-repeat;
     background-position: right center;  
     padding-bottom: 10px; 
 }
@@ -1342,7 +1342,7 @@ body.hotel-template-template-menudetail .side-sub-menu.child-2 li.current.active
     position: relative;
 }
 .form-item .submit-btn::before {
-    background: rgba(0, 0, 0, 0) url("../img/check-avail.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("images/check-avail.png") no-repeat scroll 0 0;
     content: "";
     display: inline-block;
     height: 19px;
@@ -1356,6 +1356,15 @@ label.valid {
 }
 button{
     box-shadow: none;
+}
+.social-links path{
+    -webkit-transition:all 0.3s ease 0s; 
+    -moz-transition:all 0.3s ease 0s; 
+    -ms-transition:all 0.3s ease 0s;
+    transition:all 0.3s ease 0s;
+}
+.social-links a:hover path{
+    fill: #c19034;
 }
 /**show for short header**/
 body.short-header #main-navigation{
@@ -1379,6 +1388,9 @@ body.short-header .logo-wrapper img{
 }
 body.short-header #site-main{
     margin-top:60px; 
+}
+body.short-header .slider-text.top-position {
+    top: 153px;
 }
 /** sohail **/
 
@@ -1413,22 +1425,19 @@ padding-bottom:0;
 .mg-0{
 margin:0;
 }
-
 .see_option {
     margin-left:32px;
     margin-top: 36px;
     margin-bottom: 27px;
 }
-
 .see_option span a{
     position:relative;
     display:block;
     transition:all 0.2s ease 0s;
 }
-
 .see_option span a::before{
     display:block;
-    background: rgba(0, 0, 0, 0) url("../img/text-book-icon.png") repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("images/text-book-icon.png") repeat scroll 0 0;
     content: "";
     height: 33px;
     left: -32px;
@@ -1436,14 +1445,13 @@ margin:0;
     top: -17px;
     width: 22px;
 }
-
 .locator a{
     position:relative;
     display:block;
 }
 .locator a::before{
     display:block;
-    background: rgba(0, 0, 0, 0) url("../img/navigator.jpg") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("images/navigator.jpg") no-repeat scroll 0 0;
     content: "";
     height: 33px;
     left: -32px;
@@ -1455,7 +1463,6 @@ margin:0;
     margin-left: 35px;
     margin-top: 25px;
 }
-/* spa treatments */
 .transformed_head h2{
     font-weight: 300;
     font-family: GillSans; 
@@ -1464,7 +1471,6 @@ margin:0;
     letter-spacing:0.03em;
     margin-bottom:51px;
 }
-
 .transformed .summer_heading h3{
     font-weight: 300;
     font-family: 'Lyon Text Regular No. 2';
@@ -1472,7 +1478,6 @@ margin:0;
     line-height: 1.23;  
     margin-bottom:5px;
 }
-
 .transformed .summer_paragaraph p{
     margin-bottom:40px;
 }
@@ -1480,7 +1485,6 @@ margin:0;
 .see_option span a:hover{
     color: #c19034;
 }
-
 .timing_func p, .transformed .summer_paragaraph p{
     font-weight: normal;
     font-family: 'Lyon Text';
@@ -1488,7 +1492,6 @@ margin:0;
     line-height: 1.33;  
     letter-spacing:0.01em;
 }
-
 .transformed .groom_heading h3{
     font-weight: 300;
     font-family: 'Lyon Text Regular No. 2';
@@ -1496,7 +1499,6 @@ margin:0;
     line-height: 1.23;  
     text-transform: capitalize;
 }
-
 .transformed .grooming_service p,.listing_type p{
     font-weight: normal;
     font-family: 'Lyon Text';
@@ -1505,19 +1507,15 @@ margin:0;
     letter-spacing:0.01em;
     margin-bottom:3px;
 }
-
 .listing_type .cmn_pra p,.transformed .groom_heading{
     margin-bottom:16px;
 }
-
 .mgt-45{
     margin-top:45px;
 }
-
 .desc-heading{
     text-transform:capitalize;
 }
-
 .session_rate{
     font-family: GillSans; 
     font-weight: 600;
@@ -1534,15 +1532,12 @@ margin:0;
     letter-spacing:0.01em;
     margin-bottom:3px;
 }
-
 .mgt-36{
     margin-top: 36px;
 }
-
 .listing_details{
     margin-top:25px;
 }
-
 .reserve a{
     border: 1px solid #c7beb6;
     display: inline-block;
@@ -1554,10 +1549,8 @@ margin:0;
     padding: 20px 53px 18px 14px;
     transition: all 0.3s ease 0s;
 }
-
-
 .reserve a::after {
-    background: rgba(0, 0, 0, 0) url("../img/arrow-icon.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("images/arrow-icon.png") no-repeat scroll 0 0;
     content: "";
     display: inline-block;
     height: 10px;
@@ -1568,13 +1561,12 @@ margin:0;
     width: 35px;
     transition: all 0.2s ease 0s;
 }   
-
 .reserve a:hover{
     border: 1px solid #c19034;
     color: #c19034;
 }
 .reserve a:hover::after{
-background:url(../img/arrow-icon-hover.png) no-repeat;
+background:url(images/arrow-icon-hover.png) no-repeat;
  transform: translateY(1px) translateX(0px);
 }
 
@@ -1589,7 +1581,6 @@ background:url(../img/arrow-icon-hover.png) no-repeat;
     letter-spacing:0.01em;
     text-transform:capitalize;
 }
-
 .franschhoek_cat > ul{
     list-style:none;    
 }
@@ -1600,7 +1591,6 @@ background:url(../img/arrow-icon-hover.png) no-repeat;
 .franschhoek_cat ul li a {
     text-transform:uppercase;   
 }
-
 .active_cat{
         color:#000;
 }
@@ -1608,23 +1598,15 @@ background:url(../img/arrow-icon-hover.png) no-repeat;
     color:#000;
     transition:all 0.2s ease 0s;
 }
-
 .hover_anim img{
     max-width:100%;
 }
-
-/* .two-img-col .banner-img{
-    height: 245px;
-} */
-
-.img_full img{
+.img_full img,.full_img img{
     width:100%;
 }
-
 .mgt-topp{
     margin-top:80px;
 }
-
 .align_center{
     text-align:center;
     text-transform:uppercase;
@@ -1634,24 +1616,26 @@ background:url(../img/arrow-icon-hover.png) no-repeat;
 .align_center span{
     text-transform:lowercase;
 }
-
 .d_b a{
     display:block;
     padding:6px 0;
 }
-
-.full_img img{
-    width:100%;
-}
 .transformed .summer_paragaraph p{
     margin-bottom:0;
 }
-
 .service-wrapper{
     margin-bottom:40px;
 }
-.desc-content > ul,
-.desc-content > ol {
+.desc-content > ul,.desc-content > ol{
     margin-left: 17px;
     list-style-type: disc;
+}
+
+.inner-detail-content2{
+    font-size: 22px;
+    letter-spacing: 0.046em;
+    opacity: 1;
+    text-align: left;
+    transform: translateY(0px);
+    transition: all 0.3s ease-out 0.15s;
 }
