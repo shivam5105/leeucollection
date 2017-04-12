@@ -244,6 +244,7 @@ function leeucollection_scripts() {
 	wp_script_add_data( 'leeucollection-html5', 'conditional', 'lt IE 9' );
 
 	wp_enqueue_script( 'leeucollection-owl-carousel', get_template_directory_uri() . '/js/owl.carousel.min.js', array( 'jquery' ), '20160816', true );
+	wp_enqueue_script( 'leeucollection-ajaxchimp', get_template_directory_uri() . '/js/jquery.ajaxchimp.min.js');
 	wp_enqueue_script( 'leeucollection-custom', get_template_directory_uri() . '/js/custom.js');
 }
 add_action( 'wp_enqueue_scripts', 'leeucollection_scripts' );

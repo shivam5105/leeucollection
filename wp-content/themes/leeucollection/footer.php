@@ -37,13 +37,14 @@
 				      <div class="footer-head">SIGN UP TO LEARN ABOUT SPECIAL EVENTS AND OFFERS</div>
 				      <div class="newsleter-form">
 				         <div class="form-inline">
-				            <form action="">
+				            <form id="mc-form">
 				               <div class="form-group form-input-wrap"> 
-				                  <input type="email" name="email" placeholder="Enter your email here" required="required">
+				                  <input id="mc-email" type="email" name="email" placeholder="Enter your email here" required="required">
 				               </div>
 				               <div class="form-group">
 				                  <button type="submit" class="submit-btn ucase">sign up</button>
 				               </div>
+				               <label for="mc-email"></label>
 				            </form>
 				         </div>
 				      </div>
