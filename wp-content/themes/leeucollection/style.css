@@ -1352,7 +1352,7 @@ body.hotel-template-template-menudetail .side-sub-menu.child-2 li.current.active
 }
 label.valid {
     display: block !important;
-    display: block;
+    margin-top: 11px;
 }
 button{
     box-shadow: none;
