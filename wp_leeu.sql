@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 12, 2017 at 10:53 AM
+-- Generation Time: Apr 12, 2017 at 01:24 PM
 -- Server version: 5.5.38
 -- PHP Version: 5.5.14
 
@@ -103,7 +103,7 @@ CREATE TABLE IF NOT EXISTS `wp_options` (
   `autoload` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=491 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=497 ;
 
 --
 -- Dumping data for table `wp_options`
@@ -270,7 +270,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (480, '_site_transient_timeout_theme_roots', '1491979940', 'no'),
 (481, '_site_transient_theme_roots', 'a:1:{s:14:"leeucollection";s:7:"/themes";}', 'no'),
 (482, '_site_transient_update_plugins', 'O:8:"stdClass":4:{s:12:"last_checked";i:1491978146;s:8:"response";a:1:{s:19:"akismet/akismet.php";O:8:"stdClass":8:{s:2:"id";s:2:"15";s:4:"slug";s:7:"akismet";s:6:"plugin";s:19:"akismet/akismet.php";s:11:"new_version";s:3:"3.3";s:3:"url";s:38:"https://wordpress.org/plugins/akismet/";s:7:"package";s:54:"https://downloads.wordpress.org/plugin/akismet.3.3.zip";s:6:"tested";s:5:"4.7.3";s:13:"compatibility";O:8:"stdClass":1:{s:6:"scalar";O:8:"stdClass":1:{s:6:"scalar";b:0;}}}}s:12:"translations";a:0:{}s:9:"no_update";a:2:{s:43:"go-live-update-urls/go-live-update-urls.php";O:8:"stdClass":6:{s:2:"id";s:5:"26232";s:4:"slug";s:19:"go-live-update-urls";s:6:"plugin";s:43:"go-live-update-urls/go-live-update-urls.php";s:11:"new_version";s:5:"4.1.2";s:3:"url";s:50:"https://wordpress.org/plugins/go-live-update-urls/";s:7:"package";s:62:"https://downloads.wordpress.org/plugin/go-live-update-urls.zip";}s:9:"hello.php";O:8:"stdClass":6:{s:2:"id";s:4:"3564";s:4:"slug";s:11:"hello-dolly";s:6:"plugin";s:9:"hello.php";s:11:"new_version";s:3:"1.6";s:3:"url";s:42:"https://wordpress.org/plugins/hello-dolly/";s:7:"package";s:58:"https://downloads.wordpress.org/plugin/hello-dolly.1.6.zip";}}}', 'no'),
-(490, '_transient_is_multi_author', '0', 'yes');
+(496, '_transient_is_multi_author', '0', 'yes');
 
 -- --------------------------------------------------------
 
@@ -286,7 +286,7 @@ CREATE TABLE IF NOT EXISTS `wp_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=1434 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=1500 ;
 
 --
 -- Dumping data for table `wp_postmeta`
@@ -316,8 +316,8 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (21, 23, '_edit_lock', '1490873475:1'),
 (22, 23, '_wp_page_template', 'default'),
 (23, 25, '_edit_last', '1'),
-(24, 25, '_edit_lock', '1490873523:1'),
-(25, 25, '_wp_page_template', 'default'),
+(24, 25, '_edit_lock', '1491994669:1'),
+(25, 25, '_wp_page_template', 'template-spa-wellness.php'),
 (26, 27, '_edit_last', '1'),
 (27, 27, '_edit_lock', '1490879730:1'),
 (28, 27, '_wp_page_template', 'default'),
@@ -1096,7 +1096,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (1243, 223, '_crb_facilities_section_-_crb_facilities_1_-_crb_facility_9', 'Rikrak Bath $ Body Products'),
 (1244, 223, '_crb_facilities_section_-_crb_facilities_1_-_crb_facility_10', 'Two Line Telephone With Voicemail Personal Safe'),
 (1245, 225, '_edit_last', '1'),
-(1246, 225, '_edit_lock', '1491987156:1'),
+(1246, 225, '_edit_lock', '1491991775:1'),
 (1247, 225, '_wp_page_template', 'template-spa-treatments.php'),
 (1248, 225, '_crb_left_nav_image', ''),
 (1249, 225, '_crb_page_heading', NULL),
@@ -1181,7 +1181,71 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (1430, 225, '_crb_services_sections_-_crb_services_4_-_crb_service_price_6', 'R1000'),
 (1431, 225, '_crb_services_sections_-_crb_services_4_-_crb_service_details_6', 'Eyelash / Eyebrow Tint &amp; Shape'),
 (1432, 225, '_crb_services_sections_-_crb_services_4_-_crb_service_price_7', 'R1000'),
-(1433, 225, '_crb_services_sections_-_crb_services_4_-_crb_service_details_7', 'Eyelash / Eyebrow Tint &amp; Shape');
+(1433, 225, '_crb_services_sections_-_crb_services_4_-_crb_service_details_7', 'Eyelash / Eyebrow Tint &amp; Shape'),
+(1434, 25, '_crb_page_heading', NULL),
+(1435, 25, '_crb_short_description', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus interdum imperdiet ultricies. Aliquam scelerisque, turpis ut iaculis suscipit, justo lorem vehicula magna, a pellentesque urna justo semper nisl.'),
+(1436, 25, '_crb_rate_amount', NULL),
+(1437, 25, '_crb_rate_for', NULL),
+(1438, 25, '_crb_special_feature', NULL),
+(1439, 25, '_crb_page_sub_heading', NULL),
+(1442, 230, '_wp_attached_file', '2017/03/spa-treatment_img.jpg'),
+(1443, 230, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:818;s:6:"height";i:478;s:4:"file";s:29:"2017/03/spa-treatment_img.jpg";s:5:"sizes";a:5:{s:9:"thumbnail";a:4:{s:4:"file";s:29:"spa-treatment_img-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:29:"spa-treatment_img-300x175.jpg";s:5:"width";i:300;s:6:"height";i:175;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:29:"spa-treatment_img-768x449.jpg";s:5:"width";i:768;s:6:"height";i:449;s:9:"mime-type";s:10:"image/jpeg";}s:7:"821x478";a:4:{s:4:"file";s:29:"spa-treatment_img-818x478.jpg";s:5:"width";i:818;s:6:"height";i:478;s:9:"mime-type";s:10:"image/jpeg";}s:7:"190x120";a:4:{s:4:"file";s:29:"spa-treatment_img-190x120.jpg";s:5:"width";i:190;s:6:"height";i:120;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(1444, 231, '_wp_attached_file', '2017/03/beauty-and-grooming.jpg'),
+(1445, 231, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:822;s:6:"height";i:513;s:4:"file";s:31:"2017/03/beauty-and-grooming.jpg";s:5:"sizes";a:5:{s:9:"thumbnail";a:4:{s:4:"file";s:31:"beauty-and-grooming-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:31:"beauty-and-grooming-300x187.jpg";s:5:"width";i:300;s:6:"height";i:187;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:31:"beauty-and-grooming-768x479.jpg";s:5:"width";i:768;s:6:"height";i:479;s:9:"mime-type";s:10:"image/jpeg";}s:7:"821x478";a:4:{s:4:"file";s:31:"beauty-and-grooming-821x478.jpg";s:5:"width";i:821;s:6:"height";i:478;s:9:"mime-type";s:10:"image/jpeg";}s:7:"190x120";a:4:{s:4:"file";s:31:"beauty-and-grooming-190x120.jpg";s:5:"width";i:190;s:6:"height";i:120;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(1446, 232, '_wp_attached_file', '2017/03/mens-treatment.jpg'),
+(1447, 232, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:822;s:6:"height";i:513;s:4:"file";s:26:"2017/03/mens-treatment.jpg";s:5:"sizes";a:5:{s:9:"thumbnail";a:4:{s:4:"file";s:26:"mens-treatment-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:26:"mens-treatment-300x187.jpg";s:5:"width";i:300;s:6:"height";i:187;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:26:"mens-treatment-768x479.jpg";s:5:"width";i:768;s:6:"height";i:479;s:9:"mime-type";s:10:"image/jpeg";}s:7:"821x478";a:4:{s:4:"file";s:26:"mens-treatment-821x478.jpg";s:5:"width";i:821;s:6:"height";i:478;s:9:"mime-type";s:10:"image/jpeg";}s:7:"190x120";a:4:{s:4:"file";s:26:"mens-treatment-190x120.jpg";s:5:"width";i:190;s:6:"height";i:120;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(1448, 233, '_edit_last', '1'),
+(1449, 233, '_edit_lock', '1491994458:1'),
+(1450, 233, '_wp_page_template', 'default'),
+(1451, 233, '_crb_left_nav_image', ''),
+(1452, 233, '_crb_page_heading', NULL),
+(1453, 233, '_crb_short_description', ''),
+(1454, 233, '_crb_slider_bottom_heading', NULL),
+(1455, 233, '_crb_slider_bottom_description', NULL),
+(1456, 233, '_crb_booking_buton_text', NULL),
+(1457, 233, '_crb_booking_buton_link', NULL),
+(1458, 233, '_crb_rate_amount', NULL),
+(1459, 233, '_crb_rate_for', NULL),
+(1460, 233, '_crb_special_feature', NULL),
+(1461, 233, '_crb_policy', NULL),
+(1462, 233, '_crb_page_sub_heading', NULL),
+(1463, 235, '_edit_last', '1'),
+(1464, 235, '_edit_lock', '1491994611:1'),
+(1465, 235, '_wp_page_template', 'default'),
+(1466, 235, '_crb_left_nav_image', ''),
+(1467, 235, '_crb_page_heading', NULL),
+(1468, 235, '_crb_short_description', ''),
+(1469, 235, '_crb_slider_bottom_heading', NULL),
+(1470, 235, '_crb_slider_bottom_description', NULL),
+(1471, 235, '_crb_booking_buton_text', NULL),
+(1472, 235, '_crb_booking_buton_link', NULL),
+(1473, 235, '_crb_rate_amount', NULL),
+(1474, 235, '_crb_rate_for', NULL),
+(1475, 235, '_crb_special_feature', NULL),
+(1476, 235, '_crb_policy', NULL),
+(1477, 235, '_crb_page_sub_heading', NULL),
+(1478, 25, '_crb_slider_images_-_crb_slide_image_0', '139'),
+(1479, 25, '_crb_slider_images_-_crb_slide_image_1', '139'),
+(1480, 25, '_crb_content_section_-_crb_section_slide_title_0', 'Spa Treatments'),
+(1481, 25, '_crb_content_section_-_crb_section_slide_desc_0', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus interdum imperdiet ultricies. Aliquam scelerisque, turpis ut iaculis suscipit, justo lorem vehicula magna, a pellentesque urna justo semper nisl.'),
+(1482, 25, '_crb_content_section_-_crb_section_link_text_0', 'View Treatments'),
+(1483, 25, '_crb_content_section_-_crb_section_link_0', 'http://localhost/leeucollection/hotel/leeu-estates/spa-wellness/spa-treatments/'),
+(1484, 25, '_crb_content_section_-_crb_section_slider_0_-_crb_section_slide_image_0', '230'),
+(1485, 25, '_crb_content_section_-_crb_section_slide_title_1', 'Beauty And Grooming'),
+(1486, 25, '_crb_content_section_-_crb_section_slide_desc_1', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus interdum imperdiet ultricies. Aliquam scelerisque, turpis ut iaculis suscipit, justo lorem vehicula magna, a pellentesque urna justo semper nisl.'),
+(1487, 25, '_crb_content_section_-_crb_section_link_text_1', 'View Treatments'),
+(1488, 25, '_crb_content_section_-_crb_section_link_1', 'http://localhost/leeucollection/hotel/leeu-estates/spa-wellness/beauty-grooming/'),
+(1489, 25, '_crb_content_section_-_crb_section_slider_1_-_crb_section_slide_image_0', '231'),
+(1490, 25, '_crb_content_section_-_crb_section_slide_title_2', 'Mens Treatments'),
+(1491, 25, '_crb_content_section_-_crb_section_slide_desc_2', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus interdum imperdiet ultricies. Aliquam scelerisque, turpis ut iaculis suscipit, justo lorem vehicula magna, a pellentesque urna justo semper nisl.'),
+(1492, 25, '_crb_content_section_-_crb_section_link_text_2', 'View Treatments'),
+(1493, 25, '_crb_content_section_-_crb_section_link_2', 'http://localhost/leeucollection/hotel/leeu-estates/spa-wellness/mens-treatments/'),
+(1494, 25, '_crb_content_section_-_crb_section_slider_2_-_crb_section_slide_image_0', '232'),
+(1495, 25, '_crb_content_section_-_crb_section_slide_title_3', 'The Gym'),
+(1496, 25, '_crb_content_section_-_crb_section_slide_desc_3', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacus interdum imperdiet ultricies. Aliquam scelerisque, turpis ut iaculis suscipit, justo lorem vehicula magna, a pellentesque urna justo semper nisl.'),
+(1497, 25, '_crb_content_section_-_crb_section_link_text_3', 'See More'),
+(1498, 25, '_crb_content_section_-_crb_section_link_3', 'http://localhost/leeucollection/hotel/leeu-estates/spa-wellness/the-gym/'),
+(1499, 25, '_crb_content_section_-_crb_section_slider_3_-_crb_section_slide_image_0', '229');
 
 -- --------------------------------------------------------
 
@@ -1218,7 +1282,7 @@ CREATE TABLE IF NOT EXISTS `wp_posts` (
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=230 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=237 ;
 
 --
 -- Dumping data for table `wp_posts`
@@ -1240,7 +1304,7 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (22, 1, '2017-03-27 06:41:24', '2017-03-27 06:41:24', '', 'Restaurants', '', 'inherit', 'closed', 'closed', '', '21-revision-v1', '', '', '2017-03-27 06:41:24', '2017-03-27 06:41:24', '', 21, 'http://localhost/leeucollection/2017/03/27/21-revision-v1/', 0, 'revision', '', 0),
 (23, 1, '2017-03-27 06:41:34', '2017-03-27 06:41:34', '', 'Wine', '', 'publish', 'closed', 'closed', '', 'wine', '', '', '2017-03-30 11:14:41', '2017-03-30 11:14:41', '', 4, 'http://localhost/leeucollection/?post_type=hotel&#038;p=23', 0, 'hotel', '', 0),
 (24, 1, '2017-03-27 06:41:34', '2017-03-27 06:41:34', '', 'Wine', '', 'inherit', 'closed', 'closed', '', '23-revision-v1', '', '', '2017-03-27 06:41:34', '2017-03-27 06:41:34', '', 23, 'http://localhost/leeucollection/2017/03/27/23-revision-v1/', 0, 'revision', '', 0),
-(25, 1, '2017-03-27 06:41:56', '2017-03-27 06:41:56', '', 'Spa & Wellness', '', 'publish', 'closed', 'closed', '', 'spa-wellness', '', '', '2017-03-30 11:34:21', '2017-03-30 11:34:21', '', 4, 'http://localhost/leeucollection/?post_type=hotel&#038;p=25', 0, 'hotel', '', 0),
+(25, 1, '2017-03-27 06:41:56', '2017-03-27 06:41:56', '', 'Spa & Wellness', '', 'publish', 'closed', 'closed', '', 'spa-wellness', '', '', '2017-04-12 10:57:48', '2017-04-12 10:57:48', '', 4, 'http://localhost/leeucollection/?post_type=hotel&#038;p=25', 0, 'hotel', '', 0),
 (26, 1, '2017-03-27 06:41:56', '2017-03-27 06:41:56', '', 'Spa & Wellness', '', 'inherit', 'closed', 'closed', '', '25-revision-v1', '', '', '2017-03-27 06:41:56', '2017-03-27 06:41:56', '', 25, 'http://localhost/leeucollection/2017/03/27/25-revision-v1/', 0, 'revision', '', 0),
 (27, 1, '2017-03-27 06:42:14', '2017-03-27 06:42:14', '', 'Guest Areas', '', 'publish', 'closed', 'closed', '', 'guest-areas', '', '', '2017-03-30 12:33:58', '2017-03-30 12:33:58', '', 4, 'http://localhost/leeucollection/?post_type=hotel&#038;p=27', 0, 'hotel', '', 0),
 (28, 1, '2017-03-27 06:42:14', '2017-03-27 06:42:14', '', 'Guest Areas', '', 'inherit', 'closed', 'closed', '', '27-revision-v1', '', '', '2017-03-27 06:42:14', '2017-03-27 06:42:14', '', 27, 'http://localhost/leeucollection/2017/03/27/27-revision-v1/', 0, 'revision', '', 0),
@@ -1382,7 +1446,15 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (226, 1, '2017-04-12 06:06:00', '2017-04-12 06:06:00', '', 'Spa Treatments', '', 'inherit', 'closed', 'closed', '', '225-revision-v1', '', '', '2017-04-12 06:06:00', '2017-04-12 06:06:00', '', 225, 'http://localhost/leeucollection/225-revision-v1/', 0, 'revision', '', 0),
 (227, 1, '2017-04-12 06:06:19', '2017-04-12 06:06:19', '', 'The Gym', '', 'publish', 'closed', 'closed', '', 'the-gym', '', '', '2017-04-12 07:38:11', '2017-04-12 07:38:11', '', 25, 'http://localhost/leeucollection/?post_type=hotel&#038;p=227', 0, 'hotel', '', 0),
 (228, 1, '2017-04-12 06:06:19', '2017-04-12 06:06:19', '', 'The Gym', '', 'inherit', 'closed', 'closed', '', '227-revision-v1', '', '', '2017-04-12 06:06:19', '2017-04-12 06:06:19', '', 227, 'http://localhost/leeucollection/227-revision-v1/', 0, 'revision', '', 0),
-(229, 1, '2017-04-12 06:22:20', '2017-04-12 06:22:20', '', 'gym-image', '', 'inherit', 'open', 'closed', '', 'gym-image', '', '', '2017-04-12 06:22:20', '2017-04-12 06:22:20', '', 227, 'http://localhost/leeucollection/wp-content/uploads/2017/04/gym-image.jpg', 0, 'attachment', 'image/jpeg', 0);
+(229, 1, '2017-04-12 06:22:20', '2017-04-12 06:22:20', '', 'gym-image', '', 'inherit', 'open', 'closed', '', 'gym-image', '', '', '2017-04-12 06:22:20', '2017-04-12 06:22:20', '', 227, 'http://localhost/leeucollection/wp-content/uploads/2017/04/gym-image.jpg', 0, 'attachment', 'image/jpeg', 0),
+(230, 1, '2017-04-12 10:51:58', '2017-04-12 10:51:58', '', 'spa-treatment_img', '', 'inherit', 'open', 'closed', '', 'spa-treatment_img', '', '', '2017-04-12 10:51:58', '2017-04-12 10:51:58', '', 25, 'http://localhost/leeucollection/wp-content/uploads/2017/03/spa-treatment_img.jpg', 0, 'attachment', 'image/jpeg', 0),
+(231, 1, '2017-04-12 10:52:01', '2017-04-12 10:52:01', '', 'beauty-and-grooming', '', 'inherit', 'open', 'closed', '', 'beauty-and-grooming', '', '', '2017-04-12 10:52:01', '2017-04-12 10:52:01', '', 25, 'http://localhost/leeucollection/wp-content/uploads/2017/03/beauty-and-grooming.jpg', 0, 'attachment', 'image/jpeg', 0),
+(232, 1, '2017-04-12 10:52:02', '2017-04-12 10:52:02', '', 'mens-treatment', '', 'inherit', 'open', 'closed', '', 'mens-treatment', '', '', '2017-04-12 10:52:02', '2017-04-12 10:52:02', '', 25, 'http://localhost/leeucollection/wp-content/uploads/2017/03/mens-treatment.jpg', 0, 'attachment', 'image/jpeg', 0),
+(233, 1, '2017-04-12 10:55:47', '2017-04-12 10:55:47', '', 'Beauty & Grooming', '', 'publish', 'closed', 'closed', '', 'beauty-grooming', '', '', '2017-04-12 10:55:47', '2017-04-12 10:55:47', '', 25, 'http://localhost/leeucollection/?post_type=hotel&#038;p=233', 0, 'hotel', '', 0),
+(234, 1, '2017-04-12 10:55:47', '2017-04-12 10:55:47', '', 'Beauty & Grooming', '', 'inherit', 'closed', 'closed', '', '233-revision-v1', '', '', '2017-04-12 10:55:47', '2017-04-12 10:55:47', '', 233, 'http://localhost/leeucollection/233-revision-v1/', 0, 'revision', '', 0);
+INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
+(235, 1, '2017-04-12 10:56:50', '2017-04-12 10:56:50', '', 'Mens Treatments', '', 'publish', 'closed', 'closed', '', 'mens-treatments', '', '', '2017-04-12 10:56:50', '2017-04-12 10:56:50', '', 25, 'http://localhost/leeucollection/?post_type=hotel&#038;p=235', 0, 'hotel', '', 0),
+(236, 1, '2017-04-12 10:56:50', '2017-04-12 10:56:50', '', 'Mens Treatments', '', 'inherit', 'closed', 'closed', '', '235-revision-v1', '', '', '2017-04-12 10:56:50', '2017-04-12 10:56:50', '', 235, 'http://localhost/leeucollection/235-revision-v1/', 0, 'revision', '', 0);
 
 -- --------------------------------------------------------
 
@@ -1564,7 +1636,7 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (18, 1, 'wp_dashboard_quick_press_last_post_id', '222'),
 (19, 1, 'managenav-menuscolumnshidden', 'a:3:{i:0;s:15:"title-attribute";i:1;s:3:"xfn";i:2;s:11:"description";}'),
 (20, 1, 'metaboxhidden_nav-menus', 'a:1:{i:0;s:15:"add-post_format";}'),
-(21, 1, 'meta-box-order_hotel', 'a:3:{s:4:"side";s:98:"submitdiv,cpt-selector,menu-typesdiv,hotel-locationsdiv,LeftMenuImage,postimagediv,enquiry-typediv";s:6:"normal";s:149:"PageHeading,ShortDescription,SliderImages,SliderInfo1,HoursReservations,Policy,ContentSection,slugdiv,postcustom,SliderInfo,RoomRates,SpecialFeatures";s:8:"advanced";s:0:"";}'),
+(21, 1, 'meta-box-order_hotel', 'a:3:{s:4:"side";s:98:"submitdiv,cpt-selector,menu-typesdiv,hotel-locationsdiv,LeftMenuImage,postimagediv,enquiry-typediv";s:6:"normal";s:217:"Facilities,Rates,BookButton,PageSubHeading,Services,ContentSection1,PageHeading,ShortDescription,SliderImages,SliderInfo1,HoursReservations,Policy,ContentSection,slugdiv,postcustom,SliderInfo,RoomRates,SpecialFeatures";s:8:"advanced";s:0:"";}'),
 (22, 1, 'screen_layout_hotel', '2'),
 (23, 1, 'closedpostboxes_nav-menus', 'a:0:{}'),
 (24, 1, 'closedpostboxes_nav-menus', 'a:0:{}'),
