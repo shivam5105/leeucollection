@@ -1639,3 +1639,7 @@ background:url(images/arrow-icon-hover.png) no-repeat;
     transform: translateY(0px);
     transition: all 0.3s ease-out 0.15s;
 }
+label.valid {
+    display: block !important;
+    margin-top: 11px;
+}
