@@ -112,6 +112,73 @@ get_header(); ?>
 								</div>
 							</div>
 						</div>
+						<?php
+						$content_sections = carbon_get_post_meta($post->ID, "crb_content_section", 'complex');
+						if(is_array($content_sections) && !empty($content_sections))
+						{
+							foreach ($content_sections as $section_key => $content_section)
+							{
+								$section_link_text 	= $content_section['crb_section_link_text'];
+								$section_link 		= $content_section['crb_section_link'];
+								$section_sliders	= $content_section['crb_section_slider'];
+								$slide_title 		= $content_section['crb_section_slide_title'];
+								$slide_desc 		= $content_section['crb_section_slide_desc'];
+								?>
+								<div class="listing-box listing-row">
+									<div class="single_slider_wrapper">
+										<?php
+										if(is_array($section_sliders) && count($section_sliders) > 1)
+										{
+											?>
+											<div class="mht_homebanner next-wrapper">
+												<div class="next"></div>
+											</div>
+											<?php
+										}?>
+										<div class="owl-carousel single_slider owl-theme">
+											<?php
+											foreach($section_sliders as $slider_key => $section_slider)
+											{
+												$slide_image 	= $section_slider['crb_section_slide_image'];
+												$slide_image_url = wp_get_attachment_image_src( $slide_image, '821x478' );
+												$slide_image_url = $slide_image_url[0];
+												?>
+												<div class="slide-item">
+													<div class="banner-img mht_homebanner scroll-anim" data-anim="fade-up" style="background-image:url('<?php echo $slide_image_url; ?>');">
+													</div>
+												</div>
+												<?php
+											}
+											?>
+										</div>
+										<?php
+										if(is_array($section_sliders) && count($section_sliders) > 1)
+										{
+											?>
+											<div class="mht_homebanner prev-wrapper">
+												<div class="prev"></div>
+											</div>
+											<?php
+										}?>
+										<div class="row detail-row">
+											<div class="col-3">
+												<div class="desc-heading"><?php echo $slide_title; ?></div>
+												<div class="see_option"> 
+													<span><a href="<?php echo $section_link; ?>"><?php echo $section_link_text; ?></a></span>
+												</div>
+											</div>
+											<div class="col-9">
+												<div class="desc-content"> 
+													<?php echo $slide_desc; ?>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<?php
+							}
+						}
+						?>
 
 					</div>
 				</div>

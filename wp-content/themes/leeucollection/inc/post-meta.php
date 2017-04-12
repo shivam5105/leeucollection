@@ -215,6 +215,24 @@ Container::make('post_meta', 'Services')
         )),
     ));
 
+//Content Section Spa & Wellness Page
+Container::make('post_meta', 'Content Section')
+    ->show_on_post_type('hotel')
+    ->show_on_template('template-spa-wellness.php')
+    ->add_fields(array(
+        Field::make('complex', 'crb_content_section', '')->add_fields(array(
+
+            Field::make('text', 'crb_section_slide_title', 'Title')->set_width('30'),
+            Field::make('textarea', 'crb_section_slide_desc', 'Small Description')->set_width('70'),
+
+            Field::make('text', 'crb_section_link_text', 'View All Link Text')->set_width('30'),
+            Field::make('text', 'crb_section_link', 'View All Link')->set_width('70'),
+
+            Field::make('complex', 'crb_section_slider', 'Slider')->add_fields(array(
+                Field::make('image', 'crb_section_slide_image', 'Image')->help_text('(Image Dimensions (WxH): 821 x 478)')->set_width('20'),
+            )),
+        )),
+    ));
 /*
 
 //Slider Info
