@@ -279,8 +279,14 @@ $(document).ready(function(){
 	Blank.common_init();
 	Blank.home_page_init();
 	jQuery('#mc-form').ajaxChimp({
-		url: '//builtbyblank.us14.list-manage.com/subscribe/post?u=35b52d4d999898495de700b6d&amp;id=707c0e74e6'
-	});		
+		url: '//builtbyblank.us14.list-manage.com/subscribe/post?u=35b52d4d999898495de700b6d&amp;id=707c0e74e6',
+		callback: callbackFunction
+	});	
+	function callbackFunction (resp) {
+	    if (resp.result === 'success') {
+	      	$("#mc-email").val("");
+	    }
+	}	
 });
 $(window).resize(function(){
 	Blank.common_init_resize();
