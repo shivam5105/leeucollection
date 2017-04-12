@@ -1351,7 +1351,7 @@ body.hotel-template-template-menudetail .side-sub-menu.child-2 li.current.active
     width: 17px;
 }
 label.valid {
-    margin-top: 11px;
+    display: block !important;
     display: block;
 }
 button{
@@ -1638,8 +1638,4 @@ background:url(images/arrow-icon-hover.png) no-repeat;
     text-align: left;
     transform: translateY(0px);
     transition: all 0.3s ease-out 0.15s;
-}
-label.valid {
-    display: block !important;
-    margin-top: 11px;
 }
