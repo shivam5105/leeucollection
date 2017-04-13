@@ -75,7 +75,7 @@ get_header(); ?>
 												$banner_url = $banner_url[0];
 												?>
 												<div class="slide-item">
-													<div class="banner-img scroll-anim" data-anim="fade-up">
+													<div class="banner-img scroll-anim full_img" data-anim="fade-up">
 														<img src="<?php echo $banner_url; ?>" alt="" />
 													</div>
 												</div>
@@ -89,7 +89,7 @@ get_header(); ?>
 											$banner_url = $banner_url[0];
 											?>
 											<div class="slide-item">
-												<div class="banner-img scroll-anim" data-anim="fade-up">
+												<div class="banner-img scroll-anim full_img" data-anim="fade-up">
 													<img src="<?php echo $banner_url; ?>" alt="" />
 												</div>
 											</div>
@@ -144,20 +144,20 @@ get_header(); ?>
 								<div class="listing-row clearfix">
 									<div class="three-img-col">
 										<div class="col-4 rm-pad">
-											<div class="banner-img  scroll-anim" data-anim="fade-up">
+											<div class="banner-img  full_img scroll-anim" data-anim="fade-up">
 												<img src="<?php echo get_template_directory_uri(); ?>/images/gallery-image-main.jpg" alt="" />
 											</div>
 											<div class="img-desc">gallery</div>
 										</div>
 										<div class="col-4 rm-pad">
-											<div class="banner-img scroll-anim" data-anim="fade-up" data-anim-delay="100">
-												<img src="<?php echo get_template_directory_uri(); ?>/images/gallery-video-main.jpg" alt="" />
+											<div class="banner-img full_img scroll-anim" data-anim="fade-up" data-anim-delay="100">
+												<img src="<?php echo get_template_directory_uri(); ?>/images/video-main.jpg" alt="" />
 											</div>
 											<div class="img-desc">VIDEO</div>
 										</div>
 										<div class="col-4 rm-pad">
-											<div class="banner-img scroll-anim" data-anim="fade-up" data-anim-delay="200">
-												<img src="<?php echo get_template_directory_uri(); ?>/images/gallery-floor-main.jpg" alt="" />
+											<div class="banner-img full_img scroll-anim" data-anim="fade-up" data-anim-delay="200">
+												<img src="<?php echo get_template_directory_uri(); ?>/images/floor-main.jpg" alt="" />
 											</div>
 											<div class="img-desc">FLOOR LAYOUT</div>
 										</div>

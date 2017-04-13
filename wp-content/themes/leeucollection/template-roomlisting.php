@@ -100,7 +100,7 @@ get_header(); ?>
 								<?php
 							}
 							?>
-							<div class="banner-img scroll-anim" data-anim="fade-up"<?php echo $data_anim_delay; ?>>
+							<div class="banner-img scroll-anim full_img" data-anim="fade-up"<?php echo $data_anim_delay; ?>>
 								<img src="<?php echo $child_post_img_url; ?>" alt="" />
 								<div class="inner-detail-wrapper">
 									<div class="inner-detail">
