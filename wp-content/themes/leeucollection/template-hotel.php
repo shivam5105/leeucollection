@@ -20,6 +20,11 @@ get_header(); ?>
 			{
 				$has_slider = true;
 			}
+			$slider_wrapper_class = "owl-carousel single_slider owl-theme";
+			if(!$has_slider)
+			{
+				$slider_wrapper_class = "";
+			}
 			?>
 			<div class="single_slider_wrapper scroll-anim" data-anim="fade-up">
 				<?php
@@ -29,7 +34,7 @@ get_header(); ?>
 					<div class="next"></div>
 					<?php
 				}?>
-				<div class="owl-carousel single_slider owl-theme">
+				<div class="<?php echo $slider_wrapper_class; ?>">
 					<?php
 					if(is_array($slider_data) && !empty($slider_data))
 					{
@@ -102,14 +107,24 @@ get_header(); ?>
 									$section_show_link	= $content_section['crb_section_show_link'];
 									$section_sliders	= $content_section['crb_section_slider'];
 
+									$has_slider = false;
+									if(is_array($section_sliders) && count($section_sliders) > 1)
+									{
+										$has_slider = true;
+									}
+
 									$slider_wrapper_class 	= "single_slider_wrapper";
-									$slider_theme_class 	= "single_slider";
+									$slider_theme_class 	= "owl-carousel single_slider owl-theme";
 									$data_anim_delay 		= "";
 									if($section_layout == 2)
 									{
 										$slider_wrapper_class 	= "two-slide-carousel two-img-col";
-										$slider_theme_class 	= "two_slider";
+										$slider_theme_class 	= "owl-carousel two_slider owl-theme";
 										$data_anim_delay 		= "data-anim-delay='100'";
+									}
+									if(!$has_slider)
+									{
+										$slider_theme_class = "";
 									}
 									?>
 									<div class="listing-box listing-row">
@@ -128,13 +143,13 @@ get_header(); ?>
 										</div>
 										<div class="<?php echo $slider_wrapper_class; ?>">
 											<?php
-											if(is_array($section_sliders) && count($section_sliders) > 1)
+											if($has_slider)
 											{
 												?>
 												<div class="next"></div>
 												<?php
 											}?>
-											<div class="owl-carousel <?php echo $slider_theme_class; ?> owl-theme">
+											<div class="<?php echo $slider_theme_class; ?>">
 												<?php
 												$slide_counter = 0;
 												foreach($section_sliders as $slider_key => $section_slider)
@@ -178,7 +193,7 @@ get_header(); ?>
 												?>
 											</div>
 											<?php
-											if(is_array($section_sliders) && count($section_sliders) > 1)
+											if($has_slider)
 											{
 												?>
 												<div class="prev"></div>

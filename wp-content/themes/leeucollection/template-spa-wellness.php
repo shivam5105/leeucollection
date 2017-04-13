@@ -51,6 +51,11 @@ get_header(); ?>
 								{
 									$has_slider = true;
 								}
+								$slider_wrapper_class = "owl-carousel single_slider owl-theme";
+								if(!$has_slider)
+								{
+									$slider_wrapper_class = "";
+								}
 								?>
 								<div class="listing-box">
 									<div class="single_slider_wrapper">
@@ -61,7 +66,7 @@ get_header(); ?>
 											<div class="next"></div>
 											<?php
 										}?>
-										<div class="owl-carousel single_slider owl-theme">
+										<div class="<?php echo $slider_wrapper_class; ?>">
 											<?php
 											if(is_array($slider_data) && !empty($slider_data))
 											{
@@ -121,17 +126,26 @@ get_header(); ?>
 								$section_sliders	= $content_section['crb_section_slider'];
 								$slide_title 		= $content_section['crb_section_slide_title'];
 								$slide_desc 		= $content_section['crb_section_slide_desc'];
+								if(is_array($section_sliders) && count($section_sliders) > 1)
+								{
+									$has_slider = true;
+								}
+								$slider_wrapper_class = "owl-carousel single_slider owl-theme";
+								if(!$has_slider)
+								{
+									$slider_wrapper_class = "";
+								}
 								?>
 								<div class="listing-box listing-row">
 									<div class="single_slider_wrapper">
 										<?php
-										if(is_array($section_sliders) && count($section_sliders) > 1)
+										if($has_slider)
 										{
 											?>
 											<div class="next"></div>
 											<?php
 										}?>
-										<div class="owl-carousel single_slider owl-theme">
+										<div class="<?php echo $slider_wrapper_class; ?>">
 											<?php
 											foreach($section_sliders as $slider_key => $section_slider)
 											{
@@ -149,7 +163,7 @@ get_header(); ?>
 											?>
 										</div>
 										<?php
-										if(is_array($section_sliders) && count($section_sliders) > 1)
+										if($has_slider)
 										{
 											?>
 											<div class="prev"></div>
