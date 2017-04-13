@@ -751,12 +751,6 @@ li.current.active .side-sub-menu li.current.active ~ li{
     line-height: 1.23;   
     margin-top: 18px; 
 }
- .two-img-col .next-wrapper , .two-img-col .prev-wrapper{
-    height: 258px;
-}
-.three-img-col .banner-img{
-    height: 173px;
-}
 .leeu-heading-wrap{
     padding-top: 50px;
     padding-bottom: 40px;
