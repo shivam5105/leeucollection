@@ -1314,7 +1314,7 @@ body.hotel-template-template-menudetail .side-sub-menu.child-2 li.current.active
 .sliding-detail .content-part{
     margin-top: 30px;
 }
-.sliding-detail  .linking-wrap li.see-more-link a::before{
+.sliding-detail .linking-wrap li.see-more-link a::before , .sliding-detail .linking-wrap li.see-more-link a::after{
     left:0;
 }
 .sliding-detail .linking-wrap li.see-more-link a{
