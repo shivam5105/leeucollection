@@ -198,7 +198,7 @@ get_header(); ?>
 											if($has_slider)
 											{
 												?>
-												<div class="prev-wraper">
+												<div class="prev-wrapper">
 													<div class="prev"></div>
 												</div>
 												<?php
