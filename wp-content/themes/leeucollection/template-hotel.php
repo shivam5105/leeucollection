@@ -131,9 +131,7 @@ get_header(); ?>
 											if(is_array($section_sliders) && count($section_sliders) > 1)
 											{
 												?>
-												<div class="next-wrapper">
-													<div class="next"></div>
-												</div>
+												<div class="next"></div>
 												<?php
 											}?>
 											<div class="owl-carousel <?php echo $slider_theme_class; ?> owl-theme">
@@ -183,9 +181,7 @@ get_header(); ?>
 											if(is_array($section_sliders) && count($section_sliders) > 1)
 											{
 												?>
-												<div class="prev-wrapper">
-													<div class="prev"></div>
-												</div>
+												<div class="prev"></div>
 												<?php
 											}?>
 										</div>

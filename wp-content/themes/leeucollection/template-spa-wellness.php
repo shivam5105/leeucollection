@@ -58,9 +58,7 @@ get_header(); ?>
 										if($has_slider == true)
 										{
 											?>
-											<div class="next-wrapper">
-												<div class="next"></div>
-											</div>
+											<div class="next"></div>
 											<?php
 										}?>
 										<div class="owl-carousel single_slider owl-theme">
@@ -98,9 +96,7 @@ get_header(); ?>
 										if($has_slider == true)
 										{
 											?>
-											<div class="prev-wrapper">
-												<div class="prev"></div>
-											</div>
+											<div class="prev"></div>
 											<?php
 										}?>
 									</div>
@@ -132,9 +128,7 @@ get_header(); ?>
 										if(is_array($section_sliders) && count($section_sliders) > 1)
 										{
 											?>
-											<div class="next-wrapper">
-												<div class="next"></div>
-											</div>
+											<div class="next"></div>
 											<?php
 										}?>
 										<div class="owl-carousel single_slider owl-theme">
@@ -158,9 +152,7 @@ get_header(); ?>
 										if(is_array($section_sliders) && count($section_sliders) > 1)
 										{
 											?>
-											<div class="prev-wrapper">
-												<div class="prev"></div>
-											</div>
+											<div class="prev"></div>
 											<?php
 										}?>
 										<div class="row detail-row">
