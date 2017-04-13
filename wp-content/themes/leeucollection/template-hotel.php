@@ -146,7 +146,9 @@ get_header(); ?>
 											if($has_slider)
 											{
 												?>
-												<div class="next"></div>
+												<div class="next-wrapper">
+													<div class="next"></div>
+												</div>	
 												<?php
 											}?>
 											<div class="<?php echo $slider_theme_class; ?>">
@@ -196,7 +198,9 @@ get_header(); ?>
 											if($has_slider)
 											{
 												?>
-												<div class="prev"></div>
+												<div class="prev-wraper">
+													<div class="prev"></div>
+												</div>
 												<?php
 											}?>
 										</div>
