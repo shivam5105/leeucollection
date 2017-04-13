@@ -115,9 +115,7 @@ var Blank ={
 			        }
 			    }
 			});
-			owl.on('changed.owl.carousel', function(event) {
-			   alert();
-			})
+
 			// Custom Navigation Events
 			$(".next").click(function(){
 				$(this).parents('.two-slide-carousel').find(owl).trigger('next.owl.carousel');

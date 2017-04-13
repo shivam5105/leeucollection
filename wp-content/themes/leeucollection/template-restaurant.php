@@ -103,52 +103,52 @@ get_header(); ?>
 										<div class="prev"></div>
 										<?php
 									}?>
-									<div class="row detail-row">
-										<div class="col-9">
-											<div class="desc-content"> 
-												<?php echo @$post_meta['_crb_slider_bottom_description'][0]; ?>
-											</div>
-										</div>
-										<div class="col-3">
-											<?php
-											if(is_array($post_meta['_crb_booking_buton_link']) && !empty($post_meta['_crb_booking_buton_link'][0]))
-											{
-												?>
-												<div class="cstm-btn-wrapper pull-right text-center">
-													<a href="<?php echo $post_meta['_crb_booking_buton_link'][0]; ?>" class="cstm-btn arrow-btn" target="_blank"><?php echo $post_meta['_crb_booking_buton_text'][0]; ?></a>
-												</div>
-												<?php
-											}?>
+								</div>
+								<div class="row detail-row">
+									<div class="col-9">
+										<div class="desc-content"> 
+											<?php echo @$post_meta['_crb_slider_bottom_description'][0]; ?>
 										</div>
 									</div>
-									<div class="row detail-row hotel-info-row">
-										<div class="col-6">
-											<div class="leeu-text">HOURS & RESERVATIONS</div>
-											<?php
-											$hours_reservations = carbon_get_post_meta($post->ID, "crb_hours_reservations", 'complex');
-											foreach ($hours_reservations as $hr_key => $hours_reservation)
-											{
-												?>
-												<div class="hotel-food-info">
-													<div class="food-head">
-														<?php echo $hours_reservation['crb_reservation_for']; ?>:
-													</div>
-													<div class="foo-desc">
-														<?php echo nl2br($hours_reservation['crb_reservation_time']); ?>
-													</div>
-												</div>
-												<?php
-											}
+									<div class="col-3">
+										<?php
+										if(is_array($post_meta['_crb_booking_buton_link']) && !empty($post_meta['_crb_booking_buton_link'][0]))
+										{
 											?>
-										</div>
-										<div class="col-6">
-											<div class="leeu-text">Policy</div>
-											<div class="hotel-info-desc"> 
-												<?php echo $post_meta['_crb_policy'][0]; ?>
+											<div class="cstm-btn-wrapper pull-right text-center">
+												<a href="<?php echo $post_meta['_crb_booking_buton_link'][0]; ?>" class="cstm-btn arrow-btn" target="_blank"><?php echo $post_meta['_crb_booking_buton_text'][0]; ?></a>
 											</div>
-										</div>
+											<?php
+										}?>
 									</div>
 								</div>
+								<div class="row detail-row hotel-info-row">
+									<div class="col-6">
+										<div class="leeu-text">HOURS & RESERVATIONS</div>
+										<?php
+										$hours_reservations = carbon_get_post_meta($post->ID, "crb_hours_reservations", 'complex');
+										foreach ($hours_reservations as $hr_key => $hours_reservation)
+										{
+											?>
+											<div class="hotel-food-info">
+												<div class="food-head">
+													<?php echo $hours_reservation['crb_reservation_for']; ?>:
+												</div>
+												<div class="foo-desc">
+													<?php echo nl2br($hours_reservation['crb_reservation_time']); ?>
+												</div>
+											</div>
+											<?php
+										}
+										?>
+									</div>
+									<div class="col-6">
+										<div class="leeu-text">Policy</div>
+										<div class="hotel-info-desc"> 
+											<?php echo $post_meta['_crb_policy'][0]; ?>
+										</div>
+									</div>
+								</div>																
 							</div>
 							<div class="hotel-menu">
 								<div class="text-center">
@@ -208,7 +208,7 @@ get_header(); ?>
 											if($X == 1)
 											{
 												?>
-												<div class="listing-row clearfix">
+												<div class="listing-row clearfix full_img">
 													<div class="<?php echo $image_col_class; ?>">
 												<?php
 											}

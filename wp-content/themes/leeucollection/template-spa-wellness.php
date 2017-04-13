@@ -116,16 +116,16 @@ get_header(); ?>
 							</div>
 						</div>
 						<?php
-						$content_sections = carbon_get_post_meta($post->ID, "crb_content_section", 'complex');
+						$content_sections = carbon_get_post_meta($post->ID, "crb_spa_content_section", 'complex');
 						if(is_array($content_sections) && !empty($content_sections))
 						{
 							foreach ($content_sections as $section_key => $content_section)
 							{
-								$section_link_text 	= $content_section['crb_section_link_text'];
-								$section_link 		= $content_section['crb_section_link'];
-								$section_sliders	= $content_section['crb_section_slider'];
-								$slide_title 		= $content_section['crb_section_slide_title'];
-								$slide_desc 		= $content_section['crb_section_slide_desc'];
+								$section_link_text 	= $content_section['crb_spa_section_link_text'];
+								$section_link 		= $content_section['crb_spa_section_link'];
+								$section_sliders	= $content_section['crb_spa_section_slider'];
+								$slide_title 		= $content_section['crb_spa_section_slide_title'];
+								$slide_desc 		= $content_section['crb_spa_section_slide_desc'];
 								if(is_array($section_sliders) && count($section_sliders) > 1)
 								{
 									$has_slider = true;
@@ -149,7 +149,7 @@ get_header(); ?>
 											<?php
 											foreach($section_sliders as $slider_key => $section_slider)
 											{
-												$slide_image 	= $section_slider['crb_section_slide_image'];
+												$slide_image 	= $section_slider['crb_spa_section_slide_image'];
 												$slide_image_url = wp_get_attachment_image_src( $slide_image, '821x478' );
 												$slide_image_url = $slide_image_url[0];
 												?>
