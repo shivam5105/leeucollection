@@ -533,7 +533,7 @@ function custom_visibility_of_admin_fields()
 
             $select.on('change', function(event) {
                 var template = $(this).val();
-                if(template == "template-hotellanding.php")
+                if(template == "template-hotel.php")
                 {
                     $("#hotel-locationsdiv").show();
                     tv_hacks.remove_menu_types();
