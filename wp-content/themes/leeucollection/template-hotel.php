@@ -21,7 +21,7 @@ get_header(); ?>
 				$has_slider = true;
 			}
 			?>
-			<div class="single_slider_wrapper scroll-anim mht_homebanner" data-anim="fade-up">
+			<div class="single_slider_wrapper scroll-anim" data-anim="fade-up">
 				<?php
 				if($has_slider == true)
 				{
@@ -38,7 +38,7 @@ get_header(); ?>
 							$banner_url = wp_get_attachment_image_src( $slide_data['crb_slide_image'], '1240x600' );
 							$banner_url = $banner_url[0];
 							?>
-							<div class="banner-img mht_homebanner"  style="background-image:url('<?php echo $banner_url; ?>');"></div>
+							<div class="banner-img"><img src="<?php echo $banner_url; ?>" alt="" /></div>
 							<?php
 						}
 					}
@@ -48,7 +48,7 @@ get_header(); ?>
 						$banner_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), '1240x600' );
 						$banner_url = $banner_url[0];
 						?>
-						<div class="banner-img mht_homebanner"  style="background-image:url('<?php echo $banner_url; ?>');"></div>
+						<div class="banner-img"><img src="<?php echo $banner_url; ?>" alt="" /></div>
 						<?php
 					}?>
 
@@ -104,13 +104,11 @@ get_header(); ?>
 
 									$slider_wrapper_class 	= "single_slider_wrapper";
 									$slider_theme_class 	= "single_slider";
-									$mht_homebanner_class 	= "mht_homebanner";
 									$data_anim_delay 		= "";
 									if($section_layout == 2)
 									{
 										$slider_wrapper_class 	= "two-slide-carousel two-img-col";
 										$slider_theme_class 	= "two_slider";
-										$mht_homebanner_class 	= "";
 										$data_anim_delay 		= "data-anim-delay='100'";
 									}
 									?>
@@ -133,7 +131,7 @@ get_header(); ?>
 											if(is_array($section_sliders) && count($section_sliders) > 1)
 											{
 												?>
-												<div class="<?php echo $mht_homebanner_class; ?> next-wrapper">
+												<div class="next-wrapper">
 													<div class="next"></div>
 												</div>
 												<?php
@@ -151,7 +149,8 @@ get_header(); ?>
 													$slide_image_url = $slide_image_url[0];
 													?>
 													<div class="slide-item">
-														<div class="banner-img <?php echo $mht_homebanner_class; ?> scroll-anim" data-anim="fade-up" style="background-image:url('<?php echo $slide_image_url; ?>');" <?php if($section_layout == 2 && $slide_counter > 1){ echo $data_anim_delay; }?>>
+														<div class="banner-img scroll-anim" data-anim="fade-up" <?php if($section_layout == 2 && $slide_counter > 1){ echo $data_anim_delay; }?>>
+															<img src="<?php echo $slide_image_url; ?>" alt="" />
 														</div>
 														<?php
 														if($section_layout == 2)
@@ -184,7 +183,7 @@ get_header(); ?>
 											if(is_array($section_sliders) && count($section_sliders) > 1)
 											{
 												?>
-												<div class="<?php echo $mht_homebanner_class; ?> prev-wrapper">
+												<div class="prev-wrapper">
 													<div class="prev"></div>
 												</div>
 												<?php

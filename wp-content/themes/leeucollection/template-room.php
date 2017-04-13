@@ -57,7 +57,7 @@ get_header(); ?>
 									if($has_slider == true)
 									{
 										?>
-										<div class="mht_homebanner next-wrapper">
+										<div class="next-wrapper">
 											<div class="next"></div>
 										</div>
 										<?php
@@ -72,7 +72,8 @@ get_header(); ?>
 												$banner_url = $banner_url[0];
 												?>
 												<div class="slide-item">
-													<div class="banner-img mht_homebanner scroll-anim" data-anim="fade-up" style="background-image:url('<?php echo $banner_url; ?>');">
+													<div class="banner-img scroll-anim" data-anim="fade-up">
+														<img src="<?php echo $banner_url; ?>" alt="" />
 													</div>
 												</div>
 												<?php
@@ -85,7 +86,8 @@ get_header(); ?>
 											$banner_url = $banner_url[0];
 											?>
 											<div class="slide-item">
-												<div class="banner-img mht_homebanner scroll-anim" data-anim="fade-up" style="background-image:url('<?php echo $banner_url; ?>');">
+												<div class="banner-img scroll-anim" data-anim="fade-up">
+													<img src="<?php echo $banner_url; ?>" alt="" />
 												</div>
 											</div>
 											<?php
@@ -95,7 +97,7 @@ get_header(); ?>
 									if($has_slider == true)
 									{
 										?>
-										<div class="mht_homebanner prev-wrapper">
+										<div class="prev-wrapper">
 											<div class="prev"></div>
 										</div>
 										<?php
@@ -141,17 +143,20 @@ get_header(); ?>
 								<div class="listing-row clearfix">
 									<div class="three-img-col">
 										<div class="col-4 rm-pad">
-											<div class="banner-img  scroll-anim" data-anim="fade-up" style="background-image:url('<?php echo get_template_directory_uri(); ?>/images/gallery-image-main.jpg');">   
+											<div class="banner-img  scroll-anim" data-anim="fade-up">
+												<img src="<?php echo get_template_directory_uri(); ?>/images/gallery-image-main.jpg" alt="" />
 											</div>
 											<div class="img-desc">gallery</div>
 										</div>
 										<div class="col-4 rm-pad">
-											<div class="banner-img scroll-anim" data-anim="fade-up" data-anim-delay="100" style="background-image:url('<?php echo get_template_directory_uri(); ?>/images/video-main.jpg');">                                                    
+											<div class="banner-img scroll-anim" data-anim="fade-up" data-anim-delay="100">
+												<img src="<?php echo get_template_directory_uri(); ?>/images/gallery-video-main.jpg" alt="" />
 											</div>
 											<div class="img-desc">VIDEO</div>
 										</div>
 										<div class="col-4 rm-pad">
-											<div class="banner-img scroll-anim" data-anim="fade-up" data-anim-delay="200" style="background-image:url('<?php echo get_template_directory_uri(); ?>/images/floor-main.jpg');">                                                    
+											<div class="banner-img scroll-anim" data-anim="fade-up" data-anim-delay="200">
+												<img src="<?php echo get_template_directory_uri(); ?>/images/gallery-floor-main.jpg" alt="" />
 											</div>
 											<div class="img-desc">FLOOR LAYOUT</div>
 										</div>

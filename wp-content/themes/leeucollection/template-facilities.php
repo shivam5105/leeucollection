@@ -58,7 +58,7 @@ get_header(); ?>
 										if($has_slider == true)
 										{
 											?>
-											<div class="mht_homebanner next-wrapper">
+											<div class="next-wrapper">
 												<div class="next"></div>
 											</div>
 											<?php
@@ -73,7 +73,8 @@ get_header(); ?>
 													$banner_url = $banner_url[0];
 													?>
 													<div class="slide-item">
-														<div class="banner-img mht_homebanner scroll-anim" data-anim="fade-up" style="background-image:url('<?php echo $banner_url; ?>');">
+														<div class="banner-img scroll-anim" data-anim="fade-up">
+															<img src="<?php echo $banner_url; ?>" alt="" />
 														</div>
 													</div>
 													<?php
@@ -86,7 +87,8 @@ get_header(); ?>
 												$banner_url = $banner_url[0];
 												?>
 												<div class="slide-item">
-													<div class="banner-img mht_homebanner scroll-anim" data-anim="fade-up" style="background-image:url('<?php echo $banner_url; ?>');">
+													<div class="banner-img scroll-anim" data-anim="fade-up">
+														<img src="<?php echo $banner_url; ?>" alt="" />
 													</div>
 												</div>
 												<?php
@@ -96,7 +98,7 @@ get_header(); ?>
 										if($has_slider == true)
 										{
 											?>
-											<div class="mht_homebanner prev-wrapper">
+											<div class="prev-wrapper">
 												<div class="prev"></div>
 											</div>
 											<?php

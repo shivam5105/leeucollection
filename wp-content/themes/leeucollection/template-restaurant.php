@@ -57,7 +57,7 @@ get_header(); ?>
 									if($has_slider == true)
 									{
 										?>
-										<div class="mht_homebanner next-wrapper">
+										<div class="next-wrapper">
 											<div class="next"></div>
 										</div>
 										<?php
@@ -72,7 +72,8 @@ get_header(); ?>
 												$banner_url = $banner_url[0];
 												?>
 												<div class="slide-item">
-													<div class="banner-img mht_homebanner scroll-anim" data-anim="fade-up" style="background-image:url('<?php echo $banner_url; ?>');">
+													<div class="banner-img scroll-anim" data-anim="fade-up">
+														<img src="<?php echo $banner_url; ?>" alt="" />
 													</div>
 												</div>
 												<?php
@@ -85,7 +86,8 @@ get_header(); ?>
 											$banner_url = $banner_url[0];
 											?>
 											<div class="slide-item">
-												<div class="banner-img mht_homebanner scroll-anim" data-anim="fade-up" style="background-image:url('<?php echo $banner_url; ?>');">
+												<div class="banner-img scroll-anim" data-anim="fade-up">
+													<img src="<?php echo $banner_url; ?>" alt="" />
 												</div>
 											</div>
 											<?php
@@ -95,7 +97,7 @@ get_header(); ?>
 									if($has_slider == true)
 									{
 										?>
-										<div class="mht_homebanner prev-wrapper">
+										<div class="prev-wrapper">
 											<div class="prev"></div>
 										</div>
 										<?php
@@ -217,7 +219,8 @@ get_header(); ?>
 											<div class="<?php echo $item_col_class; ?> rm-pad">
 												<div class="link-wrapper-box">
 													<a class="main-link" href="<?php echo get_permalink($child_post_id); ?>"></a>
-													<div class="banner-img  scroll-anim" data-anim="fade-up" style="background-image:url('<?php echo $child_post_img_url; ?>');" <?php echo $data_anim_delay; ?>>
+													<div class="banner-img scroll-anim" data-anim="fade-up" <?php echo $data_anim_delay; ?>>
+														<img src="<?php echo $child_post_img_url; ?>" alt="" />
 													</div>
 													<div class="img-desc"><?php echo $child_post->post_title; ?></div>
 												</div>
@@ -231,7 +234,7 @@ get_header(); ?>
 												<?php
 												$X = 0;
 											}
-								        }
+								       }
 								    }
 								    $prev_menu_type_id = $menu_type->term_id;
 								}

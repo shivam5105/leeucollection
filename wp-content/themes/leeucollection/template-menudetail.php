@@ -70,7 +70,6 @@ get_header(); ?>
 
 									$child_post_img_url = $child_post_img_url[0];
 
-									$banner_image_class = "";
 									$child_post_meta = ( $child_post ) ? get_post_meta( $child_post_id ) : null;
 									$data_anim_delay = "";
 									if($logic_loop <= 2)
@@ -81,7 +80,6 @@ get_header(); ?>
 									}
 									if($logic_loop == 1)
 									{
-										$banner_image_class = "mht_homebanner";
 										?>
 										<div class="scroll-anim" data-anim="fade-up">
 										<?php
@@ -103,7 +101,8 @@ get_header(); ?>
 										<?php
 									}
 									?>
-									<div class="banner-img <?php echo $banner_image_class; ?> scroll-anim" data-anim="fade-up" style="background-image:url('<?php echo $child_post_img_url; ?>');" <?php echo $data_anim_delay; ?>>
+									<div class="banner-img scroll-anim" data-anim="fade-up" <?php echo $data_anim_delay; ?>>
+										<img src="<?php echo $child_post_img_url; ?>" alt="" />
 										<div class="inner-detail-wrapper">
 											<div class="inner-detail">
 												<div class="row">
