@@ -34,9 +34,28 @@
 	</script>
 	<!-- End Bookatable Code -->
 </head>
-
+<?php
+$page_template_file = basename(get_page_template());
+?>
 <body <?php body_class(); ?>>
 	<div itemscope itemtype="http://schema.org/Hotel">
+	      <div class="cht-wthr"> 
+	         <div class="wthr-wrapper text-center"> 
+	            <a href="#"></a>
+	            <div class="chat-icon-wrap"></div>
+	            <span class="text-cht-wthr">51 C</span>
+	         </div>         
+	         <div class="chat-wrapper"> 
+	            <a href="#"></a>
+	            <div id="wave" class="chat-icon-wrap">
+	                <span class="dot"></span>
+	                <span class="dot"></span>
+	                <span class="dot"></span>
+	            </div>
+	            <span class="text-cht-wthr">chat</span>
+	         </div>
+	      </div>
+
 		<header id="site-header" class="pos-fix animate-fixed-header" >
 			<nav id="main-navigation" class="clearfix">
 				<div class="container pos-rel">
@@ -55,7 +74,7 @@
 					<div class="logo-wrapper">
 						<?php leeucollection_the_custom_logo(); ?>
 						<?php
-						if(is_front_page())
+						if(is_front_page() || $page_template_file == 'template-hotel-listing.php')
 						{
 							?>
 							<img src="<?php echo get_template_directory_uri(); ?>/images/home-leeu-collection-text.png" class="bottom-logo" alt="" />
