@@ -1221,7 +1221,7 @@ body.hotel-template-template-menudetail .side-sub-menu.child-2 li.current.active
     width: 32px;
 }
 
-.home #site-header.animate-fixed-header .logo-wrapper img.bottom-logo{
+#site-header.animate-fixed-header .logo-wrapper.has_logo_text_img img.bottom-logo{
     -webkit-transform:none; 
     -moz-transform:none;
     -ms-transform:none;
