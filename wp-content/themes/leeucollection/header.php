@@ -46,7 +46,7 @@ $page_template_file = basename(get_page_template());
 	            <span class="text-cht-wthr">51 C</span>
 	         </div>         
 	         <div class="chat-wrapper"> 
-	            <a href="#"></a>
+	            <a href="http://54.191.201.248/leeucollection/contact-us/"></a>
 	            <div id="wave" class="chat-icon-wrap">
 	                <span class="dot"></span>
 	                <span class="dot"></span>
