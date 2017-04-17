@@ -273,7 +273,7 @@ padding-top: 41px;
     position: relative;
 }
 #main-navigation ul.menu-right li:last-child::before  , #main-navigation ul.menu-right li:last-child::after {
-    background: rgba(0, 0, 0, 0) url("../img/book-icon.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("images/book-icon.png") no-repeat scroll 0 0;
     content: "";
     height: 25px;
     left: -20px;
@@ -282,7 +282,7 @@ padding-top: 41px;
     width: 25px;
 }
 #main-navigation ul.menu-right li:last-child::after {
-    background: rgba(0, 0, 0, 0) url("../img/book-icon-hover.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("images/book-icon-hover.png") no-repeat scroll 0 0;
     opacity: 0;
     -webkit-transition: opacity 0.3s ease 0s; 
     -moz-transition: opacity 0.3s ease 0s;
@@ -290,7 +290,7 @@ padding-top: 41px;
     transition: opacity 0.3s ease 0s;
 }
 #main-navigation ul.menu-right li:last-child:hover:after {
-    background: rgba(0, 0, 0, 0) url("../img/book-icon-hover.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("images/book-icon-hover.png") no-repeat scroll 0 0;
     opacity: 1;
 }
 #main-navigation ul.menu-right li:last-child a:hover::before{
@@ -476,7 +476,7 @@ padding-top: 41px;
     color: #C19034;
 }
 .linking-wrap li.see-more-link a::before, .linking-wrap li.see-more-link a::after  {
-    background: rgba(0, 0, 0, 0) url("../img/text-book-icon.png") repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("images/text-book-icon.png") repeat scroll 0 0;
     content: "";
     height: 33px;
     left: -32px;
@@ -485,7 +485,7 @@ padding-top: 41px;
     width: 22px;
 }
 .linking-wrap li.see-more-link a::after {
-    background: rgba(0, 0, 0, 0) url("../img/text-book-icon-hover.png") repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("images/text-book-icon-hover.png") repeat scroll 0 0;
     opacity: 0;
     -webkit-transition: opacity 0.3s ease-in 0s; 
     -moz-transition: opacity 0.3s ease-in 0s;
@@ -496,7 +496,7 @@ padding-top: 41px;
     opacity: 1;
 }
 .linking-wrap li.book-link a::before , .linking-wrap li.book-link a::after{
-    background: rgba(0, 0, 0, 0) url("../img/pen-icon.png") repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("images/pen-icon.png") repeat scroll 0 0;
     content: "";
     height: 33px;
     left: -23px;
@@ -505,7 +505,7 @@ padding-top: 41px;
     width: 33px;
 }
 .linking-wrap li.book-link a::after {
-    background: rgba(0, 0, 0, 0) url("../img/pen-icon-hover.png") repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("images/pen-icon-hover.png") repeat scroll 0 0;
     opacity: 0;
     -webkit-transition: opacity 0.3s ease-in 0s; 
     -moz-transition: opacity 0.3s ease-in 0s;
@@ -810,7 +810,7 @@ li.current.active .side-sub-menu li.current.active ~ li{
 .two-slide-carousel .next:before , .two-slide-carousel .prev:before{
     content:"";
     position: absolute;
-    background: url('../img/arrow-icon.png') no-repeat;
+    background: url('images/arrow-icon.png') no-repeat;
     width: 29px;
     height: 10px;
     top:50%;
@@ -945,7 +945,7 @@ li.current.active .side-sub-menu li.current.active ~ li{
     position: relative;
 }
 .arrow-btn::after {
-    background: rgba(0, 0, 0, 0) url("../img/arrow-icon.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("images/arrow-icon.png") no-repeat scroll 0 0;
     content: "";
     display: inline-block;
     height: 10px;
@@ -962,7 +962,7 @@ li.current.active .side-sub-menu li.current.active ~ li{
     width: 29px;
 }
 .arrow-btn:hover:after{
-     background: rgba(0, 0, 0, 0) url("../img/arrow-icon-hover.png") no-repeat scroll 0 0;
+     background: rgba(0, 0, 0, 0) url("images/arrow-icon-hover.png") no-repeat scroll 0 0;
      -webkit-transform: translateY(1px) translateX(0px);
     -moz-transform: translateY(1px) translateX(0px); 
     -ms-transform: translateY(1px) translateX(0px);
@@ -1151,7 +1151,7 @@ body.hotel-template-template-menudetail .side-sub-menu.child-2 li.current.active
     margin-top: 28px;
 }
 .slider-txt-link .cstm-btn-wrapper .arrow-btn::after {
-    background: rgba(0, 0, 0, 0) url("../img/arrow-icon-white.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("images/arrow-icon-white.png") no-repeat scroll 0 0;
 }
 .slider-txt-link,.slider-txt-con,.slider-txt-head{
     transform:translateY(20px);
@@ -1362,12 +1362,12 @@ body.hotel-template-template-menudetail .side-sub-menu.child-2 li.current.active
     padding-top: 25px;
 }
 .booking-form-object select { 
-  background: url('../img/book-form-arrow.png') no-repeat;
+  background: url('images/book-form-arrow.png') no-repeat;
   background-position: right center;
   padding-bottom: 9px;
 }  
 .booking-form-object input{
-   background: url('../img/cal-icon.png') no-repeat;
+   background: url('images/cal-icon.png') no-repeat;
     background-position: right center;  
     padding-bottom: 10px; 
 }
@@ -1379,7 +1379,7 @@ body.hotel-template-template-menudetail .side-sub-menu.child-2 li.current.active
     position: relative;
 }
 .form-item .submit-btn::before {
-    background: rgba(0, 0, 0, 0) url("../img/check-avail.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("images/check-avail.png") no-repeat scroll 0 0;
     content: "";
     display: inline-block;
     height: 19px;
@@ -1450,7 +1450,7 @@ div#wave {
     position: relative; 
     text-align: center; 
     width: 36px; height: 29px; 
-    background: url('../img/wave-bg.png') no-repeat; 
+    background: url('images/wave-bg.png') no-repeat; 
    
 } 
 div#wave .dot { 
@@ -1462,7 +1462,7 @@ div#wave .dot {
     background: #AC9E94; 
 } 
 .chat-icon-wrap{
-   background: url('../img/global-weather.png') no-repeat; 
+   background: url('images/global-weather.png') no-repeat; 
    height: 24px;
    width: 36px;
 }
@@ -1555,7 +1555,7 @@ margin:0;
 }
 .see_option span a::before{
     display:block;
-    background: rgba(0, 0, 0, 0) url("../img/text-book-icon.png") repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("images/text-book-icon.png") repeat scroll 0 0;
     content: "";
     height: 33px;
     left: -32px;
@@ -1569,7 +1569,7 @@ margin:0;
 }
 .locator a::before{
     display:block;
-    background: rgba(0, 0, 0, 0) url("../img/navigator.jpg") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("images/navigator.jpg") no-repeat scroll 0 0;
     content: "";
     height: 33px;
     left: -32px;
@@ -1668,7 +1668,7 @@ margin:0;
     transition: all 0.3s ease 0s;
 }
 .reserve a::after {
-    background: rgba(0, 0, 0, 0) url("../img/arrow-icon.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("images/arrow-icon.png") no-repeat scroll 0 0;
     content: "";
     display: inline-block;
     height: 10px;
@@ -1684,7 +1684,7 @@ margin:0;
     color: #c19034;
 }
 .reserve a:hover::after{
-background:url(../img/arrow-icon-hover.png) no-repeat;
+background:url(images/arrow-icon-hover.png) no-repeat;
  transform: translateY(1px) translateX(0px);
 }
 

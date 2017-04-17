@@ -266,6 +266,14 @@ var Blank ={
 		}
 
 	},
+	hotel_listing_init : function(){
+		if($('body.page-template-template-hotel-listing').length){
+			Blank.home_logo_anim();
+			$(window).scroll(function(){
+				Blank.home_logo_anim();
+			});				
+		}					
+	},
 	common_init : function(){
 		Blank.win_prop();	
 		Blank.scrl_anim();
@@ -290,6 +298,7 @@ var Blank ={
 $(document).ready(function(){
 	Blank.common_init();
 	Blank.home_page_init();
+	Blank.hotel_listing_init();
 	jQuery('#mc-form').ajaxChimp({
 			url: '//builtbyblank.us14.list-manage.com/subscribe/post?u=35b52d4d999898495de700b6d&amp;id=707c0e74e6',
 			callback: callbackFunction
@@ -309,4 +318,3 @@ $(window).scroll(function(){
 $(window).on('load', function(){
 	Blank.common_init_window_load(); 
 });
-
