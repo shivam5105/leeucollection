@@ -71,10 +71,18 @@ $page_template_file = basename(get_page_template());
 						}
 						?>
 					</div>
-					<div class="logo-wrapper">
+					<?php
+					$logo_text_img_templates_array = array('template-hotel-listing.php');
+					$has_logo_text_img = false;
+					if(is_front_page() || in_array($page_template_file, $logo_text_img_templates_array))
+					{
+						$has_logo_text_img = true;
+					}
+					?>
+					<div class="logo-wrapper <?php if($has_logo_text_img){ echo "has_logo_text_img"; } ?>">
 						<?php leeucollection_the_custom_logo(); ?>
 						<?php
-						if(is_front_page() || $page_template_file == 'template-hotel-listing.php')
+						if($has_logo_text_img)
 						{
 							?>
 							<img src="<?php echo get_template_directory_uri(); ?>/images/home-leeu-collection-text.png" class="bottom-logo" alt="" />
