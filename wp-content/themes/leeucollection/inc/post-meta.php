@@ -234,10 +234,10 @@ Container::make('post_meta', 'Content Section')
         )),
     ));
 
-//Home Page
+//Home Page && Hotel Listing
 Container::make('post_meta', 'Header Slider')
     ->show_on_post_type('page')
-    ->show_on_template(array('front-page.php'))
+    ->show_on_template(array('front-page.php', 'template-hotel-listing.php'))
     ->add_fields(array(
         Field::make('complex', 'crb_header_images', '')->add_fields(array(
             Field::make('image', 'crb_header_image', 'Header Image')->help_text('(Image Dimensions (WxH): 1240 x 600)'),
@@ -370,6 +370,30 @@ Container::make('post_meta', 'Two Columns Section 2')
         Field::make('text', 'crb_two_cols_section_2_more_button_link_right', 'Detail Button Link')->set_width('50'),
         Field::make('text', 'crb_two_cols_section_2_booking_button_text_right', 'Booking Button Text')->set_width('50'),
         Field::make('text', 'crb_two_cols_section_2_booking_button_link_right', 'Booking Button Link')->set_width('50'),
+    ));
+
+//Home Page - Hotels
+Container::make('post_meta', 'Hotels Details')
+    ->show_on_post_type('page')
+    ->show_on_template(array('template-hotel-listing.php'))
+    ->add_fields(array(
+        Field::make('complex', 'crb_hotel_sections', '')->add_fields(array(
+            Field::make('text', 'crb_hotel_name', 'Hotel Name'),
+
+            Field::make('complex', 'crb_hotel_hotels', '')->add_fields(array(
+                Field::make('text', 'crb_hotel_locations', 'Hotel Location'),
+                Field::make('complex', 'crb_hotel_section_details', 'Section Details')->add_fields(array(
+                    Field::make('text', 'crb_hotel_section_name', 'Section Name'),
+                    Field::make('image', 'crb_hotel_section_logo', 'Hotel/Section Logo Image')->set_width('50'),            
+                    Field::make('image', 'crb_hotel_section_image', 'Section Image')->help_text('(Image Dimensions (WxH): 1240 x 600)')->set_width('50'),
+                    Field::make('textarea', 'crb_hotel_section_description', 'Short Description'),
+                    Field::make('text', 'crb_more_button_text', 'Detail Button Text')->set_width('50'),
+                    Field::make('text', 'crb_more_button_link', 'Detail Button Link')->set_width('50'),
+                    Field::make('text', 'crb_booking_button_text', 'Booking Button Text')->set_width('50'),
+                    Field::make('text', 'crb_booking_button_link', 'Booking Button Link')->set_width('50'),
+                )),
+            )),
+        )),
     ));
 
 /*

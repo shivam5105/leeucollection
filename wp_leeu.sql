@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 17, 2017 at 10:36 AM
+-- Generation Time: Apr 17, 2017 at 02:13 PM
 -- Server version: 5.5.38
 -- PHP Version: 5.5.14
 
@@ -103,7 +103,7 @@ CREATE TABLE IF NOT EXISTS `wp_options` (
   `autoload` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=558 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=565 ;
 
 --
 -- Dumping data for table `wp_options`
@@ -270,7 +270,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (541, '_site_transient_timeout_theme_roots', '1492411977', 'no'),
 (542, '_site_transient_theme_roots', 'a:1:{s:14:"leeucollection";s:7:"/themes";}', 'no'),
 (543, '_site_transient_update_plugins', 'O:8:"stdClass":4:{s:12:"last_checked";i:1492410183;s:8:"response";a:1:{s:19:"akismet/akismet.php";O:8:"stdClass":8:{s:2:"id";s:2:"15";s:4:"slug";s:7:"akismet";s:6:"plugin";s:19:"akismet/akismet.php";s:11:"new_version";s:3:"3.3";s:3:"url";s:38:"https://wordpress.org/plugins/akismet/";s:7:"package";s:54:"https://downloads.wordpress.org/plugin/akismet.3.3.zip";s:6:"tested";s:5:"4.7.3";s:13:"compatibility";O:8:"stdClass":1:{s:6:"scalar";O:8:"stdClass":1:{s:6:"scalar";b:0;}}}}s:12:"translations";a:0:{}s:9:"no_update";a:2:{s:43:"go-live-update-urls/go-live-update-urls.php";O:8:"stdClass":6:{s:2:"id";s:5:"26232";s:4:"slug";s:19:"go-live-update-urls";s:6:"plugin";s:43:"go-live-update-urls/go-live-update-urls.php";s:11:"new_version";s:5:"4.1.2";s:3:"url";s:50:"https://wordpress.org/plugins/go-live-update-urls/";s:7:"package";s:62:"https://downloads.wordpress.org/plugin/go-live-update-urls.zip";}s:9:"hello.php";O:8:"stdClass":6:{s:2:"id";s:4:"3564";s:4:"slug";s:11:"hello-dolly";s:6:"plugin";s:9:"hello.php";s:11:"new_version";s:3:"1.6";s:3:"url";s:42:"https://wordpress.org/plugins/hello-dolly/";s:7:"package";s:58:"https://downloads.wordpress.org/plugin/hello-dolly.1.6.zip";}}}', 'no'),
-(557, '_transient_is_multi_author', '0', 'yes');
+(564, '_transient_is_multi_author', '0', 'yes');
 
 -- --------------------------------------------------------
 
@@ -286,14 +286,14 @@ CREATE TABLE IF NOT EXISTS `wp_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=4240 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=5636 ;
 
 --
 -- Dumping data for table `wp_postmeta`
 --
 
 INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
-(1, 2, '_wp_page_template', 'default'),
+(1, 2, '_wp_page_template', 'template-hotel-listing.php'),
 (2, 4, '_edit_last', '1'),
 (3, 4, '_edit_lock', '1492083625:1'),
 (4, 4, '_wp_page_template', 'template-hotel.php'),
@@ -385,7 +385,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (90, 48, '_menu_item_url', ''),
 (91, 48, '_menu_item_orphaned', '1490602271'),
 (92, 48, '_nav_menu_image', NULL),
-(93, 2, '_edit_lock', '1490871499:1'),
+(93, 2, '_edit_lock', '1492430411:1'),
 (94, 2, '_edit_last', '1'),
 (95, 50, '_edit_last', '1'),
 (96, 50, '_edit_lock', '1492405457:1'),
@@ -1182,7 +1182,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (1501, 237, '_wp_trash_meta_status', 'publish'),
 (1502, 237, '_wp_trash_meta_time', '1491998316'),
 (1503, 239, '_edit_last', '1'),
-(1504, 239, '_edit_lock', '1492417003:1'),
+(1504, 239, '_edit_lock', '1492423772:1'),
 (1505, 239, '_wp_page_template', 'front-page.php'),
 (1524, 241, '_wp_attached_file', '2017/03/left-main-logo.svg'),
 (1581, 4, '_crb_page_sub_heading', NULL),
@@ -1446,7 +1446,235 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (4236, 239, '_crb_two_cols_section_2_more_button_text_right', 'See More'),
 (4237, 239, '_crb_two_cols_section_2_more_button_link_right', 'http://www.google.com'),
 (4238, 239, '_crb_two_cols_section_2_booking_button_text_right', 'Book'),
-(4239, 239, '_crb_two_cols_section_2_booking_button_link_right', 'http://www.google.com');
+(4239, 239, '_crb_two_cols_section_2_booking_button_link_right', 'http://www.google.com'),
+(4494, 257, '_wp_attached_file', '2017/03/leeu-estates-logo.svg'),
+(4495, 258, '_wp_attached_file', '2017/03/lee-quartier-logo.svg'),
+(4497, 260, '_wp_attached_file', '2017/03/linthwaite-logo.svg'),
+(4971, 262, '_wp_attached_file', '2017/03/home-hotel-2.jpg'),
+(4972, 262, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:925;s:6:"height";i:600;s:4:"file";s:24:"2017/03/home-hotel-2.jpg";s:5:"sizes";a:6:{s:9:"thumbnail";a:4:{s:4:"file";s:24:"home-hotel-2-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:24:"home-hotel-2-300x195.jpg";s:5:"width";i:300;s:6:"height";i:195;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:24:"home-hotel-2-768x498.jpg";s:5:"width";i:768;s:6:"height";i:498;s:9:"mime-type";s:10:"image/jpeg";}s:8:"1240x600";a:4:{s:4:"file";s:24:"home-hotel-2-925x600.jpg";s:5:"width";i:925;s:6:"height";i:600;s:9:"mime-type";s:10:"image/jpeg";}s:7:"821x478";a:4:{s:4:"file";s:24:"home-hotel-2-821x478.jpg";s:5:"width";i:821;s:6:"height";i:478;s:9:"mime-type";s:10:"image/jpeg";}s:7:"190x120";a:4:{s:4:"file";s:24:"home-hotel-2-190x120.jpg";s:5:"width";i:190;s:6:"height";i:120;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(4975, 264, '_wp_attached_file', '2017/03/home-hotel-1.jpg'),
+(4976, 264, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:925;s:6:"height";i:600;s:4:"file";s:24:"2017/03/home-hotel-1.jpg";s:5:"sizes";a:6:{s:9:"thumbnail";a:4:{s:4:"file";s:24:"home-hotel-1-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:24:"home-hotel-1-300x195.jpg";s:5:"width";i:300;s:6:"height";i:195;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:24:"home-hotel-1-768x498.jpg";s:5:"width";i:768;s:6:"height";i:498;s:9:"mime-type";s:10:"image/jpeg";}s:8:"1240x600";a:4:{s:4:"file";s:24:"home-hotel-1-925x600.jpg";s:5:"width";i:925;s:6:"height";i:600;s:9:"mime-type";s:10:"image/jpeg";}s:7:"821x478";a:4:{s:4:"file";s:24:"home-hotel-1-821x478.jpg";s:5:"width";i:821;s:6:"height";i:478;s:9:"mime-type";s:10:"image/jpeg";}s:7:"190x120";a:4:{s:4:"file";s:24:"home-hotel-1-190x120.jpg";s:5:"width";i:190;s:6:"height";i:120;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(4977, 265, '_wp_attached_file', '2017/03/home-hotel-3.jpg'),
+(4978, 265, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:925;s:6:"height";i:600;s:4:"file";s:24:"2017/03/home-hotel-3.jpg";s:5:"sizes";a:6:{s:9:"thumbnail";a:4:{s:4:"file";s:24:"home-hotel-3-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:24:"home-hotel-3-300x195.jpg";s:5:"width";i:300;s:6:"height";i:195;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:24:"home-hotel-3-768x498.jpg";s:5:"width";i:768;s:6:"height";i:498;s:9:"mime-type";s:10:"image/jpeg";}s:8:"1240x600";a:4:{s:4:"file";s:24:"home-hotel-3-925x600.jpg";s:5:"width";i:925;s:6:"height";i:600;s:9:"mime-type";s:10:"image/jpeg";}s:7:"821x478";a:4:{s:4:"file";s:24:"home-hotel-3-821x478.jpg";s:5:"width";i:821;s:6:"height";i:478;s:9:"mime-type";s:10:"image/jpeg";}s:7:"190x120";a:4:{s:4:"file";s:24:"home-hotel-3-190x120.jpg";s:5:"width";i:190;s:6:"height";i:120;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(5257, 266, '_wp_attached_file', '2017/03/leeu-house-logo.svg'),
+(5418, 2, '_crb_header_images_-_crb_header_image_0', '127'),
+(5419, 2, '_crb_header_images_-_crb_header_heading_0', 'unrivalled\r\nescapes'),
+(5420, 2, '_crb_header_images_-_crb_header_description_0', ''),
+(5421, 2, '_crb_header_images_-_crb_header_button_text_0', ''),
+(5422, 2, '_crb_header_images_-_crb_header_button_link_0', ''),
+(5423, 2, '_crb_header_images_-_crb_header_text_position_0', 'top-position'),
+(5424, 2, '_crb_header_images_-_crb_header_image_1', '125'),
+(5425, 2, '_crb_header_images_-_crb_header_heading_1', 'header here'),
+(5426, 2, '_crb_header_images_-_crb_header_description_1', 'subhead lorem ipsum dolor sit amet\r\nconsectetur adipiscing'),
+(5427, 2, '_crb_header_images_-_crb_header_button_text_1', 'sign up'),
+(5428, 2, '_crb_header_images_-_crb_header_button_link_1', 'http://54.191.201.248/leeucollection/contact-us/'),
+(5429, 2, '_crb_header_images_-_crb_header_text_position_1', 'center-position'),
+(5430, 2, '_crb_header_images_-_crb_header_image_2', '127'),
+(5431, 2, '_crb_header_images_-_crb_header_heading_2', 'header here'),
+(5432, 2, '_crb_header_images_-_crb_header_description_2', 'subhead lorem ipsum dolor sit amet\r\nconsectetur adipiscing'),
+(5433, 2, '_crb_header_images_-_crb_header_button_text_2', 'action'),
+(5434, 2, '_crb_header_images_-_crb_header_button_link_2', 'http://54.191.201.248/leeucollection/contact-us/'),
+(5435, 2, '_crb_header_images_-_crb_header_text_position_2', 'top-position'),
+(5436, 2, '_crb_hotel_sections_-_crb_hotel_name_0', 'Leeu Estates'),
+(5437, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_locations_0', 'Franschhoek, South Africa'),
+(5438, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_hotel_section_name_0', 'Rooms'),
+(5439, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_hotel_section_logo_0', '257'),
+(5440, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_hotel_section_image_0', '264'),
+(5441, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_hotel_section_description_0', 'Lorem ipsum dolor sit amet, consectetur  adipiscing elit. Quisque lacus interdum imperdiet ultricies. Aliquam scelerisque, turpis ut iaculis suscipit lorem.'),
+(5442, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_more_button_text_0', 'See More'),
+(5443, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_more_button_link_0', 'http://localhost/leeucollection/hotel/leeu-estates/rooms/'),
+(5444, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_booking_button_text_0', 'Book'),
+(5445, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_booking_button_link_0', 'http://localhost/leeucollection/hotel/leeu-estates/rooms/'),
+(5446, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_hotel_section_name_1', 'Food And Drink'),
+(5447, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_hotel_section_logo_1', '257'),
+(5448, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_hotel_section_image_1', '262'),
+(5449, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_hotel_section_description_1', 'Lorem ipsum dolor sit amet, consectetur  adipiscing elit. Quisque lacus interdum imperdiet ultricies. Aliquam scelerisque, turpis ut iaculis suscipit lorem.'),
+(5450, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_more_button_text_1', 'See More'),
+(5451, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_more_button_link_1', 'http://localhost/leeucollection/hotel/leeu-estates/eat-and-drink/dining-room/'),
+(5452, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_booking_button_text_1', 'Book'),
+(5453, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_booking_button_link_1', 'http://localhost/leeucollection/hotel/leeu-estates/eat-and-drink/dining-room/'),
+(5454, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_hotel_section_name_2', 'Wine'),
+(5455, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_hotel_section_logo_2', '257'),
+(5456, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_hotel_section_image_2', '265'),
+(5457, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_hotel_section_description_2', 'Lorem ipsum dolor sit amet, consectetur  adipiscing elit. Quisque lacus interdum imperdiet ultricies. Aliquam scelerisque, turpis ut iaculis suscipit lorem.'),
+(5458, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_more_button_text_2', 'See More'),
+(5459, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_more_button_link_2', 'http://localhost/leeucollection/hotel/leeu-estates/wine/'),
+(5460, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_booking_button_text_2', 'Book'),
+(5461, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_booking_button_link_2', 'http://localhost/leeucollection/hotel/leeu-estates/wine/'),
+(5462, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_hotel_section_name_3', 'Spa And Wellness'),
+(5463, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_hotel_section_logo_3', '257'),
+(5464, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_hotel_section_image_3', '264'),
+(5465, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_hotel_section_description_3', 'Lorem ipsum dolor sit amet, consectetur  adipiscing elit. Quisque lacus interdum imperdiet ultricies. Aliquam scelerisque, turpis ut iaculis suscipit lorem.'),
+(5466, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_more_button_text_3', 'See More'),
+(5467, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_more_button_link_3', 'http://localhost/leeucollection/hotel/leeu-estates/spa-wellness/'),
+(5468, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_booking_button_text_3', 'Book'),
+(5469, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_booking_button_link_3', 'http://localhost/leeucollection/hotel/leeu-estates/spa-wellness/'),
+(5470, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_hotel_section_name_4', 'Guest Area'),
+(5471, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_hotel_section_logo_4', '257'),
+(5472, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_hotel_section_image_4', '262'),
+(5473, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_hotel_section_description_4', 'Lorem ipsum dolor sit amet, consectetur  adipiscing elit. Quisque lacus interdum imperdiet ultricies. Aliquam scelerisque, turpis ut iaculis suscipit lorem.'),
+(5474, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_more_button_text_4', 'See More'),
+(5475, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_more_button_link_4', 'http://localhost/leeucollection/hotel/leeu-estates/guest-areas/'),
+(5476, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_booking_button_text_4', 'Book'),
+(5477, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_booking_button_link_4', 'http://localhost/leeucollection/hotel/leeu-estates/guest-areas/'),
+(5478, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_hotel_section_name_5', 'Meetings And Events'),
+(5479, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_hotel_section_logo_5', '257'),
+(5480, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_hotel_section_image_5', '265'),
+(5481, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_hotel_section_description_5', 'Lorem ipsum dolor sit amet, consectetur  adipiscing elit. Quisque lacus interdum imperdiet ultricies. Aliquam scelerisque, turpis ut iaculis suscipit lorem.'),
+(5482, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_more_button_text_5', 'See More'),
+(5483, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_more_button_link_5', 'http://localhost/leeucollection/hotel/leeu-estates/meeting-events/'),
+(5484, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_booking_button_text_5', 'Book'),
+(5485, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_booking_button_link_5', 'http://localhost/leeucollection/hotel/leeu-estates/meeting-events/'),
+(5486, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_hotel_section_name_6', 'Explore the property'),
+(5487, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_hotel_section_logo_6', '257'),
+(5488, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_hotel_section_image_6', '264'),
+(5489, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_hotel_section_description_6', 'Lorem ipsum dolor sit amet, consectetur  adipiscing elit. Quisque lacus interdum imperdiet ultricies. Aliquam scelerisque, turpis ut iaculis suscipit lorem.'),
+(5490, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_more_button_text_6', 'See More'),
+(5491, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_more_button_link_6', 'http://localhost/leeucollection/hotel/leeu-estates/explore/'),
+(5492, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_booking_button_text_6', 'Book'),
+(5493, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_booking_button_link_6', 'http://localhost/leeucollection/hotel/leeu-estates/explore/'),
+(5494, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_hotel_section_name_7', 'Facilities'),
+(5495, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_hotel_section_logo_7', '257'),
+(5496, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_hotel_section_image_7', '262'),
+(5497, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_hotel_section_description_7', 'Lorem ipsum dolor sit amet, consectetur  adipiscing elit. Quisque lacus interdum imperdiet ultricies. Aliquam scelerisque, turpis ut iaculis suscipit lorem.'),
+(5498, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_more_button_text_7', 'See More'),
+(5499, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_more_button_link_7', 'http://localhost/leeucollection/hotel/leeu-estates/facilities/'),
+(5500, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_booking_button_text_7', 'Book'),
+(5501, 2, '_crb_hotel_sections_-_crb_hotel_hotels_0_-_crb_hotel_section_details_0_-_crb_booking_button_link_7', 'http://localhost/leeucollection/hotel/leeu-estates/facilities/'),
+(5502, 2, '_crb_hotel_sections_-_crb_hotel_name_1', 'Leeu House'),
+(5503, 2, '_crb_hotel_sections_-_crb_hotel_hotels_1_-_crb_hotel_locations_0', 'Franschhoek, South Africa'),
+(5504, 2, '_crb_hotel_sections_-_crb_hotel_hotels_1_-_crb_hotel_section_details_0_-_crb_hotel_section_name_0', 'Rooms'),
+(5505, 2, '_crb_hotel_sections_-_crb_hotel_hotels_1_-_crb_hotel_section_details_0_-_crb_hotel_section_logo_0', '266'),
+(5506, 2, '_crb_hotel_sections_-_crb_hotel_hotels_1_-_crb_hotel_section_details_0_-_crb_hotel_section_image_0', '262'),
+(5507, 2, '_crb_hotel_sections_-_crb_hotel_hotels_1_-_crb_hotel_section_details_0_-_crb_hotel_section_description_0', 'Lorem ipsum dolor sit amet, consectetur  adipiscing elit. Quisque lacus interdum imperdiet ultricies. Aliquam scelerisque, turpis ut iaculis suscipit lorem.'),
+(5508, 2, '_crb_hotel_sections_-_crb_hotel_hotels_1_-_crb_hotel_section_details_0_-_crb_more_button_text_0', 'See More'),
+(5509, 2, '_crb_hotel_sections_-_crb_hotel_hotels_1_-_crb_hotel_section_details_0_-_crb_more_button_link_0', 'http://localhost/leeucollection/hotel/leeu-estates/rooms/'),
+(5510, 2, '_crb_hotel_sections_-_crb_hotel_hotels_1_-_crb_hotel_section_details_0_-_crb_booking_button_text_0', 'Book'),
+(5511, 2, '_crb_hotel_sections_-_crb_hotel_hotels_1_-_crb_hotel_section_details_0_-_crb_booking_button_link_0', 'http://localhost/leeucollection/hotel/leeu-estates/rooms/'),
+(5512, 2, '_crb_hotel_sections_-_crb_hotel_hotels_1_-_crb_hotel_section_details_0_-_crb_hotel_section_name_1', 'Food And Drink'),
+(5513, 2, '_crb_hotel_sections_-_crb_hotel_hotels_1_-_crb_hotel_section_details_0_-_crb_hotel_section_logo_1', '266'),
+(5514, 2, '_crb_hotel_sections_-_crb_hotel_hotels_1_-_crb_hotel_section_details_0_-_crb_hotel_section_image_1', '265'),
+(5515, 2, '_crb_hotel_sections_-_crb_hotel_hotels_1_-_crb_hotel_section_details_0_-_crb_hotel_section_description_1', 'Lorem ipsum dolor sit amet, consectetur  adipiscing elit. Quisque lacus interdum imperdiet ultricies. Aliquam scelerisque, turpis ut iaculis suscipit lorem.'),
+(5516, 2, '_crb_hotel_sections_-_crb_hotel_hotels_1_-_crb_hotel_section_details_0_-_crb_more_button_text_1', 'See More'),
+(5517, 2, '_crb_hotel_sections_-_crb_hotel_hotels_1_-_crb_hotel_section_details_0_-_crb_more_button_link_1', 'http://localhost/leeucollection/hotel/leeu-estates/eat-and-drink/dining-room/'),
+(5518, 2, '_crb_hotel_sections_-_crb_hotel_hotels_1_-_crb_hotel_section_details_0_-_crb_booking_button_text_1', 'Book'),
+(5519, 2, '_crb_hotel_sections_-_crb_hotel_hotels_1_-_crb_hotel_section_details_0_-_crb_booking_button_link_1', 'http://localhost/leeucollection/hotel/leeu-estates/eat-and-drink/dining-room/'),
+(5520, 2, '_crb_hotel_sections_-_crb_hotel_hotels_1_-_crb_hotel_section_details_0_-_crb_hotel_section_name_2', 'Explore the property'),
+(5521, 2, '_crb_hotel_sections_-_crb_hotel_hotels_1_-_crb_hotel_section_details_0_-_crb_hotel_section_logo_2', '266'),
+(5522, 2, '_crb_hotel_sections_-_crb_hotel_hotels_1_-_crb_hotel_section_details_0_-_crb_hotel_section_image_2', '264'),
+(5523, 2, '_crb_hotel_sections_-_crb_hotel_hotels_1_-_crb_hotel_section_details_0_-_crb_hotel_section_description_2', 'Lorem ipsum dolor sit amet, consectetur  adipiscing elit. Quisque lacus interdum imperdiet ultricies. Aliquam scelerisque, turpis ut iaculis suscipit lorem.'),
+(5524, 2, '_crb_hotel_sections_-_crb_hotel_hotels_1_-_crb_hotel_section_details_0_-_crb_more_button_text_2', 'See More'),
+(5525, 2, '_crb_hotel_sections_-_crb_hotel_hotels_1_-_crb_hotel_section_details_0_-_crb_more_button_link_2', 'http://localhost/leeucollection/hotel/leeu-estates/explore/'),
+(5526, 2, '_crb_hotel_sections_-_crb_hotel_hotels_1_-_crb_hotel_section_details_0_-_crb_booking_button_text_2', 'Book'),
+(5527, 2, '_crb_hotel_sections_-_crb_hotel_hotels_1_-_crb_hotel_section_details_0_-_crb_booking_button_link_2', 'http://localhost/leeucollection/hotel/leeu-estates/explore/'),
+(5528, 2, '_crb_hotel_sections_-_crb_hotel_hotels_1_-_crb_hotel_section_details_0_-_crb_hotel_section_name_3', 'Facilities'),
+(5529, 2, '_crb_hotel_sections_-_crb_hotel_hotels_1_-_crb_hotel_section_details_0_-_crb_hotel_section_logo_3', '266'),
+(5530, 2, '_crb_hotel_sections_-_crb_hotel_hotels_1_-_crb_hotel_section_details_0_-_crb_hotel_section_image_3', '262'),
+(5531, 2, '_crb_hotel_sections_-_crb_hotel_hotels_1_-_crb_hotel_section_details_0_-_crb_hotel_section_description_3', 'Lorem ipsum dolor sit amet, consectetur  adipiscing elit. Quisque lacus interdum imperdiet ultricies. Aliquam scelerisque, turpis ut iaculis suscipit lorem.'),
+(5532, 2, '_crb_hotel_sections_-_crb_hotel_hotels_1_-_crb_hotel_section_details_0_-_crb_more_button_text_3', 'See More'),
+(5533, 2, '_crb_hotel_sections_-_crb_hotel_hotels_1_-_crb_hotel_section_details_0_-_crb_more_button_link_3', 'http://localhost/leeucollection/hotel/leeu-estates/facilities/'),
+(5534, 2, '_crb_hotel_sections_-_crb_hotel_hotels_1_-_crb_hotel_section_details_0_-_crb_booking_button_text_3', 'Book'),
+(5535, 2, '_crb_hotel_sections_-_crb_hotel_hotels_1_-_crb_hotel_section_details_0_-_crb_booking_button_link_3', 'http://localhost/leeucollection/hotel/leeu-estates/facilities/'),
+(5536, 2, '_crb_hotel_sections_-_crb_hotel_name_2', 'LE Quartier Francais'),
+(5537, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_locations_0', 'Franschhoek, South Africa'),
+(5538, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_hotel_section_name_0', 'Rooms'),
+(5539, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_hotel_section_logo_0', '258'),
+(5540, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_hotel_section_image_0', '264'),
+(5541, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_hotel_section_description_0', 'Lorem ipsum dolor sit amet, consectetur  adipiscing elit. Quisque lacus interdum imperdiet ultricies. Aliquam scelerisque, turpis ut iaculis suscipit lorem.'),
+(5542, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_more_button_text_0', 'See More'),
+(5543, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_more_button_link_0', 'http://localhost/leeucollection/hotel/leeu-estates/rooms/'),
+(5544, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_booking_button_text_0', 'Book'),
+(5545, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_booking_button_link_0', 'http://localhost/leeucollection/hotel/leeu-estates/rooms/'),
+(5546, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_hotel_section_name_1', 'Food And Drink'),
+(5547, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_hotel_section_logo_1', '258'),
+(5548, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_hotel_section_image_1', '262'),
+(5549, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_hotel_section_description_1', 'Lorem ipsum dolor sit amet, consectetur  adipiscing elit. Quisque lacus interdum imperdiet ultricies. Aliquam scelerisque, turpis ut iaculis suscipit lorem.'),
+(5550, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_more_button_text_1', 'See More'),
+(5551, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_more_button_link_1', 'http://localhost/leeucollection/hotel/leeu-estates/eat-and-drink/dining-room/'),
+(5552, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_booking_button_text_1', 'Book'),
+(5553, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_booking_button_link_1', 'http://localhost/leeucollection/hotel/leeu-estates/eat-and-drink/dining-room/'),
+(5554, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_hotel_section_name_2', 'Guest Area'),
+(5555, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_hotel_section_logo_2', '258'),
+(5556, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_hotel_section_image_2', '262'),
+(5557, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_hotel_section_description_2', 'Lorem ipsum dolor sit amet, consectetur  adipiscing elit. Quisque lacus interdum imperdiet ultricies. Aliquam scelerisque, turpis ut iaculis suscipit lorem.'),
+(5558, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_more_button_text_2', 'See More'),
+(5559, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_more_button_link_2', 'http://localhost/leeucollection/hotel/leeu-estates/guest-areas/'),
+(5560, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_booking_button_text_2', 'Book'),
+(5561, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_booking_button_link_2', 'http://localhost/leeucollection/hotel/leeu-estates/guest-areas/'),
+(5562, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_hotel_section_name_3', 'Explore the property'),
+(5563, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_hotel_section_logo_3', '258'),
+(5564, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_hotel_section_image_3', '264'),
+(5565, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_hotel_section_description_3', 'Lorem ipsum dolor sit amet, consectetur  adipiscing elit. Quisque lacus interdum imperdiet ultricies. Aliquam scelerisque, turpis ut iaculis suscipit lorem.'),
+(5566, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_more_button_text_3', 'See More'),
+(5567, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_more_button_link_3', 'http://localhost/leeucollection/hotel/leeu-estates/explore/'),
+(5568, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_booking_button_text_3', 'Book'),
+(5569, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_booking_button_link_3', 'http://localhost/leeucollection/hotel/leeu-estates/explore/'),
+(5570, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_hotel_section_name_4', 'Facilities'),
+(5571, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_hotel_section_logo_4', '258'),
+(5572, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_hotel_section_image_4', '262'),
+(5573, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_hotel_section_description_4', 'Lorem ipsum dolor sit amet, consectetur  adipiscing elit. Quisque lacus interdum imperdiet ultricies. Aliquam scelerisque, turpis ut iaculis suscipit lorem.'),
+(5574, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_more_button_text_4', 'See More'),
+(5575, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_more_button_link_4', 'http://localhost/leeucollection/hotel/leeu-estates/facilities/'),
+(5576, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_booking_button_text_4', 'Book'),
+(5577, 2, '_crb_hotel_sections_-_crb_hotel_hotels_2_-_crb_hotel_section_details_0_-_crb_booking_button_link_4', 'http://localhost/leeucollection/hotel/leeu-estates/facilities/'),
+(5578, 2, '_crb_hotel_sections_-_crb_hotel_name_3', 'Linthwaite House'),
+(5579, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_locations_0', 'Lake District, United Kingdom'),
+(5580, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_hotel_section_name_0', 'Rooms'),
+(5581, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_hotel_section_logo_0', '260'),
+(5582, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_hotel_section_image_0', '264'),
+(5583, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_hotel_section_description_0', 'Lorem ipsum dolor sit amet, consectetur  adipiscing elit. Quisque lacus interdum imperdiet ultricies. Aliquam scelerisque, turpis ut iaculis suscipit lorem.'),
+(5584, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_more_button_text_0', 'See More'),
+(5585, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_more_button_link_0', 'http://localhost/leeucollection/hotel/leeu-estates/rooms/'),
+(5586, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_booking_button_text_0', 'Book'),
+(5587, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_booking_button_link_0', 'http://localhost/leeucollection/hotel/leeu-estates/rooms/'),
+(5588, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_hotel_section_name_1', 'Food And Drink'),
+(5589, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_hotel_section_logo_1', '260'),
+(5590, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_hotel_section_image_1', '262'),
+(5591, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_hotel_section_description_1', 'Lorem ipsum dolor sit amet, consectetur  adipiscing elit. Quisque lacus interdum imperdiet ultricies. Aliquam scelerisque, turpis ut iaculis suscipit lorem.'),
+(5592, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_more_button_text_1', 'See More'),
+(5593, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_more_button_link_1', 'http://localhost/leeucollection/hotel/leeu-estates/eat-and-drink/dining-room/'),
+(5594, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_booking_button_text_1', 'Book'),
+(5595, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_booking_button_link_1', 'http://localhost/leeucollection/hotel/leeu-estates/eat-and-drink/dining-room/'),
+(5596, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_hotel_section_name_2', 'Spa And Wellness'),
+(5597, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_hotel_section_logo_2', '260'),
+(5598, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_hotel_section_image_2', '264'),
+(5599, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_hotel_section_description_2', 'Lorem ipsum dolor sit amet, consectetur  adipiscing elit. Quisque lacus interdum imperdiet ultricies. Aliquam scelerisque, turpis ut iaculis suscipit lorem.'),
+(5600, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_more_button_text_2', 'See More'),
+(5601, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_more_button_link_2', 'http://localhost/leeucollection/hotel/leeu-estates/spa-wellness/'),
+(5602, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_booking_button_text_2', 'Book'),
+(5603, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_booking_button_link_2', 'http://localhost/leeucollection/hotel/leeu-estates/spa-wellness/'),
+(5604, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_hotel_section_name_3', 'Guest Area'),
+(5605, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_hotel_section_logo_3', '260'),
+(5606, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_hotel_section_image_3', '262'),
+(5607, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_hotel_section_description_3', 'Lorem ipsum dolor sit amet, consectetur  adipiscing elit. Quisque lacus interdum imperdiet ultricies. Aliquam scelerisque, turpis ut iaculis suscipit lorem.'),
+(5608, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_more_button_text_3', 'See More'),
+(5609, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_more_button_link_3', 'http://localhost/leeucollection/hotel/leeu-estates/guest-areas/'),
+(5610, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_booking_button_text_3', 'Book'),
+(5611, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_booking_button_link_3', 'http://localhost/leeucollection/hotel/leeu-estates/guest-areas/'),
+(5612, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_hotel_section_name_4', 'Meetings And Events'),
+(5613, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_hotel_section_logo_4', '260'),
+(5614, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_hotel_section_image_4', '265'),
+(5615, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_hotel_section_description_4', 'Lorem ipsum dolor sit amet, consectetur  adipiscing elit. Quisque lacus interdum imperdiet ultricies. Aliquam scelerisque, turpis ut iaculis suscipit lorem.'),
+(5616, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_more_button_text_4', 'See More'),
+(5617, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_more_button_link_4', 'http://localhost/leeucollection/hotel/leeu-estates/meeting-events/'),
+(5618, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_booking_button_text_4', 'Book'),
+(5619, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_booking_button_link_4', 'http://localhost/leeucollection/hotel/leeu-estates/meeting-events/'),
+(5620, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_hotel_section_name_5', 'Explore the property'),
+(5621, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_hotel_section_logo_5', '260'),
+(5622, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_hotel_section_image_5', '264'),
+(5623, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_hotel_section_description_5', 'Lorem ipsum dolor sit amet, consectetur  adipiscing elit. Quisque lacus interdum imperdiet ultricies. Aliquam scelerisque, turpis ut iaculis suscipit lorem.'),
+(5624, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_more_button_text_5', 'See More'),
+(5625, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_more_button_link_5', 'http://localhost/leeucollection/hotel/leeu-estates/explore/'),
+(5626, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_booking_button_text_5', 'Book'),
+(5627, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_booking_button_link_5', 'http://localhost/leeucollection/hotel/leeu-estates/explore/'),
+(5628, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_hotel_section_name_6', 'Facilities'),
+(5629, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_hotel_section_logo_6', '260'),
+(5630, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_hotel_section_image_6', '262'),
+(5631, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_hotel_section_description_6', 'Lorem ipsum dolor sit amet, consectetur  adipiscing elit. Quisque lacus interdum imperdiet ultricies. Aliquam scelerisque, turpis ut iaculis suscipit lorem.'),
+(5632, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_more_button_text_6', 'See More'),
+(5633, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_more_button_link_6', 'http://localhost/leeucollection/hotel/leeu-estates/facilities/'),
+(5634, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_booking_button_text_6', 'Book'),
+(5635, 2, '_crb_hotel_sections_-_crb_hotel_hotels_3_-_crb_hotel_section_details_0_-_crb_booking_button_link_6', 'http://localhost/leeucollection/hotel/leeu-estates/facilities/');
 
 -- --------------------------------------------------------
 
@@ -1483,14 +1711,14 @@ CREATE TABLE IF NOT EXISTS `wp_posts` (
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=256 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=267 ;
 
 --
 -- Dumping data for table `wp_posts`
 --
 
 INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
-(2, 1, '2017-03-27 06:22:00', '2017-03-27 06:22:00', '<strong>Hotels</strong> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum', 'Hotels', '', 'publish', 'closed', 'open', '', 'hotels', '', '', '2017-03-30 10:33:02', '2017-03-30 10:33:02', '', 0, 'http://localhost/leeucollection/?page_id=2', 0, 'page', '', 0),
+(2, 1, '2017-03-27 06:22:00', '2017-03-27 06:22:00', '', 'Hotels', '', 'publish', 'closed', 'open', '', 'hotels', '', '', '2017-04-17 12:00:09', '2017-04-17 12:00:09', '', 0, 'http://localhost/leeucollection/?page_id=2', 0, 'page', '', 0),
 (4, 1, '2017-03-27 06:29:54', '2017-03-27 06:29:54', '<strong>Leeu Estates</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum', 'Leeu Estates', '', 'publish', 'closed', 'closed', '', 'leeu-estates', '', '', '2017-04-13 11:42:13', '2017-04-13 11:42:13', '', 0, 'http://localhost/leeucollection/?post_type=hotel&#038;p=4', 0, 'hotel', '', 0),
 (5, 1, '2017-03-27 06:29:54', '2017-03-27 06:29:54', '', 'Leeu Estates', '', 'inherit', 'closed', 'closed', '', '4-revision-v1', '', '', '2017-03-27 06:29:54', '2017-03-27 06:29:54', '', 4, 'http://localhost/leeucollection/2017/03/27/4-revision-v1/', 0, 'revision', '', 0),
 (13, 1, '2017-03-27 06:36:28', '2017-03-27 06:36:28', '', 'Le Quartier Français', '', 'publish', 'closed', 'closed', '', 'le-quartier-francais', '', '', '2017-03-28 07:22:33', '2017-03-28 07:22:33', '', 0, 'http://localhost/leeucollection/?post_type=hotel&#038;p=13', 0, 'hotel', '', 0),
@@ -1652,10 +1880,10 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (232, 1, '2017-04-12 10:52:02', '2017-04-12 10:52:02', '', 'mens-treatment', '', 'inherit', 'open', 'closed', '', 'mens-treatment', '', '', '2017-04-12 10:52:02', '2017-04-12 10:52:02', '', 25, 'http://localhost/leeucollection/wp-content/uploads/2017/03/mens-treatment.jpg', 0, 'attachment', 'image/jpeg', 0),
 (233, 1, '2017-04-12 10:55:47', '2017-04-12 10:55:47', '', 'Beauty & Grooming', '', 'publish', 'closed', 'closed', '', 'beauty-grooming', '', '', '2017-04-12 10:55:47', '2017-04-12 10:55:47', '', 25, 'http://localhost/leeucollection/?post_type=hotel&#038;p=233', 0, 'hotel', '', 0),
 (234, 1, '2017-04-12 10:55:47', '2017-04-12 10:55:47', '', 'Beauty & Grooming', '', 'inherit', 'closed', 'closed', '', '233-revision-v1', '', '', '2017-04-12 10:55:47', '2017-04-12 10:55:47', '', 233, 'http://localhost/leeucollection/233-revision-v1/', 0, 'revision', '', 0),
-(235, 1, '2017-04-12 10:56:50', '2017-04-12 10:56:50', '', 'Mens Treatments', '', 'publish', 'closed', 'closed', '', 'mens-treatments', '', '', '2017-04-12 10:56:50', '2017-04-12 10:56:50', '', 25, 'http://localhost/leeucollection/?post_type=hotel&#038;p=235', 0, 'hotel', '', 0);
-INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
+(235, 1, '2017-04-12 10:56:50', '2017-04-12 10:56:50', '', 'Mens Treatments', '', 'publish', 'closed', 'closed', '', 'mens-treatments', '', '', '2017-04-12 10:56:50', '2017-04-12 10:56:50', '', 25, 'http://localhost/leeucollection/?post_type=hotel&#038;p=235', 0, 'hotel', '', 0),
 (236, 1, '2017-04-12 10:56:50', '2017-04-12 10:56:50', '', 'Mens Treatments', '', 'inherit', 'closed', 'closed', '', '235-revision-v1', '', '', '2017-04-12 10:56:50', '2017-04-12 10:56:50', '', 235, 'http://localhost/leeucollection/235-revision-v1/', 0, 'revision', '', 0),
-(237, 1, '2017-04-12 11:58:33', '2017-04-12 11:58:33', '{\n    "leeucollection::custom_logo": {\n        "value": 238,\n        "type": "theme_mod",\n        "user_id": 1\n    }\n}', '', '', 'trash', 'closed', 'closed', '', 'ffc7e7de-490c-4cdc-9262-0d314d804b18', '', '', '2017-04-12 11:58:33', '2017-04-12 11:58:33', '', 0, 'http://localhost/leeucollection/?p=237', 0, 'customize_changeset', '', 0),
+(237, 1, '2017-04-12 11:58:33', '2017-04-12 11:58:33', '{\n    "leeucollection::custom_logo": {\n        "value": 238,\n        "type": "theme_mod",\n        "user_id": 1\n    }\n}', '', '', 'trash', 'closed', 'closed', '', 'ffc7e7de-490c-4cdc-9262-0d314d804b18', '', '', '2017-04-12 11:58:33', '2017-04-12 11:58:33', '', 0, 'http://localhost/leeucollection/?p=237', 0, 'customize_changeset', '', 0);
+INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
 (238, 1, '2017-04-12 11:58:01', '2017-04-12 11:58:01', '', 'logo-main', '', 'inherit', 'open', 'closed', '', 'logo-main', '', '', '2017-04-12 11:58:01', '2017-04-12 11:58:01', '', 0, 'http://localhost/leeucollection/wp-content/uploads/2017/04/logo-main.svg', 0, 'attachment', 'image/svg+xml', 0),
 (239, 1, '2017-04-13 08:51:18', '2017-04-13 08:51:18', '', 'Home', '', 'publish', 'closed', 'closed', '', 'home', '', '', '2017-04-17 08:16:42', '2017-04-17 08:16:42', '', 0, 'http://localhost/leeucollection/?page_id=239', 0, 'page', '', 0),
 (240, 1, '2017-04-13 08:51:18', '2017-04-13 08:51:18', '', 'Home', '', 'inherit', 'closed', 'closed', '', '239-revision-v1', '', '', '2017-04-13 08:51:18', '2017-04-13 08:51:18', '', 239, 'http://localhost/leeucollection/239-revision-v1/', 0, 'revision', '', 0),
@@ -1672,7 +1900,15 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (252, 1, '2017-04-17 07:02:49', '2017-04-17 07:02:49', '', 'wedding', '', 'inherit', 'open', 'closed', '', 'wedding', '', '', '2017-04-17 07:02:49', '2017-04-17 07:02:49', '', 239, 'http://localhost/leeucollection/wp-content/uploads/2017/04/wedding.jpg', 0, 'attachment', 'image/jpeg', 0),
 (253, 1, '2017-04-17 07:02:50', '2017-04-17 07:02:50', '', 'meeting-and-events', '', 'inherit', 'open', 'closed', '', 'meeting-and-events', '', '', '2017-04-17 07:02:50', '2017-04-17 07:02:50', '', 239, 'http://localhost/leeucollection/wp-content/uploads/2017/04/meeting-and-events.jpg', 0, 'attachment', 'image/jpeg', 0),
 (254, 1, '2017-04-17 08:15:50', '2017-04-17 08:15:50', '', 'founder_tour', '', 'inherit', 'open', 'closed', '', 'founder_tour', '', '', '2017-04-17 08:15:50', '2017-04-17 08:15:50', '', 239, 'http://localhost/leeucollection/wp-content/uploads/2017/04/founder_tour.jpg', 0, 'attachment', 'image/jpeg', 0),
-(255, 1, '2017-04-17 08:15:51', '2017-04-17 08:15:51', '', 'artgarden', '', 'inherit', 'open', 'closed', '', 'artgarden', '', '', '2017-04-17 08:15:51', '2017-04-17 08:15:51', '', 239, 'http://localhost/leeucollection/wp-content/uploads/2017/04/artgarden.jpg', 0, 'attachment', 'image/jpeg', 0);
+(255, 1, '2017-04-17 08:15:51', '2017-04-17 08:15:51', '', 'artgarden', '', 'inherit', 'open', 'closed', '', 'artgarden', '', '', '2017-04-17 08:15:51', '2017-04-17 08:15:51', '', 239, 'http://localhost/leeucollection/wp-content/uploads/2017/04/artgarden.jpg', 0, 'attachment', 'image/jpeg', 0),
+(256, 1, '2017-04-17 10:08:52', '2017-04-17 10:08:52', '', 'Hotels', '', 'inherit', 'closed', 'closed', '', '2-revision-v1', '', '', '2017-04-17 10:08:52', '2017-04-17 10:08:52', '', 2, 'http://localhost/leeucollection/2-revision-v1/', 0, 'revision', '', 0),
+(257, 1, '2017-04-17 11:01:06', '2017-04-17 11:01:06', '', 'leeu-estates-logo', '', 'inherit', 'open', 'closed', '', 'leeu-estates-logo', '', '', '2017-04-17 11:01:06', '2017-04-17 11:01:06', '', 2, 'http://localhost/leeucollection/wp-content/uploads/2017/03/leeu-estates-logo.svg', 0, 'attachment', 'image/svg+xml', 0),
+(258, 1, '2017-04-17 11:01:27', '2017-04-17 11:01:27', '', 'lee-quartier-logo', '', 'inherit', 'open', 'closed', '', 'lee-quartier-logo', '', '', '2017-04-17 11:01:27', '2017-04-17 11:01:27', '', 2, 'http://localhost/leeucollection/wp-content/uploads/2017/03/lee-quartier-logo.svg', 0, 'attachment', 'image/svg+xml', 0),
+(260, 1, '2017-04-17 11:01:28', '2017-04-17 11:01:28', '', 'linthwaite-logo', '', 'inherit', 'open', 'closed', '', 'linthwaite-logo', '', '', '2017-04-17 11:01:28', '2017-04-17 11:01:28', '', 2, 'http://localhost/leeucollection/wp-content/uploads/2017/03/linthwaite-logo.svg', 0, 'attachment', 'image/svg+xml', 0),
+(262, 1, '2017-04-17 11:15:43', '2017-04-17 11:15:43', '', 'home-hotel-2', '', 'inherit', 'open', 'closed', '', 'home-hotel-2', '', '', '2017-04-17 11:15:43', '2017-04-17 11:15:43', '', 2, 'http://localhost/leeucollection/wp-content/uploads/2017/03/home-hotel-2.jpg', 0, 'attachment', 'image/jpeg', 0),
+(264, 1, '2017-04-17 11:15:47', '2017-04-17 11:15:47', '', 'home-hotel-1', '', 'inherit', 'open', 'closed', '', 'home-hotel-1', '', '', '2017-04-17 11:15:47', '2017-04-17 11:15:47', '', 2, 'http://localhost/leeucollection/wp-content/uploads/2017/03/home-hotel-1.jpg', 0, 'attachment', 'image/jpeg', 0),
+(265, 1, '2017-04-17 11:16:18', '2017-04-17 11:16:18', '', 'home-hotel-3', '', 'inherit', 'open', 'closed', '', 'home-hotel-3', '', '', '2017-04-17 11:16:18', '2017-04-17 11:16:18', '', 2, 'http://localhost/leeucollection/wp-content/uploads/2017/03/home-hotel-3.jpg', 0, 'attachment', 'image/jpeg', 0),
+(266, 1, '2017-04-17 11:56:42', '2017-04-17 11:56:42', '', 'leeu-house-logo', '', 'inherit', 'open', 'closed', '', 'leeu-house-logo', '', '', '2017-04-17 11:56:42', '2017-04-17 11:56:42', '', 2, 'http://localhost/leeucollection/wp-content/uploads/2017/03/leeu-house-logo.svg', 0, 'attachment', 'image/svg+xml', 0);
 
 -- --------------------------------------------------------
 
@@ -1862,10 +2098,10 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (25, 1, 'nav_menu_recently_edited', '4'),
 (26, 1, 'closedpostboxes_hotel', 'a:0:{}'),
 (27, 1, 'metaboxhidden_hotel', 'a:9:{i:0;s:18:"hotel-locationsdiv";i:1;s:15:"enquiry-typediv";i:2;s:11:"PageHeading";i:3;s:14:"ContentSection";i:4;s:7:"slugdiv";i:5;s:10:"postcustom";i:6;s:10:"SliderInfo";i:7;s:9:"RoomRates";i:8;s:15:"SpecialFeatures";}'),
-(28, 1, 'meta-box-order_page', 'a:3:{s:4:"side";s:36:"submitdiv,pageparentdiv,postimagediv";s:6:"normal";s:132:"HeaderSlider,Hotels,Restaurants,TwoColumnsSection1,Wine,TwoColumnsSection2,postcustom,commentstatusdiv,commentsdiv,slugdiv,authordiv";s:8:"advanced";s:0:"";}'),
+(28, 1, 'meta-box-order_page', 'a:3:{s:4:"side";s:36:"submitdiv,pageparentdiv,postimagediv";s:6:"normal";s:159:"HeaderSlider,Hotels,Restaurants,TwoColumnsSection1,Wine,HotelsDetails,TwoColumnsSection2,postcustom,commentstatusdiv,commentsdiv,slugdiv,authordiv,revisionsdiv";s:8:"advanced";s:0:"";}'),
 (29, 1, 'screen_layout_page', '2'),
 (30, 1, 'closedpostboxes_page', 'a:5:{i:0;s:12:"HeaderSlider";i:1;s:6:"Hotels";i:2;s:11:"Restaurants";i:3;s:18:"TwoColumnsSection1";i:4;s:4:"Wine";}'),
-(31, 1, 'metaboxhidden_page', 'a:5:{i:0;s:10:"postcustom";i:1;s:16:"commentstatusdiv";i:2;s:11:"commentsdiv";i:3;s:7:"slugdiv";i:4;s:9:"authordiv";}');
+(31, 1, 'metaboxhidden_page', 'a:10:{i:0;s:6:"Hotels";i:1;s:11:"Restaurants";i:2;s:18:"TwoColumnsSection1";i:3;s:4:"Wine";i:4;s:18:"TwoColumnsSection2";i:5;s:10:"postcustom";i:6;s:16:"commentstatusdiv";i:7;s:11:"commentsdiv";i:8;s:7:"slugdiv";i:9;s:9:"authordiv";}');
 
 -- --------------------------------------------------------
 
