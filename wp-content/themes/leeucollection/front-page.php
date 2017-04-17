@@ -132,8 +132,8 @@ get_header();
 								<select>
 									<option value="volvo">2 guests</option>
 									<option value="saab">3 guests</option>
-									<option value="mercedes">4 guests</option>
-									<option value="audi">5 guests</option>
+								option value="mercedes">4 guests</option>
+								option value="audi">5 guests</option>
 								</select>
 							</div>
 						</div>
@@ -725,6 +725,4 @@ get_header();
 			</div>
 		</div>
 	</section>
-
-
 <?php get_footer(); ?>
