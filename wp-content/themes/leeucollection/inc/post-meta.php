@@ -284,19 +284,94 @@ Container::make('post_meta', 'Restaurants')
         Field::make('text', 'crb_restaurant_section_heading', 'Heading'),
 
         Field::make('complex', 'crb_home_restaurants', '')->add_fields(array(
-            Field::make('text', 'crb_restaurant_locations', 'Hotel Location'),
-            Field::make('complex', 'crb_home_restaurants', '')->add_fields(array(
-                Field::make('text', 'crb_restaurant_name', 'Hotel Name'),
-                Field::make('image', 'crb_restaurant_logo', 'Hotel Logo Image')->set_width('50'),            
-                Field::make('image', 'crb_restaurant_image', 'Hotel Image')->help_text('(Image Dimensions (WxH): 1240 x 600)')->set_width('50'),
-                Field::make('textarea', 'crb_restaurant_description', 'Short Description'),
-                Field::make('text', 'crb_more_button_text', 'Detail Button Text')->set_width('50'),
-                Field::make('text', 'crb_more_button_link', 'Detail Button Link')->set_width('50'),
-                Field::make('text', 'crb_booking_button_text', 'Booking Button Text')->set_width('50'),
-                Field::make('text', 'crb_booking_button_link', 'Booking Button Link')->set_width('50'),
-            )),
+            Field::make('text', 'crb_restaurant_name', 'Restaurant Name'),
+            Field::make('image', 'crb_restaurant_logo', 'Restaurant Logo Image')->set_width('50'),            
+            Field::make('image', 'crb_restaurant_image', 'Restaurant Image')->help_text('(Image Dimensions (WxH): 1240 x 600)')->set_width('50'),
+            Field::make('textarea', 'crb_restaurant_description', 'Short Description'),
+            Field::make('text', 'crb_more_button_text', 'Detail Button Text')->set_width('50'),
+            Field::make('text', 'crb_more_button_link', 'Detail Button Link')->set_width('50'),
+            Field::make('text', 'crb_booking_button_text', 'Booking Button Text')->set_width('50'),
+            Field::make('text', 'crb_booking_button_link', 'Booking Button Link')->set_width('50'),
         )),
     ));
+
+//Home Page - Two Columns Section 1
+Container::make('post_meta', 'Two Columns Section 1')
+    ->show_on_post_type('page')
+    ->show_on_template(array('front-page.php'))
+
+    ->add_fields(array(
+        Field::make("html", "crb_two_cols_section_1_info_text_left")->set_html('<h2>Left Side Content</h2>'),
+
+        Field::make('text', 'crb_two_cols_section_1_heading_left', 'Heading'),
+        Field::make('image', 'crb_two_cols_section_1_image_left', 'Image')->help_text('(Image Dimensions (WxH): 1240 x 600)')->set_width('50'),
+        Field::make('textarea', 'crb_two_cols_section_1_description_left', 'Short Description')->set_width('50'),
+        Field::make('text', 'crb_two_cols_section_1_more_button_text_left', 'Detail Button Text')->set_width('50'),
+        Field::make('text', 'crb_two_cols_section_1_more_button_link_left', 'Detail Button Link')->set_width('50'),
+        Field::make('text', 'crb_two_cols_section_1_booking_button_text_left', 'Booking Button Text')->set_width('50'),
+        Field::make('text', 'crb_two_cols_section_1_booking_button_link_left', 'Booking Button Link')->set_width('50'),
+
+        Field::make("html", "crb_two_cols_section_1_info_text_right")->set_html('<h2>Right Side Content</h2>'),
+
+        Field::make('text', 'crb_two_cols_section_1_heading_right', 'Heading'),
+        Field::make('image', 'crb_two_cols_section_1_image_right', 'Image')->help_text('(Image Dimensions (WxH): 1240 x 600)')->set_width('50'),
+        Field::make('textarea', 'crb_two_cols_section_1_description_right', 'Short Description')->set_width('50'),
+        Field::make('text', 'crb_two_cols_section_1_more_button_text_right', 'Detail Button Text')->set_width('50'),
+        Field::make('text', 'crb_two_cols_section_1_more_button_link_right', 'Detail Button Link')->set_width('50'),
+        Field::make('text', 'crb_two_cols_section_1_booking_button_text_right', 'Booking Button Text')->set_width('50'),
+        Field::make('text', 'crb_two_cols_section_1_booking_button_link_right', 'Booking Button Link')->set_width('50'),
+    ));
+
+//Home Page - Wine
+Container::make('post_meta', 'Wine')
+    ->show_on_post_type('page')
+    ->show_on_template(array('front-page.php'))
+    ->add_fields(array(
+        Field::make('text', 'crb_wine_section_heading', 'Heading'),
+
+        Field::make('complex', 'crb_home_wines', '')->add_fields(array(
+            Field::make('text', 'crb_wine_name', 'Wine Name'),        
+            Field::make('image', 'crb_wine_image', 'Wine Image')->help_text('(Image Dimensions (WxH): 1240 x 600)')->set_width('50'),
+            Field::make('textarea', 'crb_wine_description', 'Short Description')->set_width('50'),
+            Field::make('text', 'crb_more_button_text', 'Detail Button Text')->set_width('50'),
+            Field::make('text', 'crb_more_button_link', 'Detail Button Link')->set_width('50'),
+            Field::make('text', 'crb_booking_button_text', 'Booking Button Text')->set_width('50'),
+            Field::make('text', 'crb_booking_button_link', 'Booking Button Link')->set_width('50'),
+        )),
+
+        Field::make('complex', 'crb_wines_section_bottom_links', 'Bottom Links')->add_fields(array(
+            Field::make('text', 'crb_button_text', 'Button Text')->set_width('50'),
+            Field::make('text', 'crb_button_link', 'Button Link')->set_width('50'),
+        )),
+    ));
+
+//Home Page - Two Columns Section 2
+Container::make('post_meta', 'Two Columns Section 2')
+    ->show_on_post_type('page')
+    ->show_on_template(array('front-page.php'))
+
+    ->add_fields(array(
+        Field::make("html", "crb_two_cols_section_2_info_text_left")->set_html('<h2>Left Side Content</h2>'),
+
+        Field::make('text', 'crb_two_cols_section_2_heading_left', 'Heading'),
+        Field::make('image', 'crb_two_cols_section_2_image_left', 'Image')->help_text('(Image Dimensions (WxH): 1240 x 600)')->set_width('50'),
+        Field::make('textarea', 'crb_two_cols_section_2_description_left', 'Short Description')->set_width('50'),
+        Field::make('text', 'crb_two_cols_section_2_more_button_text_left', 'Detail Button Text')->set_width('50'),
+        Field::make('text', 'crb_two_cols_section_2_more_button_link_left', 'Detail Button Link')->set_width('50'),
+        Field::make('text', 'crb_two_cols_section_2_booking_button_text_left', 'Booking Button Text')->set_width('50'),
+        Field::make('text', 'crb_two_cols_section_2_booking_button_link_left', 'Booking Button Link')->set_width('50'),
+
+        Field::make("html", "crb_two_cols_section_2_info_text_right")->set_html('<h2>Right Side Content</h2>'),
+
+        Field::make('text', 'crb_two_cols_section_2_heading_right', 'Heading'),
+        Field::make('image', 'crb_two_cols_section_2_image_right', 'Image')->help_text('(Image Dimensions (WxH): 1240 x 600)')->set_width('50'),
+        Field::make('textarea', 'crb_two_cols_section_2_description_right', 'Short Description')->set_width('50'),
+        Field::make('text', 'crb_two_cols_section_2_more_button_text_right', 'Detail Button Text')->set_width('50'),
+        Field::make('text', 'crb_two_cols_section_2_more_button_link_right', 'Detail Button Link')->set_width('50'),
+        Field::make('text', 'crb_two_cols_section_2_booking_button_text_right', 'Booking Button Text')->set_width('50'),
+        Field::make('text', 'crb_two_cols_section_2_booking_button_link_right', 'Booking Button Link')->set_width('50'),
+    ));
+
 /*
 
 //Slider Info

@@ -54,6 +54,14 @@
 					</div>
 					<div class="logo-wrapper">
 						<?php leeucollection_the_custom_logo(); ?>
+						<?php
+						if(is_front_page())
+						{
+							?>
+							<img src="<?php echo get_template_directory_uri(); ?>/images/home-leeu-collection-text.png" class="bottom-logo" alt="" />
+							<?php
+						}
+						?>
 					</div>
 					<div class="pull-right menu-right-wrap">
 						<?php

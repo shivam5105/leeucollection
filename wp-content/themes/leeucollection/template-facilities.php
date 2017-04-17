@@ -58,7 +58,7 @@ get_header(); ?>
 								}
 								?>
 								<div class="listing-box">
-									<div class="single_slider_wrapper">
+									<div class="single_slider_wrapper <?php if(!$has_slider){ echo "no_slider"; }?>">
 										<?php
 										if($has_slider == true)
 										{
