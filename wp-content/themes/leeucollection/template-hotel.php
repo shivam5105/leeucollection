@@ -26,7 +26,7 @@ get_header(); ?>
 				$slider_wrapper_class = "";
 			}
 			?>
-			<div class="single_slider_wrapper scroll-anim" data-anim="fade-up">
+			<div class="single_slider_wrapper scroll-anim <?php if(!$has_slider){ echo "no_slider"; }?>" data-anim="fade-up">
 				<?php
 				if($has_slider == true)
 				{
@@ -141,7 +141,7 @@ get_header(); ?>
 											}
 											?>
 										</div>
-										<div class="<?php echo $slider_wrapper_class; ?>">
+										<div class="<?php echo $slider_wrapper_class; ?>  <?php if(!$has_slider){ echo "no_slider"; }?>">
 											<?php
 											if($has_slider)
 											{

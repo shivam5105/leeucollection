@@ -1682,3 +1682,12 @@ transition: all 0.3s ease 0s;
 .d_b a:hover{
     opacity: 0.5;
 }
+.no_slider img 
+{
+    width: 100%;
+}
+.no-link a 
+{
+    cursor: default;
+    pointer-events: none;
+}
