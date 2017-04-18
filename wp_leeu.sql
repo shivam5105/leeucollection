@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 18, 2017 at 12:43 PM
+-- Generation Time: Apr 18, 2017 at 01:35 PM
 -- Server version: 5.5.38
 -- PHP Version: 5.5.14
 
@@ -103,7 +103,7 @@ CREATE TABLE IF NOT EXISTS `wp_options` (
   `autoload` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=595 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=598 ;
 
 --
 -- Dumping data for table `wp_options`
@@ -270,7 +270,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (586, '_transient_plugin_slugs', 'a:3:{i:0;s:19:"akismet/akismet.php";i:1;s:43:"go-live-update-urls/go-live-update-urls.php";i:2;s:9:"hello.php";}', 'no'),
 (587, '_transient_timeout_dash_88ae138922fe95674369b1cb3d215a2b', '1492547963', 'no'),
 (588, '_transient_dash_88ae138922fe95674369b1cb3d215a2b', '<div class="rss-widget"><ul><li><a class=''rsswidget'' href=''https://wordpress.org/news/2017/03/wordpress-4-7-3-security-and-maintenance-release/''>WordPress 4.7.3 Security and Maintenance Release</a> <span class="rss-date">March 6, 2017</span><div class="rssSummary">WordPress 4.7.3 is now available. This is a security release for all previous versions and we strongly encourage you to update your sites immediately. WordPress versions 4.7.2 and earlier are affected by six security issues: Cross-site scripting (XSS) via media file metadata.  Reported by Chris Andrè Dale, Yorick Koster, and Simon P. Briggs. Control characters can trick redirect [&hellip;]</div></li></ul></div><div class="rss-widget"><ul><li><a class=''rsswidget'' href=''https://wptavern.com/automattic-to-host-a-free-remote-conference-on-design-and-exclusion-on-april-21''>WPTavern: Automattic to Host a Free, Remote Conference on Design and Exclusion on April 21</a></li><li><a class=''rsswidget'' href=''https://wptavern.com/inuagural-cabinpress-takes-place-november-3-5-at-lake-louisa-state-park-in-clermont-fl''>WPTavern: Inuagural CabinPress Takes Place November 3-5, at Lake Louisa State Park in Clermont, FL</a></li><li><a class=''rsswidget'' href=''https://heropress.com/heropress-geography-central-south-america/''>HeroPress: HeroPress Geography: Central and South America</a></li></ul></div><div class="rss-widget"><ul><li class="dashboard-news-plugin"><span>Popular Plugin:</span> WooCommerce&nbsp;<a href="plugin-install.php?tab=plugin-information&amp;plugin=woocommerce&amp;_wpnonce=9f7016e894&amp;TB_iframe=true&amp;width=600&amp;height=800" class="thickbox open-plugin-details-modal" aria-label="Install WooCommerce">(Install)</a></li></ul></div>', 'no'),
-(594, '_transient_is_multi_author', '0', 'yes');
+(595, '_transient_is_multi_author', '0', 'yes');
 
 -- --------------------------------------------------------
 
@@ -298,7 +298,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (3, 4, '_edit_lock', '1492083625:1'),
 (4, 4, '_wp_page_template', 'template-hotel.php'),
 (5, 13, '_edit_last', '1'),
-(6, 13, '_edit_lock', '1492511526:1'),
+(6, 13, '_edit_lock', '1492513127:1'),
 (7, 13, '_wp_page_template', 'template-hotel.php'),
 (8, 15, '_edit_last', '1'),
 (9, 15, '_wp_page_template', 'template-hotel.php'),
@@ -385,7 +385,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (90, 48, '_menu_item_url', ''),
 (91, 48, '_menu_item_orphaned', '1490602271'),
 (92, 48, '_nav_menu_image', NULL),
-(93, 2, '_edit_lock', '1492511601:1'),
+(93, 2, '_edit_lock', '1492514584:1'),
 (94, 2, '_edit_last', '1'),
 (95, 50, '_edit_last', '1'),
 (96, 50, '_edit_lock', '1492405457:1'),
@@ -726,7 +726,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (794, 180, '_menu_item_object_id', '180'),
 (795, 180, '_menu_item_object', 'custom'),
 (796, 180, '_menu_item_target', ''),
-(797, 180, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(797, 180, '_menu_item_classes', 'a:1:{i:0;s:7:"no-link";}'),
 (798, 180, '_menu_item_xfn', ''),
 (799, 180, '_menu_item_url', '#ss'),
 (801, 180, '_nav_menu_image', ''),
@@ -735,7 +735,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (804, 181, '_menu_item_object_id', '181'),
 (805, 181, '_menu_item_object', 'custom'),
 (806, 181, '_menu_item_target', ''),
-(807, 181, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(807, 181, '_menu_item_classes', 'a:1:{i:0;s:7:"no-link";}'),
 (808, 181, '_menu_item_xfn', ''),
 (809, 181, '_menu_item_url', '#ss'),
 (811, 181, '_nav_menu_image', ''),
@@ -1818,10 +1818,10 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (53, 1, '2017-03-27 09:43:32', '2017-03-27 09:43:32', '', 'Wine', '', 'inherit', 'closed', 'closed', '', '52-revision-v1', '', '', '2017-03-27 09:43:32', '2017-03-27 09:43:32', '', 52, 'http://localhost/leeucollection/2017/03/27/52-revision-v1/', 0, 'revision', '', 0),
 (54, 1, '2017-03-27 09:48:43', '2017-03-27 09:48:43', '', 'Artisan Drinks', '', 'publish', 'closed', 'closed', '', 'artisan-drinks', '', '', '2017-04-17 05:07:15', '2017-04-17 05:07:15', '', 0, 'http://localhost/leeucollection/?page_id=54', 0, 'page', '', 0),
 (55, 1, '2017-03-27 09:48:43', '2017-03-27 09:48:43', '', 'Locations', '', 'inherit', 'closed', 'closed', '', '54-revision-v1', '', '', '2017-03-27 09:48:43', '2017-03-27 09:48:43', '', 54, 'http://localhost/leeucollection/2017/03/27/54-revision-v1/', 0, 'revision', '', 0),
-(56, 1, '2017-03-27 09:49:04', '2017-03-27 09:49:04', ' ', '', '', 'publish', 'closed', 'closed', '', '56', '', '', '2017-04-17 05:07:28', '2017-04-17 05:07:28', '', 0, 'http://localhost/leeucollection/?p=56', 1, 'nav_menu_item', '', 0),
-(57, 1, '2017-03-27 09:49:04', '2017-03-27 09:49:04', ' ', '', '', 'publish', 'closed', 'closed', '', '57', '', '', '2017-04-17 05:07:28', '2017-04-17 05:07:28', '', 0, 'http://localhost/leeucollection/?p=57', 8, 'nav_menu_item', '', 0),
-(58, 1, '2017-03-27 09:49:04', '2017-03-27 09:49:04', ' ', '', '', 'publish', 'closed', 'closed', '', '58', '', '', '2017-04-17 05:07:28', '2017-04-17 05:07:28', '', 0, 'http://localhost/leeucollection/?p=58', 9, 'nav_menu_item', '', 0),
-(59, 1, '2017-03-27 09:49:04', '2017-03-27 09:49:04', ' ', '', '', 'publish', 'closed', 'closed', '', '59', '', '', '2017-04-17 05:07:28', '2017-04-17 05:07:28', '', 0, 'http://localhost/leeucollection/?p=59', 10, 'nav_menu_item', '', 0),
+(56, 1, '2017-03-27 09:49:04', '2017-03-27 09:49:04', ' ', '', '', 'publish', 'closed', 'closed', '', '56', '', '', '2017-04-18 11:01:40', '2017-04-18 11:01:40', '', 0, 'http://localhost/leeucollection/?p=56', 1, 'nav_menu_item', '', 0),
+(57, 1, '2017-03-27 09:49:04', '2017-03-27 09:49:04', ' ', '', '', 'publish', 'closed', 'closed', '', '57', '', '', '2017-04-18 11:01:40', '2017-04-18 11:01:40', '', 0, 'http://localhost/leeucollection/?p=57', 8, 'nav_menu_item', '', 0),
+(58, 1, '2017-03-27 09:49:04', '2017-03-27 09:49:04', ' ', '', '', 'publish', 'closed', 'closed', '', '58', '', '', '2017-04-18 11:01:40', '2017-04-18 11:01:40', '', 0, 'http://localhost/leeucollection/?p=58', 9, 'nav_menu_item', '', 0),
+(59, 1, '2017-03-27 09:49:04', '2017-03-27 09:49:04', ' ', '', '', 'publish', 'closed', 'closed', '', '59', '', '', '2017-04-18 11:01:40', '2017-04-18 11:01:40', '', 0, 'http://localhost/leeucollection/?p=59', 10, 'nav_menu_item', '', 0),
 (60, 1, '2017-03-27 09:50:19', '2017-03-27 09:50:19', '', 'Plan An Event', '', 'publish', 'closed', 'closed', '', 'plan-an-event', '', '', '2017-04-17 05:18:13', '2017-04-17 05:18:13', '', 0, 'http://localhost/leeucollection/?page_id=60', 0, 'page', '', 0),
 (61, 1, '2017-03-27 09:50:19', '2017-03-27 09:50:19', '', 'The Leeu Story', '', 'inherit', 'closed', 'closed', '', '60-revision-v1', '', '', '2017-03-27 09:50:19', '2017-03-27 09:50:19', '', 60, 'http://localhost/leeucollection/2017/03/27/60-revision-v1/', 0, 'revision', '', 0),
 (62, 1, '2017-03-27 09:50:36', '2017-03-27 09:50:36', '', 'Gift Card', '', 'publish', 'closed', 'closed', '', 'gift-card', '', '', '2017-03-27 09:50:36', '2017-03-27 09:50:36', '', 0, 'http://localhost/leeucollection/?page_id=62', 0, 'page', '', 0),
@@ -1881,12 +1881,12 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (177, 1, '2017-04-03 12:08:41', '2017-04-03 12:08:41', '', 'logo', '', 'inherit', 'open', 'closed', '', 'logo', '', '', '2017-04-03 12:08:41', '2017-04-03 12:08:41', '', 0, 'http://localhost/leeucollection/wp-content/uploads/2017/04/logo.png', 0, 'attachment', 'image/png', 0),
 (178, 1, '2017-04-03 12:36:43', '0000-00-00 00:00:00', ' ', '', '', 'draft', 'closed', 'closed', '', '', '', '', '2017-04-03 12:36:43', '0000-00-00 00:00:00', '', 0, 'http://localhost/leeucollection/?p=178', 1, 'nav_menu_item', '', 0),
 (179, 1, '2017-04-03 12:36:43', '0000-00-00 00:00:00', ' ', '', '', 'draft', 'closed', 'closed', '', '', '', '', '2017-04-03 12:36:43', '0000-00-00 00:00:00', '', 6, 'http://localhost/leeucollection/?p=179', 1, 'nav_menu_item', '', 0),
-(180, 1, '2017-04-03 12:38:26', '2017-04-03 12:38:26', '', 'Franschhoek, South Africa', '', 'publish', 'closed', 'closed', '', 'franschhoek-south-africa', '', '', '2017-04-17 05:07:28', '2017-04-17 05:07:28', '', 0, 'http://localhost/leeucollection/?p=180', 2, 'nav_menu_item', '', 0),
-(181, 1, '2017-04-03 12:38:26', '2017-04-03 12:38:26', '', 'Lake Windermere, UK', '', 'publish', 'closed', 'closed', '', 'lake-windermere-uk', '', '', '2017-04-17 05:07:28', '2017-04-17 05:07:28', '', 0, 'http://localhost/leeucollection/?p=181', 6, 'nav_menu_item', '', 0),
-(182, 1, '2017-04-03 12:42:37', '2017-04-03 12:42:37', ' ', '', '', 'publish', 'closed', 'closed', '', '182', '', '', '2017-04-17 05:07:28', '2017-04-17 05:07:28', '', 0, 'http://localhost/leeucollection/?p=182', 3, 'nav_menu_item', '', 0),
-(183, 1, '2017-04-03 12:42:37', '2017-04-03 12:42:37', ' ', '', '', 'publish', 'closed', 'closed', '', '183', '', '', '2017-04-17 05:07:28', '2017-04-17 05:07:28', '', 0, 'http://localhost/leeucollection/?p=183', 5, 'nav_menu_item', '', 0),
-(184, 1, '2017-04-03 12:42:37', '2017-04-03 12:42:37', ' ', '', '', 'publish', 'closed', 'closed', '', '184', '', '', '2017-04-17 05:07:28', '2017-04-17 05:07:28', '', 0, 'http://localhost/leeucollection/?p=184', 4, 'nav_menu_item', '', 0),
-(185, 1, '2017-04-03 12:42:37', '2017-04-03 12:42:37', ' ', '', '', 'publish', 'closed', 'closed', '', '185', '', '', '2017-04-17 05:07:28', '2017-04-17 05:07:28', '', 0, 'http://localhost/leeucollection/?p=185', 7, 'nav_menu_item', '', 0),
+(180, 1, '2017-04-03 12:38:26', '2017-04-03 12:38:26', '', 'Franschhoek, South Africa', '', 'publish', 'closed', 'closed', '', 'franschhoek-south-africa', '', '', '2017-04-18 11:01:40', '2017-04-18 11:01:40', '', 0, 'http://localhost/leeucollection/?p=180', 2, 'nav_menu_item', '', 0),
+(181, 1, '2017-04-03 12:38:26', '2017-04-03 12:38:26', '', 'Lake Windermere, UK', '', 'publish', 'closed', 'closed', '', 'lake-windermere-uk', '', '', '2017-04-18 11:01:40', '2017-04-18 11:01:40', '', 0, 'http://localhost/leeucollection/?p=181', 6, 'nav_menu_item', '', 0),
+(182, 1, '2017-04-03 12:42:37', '2017-04-03 12:42:37', ' ', '', '', 'publish', 'closed', 'closed', '', '182', '', '', '2017-04-18 11:01:40', '2017-04-18 11:01:40', '', 0, 'http://localhost/leeucollection/?p=182', 3, 'nav_menu_item', '', 0),
+(183, 1, '2017-04-03 12:42:37', '2017-04-03 12:42:37', ' ', '', '', 'publish', 'closed', 'closed', '', '183', '', '', '2017-04-18 11:01:40', '2017-04-18 11:01:40', '', 0, 'http://localhost/leeucollection/?p=183', 5, 'nav_menu_item', '', 0),
+(184, 1, '2017-04-03 12:42:37', '2017-04-03 12:42:37', ' ', '', '', 'publish', 'closed', 'closed', '', '184', '', '', '2017-04-18 11:01:40', '2017-04-18 11:01:40', '', 0, 'http://localhost/leeucollection/?p=184', 4, 'nav_menu_item', '', 0),
+(185, 1, '2017-04-03 12:42:37', '2017-04-03 12:42:37', ' ', '', '', 'publish', 'closed', 'closed', '', '185', '', '', '2017-04-18 11:01:40', '2017-04-18 11:01:40', '', 0, 'http://localhost/leeucollection/?p=185', 7, 'nav_menu_item', '', 0),
 (186, 1, '2017-04-04 10:10:33', '2017-04-04 10:10:33', '', 'cottage-room', '', 'inherit', 'open', 'closed', '', 'cottage-room', '', '', '2017-04-04 10:10:33', '2017-04-04 10:10:33', '', 43, 'http://localhost/leeucollection/wp-content/uploads/2017/03/cottage-room.jpg', 0, 'attachment', 'image/jpeg', 0),
 (187, 1, '2017-04-04 10:10:39', '2017-04-04 10:10:39', '<strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum', 'Pomegranate Cottage', '', 'inherit', 'closed', 'closed', '', '43-revision-v1', '', '', '2017-04-04 10:10:39', '2017-04-04 10:10:39', '', 43, 'http://localhost/leeucollection/2017/04/04/43-revision-v1/', 0, 'revision', '', 0),
 (188, 1, '2017-04-04 10:12:18', '2017-04-04 10:12:18', '', 'suite-room', '', 'inherit', 'open', 'closed', '', 'suite-room', '', '', '2017-04-04 10:12:18', '2017-04-04 10:12:18', '', 37, 'http://localhost/leeucollection/wp-content/uploads/2017/03/suite-room.jpg', 0, 'attachment', 'image/jpeg', 0),
@@ -2156,7 +2156,7 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (22, 1, 'screen_layout_hotel', '2'),
 (23, 1, 'closedpostboxes_nav-menus', 'a:0:{}'),
 (24, 1, 'closedpostboxes_nav-menus', 'a:0:{}'),
-(25, 1, 'nav_menu_recently_edited', '4'),
+(25, 1, 'nav_menu_recently_edited', '2'),
 (26, 1, 'closedpostboxes_hotel', 'a:0:{}'),
 (27, 1, 'metaboxhidden_hotel', 'a:16:{i:0;s:13:"menu-typesdiv";i:1;s:18:"hotel-locationsdiv";i:2;s:15:"enquiry-typediv";i:3;s:10:"Facilities";i:4;s:5:"Rates";i:5;s:10:"BookButton";i:6;s:14:"PageSubHeading";i:7;s:8:"Services";i:8;s:15:"ContentSection1";i:9;s:11:"PageHeading";i:10;s:14:"ContentSection";i:11;s:7:"slugdiv";i:12;s:10:"postcustom";i:13;s:10:"SliderInfo";i:14;s:9:"RoomRates";i:15;s:15:"SpecialFeatures";}'),
 (28, 1, 'meta-box-order_page', 'a:3:{s:4:"side";s:36:"submitdiv,pageparentdiv,postimagediv";s:6:"normal";s:159:"HeaderSlider,Hotels,Restaurants,TwoColumnsSection1,Wine,HotelsDetails,TwoColumnsSection2,postcustom,commentstatusdiv,commentsdiv,slugdiv,authordiv,revisionsdiv";s:8:"advanced";s:0:"";}'),
