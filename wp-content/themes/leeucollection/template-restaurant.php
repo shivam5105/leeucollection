@@ -116,7 +116,7 @@ get_header(); ?>
 										{
 											?>
 											<div class="cstm-btn-wrapper pull-right text-center">
-												<a href="<?php echo $post_meta['_crb_booking_buton_link'][0]; ?>" class="cstm-btn arrow-btn" target="_blank"><?php echo $post_meta['_crb_booking_buton_text'][0]; ?></a>
+												<a href="javascript:void(0)" data-connection-id="<?php echo $post_meta['_crb_booking_buton_link'][0]; ?>" id="booktable-1" class="booktable cstm-btn arrow-btn" target="_blank"><?php echo $post_meta['_crb_booking_buton_text'][0]; ?></a>
 											</div>
 											<?php
 										}?>
@@ -151,9 +151,6 @@ get_header(); ?>
 								</div>																
 							</div>
 							<div class="hotel-menu">
-								<div class="text-center">
-									<div class="menu-head">MENU</div>
-								</div>
 								<?php
 								$menu_types_terms = get_terms(array(
 									'taxonomy' => 'menu-types',
@@ -162,6 +159,7 @@ get_header(); ?>
 									));
 
 								$prev_menu_type_id = 0;
+								$loop = 0;
 
 								foreach($menu_types_terms as $menu_type)
 								{
@@ -188,6 +186,15 @@ get_header(); ?>
 										$X = 0;
 								        while($the_query->have_posts())
 										{
+											$loop++;
+											if($loop == 1)
+											{
+												?>
+												<div class="text-center">
+													<div class="menu-head">MENU</div>
+												</div>
+												<?php
+											}
 											$X++;
 											$the_query->the_post();
 											$child_post 	= $post;
@@ -235,7 +242,7 @@ get_header(); ?>
 												<?php
 												$X = 0;
 											}
-								       }
+								        }
 								    }
 								    $prev_menu_type_id = $menu_type->term_id;
 								}

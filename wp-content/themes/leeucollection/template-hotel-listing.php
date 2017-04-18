@@ -219,7 +219,7 @@ get_header();
 													if(!empty($booking_button_link) && !empty($booking_button_text))
 													{
 														?>
-														<li class="book-link"><a href="<?php echo $booking_button_link; ?>"><?php echo $booking_button_text; ?></a></li>
+														<li class="book-link"><a href="javascript:void(0);" data-connection-id="<?php echo $booking_button_link; ?>" id="booktable-<?php echo $section_loop.'-'.$loop; ?>" class="booktable"><?php echo $booking_button_text; ?></a></li>
 														<?php
 													}?>
 												</ul>

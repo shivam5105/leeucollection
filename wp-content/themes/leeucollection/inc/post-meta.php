@@ -110,7 +110,7 @@ Container::make('post_meta', 'Slider Info')
     ->add_fields(array(
         Field::make('textarea', 'crb_slider_bottom_description', 'Slider Description')->help_text('This will come after slider (on bottom-right of slider).'),
         Field::make('text', 'crb_booking_buton_text', 'Booking Button Text')->set_width(20)->set_default_value('Book'),
-        Field::make('text', 'crb_booking_buton_link', 'Booking Button Link')->set_width(80),
+        Field::make('text', 'crb_booking_buton_link', "Book A Table - 'connectionid'")->set_width(80),
     ));
 
 //Room Rates
@@ -291,7 +291,7 @@ Container::make('post_meta', 'Restaurants')
             Field::make('text', 'crb_more_button_text', 'Detail Button Text')->set_width('50'),
             Field::make('text', 'crb_more_button_link', 'Detail Button Link')->set_width('50'),
             Field::make('text', 'crb_booking_button_text', 'Booking Button Text')->set_width('50'),
-            Field::make('text', 'crb_booking_button_link', 'Booking Button Link')->set_width('50'),
+            Field::make('text', 'crb_booking_button_link', "Book A Table - 'connectionid'")->set_width('50'),
         )),
     ));
 
@@ -390,7 +390,7 @@ Container::make('post_meta', 'Hotels Details')
                     Field::make('text', 'crb_more_button_text', 'Detail Button Text')->set_width('50'),
                     Field::make('text', 'crb_more_button_link', 'Detail Button Link')->set_width('50'),
                     Field::make('text', 'crb_booking_button_text', 'Booking Button Text')->set_width('50'),
-                    Field::make('text', 'crb_booking_button_link', 'Booking Button Link')->set_width('50'),
+                    Field::make('text', 'crb_booking_button_link', "Book A Table - 'connectionid'")->set_width('50'),
                 )),
             )),
         )),

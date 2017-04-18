@@ -237,7 +237,7 @@ var Blank ={
 			owl.on('translated.owl.carousel', function (e) {
 				item_index = e.item.index;
 			});
-			owl.on('changed.owl.carousel', function(property){				
+			owl.on('changed.owl.carousel', function(property){
 				var current = property.item.index;
 				var parent_select = $(this).parents('.pagination-slider').attr('data-unique-class');
 				var chk_attr = $(property.target).find(".owl-item .slider-item").eq(current).attr('data-object');
@@ -252,17 +252,15 @@ var Blank ={
 				var myattr = $this.attr('data-object');
 				var owlNumber = $('.single_slider_home_2').find("[data-object='" + myattr + "']").parent().index();	
 				$('.'+parent_select).find(owl).trigger('to.owl.carousel', owlNumber);
-			});	
-
-				
-		}			
+			});
+		}
 	},	
 	home_page_init : function(){
 		if($('body.home').length){
 			Blank.home_logo_anim();
 			$(window).scroll(function(){
 				Blank.home_logo_anim();
-			});				
+			});
 		}
 
 	},
@@ -271,29 +269,48 @@ var Blank ={
 			Blank.home_logo_anim();
 			$(window).scroll(function(){
 				Blank.home_logo_anim();
-			});				
-		}					
+			});
+		}
 	},
 	common_init : function(){
 		Blank.win_prop();	
 		Blank.scrl_anim();
 		Blank.header_anim();
-		Blank.single_slider();		
+		Blank.single_slider();
 		Blank.side_nav();	
 		Blank.two_slider();
 		Blank.home_single_slider();
 		Blank.home_slide_pg_anim();
 		Blank.home_slide_wid_name();
 	},
-	common_init_window_load : function(){						
+	common_init_window_load : function(){
 		setTimeout(function(){ Blank.side_nav_fix(); }, 50);
 	},
 	common_init_resize :function(){
 		Blank.win_prop();
 		Blank.scrl_anim();
 		Blank.header_anim();
-		Blank.side_nav_fix();		
-	},	
+		Blank.side_nav_fix();
+	},
+	booktable: function(){
+		$('.booktable').each(function(){
+			var connection_id 	= $.trim($(this).attr('data-connection-id'));
+			var id 				= $.trim($(this).attr('id'));
+
+			if(connection_id != "" && connection_id != null)
+			{
+				$("#"+id).lbuiDirect({
+					connectionid : connection_id,
+					style :{
+						baseColor : "c19034"
+					},
+					popupWindow : {
+						enabled : true
+					}
+				});
+			}
+		});
+	},
 }
 $(document).ready(function(){
 	Blank.common_init();
@@ -316,5 +333,6 @@ $(window).scroll(function(){
 	Blank.scrl_anim();
 });
 $(window).on('load', function(){
-	Blank.common_init_window_load(); 
+	Blank.common_init_window_load();
+	Blank.booktable();
 });
