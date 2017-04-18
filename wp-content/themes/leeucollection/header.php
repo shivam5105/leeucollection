@@ -19,20 +19,6 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php endif; ?>
 	<?php wp_head(); ?>
-	<!-- Start Bookatable Code -->
-	<script type="text/javascript" src="https://bda.bookatable.com/deploy/lbui.direct.min.js"></script>
-	
-	<script type="text/javascript">
-		$(function (){
-			$(".hotel-template-template-restaurant-php a.cstm-btn.arrow-btn").lbuiDirect({
-				connectionid  : "ZA-RES-THELIVINGROOMATLEQUARTIERFRANCAIS_283714:67970",
-				popupWindow  : {
-						enabled  : true
-					}
-			});
-		});
-	</script>
-	<!-- End Bookatable Code -->
 </head>
 <?php
 $page_template_file = basename(get_page_template());

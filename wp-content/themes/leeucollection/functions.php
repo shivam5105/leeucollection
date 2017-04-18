@@ -251,6 +251,7 @@ function leeucollection_scripts() {
 	wp_enqueue_script( 'leeucollection-meanmenu-js', get_template_directory_uri() . '/js/jquery.meanmenu.min.js', array( 'jquery' ), '20160816', true );
 	
 	wp_enqueue_script( 'leeucollection-ajaxchimp', get_template_directory_uri() . '/js/jquery.ajaxchimp.min.js');
+	wp_enqueue_script( 'bookatable-js', '//bda.bookatable.com/deploy/lbui.direct.js');
 	wp_enqueue_script( 'leeucollection-custom', get_template_directory_uri() . '/js/custom.js');
 }
 add_action( 'wp_enqueue_scripts', 'leeucollection_scripts' );
