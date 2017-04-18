@@ -118,7 +118,7 @@ get_header(); ?>
 																if(is_array($child_post_meta['_crb_booking_buton_link']) && !empty($child_post_meta['_crb_booking_buton_link'][0]))
 																{
 																	?>
-																	<li class="book-link"><a href="<?php echo $child_post_meta['_crb_booking_buton_link'][0]; ?>"><?php echo $child_post_meta['_crb_booking_buton_text'][0]; ?></a></li>
+																	<li class="book-link"><a href="javascript:void(0);" data-connection-id="<?php echo $child_post_meta['_crb_booking_buton_link'][0]; ?>" id="booktable-<?php echo $loop; ?>" class="booktable"><?php echo $child_post_meta['_crb_booking_buton_text'][0]; ?></a></li>
 																	<?php
 																}?>
 															</ul>
