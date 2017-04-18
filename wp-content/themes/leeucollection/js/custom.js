@@ -302,7 +302,7 @@ var Blank ={
 				$("#"+id).lbuiDirect({
 					connectionid : connection_id,
 					style :{
-						baseColor : "c19034"
+						baseColor : "D1A757"
 					},
 					popupWindow : {
 						enabled : true
