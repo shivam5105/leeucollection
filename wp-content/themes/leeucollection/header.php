@@ -103,4 +103,21 @@ $page_template_file = basename(get_page_template());
 					</div>
 				</div>
 			</nav>
+			<nav id="slide-menu"> 
+				<?php
+				if(has_nav_menu('slide_menu'))
+				{
+					wp_nav_menu( array(
+						'theme_location' => 'slide_menu',
+						'mobile_menu'     => 'slide-menu-class',
+					 ) );
+				}
+				?>	
+				<div class="mobile-logo"> 
+					<a href="<?php echo home_url(); ?>">
+						<img src="<?php echo get_template_directory_uri() ?>/images/mobile-logo.svg" alt="">
+					</a>
+				</div>
+				<a href="#" class="meanmenu-book pos-r">BOOK</a>			
+			</nav>
 		</header>

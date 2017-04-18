@@ -90,6 +90,7 @@ function leeucollection_setup() {
 		'header_menu_right' => __( 'Header Menu - Right', 'leeucollection' ),
 		'footer_menu_left' => __( 'Footer Menu - Left', 'leeucollection' ),
 		'footer_menu_right' => __( 'Footer Menu - Right', 'leeucollection' ),
+		'slide_menu' => __( 'Slide Menu', 'leeucollection' ),
 	) );
 
 	/*
@@ -235,15 +236,20 @@ function leeucollection_scripts() {
 	// Add Genericons, used in the main stylesheet.
 	wp_enqueue_style( 'leeucollection-fonts', get_template_directory_uri() . '/fonts/stylesheet.css' );
 	wp_enqueue_style( 'leeucollection-owl-css', get_template_directory_uri() . '/css/owl.carousel.min.css' );
-
+	wp_enqueue_style( 'leeucollection-meanmenu-css', get_template_directory_uri() . '/css/meanmenu.min.css' );
 	// Theme stylesheet.
 	wp_enqueue_style( 'leeucollection-style', get_stylesheet_uri() );
+
+	// Responsive stylesheet.
+	wp_enqueue_style( 'leeucollection-responsive-css', get_template_directory_uri() . '/css/media.css' );
 
 	// Load the html5 shiv.
 	wp_enqueue_script( 'leeucollection-html5', get_template_directory_uri() . '/js/html5.js', array(), '3.7.3' );
 	wp_script_add_data( 'leeucollection-html5', 'conditional', 'lt IE 9' );
 
 	wp_enqueue_script( 'leeucollection-owl-carousel', get_template_directory_uri() . '/js/owl.carousel.min.js', array( 'jquery' ), '20160816', true );
+	wp_enqueue_script( 'leeucollection-meanmenu-js', get_template_directory_uri() . '/js/jquery.meanmenu.min.js', array( 'jquery' ), '20160816', true );
+	
 	wp_enqueue_script( 'leeucollection-ajaxchimp', get_template_directory_uri() . '/js/jquery.ajaxchimp.min.js');
 	wp_enqueue_script( 'leeucollection-custom', get_template_directory_uri() . '/js/custom.js');
 }
