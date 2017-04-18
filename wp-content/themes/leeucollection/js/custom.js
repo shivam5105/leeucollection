@@ -316,6 +316,15 @@ $(document).ready(function(){
 	Blank.common_init();
 	Blank.home_page_init();
 	Blank.hotel_listing_init();
+	jQuery('#site-header #slide-menu').meanmenu({
+		meanScreenWidth: "1140",
+		meanMenuContainer : '#site-header',
+		meanRevealPosition : "left",
+		meanMenuOpen: "MENU",
+		meanMenuClose: "CLOSE",
+		meanExpand: " ",
+		meanContract: " ",
+	});
 	jQuery('#mc-form').ajaxChimp({
 			url: '//builtbyblank.us14.list-manage.com/subscribe/post?u=35b52d4d999898495de700b6d&amp;id=707c0e74e6',
 			callback: callbackFunction
