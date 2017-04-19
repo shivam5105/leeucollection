@@ -1,4 +1,4 @@
-#slide-menu{display: none;}
+#slide-menu{display: none !important;}
 @media only screen and (max-width: 1140px){
 /**	.logo-wrapper img.bottom-logo{
 		display: none;
@@ -37,7 +37,7 @@
 		display: none;
 	}	
 	#slide-menu{
-		display: block;
+		display: block !important;
 	}
 	#site-header.mean-container a.meanmenu-reveal {
 	    color: #AC9E94;
