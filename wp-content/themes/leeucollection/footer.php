@@ -32,6 +32,7 @@
 								<?php
 							}?>
 						</ul>
+						<div id="google_translate_element"></div>
 					</div>
 				   <div class="col-6">
 				      <div class="footer-head">SIGN UP TO LEARN ABOUT SPECIAL EVENTS AND OFFERS</div>
@@ -80,5 +81,13 @@
 		</footer>
 	</div>
 	<?php wp_footer(); ?>
+	<script type="text/javascript">
+		function googleTranslateElementInit()
+		{
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,en,nl,pt,sv', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+			/*new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en-us,en-gb,nl-nl,de-de,en-za,de,nl,pt-br,sv-se,de-ch', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');*/
+		}
+	</script>
+	<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
