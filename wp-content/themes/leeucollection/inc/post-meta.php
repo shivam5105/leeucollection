@@ -396,6 +396,20 @@ Container::make('post_meta', 'Hotels Details')
         )),
     ));
 
+//Menu
+Container::make('post_meta', 'Menu')
+    ->show_on_post_type('hotel')
+    ->show_on_template(array('template-menudetail.php'))
+    ->add_fields(array(
+        Field::make('complex', 'crb_menus', '')->add_fields(array(
+            Field::make('text', 'crb_menu_heading', 'Menu Heading'),
+            Field::make('complex', 'crb_menu_item_details', 'Menu Items')->add_fields(array(
+                Field::make('text', 'crb_menu_item_name', 'Item Name')->set_width('50'),
+                Field::make('text', 'crb_menu_item_price', 'Item Price')->set_width('50'),
+            )),
+        )),
+
+    ));
 /*
 
 //Slider Info

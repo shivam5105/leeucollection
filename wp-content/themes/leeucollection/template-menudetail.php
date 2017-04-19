@@ -19,8 +19,18 @@ get_header(); ?>
 					<div class="col-2 rm-pad"></div>
 					<div class="col-8 rm-pad">
 						<div class="text-center">
-							<div class="leeu-text ucase" itemprop="legalName"><?php echo $top_most_parent_post->post_title;?></div>
-							<h1 class="ucase" itemprop="name"><?php echo $page_heading; ?></h1>
+							<!-- <div class="leeu-text ucase" itemprop="legalName">
+								<?php echo $top_most_parent_post->post_title;?>
+							</div> -->
+							<?php
+							if($post->post_parent > 0)
+							{
+								?>
+								<h2 class="ucase"><?php echo get_the_title($post->post_parent); ?></h2>
+								<?php
+							}
+							?>
+							<h1 class="ucase" itemprop="name"><?php echo $page_heading; ?> Menu</h1>
 						</div>
 					</div>
 				</div>
@@ -41,122 +51,46 @@ get_header(); ?>
 						</div>
 					</div>
 					<div class="col-8">
-						<div class="scroll-anim" data-anim="fade-up">
-							<?php
-							$args = array(
-								'post_type' => 'hotel',
-								'numberposts' => -1,
-								'orderby' => 'order',
-								'order' => 'ASC',
-								'post_status' => 'publish',
-								'post_parent' => $post_id,
-							);
-							$child_post_array = get_posts($args);
-							if(!empty($child_post_array) && count($child_post_array) > 0)
-							{
-								$logic_loop = 0;
-								$loop = 0;
-
-								foreach($child_post_array as $child_key => $child_post)
+						<div class="listing-box listing-row">
+							<div class="scroll-anim" data-anim="fade-up">
+								<?php
+								$menus = carbon_get_post_meta($post->ID, "crb_menus", 'complex');
+								if(is_array($menus) && !empty($menus))
 								{
-									$loop++;
-									if((count($child_post_array)%3) != 0 && $loop == count($child_post_array))
-									{
-										$logic_loop = 0;
-									}
-									$logic_loop++;
-									$child_post_id = $child_post->ID;
-									$child_post_img_url = wp_get_attachment_image_src(get_post_thumbnail_id($child_post_id),'821x478');
-
-									$child_post_img_url = $child_post_img_url[0];
-
-									$child_post_meta = ( $child_post ) ? get_post_meta( $child_post_id ) : null;
-									$data_anim_delay = "";
-									if($logic_loop <= 2)
+									foreach ($menus as $menus_key => $menu)
 									{
 										?>
-										<div class="listing-row clearfix">
-										<?php
-									}
-									if($logic_loop == 1)
-									{
-										?>
-										<div class="scroll-anim" data-anim="fade-up">
-										<?php
-									}
-									else if($logic_loop == 2)
-									{
-										?>
-										<div class="two-img-col">
-										<?php
-									}
-									else if($logic_loop == 3)
-									{
-										$data_anim_delay = "data-anim-delay='100'";
-									}
-									if($logic_loop > 1)
-									{
-										?>
-										<div class="col-6 rm-pad">
-										<?php
-									}
-									?>
-									<div class="banner-img scroll-anim" data-anim="fade-up" <?php echo $data_anim_delay; ?>>
-										<img src="<?php echo $child_post_img_url; ?>" alt="" />
-										<div class="inner-detail-wrapper">
-											<div class="inner-detail">
-												<div class="row">
-													<div class="col-11 col-centered">
-														<div class="inner-detail-content">
-															<div class="content-part">
-																<?php echo @$child_post_meta['_crb_short_description'][0]; ?>
+										<div class="cmn_all">
+											<div class="transformed_head">
+												<h2><?php echo $menu['crb_menu_heading'];?></h2>
+											</div>
+											<div class="service-wrapper clearfix">
+												<?php
+												foreach ($menu['crb_menu_item_details'] as $mi_key => $menu_item)
+												{
+													?>
+													<div class="row mgb-32">
+														<div class="col-10 pd-0">
+															<div class="summer_paragaraph">
+																<p><?php echo $menu_item['crb_menu_item_name']; ?></p>
 															</div>
-															<ul class="list-inline linking-wrap">
-																<li class="see-more-link"><a href="<?php echo get_permalink($child_post_id); ?>" itemprop="url">SEE MORE</a></li>
-																<?php
-																if(is_array($child_post_meta['_crb_booking_buton_link']) && !empty($child_post_meta['_crb_booking_buton_link'][0]))
-																{
-																	?>
-																	<li class="book-link"><a href="<?php echo $child_post_meta['_crb_booking_buton_link'][0]; ?>"><?php echo $child_post_meta['_crb_booking_buton_text'][0]; ?></a></li>
-																	<?php
-																}?>
-															</ul>
+														</div>
+														<div class="col-2">
+															<div class="timing_func">
+																<p><?php echo $menu_item['crb_menu_item_price']; ?></p>
+															</div>
 														</div>
 													</div>
-												</div>
+													<?php
+												}
+												?>
 											</div>
 										</div>
-									</div>
-									<div class="img-desc"><?php echo $child_post->post_title; ?></div>
-									<?php
-									if($logic_loop > 1)
-									{
-										?>
-										</div><!-- col-6 ends -->
-										<?php
-									}
-									if($logic_loop == 1)
-									{
-										?>
-										</div><!-- scroll-anim ends -->
-										<?php
-									}
-									if($logic_loop == 1 || $logic_loop == 3)
-									{
-										?>
-										</div><!-- listing-row ends -->
-										<?php
-									}
-									if($logic_loop == 3)
-									{
-										$logic_loop = 0;
-										?>
-										</div><!-- two-img-col ends -->
 										<?php
 									}
 								}
-							}
-							?>
+								?>
+							</div>
 						</div>
 					</div>
 				</div>
