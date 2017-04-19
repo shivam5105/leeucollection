@@ -344,4 +344,5 @@ $(window).scroll(function(){
 $(window).on('load', function(){
 	Blank.common_init_window_load();
 	Blank.booktable();
+	$('body').addClass('body-loaded');
 });
