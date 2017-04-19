@@ -81,6 +81,16 @@
 		</footer>
 	</div>
 	<?php wp_footer(); ?>
+	<style type="text/css">
+		#google_translate_element
+		{
+			margin-top: 30px;
+		}
+		.goog-te-gadget-simple
+		{
+    		background: #ebe7e2 !important;
+		}
+	</style>
 	<script type="text/javascript">
 		function googleTranslateElementInit()
 		{
