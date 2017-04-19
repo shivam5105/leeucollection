@@ -1521,7 +1521,6 @@ body.short-header .slider-text.top-position {
     top: 153px;
 }
 /** sohail **/
-
 .mgt-0{
 margin-top:0;
 }
@@ -1546,7 +1545,9 @@ padding-top:0;
 .pdb-0{
 padding-bottom:0;
 }
-
+.mgt-45{
+    margin-top:45px;
+}
 .pd-0{
     padding-left:0;
 }
@@ -1555,6 +1556,24 @@ margin:0;
 }
 .mgb-30{
     margin-bottom:30px;
+}
+.mgl-18{
+    margin-left:18px;
+}
+.mgb-32{
+    margin-bottom:19px;
+}
+.mgt-36{
+    margin-top: 36px;
+}
+.mgt-25{
+    margin-top:25px;
+}
+.pdb-20{
+    padding-bottom:18px;
+}
+.mgb-30{
+    margin-bottom:35px;
 }
 
 .see_option {
@@ -1569,7 +1588,7 @@ margin:0;
 }
 .see_option span a::before{
     display:block;
-    background: rgba(0, 0, 0, 0) url("images/text-book-icon.png") repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("../img/text-book-icon.png") repeat scroll 0 0;
     content: "";
     height: 33px;
     left: -32px;
@@ -1583,7 +1602,7 @@ margin:0;
 }
 .locator a::before{
     display:block;
-    background: rgba(0, 0, 0, 0) url("images/navigator.jpg") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("../img/navigator.jpg") no-repeat scroll 0 0;
     content: "";
     height: 33px;
     left: -32px;
@@ -1601,7 +1620,7 @@ margin:0;
     font-size: 24px;
     line-height: 1.25;  
     letter-spacing:0.03em;
-    margin-bottom:51px;
+    margin-bottom:42px;
 }
 .transformed .summer_heading h3{
     font-weight: 300;
@@ -1623,6 +1642,7 @@ margin:0;
     font-size: 18px;
     line-height: 1.33;  
     letter-spacing:0.01em;
+    text-align: right;
 }
 .transformed .groom_heading h3{
     font-weight: 300;
@@ -1642,9 +1662,7 @@ margin:0;
 .listing_type .cmn_pra p,.transformed .groom_heading{
     margin-bottom:16px;
 }
-.mgt-45{
-    margin-top:45px;
-}
+
 .desc-heading{
     text-transform:capitalize;
 }
@@ -1664,9 +1682,7 @@ margin:0;
     letter-spacing:0.01em;
     margin-bottom:3px;
 }
-.mgt-36{
-    margin-top: 36px;
-}
+
 .listing_details{
     margin-top:25px;
 }
@@ -1682,7 +1698,7 @@ margin:0;
     transition: all 0.3s ease 0s;
 }
 .reserve a::after {
-    background: rgba(0, 0, 0, 0) url("images/arrow-icon.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("../img/arrow-icon.png") no-repeat scroll 0 0;
     content: "";
     display: inline-block;
     height: 10px;
@@ -1698,7 +1714,7 @@ margin:0;
     color: #c19034;
 }
 .reserve a:hover::after{
-background:url(images/arrow-icon-hover.png) no-repeat;
+background:url(../img/arrow-icon-hover.png) no-repeat;
  transform: translateY(1px) translateX(0px);
 }
 
@@ -1832,9 +1848,7 @@ span.session_rate{
     height:100%;
 }
 
-.mgt-25{
-    margin-top:25px;
-}
+
 .go_uri a{
     position:absolute;
     top:0;
@@ -1905,11 +1919,7 @@ margin-top:16px;
 }
 
 .form_field .inside_pd{
-    padding:30px 30px;
-}
-
-.form_field .inside_pd form input{
-    
+    padding:50px 0 50px 78px;
 }
 
 .inside_pd .name_opt,.form_field .enquiry_opt{
@@ -1923,3 +1933,305 @@ margin-top:16px;
     font-family: GillSans;
     font-weight: 600;
 }
+
+.email_sec{
+    width:45%;
+    display:inline-block;
+}
+
+.enq_sec{
+    width:45%;
+    display:inline-block;
+}
+
+.form_field .inside_pd .email_sec .name_field input,.form_field .inside_pd .enq_sec .opt_field select,.message_field .textarea_field textarea{
+    font-size: 18px;
+    letter-spacing: 0.01em;
+    line-height: 1.3;
+    font-family: "Lyon Text";
+    border:none;
+    background:none;
+    border-bottom:2px solid #ac9e94;
+    width:90%;
+    margin-top:25px;
+}
+
+.form_field .inside_pd .enq_sec .opt_field select{
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance:none;
+      position:relative;
+      background:url('../img/book-form-arrow.png') no-repeat 278px 10px;  
+}
+
+.msg_opt{
+    text-decoration: none;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #AC9E94;
+    letter-spacing: 0.09em;
+    font-family: GillSans;
+    font-weight: 600;
+    margin-top:25px;
+    margin-bottom:25px;
+}
+
+.message_field .textarea_field textarea{
+width:90%;  
+background:none;
+border:none;
+resize:none;
+padding:5px;
+margin:0;
+}
+
+.message_field{
+    border:1px solid #ac9e94;
+     width: 86%;
+}
+.send_msg button{
+    border:1px solid #ac9e94;
+    position:relative;
+    background:none;
+    min-width:192px;
+    padding:15px 0;
+    border-right:none;
+    border-bottom:none;
+    text-decoration: none;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #AC9E94;
+    letter-spacing: 0.09em;
+    font-family: GillSans;
+    font-weight: 600;
+    display: inline-block;
+    cursor:pointer;
+}
+
+.send_msg button::after{
+   background: rgba(0, 0, 0, 0) url("../img/arrow-icon.png") no-repeat scroll 0 0;
+    content: "";
+    display: inline-block;
+    height: 10px;
+    margin-left: 15px;
+    right: 11px;
+    transform: translateY(1px) translateX(-8px);
+    transition: all 0.2s ease 0s;
+    width: 29px;
+}
+.send_msg button:hover{
+    border: 1px solid #c19034;
+    color: #c19034;
+        border-right:none;
+    border-bottom:none;
+}
+
+.send_msg button:hover::after {
+    background: rgba(0, 0, 0, 0) url("../img/arrow-icon-hover.png") no-repeat scroll 0 0;
+    transform: translateY(1px) translateX(0px);
+}
+    
+::-webkit-input-placeholder {
+    color: #000;
+    opacity:1;
+}
+:-moz-placeholder {
+    /* FF 4-18 */
+    color:#000;
+    opacity:1;
+}
+::-moz-placeholder {
+    /* FF 19+ */
+    color:#000;
+    opacity:1;
+}
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #000;
+    opacity:1;
+}
+
+.summer_paragaraph p {
+    font-family: "Lyon Text";
+    font-size: 18px;
+    font-weight: normal;
+    letter-spacing: 0.01em;
+    line-height: 1.33;
+}
+
+/** pop-up css goes here **/
+.main_sec{
+    position:fixed;
+    top:0;
+    left:50%;
+    width:90%;
+    height:100%;
+    z-index:999;
+    background:#222945;
+    transform:translatex(-50%);
+    -webkit-transform:translatex(-50%);
+    -moz-transform:translatex(-50%);
+    -ms-transform:translatex(-50%);
+    -o-transform:translatex(-50%);
+}
+
+.rel_wrap{
+    min-height:100px;
+    position:relative;  
+}
+
+.leeu_logo{
+    position:absolute;
+    left:50%;
+    top:14px;
+    display:inline-block;
+    transform:translate(-50%,0)
+}
+
+.close_popup{
+    display:inline-block;
+    color:#fff;
+    position:absolute;
+    right: 41px;
+    top: 46px;
+}
+
+.close_popup{
+    cursor:pointer;
+}
+.extext{
+    color: #ac9e94;
+    font-family: GillSans;
+    font-size: 11px;
+    font-weight:600;
+    letter-spacing: 0.09em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.popup_wrapper{
+    position:absolute;
+    width:600px;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+    -o-transform:translate(-50%,-50%);
+}
+
+.hotel_dtls ul li{
+    display:inline-block;
+    border-right:1px solid #ac9e94;
+    padding: 9px 17px;
+    vertical-align: baseline;
+    cursor:pointer;
+    position:relative;
+}
+.hotel_dtls ul li:hover{
+    color:#fff;
+    transition:all 0.5s ease;
+}
+.event_disc {
+    text-align: center;
+}
+
+.hotel_dtls ul li:hover::before{
+position:relative;
+top:0;
+-webkit-transition: all 3s;
+transition: all 3s;
+width:0;
+}
+
+.hotel_dtls ul li:hover::before{
+   background: rgba(0, 0, 0, 0) url("../img/pen-icon-hover.png") no-repeat scroll 0 0;
+    content: "";
+    height: 33px;
+    left: 56px;
+    position: absolute;
+    top: -36px;
+    width: 34px;
+    transition:before 3s;
+    -webkit-transition:before 3s;
+}
+.choose_hotel select{
+    width:100%;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    background:none;
+    border:none;
+    border-bottom:2px solid #626377;
+    background:url(../img/book-form-arrow.png) no-repeat 360px 3px;
+}
+
+.all_cat{
+    margin-top:36px;
+}
+
+.pd-l-r {
+    padding: 0 98px 0 118px;
+}
+
+.lyon_font{   font-family: "Lyon Text";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    letter-spacing: 0.01em;
+    line-height: 1.3;
+    color:#fff;
+}
+.choose_date input{
+    width:100%;
+    background:none;
+    border:none;
+    border-bottom:2px solid #626377;
+    background:url(../img/cal-icon.png) no-repeat 360px 0;
+}
+
+.roomselect{
+    display:inline-block;
+    width:47%;
+}
+.roomselect select{
+    width:100%;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    background:none;
+    border:none;
+    border-bottom:2px solid #626377;
+    background:url(../img/book-form-arrow.png) no-repeat 148px 6px;
+}
+select:focus {
+outline-style:none !important;
+}
+
+.promo_grcode{
+    display:inline-block;
+    width:47%;  
+}
+.promo_grcode input{
+    width:100%;
+    background:none;
+    border:none;
+    border-bottom:2px solid #626377;
+}
+
+.promo_grcode input::-webkit-input-placeholder {
+    color: #fff;
+}
+:-moz-placeholder {
+    /* FF 4-18 */
+ color: #fff;
+}
+::-moz-placeholder {
+    /* FF 19+ */
+ color: #fff;
+}
+:-ms-input-placeholder {
+    /* IE 10+ */
+ color: #fff;
+}
+/** end **/
