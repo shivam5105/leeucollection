@@ -36,9 +36,6 @@
 	#main-navigation{
 		display: none;
 	}	
-	#slide-menu{
-		display: block !important;
-	}
 	#site-header.mean-container a.meanmenu-reveal {
 	    color: #AC9E94;
 	    width: auto;
