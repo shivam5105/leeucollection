@@ -1490,6 +1490,10 @@ div.chat-wrapper:hover span.dot:nth-child(3) {
 } 
 @-webkit-keyframes wave { 0%, 60%, 100% { -webkit-transform: initial; } 30% { -webkit-transform: translateY(-5px); } } 
 @keyframes wave { 0%, 60%, 100% { transform: initial; } 30% { transform: translateY(-5px); } } 
+#footer .goog-te-gadget-simple {
+    border: 1px solid #c7beb6;
+    padding: 6px 8px;
+}
 /**show for short header**/
 body.short-header #main-navigation{
     min-height:60px;
