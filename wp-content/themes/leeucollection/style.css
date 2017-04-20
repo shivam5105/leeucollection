@@ -1512,6 +1512,9 @@ div.chat-wrapper:hover span.dot:nth-child(3) {
     padding-left: 12px;
     padding-right: 12px;
 }
+.banner-text .location-text{
+    margin-bottom: 14px;
+}
 /**show for short header**/
 body.short-header #main-navigation{
     min-height:60px;

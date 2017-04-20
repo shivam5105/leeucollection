@@ -67,6 +67,7 @@ var Blank ={
 			    dots:false,
 			    dotsContainer: '#customDots',
 			    smartSpeed:1000,
+			    margin:1,
 			    responsive:{
 			        0:{
 			            items:1
@@ -103,6 +104,7 @@ var Blank ={
 			    nav:false,
 			    dots:false,
 			    smartSpeed:1000,
+			    margin:1,
 			    responsive:{
 			        0:{
 			            items:1
