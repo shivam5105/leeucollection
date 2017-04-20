@@ -387,7 +387,14 @@ padding-top: 41px;
     color: #AC9E94;
     letter-spacing: 0.09em;
     font-family: GillSans;
-    font-weight: 600;  
+    font-weight: 600; 
+    -webkit-transition: all 0.6s ease 0s;
+    -moz-transition: all 0.6s ease 0s;
+    -ms-transition: all 0.6s ease 0s;
+    transition: all 0.6s ease 0s; 
+}
+.page-link a:hover{
+    color: #c19034;
 }
 .hotel-template-template-hotel .side-nav-contain-spacer{
     margin-top: 72px;
@@ -1392,6 +1399,11 @@ body.hotel-template-template-menudetail .side-sub-menu.child-2 li.current.active
     content: "";
     position: absolute; 
     left: 10px;
+    top: 50%;
+    -webkit-transform:translateY(-50%);
+    -moz-transform:translateY(-50%);
+    -ms-transform:translateY(-50%);
+    transform:translateY(-50%);
     height: 19px;
     padding-left: 16px;
     vertical-align: top;
