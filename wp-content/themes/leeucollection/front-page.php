@@ -92,11 +92,17 @@ get_header();
 					<?php
 				}?>
 			</div>
-			<div class="customdotwrapper">
-				<div class="customdothover">
+			<?php
+			if($has_slider == true)
+			{
+				?>
+				<div class="customdotwrapper">
+					<div class="customdothover">
+					</div>
+					<div id="customDots"></div>
 				</div>
-				<div id="customDots"></div>
-			</div>
+				<?php
+			}?>
 		</div>
 
 		<div class="container booking-form-object">
