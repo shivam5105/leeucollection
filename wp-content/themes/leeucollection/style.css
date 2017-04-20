@@ -1382,13 +1382,16 @@ body.hotel-template-template-menudetail .side-sub-menu.child-2 li.current.active
     margin-top: 4px;
     min-width: auto;
     padding: 16px 0;
+    padding-left: 20px;
     position: relative;
     width: 100%;
+
 }
 .form-item .submit-btn::before ,.form-item .submit-btn::after {
     background: rgba(0, 0, 0, 0) url("images/check-avail.png") no-repeat scroll 0 0;
     content: "";
-    display: inline-block;
+    position: absolute; 
+    left: 19px;
     height: 19px;
     padding-left: 16px;
     vertical-align: top;
