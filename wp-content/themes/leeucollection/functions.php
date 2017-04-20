@@ -131,6 +131,7 @@ function leeucollection_setup() {
 	// Indicate widget sidebars can use selective refresh in the Customizer.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 	add_image_size( '1240x600', 1240, 600, true );
+	add_image_size( '925x600', 925, 600, true );
 	add_image_size( '821x478', 821, 478, true );
 	add_image_size( '190x120', 190, 120, true );
 }
