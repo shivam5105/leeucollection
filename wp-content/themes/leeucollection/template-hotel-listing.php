@@ -194,7 +194,7 @@ get_header();
 										$hotel_logo_url = wp_get_attachment_image_src( $hotel_logo );
 										$hotel_logo_url = $hotel_logo_url[0];
 										?>
-										<div class="sliding-detail <?php echo $active_slide; ?>" data-object="<?php echo $loop; ?>">
+										<div class="sliding-detail <?php echo $active_slide; ?>" data-object-closed="<?php echo $loop; ?>">
 											<div class="inner-detail-content">
 												<?php
 												if(!empty($hotel_logo_url))
@@ -253,8 +253,10 @@ get_header();
 										{
 											$active_slide = "active-main-pagination";
 										}
+										$more_button_link = $slide['crb_more_button_link'];
 										?>
-										<div class="gotoslide <?php echo $active_slide; ?>" data-object="<?php echo $loop; ?>"><?php echo $section_name; ?></div>
+										<!-- <div class="gotoslide <?php echo $active_slide; ?>" data-object="<?php echo $loop; ?>"><?php echo $section_name; ?></div> -->
+										<div class="gotoslide <?php echo $active_slide; ?>" data-object-closed="<?php echo $loop; ?>"><a href="<?php echo $more_button_link; ?>"><?php echo $section_name; ?></a></div>
 										<?php
 										$loop++;
 									}
@@ -270,7 +272,7 @@ get_header();
 						<div class="col-9 <?php echo $col9_class; ?>">
 							<div class="single_slider_wrapper">
 								<div class="next"></div>
-								<div class="owl-carousel single_slider_home_2 owl-theme">
+								<div class="owl-carousel single_slider owl-theme">
 									<?php
 									$loop = 0;
 									foreach ($hotel_section['crb_hotel_hotels'] as $slider_key => $hotel_slider)
@@ -287,7 +289,7 @@ get_header();
 											$section_image_url = wp_get_attachment_image_src( $section_image, '1240x600' );
 											$section_image_url = $section_image_url[0];
 											?>
-											<div class="slider-item" data-object="<?php echo $loop; ?>">
+											<div class="slider-item" data-object-closed="<?php echo $loop; ?>">
 												<img src="<?php echo $section_image_url; ?>" alt="">
 											</div>
 											<?php
