@@ -594,7 +594,10 @@ get_header();
 								}
 								?>
 								<div class="sliding-detail <?php echo $active_slide; ?>" data-object="<?php echo $loop; ?>">
-									<div class="inner-detail-content">
+									<div class="inner-detail-content2">
+										<div class="scroll-anim animate-custom" data-anim="fade-up">
+											<div class="desc-heading"><?php echo $wine_name; ?></div>
+										</div>
 										<div class="content-part">
 											<?php echo $wine_description; ?>
 										</div>
