@@ -191,7 +191,7 @@ get_header();
 										{
 											$active_slide = "active-detail-slide";
 										}
-										$hotel_logo_url = wp_get_attachment_image_src( $hotel_logo );
+										$hotel_logo_url = wp_get_attachment_image_src( $hotel_logo, 'original' );
 										$hotel_logo_url = $hotel_logo_url[0];
 										?>
 										<div class="sliding-detail <?php echo $active_slide; ?>" data-object-closed="<?php echo $loop; ?>">
@@ -251,7 +251,7 @@ get_header();
 										$active_slide = "";
 										if($loop == 0)
 										{
-											$active_slide = "active-main-pagination";
+											//$active_slide = "active-main-pagination";
 										}
 										$more_button_link = $slide['crb_more_button_link'];
 										?>
@@ -286,13 +286,16 @@ get_header();
 											{
 												$active_slide = "active-detail-slide";
 											}
-											$section_image_url = wp_get_attachment_image_src( $section_image, '1240x600' );
+											$section_image_url = wp_get_attachment_image_src( $section_image, '925x600' );
 											$section_image_url = $section_image_url[0];
-											?>
-											<div class="slider-item" data-object-closed="<?php echo $loop; ?>">
-												<img src="<?php echo $section_image_url; ?>" alt="">
-											</div>
-											<?php
+											if(!empty($section_image_url))
+											{
+												?>
+												<div class="slider-item" data-object-closed="<?php echo $loop; ?>">
+													<img src="<?php echo $section_image_url; ?>" alt="">
+												</div>
+												<?php
+											}
 											$loop++;
 										}
 									}
