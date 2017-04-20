@@ -177,7 +177,7 @@ get_header();
 									{
 										$active_slide = "active-detail-slide";
 									}
-									$hotel_logo_url = wp_get_attachment_image_src( $hotel_logo );
+									$hotel_logo_url = wp_get_attachment_image_src( $hotel_logo, 'original' );
 									$hotel_logo_url = $hotel_logo_url[0];
 									?>
 									<div class="sliding-detail <?php echo $active_slide; ?>" data-object="<?php echo $loop; ?>">
@@ -265,7 +265,7 @@ get_header();
 										{
 											$active_slide = "active-detail-slide";
 										}
-										$hotel_image_url = wp_get_attachment_image_src( $hotel_image, '1240x600' );
+										$hotel_image_url = wp_get_attachment_image_src( $hotel_image, '925x600' );
 										$hotel_image_url = $hotel_image_url[0];
 										?>
 										<div class="slider-item" data-object="<?php echo $loop; ?>">
@@ -309,7 +309,7 @@ get_header();
 									{
 										$active_slide = "active-detail-slide";
 									}
-									$restaurant_image_url = wp_get_attachment_image_src( $restaurant_image, '1240x600' );
+									$restaurant_image_url = wp_get_attachment_image_src( $restaurant_image, '925x600' );
 									$restaurant_image_url = $restaurant_image_url[0];
 									?>
 									<div class="slider-item" data-object="<?php echo $loop; ?>">
@@ -342,7 +342,7 @@ get_header();
 								{
 									$active_slide = "active-detail-slide";
 								}
-								$restaurant_logo_url = wp_get_attachment_image_src( $restaurant_logo );
+								$restaurant_logo_url = wp_get_attachment_image_src( $restaurant_logo, 'original' );
 								$restaurant_logo_url = $restaurant_logo_url[0];
 								?>
 								<div class="sliding-detail <?php echo $active_slide; ?>" data-object="<?php echo $loop; ?>">
