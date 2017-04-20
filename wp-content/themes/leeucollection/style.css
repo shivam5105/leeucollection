@@ -1391,7 +1391,7 @@ body.hotel-template-template-menudetail .side-sub-menu.child-2 li.current.active
     background: rgba(0, 0, 0, 0) url("images/check-avail.png") no-repeat scroll 0 0;
     content: "";
     position: absolute; 
-    left: 19px;
+    left: 10px;
     height: 19px;
     padding-left: 16px;
     vertical-align: top;
@@ -1401,7 +1401,6 @@ body.hotel-template-template-menudetail .side-sub-menu.child-2 li.current.active
     background: rgba(0, 0, 0, 0) url("images/check-avail-hover.png") no-repeat scroll 0 0;
     opacity: 0;
     position: absolute; 
-    left: 19px;
     -webkit-transition: opacity 0.3s ease 0s; 
     -moz-transition: opacity 0.3s ease 0s;
     -ms-transition: opacity 0.3s ease 0s;
