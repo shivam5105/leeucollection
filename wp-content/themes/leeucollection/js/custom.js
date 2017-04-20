@@ -283,14 +283,14 @@ var Blank ={
 		Blank.scrl_anim();
 		Blank.header_anim();
 		Blank.single_slider();
-		Blank.side_nav();	
-		Blank.two_slider();
+		Blank.side_nav();			
 		Blank.home_single_slider();
 		Blank.home_slide_pg_anim();
 		Blank.home_slide_wid_name();
 	},
 	common_init_window_load : function(){
 		setTimeout(function(){ Blank.side_nav_fix(); }, 50);
+		Blank.two_slider();
 	},
 	common_init_resize :function(){
 		Blank.win_prop();
