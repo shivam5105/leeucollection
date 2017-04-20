@@ -266,7 +266,7 @@ Container::make('post_meta', 'Hotels')
             Field::make('complex', 'crb_home_hotels', '')->add_fields(array(
                 Field::make('text', 'crb_hotel_name', 'Hotel Name'),
                 Field::make('image', 'crb_hotel_logo', 'Hotel Logo Image')->set_width('50'),            
-                Field::make('image', 'crb_hotel_image', 'Hotel Image')->help_text('(Image Dimensions (WxH): 1240 x 600)')->set_width('50'),
+                Field::make('image', 'crb_hotel_image', 'Hotel Image')->help_text('(Image Dimensions (WxH): 925 x 600)')->set_width('50'),
                 Field::make('textarea', 'crb_hotel_description', 'Short Description'),
                 Field::make('text', 'crb_more_button_text', 'Detail Button Text')->set_width('50'),
                 Field::make('text', 'crb_more_button_link', 'Detail Button Link')->set_width('50'),
@@ -286,7 +286,7 @@ Container::make('post_meta', 'Restaurants')
         Field::make('complex', 'crb_home_restaurants', '')->add_fields(array(
             Field::make('text', 'crb_restaurant_name', 'Restaurant Name'),
             Field::make('image', 'crb_restaurant_logo', 'Restaurant Logo Image')->set_width('50'),            
-            Field::make('image', 'crb_restaurant_image', 'Restaurant Image')->help_text('(Image Dimensions (WxH): 1240 x 600)')->set_width('50'),
+            Field::make('image', 'crb_restaurant_image', 'Restaurant Image')->help_text('(Image Dimensions (WxH): 925 x 600)')->set_width('50'),
             Field::make('textarea', 'crb_restaurant_description', 'Short Description'),
             Field::make('text', 'crb_more_button_text', 'Detail Button Text')->set_width('50'),
             Field::make('text', 'crb_more_button_link', 'Detail Button Link')->set_width('50'),
