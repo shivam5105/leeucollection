@@ -321,7 +321,7 @@ var Blank ={
 		$('.rangePicker').datepick({ 
 			rangeSelect: true,
 			showTrigger: '#calImg',
-			dateFormat: 'M d yyyy',
+			dateFormat: 'M d, yyyy',
 		});
 	},
 	bookingPopupTabs: function(){

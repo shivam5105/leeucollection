@@ -84,7 +84,7 @@
 	<!-- popup -->
 	<div class="main_sec">
 		<div class="rel_wrap">
-			<div class="leeu_logo"> <img src="img/small-logo.png" alt="" /></div>
+			<div class="leeu_logo"><?php leeucollection_the_custom_logo(); ?></div>
 			<div class="close_popup extext">CLOSE</div>
 		</div>
 		<div class="popup_wrapper">
@@ -106,12 +106,10 @@
 								<div class="at extext pdb-20">AT</div>
 								<select class="lyon_font mgb-30">
 									<option>Select a hotel</option>
-									<option>hotel 1</option>
-									<option>hotel 2</option>
-									<option>hotel 3</option>
-									<option>hotel 4</option>
-									<option>hotel 5</option>
-									<option>hotel 6</option>
+									<option>leeu estates</option>
+									<option>leeu house</option>
+									<option>le quartier français</option>
+									<option>linthwaite house</option>
 								</select>
 							</div>
 							<div class="choose_date mgb-30">
@@ -202,7 +200,7 @@
 									<label for="radio-2-7"> <span> </span>Linthwaite House Room</label>
 								</div>
 								<div class="book_table"> 
-									<a href="#">BOOK A TABLE </a>
+									<a href="#" id="booktable-popup-0" class="booktable" data-connection-id="ZA-RES-THELIVINGROOMATLEQUARTIERFRANCAIS_283714:67970">BOOK A TABLE </a>
 								</div>
 							</div>
 						</div>
@@ -217,12 +215,10 @@
 								<div class="at extext pdb-20">AT</div>
 								<select class="lyon_font mgb-30">
 									<option>Select a hotel</option>
-									<option>hotel 1</option>
-									<option>hotel 2</option>
-									<option>hotel 3</option>
-									<option>hotel 4</option>
-									<option>hotel 5</option>
-									<option>hotel 6</option>
+									<option>leeu estates</option>
+									<option>leeu house</option>
+									<option>le quartier français</option>
+									<option>linthwaite house</option>
 								</select>
 							</div>
 							<div class="choose_date mgb-30">

@@ -1555,6 +1555,9 @@ body.short-header #site-main{
 body.short-header .slider-text.top-position {
     top: 153px;
 }
+.leeu_logo img {
+    width: 84px;
+}
 /** sohail **/
 .mgt-0{
 margin-top:0;
@@ -1626,7 +1629,7 @@ margin:0;
 }
 .see_option span a::before{
     display:block;
-    background: rgba(0, 0, 0, 0) url("../img/text-book-icon.png") repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("images/text-book-icon.png") repeat scroll 0 0;
     content: "";
     height: 33px;
     left: -32px;
@@ -1640,7 +1643,7 @@ margin:0;
 }
 .locator a::before{
     display:block;
-    background: rgba(0, 0, 0, 0) url("../img/navigator.jpg") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("images/navigator.jpg") no-repeat scroll 0 0;
     content: "";
     height: 33px;
     left: -32px;
@@ -1740,7 +1743,7 @@ margin:0;
     transition: all 0.3s ease 0s;
 }
 .reserve a::after {
-    background: rgba(0, 0, 0, 0) url("../img/arrow-icon.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("images/arrow-icon.png") no-repeat scroll 0 0;
     content: "";
     display: inline-block;
     height: 10px;
@@ -1756,7 +1759,7 @@ margin:0;
     color: #c19034;
 }
 .reserve a:hover::after{
-background:url(../img/arrow-icon-hover.png) no-repeat;
+background:url(images/arrow-icon-hover.png) no-repeat;
  transform: translateY(1px) translateX(0px);
 }
 
@@ -2002,7 +2005,7 @@ margin-top:16px;
       -moz-appearance: none;
       appearance:none;
       position:relative;
-      background:url('../img/book-form-arrow.png') no-repeat 278px 10px;  
+      background:url('images/book-form-arrow.png') no-repeat 278px 10px;  
 }
 
 .msg_opt{
@@ -2050,7 +2053,7 @@ margin:0;
 }
 
 .send_msg button::after{
-   background: rgba(0, 0, 0, 0) url("../img/arrow-icon.png") no-repeat scroll 0 0;
+   background: rgba(0, 0, 0, 0) url("images/arrow-icon.png") no-repeat scroll 0 0;
     content: "";
     display: inline-block;
     height: 10px;
@@ -2068,7 +2071,7 @@ margin:0;
 }
 
 .send_msg button:hover::after {
-    background: rgba(0, 0, 0, 0) url("../img/arrow-icon-hover.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("images/arrow-icon-hover.png") no-repeat scroll 0 0;
     transform: translateY(1px) translateX(0px);
 }
     
@@ -2179,7 +2182,7 @@ margin:0;
 }
 
 .hotel_dtls ul li.special::before{
-   background: rgba(0, 0, 0, 0) url("../img/pen-icon-hover.png") no-repeat scroll 0 0;
+   background: rgba(0, 0, 0, 0) url("images/pen-icon-hover.png") no-repeat scroll 0 0;
     content: "";
     height: 33px;
     left: 56px;
@@ -2200,7 +2203,7 @@ margin:0;
 }
 
 .hotel_dtls ul li:hover::before{
-   background: rgba(0, 0, 0, 0) url("../img/pen-icon-hover.png") no-repeat scroll 0 0;
+   background: rgba(0, 0, 0, 0) url("images/pen-icon-hover.png") no-repeat scroll 0 0;
     content: "";
     height: 33px;
     left: 56px;
@@ -2218,7 +2221,7 @@ margin:0;
     background:none;
     border:none;
     border-bottom:2px solid #626377;
-    background:url(../img/book-form-arrow.png) no-repeat 360px 3px;
+    background:url(images/book-form-arrow.png) no-repeat 360px 3px;
     border-radius: 0 !important;
 }
 
@@ -2244,7 +2247,7 @@ margin:0;
     background:none;
     border:none;
     border-bottom:2px solid #626377;
-    background:url(../img/cal-icon.png) no-repeat 360px 0;
+    background:url(images/cal-icon.png) no-repeat 360px 0;
     cursor:pointer;
 }
 
@@ -2260,7 +2263,7 @@ margin:0;
     background:none;
     border:none;
     border-bottom:2px solid #626377;
-    background:url(../img/book-form-arrow.png) no-repeat 159px 6px;
+    background:url(images/book-form-arrow.png) no-repeat 159px 6px;
     border-radius: 0 !important;
 }
 select:focus {
@@ -2308,7 +2311,7 @@ border:1px solid #fff;
 vertical-align:middle;
 }
 .avaibility a::before,.book_table a::before,.book_table a::before {
-    background: rgba(0, 0, 0, 0) url("../img/check-avail.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("images/check-avail.png") no-repeat scroll 0 0;
     content: "";
     display:inline-block;
     height: 20px;
