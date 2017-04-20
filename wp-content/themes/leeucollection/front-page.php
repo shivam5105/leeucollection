@@ -267,11 +267,14 @@ get_header();
 										}
 										$hotel_image_url = wp_get_attachment_image_src( $hotel_image, '925x600' );
 										$hotel_image_url = $hotel_image_url[0];
-										?>
-										<div class="slider-item" data-object="<?php echo $loop; ?>">
-											<img src="<?php echo $hotel_image_url; ?>" alt="">
-										</div>
-										<?php
+										if(!empty($hotel_image_url))
+										{
+											?>
+											<div class="slider-item" data-object="<?php echo $loop; ?>">
+												<img src="<?php echo $hotel_image_url; ?>" alt="">
+											</div>
+											<?php
+										}
 										$loop++;
 									}
 								}
@@ -311,11 +314,14 @@ get_header();
 									}
 									$restaurant_image_url = wp_get_attachment_image_src( $restaurant_image, '925x600' );
 									$restaurant_image_url = $restaurant_image_url[0];
-									?>
-									<div class="slider-item" data-object="<?php echo $loop; ?>">
-										<img src="<?php echo $restaurant_image_url; ?>" alt="">
-									</div>
-									<?php
+									if(!empty($restaurant_image_url))
+									{
+										?>
+										<div class="slider-item" data-object="<?php echo $loop; ?>">
+											<img src="<?php echo $restaurant_image_url; ?>" alt="">
+										</div>
+										<?php
+									}
 									$loop++;
 								}
 								?>
@@ -410,7 +416,7 @@ get_header();
 						</div>
 						<div class="banner-img hover_anim scroll-anim img_full" data-anim="fade-up">
 							<?php
-							$section_image_url = wp_get_attachment_image_src( $post_meta['_crb_two_cols_section_1_image_left'][0], '1240x600' );
+							$section_image_url = wp_get_attachment_image_src( $post_meta['_crb_two_cols_section_1_image_left'][0], '621x386' );
 							$section_image_url = $section_image_url[0];
 							?>
 							<img src="<?php echo $section_image_url; ?>" alt="" />
@@ -458,7 +464,7 @@ get_header();
 						</div>
 						<div class="banner-img hover_anim scroll-anim img_full" data-anim="fade-up" data-anim-delay="100">
 							<?php
-							$section_image_url = wp_get_attachment_image_src( $post_meta['_crb_two_cols_section_1_image_right'][0], '1240x600' );
+							$section_image_url = wp_get_attachment_image_src( $post_meta['_crb_two_cols_section_1_image_right'][0], '621x386' );
 							$section_image_url = $section_image_url[0];
 							?>
 							<img src="<?php echo $section_image_url; ?>" alt="" />
@@ -541,7 +547,7 @@ get_header();
 									{
 										$active_slide = "active-detail-slide";
 									}
-									$wine_image_url = wp_get_attachment_image_src( $wine_image, '1240x600' );
+									$wine_image_url = wp_get_attachment_image_src( $wine_image, '925x600' );
 									$wine_image_url = $wine_image_url[0];
 									?>
 									<div class="slider-item" data-object="<?php echo $loop; ?>">
@@ -635,7 +641,7 @@ get_header();
 						</div>
 						<div class="banner-img hover_anim scroll-anim img_full" data-anim="fade-up">
 							<?php
-							$section_image_url = wp_get_attachment_image_src( $post_meta['_crb_two_cols_section_2_image_left'][0], '1240x600' );
+							$section_image_url = wp_get_attachment_image_src( $post_meta['_crb_two_cols_section_2_image_left'][0], '621x386' );
 							$section_image_url = $section_image_url[0];
 							?>
 							<img src="<?php echo $section_image_url; ?>" alt="" />
@@ -681,7 +687,7 @@ get_header();
 						</div>
 						<div class="banner-img hover_anim scroll-anim img_full" data-anim="fade-up"data-anim-delay="100" >
 							<?php
-							$section_image_url = wp_get_attachment_image_src( $post_meta['_crb_two_cols_section_2_image_right'][0], '1240x600' );
+							$section_image_url = wp_get_attachment_image_src( $post_meta['_crb_two_cols_section_2_image_right'][0], '621x386' );
 							$section_image_url = $section_image_url[0];
 							?>
 							<img src="<?php echo $section_image_url; ?>" alt="" />
