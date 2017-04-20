@@ -160,7 +160,14 @@ get_header(); ?>
 													$slide_image 	= $section_slider['crb_section_slide_image'];
 													$slide_title 	= $section_slider['crb_section_slide_title'];
 													$slide_desc 	= $section_slider['crb_section_slide_desc'];
-													$slide_image_url = wp_get_attachment_image_src( $slide_image, '821x478' );
+													if($section_layout == 2)
+													{
+														$slide_image_url = wp_get_attachment_image_src( $slide_image, '411x258' );
+													}
+													else
+													{
+														$slide_image_url = wp_get_attachment_image_src( $slide_image, '821x478' );
+													}
 													$slide_image_url = $slide_image_url[0];
 													?>
 													<div class="slide-item">

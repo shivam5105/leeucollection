@@ -65,7 +65,14 @@ get_header(); ?>
 							}
 							$logic_loop++;
 							$child_post_id = $child_post->ID;
-							$child_post_img_url = wp_get_attachment_image_src(get_post_thumbnail_id($child_post_id),'821x478');
+							if($logic_loop > 1)
+							{
+								$child_post_img_url = wp_get_attachment_image_src(get_post_thumbnail_id($child_post_id),'411x258');
+							}
+							else
+							{
+								$child_post_img_url = wp_get_attachment_image_src(get_post_thumbnail_id($child_post_id),'821x478');
+							}							
 							$child_post_img_url = $child_post_img_url[0];
 
 							$child_post_meta = ( $child_post ) ? get_post_meta( $child_post_id ) : null;
