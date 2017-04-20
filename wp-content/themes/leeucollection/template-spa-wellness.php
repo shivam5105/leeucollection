@@ -126,6 +126,8 @@ get_header(); ?>
 								$section_sliders	= $content_section['crb_spa_section_slider'];
 								$slide_title 		= $content_section['crb_spa_section_slide_title'];
 								$slide_desc 		= $content_section['crb_spa_section_slide_desc'];
+
+								$has_slider 		= false;
 								if(is_array($section_sliders) && count($section_sliders) > 1)
 								{
 									$has_slider = true;
@@ -137,48 +139,52 @@ get_header(); ?>
 								}
 								?>
 								<div class="listing-box listing-row">
-									<div class="single_slider_wrapper <?php if(!$has_slider){ echo "no_slider"; }?>">
-										<?php
-										if($has_slider)
-										{
-											?>
-											<div class="next"></div>
-											<?php
-										}?>
-										<div class="<?php echo $slider_wrapper_class; ?>">
-											<?php
-											foreach($section_sliders as $slider_key => $section_slider)
-											{
-												$slide_image 	= $section_slider['crb_spa_section_slide_image'];
-												$slide_image_url = wp_get_attachment_image_src( $slide_image, '821x478' );
-												$slide_image_url = $slide_image_url[0];
-												?>
-												<div class="slide-item">
-													<div class="banner-img scroll-anim" data-anim="fade-up">
-														<img src="<?php echo $slide_image_url; ?>" alt="" />
-													</div>
+									<div class="scroll-anim" data-anim="fade-up">
+										<div class="listing-box">
+											<div class="single_slider_wrapper <?php if(!$has_slider){ echo "no_slider"; }?>">
+												<?php
+												if($has_slider)
+												{
+													?>
+													<div class="next"></div>
+													<?php
+												}?>
+												<div class="<?php echo $slider_wrapper_class; ?>">
+													<?php
+													foreach($section_sliders as $slider_key => $section_slider)
+													{
+														$slide_image 	= $section_slider['crb_spa_section_slide_image'];
+														$slide_image_url = wp_get_attachment_image_src( $slide_image, '821x478' );
+														$slide_image_url = $slide_image_url[0];
+														?>
+														<div class="slide-item">
+															<div class="banner-img scroll-anim" data-anim="fade-up">
+																<img src="<?php echo $slide_image_url; ?>" alt="" />
+															</div>
+														</div>
+														<?php
+													}
+													?>
 												</div>
 												<?php
-											}
-											?>
-										</div>
-										<?php
-										if($has_slider)
-										{
-											?>
-											<div class="prev"></div>
-											<?php
-										}?>
-										<div class="row detail-row">
-											<div class="col-3">
-												<div class="desc-heading"><?php echo $slide_title; ?></div>
-												<div class="see_option"> 
-													<span><a href="<?php echo $section_link; ?>"><?php echo $section_link_text; ?></a></span>
-												</div>
+												if($has_slider)
+												{
+													?>
+													<div class="prev"></div>
+													<?php
+												}?>
 											</div>
-											<div class="col-9">
-												<div class="desc-content"> 
-													<?php echo $slide_desc; ?>
+											<div class="row detail-row">
+												<div class="col-3">
+													<div class="desc-heading"><?php echo $slide_title; ?></div>
+													<div class="see_option"> 
+														<span><a href="<?php echo $section_link; ?>"><?php echo $section_link_text; ?></a></span>
+													</div>
+												</div>
+												<div class="col-9">
+													<div class="desc-content"> 
+														<?php echo $slide_desc; ?>
+													</div>
 												</div>
 											</div>
 										</div>

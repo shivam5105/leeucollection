@@ -251,7 +251,7 @@ get_header();
 										$active_slide = "";
 										if($loop == 0)
 										{
-											$active_slide = "active-main-pagination";
+											//$active_slide = "active-main-pagination";
 										}
 										$more_button_link = $slide['crb_more_button_link'];
 										?>
