@@ -1,3 +1,6 @@
 .htaccess
 .DS_Store
+ehthumbs.db
+Thumbs.db
+wp-content/uploads/
 
