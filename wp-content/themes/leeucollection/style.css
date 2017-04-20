@@ -1167,20 +1167,20 @@ body.hotel-template-template-menudetail .side-sub-menu.child-2 li.current.active
     -ms-transition:all 0.6s ease-in 0.6s;
     transition:all 0.6s ease-in 0.6s;
 }    
-.owl-item.active .slider-txt-link , .owl-item.active .slider-txt-con , .owl-item.active .slider-txt-head{
+.active .slider-txt-link , .active .slider-txt-con , active .slider-txt-head{
     -webkit-transform:translateY(0px); 
     -moz-transform:translateY(0px);
     -ms-transform:translateY(0px);
     transform:translateY(0px);
     opacity:1;
 }
-.owl-item.active .slider-txt-link {
+.active .slider-txt-link {
     -webkit-transition-delay:800ms; 
     -moz-transition-delay:800ms; 
     -ms-transition-delay:800ms;
     transition-delay:800ms;
 } 
-.owl-item.active .slider-txt-con{
+.active .slider-txt-con{
     -webkit-transition-delay:700ms;
     -moz-transition-delay:700ms; 
     -ms-transition-delay:700ms;    
