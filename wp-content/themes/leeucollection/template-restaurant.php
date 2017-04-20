@@ -71,7 +71,7 @@ get_header(); ?>
 										{
 											foreach ($slider_data as $slide_key => $slide_data)
 											{
-												$banner_url = wp_get_attachment_image_src( $slide_data['crb_slide_image'], '1240x600' );
+												$banner_url = wp_get_attachment_image_src( $slide_data['crb_slide_image'], '821x478' );
 												$banner_url = $banner_url[0];
 												?>
 												<div class="slide-item">
@@ -85,7 +85,7 @@ get_header(); ?>
 										else
 										{
 											/*$banner_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );*/
-											$banner_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), '1240x600' );
+											$banner_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), '821x478' );
 											$banner_url = $banner_url[0];
 											?>
 											<div class="slide-item">
@@ -200,9 +200,6 @@ get_header(); ?>
 											$child_post 	= $post;
 											$child_post_id 	= $child_post->ID;
 
-											$child_post_img_url = wp_get_attachment_image_src(get_post_thumbnail_id($child_post_id),'821x478');
-											$child_post_img_url = $child_post_img_url[0];
-
 											$image_col_class 	= "two-img-col";
 											$item_col_class 	= "col-6";
 											$data_anim_delay 	= "";
@@ -211,6 +208,14 @@ get_header(); ?>
 												$cols = 3;
 												$image_col_class 	= "three-img-col";
 												$item_col_class 	= "col-4";
+												
+												$child_post_img_url = wp_get_attachment_image_src(get_post_thumbnail_id($child_post_id),'275x173');
+												$child_post_img_url = $child_post_img_url[0];
+											}
+											else
+											{
+												$child_post_img_url = wp_get_attachment_image_src(get_post_thumbnail_id($child_post_id),'411x258');
+												$child_post_img_url = $child_post_img_url[0];
 											}
 											if($X == 1)
 											{
