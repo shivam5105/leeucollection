@@ -72,7 +72,7 @@ get_header(); ?>
 											{
 												foreach ($slider_data as $slide_key => $slide_data)
 												{
-													$banner_url = wp_get_attachment_image_src( $slide_data['crb_slide_image'], '1240x600' );
+													$banner_url = wp_get_attachment_image_src( $slide_data['crb_slide_image'], '821x478' );
 													$banner_url = $banner_url[0];
 													?>
 													<div class="slide-item">
@@ -86,7 +86,7 @@ get_header(); ?>
 											else
 											{
 												/*$banner_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );*/
-												$banner_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), '1240x600' );
+												$banner_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), '821x478' );
 												$banner_url = $banner_url[0];
 												?>
 												<div class="slide-item">
