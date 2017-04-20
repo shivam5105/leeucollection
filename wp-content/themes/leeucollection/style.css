@@ -1377,12 +1377,13 @@ body.hotel-template-template-menudetail .side-sub-menu.child-2 li.current.active
     background-position: right center;  
     padding-bottom: 10px; 
 }
-.form-item .submit-btn{
+.form-item .submit-btn {
+    line-height: 2;
+    margin-top: 4px;
     min-width: auto;
-    width: 100%;
-    padding: 17px 0;
-    margin-top: 9px;
+    padding: 16px 0;
     position: relative;
+    width: 100%;
 }
 .form-item .submit-btn::before {
     background: rgba(0, 0, 0, 0) url("images/check-avail.png") no-repeat scroll 0 0;
