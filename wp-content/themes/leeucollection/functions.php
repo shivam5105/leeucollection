@@ -132,6 +132,7 @@ function leeucollection_setup() {
 	add_theme_support( 'customize-selective-refresh-widgets' );
 	add_image_size( '1240x600', 1240, 600, true );
 	add_image_size( '925x600', 925, 600, true );
+	add_image_size( '621x386', 621, 386, true );
 	add_image_size( '821x478', 821, 478, true );
 	add_image_size( '190x120', 190, 120, true );
 }
