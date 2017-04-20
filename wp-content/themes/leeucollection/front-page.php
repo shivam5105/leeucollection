@@ -416,7 +416,7 @@ get_header();
 						</div>
 						<div class="banner-img hover_anim scroll-anim img_full" data-anim="fade-up">
 							<?php
-							$section_image_url = wp_get_attachment_image_src( $post_meta['_crb_two_cols_section_1_image_left'][0], '1240x600' );
+							$section_image_url = wp_get_attachment_image_src( $post_meta['_crb_two_cols_section_1_image_left'][0], '621x386' );
 							$section_image_url = $section_image_url[0];
 							?>
 							<img src="<?php echo $section_image_url; ?>" alt="" />
@@ -464,7 +464,7 @@ get_header();
 						</div>
 						<div class="banner-img hover_anim scroll-anim img_full" data-anim="fade-up" data-anim-delay="100">
 							<?php
-							$section_image_url = wp_get_attachment_image_src( $post_meta['_crb_two_cols_section_1_image_right'][0], '1240x600' );
+							$section_image_url = wp_get_attachment_image_src( $post_meta['_crb_two_cols_section_1_image_right'][0], '621x386' );
 							$section_image_url = $section_image_url[0];
 							?>
 							<img src="<?php echo $section_image_url; ?>" alt="" />
@@ -641,7 +641,7 @@ get_header();
 						</div>
 						<div class="banner-img hover_anim scroll-anim img_full" data-anim="fade-up">
 							<?php
-							$section_image_url = wp_get_attachment_image_src( $post_meta['_crb_two_cols_section_2_image_left'][0], '1240x600' );
+							$section_image_url = wp_get_attachment_image_src( $post_meta['_crb_two_cols_section_2_image_left'][0], '621x386' );
 							$section_image_url = $section_image_url[0];
 							?>
 							<img src="<?php echo $section_image_url; ?>" alt="" />
@@ -687,7 +687,7 @@ get_header();
 						</div>
 						<div class="banner-img hover_anim scroll-anim img_full" data-anim="fade-up"data-anim-delay="100" >
 							<?php
-							$section_image_url = wp_get_attachment_image_src( $post_meta['_crb_two_cols_section_2_image_right'][0], '1240x600' );
+							$section_image_url = wp_get_attachment_image_src( $post_meta['_crb_two_cols_section_2_image_right'][0], '621x386' );
 							$section_image_url = $section_image_url[0];
 							?>
 							<img src="<?php echo $section_image_url; ?>" alt="" />
