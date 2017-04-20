@@ -17,7 +17,7 @@ get_header();
 	$slider_wrapper_class = "owl-carousel single_slider_home owl-theme";
 	if(!$has_slider)
 	{
-		$slider_wrapper_class = "";
+		$slider_wrapper_class = "active";
 	}
 	?>
 	<section id="site-main">
@@ -92,11 +92,17 @@ get_header();
 					<?php
 				}?>
 			</div>
-			<div class="customdotwrapper">
-				<div class="customdothover">
+			<?php
+			if($has_slider == true)
+			{
+				?>
+				<div class="customdotwrapper">
+					<div class="customdothover">
+					</div>
+					<div id="customDots"></div>
 				</div>
-				<div id="customDots"></div>
-			</div>
+				<?php
+			}?>
 		</div>
 
 		<div class="container booking-form-object">
