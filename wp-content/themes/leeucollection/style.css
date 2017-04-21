@@ -1425,6 +1425,9 @@ body.hotel-template-template-menudetail .side-sub-menu.child-2 li.current.active
     display: block !important;
     margin-top: 11px;
 }
+#mc-email{
+    border-radius: none;
+}
 button{
     box-shadow: none;
 }
