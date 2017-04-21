@@ -153,7 +153,7 @@ get_header();
 			</div>
 		</div>
 		<?php
-		/*$section_loop = 0;
+		$section_loop = 0;
 		$hotel_sections = carbon_get_post_meta($post->ID, "crb_hotel_sections_new", 'complex');
 		foreach ($hotel_sections as $hotel_key => $hotel_section)
 		{
@@ -323,8 +323,8 @@ get_header();
 				</div>
 			</div>
 			<?php
-		}*/
-		$section_loop = 0;
+		}
+		/*$section_loop = 0;
 		$hotel_sections = carbon_get_post_meta($post->ID, "crb_hotel_sections", 'complex');
 		foreach ($hotel_sections as $hotel_key => $hotel_section)
 		{
@@ -499,7 +499,7 @@ get_header();
 				</div>
 			</div>
 			<?php
-		}
+		}*/
 		?>
 	</section>
 <?php get_footer(); ?>
