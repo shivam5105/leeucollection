@@ -32,7 +32,7 @@ time, mark, audio, video {
     padding:0;
     border:0;
     outline:0;
-    font-size:100%;
+
     vertical-align:baseline;
     background:transparent;
 }
@@ -1424,6 +1424,9 @@ body.hotel-template-template-menudetail .side-sub-menu.child-2 li.current.active
 #mc-form label{
     display: block !important;
     margin-top: 11px;
+}
+#mc-email{
+    border-radius: none;
 }
 button{
     box-shadow: none;

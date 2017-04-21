@@ -20,7 +20,7 @@ var Blank ={
 				var footer_overlay_fix = $(_footer).offset().top - $(side_nav_selector).height() - $(_header).height() - 30;
 
 				var _wpos_check = _wpos + $(_header).height();	
-				console.log(_wpos_check +">="+ footer_overlay_fix);		
+					
 				if(_wpos_check > side_nav){
 					$('.side-nav-contain').addClass('fix-pos');
 				}
@@ -282,7 +282,6 @@ var Blank ={
 		Blank.win_prop();	
 		Blank.scrl_anim();
 		Blank.header_anim();
-		Blank.single_slider();
 		Blank.side_nav();			
 		Blank.home_single_slider();
 		Blank.home_slide_pg_anim();
@@ -291,6 +290,7 @@ var Blank ={
 	common_init_window_load : function(){
 		setTimeout(function(){ Blank.side_nav_fix(); }, 50);
 		Blank.two_slider();
+		Blank.single_slider();
 	},
 	common_init_resize :function(){
 		Blank.win_prop();
