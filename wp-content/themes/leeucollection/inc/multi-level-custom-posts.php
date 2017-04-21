@@ -1,24 +1,15 @@
 <?php
-
 if (!class_exists('multiLevelCustomPosts'))
 {
 	class multiLevelCustomPosts
-
 	{
 		public $slug;
-
 		public $parent_slug;
-
 		public $post_hierarchy;
-
 		public $box_title;
-
 		public $box_context;
-
 		public $box_priority;
-
 		public $labels = array(
-
 			"name" => "Custom Posts",
 			"singular_name" => "Custom Post",
 			"menu_name" => "Custom Posts",
@@ -37,7 +28,6 @@ if (!class_exists('multiLevelCustomPosts'))
 			"parent" => "Parent Custom Posts",
 		);
 		public $args = array(
-
 			"label" => "Custom Post",
 			"hierarchical" => true,
 			"public" => true,
@@ -70,13 +60,10 @@ if (!class_exists('multiLevelCustomPosts'))
 			{
 				$this->args = $new_labels['name'];
 			}
-
 			register_post_type($this->slug, $this->args);
 		}
 
-		public
-
-		function updateNotExistsKey($new_labels)
+		public function updateNotExistsKey($new_labels)
 		{
 			$name = isset($new_labels['name']) ? $new_labels['name'] : "";
 			$singular_name = isset($new_labels['singular_name']) ? $new_labels['singular_name'] : "";
@@ -154,16 +141,12 @@ if (!class_exists('multiLevelCustomPosts'))
 			}
 		}
 
-		public
-
-		function myprint()
+		public function myprint()
 		{
 			print_r($this->args);
 		}
 
-		public
-
-		function addParentBox($parent_slug, $box_title, $box_context = 'side', $box_priority = 'default')
+		public function addParentBox($parent_slug, $box_title, $box_context = 'side', $box_priority = 'default')
 		{
 			$this->parent_slug = $parent_slug;
 			$this->box_title = $box_title;
@@ -175,9 +158,7 @@ if (!class_exists('multiLevelCustomPosts'))
 			) , 10, 2);
 		}
 
-		public
-
-		function addingCustomMetaBoxes()
+		public function addingCustomMetaBoxes()
 		{
 			add_meta_box($this->slug . "-parent", $this->box_title, array(
 				$this,
@@ -186,9 +167,7 @@ if (!class_exists('multiLevelCustomPosts'))
 			$this->postCustomPermalinks();
 		}
 
-		public
-
-		function renderCustomMetaBox($post, $box_details)
+		public function renderCustomMetaBox($post, $box_details)
 		{
 			/*$post_type_object = get_post_type_object( $post->post_type );*/
 			$pages = wp_dropdown_pages(array(
@@ -205,9 +184,7 @@ if (!class_exists('multiLevelCustomPosts'))
 			}
 		}
 
-		public
-
-		function postCustomPermalinks()
+		public function postCustomPermalinks()
 		{
 			add_filter("post_type_link", array(
 				$this,
@@ -215,9 +192,7 @@ if (!class_exists('multiLevelCustomPosts'))
 			) , 10, 3);
 		}
 
-		public
-
-		function updatePostPermalinks($permalink, $post, $leavename)
+		public function updatePostPermalinks($permalink, $post, $leavename)
 		{
 			$post_id = $post->ID;
 			if ($post->post_type != $this->slug || empty($permalink) || in_array($post->post_status, array(
@@ -243,9 +218,7 @@ if (!class_exists('multiLevelCustomPosts'))
 			return $permalink;
 		}
 
-		public
-
-		function showHierarchicalPosts($post_types)
+		public function showHierarchicalPosts($post_types)
 		{
 			$this->post_hierarchy = $post_types;
 			add_action("pre_get_posts",
@@ -275,9 +248,7 @@ if (!class_exists('multiLevelCustomPosts'))
 			});
 		}
 
-		public
-
-		function addRewriteRules()
+		public function addRewriteRules()
 		{
 			/*add_permastruct($this->slug, "/".$this->slug."/%hotel%/%".$this->slug."%", false);*/
 			add_rewrite_tag("%" . $this->slug . "%", "([^/]+)", $this->slug . "=");
@@ -310,6 +281,29 @@ function registerMyCustomPost()
 	);
 	$parentSlug = "hotel";
 	$parent = new multiLevelCustomPosts($parentSlug, $labels, $args);
+
+	$labels = array(
+		"name" => "Discover",
+		"singular_name" => "Discover",
+	);
+	$args = array(
+		"label" => "Discover",
+		"labels" => $labels,
+		'menu_position' => 6,
+		'show_in_admin_bar' => true,
+		/*'taxonomies' 	=> array('category'),*/
+		"supports" => array(
+			"title",
+			"revisions",
+			"thumbnail",
+			"editor",
+			"page-attributes",
+			"custom-fields" /*, "post-formats"*/
+		)
+	);
+	$parentSlug = "leeu-discover";
+	$parent = new multiLevelCustomPosts($parentSlug, $labels, $args);
+
 	/*$labels = array(
 	"name"          => "Lessons",
 	"singular_name" => "Lesson",

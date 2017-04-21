@@ -188,7 +188,7 @@
 		text-align: center;
 	}
 	.side-nav-contain.fix-pos{
-		position: static;
+		position: static !important;
 	}
     [class*="col-"] {
         width: 100%;
@@ -246,5 +246,37 @@
 	}
 	.listing-box .text-center h2 {
 	    margin-bottom: 20px;
+	}	
+}
+@media only screen and (max-width: 767px){
+	.container{
+		padding: 0 20px;
+	}	
+	/**hotel page template**/
+	.banner-text .location-text , .banner-text h1{ 
+		display: none;
+	}
+	.main_slider{
+		margin-left: -20px;
+		margin-right: -20px;
+	}
+	.intro-blurb {
+	    font-size: 15px;
+	    padding-top: 28px;
+	}
+	h2, h1.ucase{
+		font-size: 26px;
+	}
+	.desc-heading {
+	    font-size: 17px;
+	}
+	.desc-content{
+		font-size: 13px;
+	}	
+	#footer,#footer a{
+		font-size: 10px;
+	}
+	.form-group.form-input-wrap{
+		width: 58%;
 	}	
 }	
