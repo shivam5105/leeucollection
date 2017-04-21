@@ -282,7 +282,6 @@ var Blank ={
 		Blank.win_prop();	
 		Blank.scrl_anim();
 		Blank.header_anim();
-		Blank.single_slider();
 		Blank.side_nav();			
 		Blank.home_single_slider();
 		Blank.home_slide_pg_anim();
@@ -291,6 +290,7 @@ var Blank ={
 	common_init_window_load : function(){
 		setTimeout(function(){ Blank.side_nav_fix(); }, 50);
 		Blank.two_slider();
+		Blank.single_slider();
 	},
 	common_init_resize :function(){
 		Blank.win_prop();
