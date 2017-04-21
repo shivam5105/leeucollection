@@ -373,7 +373,7 @@ Container::make('post_meta', 'Two Columns Section 2')
     ));
 
 //Home Page - Hotels
-
+/*
 Container::make('post_meta', 'Hotels Details')
     ->show_on_post_type('page')
     ->show_on_template(array('template-hotel-listing.php'))
@@ -396,7 +396,7 @@ Container::make('post_meta', 'Hotels Details')
             )),
         )),
     ));
-
+*/
 
 //Home Page - Hotels
 Container::make('post_meta', 'Hotels Details')
