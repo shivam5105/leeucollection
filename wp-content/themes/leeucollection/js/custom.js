@@ -20,7 +20,7 @@ var Blank ={
 				var footer_overlay_fix = $(_footer).offset().top - $(side_nav_selector).height() - $(_header).height() - 30;
 
 				var _wpos_check = _wpos + $(_header).height();	
-				console.log(_wpos_check +">="+ footer_overlay_fix);		
+					
 				if(_wpos_check > side_nav){
 					$('.side-nav-contain').addClass('fix-pos');
 				}
