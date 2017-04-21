@@ -278,5 +278,8 @@
 	}
 	.form-group.form-input-wrap{
 		width: 58%;
+	}
+	.listing-row{
+		padding-bottom: 13px;
 	}	
 }	
