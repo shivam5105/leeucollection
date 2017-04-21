@@ -449,8 +449,8 @@ Container::make('post_meta', 'Instagram Feed Details')
         Field::make('text', 'crb_explore_instagram_userid', 'Instagram User-ID')->set_width('30'),
         Field::make('text', 'crb_explore_instagram_access_token', 'Instagram Access Token')->set_width('50'),
     ));
-/*
 
+/*
 //Slider Info
 
 
