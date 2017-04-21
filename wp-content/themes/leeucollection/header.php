@@ -101,9 +101,10 @@ $page_template_file = basename(get_page_template());
 				?>	
 				<div class="mobile-logo"> 
 					<a href="<?php echo home_url(); ?>">
-						<img src="<?php echo get_template_directory_uri() ?>/images/mobile-logo.svg" alt="">
+						<img src="<?php echo get_template_directory_uri() ?>/images/ipad-logo.svg" alt="">
 					</a>
 				</div>
 				<a href="#" class="meanmenu-book pos-r">BOOK</a>			
 			</nav>
 		</header>
+		
