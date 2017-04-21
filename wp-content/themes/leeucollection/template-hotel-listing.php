@@ -154,6 +154,177 @@ get_header();
 		</div>
 		<?php
 		$section_loop = 0;
+		$hotel_sections = carbon_get_post_meta($post->ID, "crb_hotel_sections_new", 'complex');
+		foreach ($hotel_sections as $hotel_key => $hotel_section)
+		{
+			$section_loop++;
+
+			$hotel_name 			= $hotel_section['crb_hotel_name'];
+			$hotel_logo 			= $hotel_section['crb_hotel_section_logo'];
+			$section_description 	= $hotel_section['crb_hotel_section_description'];
+			$more_button_link		= $hotel_section['crb_more_button_link'];
+			$more_button_text		= $hotel_section['crb_more_button_text'];
+			$booking_button_link 	= $hotel_section['crb_booking_button_link'];
+			$booking_button_text 	= $hotel_section['crb_booking_button_text'];
+			?>
+			<div class="container">
+				<div class="home-hotel-wrap-<?php echo $section_loop; ?> pagination-slider" data-unique-class="home-hotel-wrap-<?php echo $section_loop; ?>">
+					<div class="text-center scroll-anim animate-custom" data-anim="fade-up">
+						<h2 class="home-heading ucase"><?php echo $hotel_name; ?></h2>
+					</div>
+					<div class="row scroll-anim animate-custom flx" data-anim="fade-up">
+						<?php
+						$col3_class = "rm-pad-left";
+						$col9_class = "rm-pad-right";
+
+						if($section_loop%2 == 0)
+						{
+							$col3_class = "rm-pad-right";
+							$col9_class = "rm-pad-left";
+						}
+						ob_implicit_flush(true);
+						ob_start();
+						?>
+						<div class="col-3 <?php echo $col3_class; ?>">
+							<div class="sliding-detail-wrapper">
+								<div class="sliding-detail active-detail-slide">
+									<div class="inner-detail-content">
+										<?php
+										$hotel_logo_url = wp_get_attachment_image_src( $hotel_logo, 'original' );
+										$hotel_logo_url = $hotel_logo_url[0];
+										if(!empty($hotel_logo_url))
+										{
+											?>
+											<div class="detail-logo">
+												<img src="<?php echo $hotel_logo_url; ?>" alt="">
+											</div>
+											<?php
+										}?>
+										<div class="content-part">
+											<?php echo nl2br($section_description); ?>
+										</div>
+										<ul class="list-inline linking-wrap">
+											<?php
+											if(!empty($more_button_link) && !empty($more_button_text))
+											{
+												?>
+												<li class="see-more-link"><a href="<?php echo $more_button_link; ?>"><?php echo $more_button_text; ?></a></li>
+												<?php
+											}
+											if(!empty($booking_button_link) && !empty($booking_button_text))
+											{
+												?>
+												<li class="book-link"><a href="<?php echo $booking_button_link; ?>"><?php echo $booking_button_text; ?></a></li>
+												<?php
+											}?>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="main-nav-slider">
+								<?php
+								$loop = 0;
+								foreach ($hotel_section['crb_hotel_section_details'] as $sd_key => $links_details)
+								{
+									$hotel_locations = $links_details['crb_hotel_locations'];
+									$location_class = "";
+									if($loop > 0)
+									{
+										$location_class = "spc-top";
+									}
+									?>
+									<div class="gotoslidehead <?php echo $location_class; ?> ucase"><?php echo $hotel_locations; ?></div>
+									<?php
+									foreach ($links_details['crb_hotel_section_link_details'] as $ld_key => $links)
+									{
+										$section_name = $links['crb_hotel_section_name'];
+										$section_link = $links['crb_hotel_section_link'];
+										if(!empty($section_name) && !empty($section_link))
+										{
+											?>
+											<div class="gotoslide"><a href="<?php echo $section_link; ?>"><?php echo $section_name; ?></a></div>
+											<?php
+										}
+									}
+									$loop++;
+								}
+								?>
+							</div>
+						</div>
+						<?php
+						$col3_content = ob_get_clean();
+						ob_implicit_flush(true);
+						ob_start();
+
+						$has_slider = false;
+						$slider_data = $hotel_section['crb_hotel_section_slider'];
+						if(is_array($slider_data) && !empty($slider_data) && count($slider_data) > 1)
+						{
+							$has_slider = true;
+						}
+						$slider_wrapper_class = "owl-carousel single_slider owl-theme";
+						if(!$has_slider)
+						{
+							$slider_wrapper_class = "";
+						}
+						?>
+						<div class="col-9 <?php echo $col9_class; ?>">
+							<div class="single_slider_wrapper scroll-anim <?php if(!$has_slider){ echo "no_slider"; }?>" data-anim="fade-up">
+								<?php
+								if($has_slider == true)
+								{
+									?>
+									<div class="next"></div>
+									<?php
+								}?>
+								<div class="<?php echo $slider_wrapper_class; ?>">
+									<?php
+									foreach ($slider_data as $slide_key => $slide)
+									{
+										$section_image = $slide['crb_hotel_section_image'];
+
+										$section_image_url = wp_get_attachment_image_src( $section_image, '925x600' );
+										$section_image_url = $section_image_url[0];
+										if(!empty($section_image_url))
+										{
+											?>
+											<div class="slider-item">
+												<img src="<?php echo $section_image_url; ?>" alt="">
+											</div>
+											<?php
+										}
+									}
+									?>
+								</div>
+								<?php
+								if($has_slider == true)
+								{
+									?>
+									<div class="prev"></div>
+									<?php
+								}?>
+							</div>
+						</div>
+						<?php
+						$col9_content = ob_get_clean();
+
+						if($section_loop%2 == 0)
+						{
+							echo $col9_content;
+							echo $col3_content;
+						}
+						else
+						{
+							echo $col3_content;
+							echo $col9_content;
+						}
+						?>
+					</div>
+				</div>
+			</div>
+			<?php
+		}
+		/*$section_loop = 0;
 		$hotel_sections = carbon_get_post_meta($post->ID, "crb_hotel_sections", 'complex');
 		foreach ($hotel_sections as $hotel_key => $hotel_section)
 		{
@@ -328,7 +499,7 @@ get_header();
 				</div>
 			</div>
 			<?php
-		}
+		}*/
 		?>
 	</section>
 <?php get_footer(); ?>

@@ -239,6 +239,7 @@ function leeucollection_scripts() {
 
 	// Add Genericons, used in the main stylesheet.
 	wp_enqueue_style( 'leeucollection-fonts', get_template_directory_uri() . '/fonts/stylesheet.css' );
+	wp_enqueue_style( 'jquery-datepick-css', get_template_directory_uri() . '/css/jquery.datepick.css' );
 	wp_enqueue_style( 'leeucollection-owl-css', get_template_directory_uri() . '/css/owl.carousel.min.css' );
 	wp_enqueue_style( 'leeucollection-meanmenu-css', get_template_directory_uri() . '/css/meanmenu.min.css' );
 	// Theme stylesheet.
@@ -255,6 +256,9 @@ function leeucollection_scripts() {
 	wp_enqueue_script( 'leeucollection-meanmenu-js', get_template_directory_uri() . '/js/jquery.meanmenu.min.js', array( 'jquery' ), '20160816', true );
 	
 	wp_enqueue_script( 'leeucollection-ajaxchimp', get_template_directory_uri() . '/js/jquery.ajaxchimp.min.js');
+	wp_enqueue_script( 'jquery-datepick-plugin', get_template_directory_uri() . '/js/jquery.plugin.js');
+	wp_enqueue_script( 'jquery-datepick', get_template_directory_uri() . '/js/jquery.datepick.js');
+	wp_enqueue_script( 'jquery-instafeed', get_template_directory_uri() . '/js/instafeed.min.js');
 	wp_enqueue_script( 'bookatable-js', '//bda.bookatable.com/deploy/lbui.direct.js');
 	wp_enqueue_script( 'leeucollection-custom', get_template_directory_uri() . '/js/custom.js');
 }
