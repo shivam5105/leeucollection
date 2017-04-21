@@ -73,7 +73,7 @@ Container::make('post_meta', 'Content Section')
 //Page Heading
 Container::make('post_meta', 'Page Heading')
     ->show_on_post_type('hotel')
-    ->show_on_template(array('template-roomlisting.php','template-room.php'))
+    ->show_on_template(array('template-roomlisting.php','template-room.php', 'template-explore.php'))
     ->add_fields(array(
         Field::make('text', 'crb_page_heading', ''),
     ));
@@ -88,7 +88,7 @@ Container::make('post_meta', 'Short Description')
 //Images Slider
 Container::make('post_meta', 'Slider Images')
     ->show_on_post_type('hotel')
-    ->show_on_template(array('template-hotel.php','template-room.php','template-restaurant.php','template-facilities.php','template-gym.php','template-spa-wellness.php'))
+    ->show_on_template(array('template-hotel.php','template-room.php','template-restaurant.php','template-facilities.php','template-gym.php','template-spa-wellness.php','template-explore.php'))
     ->add_fields(array(
         Field::make('complex', 'crb_slider_images', '')->add_fields(array(
             Field::make('image', 'crb_slide_image', 'Slide Image')->help_text('(Image Dimensions (WxH): 1240 x 600)'),
@@ -438,6 +438,16 @@ Container::make('post_meta', 'Menu')
             )),
         )),
 
+    ));
+//Explore
+Container::make('post_meta', 'Instagram Feed Details')
+    ->show_on_post_type('hotel')
+    ->show_on_template(array('template-explore.php'))
+    ->add_fields(array(
+        Field::make('text', 'crb_explore_instagram_heading', 'Heading'),
+        Field::make('text', 'crb_explore_instagram_limit', 'Limit Feeds')->set_width('20'),
+        Field::make('text', 'crb_explore_instagram_userid', 'Instagram User-ID')->set_width('30'),
+        Field::make('text', 'crb_explore_instagram_access_token', 'Instagram Access Token')->set_width('50'),
     ));
 /*
 
