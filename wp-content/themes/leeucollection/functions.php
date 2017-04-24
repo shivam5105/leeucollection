@@ -333,6 +333,7 @@ require get_template_directory() . '/inc/template-tags.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/inc/yahoo-weather.php';
 
 /**
  * Add custom image sizes attribute to enhance responsive image functionality
@@ -519,6 +520,11 @@ function custom_css_for_admin_only()
 		}
 		.level-0:first-child th,
 		.level-0:first-child td
+		{
+		    border-top: 0 !important;
+		}
+		.post-type-page [class*="level-"] th,
+		.post-type-page [class*="level-"] td
 		{
 		    border-top: 0 !important;
 		}
@@ -1131,6 +1137,11 @@ function left_sidebar_nav($post_id, $curr_post_id, $exclude_posts = array(), $de
 		'post_parent' => $post_id,
 		
 	);
+	$post1 = get_post($post_id);
+	if(!empty($post1))
+	{
+		$args['post_type'] = $post1->post_type;
+	}
 	if($exclude_posts != null && !empty($exclude_posts))
 	{
 		$args['exclude'] = $exclude_posts;
