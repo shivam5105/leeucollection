@@ -134,9 +134,11 @@ function leeucollection_setup() {
 	add_image_size( '925x600', 925, 600, true );
 	add_image_size( '621x386', 621, 386, true );
 	add_image_size( '821x478', 821, 478, true );
+	add_image_size( '500x334', 500, 334, true );
 	add_image_size( '411x258', 411, 258, true );
 	add_image_size( '275x173', 275, 173, true );
 	add_image_size( '190x120', 190, 120, true );
+	add_image_size( '193x129', 193, 129, true );
 }
 endif; // leeucollection_setup
 add_action( 'after_setup_theme', 'leeucollection_setup' );
@@ -513,8 +515,8 @@ function custom_css_for_admin_only()
 		{
 			padding-left: 250px !important;
 		}
-		.level-0 th,
-		.level-0 td
+		.post-type-hotel .level-0 th,
+		.post-type-hotel .level-0 td
 		{
 		    border-top: 10px solid #e1e1e1 !important;
 		}
@@ -1216,3 +1218,41 @@ function fix_svg_thumb_display() {
   ';
 }
 add_action('admin_head', 'fix_svg_thumb_display');
+function left_sidebar_nav_not_hotel($exclude_posts, $post_type, $post_id = 0, $depth = 0, $ul_class = "side-nav")
+{
+	$args = array(
+		'post_type' => $post_type,
+		'numberposts' => -1,
+		'orderby' => 'order',
+		'order' => 'ASC',
+		'post_status' => 'publish',
+		'post_parent' => $post_id,
+		'exclude' => $exclude_posts,
+	);
+
+	$child_post_array = get_posts($args);
+	
+	if(!empty($child_post_array) && count($child_post_array) > 0)
+	{
+		echo "<ul class='".$ul_class." child-".$depth."'>";
+		$depth++;
+		foreach($child_post_array as $child_key => $child_post)
+		{
+			$post_id = $child_post->ID;
+			if($child_post->post_parent == 0)
+			{
+				$depth = 0;
+			}
+			$child_post_link = get_permalink($post_id);
+			?>
+			<li class="side-nav-li">
+				<a href="<?php echo $child_post_link; ?>"><?php echo $child_post->post_title; ?></a>
+				<?php
+				left_sidebar_nav_not_hotel($exclude_posts, $post_type, $post_id, $depth, "side-sub-menu");
+				?>
+			</li>
+			<?php
+		}
+		echo "</ul>";
+	}
+}

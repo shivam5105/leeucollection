@@ -41,9 +41,11 @@ $page_template_file = basename(get_page_template());
 				{
 					$hotel_location = get_hotel_location_list($post_id);
 				}
-
-				$weather = new Display_Weather($hotel_location, "c");
-				$weather->displayCurrentWeather();
+				if(!empty($hotel_location))
+				{
+					$weather = new Display_Weather($hotel_location, "c");
+					$weather->displayCurrentWeather();
+				}
 			}
 	      	?>
 			<div class="chat-wrapper"> 

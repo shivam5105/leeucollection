@@ -20,7 +20,7 @@ get_header(); ?>
 					<div class="col-2 rm-pad"></div>
 					<div class="col-8 rm-pad">
 						<div class="text-center">
-							<!-- <div class="leeu-text ucase" itemprop="legalName"><?php echo $top_most_parent_post->post_title;?></div> -->
+							<div class="leeu-text ucase" itemprop="legalName"><?php echo $top_most_parent_post->post_title;?></div>
 							<h1 class="ucase" itemprop="name"><?php echo $page_heading; ?></h1>
 						</div>
 					</div>
@@ -42,102 +42,83 @@ get_header(); ?>
 						</div>
 					</div>
 					<div class="col-8">
-						<div class="scroll-anim" data-anim="fade-up">
-							<?php
-							$has_slider = false;
-					    	$slider_data = carbon_get_post_meta($post->ID, "crb_slider_images", 'complex');
-							if(is_array($slider_data) && !empty($slider_data) && count($slider_data) > 1)
-							{
-								$has_slider = true;
-							}
-							$slider_wrapper_class = "owl-carousel single_slider owl-theme";
-							if(!$has_slider)
-							{
-								$slider_wrapper_class = "";
-							}
+						<?php
+						$args = array(
+							'posts_per_page' => '-1',
+							'orderby' => 'post_date',
+							'order' => 'DESC',
+							'post_type' => 'leeu-discover',
+							'post_parent' => $post->ID,
+						);
+
+						$the_query = new WP_Query( $args );
+						if($the_query->have_posts())
+						{
 							?>
 							<div class="listing-box listing-row">
-								<div class="single_slider_wrapper <?php if(!$has_slider){ echo "no_slider"; }?>">
-									<?php
-									if($has_slider == true)
+								<?php
+								$x = 0;
+								$cols = 2;
+								while($the_query->have_posts())
+								{
+									$the_query->the_post();
+									$image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), '500x334');
+									if($x == 0)
 									{
 										?>
-										<div class="next"></div>
+										<div class="scroll-anim full_img animate-custom" data-anim="fade-up">
+											<div class="row detail-row">
+												<div class="mgb-30 clearfix">
 										<?php
-									}?>
-									<div class="<?php echo $slider_wrapper_class; ?>">
-										<?php
-										if(is_array($slider_data) && !empty($slider_data))
-										{
-											foreach ($slider_data as $slide_key => $slide_data)
-											{
-												$banner_url = wp_get_attachment_image_src( $slide_data['crb_slide_image'], '821x478' );
-												$banner_url = $banner_url[0];
-												?>
-												<div class="slide-item">
-													<div class="banner-img scroll-anim" data-anim="fade-up">
-														<img src="<?php echo $banner_url; ?>" alt="" />
-													</div>
-												</div>
+									}
+									$col6_class 		= "pdr-0";
+									$scroll_anim_class 	= "";
+									$scroll_anim_attr 	= "";
+									$art_cat_class 		= "art_cat";
+									if($x == 1)
+									{
+										$col6_class 		= "pdl-0";
+										$scroll_anim_class 	= "scroll-anim animate-custom";
+										$scroll_anim_attr 	= 'data-anim="fade-up" data-anim-delay="100"';
+										$art_cat_class 		= "art_cat2";
+									}
+									?>
+									<div class="col-6 <?php echo $col6_class; ?>">
+										<div class="<?php echo $scroll_anim_class; ?>" <?php echo $scroll_anim_attr; ?>>
+											<div class="<?php echo $art_cat_class; ?> full-img">
+												<a href="<?php echo get_permalink(); ?>"></a>
 												<?php
-											}
-										}
-										else
-										{
-											/*$banner_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );*/
-											$banner_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), '821x478' );
-											$banner_url = $banner_url[0];
-											?>
-											<div class="slide-item">
-												<div class="banner-img scroll-anim" data-anim="fade-up">
-													<img src="<?php echo $banner_url; ?>" alt="" />
-												</div>
+												if(!empty($image[0]))
+												{
+													?>
+													<img src="<?php echo $image[0]; ?>" alt="" />
+													<?php
+												}
+												?>
 											</div>
-											<?php
-										}?>
+											<div class="desc-heading mgt-25">
+												<?php the_title(); ?>
+											</div>
+										</div>
 									</div>
 									<?php
-									if($has_slider == true)
+									$x++;
+									if($x == $cols)
 									{
+										$x = 0;
 										?>
-										<div class="prev"></div>
+												</div>
+											</div>
+										</div>
 										<?php
-									}?>
-								</div>
-							</div>							
-							<div class="listing-box listing-row">
-								<div class="follower">
-									<h2 class="ucase"><?php echo @$post_meta['_crb_explore_instagram_heading'][0]; ?></h2>
-								</div>
-								<div class="feed_insta">
-									<div id="instafeed"></div>
-								</div>
-								<?php
-								$limit 			= @$post_meta['_crb_explore_instagram_limit'][0];
-								$userid 		= @$post_meta['_crb_explore_instagram_userid'][0];
-								$access_token 	= @$post_meta['_crb_explore_instagram_access_token'][0];
-								if(empty($limit) || $limit < 1)
-								{
-									$limit = 6;
+									}
 								}
-								if(!empty($limit) && !empty($userid) && !empty($access_token))
-								{
-									?>
-									<script type="text/javascript">
-										userFeed = new Instafeed({
-									        get:'user',
-											limit:"<?php echo $limit; ?>",
-									        userId:"<?php echo $userid; ?>",
-									        accessToken:"<?php echo $access_token; ?>",
-											resolution: 'standard_resolution'
-									    });
-									    userFeed.run();
-									</script>
-									<?php
-								}
+								wp_reset_postdata();
 								?>
 							</div>
-						</div>
+							<?php
+						}
+						?>
 					</div>
 				</div>
 			</div>
