@@ -470,8 +470,8 @@ Container::make('post_meta', 'Small Map')
     ));
 
 Container::make('post_meta', 'Page Small Heading')
-    ->show_on_post_type('leeu-discover')
-    ->show_on_template(array('template-founder-and-team.php'))
+    ->show_on_post_type(array('leeu-discover','page'))
+    ->show_on_template(array('template-founder-and-team.php', 'template-accolades.php'))
     ->add_fields(array(
         Field::make('text', 'crb_page_small_heading', 'Page Small Heading (Overwrite Default Heading)'),
     ));
@@ -532,6 +532,20 @@ Container::make('post_meta', 'Location Page Content')
                 )
             )),
 
+        )),
+    ));
+
+Container::make('post_meta', 'Accolades')
+    ->show_on_post_type('page')
+    ->show_on_template(array('template-accolades.php'))
+    ->add_fields(array(
+        Field::make('complex', 'crb_accolades', 'Accolades')->add_fields(array(
+            Field::make('complex', 'crb_accolade_images', 'Accolade Images')->add_fields(array(
+                Field::make('image', 'crb_image', 'Image')->help_text('(Image Dimensions (WxH): 821 x 478)'),
+            )),
+            Field::make('text', 'crb_accolade_title', 'Accolade Title')->set_width('50'),
+            Field::make('text', 'crb_accolade_link_text', 'Accolade Link Text')->set_width('20'),
+            Field::make('text', 'crb_accolade_link', 'Accolade Link')->set_width('30'),
         )),
     ));
 

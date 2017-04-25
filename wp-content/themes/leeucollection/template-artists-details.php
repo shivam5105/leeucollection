@@ -20,7 +20,14 @@ get_header(); ?>
 					<div class="col-2 rm-pad"></div>
 					<div class="col-8 rm-pad">
 						<div class="text-center">
-							<div class="leeu-text ucase" itemprop="legalName"><?php echo $top_most_parent_post->post_title;?></div>
+							<div class="leeu-text ucase" itemprop="legalName">
+								<?php
+								if($top_most_parent_post)
+								{
+									echo $top_most_parent_post->post_title;
+								}
+								?>
+							</div>
 							<h1 class="ucase" itemprop="name"><?php echo $page_heading; ?></h1>
 						</div>
 					</div>

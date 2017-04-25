@@ -126,7 +126,7 @@ get_header(); ?>
 											<h2 class="ucase"><?php echo $section_heading; ?></h2>
 										</div>
 										<div class="text-right page-link"></div>
-										<div class="<?php echo $slider_wrapper_class; ?>  <?php if(!$has_slider){ echo "no_slider"; }?>">
+										<div class="<?php echo $slider_wrapper_class; ?> <?php if(!$has_slider){ echo "no_slider"; }?>">
 											<?php
 											if($has_slider)
 											{
