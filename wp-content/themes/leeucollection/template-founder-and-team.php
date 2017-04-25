@@ -161,10 +161,21 @@ get_header(); ?>
 									$member_image = wp_get_attachment_image_src($member_image, '411x258');
 									$member_image = $member_image[0];
 								}
+								$col6_class 		= "pdr-0";
+								$scroll_anim_class 	= "";
+								$scroll_anim_attr 	= "";
+								$art_cat_class 		= "art_cat";
+								if($x == 1)
+								{
+									$col6_class 		= "pdl-0";
+									$scroll_anim_class 	= "scroll-anim animate-custom";
+									$scroll_anim_attr 	= 'data-anim="fade-up" data-anim-delay="100"';
+									$art_cat_class 		= "art_cat2";
+								}
 								?>
-								<div class="col-6 pdl-0">
-									<div class="scroll-anim animate-custom" data-anim="fade-up" data-anim-delay="100">
-										<div class="art_cat2 full-img">
+								<div class="col-6 <?php echo $col6_class; ?>">
+									<div class="<?php echo $scroll_anim_class; ?>" <?php echo $scroll_anim_attr; ?>>
+										<div class="<?php echo $art_cat_class; ?> full-img">
 											<?php
 											if(!empty($member_image))
 											{
