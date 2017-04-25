@@ -1,8 +1,7 @@
 <?php
 /*
-Template Name: Artists Details
+Template Name: Founder & Team
 */
-
 get_header(); ?>
 	<?php
 	$post_id 	= $post->ID;
@@ -20,7 +19,22 @@ get_header(); ?>
 					<div class="col-2 rm-pad"></div>
 					<div class="col-8 rm-pad">
 						<div class="text-center">
-							<div class="leeu-text ucase" itemprop="legalName"><?php echo $top_most_parent_post->post_title;?></div>
+							<div class="leeu-text ucase" itemprop="legalName">
+								<?php
+								$page_small_heading = @$post_meta['_crb_page_small_heading'][0];
+								if(!empty($page_small_heading))
+								{
+									echo $page_small_heading;
+								}
+								else
+								{
+									if($top_most_parent_post)
+									{
+										echo $top_most_parent_post->post_title;
+									}
+								}
+								?>
+							</div>
 							<h1 class="ucase" itemprop="name"><?php echo $page_heading; ?></h1>
 						</div>
 					</div>
@@ -42,32 +56,7 @@ get_header(); ?>
 						</div>
 					</div>
 					<div class="col-8">
-						<div class="listing-box listing-row clearfix">
-							<div class="col-6 pdl-0">
-								<div class="anton">
-									<div class="grey_bg">
-										<?php
-										$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), '411x258' );
-										if(!empty($image[0]))
-										{
-											?>
-											<img src="<?php echo $image[0]; ?>" alt="" />
-											<?php
-										}
-										?>
-									</div>
-								</div>
-							</div>
-							<div class="col-6 pdr-0">
-								<div class="anton_paragaraph">
-									<p><?php echo $post->post_content; ?></p>
-								</div>
-								<div class="gallery_link">
-									<a href="#">LINK TO GALLERY</a>
-								</div>
-							</div>
-						</div>
-						<div class="listing-box listing-row mgb-0">
+						<div class="listing-box listing-row">
 							<?php
 							$has_slider = false;
 					    	$slider_data = carbon_get_post_meta($post->ID, "crb_slider_images", 'complex');
@@ -115,33 +104,94 @@ get_header(); ?>
 									}?>
 								</div>
 							</div>
+
 							<div class="row detail-row">
-								<div class="col-3">
-									<div class="desc-heading"><?php echo @$post_meta['_crb_slider_bottom_heading_1'][0]; ?></div>
-									<span class="anton_locat"><?php echo @$post_meta['_crb_slider_bottom_sub_heading_1'][0]; ?></span>
+								<div class="col-12">
+									<div class="the_founder ucase">
+										<h2><?php echo @$post_meta['_crb_founder_name'][0]; ?></h2>
+									</div>
+									<div class="leeu-text founder_txt">
+										<?php echo @$post_meta['_crb_text_under_founder_name'][0]; ?>
+									</div>
 								</div>
-								<div class="col-9">
-									<div class="desc-content"> 
-										<?php echo @$post_meta['_crb_slider_bottom_description_1'][0]; ?>
+							</div>
+							<div class="row detail-row">
+								<div class="col-6">
+									<div class="desc-content">
+										<p> 
+											<?php echo nl2br(@$post_meta['_crb_founder_description_left'][0]); ?>
+										</p>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="desc-content">
+										<p> 
+											<?php echo nl2br(@$post_meta['_crb_founder_description_right'][0]); ?>
+										</p>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="col-2">
-						<div class="map_img">
+
+						<div class="row detail-row">
+							<div class="col-12">
+								<div class="the_founder mgb-15 ucase">
+									<h2><?php echo @$post_meta['_crb_team_heading'][0]; ?></h2>
+								</div>
+							</div>
+						</div>
+						<div class="listing-box listing-row">
 							<?php
-							$map_image = @$post_meta['_crb_small_map_image'][0];
-							if($map_image)
+							$team_details = carbon_get_post_meta($post->ID, "crb_team_details", 'complex');
+							$cols = 2;
+							$x = 0;
+							foreach ($team_details as $team_key => $team)
 							{
-								$map_image = wp_get_attachment_image_src($map_image, '193x129');
-								$map_image = $map_image[0];
+								if($x == 0)
+								{
+									?>
+									<div class="scroll-anim full_img animate-custom" data-anim="fade-up">
+										<div class="row detail-row">
+											<div class="mgb-30 clearfix">
+									<?php
+								}
+								$member_image = $team['crb_member_image'];
+								if($member_image)
+								{
+									$member_image = wp_get_attachment_image_src($member_image, '411x258');
+									$member_image = $member_image[0];
+								}
+								?>
+								<div class="col-6 pdl-0">
+									<div class="scroll-anim animate-custom" data-anim="fade-up" data-anim-delay="100">
+										<div class="art_cat2 full-img">
+											<?php
+											if(!empty($member_image))
+											{
+												?>
+												<img src="<?php echo $member_image; ?>" alt="" />
+												<?php
+											}
+											?>
+										</div>
+										<div class="desc-heading mgt-25">
+											<?php echo $team['crb_member_name']; ?>
+										</div>
+									</div>
+								</div>
+								<?php
+								$x++;
+								if($x == $cols)
+								{
+									$x = 0;
+									?>
+											</div>
+										</div>
+									</div>
+									<?php
+								}
 							}
 							?>
-							<a href="<?php echo @$post_meta['_crb_small_map_link'][0]; ?>" target="_blank"><img src="<?php echo $map_image; ?>" alt="map_controll"/></a>
-							<div class="locator">
-								<a href="<?php echo @$post_meta['_crb_small_map_link'][0]; ?>" target="_blank" class="ucase"><?php echo @$post_meta['_crb_small_map_heading'][0]; ?></a>
-							</div>
 						</div>
 					</div>
 				</div>
