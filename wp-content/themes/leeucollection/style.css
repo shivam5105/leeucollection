@@ -139,6 +139,10 @@ h2,h1.ucase{
     letter-spacing: 0.057em;
     line-height: 1.08;   
 }
+h1.ucase-h1
+{
+    text-transform: uppercase;
+}
 [class*="col-"] {
     float: left;
     padding:0 15px;
