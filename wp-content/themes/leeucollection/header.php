@@ -35,7 +35,11 @@ $page_template_file = basename(get_page_template());
 				if($hotel_id)
 				{
 					$top_most_parent_post = ($hotel_id == false) ? false : get_post($hotel_id);
-					$hotel_location = get_hotel_location_list($top_most_parent_post->ID);
+					$hotel_location = "";
+					if($top_most_parent_post)
+					{
+						$hotel_location = get_hotel_location_list($top_most_parent_post->ID);
+					}
 				}
 				else
 				{
