@@ -1256,3 +1256,10 @@ function left_sidebar_nav_not_hotel($exclude_posts, $post_type, $post_id = 0, $d
 		echo "</ul>";
 	}
 }
+function my_wpcf7_dropdown_form($html)
+{
+	$text = 'Select an option';
+	$html = str_replace('---', $text, $html);
+	return $html;
+}
+add_filter('wpcf7_form_elements', 'my_wpcf7_dropdown_form');

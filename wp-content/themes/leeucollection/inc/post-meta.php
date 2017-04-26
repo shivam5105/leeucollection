@@ -549,6 +549,20 @@ Container::make('post_meta', 'Accolades')
         )),
     ));
 
+Container::make('post_meta', 'Slider')
+    ->show_on_post_type('hotel')
+    ->show_on_template(array('template-meetings-events.php'))
+    ->add_fields(array(
+        Field::make('complex', 'crb_section_slider', 'Slider')->add_fields(array(
+            Field::make('image', 'crb_section_slide_image', 'Image')->help_text('(Image Dimensions (WxH): 821 x 478)')->set_width('20'),
+            Field::make('textarea', 'crb_section_slide_title', 'Title')->set_width('25'),
+            Field::make('textarea', 'crb_section_slide_desc', 'Small Description')->set_width('55'),
+        )),
+        Field::make('text', 'crb_form_heading', 'Form Heading'),
+    ));
+
+
+
 /*
 //Slider Info
 

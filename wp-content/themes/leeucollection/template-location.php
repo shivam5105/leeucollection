@@ -4,12 +4,14 @@ Template Name: Location
 */
 get_header(); ?>
 	<?php
-	$post_id = $post->ID;
-	$hotel_id 		= get_hotel_id($post_id);
-    $post_meta 		= ( $post ) ? get_post_meta( $post->ID ) : null;
+	the_post();
+	$post_id 	= $post->ID;
+	$hotel_id 	= get_hotel_id($post_id);
+    $post_meta 	= ( $post ) ? get_post_meta( $post->ID ) : null;
     
 	$top_most_parent_post = ($hotel_id == false) ? false : get_post($hotel_id);
 	$hotel_location = @$post_meta['_crb_page_country'][0];
+
     ?>
     <section id="site-main">
 		<div class="container">
@@ -73,7 +75,7 @@ get_header(); ?>
 			<div class="intro-blurb scroll-anim" data-anim="fade-up">
 				<div class="col-10 col-centered">
 					<div class="text-center" itemprop="description">
-						<?php echo $post->post_content; ?>
+						<?php the_content(); ?>
 					</div>
 				</div>
 			</div>
@@ -195,7 +197,7 @@ get_header(); ?>
 											</div>
 											<div class="col-9">
 												<div class="desc-content"> 
-													<?php echo $section_desc; ?>
+													<?php echo nl2br($section_desc); ?>
 												</div>
 											</div>
 										</div>
