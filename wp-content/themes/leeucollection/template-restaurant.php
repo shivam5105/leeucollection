@@ -107,7 +107,7 @@ get_header(); ?>
 								<div class="row detail-row">
 									<div class="col-9">
 										<div class="desc-content"> 
-											<?php echo @$post_meta['_crb_slider_bottom_description'][0]; ?>
+											<?php echo nl2br(@$post_meta['_crb_slider_bottom_description'][0]); ?>
 										</div>
 									</div>
 									<div class="col-3">
@@ -145,7 +145,7 @@ get_header(); ?>
 									<div class="col-6">
 										<div class="leeu-text">Policy</div>
 										<div class="hotel-info-desc"> 
-											<?php echo $post_meta['_crb_policy'][0]; ?>
+											<?php echo nl2br($post_meta['_crb_policy'][0]); ?>
 										</div>
 									</div>
 								</div>																

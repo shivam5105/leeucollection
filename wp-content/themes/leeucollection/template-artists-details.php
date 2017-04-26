@@ -5,6 +5,7 @@ Template Name: Artists Details
 
 get_header(); ?>
 	<?php
+	the_post();
 	$post_id 	= $post->ID;
 	$hotel_id 	= get_hotel_id($post_id);
     $post_meta 	= ( $post ) ? get_post_meta( $post->ID ) : null;
@@ -67,7 +68,7 @@ get_header(); ?>
 							</div>
 							<div class="col-6 pdr-0">
 								<div class="anton_paragaraph">
-									<p><?php echo $post->post_content; ?></p>
+									<?php the_content(); ?>
 								</div>
 								<div class="gallery_link">
 									<a href="#">LINK TO GALLERY</a>
@@ -129,7 +130,7 @@ get_header(); ?>
 								</div>
 								<div class="col-9">
 									<div class="desc-content"> 
-										<?php echo @$post_meta['_crb_slider_bottom_description_1'][0]; ?>
+										<?php echo nl2br(@$post_meta['_crb_slider_bottom_description_1'][0]); ?>
 									</div>
 								</div>
 							</div>

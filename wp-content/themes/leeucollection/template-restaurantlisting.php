@@ -110,7 +110,7 @@ get_header(); ?>
 													<div class="col-11 col-centered">
 														<div class="inner-detail-content">
 															<div class="content-part">
-																<?php echo @$child_post_meta['_crb_short_description'][0]; ?>
+																<?php echo nl2br(@$child_post_meta['_crb_short_description'][0]); ?>
 															</div>
 															<ul class="list-inline linking-wrap">
 																<li class="see-more-link"><a href="<?php echo get_permalink($child_post_id); ?>" itemprop="url">SEE MORE</a></li>

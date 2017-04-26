@@ -108,7 +108,7 @@ get_header(); ?>
 									<div class="row detail-row">
 										<div class="col-12">
 											<div class="desc-content text-center"> 
-												<?php echo @$post_meta['_crb_short_description'][0]; ?>
+												<?php echo nl2br(@$post_meta['_crb_short_description'][0]); ?>
 											</div>
 										</div>
 									</div>
@@ -183,7 +183,7 @@ get_header(); ?>
 												</div>
 												<div class="col-9">
 													<div class="desc-content"> 
-														<?php echo $slide_desc; ?>
+														<?php echo nl2br($slide_desc); ?>
 													</div>
 												</div>
 											</div>

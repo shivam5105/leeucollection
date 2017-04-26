@@ -4,6 +4,7 @@ Template Name: Hotel Landing
 */
 get_header(); ?>
 	<?php
+	the_post();
 	$post_id = $post->ID;
 	$hotel_location = get_hotel_location_list($post_id);
 	$hotel_id 		= get_hotel_id($post_id);
@@ -73,7 +74,7 @@ get_header(); ?>
 			<div class="intro-blurb scroll-anim" data-anim="fade-up">
 				<div class="col-10 col-centered">
 					<div class="text-center" itemprop="description">
-						<?php echo $post->post_content; ?>
+						<?php the_content(); ?>
 					</div>
 				</div>
 			</div>
@@ -190,7 +191,7 @@ get_header(); ?>
 																</div>
 																<div class="col-9">
 																	<div class="desc-content"> 
-																		<?php echo $slide_desc; ?>
+																		<?php echo nl2br($slide_desc); ?>
 																	</div>
 																</div>
 															</div>
