@@ -305,11 +305,11 @@ function registerMyCustomPost()
 	$parent = new multiLevelCustomPosts($parentSlug, $labels, $args);
 
 	$labels = array(
-		"name" => "Restaurents",
-		"singular_name" => "Restaurent",
+		"name" => "Restaurants",
+		"singular_name" => "Restaurant",
 	);
 	$args = array(
-		"label" => "Restaurents",
+		"label" => "Restaurants",
 		"labels" => $labels,
 		'menu_position' => 6,
 		'show_in_admin_bar' => true,
@@ -323,7 +323,7 @@ function registerMyCustomPost()
 			"custom-fields" /*, "post-formats"*/
 		)
 	);
-	$parentSlug = "leeu-restaurents";
+	$parentSlug = "leeu-restaurants";
 	$parent = new multiLevelCustomPosts($parentSlug, $labels, $args);
 
 	/*$labels = array(
