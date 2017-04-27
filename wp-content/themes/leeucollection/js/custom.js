@@ -320,8 +320,10 @@ var Blank ={
 	rangePicker: function(){
 		$('.rangePicker').datepick({ 
 			rangeSelect: true,
+			pickerClass: 'noPrevNext mandatory',
 			showTrigger: '#calImg',
 			dateFormat: 'M d, yyyy',
+			minDate: new Date(new Date().getTime() + (24 * 60 * 60 * 1000)),
 		});
 	},
 	bookingPopupTabs: function(){
@@ -343,6 +345,13 @@ var Blank ={
 			$('.main_sec').fadeOut();
 		})
 	},
+	updatePopupBookTableButton: function(){
+		$('.popup-book-table-radio').click(function(){
+			var wrapper_id = $.trim($(this).attr('data-button-wrapper-id'));
+			$(".book_table_button_wrapper").hide();
+			$("#"+wrapper_id).show();
+		})
+	},
 }
 $(document).ready(function(){
 	Blank.common_init();
@@ -352,6 +361,7 @@ $(document).ready(function(){
 	Blank.bookingPopupTabs();
 	Blank.openBookingPopup();
 	Blank.closeBookingPopup();
+	Blank.updatePopupBookTableButton();
 	jQuery('#site-header #slide-menu').meanmenu({
 		meanScreenWidth: "1140",
 		meanMenuContainer : '#site-header',
