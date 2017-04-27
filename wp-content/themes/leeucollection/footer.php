@@ -190,7 +190,7 @@
 									'posts_per_page' => '-1',
 									'orderby' => 'menu_order',
 									'order' => 'ASC',
-									'post_type' => 'leeu-restaurents',
+									'post_type' => 'leeu-restaurants',
 									'post_parent' => '0',
 								);
 								$the_query = new WP_Query( $args );
