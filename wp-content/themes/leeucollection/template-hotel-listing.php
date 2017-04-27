@@ -112,9 +112,29 @@ get_header();
 						<div class="col-3 rm-pad">
 							<div class="form-item select-item first-item">
 								<select>
-									<option value="volvo">Select a hotel</option>
-									<option value="saab">Leeu Estate</option>
-									<option value="mercedes">Leeu House</option>
+									<option>Select a hotel</option>
+									<?php
+									$args = array(
+										'posts_per_page' => '-1',
+										'orderby' => 'menu_order',
+										'order' => 'ASC',
+										'post_type' => 'hotel',
+										'post_parent' => '0',
+									);
+
+									$the_query = new WP_Query( $args );
+									if($the_query->have_posts())
+									{
+										while($the_query->have_posts())
+										{
+											$the_query->the_post();
+											$hotel_name = get_the_title();
+											?>
+											<option value="<?php echo $hotel_name; ?>"><?php echo $hotel_name; ?></option>
+											<?php
+										}
+									}
+									?>
 								</select>
 							</div>
 						</div>
@@ -126,20 +146,28 @@ get_header();
 						<div class="col-2 rm-pad">
 							<div class="form-item select-item">
 								<select>
-									<option value="volvo">1 room</option>
-									<option value="saab">2 room</option>
-									<option value="mercedes">3 room</option>
-									<option value="audi">4 room</option>
+									<?php
+									for ($i = 1; $i <= 10; $i++)
+									{
+										?>
+										<option><?php echo $i; ?> room<?php if($i > 1){ echo "s"; } ?></option>
+										<?php
+									}
+									?>
 								</select>
 							</div>
 						</div>
 						<div class="col-2 rm-pad">
 							<div class="form-item select-item">
 								<select>
-									<option value="volvo">2 guests</option>
-									<option value="saab">3 guests</option>
-								option value="mercedes">4 guests</option>
-								option value="audi">5 guests</option>
+									<?php
+									for ($i = 1; $i <= 10; $i++)
+									{
+										?>
+										<option><?php echo $i; ?> guest<?php if($i > 1){ echo "s"; } ?></option>
+										<?php
+									}
+									?>
 								</select>
 							</div>
 						</div>

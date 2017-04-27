@@ -304,6 +304,28 @@ function registerMyCustomPost()
 	$parentSlug = "leeu-discover";
 	$parent = new multiLevelCustomPosts($parentSlug, $labels, $args);
 
+	$labels = array(
+		"name" => "Restaurents",
+		"singular_name" => "Restaurent",
+	);
+	$args = array(
+		"label" => "Restaurents",
+		"labels" => $labels,
+		'menu_position' => 6,
+		'show_in_admin_bar' => true,
+		/*'taxonomies' 	=> array('category'),*/
+		"supports" => array(
+			"title",
+			"revisions",
+			"thumbnail",
+			"editor",
+			"page-attributes",
+			"custom-fields" /*, "post-formats"*/
+		)
+	);
+	$parentSlug = "leeu-restaurents";
+	$parent = new multiLevelCustomPosts($parentSlug, $labels, $args);
+
 	/*$labels = array(
 	"name"          => "Lessons",
 	"singular_name" => "Lesson",
