@@ -562,13 +562,11 @@ Container::make('post_meta', 'Slider')
     ));
 
 Container::make('post_meta', 'Restaurant Details')
-    ->show_on_post_type('leeu-restaurents')
+    ->show_on_post_type('leeu-restaurants')
     ->add_fields(array(
-        Field::make('text', 'crb_restaurant_location_popup', 'Location (for Popup)')->help_text('(This will come next to restaurent name in booking popup)'),
+        Field::make('text', 'crb_restaurant_location_popup', 'Location (for Popup)')->help_text('(This will come next to restaurant name in booking popup)'),
         Field::make('text', 'crb_booking_buton_link', "Book A Table - 'connectionid'"),
     ));
-
-
 
 /*
 //Slider Info
