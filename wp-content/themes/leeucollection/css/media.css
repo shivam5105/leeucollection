@@ -246,6 +246,10 @@
 	}
 	.listing-box .text-center h2 {
 	    margin-bottom: 20px;
+	}
+	/**restaurant template**/
+	.hotel-template-template-restaurant	.side-nav-wrap{
+		display: none;
 	}	
 }
 @media only screen and (max-width: 767px){
