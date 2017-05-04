@@ -50,4 +50,9 @@ if(!empty($post) && $post->post_parent > 0)
 }
 $post_id_for_nav = ($top_most_parent_post == false) ? $post_id : $top_most_parent_post->ID;
 left_sidebar_nav($post_id_for_nav,$post_id,$ancestors_ids);
+
+if($post->post_type != 'hotel' && $post->post_type != 'page')
+{
+	left_sidebar_nav_not_hotel($post_id_for_nav, $post->post_type);
+}
 ?>

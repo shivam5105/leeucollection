@@ -87,8 +87,8 @@ Container::make('post_meta', 'Short Description')
 
 //Images Slider
 Container::make('post_meta', 'Slider Images')
-    ->show_on_post_type('hotel')
-    ->show_on_template(array('template-hotel.php','template-room.php','template-restaurant.php','template-facilities.php','template-gym.php','template-spa-wellness.php','template-explore.php'))
+    ->show_on_post_type(array('hotel', 'leeu-discover'))
+    ->show_on_template(array('template-hotel.php','template-room.php','template-restaurant.php','template-facilities.php','template-gym.php','template-spa-wellness.php','template-explore.php','template-artists-details.php', 'template-founder-and-team.php', 'template-location.php'))
     ->add_fields(array(
         Field::make('complex', 'crb_slider_images', '')->add_fields(array(
             Field::make('image', 'crb_slide_image', 'Slide Image')->help_text('(Image Dimensions (WxH): 1240 x 600)'),
@@ -449,8 +449,126 @@ Container::make('post_meta', 'Instagram Feed Details')
         Field::make('text', 'crb_explore_instagram_userid', 'Instagram User-ID')->set_width('30'),
         Field::make('text', 'crb_explore_instagram_access_token', 'Instagram Access Token')->set_width('50'),
     ));
-/*
 
+Container::make('post_meta', 'Slider Bottom Info')
+    ->show_on_post_type('leeu-discover')
+    ->show_on_template(array('template-artists-details.php'))
+    ->add_fields(array(
+        Field::make('text', 'crb_slider_bottom_heading_1', 'Slider Heading')->help_text('This will come after slider (on bottom-left of slider).')->set_width('20'),
+        Field::make('text', 'crb_slider_bottom_sub_heading_1', 'Slider Sub-Heading')->help_text('This will come under "Slider Heading".')->set_width('20'),
+        Field::make('textarea', 'crb_slider_bottom_description_1', 'Slider Description')->help_text('This will come after slider (on bottom-right of slider).')->set_width('60'),
+    ));
+
+//Maps image & link
+Container::make('post_meta', 'Small Map')
+    ->show_on_post_type('leeu-discover')
+    ->show_on_template(array('template-artists-details.php'))
+    ->add_fields(array(
+        Field::make('text', 'crb_small_map_heading', 'Map Heading')->set_width('30'),
+        Field::make('text', 'crb_small_map_link', 'Map Link')->set_width('40'),
+        Field::make('image', 'crb_small_map_image', 'Map Image')->help_text('(Image Dimensions (WxH): 193 x 129)')->set_width('30'),
+    ));
+
+Container::make('post_meta', 'Page Small Heading')
+    ->show_on_post_type(array('leeu-discover','page'))
+    ->show_on_template(array('template-founder-and-team.php', 'template-accolades.php'))
+    ->add_fields(array(
+        Field::make('text', 'crb_page_small_heading', 'Page Small Heading (Overwrite Default Heading)'),
+    ));
+
+//Founder & Team Page
+Container::make('post_meta', 'Founder & Team')
+    ->show_on_post_type('leeu-discover')
+    ->show_on_template(array('template-founder-and-team.php'))
+    ->add_fields(array(
+        Field::make('text', 'crb_founder_name', 'Founder Name')->set_width('50'),
+        Field::make('text', 'crb_text_under_founder_name', 'Text Under Founder Name')->set_width('50'),
+        Field::make('textarea', 'crb_founder_description_left', 'Description (Left)')->set_width('50'),
+        Field::make('textarea', 'crb_founder_description_right', 'Description (Right)')->set_width('50'),
+        Field::make('text', 'crb_team_heading', 'Team Heading'),
+        Field::make('complex', 'crb_team_details', 'Team Details')->add_fields(array(
+            Field::make('text', 'crb_member_name', 'Team Member Name')->set_width('50'),
+            Field::make('image', 'crb_member_image', 'Team Member Image')->help_text('(Image Dimensions (WxH): 411 x 258)')->set_width('50'),
+        )),
+    ));
+
+//Location Detail Page
+Container::make('post_meta', 'Location Page Content')
+    ->show_on_post_type('leeu-discover')
+    ->show_on_template(array('template-location.php'))
+    ->add_fields(array(
+        Field::make('text', 'crb_page_country', 'Country Name'),
+        Field::make('complex', 'crb_location_sections', 'Content Sections')->add_fields(array(
+            Field::make('text', 'crb_section_heading', 'Section Heading')->set_width('50'),
+            Field::make('complex', 'crb_section_slider', 'Section Slider')->add_fields(array(
+                Field::make('image', 'crb_slide_image', 'Image')->help_text('(Image Dimensions (WxH): 821 x 478)')->set_width('50'),
+            )),
+
+            Field::make('radio', 'crb_section_show_links', 'Show Links?')
+                ->add_options(array(
+                    'yes' => 'Yes',
+                    'no' => 'No',
+                ))->set_default_value('no'),
+
+            Field::make('text', 'crb_section_sub_heading', 'Slider Bottom Heading')->set_width('50')->set_conditional_logic(array(
+                'relation' => 'AND', // Optional, defaults to "AND"
+                array(
+                    'field' => 'crb_section_show_links',
+                    'value' => 'no', // Optional, defaults to "". Should be an array if "IN" or "NOT IN" operators are used.
+                    'compare' => '=', // Optional, defaults to "=". Available operators: =, <, >, <=, >=, IN, NOT IN
+                )
+            )),
+            Field::make('textarea', 'crb_section_description', 'Slider Bottom Description')->set_width('50'),
+
+            Field::make('complex', 'crb_section_links_details', 'Section Links Details')->add_fields(array(
+                Field::make('text', 'crb_link_text', 'Link Text')->set_width('50'),
+                Field::make('text', 'crb_link_url', 'Link Url')->set_width('50'),
+            ))->set_conditional_logic(array(
+                'relation' => 'AND', // Optional, defaults to "AND"
+                array(
+                    'field' => 'crb_section_show_links',
+                    'value' => 'yes', // Optional, defaults to "". Should be an array if "IN" or "NOT IN" operators are used.
+                    'compare' => '=', // Optional, defaults to "=". Available operators: =, <, >, <=, >=, IN, NOT IN
+                )
+            )),
+
+        )),
+    ));
+
+Container::make('post_meta', 'Accolades')
+    ->show_on_post_type('page')
+    ->show_on_template(array('template-accolades.php'))
+    ->add_fields(array(
+        Field::make('complex', 'crb_accolades', 'Accolades')->add_fields(array(
+            Field::make('complex', 'crb_accolade_images', 'Accolade Images')->add_fields(array(
+                Field::make('image', 'crb_image', 'Image')->help_text('(Image Dimensions (WxH): 821 x 478)'),
+            )),
+            Field::make('text', 'crb_accolade_title', 'Accolade Title')->set_width('50'),
+            Field::make('text', 'crb_accolade_link_text', 'Accolade Link Text')->set_width('20'),
+            Field::make('text', 'crb_accolade_link', 'Accolade Link')->set_width('30'),
+        )),
+    ));
+
+Container::make('post_meta', 'Slider')
+    ->show_on_post_type('hotel')
+    ->show_on_template(array('template-meetings-events.php'))
+    ->add_fields(array(
+        Field::make('complex', 'crb_section_slider', 'Slider')->add_fields(array(
+            Field::make('image', 'crb_section_slide_image', 'Image')->help_text('(Image Dimensions (WxH): 821 x 478)')->set_width('20'),
+            Field::make('textarea', 'crb_section_slide_title', 'Title')->set_width('25'),
+            Field::make('textarea', 'crb_section_slide_desc', 'Small Description')->set_width('55'),
+        )),
+        Field::make('text', 'crb_form_heading', 'Form Heading'),
+    ));
+
+Container::make('post_meta', 'Restaurant Details')
+    ->show_on_post_type('leeu-restaurants')
+    ->add_fields(array(
+        Field::make('text', 'crb_restaurant_location_popup', 'Location (for Popup)')->help_text('(This will come next to restaurant name in booking popup)'),
+        Field::make('text', 'crb_booking_buton_link', "Book A Table - 'connectionid'"),
+    ));
+
+/*
 //Slider Info
 
 

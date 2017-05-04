@@ -106,10 +106,28 @@
 								<div class="at extext pdb-20">AT</div>
 								<select class="lyon_font mgb-30">
 									<option>Select a hotel</option>
-									<option>leeu estates</option>
-									<option>leeu house</option>
-									<option>le quartier français</option>
-									<option>linthwaite house</option>
+									<?php
+									$args = array(
+										'posts_per_page' => '-1',
+										'orderby' => 'menu_order',
+										'order' => 'ASC',
+										'post_type' => 'hotel',
+										'post_parent' => '0',
+									);
+
+									$the_query = new WP_Query( $args );
+									if($the_query->have_posts())
+									{
+										while($the_query->have_posts())
+										{
+											$the_query->the_post();
+											$hotel_name = get_the_title();
+											?>
+											<option value="<?php echo $hotel_name; ?>"><?php echo $hotel_name; ?></option>
+											<?php
+										}
+									}
+									?>
 								</select>
 							</div>
 							<div class="choose_date mgb-30">
@@ -120,25 +138,27 @@
 								<div class="roomselect">
 									<div class="extext pdb-20">ROOMS</div>
 									<select class="lyon_font mgb-30">
-										<option>1 room</option>
-										<option>2 room</option>
-										<option>3 room</option>
-										<option>4 room</option>
-										<option>5 room</option>
-										<option>6 room</option>
-										<option>7 room</option>
+										<?php
+										for ($i = 1; $i <= 10; $i++)
+										{
+											?>
+											<option><?php echo $i; ?> room<?php if($i > 1){ echo "s"; } ?></option>
+											<?php
+										}
+										?>
 									</select>
 								</div>
 								<div class="roomselect mgl-18">
 									<div class="extext pdb-20">GUESTS</div>
 									<select class="lyon_font mgb-30">
-										<option>2 guests</option>
-										<option>3 guests</option>
-										<option>4 guests</option>
-										<option>5 guests</option>
-										<option>6 guests</option>
-										<option>7 guests</option>
-										<option>8 guests</option>
+										<?php
+										for ($i = 1; $i <= 10; $i++)
+										{
+											?>
+											<option><?php echo $i; ?> guest<?php if($i > 1){ echo "s"; } ?></option>
+											<?php
+										}
+										?>
 									</select>
 								</div>
 							</div>
@@ -164,44 +184,61 @@
 					<div class="pops_on">
 						<div class="all_cat pd-l-r">
 							<div class="booktable">
-								<div class="rest_cat extext pdb-20"> SELECT THE RESTAURANT</div>
-								<div class="choose_rest lyon_font mgb-15"> 
-									<input type="radio" id="radio-2-1" name="radio-2-set" class="regular-radio" />
-									<label for="radio-2-1"> <span> </span> The Dining Room </label>
-									<label for="radio-2-1"> <span> </span>	<span class="extext"> AT LEEU ESTATES </span> </label>	 					  
-								</div>
-								<div class="choose_rest lyon_font mgb-15"> 
-									<input type="radio" id="radio-2-2" name="radio-2-set" class="regular-radio" />
-									<label for="radio-2-2"><span> </span> The conservatory </label>
-									<label for="radio-2-2"> <span> </span>  <span class="extext"> AT LEEU HOUSE </span> </label>							  
-								</div>
-								<div class="choose_rest lyon_font mgb-15"> 
-									<input type="radio" id="radio-2-3" name="radio-2-set" class="regular-radio" />
-									<label for="radio-2-3"> <span> </span> The Garden Room </label>
-									<label for="radio-2-3"> <span> </span>  <span class="extext"> AT LEEU HOUSE </span> </label>							  
-								</div>
-								<div class="choose_rest lyon_font mgb-15"> 
-									<input type="radio" id="radio-2-4" name="radio-2-set" class="regular-radio" />
-									<label for="radio-2-4"> <span> </span> The Bar </label>
-									<label for="radio-2-4"> <span> </span>	<span class="extext"> AT LQF </span>		 </label>					  
-								</div>
-								<div class="choose_rest lyon_font mgb-15"> 
-									<input type="radio" id="radio-2-5" name="radio-2-set" class="regular-radio" />
-									<label for="radio-2-5"> <span> </span>Marigold</label>
-									<label for="radio-2-5"> <span> </span>	<span class="extext"> AUTHENTIC INDIAN </span>	</label>						  
-								</div>
-								<div class="choose_rest lyon_font mgb-15"> 
-									<input type="radio" id="radio-2-6" name="radio-2-set" class="regular-radio" />
-									<label for="radio-2-6"> <span> </span> Tuk Tuk </label>
-									<label for="radio-2-6"> <span> </span> <span class="extext"> MICROBREWERY  & TAQUERIA  </span>	 </label>	 					  
-								</div>
-								<div class="choose_rest lyon_font mgb-15"> 
-									<input type="radio" id="radio-2-7" name="radio-2-set" class="regular-radio" />
-									<label for="radio-2-7"> <span> </span>Linthwaite House Room</label>
-								</div>
-								<div class="book_table"> 
-									<a href="#" id="booktable-popup-0" class="booktable" data-connection-id="ZA-RES-THELIVINGROOMATLEQUARTIERFRANCAIS_283714:67970">BOOK A TABLE </a>
-								</div>
+								<div class="rest_cat extext pdb-20">SELECT THE RESTAURANT</div>
+								<?php
+								$args = array(
+									'posts_per_page' => '-1',
+									'orderby' => 'menu_order',
+									'order' => 'ASC',
+									'post_type' => 'leeu-restaurants',
+									'post_parent' => '0',
+								);
+								$the_query = new WP_Query( $args );
+								$loop = 0;
+								if($the_query->have_posts())
+								{
+									while($the_query->have_posts())
+									{
+										$loop++;
+										$the_query->the_post();
+										$hotel_name = get_the_title();
+										$restaurant_location_popup = carbon_get_post_meta($post->ID, "crb_restaurant_location_popup");
+										$checked = "";
+										if($loop == 1)
+										{
+											$checked = "checked='checked'";
+										}
+										?>
+										<div class="choose_rest lyon_font mgb-15"> 
+											<input type="radio" id="radio-res-<?php echo $loop; ?>" data-button-wrapper-id="book_table_button_<?php echo $loop; ?>" name="radio-res" class="regular-radio popup-book-table-radio" <?php echo $checked; ?> />
+											<label for="radio-res-<?php echo $loop; ?>"><span></span><?php echo $hotel_name; ?></label>
+											<label for="radio-res-<?php echo $loop; ?>"><span></span><span class="extext"><?php echo $restaurant_location_popup; ?></span></label>
+										</div>
+										<?php
+									}
+								}
+								$loop = 0;
+								if($the_query->have_posts())
+								{
+									while($the_query->have_posts())
+									{
+										$loop++;
+										$the_query->the_post();
+										$hotel_name = get_the_title();
+										$booking_buton_link = carbon_get_post_meta($post->ID, "crb_booking_buton_link");
+										$hide = "style='display: none;'";
+										if($loop == 1)
+										{
+											$hide = "";
+										}
+										?>
+										<div class="book_table book_table_button_wrapper" id="book_table_button_<?php echo $loop; ?>" <?php echo $hide; ?>>
+											<a href="#" id="booktable-popup-<?php echo $loop; ?>" class="booktable" data-connection-id="<?php echo $booking_buton_link; ?>">BOOK A TABLE </a>
+										</div>
+										<?php
+									}
+								}
+								?>
 							</div>
 						</div>
 					</div>
@@ -215,10 +252,28 @@
 								<div class="at extext pdb-20">AT</div>
 								<select class="lyon_font mgb-30">
 									<option>Select a hotel</option>
-									<option>leeu estates</option>
-									<option>leeu house</option>
-									<option>le quartier français</option>
-									<option>linthwaite house</option>
+									<?php
+									$args = array(
+										'posts_per_page' => '-1',
+										'orderby' => 'menu_order',
+										'order' => 'ASC',
+										'post_type' => 'hotel',
+										'post_parent' => '0',
+									);
+
+									$the_query = new WP_Query( $args );
+									if($the_query->have_posts())
+									{
+										while($the_query->have_posts())
+										{
+											$the_query->the_post();
+											$hotel_name = get_the_title();
+											?>
+											<option value="<?php echo $hotel_name; ?>"><?php echo $hotel_name; ?></option>
+											<?php
+										}
+									}
+									?>
 								</select>
 							</div>
 							<div class="choose_date mgb-30">
@@ -227,7 +282,7 @@
 							</div>
 							<div class="number_of_people mgb-30">
 								<div class="at extext pdb-20">NUMBER OF PEOPLE</div>
-								<input type="number" name="quantity" class="lyon_font" placeholder="1room">
+								<input type="number" name="quantity" class="lyon_font" min="1" placeholder="1 room">
 							</div>
 							<div class="info_msg">
 								<div class="at extext pdb-20">MESSAGE</div>
@@ -243,16 +298,6 @@
 			</div>
 		</div>
 	</div>
-	<style type="text/css">
-		#google_translate_element
-		{
-			margin-top: 30px;
-		}
-		.goog-te-gadget-simple
-		{
-    		background: #ebe7e2 !important;
-		}
-	</style>
 	<script type="text/javascript">
 		function googleTranslateElementInit()
 		{

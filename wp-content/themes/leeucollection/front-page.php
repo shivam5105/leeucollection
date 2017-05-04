@@ -363,7 +363,7 @@ get_header();
 											<img src="<?php echo $restaurant_logo_url; ?>" alt="">
 										</div>
 										<div class="content-part">
-											<?php echo $restaurant_description; ?>
+											<?php echo nl2br($restaurant_description); ?>
 										</div>
 										<ul class="list-inline linking-wrap">
 											<?php
@@ -432,7 +432,7 @@ get_header();
 										<div class="col-11 col-centered">
 											<div class="inner-detail-content">
 												<div class="content-part">
-													<?php echo @$post_meta['_crb_two_cols_section_1_description_left'][0];?>
+													<?php echo nl2br(@$post_meta['_crb_two_cols_section_1_description_left'][0]);?>
 												</div>
 												<ul class="list-inline linking-wrap">
 													<?php
@@ -480,7 +480,7 @@ get_header();
 										<div class="col-11 col-centered">
 											<div class="inner-detail-content">
 												<div class="content-part">
-													<?php echo @$post_meta['_crb_two_cols_section_1_description_right'][0];?>
+													<?php echo nl2br(@$post_meta['_crb_two_cols_section_1_description_right'][0]);?>
 												</div>
 												<ul class="list-inline linking-wrap">
 													<?php
@@ -599,7 +599,7 @@ get_header();
 											<div class="desc-heading"><?php echo $wine_name; ?></div>
 										</div>
 										<div class="content-part">
-											<?php echo $wine_description; ?>
+											<?php echo nl2br($wine_description); ?>
 										</div>
 										<ul class="list-inline linking-wrap">
 											<?php
@@ -660,7 +660,7 @@ get_header();
 										<div class="col-11 col-centered">
 											<div class="inner-detail-content">
 												<div class="content-part">
-													<?php echo @$post_meta['_crb_two_cols_section_2_description_left'][0];?>
+													<?php echo nl2br(@$post_meta['_crb_two_cols_section_2_description_left'][0]);?>
 												</div>
 												<ul class="list-inline linking-wrap">
 													<?php
@@ -706,7 +706,7 @@ get_header();
 										<div class="col-11 col-centered">
 											<div class="inner-detail-content">
 												<div class="content-part">
-													<?php echo @$post_meta['_crb_two_cols_section_2_description_right'][0];?>
+													<?php echo nl2br(@$post_meta['_crb_two_cols_section_2_description_right'][0]);?>
 												</div>
 												<ul class="list-inline linking-wrap">
 													<?php

@@ -12,7 +12,6 @@ get_header(); ?>
 
 	$page_heading = (@$post_meta['_crb_page_heading'][0]) ? $post_meta['_crb_page_heading'][0] : $post->post_title;
     ?>
-
 	<section id="site-main">
 		<div class="container">
 			<div class="leeu-heading-wrap scroll-anim" data-anim="fade-up">
@@ -111,7 +110,7 @@ get_header(); ?>
 									</div>
 									<div class="col-9">
 										<div class="desc-content"> 
-											<?php echo @$post_meta['_crb_slider_bottom_description'][0]; ?>
+											<?php echo nl2br(@$post_meta['_crb_slider_bottom_description'][0]); ?>
 										</div>
 									</div>
 								</div>
@@ -135,7 +134,7 @@ get_header(); ?>
 									<div class="col-9">
 										<div class="leeu-text"> SPECIAL FEATURES</div>
 										<div class="desc-content desc-content-two-col" itemprop="amenityFeature"> 
-											<?php echo @$post_meta['_crb_special_feature'][0]; ?>
+											<?php echo nl2br(@$post_meta['_crb_special_feature'][0]); ?>
 										</div>
 									</div>
 								</div>
