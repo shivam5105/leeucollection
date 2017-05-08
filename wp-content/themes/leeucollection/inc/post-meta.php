@@ -237,7 +237,7 @@ Container::make('post_meta', 'Content Section')
 //Home Page && Hotel Listing
 Container::make('post_meta', 'Header Slider')
     ->show_on_post_type('page')
-    ->show_on_template(array('front-page.php', 'template-hotel-listing.php' , 'template-restaurantlisting.php'))
+    ->show_on_template(array('front-page.php', 'template-hotel-listing.php' , 'template-restaurantlisting.php','template-discover.php'))
     ->add_fields(array(
         Field::make('complex', 'crb_header_images', '')->add_fields(array(
             Field::make('image', 'crb_header_image', 'Header Image')->help_text('(Image Dimensions (WxH): 1240 x 600)'),
@@ -282,7 +282,6 @@ Container::make('post_meta', 'Restaurants')
     ->show_on_template(array('front-page.php'))
     ->add_fields(array(
         Field::make('text', 'crb_restaurant_section_heading', 'Heading'),
-
         Field::make('complex', 'crb_home_restaurants', '')->add_fields(array(
             Field::make('text', 'crb_restaurant_name', 'Restaurant Name'),
             Field::make('image', 'crb_restaurant_logo', 'Restaurant Logo Image')->set_width('50'),            
@@ -595,6 +594,25 @@ Container::make('post_meta', 'Restaurant Details')
         Field::make('text', 'crb_booking_buton_link', "Book A Table - 'connectionid'"),
     ));
 
+//Discover Page - Content Section
+Container::make('post_meta', 'Content Section')
+    ->show_on_post_type('page')
+    ->show_on_template(array('template-discover.php'))
+    ->add_fields(array(
+        Field::make('complex', 'crb_page_content_section', '')->add_fields(array(
+            Field::make('text', 'crb_page_section_heading', 'Heading'),
+            Field::make('complex', 'crb_section_detail', '')->add_fields(array(
+                Field::make('text', 'crb_page_name', 'Section Name'),
+                Field::make('image', 'crb_page_logo', 'Section Logo Image')->set_width('50'),            
+                Field::make('image', 'crb_page_image', 'Section Image')->help_text('(Image Dimensions (WxH): 925 x 600)')->set_width('50'),
+                Field::make('textarea', 'crb_page_description', 'Short Description'),
+                Field::make('text', 'crb_more_button_text', 'Detail Button Text')->set_width('50'),
+                Field::make('text', 'crb_more_button_link', 'Detail Button Link')->set_width('50'),
+                Field::make('text', 'crb_booking_button_text', 'Booking Button Text')->set_width('50'),
+                Field::make('text', 'crb_booking_button_link', "Book A Table - 'connectionid'")->set_width('50'),
+            )),
+        )),
+    ));
 /*
 //Slider Info
 

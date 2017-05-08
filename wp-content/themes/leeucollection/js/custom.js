@@ -255,6 +255,7 @@ var Blank ={
 			$('.gotoslide').click(function(){
 				var $this = $(this);
 				var parent_select = $this.parents('.pagination-slider').attr('data-unique-class');
+				console.log(parent_select);
 				var myattr = $this.attr('data-object');
 				var owlNumber = $('.single_slider_home_2').find("[data-object='" + myattr + "']").parent().index();	
 				$('.'+parent_select).find(owl).trigger('to.owl.carousel', owlNumber);
