@@ -237,7 +237,7 @@ Container::make('post_meta', 'Content Section')
 //Home Page && Hotel Listing
 Container::make('post_meta', 'Header Slider')
     ->show_on_post_type('page')
-    ->show_on_template(array('front-page.php', 'template-hotel-listing.php'))
+    ->show_on_template(array('front-page.php', 'template-hotel-listing.php' , 'template-restaurantlisting.php'))
     ->add_fields(array(
         Field::make('complex', 'crb_header_images', '')->add_fields(array(
             Field::make('image', 'crb_header_image', 'Header Image')->help_text('(Image Dimensions (WxH): 1240 x 600)'),
@@ -421,6 +421,33 @@ Container::make('post_meta', 'Hotels Details')
             )),
             Field::make('complex', 'crb_hotel_section_slider', 'Slider Images')->add_fields(array(
                 Field::make('image', 'crb_hotel_section_image', 'Section Image')->help_text('(Image Dimensions (WxH): 925 x 600)'),
+            )),
+        )),
+    ));
+
+//Restaurant listing
+Container::make('post_meta', 'Restaurant Details')
+    ->show_on_post_type('page')
+    ->show_on_template(array('template-restaurantlisting.php'))
+    ->add_fields(array(
+        Field::make('complex', 'crb_res_sections_new', '')->add_fields(array(
+            Field::make('text', 'crb_res_name', 'Restaurant Name'),
+            Field::make('image', 'crb_res_section_logo', 'Restaurant Logo Image')->set_width('50'),
+            Field::make('textarea', 'crb_res_section_description', 'Short Description')->set_width('50'),
+            Field::make('text', 'crb_more_button_text', 'Detail Button Text')->set_width('50'),
+            Field::make('text', 'crb_more_button_link', 'Detail Button Link')->set_width('50'),
+            Field::make('text', 'crb_booking_button_text', 'Booking Button Text')->set_width('50'),
+            Field::make('text', 'crb_booking_button_link', "Booking Button Link")->set_width('50'),
+
+            Field::make('complex', 'crb_res_section_details', 'Section Links Details')->add_fields(array(
+                Field::make('text', 'crb_res_locations', 'Restaurant Location'),
+                Field::make('complex', 'crb_res_section_link_details', 'Section Links')->add_fields(array(
+                    Field::make('text', 'crb_res_section_name', 'Section Name')->set_width('50'),
+                    Field::make('text', 'crb_res_section_link', 'Section Link')->set_width('50'),
+                )),
+            )),
+            Field::make('complex', 'crb_res_section_slider', 'Slider Images')->add_fields(array(
+                Field::make('image', 'crb_res_section_image', 'Section Image')->help_text('(Image Dimensions (WxH): 925 x 600)'),
             )),
         )),
     ));
