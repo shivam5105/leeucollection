@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Hotel's Wine
+Template Name: Wine
 */
 
 get_header(); ?>
