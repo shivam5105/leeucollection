@@ -174,15 +174,26 @@ get_header();
 						<h2 class="home-heading ucase"><?php echo $slider_content['crb_page_section_heading']; ?></h2>
 					</div>		
 					<div class="row scroll-anim animate-custom flx" data-anim="fade-up">
-						<?php include('template-parts/discover-slide-nav.php');  ?>
-						<?php include('template-parts/discover-slide-image.php');  ?>
+						<?php 
+						if ($unique_index % 2 == 0) {
+							$image_space = 'rm-pad-right';
+							$nav_space = 'rm-pad-left';
+  							include('template-parts/discover-slide-nav.php'); 
+  							include('template-parts/discover-slide-image.php');
+						}else{
+							$image_space = 'rm-pad-left';
+							$nav_space = 'rm-pad-right';
+							include('template-parts/discover-slide-image.php');	
+  							include('template-parts/discover-slide-nav.php'); 
+						}
+						?>
 					</div>
 				</div>	
 			</div>	
 			<?php 
 			$unique_index++;
 		}
-		?>	
-	</section>	
+		?>
+	</section>
 
 <?php get_footer(); ?>

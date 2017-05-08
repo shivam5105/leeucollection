@@ -1,4 +1,4 @@
-						<div class="col-3 rm-pad-left">
+						<div class="col-3 <?php echo $nav_space; ?>">
 							<div class="sliding-detail-wrapper">
 								<?php 
 								$loop = 0;
