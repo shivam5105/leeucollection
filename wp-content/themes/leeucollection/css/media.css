@@ -250,8 +250,16 @@
 	/**restaurant template**/
 	.hotel-template-template-restaurant	.side-nav-wrap{
 		display: none;
+	}
+	/***home page design***/
+	.home .flx{
+		display: block;
+	}
+	.customdotwrapper{
+		display: none;
 	}	
 }
+
 @media only screen and (max-width: 767px){
 	.container{
 		padding: 0 20px;
