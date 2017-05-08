@@ -311,7 +311,7 @@ function registerMyCustomPost()
 	$args = array(
 		"label" => "Restaurants",
 		"labels" => $labels,
-		'menu_position' => 6,
+		'menu_position' => 7,
 		'show_in_admin_bar' => true,
 		/*'taxonomies' 	=> array('category'),*/
 		"supports" => array(
@@ -325,6 +325,30 @@ function registerMyCustomPost()
 	);
 	$parentSlug = "leeu-restaurants";
 	$parent = new multiLevelCustomPosts($parentSlug, $labels, $args);
+
+
+	$labels = array(
+		"name" => "Wine",
+		"singular_name" => "Wine",
+	);
+	$args = array(
+		"label" => "Wine",
+		"labels" => $labels,
+		'menu_position' => 8,
+		'show_in_admin_bar' => true,
+		/*'taxonomies' 	=> array('category'),*/
+		"supports" => array(
+			"title",
+			"revisions",
+			"thumbnail",
+			"editor",
+			"page-attributes",
+			"custom-fields" /*, "post-formats"*/
+		)
+	);
+	$parentSlug = "leeu-wine";
+	$parent = new multiLevelCustomPosts($parentSlug, $labels, $args);
+
 
 	/*$labels = array(
 	"name"          => "Lessons",
