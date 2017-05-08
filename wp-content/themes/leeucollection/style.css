@@ -1573,6 +1573,14 @@ body.short-header .slider-text.top-position {
 .leeu_logo img {
     width: 84px;
 }
+.content-part-heading{ 
+    font-family: 'Lyon Text Regular No. 2';
+    font-weight: 500;
+    font-style: normal;
+    font-size: 21px;
+    line-height: 1.2;
+    text-transform: capitalize;    
+}
 /** sohail **/
 .mgt-0{
 margin-top:0;
