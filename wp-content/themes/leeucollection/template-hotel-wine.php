@@ -41,123 +41,219 @@ get_header(); ?>
 							</div>
 						</div>
 					</div>
-					<div class="col-8">
-						<div class="scroll-anim" data-anim="fade-up">
-							<?php
-							$args = array(
-								'post_type' => 'hotel',
-								'numberposts' => -1,
-								'orderby' => 'order',
-								'order' => 'ASC',
-								'post_status' => 'publish',
-								'post_parent' => $post_id,
-							);
-							$child_post_array = get_posts($args);
-							if(!empty($child_post_array) && count($child_post_array) > 0)
-							{
-								$logic_loop = 0;
-								$loop = 0;
-
-								foreach($child_post_array as $child_key => $child_post)
+					<div class="col-8">						
+						<div class="listing-box mgt-0">
+							<div class="scroll-anim" data-anim="fade-up">
+								<?php
+								$has_slider = false;
+						    	$slider_data = carbon_get_post_meta($post->ID, "crb_slider_images", 'complex');
+								if(is_array($slider_data) && !empty($slider_data) && count($slider_data) > 1)
 								{
-									$loop++;
-									if((count($child_post_array)%3) != 0 && $loop == count($child_post_array))
-									{
-										$logic_loop = 0;
-									}
-									$logic_loop++;
-									$child_post_id = $child_post->ID;
-									$child_post_img_url = wp_get_attachment_image_src(get_post_thumbnail_id($child_post_id),'821x478');
+									$has_slider = true;
+								}
+								$slider_wrapper_class = "owl-carousel single_slider owl-theme";
+								if(!$has_slider)
+								{
+									$slider_wrapper_class = "";
+								}
+								?>
+								<div class="listing-box">
+									<div class="single_slider_wrapper <?php if(!$has_slider){ echo "no_slider"; }?>">
+										<?php
+										if($has_slider == true)
+										{
+											?>
+											<div class="next"></div>
+											<?php
+										}?>
+										<div class="<?php echo $slider_wrapper_class; ?>">
+											<?php
+											if(is_array($slider_data) && !empty($slider_data))
+											{
+												foreach ($slider_data as $slide_key => $slide_data)
+												{
+													$banner_url = wp_get_attachment_image_src( $slide_data['crb_slide_image'], '821x478' );
+													$banner_url = $banner_url[0];
+													?>
+													<div class="slide-item">
+														<div class="banner-img scroll-anim" data-anim="fade-up">
+															<img src="<?php echo $banner_url; ?>" alt="" />
+														</div>
+													</div>
+													<?php
+												}
+											}
+											else
+											{
+												/*$banner_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );*/
+												$banner_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), '821x478' );
+												$banner_url = $banner_url[0];
+												?>
+												<div class="slide-item">
+													<div class="banner-img scroll-anim" data-anim="fade-up">
+														<img src="<?php echo $banner_url; ?>" alt="" />
+													</div>
+												</div>
+												<?php
+											}?>
+										</div>
+										<?php
+										if($has_slider == true)
+										{
+											?>
+											<div class="prev"></div>
+											<?php
+										}?>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row detail-row listing-row">
+							<?php
+							$both_given = true;
+							if(trim(@$post_meta['_crb_slider_bottom_heading'][0]) == "" || trim(@$post_meta['_crb_slider_bottom_description'][0]))
+							{
+								$both_given = false;
+							}
+							if(trim(@$post_meta['_crb_slider_bottom_heading'][0]) != "")
+							{
+								?>
+								<div class="<?php if($both_given){ echo "col-3"; }else{ echo "col-12"; } ?>">
+									<div class="desc-heading <?php if(!$both_given){ echo "text-center"; }?>"><?php echo @$post_meta['_crb_slider_bottom_heading'][0]; ?></div>
+								</div>
+								<?php
+							}
+							if(trim(@$post_meta['_crb_slider_bottom_description'][0]) != "")
+							{
+								?>
+								<div class="<?php if($both_given){ echo "col-9"; }else{ echo "col-12"; } ?>">
+									<div class="desc-content <?php if(!$both_given){ echo "text-center"; }?>"> 
+										<?php echo nl2br(@$post_meta['_crb_slider_bottom_description'][0]); ?>
+									</div>
+								</div>
+								<?php
+							}
+							?>
+						</div>
+						<?php
+				    	$content_sections = carbon_get_post_meta($post->ID, "crb_content_section1", 'complex');
+						if(is_array($content_sections) && !empty($content_sections))
+						{
+							foreach ($content_sections as $section_key => $content_section)
+							{
+								$section_heading	= $content_section['crb_section_heading'];
+								$section_sliders	= $content_section['crb_section_slider'];
 
-									$child_post_img_url = $child_post_img_url[0];
+								$has_slider = false;
+								if(is_array($section_sliders) && count($section_sliders) > 1)
+								{
+									$has_slider = true;
+								}
 
-									$child_post_meta = ( $child_post ) ? get_post_meta( $child_post_id ) : null;
-									$data_anim_delay = "";
-									if($logic_loop <= 2)
-									{
-										?>
-										<div class="listing-row clearfix">
+								$slider_wrapper_class 	= "single_slider_wrapper";
+								$slider_theme_class 	= "owl-carousel single_slider owl-theme";
+								if(!$has_slider)
+								{
+									$slider_theme_class = "";
+								}
+								?>
+								<div class="listing-box listing-row">
+									<div class="text-center scroll-anim" data-anim="fade-up">
 										<?php
-									}
-									if($logic_loop == 1)
-									{
+										if(!empty($section_heading))
+										{
+											?>
+											<h2 class="ucase"><?php echo $section_heading; ?></h2>
+											<?php
+										}
 										?>
-										<div class="scroll-anim" data-anim="fade-up">
+									</div>
+									<div class="text-right page-link"></div>
+									<div class="<?php echo $slider_wrapper_class; ?> <?php if(!$has_slider){ echo "no_slider"; }?>">
 										<?php
-									}
-									else if($logic_loop == 2)
-									{
-										?>
-										<div class="two-img-col">
-										<?php
-									}
-									else if($logic_loop == 3)
-									{
-										$data_anim_delay = "data-anim-delay='100'";
-									}
-									if($logic_loop > 1)
-									{
-										?>
-										<div class="col-6 rm-pad">
-										<?php
-									}
-									?>
-									<div class="banner-img scroll-anim" data-anim="fade-up" <?php echo $data_anim_delay; ?>>
-										<img src="<?php echo $child_post_img_url; ?>" alt="" />
-										<div class="inner-detail-wrapper">
-											<div class="inner-detail">
-												<div class="row">
-													<div class="col-11 col-centered">
-														<div class="inner-detail-content">
-															<div class="content-part">
-																<?php echo nl2br(@$child_post_meta['_crb_short_description'][0]); ?>
-															</div>
-															<ul class="list-inline linking-wrap">
-																<li class="see-more-link"><a href="<?php echo get_permalink($child_post_id); ?>" itemprop="url">SEE MORE</a></li>
+										if($has_slider)
+										{
+											?>
+											<div class="next-wrapper">
+												<div class="next"></div>
+											</div>	
+											<?php
+										}?>
+										<div class="<?php echo $slider_theme_class; ?>">
+											<?php
+											$slide_counter = 0;
+											foreach($section_sliders as $slider_key => $section_slider)
+											{
+												$slide_counter++;
+
+												$slide_image 		= $section_slider['crb_section_slide_image'];
+												$slide_title 		= $section_slider['crb_section_slide_title'];
+												$slide_desc			= $section_slider['crb_section_slide_desc'];
+												$section_link_text 	= $section_slider['crb_section_link_text'];
+												$section_link 		= $section_slider['crb_section_link'];
+
+												$slide_image_url = wp_get_attachment_image_src( $slide_image, '821x478' );
+												$slide_image_url = $slide_image_url[0];
+												?>
+												<div class="slide-item">
+													<div class="banner-img scroll-anim" data-anim="fade-up">
+														<img src="<?php echo $slide_image_url; ?>" alt="" />
+													</div>
+													<div class="row detail-row">
+														<div class="col-3">
+															<div class="desc-heading mg-l-20"><?php echo $slide_title; ?></div>
+															<div class="see_option ucase">
 																<?php
-																if(is_array($child_post_meta['_crb_booking_buton_link']) && !empty($child_post_meta['_crb_booking_buton_link'][0]))
+																if(!empty($section_link) && !empty($section_link_text))
 																{
 																	?>
-																	<li class="book-link"><a href="javascript:void(0);" data-connection-id="<?php echo $child_post_meta['_crb_booking_buton_link'][0]; ?>" id="booktable-<?php echo $loop; ?>" class="booktable"><?php echo $child_post_meta['_crb_booking_buton_text'][0]; ?></a></li>
+																	<span><a href="<?php echo $section_link; ?>"><?php echo $section_link_text; ?></a></span>
 																	<?php
-																}?>
-															</ul>
+																}
+																?>
+															</div>
+														</div>
+														<div class="col-9">
+															<div class="desc-content"> 
+																<?php echo nl2br($slide_desc); ?>
+															</div>
 														</div>
 													</div>
 												</div>
-											</div>
+												<?php
+											}
+											?>
 										</div>
+										<?php
+										if($has_slider)
+										{
+											?>
+											<div class="prev-wrapper">
+												<div class="prev"></div>
+											</div>
+											<?php
+										}?>
 									</div>
-									<div class="img-desc"><?php echo $child_post->post_title; ?></div>
-									<?php
-									if($logic_loop > 1)
-									{
-										?>
-										</div><!-- col-6 ends -->
-										<?php
-									}
-									if($logic_loop == 1)
-									{
-										?>
-										</div><!-- scroll-anim ends -->
-										<?php
-									}
-									if($logic_loop == 1 || $logic_loop == 3)
-									{
-										?>
-										</div><!-- listing-row ends -->
-										<?php
-									}
-									if($logic_loop == 3)
-									{
-										$logic_loop = 0;
-										?>
-										</div><!-- two-img-col ends -->
-										<?php
-									}
-								}
+								</div>
+								<?php
+							}
+						}
+						?>
+					</div>
+					<div class="col-2">
+						<div class="map_img">
+							<?php
+							$map_image = @$post_meta['_crb_small_map_image'][0];
+							if($map_image)
+							{
+								$map_image = wp_get_attachment_image_src($map_image, '193x129');
+								$map_image = $map_image[0];
 							}
 							?>
+							<a href="<?php echo @$post_meta['_crb_small_map_link'][0]; ?>" target="_blank"><img src="<?php echo $map_image; ?>" alt="map_controll"/></a>
+							<div class="locator">
+								<a href="<?php echo @$post_meta['_crb_small_map_link'][0]; ?>" target="_blank" class="ucase"><?php echo @$post_meta['_crb_small_map_heading'][0]; ?></a>
+							</div>
 						</div>
 					</div>
 				</div>
