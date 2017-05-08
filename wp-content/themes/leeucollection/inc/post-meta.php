@@ -87,7 +87,7 @@ Container::make('post_meta', 'Short Description')
 
 //Images Slider
 Container::make('post_meta', 'Slider Images')
-    ->show_on_post_type(array('hotel', 'leeu-discover'))
+    ->show_on_post_type(array('hotel', 'leeu-discover','page'))
     ->show_on_template(array('template-hotel.php','template-room.php','template-restaurant.php','template-facilities.php','template-gym.php','template-spa-wellness.php','template-explore.php','template-artists-details.php', 'template-founder-and-team.php', 'template-location.php', 'template-work.php', 'template-hotel-wine.php'))
     ->add_fields(array(
         Field::make('complex', 'crb_slider_images', '')->add_fields(array(
@@ -96,7 +96,7 @@ Container::make('post_meta', 'Slider Images')
     ));
     
 Container::make('post_meta', 'Slider Info')
-    ->show_on_post_type(array('hotel', 'leeu-discover'))
+    ->show_on_post_type(array('hotel', 'leeu-discover', 'page'))
     ->show_on_template(array('template-room.php','template-gym.php', 'template-work.php', 'template-hotel-wine.php'))
     ->add_fields(array(
         Field::make('text', 'crb_slider_bottom_heading', 'Slider Heading')->help_text('This will come after slider (on bottom-left of slider).')->set_width('30'),
@@ -487,7 +487,7 @@ Container::make('post_meta', 'Slider Bottom Info')
 
 //Maps image & link
 Container::make('post_meta', 'Small Map')
-    ->show_on_post_type(array('leeu-discover', 'hotel'))
+    ->show_on_post_type(array('leeu-discover', 'hotel', 'page'))
     ->show_on_template(array('template-artists-details.php', 'template-hotel-wine.php'))
     ->add_fields(array(
         Field::make('text', 'crb_small_map_heading', 'Map Heading')->set_width('30'),
