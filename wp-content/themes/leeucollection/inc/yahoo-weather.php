@@ -29,9 +29,12 @@ class Yahoo_Weather
 			$data 			= json_decode($json);
 
 			$this->data		= $data->query;
-			$this->units	= $data->query->results->channel->units;
-			$this->current	= $data->query->results->channel->item->condition;
-			$this->future	= $data->query->results->channel->item->forecast;
+			if($data->query->count)
+			{
+				$this->units	= $data->query->results->channel->units;
+				$this->current	= $data->query->results->channel->item->condition;
+				$this->future	= $data->query->results->channel->item->forecast;
+			}
 		}
 	}
 }
