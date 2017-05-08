@@ -21,7 +21,7 @@ get_header();
 	}
 	?>
 	<section id="site-main">
-		<div class="container home-slider-container">
+		<div class="container home-slider-container hotel-slider-container">
 			<div class="single_slider_wrapper scroll-anim <?php if(!$has_slider){ echo "no_slider"; }?>" data-anim="fade-up">
 				<?php
 				if($has_slider == true)
