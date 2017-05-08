@@ -88,7 +88,7 @@ Container::make('post_meta', 'Short Description')
 //Images Slider
 Container::make('post_meta', 'Slider Images')
     ->show_on_post_type(array('hotel', 'leeu-discover'))
-    ->show_on_template(array('template-hotel.php','template-room.php','template-restaurant.php','template-facilities.php','template-gym.php','template-spa-wellness.php','template-explore.php','template-artists-details.php', 'template-founder-and-team.php', 'template-location.php'))
+    ->show_on_template(array('template-hotel.php','template-room.php','template-restaurant.php','template-facilities.php','template-gym.php','template-spa-wellness.php','template-explore.php','template-artists-details.php', 'template-founder-and-team.php', 'template-location.php', 'template-work.php'))
     ->add_fields(array(
         Field::make('complex', 'crb_slider_images', '')->add_fields(array(
             Field::make('image', 'crb_slide_image', 'Slide Image')->help_text('(Image Dimensions (WxH): 1240 x 600)'),
@@ -96,8 +96,8 @@ Container::make('post_meta', 'Slider Images')
     ));
     
 Container::make('post_meta', 'Slider Info')
-    ->show_on_post_type('hotel')
-    ->show_on_template(array('template-room.php','template-gym.php'))
+    ->show_on_post_type(array('hotel', 'leeu-discover'))
+    ->show_on_template(array('template-room.php','template-gym.php', 'template-work.php'))
     ->add_fields(array(
         Field::make('text', 'crb_slider_bottom_heading', 'Slider Heading')->help_text('This will come after slider (on bottom-left of slider).')->set_width('30'),
         Field::make('textarea', 'crb_slider_bottom_description', 'Slider Description')->help_text('This will come after slider (on bottom-right of slider).')->set_width('70'),
@@ -613,6 +613,21 @@ Container::make('post_meta', 'Content Section')
             )),
         )),
     ));
+
+/* The Works page */
+Container::make('post_meta', 'Artists')
+    ->show_on_post_type(array('leeu-discover'))
+    ->show_on_template(array('template-work.php'))
+    ->add_fields(array(
+        Field::make('complex', 'crb_artists_details', '')->add_fields(array(
+            Field::make('image', 'crb_artist_image', 'Team Member Image')->help_text('(Image Dimensions (WxH): 411 x 258)')->set_width('25'),
+            Field::make('text', 'crb_artist_name', 'Artist Name')->set_width('25'),
+            Field::make('date', 'crb_artist_date', 'Date')->set_width('25'),
+            Field::make('text', 'crb_artist_location', 'Location')->set_width('25'),
+        )),
+    ));
+
+
 /*
 //Slider Info
 

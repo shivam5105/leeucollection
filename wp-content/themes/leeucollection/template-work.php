@@ -108,45 +108,90 @@ get_header(); ?>
 								</div>
 							</div>
 						</div>
-						<div class="row detail-row">
-							<div class="col-3">
-								<div class="desc-heading"><?php echo @$post_meta['_crb_slider_bottom_heading'][0]; ?></div>
-							</div>
-							<div class="col-9">
-								<div class="desc-content"> 
-									<?php echo nl2br(@$post_meta['_crb_slider_bottom_description'][0]); ?>
-								</div>
-							</div>
-						</div>
-						<div class="row detail-row mgt-0">
-							<div class="col-3">
-								<div class="session_rate">SESSION RATE</div>
-							</div>
-						</div>
-						<?php
-						$rates_sections = carbon_get_post_meta($post->ID, "crb_rates_section", 'complex');
-						foreach ($rates_sections as $rs_key => $rates_section)
-						{
-							$rate_amount 	= $rates_section['crb_rate_amount'];
-							$rate_for 		= $rates_section['crb_rate_for'];
-							$rate_details	= $rates_section['crb_rate_details'];
-							?>							
+						<div class="listing-box listing-row">
+							<div class="text-right page-link"> </div>
 							<div class="row detail-row">
-								<div class="col-3">
-									<div class="price_value">
-										<p><?php echo $rate_amount?></p>
-										<p><?php echo $rate_for?></p>
-									</div>
-								</div>
-								<div class="col-9">
-									<div class="desc-content"> 
-										<?php echo $rate_details?>
+								<div class="col-12">
+									<div class="desc-heading"><?php echo @$post_meta['_crb_slider_bottom_heading'][0]; ?>
+										<span class="session_rate mgt-0"><?php echo nl2br(@$post_meta['_crb_slider_bottom_description'][0]); ?></span>
 									</div>
 								</div>
 							</div>
-							<?php
-						}?>
+						</div>
 
+
+						<div class="listing-box listing-row">
+							<?php
+							$artists_details = carbon_get_post_meta($post->ID, "crb_artists_details", 'complex');
+							$cols = 2;
+							$x = 0;
+							foreach ($artists_details as $ad_key => $artists_detail)
+							{
+								$artist_image 	= $artists_detail['crb_artist_image'];
+								$artist_name 	= $artists_detail['crb_artist_name'];
+								$artist_date 	= $artists_detail['crb_artist_date'];
+								$artist_location= $artists_detail['crb_artist_location'];
+
+								if($x == 0)
+								{
+									?>
+									<div class="scroll-anim full_img animate-custom" data-anim="fade-up">
+										<div class="row detail-row">
+											<div class="mgb-30 clearfix">
+									<?php
+								}
+								if($artist_image)
+								{
+									$artist_image = wp_get_attachment_image_src($artist_image, '411x258');
+									$artist_image = $artist_image[0];
+								}
+								$col6_class 		= "pdr-0";
+								$scroll_anim_class 	= "";
+								$scroll_anim_attr 	= "";
+								$art_cat_class 		= "art_cat";
+								if($x == 1)
+								{
+									$col6_class 		= "pdl-0";
+									$scroll_anim_class 	= "scroll-anim animate-custom";
+									$scroll_anim_attr 	= 'data-anim="fade-up" data-anim-delay="100"';
+									$art_cat_class 		= "art_cat2";
+								}
+								?>
+								<div class="col-6 <?php echo $col6_class; ?>">
+									<div class="<?php echo $scroll_anim_class; ?>" <?php echo $scroll_anim_attr; ?>>
+										<div class="<?php echo $art_cat_class; ?> full-img">
+											<?php
+											if(!empty($artist_image))
+											{
+												?>
+												<img src="<?php echo $artist_image; ?>" alt="" />
+												<?php
+											}
+											?>
+										</div>
+										<div class="desc-heading mgt-25"><?php echo $artist_name; ?>
+											<span class="session_rate mgt-0 ucase">
+												<?php echo $artist_date; ?>,
+												<?php echo $artist_location; ?>
+											</span>
+										</div>
+									</div>
+								</div>
+								<?php
+								$x++;
+								if($x == $cols)
+								{
+									$x = 0;
+									?>
+											</div>
+										</div>
+									</div>
+									<?php
+								}
+							}?>
+
+
+						</div>
 					</div>
 				</div>
 			</div>
