@@ -1200,7 +1200,7 @@ function tv_redirect_to_detail()
 		}
     } 
 }
-//add_action('template_redirect', 'tv_redirect_to_detail');
+add_action('template_redirect', 'tv_redirect_to_detail');
 
 function cc_mime_types($mimes) {
   $mimes['svg'] = 'image/svg+xml';
