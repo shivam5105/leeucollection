@@ -1,4 +1,3 @@
-
 		<div class="clearfix"></div>
 		<footer id="footer" class="scroll-anim" data-anim="fade">
 			<div class="container">
