@@ -31,6 +31,9 @@
 											</div>
 											<?php
 										}?>
+										<div class="content-part-heading"> 
+											<?php echo $slide['crb_page_name']; ?>
+										</div>
 										<div class="content-part">
 											<?php echo nl2br($page_section_description); ?>
 										</div>
@@ -55,6 +58,7 @@
 								$loop++;
 								} ?>
 							</div>	
+							<?php if($has_slider == true) { ?>
 							<div class="main-nav-slider">
 								<?php
 								$loop = 0;
@@ -72,5 +76,6 @@
 									$loop++;	
 								}
 								?>
-							</div>						
+							</div>
+							<?php } ?>						
 						</div>
