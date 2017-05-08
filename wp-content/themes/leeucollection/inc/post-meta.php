@@ -630,7 +630,7 @@ Container::make('post_meta', 'Artists')
 
 //Content Section Wine
 Container::make('post_meta', 'Content Section')
-    ->show_on_post_type('hotel', 'page')
+    ->show_on_post_type(array('hotel', 'page'))
     ->show_on_template('template-hotel-wine.php')
     ->add_fields(array(
         Field::make('complex', 'crb_content_section1', '')->add_fields(array(
