@@ -264,6 +264,9 @@
 	.customdotwrapper,.next,.prev{
 		display: none;
 	}
+	.rm-pad-right,.rm-pad-left{
+		padding: 0;
+	}
 	.owl-theme .owl-dots .owl-dot span{
 		width: 7px;
 		height: 7px;
@@ -278,6 +281,12 @@
 		text-align: center;
     	margin-bottom: 9px;
     	margin-top: 12px;		
+	}
+	.slider-text .slider-txt-head{
+		font-size: 30px;
+	}
+	.slider-text .slider-txt-con{
+		font-size: 18px;
 	}
 	/**Home page**/
 	.booking-object-form-row{
