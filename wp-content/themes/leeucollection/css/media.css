@@ -331,6 +331,9 @@
 	.sliding-detail .inner-detail-content{
 		text-align: center;
 	}
+	.sliding-detail.active-detail-slide{
+		position: static;
+	}
 }
 
 @media only screen and (max-width: 767px){
