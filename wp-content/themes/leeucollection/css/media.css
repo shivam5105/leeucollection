@@ -340,7 +340,7 @@
     	position: relative;
     	text-transform: uppercase;		
 	}
-	.see-more-link a:after{
+	.linking-wrap li.see-more-link a::after{
 	    background: rgba(0, 0, 0, 0) url("../images/arrow-icon.png") no-repeat scroll 0 0;
 	    content: "";
 	    display: inline-block;
