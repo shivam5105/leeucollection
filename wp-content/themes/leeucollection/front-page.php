@@ -162,6 +162,41 @@ get_header();
 					<h2 class="home-heading ucase"><?php echo $hotel_section_heading; ?></h2>
 				</div>
 				<div class="row scroll-anim animate-custom flx" data-anim="fade-up">
+					<div class="col-9 rm-pad-right flx-right">
+						<div class="single_slider_wrapper">
+							<div class="next"></div>
+							<div class="owl-carousel single_slider_home_2 owl-theme">
+								<?php
+								$loop = 0;
+								foreach ($slider_data as $slider_key => $hotel_slider)
+								{
+									foreach ($hotel_slider['crb_home_hotels'] as $slide_key => $slide)
+									{
+										$hotel_image = $slide['crb_hotel_image'];
+
+										$active_slide = "";
+										if($loop == 0)
+										{
+											$active_slide = "active-detail-slide";
+										}
+										$hotel_image_url = wp_get_attachment_image_src( $hotel_image, '925x600' );
+										$hotel_image_url = $hotel_image_url[0];
+										if(!empty($hotel_image_url))
+										{
+											?>
+											<div class="slider-item" data-object="<?php echo $loop; ?>">
+												<img src="<?php echo $hotel_image_url; ?>" alt="">
+											</div>
+											<?php
+										}
+										$loop++;
+									}
+								}
+								?>
+							</div>
+							<div class="prev"></div>
+						</div>
+					</div>					
 					<div class="col-3 rm-pad-left">
 						<div class="sliding-detail-wrapper">
 							<?php
@@ -187,7 +222,15 @@ get_header();
 									$hotel_logo_url = $hotel_logo_url[0];
 									?>
 									<div class="sliding-detail <?php echo $active_slide; ?>" data-object="<?php echo $loop; ?>">
-										<div class="inner-detail-content">
+										<div class="inner-detail-content for-ipad-mob"> 
+											<div class="content-part"> 
+												<?php echo $hotel_name; ?>
+											</div>
+											<div class="gotoslidehead ucase"> 
+												<?php echo $hotel_slider['crb_hotel_locations']; ?>
+											</div>
+										</div>
+										<div class="inner-detail-content for-desk	">
 											<?php
 											if(!empty($hotel_logo_url))
 											{
@@ -223,7 +266,7 @@ get_header();
 							}
 							?>
 						</div>
-						<div class="main-nav-slider">
+						<div class="main-nav-slider for-desk">
 							<?php
 							$loop = 0;
 							foreach ($slider_data as $slider_key => $hotel_slider)
@@ -252,41 +295,6 @@ get_header();
 								}
 							}
 							?>
-						</div>
-					</div>
-					<div class="col-9 rm-pad-right">
-						<div class="single_slider_wrapper">
-							<div class="next"></div>
-							<div class="owl-carousel single_slider_home_2 owl-theme">
-								<?php
-								$loop = 0;
-								foreach ($slider_data as $slider_key => $hotel_slider)
-								{
-									foreach ($hotel_slider['crb_home_hotels'] as $slide_key => $slide)
-									{
-										$hotel_image = $slide['crb_hotel_image'];
-
-										$active_slide = "";
-										if($loop == 0)
-										{
-											$active_slide = "active-detail-slide";
-										}
-										$hotel_image_url = wp_get_attachment_image_src( $hotel_image, '925x600' );
-										$hotel_image_url = $hotel_image_url[0];
-										if(!empty($hotel_image_url))
-										{
-											?>
-											<div class="slider-item" data-object="<?php echo $loop; ?>">
-												<img src="<?php echo $hotel_image_url; ?>" alt="">
-											</div>
-											<?php
-										}
-										$loop++;
-									}
-								}
-								?>
-							</div>
-							<div class="prev"></div>
 						</div>
 					</div>
 				</div>
@@ -358,7 +366,15 @@ get_header();
 								$restaurant_logo_url = $restaurant_logo_url[0];
 								?>
 								<div class="sliding-detail <?php echo $active_slide; ?>" data-object="<?php echo $loop; ?>">
-									<div class="inner-detail-content">
+									<div class="inner-detail-content for-ipad-mob"> 
+										<div class="content-part"> 
+											<?php echo $hotel_name; ?>
+										</div>
+										<div class="gotoslidehead ucase"> 
+											<?php echo $hotel_slider['crb_hotel_locations']; ?>
+										</div>
+									</div>
+									<div class="inner-detail-content for-desk">
 										<div class="detail-logo"> 
 											<img src="<?php echo $restaurant_logo_url; ?>" alt="">
 										</div>
@@ -388,7 +404,7 @@ get_header();
 							}
 							?>
 						</div>
-						<div class="main-nav-slider">
+						<div class="main-nav-slider for-desk">
 							<?php
 							$loop = 0;
 							foreach ($slider_data as $slider_key => $slide)

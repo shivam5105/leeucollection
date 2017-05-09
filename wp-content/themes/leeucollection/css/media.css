@@ -1,4 +1,5 @@
 #slide-menu{display: none !important;}
+.for-ipad-mob{display: none;}
 @media only screen and (max-width: 1140px){
 /**	.logo-wrapper img.bottom-logo{
 		display: none;
@@ -172,9 +173,7 @@
 	/**global changes**/
 	#site-main {
 	    margin-top: 62px;
-	}	
-
-
+	}		
 }
 @media only screen and (max-width: 1024px){
 	body{
@@ -254,6 +253,13 @@
 	.hotel-template-template-restaurant	.side-nav-wrap{
 		display: none;
 	}
+	/**global**/
+	.for-desk{
+		display: none;
+	}
+	.form-ipad-mod{
+		display: block;
+	}
 	/***home page design***/
 	.home .flx{
 		display: block;
@@ -286,7 +292,7 @@
 		font-size: 30px;
 	}
 	.slider-text .slider-txt-con{
-		font-size: 18px;
+		font-size: 14px;
 	}
 	/**Home page**/
 	.booking-object-form-row{
@@ -302,7 +308,14 @@
 	}
 	.booking-object-form-row .form-item{
 		margin: 0;
-	}		
+	}
+	.sliding-detail .content-part{
+		margin-top: 0;
+		text-transform: capitalize;
+	}	
+	.sliding-detail .inner-detail-content{
+		text-align: center;
+	}
 }
 
 @media only screen and (max-width: 767px){
