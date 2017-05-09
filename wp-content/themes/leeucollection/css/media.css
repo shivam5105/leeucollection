@@ -334,6 +334,24 @@
 	.sliding-detail.active-detail-slide{
 		position: static;
 	}
+	.see-more-link a{
+   		display: inline-block;
+    	min-width: 132px;
+    	position: relative;
+    	text-transform: uppercase;		
+	}
+	.see-more-link a:after{
+	    background: rgba(0, 0, 0, 0) url("../images/arrow-icon.png") no-repeat scroll 0 0;
+	    content: "";
+	    display: inline-block;
+	    height: 10px;
+	    margin-left: 15px;
+	    right: 11px;
+	    transform: translateY(1px) translateX(-8px);
+	    transition: all 0.2s ease 0s;
+	    width: 29px;
+	}		
+
 }
 
 @media only screen and (max-width: 767px){
