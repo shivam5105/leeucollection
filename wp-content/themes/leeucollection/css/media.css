@@ -294,6 +294,19 @@
 	.slider-text .slider-txt-con{
 		font-size: 14px;
 	}
+	.inner-detail-wrapper{
+		opacity:1;
+	}
+	.content-part{
+		display: none;
+	}
+	.inner-detail-content{
+		opacity: 1;
+		-webkit-transform:translateY(0); 
+		-moz-transform:translateY(0); 
+		-ms-transform:translateY(0);
+		transform:translateY(0);
+	}
 	/**Home page**/
 	.booking-object-form-row{
 		text-align: center;
