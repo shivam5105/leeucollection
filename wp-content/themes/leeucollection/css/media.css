@@ -167,11 +167,13 @@
 	}
 	/**change this for spacing end**/
 	/** small navigation end here **/	
-	
+
+
 	/**global changes**/
 	#site-main {
 	    margin-top: 62px;
-	}		
+	}	
+
 
 }
 @media only screen and (max-width: 1024px){
@@ -192,6 +194,7 @@
 	}
     [class*="col-"] {
         width: 100%;
+        float: none;
     }
 	#footer {
 	    margin-top: 0;
@@ -255,9 +258,42 @@
 	.home .flx{
 		display: block;
 	}
-	.customdotwrapper{
+	.booking-form-object{
+		margin-top: 0;
+	}
+	.customdotwrapper,.next,.prev{
+		display: none;
+	}
+	.owl-theme .owl-dots .owl-dot span{
+		width: 7px;
+		height: 7px;
+	}
+	.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+		background: #222944;
+	}
+	.owl-theme .owl-dots .owl-dot span{
+		background: #D7CFC5;
+	}
+	.owl-dots{
+		text-align: center;
+    	margin-bottom: 9px;
+    	margin-top: 12px;		
+	}
+	/**Home page**/
+	.booking-object-form-row{
+		text-align: center;
+	}
+	.booking-object-form-row > div{
 		display: none;
 	}	
+	.booking-object-form-row > div:last-child{
+		display: block;
+		width: 204px;
+		margin: 0 auto;
+	}
+	.booking-object-form-row .form-item{
+		margin: 0;
+	}		
 }
 
 @media only screen and (max-width: 767px){
