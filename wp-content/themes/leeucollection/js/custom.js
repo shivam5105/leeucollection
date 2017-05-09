@@ -150,13 +150,15 @@ var Blank ={
 		var dots_wrap; 
 		if ($(window).width() > 1025){
 			dots_wrap = '#customDots';
+			autoplay_wrap = false; 
 		}else{
 			dots_wrap = "";
+			autoplay_wrap = true; 
 		} 
 		if(owl.length){		
 			owl.owlCarousel({
 				animateOut: 'fadeOut',
-				autoplay:true,
+				autoplay:autoplay_wrap,
 			    loop:true,
 			    nav:false,
 			    dots:true,
