@@ -229,6 +229,21 @@ get_header();
 											<div class="gotoslidehead ucase"> 
 												<?php echo $hotel_slider['crb_hotel_locations']; ?>
 											</div>
+											<div class="cstm-btn-wrapper">
+												<?php
+												if(!empty($more_button_link) && !empty($more_button_text))
+												{
+													?>
+													<a class="cstm-btn arrow-btn text-center" href="<?php echo $more_button_link; ?>"><?php echo $more_button_text; ?></a>
+													<?php
+												}
+												if(!empty($booking_button_link) && !empty($booking_button_text))
+												{
+													?>
+													<a class="cstm-btn arrow-btn text-center" href="<?php echo $booking_button_link; ?>"><?php echo $booking_button_text; ?></a>
+													<?php
+												}?>
+											</div>
 										</div>
 										<div class="inner-detail-content for-desk	">
 											<?php
@@ -373,6 +388,21 @@ get_header();
 										<div class="gotoslidehead ucase"> 
 											<?php echo $hotel_slider['crb_hotel_locations']; ?>
 										</div>
+										<div class="cstm-btn-wrapper">
+											<?php
+											if(!empty($more_button_link) && !empty($more_button_text))
+											{
+												?>
+												<a class="cstm-btn arrow-btn text-center" href="<?php echo $more_button_link; ?>"><?php echo $more_button_text; ?></a>
+												<?php
+											}
+											if(!empty($booking_button_link) && !empty($booking_button_text))
+											{
+												?>
+												<a class="cstm-btn arrow-btn text-center" href="<?php echo $booking_button_link; ?>"><?php echo $booking_button_text; ?></a>
+												<?php
+											}?>
+										</div>										
 									</div>
 									<div class="inner-detail-content for-desk">
 										<div class="detail-logo"> 
@@ -640,7 +670,7 @@ get_header();
 							}
 							?>
 						</div>
-						<div class="main-nav-slider d_b">
+						<div class="main-nav-slider d_b for-desk">
 							<?php
 							foreach ($bottom_links as $links_key => $link)
 							{
