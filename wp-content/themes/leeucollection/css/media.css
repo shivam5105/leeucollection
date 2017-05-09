@@ -350,7 +350,11 @@
 	    transform: translateY(1px) translateX(-8px);
 	    transition: all 0.2s ease 0s;
 	    width: 29px;
-	}		
+	    opacity:1;
+	}	
+	.linking-wrap li.see-more-link a:before{
+		display: none;
+	}	
 
 }
 
