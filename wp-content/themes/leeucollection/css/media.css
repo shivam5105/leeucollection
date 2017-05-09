@@ -296,6 +296,8 @@
 	}
 	.inner-detail-wrapper{
 		opacity:1;
+		position: static;
+		display: block;
 	}
 	.content-part{
 		display: none;
