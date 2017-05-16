@@ -31,7 +31,7 @@ $page_template_file = basename(get_page_template());
 			$hide_weather_on_templates_array = array('template-hotel-listing.php');
 			if(!is_front_page() && !in_array($page_template_file, $hide_weather_on_templates_array))
 			{
-				$post_id 	= $post->ID;
+				$post_id 	= ($post) ? $post->ID : false;
 				$hotel_id 	= get_hotel_id($post_id);
 				if($hotel_id)
 				{

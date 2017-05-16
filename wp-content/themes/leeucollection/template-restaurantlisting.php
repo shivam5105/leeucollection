@@ -125,20 +125,28 @@ get_header(); ?>
 						<div class="col-2 rm-pad">
 							<div class="form-item select-item">
 								<select>
-									<option value="volvo">1 room</option>
-									<option value="saab">2 room</option>
-									<option value="mercedes">3 room</option>
-									<option value="audi">4 room</option>
+									<?php
+									for($i=2; $i<9; $i++)
+									{
+										?>
+										<option value="<?php echo $i; ?>"><?php echo $i; ?> room<?php if($i > 1){ echo "s"; }?></option>
+										<?php
+									}
+									?>
 								</select>
 							</div>
 						</div>
 						<div class="col-2 rm-pad">
 							<div class="form-item select-item">
 								<select>
-									<option value="volvo">2 guests</option>
-									<option value="saab">3 guests</option>
-								option value="mercedes">4 guests</option>
-								option value="audi">5 guests</option>
+									<?php
+									for($i=2; $i<9; $i++)
+									{
+										?>
+										<option value="<?php echo $i; ?>"><?php echo $i; ?> guest<?php if($i > 1){ echo "s"; }?></option>
+										<?php
+									}
+									?>
 								</select>
 							</div>
 						</div>
@@ -158,8 +166,8 @@ get_header(); ?>
 		{
 			$section_loop++;
 
-			$res_name 			= $res_section['crb_res_name'];
-			$res_logo 			= $res_section['crb_res_section_logo'];
+			$res_name 				= $res_section['crb_res_name'];
+			$res_logo 				= $res_section['crb_res_section_logo'];
 			$section_description 	= $res_section['crb_res_section_description'];
 			$more_button_link		= $res_section['crb_more_button_link'];
 			$more_button_text		= $res_section['crb_more_button_text'];
@@ -222,30 +230,33 @@ get_header(); ?>
 							</div>
 							<div class="main-nav-slider">
 								<?php
-								$loop = 0;
-								foreach ($res_section['crb_res_section_details'] as $sd_key => $links_details)
+								if(is_array($res_section['crb_res_section_details']) && count($res_section['crb_res_section_details']) > 0)
 								{
-									$res_locations = $links_details['crb_res_locations'];
-									$location_class = "";
-									if($loop > 0)
+									$loop = 0;
+									foreach ($res_section['crb_res_section_details'] as $sd_key => $links_details)
 									{
-										$location_class = "spc-top";
-									}
-									?>
-									<div class="gotoslidehead <?php echo $location_class; ?> ucase"><?php echo $res_locations; ?></div>
-									<?php
-									foreach ($links_details['crb_res_section_link_details'] as $ld_key => $links)
-									{
-										$section_name = $links['crb_res_section_name'];
-										$section_link = $links['crb_res_section_link'];
-										if(!empty($section_name) && !empty($section_link))
+										$res_locations = $links_details['crb_res_locations'];
+										$location_class = "";
+										if($loop > 0)
 										{
-											?>
-											<div class="gotoslide"><a href="<?php echo $section_link; ?>"><?php echo $section_name; ?></a></div>
-											<?php
+											$location_class = "spc-top";
 										}
+										?>
+										<div class="gotoslidehead <?php echo $location_class; ?> ucase"><?php echo $res_locations; ?></div>
+										<?php
+										foreach ($links_details['crb_res_section_link_details'] as $ld_key => $links)
+										{
+											$section_name = $links['crb_res_section_name'];
+											$section_link = $links['crb_res_section_link'];
+											if(!empty($section_name) && !empty($section_link))
+											{
+												?>
+												<div class="gotoslide"><a href="<?php echo $section_link; ?>"><?php echo $section_name; ?></a></div>
+												<?php
+											}
+										}
+										$loop++;
 									}
-									$loop++;
 								}
 								?>
 							</div>
