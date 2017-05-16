@@ -349,6 +349,27 @@ function registerMyCustomPost()
 	$parentSlug = "leeu-wine";
 	$parent = new multiLevelCustomPosts($parentSlug, $labels, $args);
 
+	$labels = array(
+		"name" => "Artisan Drinks",
+		"singular_name" => "Artisan Drinks",
+	);
+	$args = array(
+		"label" => "Artisan Drinks",
+		"labels" => $labels,
+		'menu_position' => 9,
+		'show_in_admin_bar' => true,
+		/*'taxonomies' 	=> array('category'),*/
+		"supports" => array(
+			"title",
+			"revisions",
+			"thumbnail",
+			"editor",
+			"page-attributes",
+			"custom-fields" /*, "post-formats"*/
+		)
+	);
+	$parentSlug = "leeu-artisan-drinks";
+	$parent = new multiLevelCustomPosts($parentSlug, $labels, $args);
 
 	/*$labels = array(
 	"name"          => "Lessons",
