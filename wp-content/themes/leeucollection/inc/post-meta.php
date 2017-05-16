@@ -497,7 +497,7 @@ Container::make('post_meta', 'Small Map')
 
 Container::make('post_meta', 'Page Small Heading')
     ->show_on_post_type(array('leeu-discover','page'))
-    ->show_on_template(array('template-founder-and-team.php', 'template-accolades.php'))
+    ->show_on_template(array('template-founder-and-team.php', 'template-accolades.php','template-artisan-drinks.php'))
     ->add_fields(array(
         Field::make('text', 'crb_page_small_heading', 'Page Small Heading (Overwrite Default Heading)'),
     ));
