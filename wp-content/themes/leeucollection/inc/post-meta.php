@@ -2,7 +2,7 @@
 use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
-$leeu_post_types = array('hotel', 'leeu-discover', 'leeu-restaurants', 'leeu-wine', 'page');
+$leeu_post_types = array('hotel', 'leeu-discover', 'leeu-restaurants', 'leeu-wine', 'page', 'leeu-artisan-drinks');
 
 // Theme Option
 Container::make('theme_options', 'Theme Options')
@@ -499,7 +499,7 @@ Container::make('post_meta', 'Small Map')
 
 Container::make('post_meta', 'Page Small Heading')
     ->show_on_post_type($leeu_post_types)
-    ->show_on_template(array('template-founder-and-team.php', 'template-accolades.php'))
+    ->show_on_template(array('template-founder-and-team.php', 'template-accolades.php','template-artisan-drinks.php'))
     ->add_fields(array(
         Field::make('text', 'crb_page_small_heading', 'Page Small Heading (Overwrite Default Heading)'),
     ));
