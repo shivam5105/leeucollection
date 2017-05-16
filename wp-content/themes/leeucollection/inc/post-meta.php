@@ -87,7 +87,7 @@ Container::make('post_meta', 'Short Description')
 
 //Images Slider
 Container::make('post_meta', 'Slider Images')
-    ->show_on_post_type(array('hotel', 'leeu-discover','page'))
+    ->show_on_post_type(array('hotel', 'leeu-discover','page', 'leeu-restaurants'))
     ->show_on_template(array('template-hotel.php','template-room.php','template-restaurant.php','template-facilities.php','template-gym.php','template-spa-wellness.php','template-explore.php','template-artists-details.php', 'template-founder-and-team.php', 'template-location.php', 'template-work.php', 'template-hotel-wine.php'))
     ->add_fields(array(
         Field::make('complex', 'crb_slider_images', '')->add_fields(array(
@@ -105,7 +105,7 @@ Container::make('post_meta', 'Slider Info')
 
 //Slider Info
 Container::make('post_meta', 'Slider Info')
-    ->show_on_post_type('hotel')
+    ->show_on_post_type(array('hotel', 'leeu-restaurants'))
     ->show_on_template('template-restaurant.php')
     ->add_fields(array(
         Field::make('textarea', 'crb_slider_bottom_description', 'Slider Description')->help_text('This will come after slider (on bottom-right of slider).'),
@@ -138,7 +138,7 @@ Container::make('post_meta', 'Special Features')
 
 //Hours & Reservations
 Container::make('post_meta', 'Hours & Reservations')
-    ->show_on_post_type('hotel')
+    ->show_on_post_type(array('hotel', 'leeu-restaurants'))
     ->show_on_template('template-restaurant.php')
     ->add_fields(array(
         Field::make('complex', 'crb_hours_reservations', '')->add_fields(array(
@@ -149,7 +149,7 @@ Container::make('post_meta', 'Hours & Reservations')
 
 //Policy
 Container::make('post_meta', 'Policy')
-    ->show_on_post_type('hotel')
+    ->show_on_post_type(array('hotel', 'leeu-restaurants'))
     ->show_on_template('template-restaurant.php')
     ->add_fields(array(
         Field::make('textarea', 'crb_policy', 'Policy'),
@@ -652,7 +652,7 @@ Container::make('post_meta', 'Content Section')
 
 //The Chef
 Container::make('post_meta', 'The Chef Section')
-    ->show_on_post_type('hotel')
+    ->show_on_post_type(array('hotel', 'leeu-restaurants'))
     ->show_on_template('template-restaurant.php')
     ->add_fields(array(
         Field::make('text', 'crb_chef_section_heading', 'Section Heading'),

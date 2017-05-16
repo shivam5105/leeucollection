@@ -129,8 +129,9 @@ get_header(); ?>
 											limit:"<?php echo $limit; ?>",
 									        userId:"<?php echo $userid; ?>",
 									        accessToken:"<?php echo $access_token; ?>",
-											resolution: 'standard_resolution'
-									    });
+											resolution: 'standard_resolution',
+											template: '<a href="{{link}}" target="_blank"><img src="{{image}}" alt="{{location}}"/></a>',
+										});
 									    userFeed.run();
 									</script>
 									<?php
