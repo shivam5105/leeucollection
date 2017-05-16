@@ -41,6 +41,24 @@ get_header();
 			</div>
 		</div>		
 	</div>
+	<div class="container"> 
+		<div class="col-12 rm-pad artisan-drink-listing-contain"> 
+			<div class="row listing-row"> 
+				<div class="col-2">
+	             	<div class="side-nav-contain">
+		                <div class="scroll-anim animate-custom" data-anim="fade-up">
+		                   <div class="side-nav-wrap">
+		                      <ul class="side-nav">
+		                         <li><a href="#">GEOMETRIC GIN</a></li>
+		                         <li><a href="#">TUK TUK BEER</a></li>
+		                      </ul>
+		                   </div>
+		                </div>
+	            	</div>
+	            </div>				
+			</div>
+		</div>
+	</div>
 </section>
 
 <?php get_footer(); ?>
