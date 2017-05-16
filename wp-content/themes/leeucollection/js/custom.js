@@ -147,24 +147,25 @@ var Blank ={
     },
     home_single_slider :function(){
 		var owl = $(".owl-carousel.single_slider_home");
-
-		if(owl.length){	
-			var dots_wrap; 
+		var dots_wrap; 
 			if ($(window).width() > 1025){
 				dots_wrap = '#customDots';
 				autoplay_wrap = false; 
 			}else{
 				dots_wrap = "";
 				autoplay_wrap = true; 
-			} 			
+			} 	
+			console.log(dots_wrap);
+			console.log(autoplay_wrap);		
+		if(owl.length){		
 			owl.owlCarousel({
 				animateOut: 'fadeOut',
-				autoplay:autoplay_wrap,
 			    loop:true,
 			    nav:false,
 			    dots:true,
 			    dotsContainer: dots_wrap,
 			    smartSpeed:1000,
+			    autoplay:autoplay_wrap,
 			    responsive:{
 			        0:{
 			            items:1
@@ -188,10 +189,7 @@ var Blank ={
 				$('.customdothover').stop().animate({
 		        	top: $('.owl-dot.active').position().top 
 		    	});				    
-			})
-			/**$(owl).on("swipeleft",function(){
-   				$(this).parents('.single_slider_wrapper').find(owl).trigger('next.owl.carousel');
-  			});**/ 								
+			})								
 		}   
 	},
 	home_slide_pg_anim : function(){
@@ -209,15 +207,7 @@ var Blank ={
 	home_slide_wid_name : function(){
 		var owl = $('.owl-carousel.single_slider_home_2');
 
-		if(owl.length){	
-			var dots_wrap; 
-			if ($(window).width() > 1025){
-				dots_wrap = '#customDots';
-				autoplay_wrap = false; 
-			}else{
-				dots_wrap = "";
-				autoplay_wrap = true; 
-			} 			
+		if(owl.length){		
 			owl.owlCarousel({
 				animateOut: 'fadeOut',
 			    loop:false,
@@ -226,8 +216,6 @@ var Blank ={
 				dotsContainer: '.slider-nav .thumbs',
 			    smartSpeed:1000,
 			    margin:1,
-			    dotsContainer: dots_wrap,
-			    autoplay:autoplay_wrap,
 			    responsive:{
 			        0:{
 			            items:1
@@ -266,7 +254,7 @@ var Blank ={
 			owl.on('translated.owl.carousel', function (e) {
 				item_index = e.item.index;
 			});
-			owl.on('changed.owl.carousel', function(property){
+			owl.on('changed.owl.carousel', function(property){				
 				var current = property.item.index;
 				var parent_select = $(this).parents('.pagination-slider').attr('data-unique-class');
 				var chk_attr = $(property.target).find(".owl-item .slider-item").eq(current).attr('data-object');
@@ -278,12 +266,13 @@ var Blank ={
 			$('.gotoslide').click(function(){
 				var $this = $(this);
 				var parent_select = $this.parents('.pagination-slider').attr('data-unique-class');
-				console.log(parent_select);
 				var myattr = $this.attr('data-object');
 				var owlNumber = $('.single_slider_home_2').find("[data-object='" + myattr + "']").parent().index();	
 				$('.'+parent_select).find(owl).trigger('to.owl.carousel', owlNumber);
-			});
-		}
+			});	
+
+				
+		}			
 	},	
 	home_page_init : function(){
 		if($('body.home').length){
