@@ -31,7 +31,7 @@ Container::make('post_meta', 'Left Menu Image')
 
 //Content Section Hotel Home Page
 Container::make('post_meta', 'Content Section')
-    ->show_on_post_type($leeu_post_types)
+    ->show_on_post_type('hotel')
     ->show_on_level(1)
     ->add_fields(array(
         Field::make('complex', 'crb_content_section', '')->add_fields(array(
@@ -300,7 +300,6 @@ Container::make('post_meta', 'Restaurants')
 Container::make('post_meta', 'Two Columns Section 1')
     ->show_on_post_type($leeu_post_types)
     ->show_on_template(array('front-page.php'))
-
     ->add_fields(array(
         Field::make("html", "crb_two_cols_section_1_info_text_left")->set_html('<h2>Left Side Content</h2>'),
 
@@ -590,7 +589,7 @@ Container::make('post_meta', 'Slider')
     ));
 
 Container::make('post_meta', 'Restaurant Details')
-    ->show_on_post_type($leeu_post_types)
+    ->show_on_post_type('leeu-restaurants')
     ->add_fields(array(
         Field::make('text', 'crb_restaurant_location_popup', 'Location (for Popup)')->help_text('(This will come next to restaurant name in booking popup)'),
         Field::make('text', 'crb_booking_buton_link', "Book A Table - 'connectionid'"),
