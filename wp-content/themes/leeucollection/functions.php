@@ -1063,6 +1063,12 @@ class TV_Main_Menu_Walker extends Walker_Nav_Menu {
 			$nav_image 		= "<img src='".$nav_image_url."' border='0'><span>";
 			$nav_image_span = "</span>";
         }
+        $nav_menu_sub_heading = carbon_get_post_meta($item->ID, 'nav_menu_sub_heading');
+        $nav_menu_sub_heading_html = "";
+        if($nav_menu_image)
+        {
+        	$nav_menu_sub_heading_html = "<div>".$nav_menu_sub_heading."</div>";
+        }
         
 		$output .= $indent . '<li' . $id . $class_names .'>';
 
@@ -1088,7 +1094,7 @@ class TV_Main_Menu_Walker extends Walker_Nav_Menu {
 
 		$item_output = $args->before;
 		$item_output .= '<a'. $attributes .'>';
-		$item_output .= $args->link_before .$nav_image. $title.$nav_image_span. $args->link_after;
+		$item_output .= $args->link_before .$nav_image. $title.$nav_image_span.$nav_menu_sub_heading_html. $args->link_after;
 		$item_output .= '</a>';
 		$item_output .= $args->after;
 
