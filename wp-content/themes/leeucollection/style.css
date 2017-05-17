@@ -1591,6 +1591,32 @@ body.short-header .slider-text.top-position {
 .the_founder{
     margin-bottom: 37px;
 }
+.send_msg{
+    position: relative;
+}
+.send_msg::after{
+    background: rgba(0, 0, 0, 0) url("images/arrow-icon.png") no-repeat scroll 0 0;
+    content: "";
+    display: inline-block;
+    height: 10px;
+    margin-left: 15px;
+    right: 11px;
+    transform: translateY(-50%) translateX(-8px);
+    transition: all 0.2s ease 0s;
+    width: 29px; 
+    top:50%;   
+    position: absolute;
+}
+.send_msg:hover::after {
+    background: rgba(0, 0, 0, 0) url("images/arrow-icon-hover.png") no-repeat scroll 0 0;
+    transform: translateY(-50%) translateX(0px);
+}
+#main-navigation ul.sub-menu li a span.menu-sub-heading {
+    padding-top: 6px;
+}
+#main-navigation ul.sub-menu li a span.has-sub-heading {
+    padding-bottom: 0;
+}
 /** sohail **/
 .mgt-0{
 margin-top:0;
@@ -1995,8 +2021,11 @@ margin-top:16px;
     background:#ebe7e2;
 }
 
-.form_field .inside_pd{
-    padding:50px 0 50px 78px;
+.form_field .inside_pd {
+    display: block;
+    margin: 0 auto;
+    padding: 50px 0;
+    width: 80%;
 }
 
 .inside_pd .name_opt,.form_field .enquiry_opt{
@@ -2012,13 +2041,14 @@ margin-top:16px;
 }
 
 .email_sec{
-    width:45%;
+    width:49%;
     display:inline-block;
 }
 
-.enq_sec{
-    width:45%;
-    display:inline-block;
+.enq_sec {
+    display: inline-block;
+    float: right;
+    width: 49%;
 }
 
 .form_field .inside_pd .email_sec .name_field input,.form_field .inside_pd .enq_sec .opt_field select,.message_field .textarea_field textarea{
@@ -2029,7 +2059,7 @@ margin-top:16px;
     border:none;
     background:none;
     border-bottom:2px solid #ac9e94;
-    width:90%;
+    width:100%;
     margin-top:25px;
 }
 
@@ -2038,12 +2068,17 @@ margin-top:16px;
       -moz-appearance: none;
       appearance:none;
       position:relative;
-      background:url('images/book-form-arrow.png') no-repeat right center;  
+      background:url('images/book-form-arrow.png') no-repeat right center; 
+      border-radius:0; 
 }
 .submit-btn.submit-form-btn {
     min-width: 190px;
     text-align: left;
     padding-left: 30px;
+    border-right:none;
+    border-bottom:none;
+    border-width:2px;
+    border-color:#ac9e94;
 }
 
 div.wpcf7 .ajax-loader{display: none;}
@@ -2070,8 +2105,8 @@ margin:0;
 }
 
 .message_field{
-    border:1px solid #ac9e94;
-     width: 86%;
+    border:2px solid #ac9e94;
+     width: 100%;
 }
 .send_msg button{
     border:1px solid #ac9e94;
@@ -2103,6 +2138,7 @@ margin:0;
     transition: all 0.2s ease 0s;
     width: 29px;
 }
+
 .send_msg button:hover{
     border: 1px solid #c19034;
     color: #c19034;
