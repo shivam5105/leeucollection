@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Hotel's Wine
+Template Name: Wine
 */
 
 get_header(); ?>
@@ -237,6 +237,69 @@ get_header(); ?>
 								</div>
 								<?php
 							}
+						}
+
+						$wine_section_heading 		= carbon_get_post_meta($post->ID, "crb_wine_section_heading");
+						$wine_section_description 	= carbon_get_post_meta($post->ID, "crb_wine_section_description");
+						$wine_slider_details 		= carbon_get_post_meta($post->ID, "crb_wine_slider_details", 'complex');
+						if(!empty($wine_section_heading) && !empty($wine_slider_details))
+						{
+							?>
+							<div class="listing-box listing-row wine-slider-section-wrapper">
+								<div class="text-center scroll-anim animate-custom" data-anim="fade-up">
+									<h2 class="ucase"><?php echo $wine_section_heading; ?></h2>
+								</div>
+								<div class="wine-section-description"><?php echo $wine_section_description; ?></div>
+								<div class="two-slide-carousel two-img-col">
+									<?php
+									if(count($wine_slider_details) > 2)
+									{
+										?>
+										<div class="next-wrapper">
+											<div class="next"></div>
+										</div>
+										<?php
+									}?>
+									<div class="owl-carousel two_slider owl-theme">
+										<?php
+										$loop = 0;
+										foreach ($wine_slider_details as $wsd_key => $wine_slider_detail)
+										{
+											$loop++;
+											$wine_image = $wine_slider_detail['crb_wine_image'];
+											$wine_name 	= $wine_slider_detail['crb_wine_name'];
+											$wine_type 	= $wine_slider_detail['crb_wine_type'];
+											$wine_date 	= $wine_slider_detail['crb_wine_date'];
+
+											$wine_image = wp_get_attachment_image_src( $wine_image, '411x258' );
+											$wine_image = $wine_image[0];
+											?>
+											<div class="slide-item">
+												<div class="banner-img scroll-anim animate-custom" data-anim="fade-up" <?php if($loop == 1) { echo 'data-anim-delay="100"'; } ?>>
+													<img src="<?php echo $wine_image; ?>" alt="">
+												</div>
+												<div class="wine-name-date-wrapper">
+													<span class="wine-name"><?php echo $wine_name; ?></span>
+													<span class="wine-type"><?php echo $wine_type; ?>,</span>
+													<span class="wine-date"><?php echo $wine_date; ?></span>
+												</div>
+											</div>
+											<?php
+										}
+										?>
+									</div>
+									<?php
+									if(count($wine_slider_details) > 2)
+									{
+										?>
+										<div class="prev-wrapper">
+											<div class="prev"></div>
+										</div>
+										<?php
+									}?>
+								</div>
+							</div>
+							<?php
 						}
 						?>
 					</div>
