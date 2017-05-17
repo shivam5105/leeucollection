@@ -56,13 +56,15 @@ get_header();
 		                </div>
 	            	</div>
 	            </div>
-	            <div class="col-8"> 
-					<div class="scroll-anim animate-custom" data-anim="fade-up"> 
-						<img src="http://54.191.201.248/leeucollection/wp-content/uploads/2017/03/first-room.jpg" alt="">
-					</div>	
-					<div class="row"> 
-						<div class="col-6 rm-pad"> <img src="http://54.191.201.248/leeucollection/wp-content/uploads/2017/03/the-estate-thumb-410x258.jpg" alt=""></div>
-						<div class="col-6 rm-pad"><img src="http://54.191.201.248/leeucollection/wp-content/uploads/2017/03/the-estate-thumb-410x258.jpg" alt=""></div>
+	            <div class="col-8">
+	            	<div class="no-slider">
+						<div class="scroll-anim animate-custom" data-anim="fade-up"> 
+							<img src="http://54.191.201.248/leeucollection/wp-content/uploads/2017/03/first-room.jpg" alt="">
+						</div>	
+						<div class="row"> 
+							<div class="col-6 rm-pad"> <img src="http://54.191.201.248/leeucollection/wp-content/uploads/2017/03/the-estate-thumb-410x258.jpg" alt=""></div>
+							<div class="col-6 rm-pad"><img src="http://54.191.201.248/leeucollection/wp-content/uploads/2017/03/the-estate-thumb-410x258.jpg" alt=""></div>
+						</div>
 					</div>
 	            </div>				
 			</div>
