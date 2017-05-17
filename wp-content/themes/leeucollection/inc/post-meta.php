@@ -661,6 +661,22 @@ Container::make('post_meta', 'Artisan Drinks Content Section')
             Field::make('text', 'crb_artisan_drinks_section_heading', 'Heading'),
             Field::make('textarea', 'crb_artisan_drinks_section_description', 'Content'),
         )),
+    ));
+
+// Wine page
+Container::make('post_meta', 'The Wines')
+    ->show_on_post_type("leeu-wine")
+    ->show_on_template('template-hotel-wine.php')
+    ->add_fields(array(
+        Field::make('text', 'crb_wine_section_heading', 'Wines Slider Heading'),
+        Field::make('textarea', 'crb_wine_section_description', 'Wines Slider Description'),
+
+        Field::make('complex', 'crb_wine_slider_details', '')->add_fields(array(
+            Field::make('image', 'crb_wine_image', 'Image')->help_text('(Image Dimensions (WxH): 411 x 258)')->set_width('25'),
+            Field::make('text', 'crb_wine_name', 'Name')->set_width('30'),
+            Field::make('text', 'crb_wine_type', 'Type')->set_width('20'),
+            Field::make('date', 'crb_wine_date', 'Date')->set_width('25'),
+        )),
     )); 
 
 /*
