@@ -64,8 +64,8 @@ get_header();
 					    	$artisan_drink_image2 = @$artisan_drinks_content['crb_artisan_drink_image2'];
 					    	$artisan_drink_image3 = @$artisan_drinks_content['crb_artisan_drink_image3'];
 
-					    	$artisan_drinks_section_heading = @$artisan_drinks_content['crb_artisan_drinks_section_heading'][0];
-					    	$crb_artisan_drinks_section_description = @$artisan_drinks_content['crb_artisan_drinks_section_description'][0];
+					    	$artisan_drinks_section_heading = @$artisan_drinks_content['crb_artisan_drinks_section_heading'];
+					    	$crb_artisan_drinks_section_description = @$artisan_drinks_content['crb_artisan_drinks_section_description'];
 
 							$artisan_drink_image1 = wp_get_attachment_image_src( $artisan_drink_image1, '821x478' );
 							$artisan_drink_image1 = $artisan_drink_image1[0];
