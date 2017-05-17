@@ -76,26 +76,28 @@ get_header();
 							$artisan_drink_image3 = wp_get_attachment_image_src( $artisan_drink_image3, '411x258' );
 							$artisan_drink_image3 = $artisan_drink_image3[0];
 			            	?>
-			            	<div class="no_slider rm_line_height">
-								<div class="scroll-anim animate-custom" data-anim="fade-up">
-									<img src="<?php echo $artisan_drink_image1; ?>" alt="">
-								</div>
-								<div class="row"> 
-									<div class="col-6 rm-pad">
-										<img src="<?php echo $artisan_drink_image2; ?>" alt="">
+			            	<div class="listing-row">
+				            	<div class="no_slider rm_line_height">
+									<div class="scroll-anim animate-custom" data-anim="fade-up">
+										<img src="<?php echo $artisan_drink_image1; ?>" alt="">
 									</div>
-									<div class="col-6 rm-pad">
-										<img src="<?php echo $artisan_drink_image3; ?>" alt="">
+									<div class="row"> 
+										<div class="col-6 rm-pad">
+											<img src="<?php echo $artisan_drink_image2; ?>" alt="">
+										</div>
+										<div class="col-6 rm-pad">
+											<img src="<?php echo $artisan_drink_image3; ?>" alt="">
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="row detail-row">
-								<div class="col-3">
-									<div class="desc-heading"><?php echo $artisan_drinks_section_heading; ?></div>
-								</div>
-								<div class="col-9">
-									<div class="desc-content"> 
-										<?php echo $crb_artisan_drinks_section_description; ?>
+								<div class="row detail-row">
+									<div class="col-3">
+										<div class="desc-heading"><?php echo $artisan_drinks_section_heading; ?></div>
+									</div>
+									<div class="col-9">
+										<div class="desc-content">
+											<?php echo $crb_artisan_drinks_section_description; ?>
+										</div>
 									</div>
 								</div>
 							</div>
