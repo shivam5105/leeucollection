@@ -17,6 +17,7 @@ Container::make('theme_options', 'Theme Options')
 //Menu Settings
 Container::make('nav_menu', 'Menu Settings')
     ->add_fields(array(
+        Field::make('text', 'nav_menu_sub_heading', 'Menu Sub-Heading'),
         Field::make('image', 'nav_menu_image', 'Menu Image')->help_text('(Image Dimensions (WxH): 190 x 120)'),
     ));
 
