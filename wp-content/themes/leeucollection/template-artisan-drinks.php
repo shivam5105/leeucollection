@@ -60,9 +60,9 @@ get_header();
 					    $artisan_drinks_contents = carbon_get_post_meta($post->ID, "crb_artisan_drinks_content", 'complex');
 					    foreach ($artisan_drinks_contents as $adc_key => $artisan_drinks_content)
 					    {
-					    	$artisan_drink_image1 = @$artisan_drinks_content['crb_artisan_drink_image1'][0];
-					    	$artisan_drink_image2 = @$artisan_drinks_content['crb_artisan_drink_image2'][0];
-					    	$artisan_drink_image3 = @$artisan_drinks_content['crb_artisan_drink_image3'][0];
+					    	$artisan_drink_image1 = @$artisan_drinks_content['crb_artisan_drink_image1'];
+					    	$artisan_drink_image2 = @$artisan_drinks_content['crb_artisan_drink_image2'];
+					    	$artisan_drink_image3 = @$artisan_drinks_content['crb_artisan_drink_image3'];
 
 					    	$artisan_drinks_section_heading = @$artisan_drinks_content['crb_artisan_drinks_section_heading'][0];
 					    	$crb_artisan_drinks_section_description = @$artisan_drinks_content['crb_artisan_drinks_section_description'][0];
