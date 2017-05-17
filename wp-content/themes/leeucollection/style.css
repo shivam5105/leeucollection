@@ -1588,6 +1588,9 @@ body.short-header .slider-text.top-position {
 .rm_line_height{
     line-height:0;
 }
+.the_founder{
+    margin-bottom: 37px;
+}
 /** sohail **/
 .mgt-0{
 margin-top:0;
@@ -2035,9 +2038,16 @@ margin-top:16px;
       -moz-appearance: none;
       appearance:none;
       position:relative;
-      background:url('images/book-form-arrow.png') no-repeat 278px 10px;  
+      background:url('images/book-form-arrow.png') no-repeat right center;  
+}
+.submit-btn.submit-form-btn {
+    min-width: 190px;
+    text-align: left;
+    padding-left: 30px;
 }
 
+div.wpcf7 .ajax-loader{display: none;}
+div.wpcf7 .ajax-loader.is-active{display: block;}
 .msg_opt{
     text-decoration: none;
     font-size: 11px;
@@ -2051,7 +2061,7 @@ margin-top:16px;
 }
 
 .message_field .textarea_field textarea{
-width:90%;  
+width:100%;  
 background:none;
 border:none;
 resize:none;
