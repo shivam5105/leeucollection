@@ -1053,6 +1053,13 @@ class TV_Main_Menu_Walker extends Walker_Nav_Menu {
 		$id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args, $depth );
 		$id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
 
+        $nav_menu_sub_heading = carbon_get_post_meta($item->ID, 'nav_menu_sub_heading');
+        $nav_menu_sub_heading_html = "";
+        if($nav_menu_sub_heading)
+        {
+        	$nav_menu_sub_heading_html = "<span class='menu-sub-heading'>".$nav_menu_sub_heading."</span>";
+        }
+
         $nav_menu_image = carbon_get_post_meta($item->ID, 'nav_menu_image');
         $nav_image = "";
         $nav_image_span = "";
@@ -1060,14 +1067,14 @@ class TV_Main_Menu_Walker extends Walker_Nav_Menu {
         {
         	$nav_image_url 	= wp_get_attachment_image_src( $nav_menu_image, '190x120' );
 			$nav_image_url 	= $nav_image_url[0];
-			$nav_image 		= "<img src='".$nav_image_url."' border='0'><span>";
+			$has_sub_heading = "";
+			if($nav_menu_sub_heading)
+			{
+				$has_sub_heading = "has-sub-heading";
+			}
+
+			$nav_image 		= "<img src='".$nav_image_url."' border='0'><span class='".$has_sub_heading."'>";
 			$nav_image_span = "</span>";
-        }
-        $nav_menu_sub_heading = carbon_get_post_meta($item->ID, 'nav_menu_sub_heading');
-        $nav_menu_sub_heading_html = "";
-        if($nav_menu_sub_heading)
-        {
-        	$nav_menu_sub_heading_html = "<span class='menu-sub-heading'>".$nav_menu_sub_heading."</span>";
         }
         
 		$output .= $indent . '<li' . $id . $class_names .'>';
