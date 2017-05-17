@@ -83,10 +83,14 @@ get_header();
 									</div>
 									<div class="row"> 
 										<div class="col-6 rm-pad">
-											<img src="<?php echo $artisan_drink_image2; ?>" alt="">
+											<div class="scroll-anim animate-custom" data-anim="fade-up">
+												<img src="<?php echo $artisan_drink_image2; ?>" alt="">
+											</div>
 										</div>
 										<div class="col-6 rm-pad">
-											<img src="<?php echo $artisan_drink_image3; ?>" alt="">
+											<div class="scroll-anim animate-custom" data-anim="fade-up" data-anim-delay="100">
+												<img src="<?php echo $artisan_drink_image3; ?>" alt="">
+											</div>
 										</div>
 									</div>
 								</div>
