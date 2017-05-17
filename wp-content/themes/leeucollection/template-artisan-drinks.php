@@ -57,15 +57,27 @@ get_header();
 	            	</div>
 	            </div>
 	            <div class="col-8">
-	            	<div class="no-slider">
-						<div class="scroll-anim animate-custom" data-anim="fade-up"> 
-							<img src="http://54.191.201.248/leeucollection/wp-content/uploads/2017/03/first-room.jpg" alt="">
-						</div>	
+	            	<div class="no_slider rm_line_height">
+						<div class="scroll-anim animate-custom" data-anim="fade-up"><img src="http://54.191.201.248/leeucollection/wp-content/uploads/2017/03/first-room.jpg" alt=""></div>
 						<div class="row"> 
-							<div class="col-6 rm-pad"> <img src="http://54.191.201.248/leeucollection/wp-content/uploads/2017/03/the-estate-thumb-410x258.jpg" alt=""></div>
-							<div class="col-6 rm-pad"><img src="http://54.191.201.248/leeucollection/wp-content/uploads/2017/03/the-estate-thumb-410x258.jpg" alt=""></div>
+							<div class="col-6 rm-pad"> 
+								<img src="http://54.191.201.248/leeucollection/wp-content/uploads/2017/03/the-estate-thumb-410x258.jpg" alt="">
+							</div>
+							<div class="col-6 rm-pad">
+								<img src="http://54.191.201.248/leeucollection/wp-content/uploads/2017/03/the-estate-thumb-410x258.jpg" alt="">
+							</div>
 						</div>
 					</div>
+					<div class="row detail-row">
+						<div class="col-3">
+							<div class="desc-heading">Executive Suites</div>
+						</div>
+						<div class="col-9">
+							<div class="desc-content"> 
+								The individually styled bedrooms feature superbly comfortable beds with high quality linen, and are fitted with sisal carpets, and curtains and upholstery in natural linens, contributing to the relaxed yet sophisticated feel.
+							</div>
+						</div>
+					</div>					
 	            </div>				
 			</div>
 		</div>
