@@ -1065,9 +1065,9 @@ class TV_Main_Menu_Walker extends Walker_Nav_Menu {
         }
         $nav_menu_sub_heading = carbon_get_post_meta($item->ID, 'nav_menu_sub_heading');
         $nav_menu_sub_heading_html = "";
-        if($nav_menu_image)
+        if($nav_menu_sub_heading)
         {
-        	$nav_menu_sub_heading_html = "<div>".$nav_menu_sub_heading."</div>";
+        	$nav_menu_sub_heading_html = "<span class='menu-sub-heading'>".$nav_menu_sub_heading."</span>";
         }
         
 		$output .= $indent . '<li' . $id . $class_names .'>';
