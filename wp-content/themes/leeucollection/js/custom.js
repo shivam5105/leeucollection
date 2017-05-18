@@ -206,14 +206,22 @@ var Blank ={
 	},
 	home_slide_wid_name : function(){
 		var owl = $('.owl-carousel.single_slider_home_2');
-
+		var dots_wrap; 
+			if ($(window).width() > 1025){
+				dots_wrap = '.slider-nav .thumbs';
+				autoplay_wrap = false; 
+			}else{
+				dots_wrap = "";
+				autoplay_wrap = true; 
+			} 	
 		if(owl.length){		
 			owl.owlCarousel({
 				animateOut: 'fadeOut',
 			    loop:false,
 			    nav:false,
 				dots: true,
-				dotsContainer: '.slider-nav .thumbs',
+				dotsContainer: dots_wrap,
+				autoplay:autoplay_wrap,
 			    smartSpeed:1000,
 			    margin:1,
 			    responsive:{
