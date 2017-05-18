@@ -1620,6 +1620,9 @@ body.short-header .slider-text.top-position {
 #main-navigation ul.sub-menu li a span.has-sub-heading {
     padding-bottom: 0;
 }
+div.wpcf7-mail-sent-ok , div.wpcf7-validation-errors{
+    border:none;
+}
 /** sohail **/
 .mgt-0{
 margin-top:0;
@@ -2086,7 +2089,17 @@ margin-top:16px;
     border-color:#c19034;
 }
 
-div.wpcf7 .ajax-loader{display: none;}
+div.wpcf7 .ajax-loader{
+    display: none;
+    position: absolute;
+    right: 53px;
+    top: 50%;
+    -webkit-transform: translateY(-50%); 
+    -moz-transform: translateY(-50%); 
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    visibility: visible;
+}
 div.wpcf7 .ajax-loader.is-active{display: block;}
 .msg_opt{
     text-decoration: none;
