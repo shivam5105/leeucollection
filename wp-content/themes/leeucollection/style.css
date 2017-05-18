@@ -2100,6 +2100,9 @@ div.wpcf7 .ajax-loader{
     transform: translateY(-50%);
     visibility: visible;
 }
+span.wpcf7-not-valid-tip{
+    margin-top: 15px;
+}
 div.wpcf7 .ajax-loader.is-active{display: block;}
 .msg_opt{
     text-decoration: none;
