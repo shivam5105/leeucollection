@@ -1642,6 +1642,16 @@ div.wpcf7-mail-sent-ok , div.wpcf7-validation-errors{
     letter-spacing: 0.011em;
     margin: 30px 0;
 }
+.wine-name-date-wrapper {
+    margin-top: 27px;
+}
+.wine-name{
+    font-size: 21px;
+    line-height: 1.23;
+    font-weight: 500;
+    font-style: normal; 
+    font-family: 'Lyon Text Regular No. 2';  
+}
 /** sohail **/
 .mgt-0{
 margin-top:0;
