@@ -1591,8 +1591,11 @@ body.short-header .slider-text.top-position {
 .the_founder{
     margin-bottom: 37px;
 }
-.send_msg{
-    position: relative;
+.send_msg {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    z-index: 2;
 }
 .send_msg::after{
     background: rgba(0, 0, 0, 0) url("images/arrow-icon.png") no-repeat scroll 0 0;
@@ -2075,10 +2078,12 @@ margin-top:16px;
     min-width: 190px;
     text-align: left;
     padding-left: 30px;
-    border-right:none;
-    border-bottom:none;
     border-width:2px;
     border-color:#ac9e94;
+}
+
+.submit-btn.submit-form-btn:hover{
+    border-color:#c19034;
 }
 
 div.wpcf7 .ajax-loader{display: none;}
@@ -2106,7 +2111,8 @@ margin:0;
 
 .message_field{
     border:2px solid #ac9e94;
-     width: 100%;
+    width: 100%;
+    position: relative;
 }
 .send_msg button{
     border:1px solid #ac9e94;
