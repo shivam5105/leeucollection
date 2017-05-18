@@ -1652,6 +1652,12 @@ div.wpcf7-mail-sent-ok , div.wpcf7-validation-errors{
     font-style: normal; 
     font-family: 'Lyon Text Regular No. 2';  
 }
+.wine-type , wine-date{
+    font-family: 'GillSans';
+    font-weight: 300;
+    font-style: normal;
+    text-transform: uppercase;
+}
 /** sohail **/
 .mgt-0{
 margin-top:0;
