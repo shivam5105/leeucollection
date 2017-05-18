@@ -355,6 +355,9 @@
 	.linking-wrap li.see-more-link a:before{
 		display: none;
 	}	
+	.pagination-slider {
+    	margin-top: 56px;
+	}
 
 }
 
