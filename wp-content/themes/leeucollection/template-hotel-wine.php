@@ -247,9 +247,9 @@ get_header(); ?>
 							?>
 							<div class="listing-box listing-row wine-slider-section-wrapper">
 								<div class="text-center scroll-anim animate-custom" data-anim="fade-up">
-									<h2 class="ucase"><?php echo $wine_section_heading; ?></h2>
+									<h2 class="ucase small_heading"><?php echo $wine_section_heading; ?></h2>
 								</div>
-								<div class="wine-section-description"><?php echo $wine_section_description; ?></div>
+								<div class="wine-section-description col-11 col-centered"><?php echo $wine_section_description; ?></div>
 								<div class="two-slide-carousel two-img-col">
 									<?php
 									if(count($wine_slider_details) > 2)
