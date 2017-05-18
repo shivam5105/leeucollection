@@ -248,6 +248,9 @@ padding-top: 41px;
 #main-navigation ul li {
     margin-right:33px;
 }
+#main-navigation .sub-menu li {
+    margin-right: 0; 
+}
 #main-navigation .sub-menu li > .sub-menu li {
     margin-right: 9px;
 }
