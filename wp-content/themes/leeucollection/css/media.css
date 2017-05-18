@@ -299,9 +299,6 @@
 		position: static;
 		display: block;
 	}
-	.content-part{
-		display: none;
-	}
 	.inner-detail-content{
 		opacity: 1;
 		-webkit-transform:translateY(0); 
@@ -355,10 +352,84 @@
 	.linking-wrap li.see-more-link a:before{
 		display: none;
 	}	
-	.pagination-slider {
-    	margin-top: 56px;
+	.pagination-slider , .two-img-col > div:last-child , .mgt-topp{
+    	margin-top: 67px;
 	}
-
+	.gotoslidehead {
+    	margin-bottom: 19px;
+	}
+	.sliding-detail .cstm-btn-wrapper a.cstm-btn:first-child {
+	    margin-right: 11px;
+	}
+	.linking-wrap li.book-link a::before{
+		display: none;
+	}
+	.linking-wrap li.see-more-link a, .linking-wrap li.book-link a {
+	    min-width: 132px;
+	    display: inline-block;
+	    text-transform: uppercase;
+	    position: relative;
+	    border: 1px solid #c7beb6;
+	    padding: 16px 0;
+	}	
+	.linking-wrap li.see-more-link a::after , .linking-wrap li.book-link a::after{
+		background: rgba(0, 0, 0, 0) url("../images/arrow-icon.png") no-repeat scroll 0 0;
+		content: "";
+		display: inline-block;
+		height: 10px;
+		margin-left: 15px;
+		right: 11px;
+		-webkit-transform: translateY(1px) translateX(-8px);
+		-moz-transform: translateY(1px) translateX(-8px);
+		-ms-transform: translateY(1px) translateX(-8px);
+		transform: translateY(1px) translateX(-8px);
+		-webkit-transition: all 0.2s ease 0s;
+		-moz-transition: all 0.2s ease 0s;
+		-ms-transition: all 0.2s ease 0s;
+		transition: all 0.2s ease 0s;
+		width: 29px;
+		opacity:1;
+		position: static;
+	}
+	.linking-wrap li.see-more-link a:hover:after , .linking-wrap li.book-link a:hover:after{   
+		 background: rgba(0, 0, 0, 0) url("../images/arrow-icon-hover.png") no-repeat scroll 0 0;
+	    -webkit-transform: translateY(1px) translateX(0px);
+	    -moz-transform: translateY(1px) translateX(0px);
+	    -ms-transform: translateY(1px) translateX(0px);
+	    transform: translateY(1px) translateX(0px);
+	}		
+	.linking-wrap li.see-more-link a:hover,.linking-wrap li.book-link a:hover{
+   	 	color: #c19034;
+   	 	border: 1px solid #c19034;
+	}
+	.linking-wrap li {
+	    margin-left: 11px;
+	}
+	.linking-wrap li a{
+		text-align: center;
+	}	
+	.inner-detail-content2{
+		text-align: center;
+	}
+	.align_center{
+		margin-bottom: 38px;
+		margin-top: 0;
+	}
+	.two-img-col .content-part{
+		margin-top: 20px;
+	}
+	.two-img-col .linking-wrap{ 
+		margin-top: 19px;
+	}
+	.home-wine-wrap .desc-heading{
+		margin-top: 20px;
+	}
+	.sliding-detail .linking-wrap{
+		margin-top: 19px;
+	}
+	.sliding-detail .linking-wrap li.see-more-link a{
+		padding-left: 0;
+	}
 }
 
 @media only screen and (max-width: 767px){
