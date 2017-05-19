@@ -1059,7 +1059,6 @@ class TV_Main_Menu_Walker extends Walker_Nav_Menu {
         {
         	$nav_menu_sub_heading_html = "<span class='menu-sub-heading'>".$nav_menu_sub_heading."</span>";
         }
-
         $nav_menu_image = carbon_get_post_meta($item->ID, 'nav_menu_image');
         $nav_image = "";
         $nav_image_span = "";
