@@ -382,10 +382,10 @@ get_header();
 								?>
 								<div class="sliding-detail <?php echo $active_slide; ?>" data-object="<?php echo $loop; ?>">
 									<div class="inner-detail-content for-ipad-mob"> 
-										<div class="content-part"> 
+										<div class="content-part notranslate"> 
 											<?php echo $hotel_name; ?>
 										</div>
-										<div class="gotoslidehead ucase"> 
+										<div class="gotoslidehead ucase notranslate"> 
 											<?php echo $hotel_slider['crb_hotel_locations']; ?>
 										</div>
 										<div class="cstm-btn-wrapper">
@@ -446,7 +446,7 @@ get_header();
 									$active_slide = "active-main-pagination";
 								}
 								?>
-								<div class="gotoslide <?php echo $active_slide; ?>" data-object="<?php echo $loop; ?>"><?php echo $restaurant_name; ?></div>
+								<div class="gotoslide <?php echo $active_slide; ?> notranslate" data-object="<?php echo $loop; ?>"><?php echo $restaurant_name; ?></div>
 								<?php
 								$loop++;
 							}
@@ -641,9 +641,7 @@ get_header();
 								?>
 								<div class="sliding-detail <?php echo $active_slide; ?>" data-object="<?php echo $loop; ?>">
 									<div class="inner-detail-content2">
-										<div class="scroll-anim animate-custom" data-anim="fade-up">
-											<div class="desc-heading"><?php echo $wine_name; ?></div>
-										</div>
+										<div class="desc-heading"><?php echo $wine_name; ?></div>
 										<div class="content-part">
 											<?php echo nl2br($wine_description); ?>
 										</div>
