@@ -123,6 +123,9 @@ body{
     font-weight: normal;
     font-style: normal;
 }
+textarea {
+    outline: none;
+}
 h1{
     font-size: 50px;
     font-family: 'GillSans';
@@ -2168,6 +2171,7 @@ margin:0;
     border:2px solid #ac9e94;
     width: 100%;
     position: relative;
+    padding-bottom: 44px
 }
 .send_msg button{
     border:1px solid #ac9e94;
