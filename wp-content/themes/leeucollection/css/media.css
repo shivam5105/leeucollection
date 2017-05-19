@@ -228,9 +228,12 @@
 	.listing-row {
 	    margin-bottom: 73px;
 	    padding-bottom: 16px;
-	    margin-bottom: 60px;
+	    margin-bottom: 30px;
 	    position: relative;
-	}	
+	}
+	.page-template-template-hotel-listing .listing-row {
+		margin-bottom: 60px;
+	}
 	.detail-row{
 		margin-top: 16px;
 		margin-bottom: 16px;
@@ -517,7 +520,7 @@
 	.form-group.form-input-wrap{
 		width: 58%;
 	}
-	.listing-row{
+	.page-template-template-hotel-listing .listing-row{
 		padding-bottom: 13px;
 	}	
 }	
