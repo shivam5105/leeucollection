@@ -199,7 +199,6 @@
 	    margin-top: 0;
 	    padding-bottom: 47px;
 	    padding-top: 36px;
-	    text-align: center;
 	}
 	.menu-footer-menu-right-container .pull-right{
 		float: none;
@@ -435,6 +434,23 @@
 @media only screen and (max-width: 767px){
 	.container{
 		padding: 0 20px;
+	}
+	.for-mob{
+		display: block;
+	}
+	.for-desk{
+		display: none !important;
+	}
+	/**homepage**/
+	.home-slider-container .slider-txt-con{
+		display: none;
+	}	
+	.slider-text.top-position{
+		top: 50%;
+		-webkit-transform:translateY(-50%);
+		-moz-transform:translateY(-50%); 
+		-ms-transform:translateY(-50%);
+		transform:translateY(-50%);
 	}	
 	/**hotel page template**/
 	.banner-text .location-text , .banner-text h1{ 
@@ -467,3 +483,12 @@
 		padding-bottom: 13px;
 	}	
 }	
+@media only screen and (max-width: 375px){
+	.form-group.form-input-wrap{
+		width: 100%;
+	}
+	.form-group .submit-btn{
+		margin-top: 15px;
+	}
+}
+
