@@ -452,12 +452,11 @@
 	.sliding-detail .content-part{
 		margin-top: 20px ;
 	}	
-	.page-template-template-hotel-listing .sliding-detail .content-part,
-	.leeu-restaurants-template-template-restaurantlisting .sliding-detail .content-part
+	#footer
 	{
 		margin-top: 18px;
 	}
-	.page-template-template-hotel-listing #site-main {
+	#site-main{
 		padding-bottom: 50px;
 	}
 }
