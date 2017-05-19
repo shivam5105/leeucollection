@@ -173,7 +173,10 @@
 	/**global changes**/
 	#site-main {
 	    margin-top: 62px;
-	}		
+	}	
+	.detail-logo{
+		display: none;
+	}	
 }
 @media only screen and (max-width: 1024px){
 	body{
@@ -260,7 +263,7 @@
 		display: block;
 	}
 	/***home page design***/
-	.home .flx{
+	 .flx{
 		display: block;
 	}
 	.booking-form-object{
@@ -429,6 +432,19 @@
 	.sliding-detail .linking-wrap li.see-more-link a{
 		padding-left: 0;
 	}
+	/**hotel page**/
+	.no_slider_wrapper + div.booking-form-object{
+		margin-top: 20px;
+	}
+	.sliding-detail .content-part{
+		margin-top: 20px ;
+	}	
+	.page-template-template-hotel-listing .sliding-detail .content-part{
+		margin-top: 18px;
+	}
+	.page-template-template-hotel-listing #site-main {
+		padding-bottom: 50px;
+	}
 }
 
 @media only screen and (max-width: 767px){
@@ -438,8 +454,18 @@
 	.for-mob{
 		display: block;
 	}
-	.for-desk{
+	.for-mob-hide{
 		display: none !important;
+	}
+	.sliding-detail .content-part{
+		font-size: 13px;
+		margin-top: 5px;
+	}
+	.home-wine-wrap .desc-heading{
+		margin-top: 16px;
+	}
+	.two-img-col .content-part{
+		font-size: 13px;
 	}
 	/**homepage**/
 	.home-slider-container .slider-txt-con{
@@ -465,7 +491,7 @@
 	    padding-top: 28px;
 	}
 	h2, h1.ucase{
-		font-size: 26px;
+		font-size: 21px;
 	}
 	.desc-heading {
 	    font-size: 17px;
