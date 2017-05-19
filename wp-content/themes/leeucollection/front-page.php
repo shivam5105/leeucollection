@@ -46,7 +46,8 @@ get_header();
 							$banner_url = $banner_url[0];
 							?>
 							<div class="slide-img">
-								<img src="<?php echo $banner_url; ?>" alt="">
+								<img class="for-desk" src="<?php echo $banner_url; ?>" alt="">
+								<div class="banner-img for-mob mht_homebanner" style="background-image:url('<?php echo $banner_url; ?>')"> </div>
 								<div class="slider-text text-center ucase <?php echo $header_text_position; ?>">
 									<div class="slider-txt-head">
 										<?php echo nl2br($header_heading); ?>
