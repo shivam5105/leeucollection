@@ -228,13 +228,17 @@
 	.listing-row {
 	    margin-bottom: 73px;
 	    padding-bottom: 16px;
-	    margin-bottom: 30px;
+	    margin-bottom: 60px;
 	    position: relative;
 	}	
 	.detail-row{
 		margin-top: 16px;
 		margin-bottom: 16px;
 	}
+	.listing-row.no-page-link {
+	    margin-bottom: 44px;
+	    padding-bottom: 0;
+	}	
 	.desc-heading{
 		margin-bottom: 5px;
 	}
@@ -262,6 +266,10 @@
 	}
 	.for-ipad-mob{
 		display: block;
+	}
+	.detail-row{
+		margin-left: 0;
+		margin-right: 0;
 	}
 	/***home page design***/
 	 .flx{
@@ -467,6 +475,9 @@
 	}
 	.two-img-col .content-part{
 		font-size: 13px;
+	}
+	.home-heading, .align_center{
+		margin-bottom: 20px;
 	}
 	/**homepage**/
 	.home-slider-container .slider-txt-con{

@@ -128,7 +128,7 @@ get_header(); ?>
 										$slider_theme_class = "";
 									}
 									?>
-									<div class="listing-box listing-row">
+									<div class="listing-box listing-row <?php if($section_link == '') { echo "no-page-link"; } ?>">
 										<div class="text-center scroll-anim" data-anim="fade-up">
 											<h2 class="ucase"><?php echo $section_heading; ?></h2>
 										</div>
