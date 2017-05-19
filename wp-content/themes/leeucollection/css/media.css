@@ -473,9 +473,10 @@
 	}
 	.home .sliding-detail .content-part{
 		margin-top: 5px;
+		font-size: 13px;
 	}
 	.sliding-detail .content-part{
-		font-size: 13px;
+		font-size: 15px;
 		margin-top: 16px;
 	}
 	.home-wine-wrap .desc-heading{
