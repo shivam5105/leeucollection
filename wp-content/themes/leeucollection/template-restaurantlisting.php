@@ -21,7 +21,7 @@ get_header(); ?>
 	}
 	?>	
 	<section id="site-main"> 
-		<div class="container home-slider-container res-slider-container">
+		<div class="container home-slider-container res-slider-container <?php if(!$has_slider){ echo "no_slider_wrapper"; }?>">
 			<div class="single_slider_wrapper scroll-anim <?php if(!$has_slider){ echo "no_slider"; }?>" data-anim="fade-up">
 				<?php
 				if($has_slider == true)
@@ -46,7 +46,8 @@ get_header(); ?>
 							$banner_url = $banner_url[0];
 							?>
 							<div class="slide-img">
-								<img src="<?php echo $banner_url; ?>" alt="">
+								<div class="banner-img for-mob mht_homebanner" style="background-image:url('<?php echo $banner_url; ?>')"> </div>
+								<img class="for-mob-hide" src="<?php echo $banner_url; ?>" alt="">
 								<div class="slider-text text-center ucase <?php echo $header_text_position; ?>">
 									<div class="slider-txt-head">
 										<?php echo nl2br($header_heading); ?>
@@ -182,7 +183,7 @@ get_header(); ?>
 					<div class="row scroll-anim animate-custom flx" data-anim="fade-up">
 						<?php
 						$col3_class = "rm-pad-left";
-						$col9_class = "rm-pad-right";
+						$col9_class = "rm-pad-right flx-right";
 
 						if($section_loop%2 == 0)
 						{
@@ -228,7 +229,7 @@ get_header(); ?>
 									</div>
 								</div>
 							</div>
-							<div class="main-nav-slider">
+							<div class="main-nav-slider for-desk">
 								<?php
 								if(is_array($res_section['crb_res_section_details']) && count($res_section['crb_res_section_details']) > 0)
 								{
@@ -318,16 +319,8 @@ get_header(); ?>
 						<?php
 						$col9_content = ob_get_clean();
 
-						if($section_loop%2 == 0)
-						{
-							echo $col9_content;
-							echo $col3_content;
-						}
-						else
-						{
-							echo $col3_content;
-							echo $col9_content;
-						}
+						echo $col9_content;
+						echo $col3_content;
 						?>
 					</div>
 				</div>
