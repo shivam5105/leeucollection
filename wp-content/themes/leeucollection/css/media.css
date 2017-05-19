@@ -471,9 +471,12 @@
 	.for-mob-hide{
 		display: none !important;
 	}
+	.home .sliding-detail .content-part{
+		margin-top: 5px;
+	}
 	.sliding-detail .content-part{
 		font-size: 13px;
-		margin-top: 5px;
+		margin-top: 16px;
 	}
 	.home-wine-wrap .desc-heading{
 		margin-top: 16px;
