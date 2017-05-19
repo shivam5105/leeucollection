@@ -197,6 +197,7 @@
     [class*="col-"] {
         width: 100%;
         float: none;
+        padding: 0;
     }
 	#footer {
 	    margin-top: 0;
