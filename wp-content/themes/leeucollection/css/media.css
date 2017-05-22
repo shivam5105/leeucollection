@@ -529,7 +529,27 @@
 	}
 	.page-template-template-hotel-listing .listing-row{
 		padding-bottom: 13px;
+	}
+	.two-slide-carousel .desc-heading{
+		font-size: 17px;
+		min-height: auto;
+		margin-top: 17px;
 	}	
+	.two-slide-carousel .owl-dots{
+		margin-top: 2px;
+	}
+	.two-slide-carousel  .page-link{
+		display: none;
+	}
+	.side-nav-contain.fix-pos{
+		display: none;
+	}
+	.room-listing-contain > .listing-row{
+		margin-bottom: 0;
+	}
+	.room-listing-contain > .listing-row > .scroll-anim > .col-8 > div:last-child{
+		margin: 0;
+	}
 }	
 @media only screen and (max-width: 375px){
 	.form-group.form-input-wrap{

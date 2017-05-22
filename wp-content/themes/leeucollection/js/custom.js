@@ -96,6 +96,14 @@ var Blank ={
 	},
 	two_slider : function(){
 		var owl = $('.owl-carousel.two_slider');
+		var dots_wrap; 
+		if ($(window).width() > 1025){
+			dots_condition = false;
+			autoplay_wrap = false; 
+		}else{
+			dots_condition = true;
+			autoplay_wrap = true; 
+		} 
 		if(owl.length){
 			owl.on('initialized.owl.carousel', function(event) {
 				var main_parent = owl.parents('.two-slide-carousel');
@@ -106,7 +114,8 @@ var Blank ={
 			owl.owlCarousel({
 			    loop:true,
 			    nav:false,
-			    dots:false,
+			    dots:dots_condition,
+			    autoplay:autoplay_wrap,
 			    smartSpeed:1000,
 			    margin:1,
 			    responsive:{
@@ -154,9 +163,7 @@ var Blank ={
 			}else{
 				dots_wrap = "";
 				autoplay_wrap = true; 
-			} 	
-			console.log(dots_wrap);
-			console.log(autoplay_wrap);		
+			} 		
 		if(owl.length){		
 			owl.owlCarousel({
 				animateOut: 'fadeOut',
