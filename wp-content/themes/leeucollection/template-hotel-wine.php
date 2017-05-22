@@ -202,22 +202,37 @@ get_header(); ?>
 													<div class="row detail-row">
 														<div class="col-3">
 															<div class="desc-heading mg-l-20"><?php echo $slide_title; ?></div>
-															<div class="see_option ucase">
-																<?php
-																if(!empty($section_link) && !empty($section_link_text))
-																{
-																	?>
-																	<span><a href="<?php echo $section_link; ?>"><?php echo $section_link_text; ?></a></span>
-																	<?php
-																}
-																?>
-															</div>
 														</div>
 														<div class="col-9">
 															<div class="desc-content"> 
 																<?php echo nl2br($slide_desc); ?>
 															</div>
 														</div>
+														<div class="clearfix"></div>
+														<div class="see_option_wrapper">
+															<?php
+															if(!empty($section_link) && !empty($section_link_text))
+															{
+																?>															
+															<ul class="list-inline linking-wrap">
+																<li class="see-more-link">
+																	<a href="http://54.191.201.248/leeucollection/hotel/leeu-estates/eat-and-drink/">See More</a>
+																</li>
+															</ul>
+																<?php
+															}
+															?>															
+														</div>														
+														<!--<<div class="see_option ucase">
+															<?php
+															if(!empty($section_link) && !empty($section_link_text))
+															{
+																?>
+																<span><a href="<?php echo $section_link; ?>"><?php echo $section_link_text; ?></a></span>
+																<?php
+															}
+															?>
+														</div>-->													
 													</div>
 												</div>
 												<?php
