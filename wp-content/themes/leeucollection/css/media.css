@@ -482,7 +482,23 @@
 	.room-listing-page .side-log-wrap{
 		margin-top: 0;
 	}
-
+	/** wine page**/
+	.leeu-wine-template-template-hotel-wine	.see_option_wrapper{
+		padding: 0 1px;
+	}
+	.leeu-wine-template-template-hotel-wine	 .linking-wrap{
+		margin-top: 10px;
+	}
+	.leeu-wine-template-template-hotel-wine .listing-row{
+		padding-bottom: 0;
+		margin-bottom: 60px;
+	}
+	.leeu-wine-template-template-hotel-wine .detail-row.listing-row{
+		margin-bottom: 60px;
+	}
+	.map_img{
+		display: none;
+	}		
 }
 
 @media only screen and (max-width: 767px){
@@ -593,7 +609,61 @@
 	}	
 	.linking-wrap , .two-img-col .linking-wrap{
 	    margin-top: 10px;
-	}		
+	}
+	/**facilities page**/
+	.summary_details p, .fasc_details p{
+		font-size: 15px;
+	}	
+	.summary_details, .fasc_details{
+		margin-top: 5px;
+	}
+	/**wine page**/
+
+	.leeu-wine-template-template-hotel-wine .desc-content{
+		text-align: left;
+	}
+	.leeu-wine-template-template-hotel-wine .listing-row{
+		padding-bottom: 0;
+		margin-bottom: 30px;
+	}
+	.leeu-wine-template-template-hotel-wine .detail-row.listing-row{
+		margin-bottom: 30px;
+	}	
+	.leeu-wine-template-template-hotel-wine  .detail-row{
+		margin: 5px 0;
+	}
+	.leeu-heading-wrap{
+		padding: 20px 0;
+	}
+	/**meeting and events**/
+	.email_sec , .enq_sec{
+		width: 100%;
+		display: block;
+		float: none;
+	}	
+	.email_sec{
+		margin-bottom: 35px;
+	}
+	.name_opt , .enquiry_opt , .msg_opt{
+		margin-bottom: 15px;
+	}
+	.form_field .inside_pd .email_sec .name_field input, .form_field .inside_pd .enq_sec .opt_field select, .message_field .textarea_field textarea{
+		margin-top: 0;
+	}
+	.the_founder h2{
+		font-size: 17px;
+	}
+	.hotel-template-template-meetings-events .listing-row{
+		padding-bottom: 0;
+		margin-bottom: 20px;
+	}
+	.the_founder{
+		margin-bottom: 17px;
+	}
+	.form_field .inside_pd{
+		width: 90%;
+	}
+
 }	
 @media only screen and (max-width: 375px){
 	.form-group.form-input-wrap{
