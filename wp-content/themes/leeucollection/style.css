@@ -1667,6 +1667,19 @@ div.wpcf7-mail-sent-ok , div.wpcf7-validation-errors{
 .for-mob{
     display: none;
 }
+.see_option_wrapper {
+    padding: 0 20px;
+}
+.see_option_wrapper a{
+    padding-left: 30px;
+}
+.see_option_wrapper .linking-wrap{
+    margin-top: 0;
+}
+.see_option_wrapper .linking-wrap li.see-more-link a::before, .see_option_wrapper .linking-wrap li.see-more-link a::after{
+    left: 0;
+    top: -20px;
+}
 /** sohail **/
 .mgt-0{
 margin-top:0;

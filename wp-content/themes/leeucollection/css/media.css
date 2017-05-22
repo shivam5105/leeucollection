@@ -460,6 +460,29 @@
 	#site-main{
 		padding-bottom: 50px;
 	}
+	/**room listing page**/
+	.img-desc {
+	    margin-top: 0px;
+	    position: absolute;
+	    top: 10px;
+	    font-size: 30px;
+	    text-align: center;
+	    width: 100%;
+	}
+	.two-img-col > div[class*="col-"]{
+		position: relative;
+	}
+
+	.linking-wrap, .content-part {
+	    margin-top: 30px;
+	}
+	.room-listing-page .banner-img {
+	    padding-top: 80px;
+	}
+	.room-listing-page .side-log-wrap{
+		margin-top: 0;
+	}
+
 }
 
 @media only screen and (max-width: 767px){
@@ -484,7 +507,7 @@
 		margin-top: 16px;
 	}
 	.two-img-col .content-part{
-		font-size: 13px;
+		font-size: 15px;
 	}
 	.home-heading, .align_center{
 		margin-bottom: 20px;
@@ -493,6 +516,9 @@
 	.home-slider-container .slider-txt-con{
 		display: none;
 	}	
+	.container.home-slider-container{
+		padding: 0;
+	}
 	.slider-text.top-position{
 		top: 50%;
 		-webkit-transform:translateY(-50%);
@@ -502,7 +528,7 @@
 	}	
 	/**hotel page template**/
 	.banner-text .location-text , .banner-text h1{ 
-		display: none;
+		color:#fff;
 	}
 	.main_slider{
 		margin-left: -20px;
@@ -518,8 +544,11 @@
 	.desc-heading {
 	    font-size: 17px;
 	}
-	.desc-content{
-		font-size: 13px;
+	.desc-content,.content-part{
+		font-size: 15px;
+	}
+	.linking-wrap {
+    	margin-top: 18px;
 	}	
 	#footer,#footer a{
 		font-size: 10px;
@@ -541,15 +570,30 @@
 	.two-slide-carousel  .page-link{
 		display: none;
 	}
-	.side-nav-contain.fix-pos{
-		display: none;
-	}
 	.room-listing-contain > .listing-row{
 		margin-bottom: 0;
 	}
 	.room-listing-contain > .listing-row > .scroll-anim > .col-8 > div:last-child{
 		margin: 0;
 	}
+	.banner-text.pos-abs-top {
+	    top: 100px;
+	    padding: 0;
+	}
+	/** room listing page**/
+	.img-desc{
+		font-size: 21px;
+		top: -10px;
+	}
+	.room-listing-page .banner-img {
+	    padding-top: 30px;
+	}
+	.linking-wrap, .content-part,.two-img-col .content-part  {
+	    margin-top: 5px;
+	}	
+	.linking-wrap , .two-img-col .linking-wrap{
+	    margin-top: 10px;
+	}		
 }	
 @media only screen and (max-width: 375px){
 	.form-group.form-input-wrap{
