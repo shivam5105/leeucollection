@@ -28,7 +28,7 @@ get_header(); ?>
 			</div>
 		</div>
 		<div class="container">
-			<div class="col-12 rm-pad room-listing-contain">
+			<div class="col-12 rm-pad room-listing-contain wine-listing-contain">
 				<div class="row listing-row">
 					<div class="col-2 rm-pad-left">
 						<div class="side-nav-contain">

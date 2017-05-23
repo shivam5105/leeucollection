@@ -628,7 +628,7 @@
 		margin-top: 5px;
 	}
 	/**wine page**/
-
+	.room-listing-contain
 	.leeu-wine-template-template-hotel-wine .desc-content{
 		text-align: left;
 	}
@@ -662,6 +662,9 @@
 	.listing-box .text-center h2.small_heading {
 	    font-size: 21px;
 	    margin-bottom: 0;
+	}
+	.wine-listing-contain > .listing-row{
+		margin-bottom: 0;
 	}		
 	/**meeting and events**/
 	.email_sec , .enq_sec{
