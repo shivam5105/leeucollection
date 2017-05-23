@@ -153,6 +153,17 @@ get_header();
 				</form>
 			</div>
 		</div>
+		<div class="container"> 
+			<div class="row">
+				<div class="col-10 col-centered">
+					<div class="scroll-anim animate-custom flx" data-anim="fade-up">
+						<div class="home-about-content text-center"> 
+							<?php echo carbon_get_post_meta($post->ID, "crb_page_about"); ?>								
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<?php
 		$hotel_section_heading = carbon_get_post_meta($post->ID, "crb_hotel_section_heading");
 		$slider_data = carbon_get_post_meta($post->ID, "crb_home_hotels", 'complex');
@@ -246,7 +257,7 @@ get_header();
 												}?>
 											</div>
 										</div>
-										<div class="inner-detail-content for-desk	">
+										<div class="inner-detail-content for-desk">
 											<?php
 											if(!empty($hotel_logo_url))
 											{
@@ -574,7 +585,7 @@ get_header();
 		}
 		?>
 		<div class="container">
-			<div class="home-wine-wrap pagination-slider" data-unique-class="home-wine-wrap">
+			<div class="home-wine-wrap pagination-slider <?php if(!$has_slider){ echo "no_slider_wrapper"; }?>" data-unique-class="home-wine-wrap">
 				<div class="text-center scroll-anim animate-custom" data-anim="fade-up">
 					<h2 class="home-heading ucase"><?php echo $wine_section_heading; ?></h2>
 				</div>
