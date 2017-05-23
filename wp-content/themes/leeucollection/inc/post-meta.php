@@ -263,7 +263,6 @@ Container::make('post_meta', 'Hotels')
     ->show_on_template(array('front-page.php'))
     ->add_fields(array(
         Field::make('text', 'crb_hotel_section_heading', 'Heading'),
-
         Field::make('complex', 'crb_home_hotels', '')->add_fields(array(
             Field::make('text', 'crb_hotel_locations', 'Hotel Location'),
             Field::make('complex', 'crb_home_hotels', '')->add_fields(array(
@@ -277,6 +276,14 @@ Container::make('post_meta', 'Hotels')
                 Field::make('text', 'crb_booking_button_link', 'Booking Button Link')->set_width('50'),
             )),
         )),
+    ));   
+
+//Home Page - Page About
+Container::make('post_meta', 'Page About')
+    ->show_on_post_type($leeu_post_types)
+    ->show_on_template(array('front-page.php'))
+    ->add_fields(array(
+        Field::make('textarea', 'crb_page_about', 'Page About'),
     ));
 
 //Home Page - Restaurants
