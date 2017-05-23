@@ -504,6 +504,11 @@
 	.map_img{
 		display: none;
 	}
+	/**room detail page**/
+	.hotel-template-template-room-php.single.single-hotel .three-img-col .col-4{
+		width: 33.33%;
+		float: left;
+	} 
 
 }
 
@@ -694,7 +699,44 @@
 	.form_field .inside_pd{
 		width: 90%;
 	}
-
+	/**Explore page**/
+	.follower h2{
+		margin-top: 10px;
+		margin-bottom: 10px;
+		font-size: 21px;			
+	}
+	.hotel-template-template-explore .leeu-heading-wrap{
+		padding-top: 50px;
+	}
+	#instafeed > a {
+	    display: block;
+	    width: 100%;
+	    margin-top: 15px;
+	}	
+	.hotel-template-template-facilities .listing-row{
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+	/**room detail page**/
+	.hotel-template-template-room-php.single.single-hotel .three-img-col .col-4{
+		width: 100%;
+		float: left;
+		margin-bottom: 30px;
+	} 	
+	.desc-content-two-col {
+	    -webkit-column-count: 2;
+	    -moz-column-count: 2;
+	    column-count: 1;
+	}	
+	.hotel-template-template-room-php.single.single-hotel .col-9 .leeu-text{
+		margin-top: 30px;
+	}
+	.hotel-template-template-room-php.single.single-hotel .hotel-menu .img-desc{
+		margin-top: 5px;
+	}
+	.hotel-template-template-room-php.single.single-hotel .listing-row{
+		padding-bottom: 0;
+	}
 }	
 @media only screen and (max-width: 375px){
 	.form-group.form-input-wrap{
