@@ -649,6 +649,9 @@
     	margin-top: 5px;
     	text-align: center;
 	}
+	.wine-name{
+		font-size: 15px;
+	}
 	.wine-type {
     	margin-left: 5px;
 	}
