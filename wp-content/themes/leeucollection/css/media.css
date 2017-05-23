@@ -466,7 +466,7 @@
 		padding-bottom: 50px;
 	}
 	/**room listing page**/
-	.img-desc {
+	.room-listing-page .img-desc {
 	    margin-top: 0px;
 	    position: absolute;
 	    top: 10px;
@@ -603,7 +603,7 @@
 	    padding: 0;
 	}
 	/** room listing page**/
-	.img-desc{
+	.room-listing-page .img-desc{
 		font-size: 21px;
 		top: -10px;
 	}
