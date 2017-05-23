@@ -654,8 +654,12 @@
 	}
 	.wine-section-description {
 	    font-size: 15px;
-	    margin: 20px 0;
-	}	
+	    margin: 13px 0 20px;
+	}
+	.listing-box .text-center h2.small_heading {
+	    font-size: 21px;
+	    margin-bottom: 0;
+	}		
 	/**meeting and events**/
 	.email_sec , .enq_sec{
 		width: 100%;
