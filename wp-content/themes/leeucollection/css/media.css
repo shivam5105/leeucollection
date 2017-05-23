@@ -645,6 +645,13 @@
 	.leeu-heading-wrap{
 		padding: 20px 0;
 	}
+	.wine-name-date-wrapper {
+    	margin-top: 5px;
+    	text-align: center;
+	}
+	.wine-type {
+    	margin-left: 5px;
+	}
 	/**meeting and events**/
 	.email_sec , .enq_sec{
 		width: 100%;
