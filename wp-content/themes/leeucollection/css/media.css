@@ -514,6 +514,20 @@
 		padding-bottom: 0;
 	}
 
+	/**spa and wellness page**/
+	.row.detail-row.spa-wellness-row .see_option_wrapper {
+	    position: static;
+	    padding: 0;
+	    margin-top: 10px;
+	}
+	.spa-wellness-row .desc-content{
+		min-height: auto;
+	}
+	.linking-wrap li.see-more-link a, .linking-wrap li.book-link a{
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
 }
 
 @media only screen and (max-width: 767px){

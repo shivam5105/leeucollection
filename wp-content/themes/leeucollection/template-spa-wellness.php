@@ -174,18 +174,26 @@ get_header(); ?>
 													<?php
 												}?>
 											</div>
-											<div class="row detail-row">
+											<div class="row detail-row spa-wellness-row">
 												<div class="col-3">
 													<div class="desc-heading"><?php echo $slide_title; ?></div>
-													<div class="see_option"> 
+													<!--<div class="see_option"> 
 														<span><a href="<?php echo $section_link; ?>"><?php echo $section_link_text; ?></a></span>
-													</div>
+													</div>-->
 												</div>
 												<div class="col-9">
 													<div class="desc-content"> 
 														<?php echo nl2br($slide_desc); ?>
 													</div>
 												</div>
+												<div class="clearfix"></div>
+												<div class="see_option_wrapper">														
+													<ul class="list-inline linking-wrap">
+														<li class="see-more-link">
+															<a href="<?php echo $section_link; ?>"><?php echo $section_link_text; ?></a>
+														</li>
+													</ul>														
+												</div>												
 											</div>
 										</div>
 									</div>
