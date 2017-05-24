@@ -563,7 +563,7 @@
 	}	
 	/**hotel page template**/
 	.banner-text .location-text , .banner-text h1{ 
-		color:#fff;
+
 	}
 	.main_slider{
 		margin-left: -20px;
@@ -823,6 +823,17 @@
 	.home-hotel-wrap.pagination-slider {
 	    margin-top: 40px;
 	}	
+	/** DISCOVER LANDING **/
+	.leeu-discover-template-template-discover .content-part-heading{
+		font-size: 17px;
+	}
+
+	.leeu-discover-template-template-discover .sliding-detail .content-part{
+		margin-top: 5px;
+	}
+	.leeu-discover-template-template-discover  .single_slider_wrapper.no_slider{
+		margin-bottom: 15px;
+	}
 }	
 @media only screen and (max-width: 375px){
 	.form-group.form-input-wrap{

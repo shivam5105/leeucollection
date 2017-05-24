@@ -59,7 +59,7 @@
 								} ?>
 							</div>	
 							<?php if($has_slider == true) { ?>
-							<div class="main-nav-slider">
+							<div class="main-nav-slider for-desk">
 								<?php
 								$loop = 0;
 								foreach ($slider_content['crb_section_detail'] as $slide_key => $slide)
