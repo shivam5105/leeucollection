@@ -2065,6 +2065,7 @@ display:inline-block;
 
 .dwnldlink{
     text-align:right;
+    text-transform: uppercase;
 }
 
 .the_founder h2{

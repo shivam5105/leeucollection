@@ -776,6 +776,52 @@
 	}
 	.transformed {
 	    margin-top: 15px;
+	}
+	/*** Anton Momberg Page***/
+	.anton_paragaraph p{
+		font-size: 15px;
+	}
+	.gallery_link{
+		font-size: 5px;
+	}
+	.anton_paragaraph{
+		margin-top: 16px;
+	}
+	.anton_locat{
+		margin-top: 0;
+		margin-bottom: 10px;
+	}
+	.leeu-discover-template .desc-heading{
+		margin-bottom: 0;
+	}
+	.dwnldlink{
+		text-align: left;		
+	}
+	.dwnldlink a{
+		font-size: 11px;
+	}
+	.single_slider_wrapper + .detail-row{
+		margin-top: 0;
+	}
+	.single_slider_wrapper.no_slider + .detail-row{
+		margin-top: 16px;
+	}
+	h1{
+		font-size: 30px;
+	}
+	.intro-blurb{
+		padding-bottom: 40px;
+	}
+	/**Franschhoek**/
+	.franschhoek_cat {
+   	 margin-top: 10px;
+	}
+	.leeu-discover-template-template-location .listing-row{
+		padding-bottom: 0;
+	}
+	/**home page**/
+	.home-hotel-wrap.pagination-slider {
+	    margin-top: 40px;
 	}	
 }	
 @media only screen and (max-width: 375px){
