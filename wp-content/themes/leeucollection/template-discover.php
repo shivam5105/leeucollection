@@ -46,7 +46,11 @@ get_header();
 							$banner_url = $banner_url[0];
 							?>
 							<div class="slide-img">
-								<img src="<?php echo $banner_url; ?>" alt="">
+								<div class="banner-img-wrapper">
+									<div class="banner-img for-mob mht_homebanner" style="background-image:url('<?php echo $banner_url; ?>')"> </div>
+									<img class="for-mob-hide" src="<?php echo $banner_url; ?>" alt="" />
+								</div>	
+							</div>							
 								<div class="slider-text text-center ucase <?php echo $header_text_position; ?>">
 									<div class="slider-txt-head">
 										<?php echo nl2br($header_heading); ?>
@@ -78,7 +82,10 @@ get_header();
 						$banner_url = $banner_url[0];
 						?>
 						<div class="slide-img">
-							<img src="<?php echo $banner_url; ?>" alt="">
+							<div class="banner-img-wrapper">
+								<div class="banner-img for-mob mht_homebanner" style="background-image:url('<?php echo $banner_url; ?>')"> </div>
+								<img class="for-mob-hide" src="<?php echo $banner_url; ?>" alt="" />
+							</div>	
 						</div>
 						<?php
 					}?>
@@ -178,13 +185,13 @@ get_header();
 						if ($unique_index % 2 == 0) {
 							$image_space = 'rm-pad-right';
 							$nav_space = 'rm-pad-left';
-  							include('template-parts/discover-slide-nav.php'); 
-  							include('template-parts/discover-slide-image.php');
+							include('template-parts/discover-slide-image.php');
+  							include('template-parts/discover-slide-nav.php');				
 						}else{
 							$image_space = 'rm-pad-left';
 							$nav_space = 'rm-pad-right';
-							include('template-parts/discover-slide-image.php');	
-  							include('template-parts/discover-slide-nav.php'); 
+							include('template-parts/discover-slide-image.php');								
+  							include('template-parts/discover-slide-nav.php');						
 						}
 						?>
 					</div>

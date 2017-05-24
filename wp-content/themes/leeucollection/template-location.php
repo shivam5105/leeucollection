@@ -45,7 +45,7 @@ get_header(); ?>
 							$banner_url = wp_get_attachment_image_src( $slide_data['crb_slide_image'], '1240x600' );
 							$banner_url = $banner_url[0];
 							?>
-							<div class="banner-img">
+							<div class="banner-img-wrapper">
 								<div class="banner-img for-mob mht_homebanner" style="background-image:url('<?php echo $banner_url; ?>')"> </div>
 								<img class="for-mob-hide" src="<?php echo $banner_url; ?>" alt="" />
 							</div>
