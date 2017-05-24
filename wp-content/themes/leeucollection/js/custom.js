@@ -58,6 +58,14 @@ var Blank ={
 	},	
 	single_slider : function(){				
 		var owl = $(".owl-carousel.single_slider");
+		var dots_wrap; 
+		if ($(window).width() > 1025){
+			dots_condition = false;
+			autoplay_wrap = false; 
+		}else{
+			dots_condition = true;
+			autoplay_wrap = true; 
+		} 		
 		if(owl.length){	
 			owl.on('initialized.owl.carousel', function(event) {
 				var main_parent = owl.parents('.single_slider_wrapper');
@@ -68,9 +76,9 @@ var Blank ={
 			owl.owlCarousel({
 			    loop:true,
 			    nav:false,
-			    dots:false,
-			    dotsContainer: '#customDots',
+			    dots:dots_condition,
 			    smartSpeed:1000,
+			    autoplay:autoplay_wrap,
 			    margin:1,
 			    responsive:{
 			        0:{
