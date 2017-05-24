@@ -509,6 +509,10 @@
 		width: 33.33%;
 		float: left;
 	} 
+	/**home page**/
+	.home .listing-row{
+		padding-bottom: 0;
+	}
 
 }
 
@@ -555,7 +559,7 @@
 	}
 	.home-about-content{
 		font-size: 15px;
-		margin-top: 65px;
+		margin-top: 50px;
 	}	
 	/**hotel page template**/
 	.banner-text .location-text , .banner-text h1{ 
@@ -737,6 +741,42 @@
 	.hotel-template-template-room-php.single.single-hotel .listing-row{
 		padding-bottom: 0;
 	}
+	/*** gym page **/
+	.hotel-template-template-gym .detail-row.mgt-0{
+		margin-top: 0;
+	}
+	.session_rate{
+		margin-top: 5px;
+	}
+	.price_value p, .listing_details{
+		font-size: 15px;
+	}
+	.hotel-template-template-gym .detail-row{
+		margin-top: 0;
+	}
+	.hotel-template-template-gym .listing-box.mgt-0 + div.detail-row{
+		margin-bottom: 0;
+	}
+	/**spa and treatment pages**/
+	.transformed_head h2 {
+		font-size: 21px;
+		margin-bottom: 20px;
+	}
+	.transformed .summer_heading h3{
+		font-size: 18px;
+	}
+	.timing_func p, .transformed .summer_paragaraph p{
+		font-size: 15px;
+	}
+	.timing_func p{
+		text-align: left;
+	}
+	.service-wrapper {
+    	margin-bottom: 20px;
+	}
+	.transformed {
+	    margin-top: 15px;
+	}	
 }	
 @media only screen and (max-width: 375px){
 	.form-group.form-input-wrap{
