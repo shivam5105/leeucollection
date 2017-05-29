@@ -119,7 +119,7 @@ input, select {
 }
 /***custom grid***/
 body{
-    font-family: 'Lyon Text';
+    font-family: 'BW Haas';
     font-weight: normal;
     font-style: normal;
 }
@@ -388,9 +388,9 @@ padding-top: 41px;
     letter-spacing: 0.01em;  
 }
 .desc-content {
-    font-size: 18px;
-    letter-spacing: 0.01em;
-    line-height: 1.3;
+    font-size: 15px;
+    letter-spacing: 0.06em;
+    line-height: 1.5;
 }
 .page-link{
     margin-bottom:26px;
@@ -538,7 +538,7 @@ padding-top: 41px;
     opacity: 1;
 }
 .two-img-col .content-part{
-    font-size: 18px;
+    font-size: 15px;
 }
 .two-img-col .linking-wrap {
     margin-top: 30px;
@@ -782,7 +782,7 @@ li.current.active .side-sub-menu li.current.active ~ li{
 } 
 .img-desc{
     font-size: 21px;
-    font-family: 'Lyon Text Regular No. 2';
+    font-family: 'BW Haas';
     font-weight: 500;
     font-style: normal;
     line-height: 1.23;   
@@ -1006,7 +1006,7 @@ li.current.active .side-sub-menu li.current.active ~ li{
     border:none;
     border-bottom:1px solid #c7beb6;
     font-size: 17px;
-    font-family: 'Lyon Text';
+    font-family: 'BW Haas';
     font-weight: normal;
     font-style: normal;
     width: 100%;    
@@ -1339,10 +1339,10 @@ body.hotel-template-template-menudetail .side-sub-menu.child-2 li.current.active
     transition-duration: 0.3s;
     transition-delay: 0.15s;
 }
-.sliding-detail .content-part{
-    font-size: 18px;
-    letter-spacing: 0.01em;
-    line-height: 1.3;
+.sliding-detail .content-part {
+    font-size: 15px;
+    letter-spacing: 0.06em;
+    line-height: 1.5;
 }
 .sliding-detail .content-part{
     margin-top: 30px;
@@ -1372,7 +1372,7 @@ body.hotel-template-template-menudetail .side-sub-menu.child-2 li.current.active
     width: 100%;
     border-radius:0;
     border:none;
-    font-family: 'Lyon Text';
+    font-family: 'BW Haas';
     font-weight: normal;
     font-style: normal;
     font-size: 18px;
@@ -1585,7 +1585,7 @@ body.short-header .slider-text.top-position {
     width: 84px;
 }
 .content-part-heading{ 
-    font-family: 'Lyon Text Regular No. 2';
+    font-family: 'BW Haas';
     font-weight: 500;
     font-style: normal;
     font-size: 21px;
@@ -1652,7 +1652,7 @@ div.wpcf7-mail-sent-ok , div.wpcf7-validation-errors{
     line-height: 1.23;
     font-weight: 500;
     font-style: normal; 
-    font-family: 'Lyon Text Regular No. 2';  
+    font-family: 'BW Haas';  
 }
 .wine-type {
     margin-left: 14px;
@@ -1681,9 +1681,9 @@ div.wpcf7-mail-sent-ok , div.wpcf7-validation-errors{
     top: -20px;
 }
 .home-about-content {
-    font-size: 21px;
-    letter-spacing: 0.01em;
-    line-height: 1.3;
+    font-size: 22px;
+    letter-spacing: 0.03em;
+    line-height: 1.4;
     margin-top: 100px;
 }
 .spa-wellness-row .desc-content{
@@ -1803,7 +1803,7 @@ margin:0;
 }
 .transformed .summer_heading h3{
     font-weight: 300;
-    font-family: 'Lyon Text Regular No. 2';
+    font-family: 'BW Haas';
     font-size: 21px;
     line-height: 1.23;  
     margin-bottom:5px;
@@ -1817,7 +1817,7 @@ margin:0;
 }
 .timing_func p, .transformed .summer_paragaraph p{
     font-weight: normal;
-    font-family: 'Lyon Text';
+    font-family: 'BW Haas';
     font-size: 18px;
     line-height: 1.33;  
     letter-spacing:0.01em;
@@ -1829,14 +1829,14 @@ margin:0;
 
 .transformed .groom_heading h3{
     font-weight: 300;
-    font-family: 'Lyon Text Regular No. 2';
+    font-family: 'BW Haas';
     font-size: 21px;
     line-height: 1.23;  
     text-transform: capitalize;
 }
 .transformed .grooming_service p,.listing_type p{
     font-weight: normal;
-    font-family: 'Lyon Text';
+    font-family: 'BW Haas';
     font-size: 18px;
     line-height: 1.33;  
     letter-spacing:0.01em;
@@ -1859,7 +1859,7 @@ margin:0;
 }
 .price_value p,.listing_details{
     font-weight: normal;
-    font-family: 'Lyon Text';
+    font-family: 'BW Haas';
     font-size: 18px;
     line-height: 1.33;  
     letter-spacing:0.01em;
@@ -1906,7 +1906,7 @@ background:url(images/arrow-icon-hover.png) no-repeat;
 }
 .summary_details p, .fasc_details p{
     font-weight: normal;
-    font-family: 'Lyon Text';
+    font-family: 'BW Haas';
     font-size: 18px;
     line-height: 1.33;  
     letter-spacing:0.01em;
@@ -2047,7 +2047,7 @@ span.session_rate{
 
 .anton_paragaraph p{
     font-weight: normal;
-    font-family: 'Lyon Text';
+    font-family: 'BW Haas';
     font-size: 18px;
     line-height: 1.33;  
     letter-spacing:0.01em;
@@ -2136,7 +2136,7 @@ margin-top:16px;
     font-size: 18px;
     letter-spacing: 0.01em;
     line-height: 1.3;
-    font-family: "Lyon Text";
+    font-family: "BW Haas";
     border:none;
     background:none;
     border-bottom:2px solid #ac9e94;
@@ -2270,7 +2270,7 @@ margin:0;
 }
 
 .summer_paragaraph p {
-    font-family: "Lyon Text";
+    font-family: "BW Haas";
     font-size: 18px;
     font-weight: normal;
     letter-spacing: 0.01em;
@@ -2403,7 +2403,7 @@ margin:0;
 }
 
 .lyon_font{  
-    font-family: "Lyon Text";
+    font-family: "BW Haas";
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
