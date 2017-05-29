@@ -183,7 +183,7 @@
 	.detail-logo{
 		display: none;
 	}	
-	mean-nav .menu-header-menu-left-container > ul > li.menu-item > a + ul.sub-menu {
+	.mean-nav .menu-header-menu-left-container > ul > li.menu-item > a + ul.sub-menu {
 	    height: 400px;
 	    overflow: scroll;
 	}	
