@@ -289,3 +289,195 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'BW Haas Text 65';
+	src: url('BWHaasText-66MediumItalic.eot');
+	src: url('BWHaasText-66MediumItalic.eot?#iefix') format('embedded-opentype'),
+		url('BWHaasText-66MediumItalic.woff2') format('woff2'),
+		url('BWHaasText-66MediumItalic.woff') format('woff'),
+		url('BWHaasText-66MediumItalic.ttf') format('truetype'),
+		url('BWHaasText-66MediumItalic.svg#BWHaasText-66MediumItalic') format('svg');
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'BW Haas Text 55 Roman';
+	src: url('BWHaasText-55Roman.eot');
+	src: url('BWHaasText-55Roman.eot?#iefix') format('embedded-opentype'),
+		url('BWHaasText-55Roman.woff2') format('woff2'),
+		url('BWHaasText-55Roman.woff') format('woff'),
+		url('BWHaasText-55Roman.ttf') format('truetype'),
+		url('BWHaasText-55Roman.svg#BWHaasText-55Roman') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'BW Haas Head 95';
+	src: url('BWHaasHead-96BlackItalic.eot');
+	src: url('BWHaasHead-96BlackItalic.eot?#iefix') format('embedded-opentype'),
+		url('BWHaasHead-96BlackItalic.woff2') format('woff2'),
+		url('BWHaasHead-96BlackItalic.woff') format('woff'),
+		url('BWHaasHead-96BlackItalic.ttf') format('truetype'),
+		url('BWHaasHead-96BlackItalic.svg#BWHaasHead-96BlackItalic') format('svg');
+	font-weight: 900;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'BW Haas Text 65';
+	src: url('BWHaasText-65Medium.eot');
+	src: url('BWHaasText-65Medium.eot?#iefix') format('embedded-opentype'),
+		url('BWHaasText-65Medium.woff2') format('woff2'),
+		url('BWHaasText-65Medium.woff') format('woff'),
+		url('BWHaasText-65Medium.ttf') format('truetype'),
+		url('BWHaasText-65Medium.svg#BWHaasText-65Medium') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'BW Haas Head 65';
+	src: url('BWHaasHead-65Medium.eot');
+	src: url('BWHaasHead-65Medium.eot?#iefix') format('embedded-opentype'),
+		url('BWHaasHead-65Medium.woff2') format('woff2'),
+		url('BWHaasHead-65Medium.woff') format('woff'),
+		url('BWHaasHead-65Medium.ttf') format('truetype'),
+		url('BWHaasHead-65Medium.svg#BWHaasHead-65Medium') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'BW Haas Head 25 XThin';
+	src: url('BWHaasHead-25XThin.eot');
+	src: url('BWHaasHead-25XThin.eot?#iefix') format('embedded-opentype'),
+		url('BWHaasHead-25XThin.woff2') format('woff2'),
+		url('BWHaasHead-25XThin.woff') format('woff'),
+		url('BWHaasHead-25XThin.ttf') format('truetype'),
+		url('BWHaasHead-25XThin.svg#BWHaasHead-25XThin') format('svg');
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'BW Haas Head 55 Roman';
+	src: url('BWHaasHead-55Roman.eot');
+	src: url('BWHaasHead-55Roman.eot?#iefix') format('embedded-opentype'),
+		url('BWHaasHead-55Roman.woff2') format('woff2'),
+		url('BWHaasHead-55Roman.woff') format('woff'),
+		url('BWHaasHead-55Roman.ttf') format('truetype'),
+		url('BWHaasHead-55Roman.svg#BWHaasHead-55Roman') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'BW Haas Head 75';
+	src: url('BWHaasHead-75Bold.eot');
+	src: url('BWHaasHead-75Bold.eot?#iefix') format('embedded-opentype'),
+		url('BWHaasHead-75Bold.woff2') format('woff2'),
+		url('BWHaasHead-75Bold.woff') format('woff'),
+		url('BWHaasHead-75Bold.ttf') format('truetype'),
+		url('BWHaasHead-75Bold.svg#BWHaasHead-75Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'BW Haas Text 55 Roman';
+	src: url('BWHaasText-76BoldItalic.eot');
+	src: url('BWHaasText-76BoldItalic.eot?#iefix') format('embedded-opentype'),
+		url('BWHaasText-76BoldItalic.woff2') format('woff2'),
+		url('BWHaasText-76BoldItalic.woff') format('woff'),
+		url('BWHaasText-76BoldItalic.ttf') format('truetype'),
+		url('BWHaasText-76BoldItalic.svg#BWHaasText-76BoldItalic') format('svg');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'BW Haas Head 25 XThin';
+	src: url('BWHaasHead-26XThinItalic.eot');
+	src: url('BWHaasHead-26XThinItalic.eot?#iefix') format('embedded-opentype'),
+		url('BWHaasHead-26XThinItalic.woff2') format('woff2'),
+		url('BWHaasHead-26XThinItalic.woff') format('woff'),
+		url('BWHaasHead-26XThinItalic.ttf') format('truetype'),
+		url('BWHaasHead-26XThinItalic.svg#BWHaasHead-26XThinItalic') format('svg');
+	font-weight: 100;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'BW Haas Head 55 Roman';
+	src: url('BWHaasHead-56Italic.eot');
+	src: url('BWHaasHead-56Italic.eot?#iefix') format('embedded-opentype'),
+		url('BWHaasHead-56Italic.woff2') format('woff2'),
+		url('BWHaasHead-56Italic.woff') format('woff'),
+		url('BWHaasHead-56Italic.ttf') format('truetype'),
+		url('BWHaasHead-56Italic.svg#BWHaasHead-56Italic') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'BW Haas Head 95';
+	src: url('BWHaasHead-95Black.eot');
+	src: url('BWHaasHead-95Black.eot?#iefix') format('embedded-opentype'),
+		url('BWHaasHead-95Black.woff2') format('woff2'),
+		url('BWHaasHead-95Black.woff') format('woff'),
+		url('BWHaasHead-95Black.ttf') format('truetype'),
+		url('BWHaasHead-95Black.svg#BWHaasHead-95Black') format('svg');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'BW Haas Text 55 Roman';
+	src: url('BWHaasText-75Bold.eot');
+	src: url('BWHaasText-75Bold.eot?#iefix') format('embedded-opentype'),
+		url('BWHaasText-75Bold.woff2') format('woff2'),
+		url('BWHaasText-75Bold.woff') format('woff'),
+		url('BWHaasText-75Bold.ttf') format('truetype'),
+		url('BWHaasText-75Bold.svg#BWHaasText-75Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'BW Haas Head 75';
+	src: url('BWHaasHead-76BoldItalic.eot');
+	src: url('BWHaasHead-76BoldItalic.eot?#iefix') format('embedded-opentype'),
+		url('BWHaasHead-76BoldItalic.woff2') format('woff2'),
+		url('BWHaasHead-76BoldItalic.woff') format('woff'),
+		url('BWHaasHead-76BoldItalic.ttf') format('truetype'),
+		url('BWHaasHead-76BoldItalic.svg#BWHaasHead-76BoldItalic') format('svg');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'BW Haas Text 55 Roman';
+	src: url('BWHaasText-56Italic.eot');
+	src: url('BWHaasText-56Italic.eot?#iefix') format('embedded-opentype'),
+		url('BWHaasText-56Italic.woff2') format('woff2'),
+		url('BWHaasText-56Italic.woff') format('woff'),
+		url('BWHaasText-56Italic.ttf') format('truetype'),
+		url('BWHaasText-56Italic.svg#BWHaasText-56Italic') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'BW Haas Head 65';
+	src: url('BWHaasHead-66MediumItalic.eot');
+	src: url('BWHaasHead-66MediumItalic.eot?#iefix') format('embedded-opentype'),
+		url('BWHaasHead-66MediumItalic.woff2') format('woff2'),
+		url('BWHaasHead-66MediumItalic.woff') format('woff'),
+		url('BWHaasHead-66MediumItalic.ttf') format('truetype'),
+		url('BWHaasHead-66MediumItalic.svg#BWHaasHead-66MediumItalic') format('svg');
+	font-weight: 500;
+	font-style: italic;
+}
+
