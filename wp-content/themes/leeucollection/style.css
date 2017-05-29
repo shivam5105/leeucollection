@@ -1696,6 +1696,9 @@ div.wpcf7-mail-sent-ok , div.wpcf7-validation-errors{
     bottom: 0;
     position: absolute;
 }
+#main-navigation ul li.menu-item-has-children li.menu-item-has-children{
+    margin-right: 0;
+}
 /** sohail **/
 .mgt-0{
 margin-top:0;

@@ -158,7 +158,8 @@
 	.mobile-logo img{
 		display: block;
 		margin: 0 auto;
-		max-width:50%;
+		max-width:40%;
+		margin-top: 4px;
 	}
 	#site-header.mean-container a.meanmenu-reveal {
 		padding-top: 21px;
