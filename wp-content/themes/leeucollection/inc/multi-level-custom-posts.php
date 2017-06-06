@@ -421,7 +421,7 @@ add_action('init', 'location_taxonomy');
 function menu_type_taxonomy()
 {
 	$data = array(
-		'post-slug' => 'hotel',
+		'post-slug' => array('hotel','leeu-restaurants'),
 		'name' => 'Menu Types',
 		'singular_name' => 'Menu Type',
 		'slug' => 'menu-types',
