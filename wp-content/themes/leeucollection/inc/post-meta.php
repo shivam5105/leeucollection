@@ -91,7 +91,7 @@ Container::make('post_meta', 'Short Description')
 //Images Slider
 Container::make('post_meta', 'Slider Images')
     ->show_on_post_type($leeu_post_types)
-    ->show_on_template(array('template-hotel.php','template-room.php','template-restaurant.php','template-facilities.php','template-gym.php','template-spa-wellness.php','template-explore.php','template-artists-details.php', 'template-founder-and-team.php', 'template-location.php', 'template-work.php', 'template-hotel-wine.php','template-section-slider-with-header-banner.php'))
+    ->show_on_template(array('template-hotel.php','template-room.php','template-restaurant.php','template-facilities.php','template-gym.php','template-spa-wellness.php','template-explore.php','template-artists-details.php', 'template-founder-and-team.php', 'template-location.php', 'template-work.php', 'template-hotel-wine.php','template-section-slider-with-header-banner.php','template-contact.php'))
     ->add_fields(array(
         Field::make('complex', 'crb_slider_images', '')->add_fields(array(
             Field::make('image', 'crb_slide_image', 'Slide Image')->help_text('(Image Dimensions (WxH): 1240 x 600)'),
@@ -217,6 +217,22 @@ Container::make('post_meta', 'Services')
             )),
         )),
     ));
+
+//Contact Page
+Container::make('post_meta', 'Contact')
+    ->show_on_post_type($leeu_post_types)
+    ->show_on_template('template-contact.php')
+    ->add_fields(array(
+        Field::make('complex', 'crb_contact_sections', '')->add_fields(array(
+            Field::make('text', 'crb_contact_heading', 'Location'),
+            Field::make('complex', 'crb_contact_detail', '')->add_fields(array(
+                Field::make('textarea', 'crb_contact_address', 'Address'),
+                Field::make('text', 'crb_contact_phone', 'Phone'),
+                Field::make('text', 'crb_contact_fax', 'Fax'),
+                Field::make('text', 'crb_contact_email', 'Email'),
+            )),            
+        )),
+    ));    
 
 //Content Section Spa & Wellness Page
 Container::make('post_meta', 'Content Section')
