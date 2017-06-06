@@ -307,12 +307,7 @@ var Blank ={
 
 	},
 	hotel_listing_init : function(){
-		if($('body.page-template-template-hotel-listing').length){
-			Blank.home_logo_anim();
-			$(window).scroll(function(){
-				Blank.home_logo_anim();
-			});
-		}
+
 	},
 	common_init : function(){
 		Blank.win_prop();	
@@ -322,6 +317,9 @@ var Blank ={
 		Blank.home_single_slider();
 		Blank.home_slide_pg_anim();
 		Blank.home_slide_wid_name();
+		$(window).scroll(function(){
+			Blank.home_logo_anim();
+		});
 	},
 	common_init_window_load : function(){
 		setTimeout(function(){ Blank.side_nav_fix(); }, 50);

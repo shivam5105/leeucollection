@@ -64,7 +64,7 @@ $page_template_file = basename(get_page_template());
 				</div>
 		    </div>
 		</div>
-		<header id="site-header" class="pos-fix animate-fixed-header" >
+		<header id="site-header" class="pos-fix " >
 			<nav id="main-navigation" class="clearfix">
 				<div class="container pos-rel">
 					<div class="pull-left menu-left-wrap">
@@ -80,7 +80,7 @@ $page_template_file = basename(get_page_template());
 						?>
 					</div>
 					<?php
-					$logo_text_img_templates_array = array('template-hotel-listing.php');
+					$logo_text_img_templates_array = array('template-hotel-listing.php','template-restaurantlisting.php');
 					$has_logo_text_img = false;
 					if(is_front_page() || in_array($page_template_file, $logo_text_img_templates_array))
 					{
@@ -93,7 +93,7 @@ $page_template_file = basename(get_page_template());
 						if($has_logo_text_img)
 						{
 							?>
-							<img src="<?php echo get_template_directory_uri(); ?>/images/home-leeu-collection-text.png" class="bottom-logo" alt="" />
+							<img src="<?php echo get_template_directory_uri(); ?>/images/logotype.png" class="bottom-logo" alt="" />
 							<?php
 						}
 						?>
