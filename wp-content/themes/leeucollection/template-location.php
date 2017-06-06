@@ -162,6 +162,7 @@ get_header(); ?>
 														</div>
 														<?php
 													}
+												}
 												?>
 											</div>
 											<?php
@@ -208,15 +209,13 @@ get_header(); ?>
 													<?php
 												}
 												?>
-											</div>											
+											</div>
 										</div>
 									</div>
 									<?php
 								}
 							}
 							?>
-
-
 						</div>
 					</div>
 				</div>
