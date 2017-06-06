@@ -109,7 +109,7 @@ get_header(); ?>
 								foreach ($content_sections as $section_key => $content_section)
 								{
 									$section_heading 	= $content_section['crb_section_heading'];
-									$section_sliders	= $content_section['crb_section_slider'];
+									$section_sliders	= @$content_section['crb_section_slider'];
 									$section_desc 		= $content_section['crb_section_description'];
 									$section_sub_heading= $content_section['crb_section_sub_heading'];
 									$show_links 		= $content_section['crb_section_show_links'];
@@ -146,20 +146,22 @@ get_header(); ?>
 											}?>
 											<div class="<?php echo $slider_theme_class; ?>">
 												<?php
-												foreach($section_sliders as $slider_key => $section_slider)
+												if(is_array($section_sliders) && count($section_sliders) > 0)
 												{
-													$slide_image 	= $section_slider['crb_slide_image'];
+													foreach($section_sliders as $slider_key => $section_slider)
+													{
+														$slide_image 	= $section_slider['crb_slide_image'];
 
-													$slide_image_url = wp_get_attachment_image_src( $slide_image, '821x478' );
-													$slide_image_url = $slide_image_url[0];
-													?>
-													<div class="slide-item">
-														<div class="banner-img scroll-anim" data-anim="fade-up">
-															<img src="<?php echo $slide_image_url; ?>" alt="" />
-														</div>															
-													</div>
-													<?php
-												}
+														$slide_image_url = wp_get_attachment_image_src( $slide_image, '821x478' );
+														$slide_image_url = $slide_image_url[0];
+														?>
+														<div class="slide-item">
+															<div class="banner-img scroll-anim" data-anim="fade-up">
+																<img src="<?php echo $slide_image_url; ?>" alt="" />
+															</div>
+														</div>
+														<?php
+													}
 												?>
 											</div>
 											<?php
