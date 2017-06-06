@@ -78,21 +78,45 @@ get_header();
 			            	?>
 			            	<div class="listing-row">
 				            	<div class="no_slider rm_line_height">
-									<div class="scroll-anim animate-custom" data-anim="fade-up">
-										<img src="<?php echo $artisan_drink_image1; ?>" alt="">
-									</div>
-									<div class="row"> 
-										<div class="col-6 rm-pad">
-											<div class="scroll-anim animate-custom" data-anim="fade-up">
-												<img src="<?php echo $artisan_drink_image2; ?>" alt="">
-											</div>
+				            		<?php
+				            		if(!empty($artisan_drink_image1))
+				            		{
+					            		?>
+										<div class="scroll-anim animate-custom" data-anim="fade-up">
+											<img src="<?php echo $artisan_drink_image1; ?>" alt="">
 										</div>
-										<div class="col-6 rm-pad">
-											<div class="scroll-anim animate-custom" data-anim="fade-up" data-anim-delay="100">
-												<img src="<?php echo $artisan_drink_image3; ?>" alt="">
-											</div>
+										<?php
+									}
+									if(!empty($artisan_drink_image2) || !empty($artisan_drink_image3))
+									{
+										?>
+										<div class="row">
+											<?php
+											if(!empty($artisan_drink_image2))
+											{
+												?>
+												<div class="col-6 rm-pad">
+													<div class="scroll-anim animate-custom" data-anim="fade-up">
+														<img src="<?php echo $artisan_drink_image2; ?>" alt="">
+													</div>
+												</div>
+												<?php
+											}
+											if(!empty($artisan_drink_image3))
+											{
+												?>
+												<div class="col-6 rm-pad">
+													<div class="scroll-anim animate-custom" data-anim="fade-up" data-anim-delay="100">
+														<img src="<?php echo $artisan_drink_image3; ?>" alt="">
+													</div>
+												</div>
+												<?php
+											}
+											?>
 										</div>
-									</div>
+										<?php
+									}
+									?>
 								</div>
 								<div class="row detail-row">
 									<div class="col-3">
