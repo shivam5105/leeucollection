@@ -636,19 +636,19 @@ transform: translateZ(0) scale(1, 1);
     transform:translateX(70%);   
 }
 .custom-logo{
-    -webkit-transform: translateZ(0) scale(0.79, 0.79);
-    -moz-transform: translateZ(0) scale(0.79, 0.79);
-    -ms-transform: translateZ(0) scale(0.79, 0.79);
-    transform: translateZ(0) scale(0.79, 0.79); 
+    -webkit-transform:scale(0.79);
+    -moz-transform:scale(0.79);
+    -ms-transform:scale(0.79);
+    transform:scale(0.79); 
 }
 .home .custom-logo , 
 .page-template-template-hotel-listing .custom-logo,
 .leeu-restaurants-template-template-restaurantlisting .custom-logo
 {
-    -webkit-transform: translateZ(0) scale(1, 1);
-    -moz-transform: translateZ(0) scale(1, 1);
-    -ms-transform: translateZ(0) scale(1, 1);
-    transform: translateZ(0) scale(1, 1); 
+    -webkit-transform:scale(1);
+    -moz-transform:scale(1);
+    -ms-transform:scale(1);
+    transform:scale(1); 
 }
 /**.body-loaded .logo-wrapper img.custom-logo{
     -webkit-transition: all 0.3s ease-in 0s; 
