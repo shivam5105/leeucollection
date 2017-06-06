@@ -1,17 +1,16 @@
 <?php
 /*
-Template Name: Location
+Template Name: Section Slider With Header Banner
 */
 get_header(); ?>
 	<?php
 	the_post();
-	$post_id 	= $post->ID;
-	$hotel_id 	= get_hotel_id($post_id);
-    $post_meta 	= ( $post ) ? get_post_meta( $post->ID ) : null;
+	$post_id = $post->ID;
+	$hotel_location = get_hotel_location_list($post_id);
+	$hotel_id 		= get_hotel_id($post_id);
+    $post_meta 		= ( $post ) ? get_post_meta( $post->ID ) : null;
     
 	$top_most_parent_post = ($hotel_id == false) ? false : get_post($hotel_id);
-	$hotel_location = @$post_meta['_crb_page_country'][0];
-
     ?>
     <section id="site-main">
 		<div class="container">
@@ -46,8 +45,8 @@ get_header(); ?>
 							$banner_url = $banner_url[0];
 							?>
 							<div class="banner-img-wrapper">
+								<img  class="for-mob-hide" src="<?php echo $banner_url; ?>" alt="" />
 								<div class="banner-img for-mob mht_homebanner" style="background-image:url('<?php echo $banner_url; ?>')"> </div>
-								<img class="for-mob-hide" src="<?php echo $banner_url; ?>" alt="" />
 							</div>
 							<?php
 						}
@@ -58,9 +57,9 @@ get_header(); ?>
 						$banner_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), '1240x600' );
 						$banner_url = $banner_url[0];
 						?>
-						<div class="banner-img">
-							<div class="banner-img for-mob mht_homebanner" style="background-image:url('<?php echo $banner_url; ?>')"> </div>
+						<div class="banner-img-wrapper">
 							<img class="for-mob-hide" src="<?php echo $banner_url; ?>" alt="" />
+							<div class="banner-img for-mob mht_homebanner" style="background-image:url('<?php echo $banner_url; ?>')"> </div>
 						</div>
 						<?php
 					}?>
@@ -75,7 +74,7 @@ get_header(); ?>
 				}?>
 				<div class="banner-text text-center pos-abs-top">
 					<div class="location-text ucase" itemprop="address"><?php echo $hotel_location; ?></div>
-					<h1 itemprop="legalName" class="ucase-h1"><?php echo $post->post_title;?></h1>
+					<h1 itemprop="legalName" class="ucase"><?php echo $post->post_title;?></h1>
 				</div>
 			</div>
 			<div class="intro-blurb scroll-anim" data-anim="fade-up">
@@ -103,17 +102,17 @@ get_header(); ?>
 					<div class="scroll-anim" data-anim="fade-up">
 						<div class="col-8">
 							<?php
-					    	$content_sections = carbon_get_post_meta($post->ID, "crb_location_sections", 'complex');
+					    	$content_sections = carbon_get_post_meta($post->ID, "crb_template_content_section", 'complex');
 							if(is_array($content_sections) && !empty($content_sections))
 							{
 								foreach ($content_sections as $section_key => $content_section)
 								{
 									$section_heading 	= $content_section['crb_section_heading'];
-									$section_sliders	= @$content_section['crb_section_slider'];
-									$section_desc 		= $content_section['crb_section_description'];
-									$section_sub_heading= $content_section['crb_section_sub_heading'];
-									$show_links 		= $content_section['crb_section_show_links'];
-									$section_links 		= @$content_section['crb_section_links_details'];
+									$section_layout 	= $content_section['crb_section_layout'];
+									$section_link_text 	= $content_section['crb_section_link_text'];
+									$section_link 		= $content_section['crb_section_link'];
+									$section_show_link	= $content_section['crb_section_show_link'];
+									$section_sliders	= $content_section['crb_section_slider'];
 
 									$has_slider = false;
 									if(is_array($section_sliders) && count($section_sliders) > 1)
@@ -123,18 +122,33 @@ get_header(); ?>
 
 									$slider_wrapper_class 	= "single_slider_wrapper";
 									$slider_theme_class 	= "owl-carousel single_slider owl-theme";
-
+									$data_anim_delay 		= "";
+									if($section_layout == 2)
+									{
+										$slider_wrapper_class 	= "two-slide-carousel two-img-col";
+										$slider_theme_class 	= "owl-carousel two_slider owl-theme";
+										$data_anim_delay 		= "data-anim-delay='100'";
+									}
 									if(!$has_slider)
 									{
 										$slider_theme_class = "";
 									}
 									?>
-									<div class="listing-box listing-row">
+									<div class="listing-box listing-row <?php if($section_link == '') { echo "no-page-link"; } ?>">
 										<div class="text-center scroll-anim" data-anim="fade-up">
 											<h2 class="ucase"><?php echo $section_heading; ?></h2>
 										</div>
-										<div class="text-right page-link"></div>
-										<div class="<?php echo $slider_wrapper_class; ?> <?php if(!$has_slider){ echo "no_slider"; }?>">
+										<div class="text-right page-link"> 
+											<?php
+											if($section_show_link == 'yes')
+											{
+												?>
+												<a href="<?php echo $section_link; ?>"><?php echo $section_link_text; ?></a>
+												<?php
+											}
+											?>
+										</div>
+										<div class="<?php echo $slider_wrapper_class; ?>  <?php if(!$has_slider){ echo "no_slider"; }?>">
 											<?php
 											if($has_slider)
 											{
@@ -146,22 +160,51 @@ get_header(); ?>
 											}?>
 											<div class="<?php echo $slider_theme_class; ?>">
 												<?php
-												if(is_array($section_sliders) && count($section_sliders) > 0)
+												$slide_counter = 0;
+												foreach($section_sliders as $slider_key => $section_slider)
 												{
-													foreach($section_sliders as $slider_key => $section_slider)
+													$slide_counter++;
+													$slide_image 	= $section_slider['crb_section_slide_image'];
+													$slide_title 	= $section_slider['crb_section_slide_title'];
+													$slide_desc 	= $section_slider['crb_section_slide_desc'];
+													if($section_layout == 2)
 													{
-														$slide_image 	= $section_slider['crb_slide_image'];
-
+														$slide_image_url = wp_get_attachment_image_src( $slide_image, '411x258' );
+													}
+													else
+													{
 														$slide_image_url = wp_get_attachment_image_src( $slide_image, '821x478' );
-														$slide_image_url = $slide_image_url[0];
-														?>
-														<div class="slide-item">
-															<div class="banner-img scroll-anim" data-anim="fade-up">
-																<img src="<?php echo $slide_image_url; ?>" alt="" />
-															</div>
+													}
+													$slide_image_url = $slide_image_url[0];
+													?>
+													<div class="slide-item">
+														<div class="banner-img scroll-anim" data-anim="fade-up" <?php if($section_layout == 2 && $slide_counter > 1){ echo $data_anim_delay; }?>>
+															<img src="<?php echo $slide_image_url; ?>" alt="" />
 														</div>
 														<?php
-													}
+														if($section_layout == 2)
+														{
+															?>
+															<div class="desc-heading ucase"><?php echo $slide_title; ?></div>
+															<?php
+														}
+														else
+														{
+															?>
+															<div class="row detail-row">
+																<div class="col-3">
+																	<div class="desc-heading"><?php echo $slide_title; ?></div>
+																</div>
+																<div class="col-9">
+																	<div class="desc-content"> 
+																		<?php echo nl2br($slide_desc); ?>
+																	</div>
+																</div>
+															</div>
+															<?php
+														}?>
+													</div>
+													<?php
 												}
 												?>
 											</div>
@@ -174,42 +217,6 @@ get_header(); ?>
 												</div>
 												<?php
 											}?>
-										</div>
-
-										<div class="row detail-row">
-
-											<div class="col-9 pull-right">
-												<div class="desc-content"> 
-													<?php echo nl2br($section_desc); ?>
-												</div>
-											</div>
-											<div class="col-3">
-												<?php
-												if($show_links == 'yes')
-												{
-													?>
-													<div class="franschhoek_cat">
-														<ul>
-															<?php
-															foreach ($section_links as $link_key => $links)
-															{
-																?>
-																<li> <a href="<?php echo $links['crb_link_url']; ?>"><?php echo $links['crb_link_text']; ?></a></li>
-																<?php
-															}
-															?>
-														</ul>
-													</div>
-													<?php
-												}
-												else
-												{
-													?>
-													<div class="desc-heading"><?php echo $section_sub_heading; ?></div>
-													<?php
-												}
-												?>
-											</div>
 										</div>
 									</div>
 									<?php

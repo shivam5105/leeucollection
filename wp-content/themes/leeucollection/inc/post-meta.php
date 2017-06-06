@@ -91,7 +91,7 @@ Container::make('post_meta', 'Short Description')
 //Images Slider
 Container::make('post_meta', 'Slider Images')
     ->show_on_post_type($leeu_post_types)
-    ->show_on_template(array('template-hotel.php','template-room.php','template-restaurant.php','template-facilities.php','template-gym.php','template-spa-wellness.php','template-explore.php','template-artists-details.php', 'template-founder-and-team.php', 'template-location.php', 'template-work.php', 'template-hotel-wine.php','template-contact.php'))
+    ->show_on_template(array('template-hotel.php','template-room.php','template-restaurant.php','template-facilities.php','template-gym.php','template-spa-wellness.php','template-explore.php','template-artists-details.php', 'template-founder-and-team.php', 'template-location.php', 'template-work.php', 'template-hotel-wine.php','template-section-slider-with-header-banner.php','template-contact.php'))
     ->add_fields(array(
         Field::make('complex', 'crb_slider_images', '')->add_fields(array(
             Field::make('image', 'crb_slide_image', 'Slide Image')->help_text('(Image Dimensions (WxH): 1240 x 600)'),
@@ -702,6 +702,49 @@ Container::make('post_meta', 'The Wines')
         )),
     )); 
 
+//Content Section Hotel Home Page
+Container::make('post_meta', 'Content Section')
+    ->show_on_post_type($leeu_post_types)
+    ->show_on_template(array('template-section-slider-with-header-banner.php'))
+    ->add_fields(array(
+        Field::make('complex', 'crb_template_content_section', '')->add_fields(array(
+            Field::make('text', 'crb_section_heading', 'Heading'),
+
+            Field::make('radio', 'crb_section_layout', 'Section Layout')
+                ->add_options(array(
+                    '1' => '1 Column',
+                    '2' => '2 Columns',
+                ))->set_default_value('1'),
+
+            Field::make('radio', 'crb_section_show_link', 'Show View All Link?')
+                ->add_options(array(
+                    'yes' => 'Yes',
+                    'no' => 'No',
+                ))->set_default_value('no')->set_width('20'),
+            Field::make('text', 'crb_section_link_text', 'View All Link Text')->set_width('40')->help_text('This will come on the right-top cornor of section.')->set_conditional_logic(array(
+                'relation' => 'AND', // Optional, defaults to "AND"
+                array(
+                    'field' => 'crb_section_show_link',
+                    'value' => 'yes', // Optional, defaults to "". Should be an array if "IN" or "NOT IN" operators are used.
+                    'compare' => '=', // Optional, defaults to "=". Available operators: =, <, >, <=, >=, IN, NOT IN
+                )
+            )),
+            Field::make('text', 'crb_section_link', 'View All Link')->set_width('40')->set_conditional_logic(array(
+                'relation' => 'AND', // Optional, defaults to "AND"
+                array(
+                    'field' => 'crb_section_show_link',
+                    'value' => 'yes', // Optional, defaults to "". Should be an array if "IN" or "NOT IN" operators are used.
+                    'compare' => '=', // Optional, defaults to "=". Available operators: =, <, >, <=, >=, IN, NOT IN
+                )
+            )),
+
+            Field::make('complex', 'crb_section_slider', 'Slider')->add_fields(array(
+                Field::make('image', 'crb_section_slide_image', 'Image')->help_text('(Image Dimensions (WxH): 821 x 478)')->set_width('20'),
+                Field::make('text', 'crb_section_slide_title', 'Title')->set_width('25'),
+                Field::make('textarea', 'crb_section_slide_desc', 'Small Description')->set_width('55'),
+            )),
+        )),
+    ));
 /*
 //Slider Info
 

@@ -169,7 +169,7 @@ get_header(); ?>
 										'order' => 'ASC',
 										'post_parent' => $post_id,
 										'post_status' => 'publish',
-										'post_type' => 'hotel',
+										/*'post_type' => 'hotel',*/
 								        'tax_query' => array(
 								            array(
 								                'taxonomy' => 'menu-types',
