@@ -166,6 +166,32 @@ h1.ucase-h1
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
+
+.col-offset-left-1 {margin-left: 8.33%;}
+.col-offset-left-2 {margin-left: 16.66%;}
+.col-offset-left-3 {margin-left: 25%;}
+.col-offset-left-4 {margin-left: 33.33%;}
+.col-offset-left-5 {margin-left: 41.66%;}
+.col-offset-left-6 {margin-left: 50%;}
+.col-offset-left-7 {margin-left: 58.33%;}
+.col-offset-left-8 {margin-left: 66.66%;}
+.col-offset-left-9 {margin-left: 75%;}
+.col-offset-left-10 {margin-left: 83.33%;}
+.col-offset-left-11 {margin-left: 91.66%;}
+.col-offset-left-12 {margin-left: 100%;}
+
+.col-offset-right-1 {margin-right: 8.33%;}
+.col-offset-right-2 {margin-right: 16.66%;}
+.col-offset-right-3 {margin-right: 25%;}
+.col-offset-right-4 {margin-right: 33.33%;}
+.col-offset-right-5 {margin-right: 41.66%;}
+.col-offset-right-6 {margin-right: 50%;}
+.col-offset-right-7 {margin-right: 58.33%;}
+.col-offset-right-8 {margin-right: 66.66%;}
+.col-offset-right-9 {margin-right: 75%;}
+.col-offset-right-10 {margin-right: 83.33%;}
+.col-offset-right-11 {margin-right: 91.66%;}
+.col-offset-right-12 {margin-right: 100%;}
 .row::after {
     content: "";
     clear: both;
@@ -579,7 +605,7 @@ padding-top: 21px;
     -moz-transition: transform 0.6s ease 0s; 
     -ms-transition: transform 0.6s ease 0s;
     transition: transform 0.6s ease 0s;
-    box-shadow: 6px 3px 5px #ccc;
+    box-shadow: 0px 3px 5px #ccc;
 }
 .home #site-header, 
 .page-template-template-hotel-listing #site-header,
@@ -856,6 +882,11 @@ li.current.active .side-sub-menu li.current.active ~ li{
 /**side fix nav**/
 .side-nav-contain.fix-pos{
     position: fixed;
+    top:60px;
+}
+.home .side-nav-contain.fix-pos, 
+.page-template-template-hotel-listing .side-nav-contain.fix-pos, 
+.leeu-restaurants-template-template-restaurantlisting .side-nav-contain.fix-pos{
     top: 106px;
 }
 /**slider module**/
@@ -1747,7 +1778,7 @@ div.wpcf7-mail-sent-ok , div.wpcf7-validation-errors{
     margin-top: 100px;
 }
 .spa-wellness-row .desc-content{
-    min-height: 80px;
+    min-height: 90px;
 }
 .row.detail-row.spa-wellness-row {
     position: relative;
@@ -1765,7 +1796,28 @@ div.wpcf7-mail-sent-ok , div.wpcf7-validation-errors{
 .bottom-logo{
     margin-left: 5px;
 }
-
+/**contact us page**/
+.contact-sub-head{
+    font-size: 24px;
+    line-height: 1.25;
+    font-family: GillSans;
+    font-weight: 300;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+.contact-spacer{
+    margin-top: 40px;
+}
+.contact-spacer .leeu-text{
+    margin-bottom: 25px;
+}
+.flx-prop{
+    flex-flow: row wrap;
+    justify-content: space-between;   
+}
+.contact-pad-left{
+    padding-left: 30px;
+}
 /** sohail **/
 .mgt-0{
 margin-top:0;
