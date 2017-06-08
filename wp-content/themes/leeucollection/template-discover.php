@@ -183,7 +183,7 @@ get_header();
 					<div class="row scroll-anim animate-custom flx" data-anim="fade-up">
 						<?php 
 						if ($unique_index % 2 == 0) {
-							$image_space = 'rm-pad-right';
+							$image_space = 'rm-pad-right flx-right';
 							$nav_space = 'rm-pad-left';
 							include('template-parts/discover-slide-image.php');
   							include('template-parts/discover-slide-nav.php');				

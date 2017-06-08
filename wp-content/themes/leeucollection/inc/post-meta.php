@@ -745,11 +745,8 @@ Container::make('post_meta', 'Content Section')
             )),
         )),
     ));
-/*
+/*  
 //Slider Info
-
-
-
 //The Chef
 Container::make('post_meta', 'The Chef Section')
     ->show_on_post_type($leeu_post_types)
