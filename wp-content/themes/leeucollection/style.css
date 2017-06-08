@@ -1837,9 +1837,10 @@ div.wpcf7-mail-sent-ok , div.wpcf7-validation-errors{
     margin-bottom: 30px;
 }
 /**page template**/
-.entry-content li{
+.entry-content li {
     line-height: 1.4;
     margin-bottom: 34px;
+    margin-left: 15px;
     padding-left: 15px;
 }
 .entry-content h4{
@@ -1849,6 +1850,11 @@ div.wpcf7-mail-sent-ok , div.wpcf7-validation-errors{
     font-weight: 300;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    margin-bottom: 34px;
+}
+.section-content{
+    font-size: 17px;
+    margin-bottom: 27px;
 }
 /** sohail **/
 .mgt-0{
