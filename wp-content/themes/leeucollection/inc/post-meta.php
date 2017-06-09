@@ -758,6 +758,31 @@ Container::make('post_meta', 'Bottom Links')
         Field::make('text', 'crb_bottom_link_button_text_right', 'Button Text (Right)')->set_width('20'),
         Field::make('text', 'crb_bottom_link_button_link_right', 'Button Link (Right)')->set_width('40'),
     ));
+
+$args = array(
+    'post_type' => 'hotel',
+    'posts_per_page' => -1,
+    'orderby' =>'menu_order',
+    'order' => 'ASC',
+    'post_parent' => 0
+    );
+$loop = new WP_Query( $args );
+$hotels_list = array();
+while ( $loop->have_posts() ) {
+    $loop->the_post();
+    $ID         = $loop->post->ID;
+
+    $hotels_list[$ID] = $loop->post->post_title;
+}
+
+$hotels_list_fields[] = Field::make('select', 'crb_career_hotel', 'Select Hotel')->add_options($hotels_list);
+$hotels_list_fields[] = Field::make('text', 'crb_career_form_shortcode', 'Career Form Shortcode');
+$hotels_list_fields[] = Field::make('textarea', 'crb_career_position', 'Position');
+
+//Career
+Container::make('post_meta', 'Career Info')
+    ->show_on_post_type("leeu-careers")
+    ->add_fields($hotels_list_fields);
 /*  
 //Slider Info
 //The Chef

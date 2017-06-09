@@ -44,65 +44,87 @@ get_header(); ?>
 					<div class="col-8">
 						<div class="scroll-anim" data-anim="fade-up">
 							<div class="content-part-section career-content">
-								<div class="contact-sub-head">
-									LEEU ESTATES	
-								</div>
-								<div class="detail-head-career">
-									<div class="row">
-										<div class="col-3 rm-pad">
-											<div class="head-text-career">Location</div>
-										</div>
-										<div class="col-6 rm-pad">
-											<div class="head-text-career">Position</div>
-										</div>	
-										<div class="col-3 rm-pad">
-											<div class="head-text-career"></div>
-										</div>																					
-									</div>
-								</div>
-								<div class="detail-content-career"> 
-									<div class="row"> 
-										<div class="col-3 rm-pad"> 
-											<div class="content-part"> 
-												Franschhoek, SA
+								<?php
+								$args = array(
+								    'post_type' => 'hotel',
+								    'posts_per_page' => -1,
+								    'orderby' =>'menu_order',
+								    'order' => 'ASC',
+								    'post_parent' => 0
+								);
+								$loop = new WP_Query( $args );
+								while ( $loop->have_posts() )
+								{
+								    $loop->the_post();
+								    $hotel_ID  = $loop->post->ID;
+
+									$args = array(
+										'post_type' => 'leeu-careers',
+										'meta_query' => array(
+									        array(
+									            'key' => '_crb_career_hotel',
+									            'value' => $hotel_ID,
+									            'compare' => '='
+									        )
+										)
+									);
+									$career_loop = new WP_Query( $args );
+									if($career_loop->have_posts())
+									{
+										?>
+										<div>
+											<div class="contact-sub-head">
+												<?php echo $loop->post->post_title; ?>
 											</div>
-										</div>
-										<div class="col-6 rm-pad"> 
-											<div class="content-part"> 
-												Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed  <br> 
-												do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+											<div class="detail-head-career">
+												<div class="row">
+													<div class="col-3 rm-pad">
+														<div class="head-text-career">Location</div>
+													</div>
+													<div class="col-6 rm-pad">
+														<div class="head-text-career">Position</div>
+													</div>	
+													<div class="col-3 rm-pad">
+														<div class="head-text-career"></div>
+													</div>
+												</div>
 											</div>
+											<?php
+											while ($career_loop->have_posts())
+											{
+												$career_loop->the_post();
+												$hotel_location = get_hotel_location_list($hotel_ID);
+												?>
+												<div class="detail-content-career"> 
+													<div class="row"> 
+														<div class="col-3 rm-pad"> 
+															<div class="content-part" itemprop="address">
+																<?php echo $hotel_location; ?>
+															</div>
+														</div>
+														<div class="col-6 rm-pad"> 
+															<div class="content-part"> 
+																<?php echo nl2br(carbon_get_post_meta($post->ID, "crb_career_position"));?>
+															</div>
+														</div>
+														<div class="col-3 rm-pad"> 
+															<div class="cstm-btn-wrapper contact-email carrer-spacer-left">
+																<a href="<?php echo get_permalink($post->ID); ?>" class="cstm-btn arrow-btn text-center">Apply</a>
+															</div>
+														</div>
+													</div>
+												</div>
+												<?php
+											}
+											?>
 										</div>
-										<div class="col-3 rm-pad"> 
-										<div class="cstm-btn-wrapper contact-email carrer-spacer-left">
-											<a href="javascript:void(0)" class="cstm-btn arrow-btn text-center">Apply</a>
-										</div>
-										</div>																				
-									</div>
-								</div>
-								<div class="detail-content-career"> 
-									<div class="row"> 
-										<div class="col-3 rm-pad"> 
-											<div class="content-part"> 
-												Franschhoek, SA
-											</div>
-										</div>
-										<div class="col-6 rm-pad"> 
-											<div class="content-part"> 
-												Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed  <br> 
-												do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
-											</div>
-										</div>
-										<div class="col-3 rm-pad"> 
-										<div class="cstm-btn-wrapper contact-email carrer-spacer-left">
-											<a href="javascript:void(0)" class="cstm-btn arrow-btn text-center">Apply</a>
-										</div>
-										</div>																				
-									</div>
-								</div>								
+									    <?php
+									}
+								}
+								?>
 							</div>
 						</div>
-					</div>						
+					</div>
 				</div>
 			</div>
 		</div>

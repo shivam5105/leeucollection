@@ -260,6 +260,7 @@ if (!class_exists('multiLevelCustomPosts'))
 
 function registerMyCustomPost()
 {
+	/********* Hotels Post Type ***********/
 	$labels = array(
 		"name" => "Hotels",
 		"singular_name" => "Hotel",
@@ -281,6 +282,10 @@ function registerMyCustomPost()
 	);
 	$parentSlug = "hotel";
 	$parent = new multiLevelCustomPosts($parentSlug, $labels, $args);
+	
+	/********* Hotels Post Type ***********/
+	
+	/********* Discover Post Type ***********/
 
 	$labels = array(
 		"name" => "Discover",
@@ -304,6 +309,10 @@ function registerMyCustomPost()
 	$parentSlug = "leeu-discover";
 	$parent = new multiLevelCustomPosts($parentSlug, $labels, $args);
 
+	/********* Discover Post Type ***********/
+	
+	/********* Restaurants Post Type ***********/
+
 	$labels = array(
 		"name" => "Restaurants",
 		"singular_name" => "Restaurant",
@@ -326,6 +335,9 @@ function registerMyCustomPost()
 	$parentSlug = "leeu-restaurants";
 	$parent = new multiLevelCustomPosts($parentSlug, $labels, $args);
 
+	/********* Restaurants Post Type ***********/
+
+	/********* Wine Post Type ***********/
 
 	$labels = array(
 		"name" => "Wine",
@@ -349,9 +361,13 @@ function registerMyCustomPost()
 	$parentSlug = "leeu-wine";
 	$parent = new multiLevelCustomPosts($parentSlug, $labels, $args);
 
+	/********* Restaurants Post Type ***********/
+	
+	/********* Artisan Drinks Post Type ***********/
+
 	$labels = array(
 		"name" => "Artisan Drinks",
-		"singular_name" => "Artisan Drinks",
+		"singular_name" => "Artisan Drink",
 	);
 	$args = array(
 		"label" => "Artisan Drinks",
@@ -370,23 +386,34 @@ function registerMyCustomPost()
 	);
 	$parentSlug = "leeu-artisan-drinks";
 	$parent = new multiLevelCustomPosts($parentSlug, $labels, $args);
+	
+	/********* Artisan Drinks Post Type ***********/
 
-	/*$labels = array(
-	"name"          => "Lessons",
-	"singular_name" => "Lesson",
+	/********* Careers Post Type ***********/
+
+	$labels = array(
+		"name" => "Careers",
+		"singular_name" => "Career",
 	);
 	$args = array(
-	"label"        	=> "Lessons",
-	"labels"       	=> $labels,
-	"hierarchical" 	=> true,
-	"rewrite"		=> array( "slug" => "/lesson/%hotel%", "with_front" => false ),*/
-	/* add_permastruct("lesson", "/lesson/%hotel%/%lesson%", false); we can add this like above line also */
-	/*);
-	$childSlug = "lesson";
-	$child = new multiLevelCustomPosts($childSlug, $labels, $args);
-	$child->addParentBox($parentSlug, "hotel", "side", "high");
-	$child->addRewriteRules();
-	$child->showHierarchicalPosts(array($childSlug, $parentSlug));*/
+		"label" => "Careers",
+		"labels" => $labels,
+		'menu_position' => 10,
+		'show_in_admin_bar' => true,
+		/*'taxonomies' 	=> array('category'),*/
+		"supports" => array(
+			"title",
+			"revisions",
+			"thumbnail",
+			"editor",
+			"page-attributes",
+			"custom-fields" /*, "post-formats"*/
+		)
+	);
+	$parentSlug = "leeu-careers";
+	$parent = new multiLevelCustomPosts($parentSlug, $labels, $args);
+	
+	/********* Careers Post Type ***********/
 }
 
 add_action("init", "registerMyCustomPost");
@@ -407,7 +434,7 @@ function custom_taxonomy($data)
 function location_taxonomy()
 {
 	$data = array(
-		'post-slug' => 'hotel',
+		'post-slug' => array('hotel'),
 		'name' => 'Locations',
 		'singular_name' => 'Location',
 		'slug' => 'hotel-locations',
