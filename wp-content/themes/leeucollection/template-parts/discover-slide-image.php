@@ -1,5 +1,5 @@
 						
-						<div class="col-9 <?php echo $image_space; ?> flx-right">
+						<div class="col-9 <?php echo $image_space; ?>">
 							<div class="single_slider_wrapper <?php if(!$has_slider){ echo "no_slider"; }?>">
 								<?php
 								if($has_slider == true)

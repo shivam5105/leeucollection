@@ -1818,6 +1818,44 @@ div.wpcf7-mail-sent-ok , div.wpcf7-validation-errors{
 .contact-pad-left{
     padding-left: 30px;
 }
+/**career page**/
+.head-text-career {
+    font-size: 17px;
+    letter-spacing: 0.055em;
+    line-height: 1.35;
+}
+.carrer-spacer-left{
+    padding-left: 30px;
+}
+.contact-sub-head{
+    margin-bottom: 47px;
+}
+.detail-head-career{
+    margin-bottom: 40px;
+}
+.detail-content-career{
+    margin-bottom: 30px;
+}
+/**page template**/
+.entry-content li {
+    line-height: 1.4;
+    margin-bottom: 34px;
+    margin-left: 15px;
+    padding-left: 15px;
+}
+.entry-content h4{
+    font-size: 24px;
+    line-height: 1.25;
+    font-family: GillSans;
+    font-weight: 300;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 34px;
+}
+.section-content{
+    font-size: 17px;
+    margin-bottom: 27px;
+}
 /** sohail **/
 .mgt-0{
 margin-top:0;
