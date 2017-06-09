@@ -226,13 +226,13 @@ Container::make('post_meta', 'Contact')
         Field::make('complex', 'crb_contact_sections', '')->add_fields(array(
             Field::make('text', 'crb_contact_heading', 'Location'),
             Field::make('complex', 'crb_contact_detail', '')->add_fields(array(
-                Field::make('textarea', 'crb_contact_address', 'Address'),
-                Field::make('text', 'crb_contact_phone', 'Phone'),
-                Field::make('text', 'crb_contact_fax', 'Fax'),
-                Field::make('text', 'crb_contact_email', 'Email'),
-            )),            
+                Field::make('textarea', 'crb_contact_address', 'Address')->set_width('30'),
+                Field::make('text', 'crb_contact_phone', 'Phone')->set_width('20'),
+                Field::make('text', 'crb_contact_fax', 'Fax')->set_width('20'),
+                Field::make('text', 'crb_contact_email', 'Email')->set_width('30'),
+            )),
         )),
-    ));    
+    ));
 
 //Content Section Spa & Wellness Page
 Container::make('post_meta', 'Content Section')
@@ -744,6 +744,19 @@ Container::make('post_meta', 'Content Section')
                 Field::make('textarea', 'crb_section_slide_desc', 'Small Description')->set_width('55'),
             )),
         )),
+    ));
+
+//Page - bottom links
+Container::make('post_meta', 'Bottom Links')
+    ->show_on_post_type("page")
+    ->add_fields(array(
+        Field::make('text', 'crb_bottom_link_heading_left', 'Link Heading (Left)')->set_width('40'),
+        Field::make('text', 'crb_bottom_link_button_text_left', 'Button Text (Left)')->set_width('20'),
+        Field::make('text', 'crb_bottom_link_button_link_left', 'Button Link (Left)')->set_width('40'),
+
+        Field::make('text', 'crb_bottom_link_heading_right', 'Link Heading (Right)')->set_width('40'),
+        Field::make('text', 'crb_bottom_link_button_text_right', 'Button Text (Right)')->set_width('20'),
+        Field::make('text', 'crb_bottom_link_button_link_right', 'Button Link (Right)')->set_width('40'),
     ));
 /*  
 //Slider Info

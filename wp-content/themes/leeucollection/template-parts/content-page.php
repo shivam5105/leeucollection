@@ -33,36 +33,68 @@
 		) );
 		?>
 	</div><!-- .entry-content -->
+	<?php
+	$link_heading_left 		= carbon_get_post_meta($post->ID, "crb_bottom_link_heading_left");
+	$link_button_text_left 	= carbon_get_post_meta($post->ID, "crb_bottom_link_button_text_left");
+	$link_button_link_left 	= carbon_get_post_meta($post->ID, "crb_bottom_link_button_link_left");
+
+	$link_heading_right 	= carbon_get_post_meta($post->ID, "crb_bottom_link_heading_right");
+	$link_button_text_right = carbon_get_post_meta($post->ID, "crb_bottom_link_button_text_right");
+	$link_button_link_right = carbon_get_post_meta($post->ID, "crb_bottom_link_button_link_right");
+	?>
 	<div class="linking-wrap"> 
 		<div class="row">
 			<div class="col-6 rm-pad">
-				<div class="two-section-link"> 
-					<div class="section-content">Leeu Estates Executive Suite LC</div>
-					<div class="cstm-btn-wrapper contact-email">
-						<a href="javascript:void(0)" class="cstm-btn arrow-btn text-center">REQUEST</a>
-					</div>
+				<div class="two-section-link">
+					<?php
+					if(!empty($link_heading_left))
+					{
+						?>
+						<div class="section-content"><?php echo $link_heading_left; ?></div>
+						<?php
+					}
+					if(!empty($link_button_text_left) && !empty($link_button_link_left))
+					{
+						?>
+						<div class="cstm-btn-wrapper contact-email">
+							<a href="<?php echo $link_button_link_left; ?>" class="cstm-btn arrow-btn text-center"><?php echo $link_button_text_left; ?></a>
+						</div>
+						<?php
+					}
+					?>
 				</div>
 			</div>
 			<div class="col-6 rm-pad">
-				<div class="two-section-link"> 
-					<div class="section-content">Leeu Estates Executive Suite LC</div>
-					<div class="cstm-btn-wrapper contact-email">
-						<a href="javascript:void(0)" class="cstm-btn arrow-btn text-center">REQUEST</a>
-					</div>
+				<div class="two-section-link">
+					<?php
+					if(!empty($link_heading_right))
+					{
+						?>
+						<div class="section-content"><?php echo $link_heading_right; ?></div>
+						<?php
+					}
+					if(!empty($link_button_text_right) && !empty($link_button_link_right))
+					{
+						?>
+						<div class="cstm-btn-wrapper contact-email">
+							<a href="<?php echo $link_heading_right; ?>" class="cstm-btn arrow-btn text-center"><?php echo $link_heading_right; ?></a>
+						</div>
+						<?php
+					}
+					?>
 				</div>					
 			</div>
 		</div>
 	</div>	
 	<?php
-		edit_post_link(
+		/*edit_post_link(
 			sprintf(
-				/* translators: %s: Name of current post */
 				__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'leeucollection' ),
 				get_the_title()
 			),
 			'<footer class="entry-footer"><span class="edit-link">',
 			'</span></footer><!-- .entry-footer -->'
-		);
+		);*/
 	?>
 
 </article><!-- #post-## -->
