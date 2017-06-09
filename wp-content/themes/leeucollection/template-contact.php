@@ -106,86 +106,81 @@ get_header(); ?>
 								</div>															
 							</div>
 						</div>
-						<div class="contact-detail"> 
-							<div class="col-3 col-offset-right-2 rm-pad"> 
-								<div class="contact-sub-head">SOUTH AFRICA</div>
-								<div class="address-contact contact-spacer">
-									<div class="leeu-text">ADDRESS</div>
-									<div class="content-part"> 
-										Lorem ipsum dolor sit<br> 
-										amet aenean iaculis<br> 
-										nulla sit amet augue<br>
+						<div class="contact-detail">
+							<?php
+					    	$contact_sections = carbon_get_post_meta($post->ID, "crb_contact_sections", 'complex');
+					    	$x = 0;
+					    	$cols = 3;
+					    	foreach ($contact_sections as $cs_key => $contact_section)
+					    	{
+					    		foreach ($contact_section['crb_contact_detail'] as $key => $contact_info)
+					    		{
+						    		$x++;
+
+						    		if($x == 1)
+						    		{
+						    			$col_div_class = "col-3 col-offset-right-2";
+						    		}
+						    		else if($x == 2)
+						    		{
+						    			$col_div_class = "col-4";
+						    		}
+						    		else if($x == 3)
+						    		{
+						    			$col_div_class = "col-3 contact-pad-left";
+						    		}
+						    		?>
+									<div class="<?php echo $col_div_class; ?> rm-pad"> 
+										<div class="contact-sub-head"><?php echo $contact_section['crb_contact_heading']; ?></div>
+										<div class="address-contact contact-spacer">
+											<div class="leeu-text">ADDRESS</div>
+											<div class="content-part"> 
+												<?php echo nl2br($contact_info['crb_contact_address']); ?>
+											</div>
+										</div>
+										<?php
+										if(!empty($contact_info['crb_contact_phone']))
+										{
+											?>
+											<div class="phone-contact contact-spacer">
+												<div class="leeu-text">PHONE</div>
+												<div class="content-part"> 
+													<?php echo $contact_info['crb_contact_phone']; ?>
+												</div>
+											</div>
+											<?php
+										}
+										if(!empty($contact_info['crb_contact_fax']))
+										{
+											?>
+											<div class="fax-contact contact-spacer">
+												<div class="leeu-text">FACSIMILE</div>
+												<div class="content-part"> 
+													<?php echo $contact_info['crb_contact_fax']; ?>
+												</div>
+											</div>
+											<?php
+										}
+										if(!empty($contact_info['crb_contact_email']))
+										{
+											?>
+											<div class="cstm-btn-wrapper contact-email contact-spacer">
+												<a href="mailto:<?php echo $contact_info['crb_contact_email']; ?>"  class="booktable cstm-btn arrow-btn text-center">Email</a>
+											</div>
+											<?php
+										}
+										?>
 									</div>
-								</div>
-								<div class="phone-contact contact-spacer">
-									<div class="leeu-text">PHONE</div>
-									<div class="content-part"> 
-										+1 234-567-8910
-									</div>
-								</div>
-								<div class="fax-contact contact-spacer">
-									<div class="leeu-text">FACSIMILE</div>
-									<div class="content-part"> 
-										+1 234-567-8910
-									</div>
-								</div>
-								<div class="cstm-btn-wrapper contact-email contact-spacer">
-									<a href="javascript:void(0)"  class="booktable cstm-btn arrow-btn text-center">Email</a>
-								</div>																								
-							</div>														
-							<div class="col-4 rm-pad"> 
-								<div class="contact-sub-head">UNITED KINGDOM</div>
-								<div class="address-contact contact-spacer">
-									<div class="leeu-text">ADDRESS</div>
-									<div class="content-part"> 
-										Lorem ipsum dolor sit<br> 
-										amet aenean iaculis<br> 
-										nulla sit amet augue<br>
-									</div>
-								</div>
-								<div class="phone-contact contact-spacer">
-									<div class="leeu-text">PHONE</div>
-									<div class="content-part"> 
-										+1 234-567-8910
-									</div>
-								</div>
-								<div class="fax-contact contact-spacer">
-									<div class="leeu-text">FACSIMILE</div>
-									<div class="content-part"> 
-										+1 234-567-8910
-									</div>
-								</div>
-								<div class="cstm-btn-wrapper contact-email contact-spacer">
-									<a href="javascript:void(0)"  class="booktable cstm-btn arrow-btn text-center">Email</a>
-								</div>																								
-							</div>
-							<div class="col-3 rm-pad contact-pad-left"> 
-								<div class="contact-sub-head">ITALY</div>
-								<div class="address-contact contact-spacer">
-									<div class="leeu-text">ADDRESS</div>
-									<div class="content-part"> 
-										Lorem ipsum dolor sit<br> 
-										amet aenean iaculis<br> 
-										nulla sit amet augue<br>
-									</div>
-								</div>
-								<div class="phone-contact contact-spacer">
-									<div class="leeu-text">PHONE</div>
-									<div class="content-part"> 
-										+1 234-567-8910
-									</div>
-								</div>
-								<div class="fax-contact contact-spacer">
-									<div class="leeu-text">FACSIMILE</div>
-									<div class="content-part"> 
-										+1 234-567-8910
-									</div>
-								</div>
-								<div class="cstm-btn-wrapper contact-email contact-spacer">
-									<a href="javascript:void(0)"  class="booktable cstm-btn arrow-btn text-center">Email</a>
-								</div>																								
-							</div>																	
-						</div>						
+						    		<?php
+						    		if($x == $cols)
+						    		{
+						    			$x = 0;
+						    		}
+						    	}
+					    	}
+							?>
+
+						</div>
 					</div>
 				</div>
 			</div>
