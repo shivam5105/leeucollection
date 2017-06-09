@@ -77,7 +77,7 @@
 					{
 						?>
 						<div class="cstm-btn-wrapper contact-email">
-							<a href="<?php echo $link_heading_right; ?>" class="cstm-btn arrow-btn text-center"><?php echo $link_heading_right; ?></a>
+							<a href="<?php echo $link_button_link_right; ?>" class="cstm-btn arrow-btn text-center"><?php echo $link_button_text_right; ?></a>
 						</div>
 						<?php
 					}
