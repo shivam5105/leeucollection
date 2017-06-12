@@ -58,45 +58,51 @@ get_header(); ?>
 										</div>
 										<?php
 									}
-									foreach ($services_section_group['crb_services_sections'] as $ss_key => $services_section)
+									if(isset($services_section_group['crb_services_sections']) && is_array($services_section_group['crb_services_sections']))
 									{
-										$service_duration 	= $services_section['crb_service_duration'];
-										$service_heading 	= $services_section['crb_service_heading'];
-										?>
-										<div class="service-wrapper clearfix">
-											<div class="col-10 pd-0">
-												<div class="transformed">
-													<div class="summer_heading">
-														<h3><?php echo $service_heading; ?></h3>
-													</div>
-												</div>
-											</div>
-											<div class="col-2">
-												<div class="timing_func">
-													<p><?php echo $service_duration; ?></p>
-												</div>
-											</div>
-											<?php
-											foreach ($services_section['crb_services'] as $s_key => $services)
-											{
-												?>
+										foreach ($services_section_group['crb_services_sections'] as $ss_key => $services_section)
+										{
+											$service_duration 	= $services_section['crb_service_duration'];
+											$service_heading 	= $services_section['crb_service_heading'];
+											?>
+											<div class="service-wrapper clearfix">
 												<div class="col-10 pd-0">
 													<div class="transformed">
-														<div class="summer_paragaraph">
-															<p><?php echo $services['crb_service_details']; ?></p>
+														<div class="summer_heading">
+															<h3><?php echo $service_heading; ?></h3>
 														</div>
 													</div>
 												</div>
 												<div class="col-2">
 													<div class="timing_func">
-														<p><?php echo $services['crb_service_price']; ?></p>
+														<p><?php echo $service_duration; ?></p>
 													</div>
 												</div>
 												<?php
-											}
-											?>
-										</div>
-										<?php
+												if(isset($services_section['crb_services']) && is_array($services_section['crb_services']))
+												{
+													foreach ($services_section['crb_services'] as $s_key => $services)
+													{
+														?>
+														<div class="col-10 pd-0">
+															<div class="transformed">
+																<div class="summer_paragaraph">
+																	<p><?php echo $services['crb_service_details']; ?></p>
+																</div>
+															</div>
+														</div>
+														<div class="col-2">
+															<div class="timing_func">
+																<p><?php echo $services['crb_service_price']; ?></p>
+															</div>
+														</div>
+														<?php
+													}
+												}
+												?>
+											</div>
+											<?php
+										}
 									}
 								}
 								?>

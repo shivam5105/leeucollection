@@ -45,7 +45,7 @@ get_header();
 							$banner_url = wp_get_attachment_image_src( $slide_data['crb_header_image'], '1240x600' );
 							$banner_url = $banner_url[0];
 							?>
-							<div class="slide-img">
+							<div class="slide-img notranslate">
 								<img class="for-mob-hide" src="<?php echo $banner_url; ?>" alt="">
 								<div class="banner-img for-mob mht_homebanner" style="background-image:url('<?php echo $banner_url; ?>')"> </div>
 								<div class="slider-text text-center ucase <?php echo $header_text_position; ?>">
@@ -158,7 +158,7 @@ get_header();
 				<div class="col-10 col-centered">
 					<div class="scroll-anim animate-custom flx" data-anim="fade-up">
 						<div class="home-about-content text-center"> 
-							<?php echo carbon_get_post_meta($post->ID, "crb_page_about"); ?>								
+							<?php echo carbon_get_post_meta($post->ID, "crb_page_about"); ?>
 						</div>
 					</div>
 				</div>
