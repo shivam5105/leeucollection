@@ -200,10 +200,15 @@ Container::make('post_meta', 'Services')
     ->show_on_template('template-spa-treatments.php')
     ->add_fields(array(
         Field::make('complex', 'crb_services_sections_group', '')->add_fields(array(
-            Field::make('text', 'crb_service_main_heading', 'Service Heading'),
+            Field::make('text', 'crb_service_main_heading', 'Service Group Heading'),
             Field::make('complex', 'crb_services_sections', '')->add_fields(array(
+                Field::make('radio', 'crb_remove_bottom_margin', 'Remove Bottom Margin?')
+                    ->add_options(array(
+                        'yes' => 'Yes',
+                        'no' => 'No',
+                   ))->set_default_value('no')->set_width(20),
                 Field::make('text', 'crb_service_heading', 'Service Heading')->set_width(50),
-                Field::make('text', 'crb_service_duration', 'Service Duration')->set_width(50),
+                Field::make('text', 'crb_service_duration', 'Service Duration')->set_width(30),
 
                 Field::make('complex', 'crb_services', '')->add_fields(array(
                     Field::make('text', 'crb_service_price', 'Service Price')->set_width(30),
