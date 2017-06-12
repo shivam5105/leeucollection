@@ -62,6 +62,9 @@ $page_template_file = basename(get_page_template());
 					</div>
 					<span class="text-cht-wthr">chat</span>
 				</div>
+				<div>
+					<?php echo do_shortcode('[contact-form-7 id="404" title="Contact Popup"]'); ?>
+				</div>
 		    </div>
 		</div>
 		<header id="site-header" class="pos-fix " >
