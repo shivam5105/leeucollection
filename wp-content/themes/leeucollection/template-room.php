@@ -116,12 +116,12 @@ get_header(); ?>
 								</div>
 								<div class="row detail-row clearfix">
 									<div class="col-3">
-										<div class="leeu-text">Rate</div>
+										<!-- <div class="leeu-text">Rate</div> -->
 										<div class="cstm-btn-wrapper ">
-											<div class="hotel-rate" itemprop="priceRange">
-												<?php echo @$post_meta['_crb_rate_amount'][0]; ?>
-												<?php echo @$post_meta['_crb_rate_for'][0]; ?>
-											</div>
+											<!-- <div class="hotel-rate" itemprop="priceRange">
+												<?php //echo @$post_meta['_crb_rate_amount'][0]; ?>
+												<?php //echo @$post_meta['_crb_rate_for'][0]; ?>
+											</div> -->
 											<?php
 											if(is_array($post_meta['_crb_booking_buton_link']) && !empty($post_meta['_crb_booking_buton_link'][0]))
 											{
@@ -132,10 +132,17 @@ get_header(); ?>
 										</div>
 									</div>
 									<div class="col-9">
-										<div class="leeu-text"> SPECIAL FEATURES</div>
-										<div class="desc-content desc-content-two-col" itemprop="amenityFeature"> 
-											<?php echo nl2br(@$post_meta['_crb_special_feature'][0]); ?>
-										</div>
+										<?php
+										if(is_array($post_meta['_crb_special_feature']) && !empty($post_meta['_crb_special_feature'][0]))
+										{
+											?>
+											<div class="leeu-text"> SPECIAL FEATURES</div>
+											<div class="desc-content desc-content-two-col" itemprop="amenityFeature"> 
+												<?php echo nl2br(@$post_meta['_crb_special_feature'][0]); ?>
+											</div>
+											<?php
+										}
+										?>
 									</div>
 								</div>
 							</div>

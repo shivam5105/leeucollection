@@ -124,9 +124,14 @@ get_header(); ?>
 								</div>
 								<div class="row detail-row hotel-info-row">
 									<div class="col-6">
-										<div class="leeu-text">HOURS & RESERVATIONS</div>
 										<?php
 										$hours_reservations = carbon_get_post_meta($post->ID, "crb_hours_reservations", 'complex');
+										if(is_array($hours_reservations) && count($hours_reservations) > 0)
+										{
+											?>
+											<div class="leeu-text">HOURS & RESERVATIONS</div>
+											<?php
+										}
 										foreach ($hours_reservations as $hr_key => $hours_reservation)
 										{
 											?>
@@ -143,10 +148,17 @@ get_header(); ?>
 										?>
 									</div>
 									<div class="col-6">
-										<div class="leeu-text">Policy</div>
-										<div class="hotel-info-desc"> 
-											<?php echo nl2br($post_meta['_crb_policy'][0]); ?>
-										</div>
+										<?php
+										if(is_array($post_meta['_crb_policy']) && !empty($post_meta['_crb_policy'][0]))
+										{
+											?>
+											<div class="leeu-text">Policy</div>
+											<div class="hotel-info-desc"> 
+												<?php echo nl2br($post_meta['_crb_policy'][0]); ?>
+											</div>
+											<?php
+										}
+										?>
 									</div>
 								</div>																
 							</div>

@@ -139,6 +139,36 @@ Container::make('post_meta', 'Special Features')
         /*)),*/
     ));
 
+//Room Gallery
+Container::make('post_meta', 'Gallery')
+    ->show_on_post_type($leeu_post_types)
+    ->show_on_template('template-room.php')
+    ->add_fields(array(
+        Field::make('complex', 'crb_room_gallery', '')->add_fields(array(
+            Field::make('image', 'crb_gallery_image', 'Gallery Image'),
+        )),
+    ));
+
+//Room Video
+Container::make('post_meta', 'Video')
+    ->show_on_post_type($leeu_post_types)
+    ->show_on_template('template-room.php')
+    ->add_fields(array(
+        Field::make('complex', 'crb_room_video', '')->add_fields(array(
+            Field::make('text', 'crb_room_video', 'Youtube Video Link'),
+        )),
+    ));
+
+//Room Floor Layout
+Container::make('post_meta', 'Floor Layout')
+    ->show_on_post_type($leeu_post_types)
+    ->show_on_template('template-room.php')
+    ->add_fields(array(
+        Field::make('complex', 'crb_room_floor_layout', '')->add_fields(array(
+           Field::make('image', 'crb_floor_image', 'Floor Layout Image Image'),
+        )),
+    ));
+
 //Hours & Reservations
 Container::make('post_meta', 'Hours & Reservations')
     ->show_on_post_type($leeu_post_types)

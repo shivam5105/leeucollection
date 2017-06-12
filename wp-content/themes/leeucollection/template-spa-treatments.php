@@ -66,7 +66,7 @@ get_header(); ?>
 											$service_heading 	= $services_section['crb_service_heading'];
 											$remove_bottom_margin 	= @$services_section['crb_remove_bottom_margin'];
 											?>
-											<div class="service-wrapper clearfix <?php if($remove_bottom_margin == 'yes'){ echo 'rm-pad-bottom'; } ?>">
+											<div class="service-wrapper clearfix <?php if($remove_bottom_margin == 'yes'){ echo 'rm-margin-bottom'; } ?>">
 												<div class="col-10 pd-0">
 													<div class="transformed">
 														<div class="summer_heading">
