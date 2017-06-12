@@ -30,7 +30,7 @@ get_header(); ?>
 					<div class="next"></div>
 					<?php
 				}?>
-				<div class="<?php echo $slider_wrapper_class; ?>">
+				<div class="<?php echo $slider_wrapper_class; ?> notranslate">
 					<?php
 					if(is_array($slider_data) && !empty($slider_data))
 					{
