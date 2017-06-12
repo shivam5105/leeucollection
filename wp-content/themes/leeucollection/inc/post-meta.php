@@ -194,26 +194,21 @@ Container::make('post_meta', 'Book Button')
         Field::make('text', 'crb_booking_buton_link', 'Booking Button Link')->set_width(80),
     ));
 
-//Page Sub-Heading
-Container::make('post_meta', 'Page Sub-Heading')
-    ->show_on_post_type($leeu_post_types)
-    ->show_on_template('template-spa-treatments.php')
-    ->add_fields(array(
-        Field::make('text', 'crb_page_sub_heading', ''),
-    ));
-
 //Services
 Container::make('post_meta', 'Services')
     ->show_on_post_type($leeu_post_types)
     ->show_on_template('template-spa-treatments.php')
     ->add_fields(array(
-        Field::make('complex', 'crb_services_sections', '')->add_fields(array(
-            Field::make('text', 'crb_service_heading', 'Service Heading')->set_width(50),
-            Field::make('text', 'crb_service_duration', 'Service Duration')->set_width(50),
+        Field::make('complex', 'crb_services_sections_group', '')->add_fields(array(
+            Field::make('text', 'crb_service_main_heading', 'Service Heading'),
+            Field::make('complex', 'crb_services_sections', '')->add_fields(array(
+                Field::make('text', 'crb_service_heading', 'Service Heading')->set_width(50),
+                Field::make('text', 'crb_service_duration', 'Service Duration')->set_width(50),
 
-            Field::make('complex', 'crb_services', '')->add_fields(array(
-                Field::make('text', 'crb_service_price', 'Service Price')->set_width(30),
-                Field::make('rich_text', 'crb_service_details', 'Details')->set_width(70),
+                Field::make('complex', 'crb_services', '')->add_fields(array(
+                    Field::make('text', 'crb_service_price', 'Service Price')->set_width(30),
+                    Field::make('rich_text', 'crb_service_details', 'Details')->set_width(70),
+                )),
             )),
         )),
     ));
