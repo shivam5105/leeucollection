@@ -405,6 +405,10 @@ $(document).ready(function(){
 		meanExpand: " ",
 		meanContract: " ",
 	});
+	$('.chat-wrapper').click(function(e){
+		e.preventDefault();
+		$('.contact-slide-form').toggleClass('slide-in');
+	});
 	jQuery('#mc-form').ajaxChimp({
 			url: '//builtbyblank.us14.list-manage.com/subscribe/post?u=35b52d4d999898495de700b6d&amp;id=707c0e74e6',
 			callback: callbackFunction
