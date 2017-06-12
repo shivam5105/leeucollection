@@ -145,7 +145,8 @@ Container::make('post_meta', 'Gallery')
     ->show_on_template('template-room.php')
     ->add_fields(array(
         Field::make('complex', 'crb_room_gallery', '')->add_fields(array(
-            Field::make('image', 'crb_gallery_image', 'Gallery Image'),
+            Field::make('image', 'crb_gallery_image', 'Gallery Image')->set_width(30),
+            Field::make('text', 'crb_gallery_caption', 'Caption')->set_width(70),
         )),
     ));
 
@@ -155,7 +156,8 @@ Container::make('post_meta', 'Video')
     ->show_on_template('template-room.php')
     ->add_fields(array(
         Field::make('complex', 'crb_room_video', '')->add_fields(array(
-            Field::make('text', 'crb_room_video', 'Youtube Video Link'),
+            Field::make('text', 'crb_room_video', 'Youtube Video Link')->set_width(30),
+            Field::make('text', 'crb_room_caption', 'Caption')->set_width(70),
         )),
     ));
 
@@ -165,7 +167,8 @@ Container::make('post_meta', 'Floor Layout')
     ->show_on_template('template-room.php')
     ->add_fields(array(
         Field::make('complex', 'crb_room_floor_layout', '')->add_fields(array(
-           Field::make('image', 'crb_floor_image', 'Floor Layout Image Image'),
+            Field::make('image', 'crb_floor_image', 'Floor Layout Image Image')->set_width(30),
+            Field::make('text', 'crb_floor_caption', 'Caption')->set_width(70),
         )),
     ));
 
