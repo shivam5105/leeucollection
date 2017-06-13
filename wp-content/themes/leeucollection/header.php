@@ -67,7 +67,7 @@ $page_template_file = basename(get_page_template());
 		    		<h3 class="get-in-touch"> Get in touch </h3>
 				 <?php echo do_shortcode('[contact-form-7 id="404" title="Contact Popup"]'); ?>
 		   </div>
-		</div>
+		</div> 
 		<header id="site-header" class="pos-fix " >
 			<nav id="main-navigation" class="clearfix">
 				<div class="container pos-rel">

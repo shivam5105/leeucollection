@@ -386,6 +386,13 @@ var Blank ={
 			$("#"+wrapper_id).show();
 		})
 	},
+	roomGallerySlider: function(){
+		$('.gallery-slider').owlCarousel({
+			items: 1,
+			nav: true,
+			dots: false
+		});
+	}
 }
 $(document).ready(function(){
 	Blank.common_init();
@@ -396,6 +403,7 @@ $(document).ready(function(){
 	Blank.openBookingPopup();
 	Blank.closeBookingPopup();
 	Blank.updatePopupBookTableButton();
+	Blank.roomGallerySlider();
 	jQuery('#site-header #slide-menu').meanmenu({
 		meanScreenWidth: "1140",
 		meanMenuContainer : '#site-header',
@@ -409,6 +417,13 @@ $(document).ready(function(){
 		e.preventDefault();	
 		$('.contact-slide-form').toggleClass('slide-in');
 	});
+	$('.gallery-thumb').click(function(e){
+		e.preventDefault();
+		$('.slider-container').addClass('popup-active');
+	});
+	$('.close-gallery').click(function(){
+		$('.slider-container').removeClass('popup-active');
+	})
 	jQuery('#mc-form').ajaxChimp({
 			url: '//builtbyblank.us14.list-manage.com/subscribe/post?u=35b52d4d999898495de700b6d&amp;id=707c0e74e6',
 			callback: callbackFunction
