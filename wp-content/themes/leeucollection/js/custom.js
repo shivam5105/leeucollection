@@ -406,7 +406,7 @@ $(document).ready(function(){
 		meanContract: " ",
 	});
 	$('.chat-wrapper').click(function(e){
-		e.preventDefault();
+		e.preventDefault();	
 		$('.contact-slide-form').toggleClass('slide-in');
 	});
 	jQuery('#mc-form').ajaxChimp({
