@@ -150,7 +150,7 @@ get_header(); ?>
 								<div class="listing-row clearfix">
 									<div class="three-img-col">
 										<div class="col-4 rm-pad">
-											<div class="banner-img  full_img scroll-anim gallery-thumb" data-anim="fade-up">
+											<div class="banner-img full_img scroll-anim" data-anim="fade-up">
 												<img src="<?php echo get_template_directory_uri(); ?>/images/gallery-image-main.jpg" alt="" />
 											</div>
 											<div class="img-desc">gallery</div>
@@ -175,11 +175,45 @@ get_header(); ?>
 				</div>
 			</div>
 		</div>
-		<div class="slider-container">
+		<div class="slider-container popup-slider-1">
 			<a href="javascript:void(0);" class="close-gallery">Close</a>
 			<div class="gallery-slider owl-carousel owl-theme">
 				<div class="slides">
 					<img src="<?php echo get_template_directory_uri(); ?>/images/delux-room.jpg" alt="" />
+				</div>
+				<div class="slides">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/delux-room.jpg" alt="" />
+				</div>
+				<div class="slides">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/delux-room.jpg" alt="" />
+				</div>
+				<div class="slides">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/delux-room.jpg" alt="" />
+				</div>
+			</div>
+		</div>
+		<div class="slider-container popup-slider-2">
+			<a href="javascript:void(0);" class="close-gallery">Close</a>
+			<div class="gallery-slider owl-carousel owl-theme">
+				<div class="slides">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/video-main.jpg" alt="" />
+				</div>
+				<div class="slides">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/delux-room.jpg" alt="" />
+				</div>
+				<div class="slides">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/delux-room.jpg" alt="" />
+				</div>
+				<div class="slides">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/delux-room.jpg" alt="" />
+				</div>
+			</div>
+		</div>
+		<div class="slider-container popup-slider-3">
+			<a href="javascript:void(0);" class="close-gallery">Close</a>
+			<div class="gallery-slider owl-carousel owl-theme">
+				<div class="slides">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/floor-main.jpg" alt="" />
 				</div>
 				<div class="slides">
 					<img src="<?php echo get_template_directory_uri(); ?>/images/delux-room.jpg" alt="" />

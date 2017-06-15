@@ -126,13 +126,17 @@ body{
 textarea {
     outline: none;
 }
-h1{
+h1,.h1{
     font-size: 50px;
     font-family: 'GillSans';
     font-weight: 300;
     font-style: normal;
     letter-spacing: 0.1em;
     line-height: 0.92;  
+}
+.h1{
+    text-indent: -4px;
+    margin-bottom: 35px;
 }
 h2,h1.ucase{
     font-size: 38px;
@@ -2737,19 +2741,17 @@ appearance: none;
     left: 0;
     transition: all 0.4s ease;
 }
-.contact-slide-form .get-in-touch{
+.contact-slide-form .get-in-touch,.career-form .label-name{
     font-family: GillSans;
     font-size: 11px;   
     color: #ac9e94;
-    font-weight: 600;
     letter-spacing: 0.1em;
-    text-transform: uppercase;
-    
+    text-transform: uppercase;  
 }
 .contact-slide-form .wpcf7{
     width: 295px;
 }
-.contact-slide-form .wpcf7-text {
+.contact-slide-form .wpcf7-text,.career-form .wpcf7-text {
     border: none;
     background: transparent none repeat scroll 0 0;
     border-bottom: 1px solid #c6bdb6;
@@ -2760,7 +2762,7 @@ appearance: none;
     letter-spacing: 0.063em;
     width: 100%;
 }
-.contact-slide-form textarea.wpcf7-textarea {
+.contact-slide-form textarea.wpcf7-textarea,.career-form textarea.wpcf7-textarea {
     background: transparent none repeat scroll 0 0;
     border: 1px solid #c6bdb6;
     margin-top: 45px;
@@ -2795,6 +2797,9 @@ appearance: none;
 }
 .rm-margin-bottom{
     margin-bottom: 0 !important;
+}
+.hotel-gallery-wrapper .banner-img{
+    cursor: pointer;
 }
 .slider-container{
     background: #222945;
@@ -2843,6 +2848,7 @@ appearance: none;
     transform: translateY(-50%);
     width: 29px;
     transform: rotate(180deg);
+    cursor: pointer;
 }
 .gallery-slider .owl-next {
     position: absolute;
@@ -2860,11 +2866,75 @@ appearance: none;
     top: 50%;
     transform: translateY(-50%);
     width: 29px;
+    cursor: pointer;
 }
 .close-gallery {
     position: absolute;
     right: 20px;
     text-transform: uppercase;
     top: 20px;
+}
+
+/********* Career detail *********/
+.career-main-heading{
+    margin-bottom: 35px;
+}
+.career-description{
+    margin: 32px 0;
+    font-size: 15px;
+    letter-spacing: 0.063em;
+    line-height: 1.533; 
+}
+.career-form{
+    background: #ebe7e2;
+    padding: 50px 100px 135px;
+}
+.career-form .label-name{
+    display: block;
+}
+.career-form .wpcf7-form-control-wrap{
+    display: block;
+}
+.career-form .wpcf7-form label:nth-of-type(2) .label-name{
+    margin-top: 22px;
+}
+.career-form textarea.wpcf7-textarea{
+    margin-top: 25px;
+}
+.career-form #fileuploadfield {
+    display:none;
+}
+.upload-file{
+    display: inline-block;
+    position: relative;
+    margin-top: 30px;
+}
+.upload-file:after{
+    content:" ";
+    background: url('images/resume-icon.png');
+    position: absolute;
+    width: 14px;
+    height: 29px;
+    right: 22px;
+    top: 10px;
+}
+.career-form #uploadbrowsebutton {
+    background: transparent none repeat scroll 0 0;
+    border: 1px solid #c7beb6;
+    color: #ac9e94;
+    font-family: "GillSans";
+    font-weight: 600;
+    height: 49px;
+    padding: 0 20px;
+    text-align: left;
+    width: 135px;
+    text-transform: uppercase;
+}
+.career-form #uploadbrowsebutton:hover{
+    border: 1px solid #c19034;
+    color: #c19034;
+}
+.career-form .send_button{
+    margin-top: 30px;
 }
 /** end **/
