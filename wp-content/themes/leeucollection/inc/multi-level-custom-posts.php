@@ -414,6 +414,32 @@ function registerMyCustomPost()
 	$parent = new multiLevelCustomPosts($parentSlug, $labels, $args);
 	
 	/********* Careers Post Type ***********/
+
+	/********* Media & trades Post Type ***********/
+
+	$labels = array(
+		"name" => "Media & trades",
+		"singular_name" => "Media & trade",
+	);
+	$args = array(
+		"label" => "Media & trades",
+		"labels" => $labels,
+		'menu_position' => 11,
+		'show_in_admin_bar' => true,
+		/*'taxonomies' 	=> array('category'),*/
+		"supports" => array(
+			"title",
+			"revisions",
+			"thumbnail",
+			"editor",
+			"page-attributes",
+			"custom-fields" /*, "post-formats"*/
+		)
+	);
+	$parentSlug = "leeu-media-trades";
+	$parent = new multiLevelCustomPosts($parentSlug, $labels, $args);
+	
+	/********* Media & trades Post Type ***********/
 }
 
 add_action("init", "registerMyCustomPost");
