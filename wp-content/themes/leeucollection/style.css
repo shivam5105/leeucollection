@@ -2939,7 +2939,7 @@ appearance: none;
 }
 /*************** Media ****************/
 .media-container .wp-post-image{
-    max-width: 100%;
+    width: 100%;
 }
 .media-container .content-part{
     margin-bottom: 60px;
@@ -2947,5 +2947,15 @@ appearance: none;
 .media-container .room-name{
     font-size: 11px;
     text-transform: uppercase;
+}
+.media-content-left {
+    float: left;
+    width: 80%;
+}
+.media-request{
+    text-transform: uppercase;
+}
+.content-box{
+    margin-top: 20px;
 }
 /** end **/

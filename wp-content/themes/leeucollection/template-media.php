@@ -47,55 +47,38 @@ get_header(); ?>
 								<div class="row media-container">
 									<?php
 									$args = array(
-									    'post_type' => 'hotel',
+									    'post_type' => 'leeu-media-trades',
 									    'posts_per_page' => -1,
 									    'orderby' =>'menu_order',
 									    'order' => 'ASC',
 									    'post_parent' => 0
 									);
-									$loop = new WP_Query( $args );
-									while ( $loop->have_posts() )
-									{
-									    $loop->the_post();
-									    $hotel_ID  = $loop->post->ID;
+									?>
+									<?php $loop = new WP_Query( $args );
+									 if ( $loop->have_posts() ) : 
+										 while ( $loop->have_posts() ) : $loop->the_post(); 
+											$hotel_name = carbon_get_post_meta($post->ID,'crb_media_hotel');
+											$room_name = carbon_get_post_meta($post->ID,'crb_room_name');
+											$shortcode = carbon_get_post_meta($post->ID,'crb_media_form_shortcode');
 
-										$args = array(
-											'post_type' => 'leeu-media-trades',
-											'meta_query' => array(
-										        array(
-										            'key' => '_crb_media_hotel',
-										            'value' => $hotel_ID,
-										            'compare' => '='
-										        )
-											)
-										);
-										$media_loop = new WP_Query( $args );
-										if($media_loop->have_posts())
-										{
-											?>
-												<?php
-												while ($media_loop->have_posts())
-												{
-													$media_loop->the_post();
-													$hotel_location = get_hotel_location_list($hotel_ID);
-													$room_name = carbon_get_post_meta($post->ID,'crb_room_name');
-													$shortcode = carbon_get_post_meta($post->ID,'crb_media_form_shortcode');
-													?>
-													<div class="col-6 rm-pad"> 
-														<div class="content-part" itemprop="address">
-															<?php the_post_thumbnail();?>
-															<?php echo $hotel_location; ?>
-															<p class="room-name"> <?php echo $room_name; ?></p>
+										?>	
+											<div class="col-6 rm-pad"> 
+												<div class="content-part" itemprop="address">
+													<?php the_post_thumbnail('411x258');?>
+													<div class="content-box clearfix">
+														<div class="media-content-left">
+															<span><?php echo $hotel_name; ?></span>
+															<span class="room-name"> <?php echo $room_name; ?></span>
+														</div>
+														<div class="media-content-right">
+															<a href="javascript:void(0);" class="media-request">Request</a>
 														</div>
 													</div>
-													<?php
-												}
-												?>
-											
-										    <?php
-										}
-									}
-									?>
+												</div>
+											</div>
+										<?php wp_reset_postdata(); 
+									endwhile;	
+									endif; ?>
 								</div>
 							</div>
 						</div>

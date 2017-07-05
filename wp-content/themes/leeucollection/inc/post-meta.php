@@ -817,31 +817,14 @@ Container::make('post_meta', 'Career Info')
     ->add_fields($hotels_list_fields);
 
 
-//Media & trades
-$args = array(
-    'post_type' => 'hotel',
-    'posts_per_page' => -1,
-    'orderby' =>'menu_order',
-    'order' => 'ASC',
-    'post_parent' => 0
-    );
-$loop = new WP_Query( $args );
-$hotels_list = array();
-while ( $loop->have_posts() ) {
-    $loop->the_post();
-    $ID         = $loop->post->ID;
-
-    $hotels_list[$ID] = $loop->post->post_title;
-}
-
-$media_hotels_list_fields[] = Field::make('select', 'crb_media_hotel', 'Select Hotel')->add_options($hotels_list);
-$media_hotels_list_fields[] = Field::make('text', 'crb_room_name', 'Room name');
-$media_hotels_list_fields[] = Field::make('text', 'crb_media_form_shortcode', 'Media Form Shortcode');
-
-//Career
+//  Media & trades
 Container::make('post_meta', 'Media Info')
     ->show_on_post_type("leeu-media-trades")
-    ->add_fields($media_hotels_list_fields);
+    ->add_fields(array(
+        Field::make('text', 'crb_media_hotel', 'Hotel name'),
+        Field::make('text', 'crb_room_name', 'Room name'),
+        Field::make('text', 'crb_media_form_shortcode', 'Media Form Shortcode')
+        ));
 
 /*  
 //Slider Info
