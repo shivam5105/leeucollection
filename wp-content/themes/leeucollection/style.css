@@ -16,7 +16,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 * {
     box-sizing: border-box;
 }
-html, body, div, span, object, iframe,
+html, body, div, span, object, iframe,  
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
 del, dfn, em, img, ins, kbd, q, samp,
@@ -2451,7 +2451,7 @@ margin:0;
 }
 
 /** pop-up css goes here **/
-.main_sec{
+.main_sec,.media-popup{
     position:fixed;
     top:0;
     left:0;
@@ -2461,12 +2461,10 @@ margin:0;
     background:#222945;
     display:none;
 }
-
 .rel_wrap{
     min-height:100px;
     position:relative;  
 }
-
 .leeu_logo{
     position:absolute;
     left:50%;
@@ -2609,7 +2607,7 @@ margin:0;
     border-radius: 0 !important;
 }
 select:focus {
-outline-style:none !important;
+ outline-style:none !important;
 }
 
 .promo_grcode{
@@ -2623,18 +2621,18 @@ outline-style:none !important;
     border-bottom:2px solid #626377;
 }
 
-.promo_grcode input::-webkit-input-placeholder,.number_of_people input::-webkit-input-placeholder{
+.promo_grcode input::-webkit-input-placeholder,.number_of_people input::-webkit-input-placeholder,.media-popup input::-webkit-input-placeholder{
     color: #fff;
 }
-.promo_grcode input:-moz-placeholder,.number_of_people input:-moz-placeholder{
+.promo_grcode input:-moz-placeholder,.number_of_people input:-moz-placeholder,.media-popup input:-moz-placeholder{
     /* FF 4-18 */
  color: #fff;
 }
-.promo_grcode input::-moz-placeholder,.number_of_people input::-moz-placeholder {
+.promo_grcode input::-moz-placeholder,.number_of_people input::-moz-placeholder,.media-popup input::-moz-placeholder {
     /* FF 19+ */
  color: #fff;
 }
-.promo_grcode input:-ms-input-placeholder,.number_of_people input:-ms-input-placeholder {
+.promo_grcode input:-ms-input-placeholder,.number_of_people input:-ms-input-placeholder,.media-popup input:-ms-input-placeholder {
     /* IE 10+ */
  color: #fff;
 }
@@ -2944,8 +2942,12 @@ appearance: none;
 .media-container .content-part{
     margin-bottom: 60px;
 }
+.media-container .hotel-name{
+    letter-spacing: 0.094em;
+}
 .media-container .room-name{
     font-size: 11px;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
 }
 .media-content-left {
@@ -2957,5 +2959,56 @@ appearance: none;
 }
 .content-box{
     margin-top: 20px;
+}
+.media-popup-content {
+    max-width: 400px;
+    margin: -100px auto 0;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.media-popup-content .header-text   {
+    color: #AC9E94;
+    font-family: 'GillSans';    
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    margin-bottom: 16px;
+}
+.media-popup-content input.wpcf7-form-control.wpcf7-text {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #AC9E94;
+    color: #ffffff;
+    font-size: 15px;
+    letter-spacing: 0.094em;
+    width: 100%;
+    height: 40px;
+}
+.media-popup-content .wpcf7-form-control-wrap.your-email {
+    display: block;
+    margin-top: 15px;
+}
+.email_button{
+    margin: 90px auto;
+    width: 132px;
+}
+.email_button .cstm-btn{
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    letter-spacing: 0.13em;
+}
+.email_button .cstm-btn:hover{
+    color: #c19034; 
+    border:1px solid #c19034;
+}
+.email_button span.wpcf7-not-valid-tip{
+    font-size: 13px;
+}
+.media-box .radio-buttons{
+    display: none;
+    color: #fff;
+}
+.media-popup-content radio-buttons{
+    display: block;
 }
 /** end **/

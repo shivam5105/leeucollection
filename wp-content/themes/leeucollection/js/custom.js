@@ -387,12 +387,14 @@ var Blank ={
 		})
 	},
 	roomGallerySlider: function(){
-		$('.gallery-slider').owlCarousel({
-			items: 1,
-			nav: true,
-			dots: false,
-			smartSpeed:1000	
-		});
+		if($('.gallery-slider').length){
+			$('.gallery-slider').owlCarousel({
+				items: 1,
+				nav: true,
+				dots: false,
+				smartSpeed:1000	
+			});
+		}
 	},
 	thumbsClassAdded: function(){
 		$('.hotel-gallery-wrapper .banner-img').addClass(function(index){
@@ -418,16 +420,17 @@ $(document).ready(function(){
 	Blank.roomGallerySlider();
 	Blank.thumbsClassAdded();
 	Blank.contactPopup();
-	jQuery('#site-header #slide-menu').meanmenu({
-		meanScreenWidth: "1140",
-		meanMenuContainer : '#site-header',
-		meanRevealPosition : "left",
-		meanMenuOpen: "MENU",
-		meanMenuClose: "CLOSE",
-		meanExpand: " ",
-		meanContract: " ",
-	});
-	
+	if(jQuery('#slide-menu').length){
+		jQuery('#site-header #slide-menu').meanmenu({
+			meanScreenWidth: "1140",
+			meanMenuContainer : '#site-header',
+			meanRevealPosition : "left",
+			meanMenuOpen: "MENU",
+			meanMenuClose: "CLOSE",
+			meanExpand: " ",
+			meanContract: " ",
+		});
+	}
 	$('.gallery-thumb0').on('click', function(e){
 		e.preventDefault();
 		$('.slider-container.popup-slider-1').addClass('popup-active');
@@ -447,6 +450,17 @@ $(document).ready(function(){
 			url: '//builtbyblank.us14.list-manage.com/subscribe/post?u=35b52d4d999898495de700b6d&amp;id=707c0e74e6',
 			callback: callbackFunction
 	});	
+	
+	// Media popup
+	$('.media-request').click(function(){
+		var buttons = $(this).parents('.media-box').find('.radio-buttons');
+		//alert(buttons);
+		$('.media-popup').fadeIn();
+		$('.media-popup-content .wpcf7-form .email_button').before(buttons);
+	});
+	$('.close_popup').click(function(){
+		$('.media-popup').fadeOut();
+	});
 	$("#uploadbrowsebutton").click(function() {
 		$('#fileuploadfield').click()
 	});

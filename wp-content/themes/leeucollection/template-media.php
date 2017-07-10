@@ -65,25 +65,39 @@ get_header(); ?>
 											<div class="col-6 rm-pad"> 
 												<div class="content-part" itemprop="address">
 													<?php the_post_thumbnail('411x258');?>
-													<div class="content-box clearfix">
+													<div class="content-box media-box clearfix">
 														<div class="media-content-left">
-															<span><?php echo $hotel_name; ?></span>
+															<span class="hotel-name"><?php echo $hotel_name; ?></span>
 															<span class="room-name"> <?php echo $room_name; ?></span>
 														</div>
 														<div class="media-content-right">
 															<a href="javascript:void(0);" class="media-request">Request</a>
 														</div>
+														 <div class="radio-buttons">
+															<label><input type="radio" name="dpi-img" value="72-dp" class="72-dpi"/> 72 DPI @ 1200 px</label>
+															<label><input type="radio" name="dpi-img" value="300-dp" class="300-dpi"/>300 DPI</label>
+														</div>
 													</div>
 												</div>
 											</div>
 										<?php wp_reset_postdata(); 
-									endwhile;	
+									  endwhile;	
 									endif; ?>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+		<div class="media-popup">
+			<div class="rel_wrap">
+				<div class="leeu_logo"><a href="<?php echo site_url(); ?>" ><img src="<?php echo get_template_directory_uri();?>/images/main-logo-top.svg" alt="Leeucollection" class="custom-logo"></a></div>
+				<div class="close_popup extext">Close</div>
+			</div>
+			<div class="media-popup-content">
+				<div class="header-text">REQUESTED IMAGE LINK WILL BE EMAILED TO</div>
+				<?php echo do_shortcode('[contact-form-7 id="616" title="Image request form"]');?>
 			</div>
 		</div>
 	</section>
