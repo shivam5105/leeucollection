@@ -3014,4 +3014,12 @@ appearance: none;
 .widget-title.hidden{
     display: none;
 }
+.radio-buttons {
+    color: #fff;
+    margin-top: 70px;
+}
+.radio-buttons label{
+    display: block;
+    line-height: 2;
+}
 /** end **/

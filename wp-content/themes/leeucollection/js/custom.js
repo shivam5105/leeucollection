@@ -1,4 +1,4 @@
-var $ = jQuery.noConflict(),win_h,win_w,_wl,_wpos,_dh;
+	var $ = jQuery.noConflict(),win_h,win_w,_wl,_wpos,_dh;
 var Blank ={	
 	win_prop : function(){
 		win_h = $(window).height();
@@ -452,14 +452,16 @@ $(document).ready(function(){
 	});	
 	
 	// Media popup
-	$('.media-request').click(function(){
+	$(document).on('click', '.media-request', function(){
 		var buttons = $(this).parents('.media-box').find('.radio-buttons');
-		//alert(buttons);
 		$('.media-popup').fadeIn();
 		$('.media-popup-content .wpcf7-form .email_button').before(buttons);
-	});
+		$('.media-popup-content .wpcf7-form .radio-buttons').prev('.radio-buttons').remove();
+	 });
+
 	$('.close_popup').click(function(){
 		$('.media-popup').fadeOut();
+		location.reload();	
 	});
 	$("#uploadbrowsebutton").click(function() {
 		$('#fileuploadfield').click()
