@@ -75,7 +75,7 @@ get_header(); ?>
 														</div>
 														 <div class="radio-buttons">
 															<label><span class="radio-dpi"><input type="radio" name="dpi-img" value="<?php echo $first_dpi; ?>" class="72-dpi"/></span> <span>72 DPI @ 1200 px</span></label>
-															<label><span class="radio-dpi"><input type="radio" name="dpi-img" value="<?php echo $second_dpi; ?>" class="300-dpi"/></span><span>300 DPI</span></label>
+															<label><span class="radio-dpi"><input type="radio" name="dpi-img" value="<?php echo $second_dpi; ?>" class="300-dpi"/></span><span> 300 DPI</span></label>
 														</div>
 													</div>
 												</div>

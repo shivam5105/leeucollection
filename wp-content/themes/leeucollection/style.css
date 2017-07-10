@@ -3022,5 +3022,8 @@ appearance: none;
     display: block;
     line-height: 2;
 }
-.media-popup-content .radio-buttons .radio-dpi{visibility:hidden;}
+.media-popup-content .radio-buttons .radio-dpi{
+    margin-left: -18px;
+    visibility:hidden;
+}
 /** end **/
