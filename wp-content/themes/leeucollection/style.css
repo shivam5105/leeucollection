@@ -3026,4 +3026,8 @@ appearance: none;
     margin-left: -18px;
     visibility:hidden;
 }
+.media-popup-content .wpcf7-response-output{
+    color: #fff;
+    position: absolute;
+}
 /** end **/
