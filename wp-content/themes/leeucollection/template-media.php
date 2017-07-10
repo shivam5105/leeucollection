@@ -59,8 +59,8 @@ get_header(); ?>
 										 while ( $loop->have_posts() ) : $loop->the_post(); 
 											$hotel_name = carbon_get_post_meta($post->ID,'crb_media_hotel');
 											$room_name = carbon_get_post_meta($post->ID,'crb_room_name');
-											$shortcode = carbon_get_post_meta($post->ID,'crb_media_form_shortcode');
-
+											$first_dpi = carbon_get_post_meta($post->ID,'crb_first_dpi');
+											$second_dpi = carbon_get_post_meta($post->ID,'crb_second_dpi');
 										?>	
 											<div class="col-6 rm-pad"> 
 												<div class="content-part" itemprop="address">
@@ -74,8 +74,8 @@ get_header(); ?>
 															<a href="javascript:void(0);" class="media-request">Request</a>
 														</div>
 														 <div class="radio-buttons">
-															<label><input type="radio" name="dpi-img" value="http://54.191.201.248/leeucollection/wp-content/uploads/2017/04/slide1-1.jpg" class="72-dpi"/> 72 DPI @ 1200 px</label>
-															<label><input type="radio" name="dpi-img" value="http://54.191.201.248/leeucollection/wp-content/uploads/2017/04/restaurant-925x600.jpg" class="300-dpi"/>300 DPI</label>
+															<label><input type="radio" name="dpi-img" value="<?php echo $first_dpi; ?>" class="72-dpi"/> 72 DPI @ 1200 px</label>
+															<label><input type="radio" name="dpi-img" value="<?php echo $second_dpi; ?>" class="300-dpi"/>300 DPI</label>
 														</div>
 													</div>
 												</div>

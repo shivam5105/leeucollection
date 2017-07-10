@@ -823,7 +823,8 @@ Container::make('post_meta', 'Media Info')
     ->add_fields(array(
         Field::make('text', 'crb_media_hotel', 'Hotel name'),
         Field::make('text', 'crb_room_name', 'Room name'),
-        Field::make('text', 'crb_media_form_shortcode', 'Media Form Shortcode')
+        Field::make('image', 'crb_first_dpi', '72 DPI @ 1200 px')->set_value_type( 'url' ),
+        Field::make('image', 'crb_second_dpi', '300 DPI')->set_value_type( 'url' )
         ));
 
 /*  
