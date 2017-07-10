@@ -74,8 +74,8 @@ get_header(); ?>
 															<a href="javascript:void(0);" class="media-request">Request</a>
 														</div>
 														 <div class="radio-buttons">
-															<label><input type="radio" name="dpi-img" value="72-dp" class="72-dpi"/> 72 DPI @ 1200 px</label>
-															<label><input type="radio" name="dpi-img" value="300-dp" class="300-dpi"/>300 DPI</label>
+															<label><input type="radio" name="dpi-img" value="http://54.191.201.248/leeucollection/wp-content/uploads/2017/04/slide1-1.jpg" class="72-dpi"/> 72 DPI @ 1200 px</label>
+															<label><input type="radio" name="dpi-img" value="http://54.191.201.248/leeucollection/wp-content/uploads/2017/04/restaurant-925x600.jpg" class="300-dpi"/>300 DPI</label>
 														</div>
 													</div>
 												</div>
