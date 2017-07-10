@@ -1,4 +1,4 @@
-<?php
+	<?php
 /*
 Template Name: Media & trades
 */
@@ -91,13 +91,13 @@ get_header(); ?>
 			</div>
 		</div>
 		<div class="media-popup">
-			<div class="rel_wrap">
+			<div class="rel_wrap">	
 				<div class="leeu_logo"><a href="<?php echo site_url(); ?>" ><img src="<?php echo get_template_directory_uri();?>/images/main-logo-top.svg" alt="Leeucollection" class="custom-logo"></a></div>
 				<div class="close_popup extext">Close</div>
 			</div>
 			<div class="media-popup-content">
 				<div class="header-text">REQUESTED IMAGE LINK WILL BE EMAILED TO</div>
-				<?php echo do_shortcode('[contact-form-7 id="616" title="Image request form"]');?>
+				<?php dynamic_sidebar( 'request-form' ); ?>
 			</div>
 		</div>
 	</section>

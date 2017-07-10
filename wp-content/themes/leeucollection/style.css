@@ -3011,4 +3011,7 @@ appearance: none;
 .media-popup-content radio-buttons{
     display: block;
 }
+.widget-title.hidden{
+    display: none;
+}
 /** end **/

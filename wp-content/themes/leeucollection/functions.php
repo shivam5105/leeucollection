@@ -174,6 +174,15 @@ function leeucollection_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+		'name'          => __( 'Request form', 'leeucollection' ),
+		'id'            => 'request-form',
+		'description'   => __( 'Add widgets here to appear in your sidebar.', 'leeucollection' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title hidden">',
+		'after_title'   => '</h2>',
+	) );
 }
 add_action( 'widgets_init', 'leeucollection_widgets_init' );
 
