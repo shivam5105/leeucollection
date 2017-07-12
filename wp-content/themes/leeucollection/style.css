@@ -710,7 +710,7 @@ div.sub-menu-wrapper{
     opacity:0;
     z-index: 2;
     visibility: hidden;
-    top: 55px;             
+    top: 90px;             
 }
 #main-navigation ul li:hover a + div.sub-menu-wrapper{
     opacity:1;
