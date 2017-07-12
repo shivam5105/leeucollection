@@ -270,7 +270,7 @@ Container::make('post_meta', 'Contact')
 //Content Section Spa & Wellness Page
 Container::make('post_meta', 'Content Section')
     ->show_on_post_type($leeu_post_types)
-    ->show_on_template(array('template-spa-wellness.php','template-guest-area.php'))
+    ->show_on_template(array('template-spa-wellness.php'))
     ->add_fields(array(
         Field::make('complex', 'crb_spa_content_section', '')->add_fields(array(
 
@@ -285,6 +285,21 @@ Container::make('post_meta', 'Content Section')
             )),
         )),
     ));
+   //Content Section Spa & Wellness Page
+Container::make('post_meta', 'Content Section')
+    ->show_on_post_type($leeu_post_types)
+    ->show_on_template(array('template-guest-area.php'))
+    ->add_fields(array(
+        Field::make('complex', 'crb_guest_content_section', '')->add_fields(array(
+
+            Field::make('complex', 'crb_guest_section_slider', 'Slider')->add_fields(array(
+              Field::make('image', 'crb_guest_section_slide_image', 'Image')->help_text('(Image Dimensions (WxH): 821 x 478)')->set_width('20'),
+            )),
+            Field::make('text', 'crb_guest_section_slide_title', 'Title')->set_width('30'),
+            Field::make('textarea', 'crb_guest_section_slide_desc', 'Small Description')->set_width('70'),
+            
+        )),
+    )); 
 
 //Home Page && Hotel Listing
 Container::make('post_meta', 'Header Slider')

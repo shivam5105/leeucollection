@@ -3030,4 +3030,9 @@ appearance: none;
     color: #fff;
     position: absolute;
 }
+.desc-heading-guest{
+    font-size: 17px;
+    letter-spacing: 0.094em;
+    text-transform: capitalize;
+}
 /** end **/
