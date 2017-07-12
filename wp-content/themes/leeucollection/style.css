@@ -998,7 +998,7 @@ li.current.active .side-sub-menu li.current.active ~ li{
     letter-spacing: 0.1em;
     font-family: GillSans; 
     font-weight: 600;
-    margin-top: 70px;  
+    margin-top: 90px;  
 
 }
 .footer-menu-row{
@@ -3035,5 +3035,8 @@ appearance: none;
     font-size: 17px;
     letter-spacing: 0.094em;
     text-transform: capitalize;
+}
+.home .container:last-child .listing-row{
+    margin-bottom: 0;
 }
 /** end **/
