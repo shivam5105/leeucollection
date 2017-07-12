@@ -2124,7 +2124,7 @@ background:url(images/arrow-icon-hover.png) no-repeat;
 
 .d_b a{
 display:block;
-padding:4px 0;
+padding: 0;
 font-family: 'GillSans';
 font-weight: 600;
 font-size: 11px;
@@ -3024,7 +3024,7 @@ appearance: none;
     line-height: 2;
 }
 .media-popup-content .radio-buttons .radio-dpi{
-    margin-left: -18px;
+    margin-left: -24px;
     visibility:hidden;
 }
 .media-popup-content .wpcf7-response-output{

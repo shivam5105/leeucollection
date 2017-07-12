@@ -1,8 +1,7 @@
 	<?php
 /*
 Template Name: Media & trades
-*/
-
+*/	
 get_header(); ?>
 	<?php
 	$post_id 	= $post->ID;
