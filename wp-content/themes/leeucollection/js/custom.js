@@ -453,15 +453,15 @@ $(document).ready(function(){
 	
 	// Media popup
 	$(document).on('click', '.media-request', function(){
-		var buttons = $(this).parents('.media-box').find('.radio-buttons');
-		$('.media-popup').fadeIn();
+		var buttons = $(this).parents('.media-box').find('.radio-buttons').clone(true);
+		$('.media-popup-content .wpcf7-form .radio-buttons').remove();
 		$('.media-popup-content .wpcf7-form .email_button').before(buttons);
-		$('.media-popup-content .wpcf7-form .radio-buttons').prev('.radio-buttons').remove();
+		$('.media-popup').fadeIn();	
 	 });
 
 	$('.close_popup').click(function(){
 		$('.media-popup').fadeOut();
-		location.reload();	
+		
 	});
 	$("#uploadbrowsebutton").click(function() {
 		$('#fileuploadfield').click()

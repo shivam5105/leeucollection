@@ -2967,12 +2967,13 @@ appearance: none;
     top: 50%;
     transform: translateY(-50%);
 }
-.media-popup-content .header-text   {
+.media-popup-content .header-text,.res-text{
     color: #AC9E94;
     font-family: 'GillSans';    
     font-size: 11px;
     letter-spacing: 0.12em;
     margin-bottom: 16px;
+    text-transform: uppercase;
 }
 .media-popup-content input.wpcf7-form-control.wpcf7-text {
     background: transparent;

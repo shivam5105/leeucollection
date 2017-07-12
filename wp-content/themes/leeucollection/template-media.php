@@ -74,8 +74,10 @@ get_header(); ?>
 															<a href="javascript:void(0);" class="media-request">Request</a>
 														</div>
 														 <div class="radio-buttons">
-															<label><span class="radio-dpi"><input type="radio" name="dpi-img" value="<?php echo $first_dpi; ?>" class="72-dpi"/></span> <span>72 DPI @ 1200 px</span></label>
-															<label><span class="radio-dpi"><input type="radio" name="dpi-img" value="<?php echo $second_dpi; ?>" class="300-dpi"/></span><span> 300 DPI</span></label>
+														 	<div class="res-text">Resolution</div>
+															<?php if(!empty($first_dpi)){?><label><span class="radio-dpi"><input type="radio" name="dpi-img" value="<?php echo $first_dpi; ?>" class="72-dpi"/></span> <span>72 DPI @ 1200 px</span></label><?php }?>
+															<?php if(!empty($second_dpi)){?><label><span class="radio-dpi"><input type="radio" name="dpi-img" value="<?php echo $second_dpi; ?>" class="300-dpi"/></span><span> 300 DPI</span></label>
+															<?php }?>
 														</div>
 													</div>
 												</div>
