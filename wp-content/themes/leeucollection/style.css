@@ -655,7 +655,7 @@ transform: translateZ(0) scale(1, 1);
     -moz-transition:all 0.3s ease-in 0s;
     transition:all 0.3s ease-in 0s;
     position: relative;
-    z-index: 3;
+    z-index: 999;
 }
 .home.body-loaded  .animate-fixed-header .custom-logo-link , 
 .page-template-template-hotel-listing.body-loaded  .animate-fixed-header .custom-logo-link,
@@ -708,9 +708,8 @@ div.sub-menu-wrapper{
     background: #fff; 
     width: 100%; 
     opacity:0;
-    z-index: 2;
-    visibility: hidden;
-    top: 90px;             
+    z-index: 0;
+    visibility: hidden;           
 }
 #main-navigation ul li:hover a + div.sub-menu-wrapper{
     opacity:1;
