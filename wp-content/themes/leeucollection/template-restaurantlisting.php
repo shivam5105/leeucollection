@@ -327,6 +327,48 @@ get_header(); ?>
 			</div>
 			<?php
 		}
-		?>						
+		?>
+		<div class="container half-layout-section">
+			<?php
+			$half_layout = carbon_get_post_meta($post->ID, "crb_half_layout", 'complex');
+			foreach ($half_layout as $re_key => $half_layout_section)
+			{	
+				$title 	= $half_layout_section['crb_half_layout_main_title'];
+				$first_image 	= $half_layout_section['crb_half_layout_first_image'];
+				$second_image 	= $half_layout_section['crb_half_layout_second_image'];
+				$first_heading = $half_layout_section['crb_half_layout_first_heading'];
+				$second_heading = $half_layout_section['crb_half_layout_second_heading'];
+				$first_image_url = wp_get_attachment_image_src( $first_image, 'original' );
+				$first_image_link = $first_image_url[0];
+				$second_image_url = wp_get_attachment_image_src( $second_image, 'original' );
+				$second_image_link = $second_image_url[0];
+				?>
+
+			<div class="row clearfix space-top">
+				<?php if(!empty($title)){?>
+					<div class="text-center scroll-anim animate-custom" data-anim="fade-up">
+						<h2 class="text-center home-heading ucase"><?php echo $title; ?></h2>
+					</div>
+				<?php }?>
+				<?php if(!empty($first_image_link) || !empty($first_heading)) {?>
+					<div class="col-6 rm-pad">
+						<div class="half-layout-image scroll-anim animate-custom" data-anim="fade-up">
+							<img src="<?php echo $first_image_link;?>" alt="<?php echo $first_heading; ?>">
+						</div>
+						<div class="sub-heading"><h2 class="text-center ucase"><?php echo $first_heading; ?></h2></div>
+					</div>
+				<?php }?>
+				<?php if(!empty($second_image_link) || !empty($second_heading)) {?>
+					<div class="col-6 rm-pad">
+						<div class="half-layout-image scroll-anim animate-custom" data-anim="fade-up">
+							<img src="<?php echo $second_image_link;?>" alt="<?php echo $second_heading; ?>">
+						</div>
+						<div class="sub-heading"><h2 class="text-center ucase"><?php echo $second_heading; ?></h2></div>
+					</div>
+				<?php }?>
+		 	</div>
+			<?php }
+			?>
+		</div>								
 	</section>
 <?php get_footer(); ?>

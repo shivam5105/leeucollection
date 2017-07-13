@@ -517,10 +517,24 @@ Container::make('post_meta', 'Restaurant Details')
                     Field::make('text', 'crb_res_section_name', 'Section Name')->set_width('50'),
                     Field::make('text', 'crb_res_section_link', 'Section Link')->set_width('50'),
                 )),
-            )),
+            ))      ,
             Field::make('complex', 'crb_res_section_slider', 'Slider Images')->add_fields(array(
                 Field::make('image', 'crb_res_section_image', 'Section Image')->help_text('(Image Dimensions (WxH): 925 x 600)'),
             )),
+        )),
+    ));
+
+//Restaurant artisan details
+Container::make('post_meta', 'Restaurant half layout')
+    ->show_on_post_type($leeu_post_types)
+    ->show_on_template(array('template-hotel-listing.php' , 'template-restaurantlisting.php'))
+    ->add_fields(array(
+        Field::make('complex', 'crb_half_layout', '')->add_fields(array(
+            Field::make('text', 'crb_half_layout_main_title', 'Title'),
+            Field::make('image', 'crb_half_layout_first_image', 'First image')->help_text('(Image Dimensions (WxH): 620 x 385)'),
+            Field::make('textarea', 'crb_half_layout_first_heading', 'Heading')->set_width('50'),
+            Field::make('image', 'crb_half_layout_second_image', 'Image')->help_text('(Image Dimensions (WxH): 620 x 385)'),
+            Field::make('textarea', 'crb_half_layout_second_heading', 'Heading')->set_width('50'),
         )),
     ));
 
@@ -665,7 +679,7 @@ Container::make('post_meta', 'Restaurant Details')
     ->add_fields(array(
         Field::make('text', 'crb_restaurant_location_popup', 'Location (for Popup)')->help_text('(This will come next to restaurant name in booking popup)'),
         Field::make('text', 'crb_booking_buton_link', "Book A Table - 'connectionid'"),
-    ));
+    )); 
 
 //Discover Page - Content Section
 Container::make('post_meta', 'Content Section')

@@ -1359,7 +1359,7 @@ body.hotel-template-template-menudetail .side-sub-menu.child-2 li.current.active
     margin-left: -1px;
 }
 
-.pagination-slider{
+.pagination-slider,.space-top{
     margin-top: 100px;
 }
 .sliding-detail-wrapper{
@@ -3044,5 +3044,15 @@ appearance: none;
 }
 .artisan-drink-listing-contain .left-content .desc-heading,.artisan-drink-listing-contain .right-content .desc-heading{
     margin-bottom: 10px;
+}
+.half-layout-section .sub-heading{
+        margin-top: 36px;
+    }
+ .half-layout-section .sub-heading h2{
+    font-size: 28px;
+ }   
+.half-layout-image img{
+    display: block;
+    width: 100%;
 }
 /** end **/

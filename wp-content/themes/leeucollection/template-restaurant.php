@@ -116,7 +116,7 @@ get_header(); ?>
 										{
 											?>
 											<div class="cstm-btn-wrapper pull-right text-center">
-												<a href="javascript:void(0)" data-connection-id="<?php echo $post_meta['_crb_booking_buton_link'][0]; ?>" id="booktable-1" class="booktable cstm-btn arrow-btn" target="_blank"><?php echo $post_meta['_crb_booking_buton_text'][0]; ?></a>
+												<a href="javascript:void(0)" data-connection-id="<?php echo $post_meta['_crb_booking_buton_link'][0]; ?>" id="booktable-1" class="booktable cstm-btn arrow-btn" target="_blank"><?php echo $post_meta['_crb__buton_text'][0]; ?></a>
 											</div>
 											<?php
 										}?>
