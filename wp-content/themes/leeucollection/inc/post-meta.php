@@ -727,10 +727,14 @@ Container::make('post_meta', 'Artisan Drinks Content Section')
     ->add_fields(array(
         Field::make('complex', 'crb_artisan_drinks_content', '')->add_fields(array(
             Field::make('image', 'crb_artisan_drink_image1', 'Full Image')->help_text('(Image Dimensions (WxH): 821 x 478)'),
-            Field::make('image', 'crb_artisan_drink_image2', 'Half Left Image')->help_text('(Image Dimensions (WxH): 411 x 258)')->set_width('50'),
-            Field::make('image', 'crb_artisan_drink_image3', 'Half Right Image')->help_text('(Image Dimensions (WxH): 411 x 258)')->set_width('50'),
             Field::make('text', 'crb_artisan_drinks_section_heading', 'Heading'),
             Field::make('textarea', 'crb_artisan_drinks_section_description', 'Content'),
+            Field::make('image', 'crb_artisan_drink_image2', 'Half Left Image')->help_text('(Image Dimensions (WxH): 411 x 258)')->set_width('50'),
+            Field::make('text', 'crb_artisan_drinks_section_left_heading', 'Half left heading'),
+            Field::make('textarea', 'crb_artisan_drinks_section_left_description', 'Half left content'),
+            Field::make('image', 'crb_artisan_drink_image3', 'Half Right Image')->help_text('(Image Dimensions (WxH): 411 x 258)')->set_width('50'),
+            Field::make('text', 'crb_artisan_drinks_section_right_heading', 'Half right heading'),
+            Field::make('textarea', 'crb_artisan_drinks_section_right_description', 'Half right content'),
         )),
     ));
 

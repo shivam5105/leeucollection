@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Artisan Drinks
+Template Name:  Drinks
 */
 get_header(); 
 ?>
@@ -65,7 +65,11 @@ get_header();
 					    	$artisan_drink_image3 = @$artisan_drinks_content['crb_artisan_drink_image3'];
 
 					    	$artisan_drinks_section_heading = @$artisan_drinks_content['crb_artisan_drinks_section_heading'];
+					    	$artisan_drinks_section_left_heading = @$artisan_drinks_content['crb_artisan_drinks_section_left_heading'];
+					    	$artisan_drinks_section_right_heading = @$artisan_drinks_content['crb_artisan_drinks_section_right_heading'];
 					    	$crb_artisan_drinks_section_description = @$artisan_drinks_content['crb_artisan_drinks_section_description'];
+					    	$crb_artisan_drinks_section_left_description = @$artisan_drinks_content['crb_artisan_drinks_section_left_description'];
+					    	$crb_artisan_drinks_section_right_description = @$artisan_drinks_content['crb_artisan_drinks_section_right_description'];
 
 							$artisan_drink_image1 = wp_get_attachment_image_src( $artisan_drink_image1, '821x478' );
 							$artisan_drink_image1 = $artisan_drink_image1[0];
@@ -87,7 +91,7 @@ get_header();
 										</div>
 										<?php
 									}
-									if(!empty($artisan_drink_image2) || !empty($artisan_drink_image3))
+									if(!empty($artisan_drink_image2) || !empty($artisan_drink_image3 || !empty($artisan_drinks_section_left_heading) || !empty($artisan_drinks_section_right_heading) || !empty($crb_artisan_drinks_section_left_description) || !empty($crb_artisan_drinks_section_right_description)))
 									{
 										?>
 										<div class="row">
@@ -98,6 +102,14 @@ get_header();
 												<div class="col-6 rm-pad">
 													<div class="scroll-anim animate-custom" data-anim="fade-up">
 														<img src="<?php echo $artisan_drink_image2; ?>" alt="">
+														<div class="left-content">
+															<div class="desc-heading">
+																<?php echo $artisan_drinks_section_left_heading; ?>
+															</div>
+															<div class="desc-content">
+																<?php echo $crb_artisan_drinks_section_left_description; ?>
+															</div>
+														</div>
 													</div>
 												</div>
 												<?php
@@ -108,6 +120,14 @@ get_header();
 												<div class="col-6 rm-pad">
 													<div class="scroll-anim animate-custom" data-anim="fade-up" data-anim-delay="100">
 														<img src="<?php echo $artisan_drink_image3; ?>" alt="">
+														<div class="right-content">
+															<div class="desc-heading">
+																<?php echo $artisan_drinks_section_right_heading; ?>
+															</div>
+															<div class="desc-content">
+																<?php echo $crb_artisan_drinks_section_right_description; ?>
+															</div>
+														</div>
 													</div>
 												</div>
 												<?php
