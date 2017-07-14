@@ -116,7 +116,7 @@ get_header(); ?>
 							</div>
 
 							<div class="listing-box listing-row">
-								<div class="row detail-row">
+								<div class="row detail-row meetings-form">
 									<div class="the_founder">
 										<h2 class="ucase"><?php echo @$post_meta['_crb_form_heading'][0]; ?></h2>
 									</div>
