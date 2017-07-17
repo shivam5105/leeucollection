@@ -525,9 +525,9 @@ Container::make('post_meta', 'Restaurant Details')
     ));
 
 //Restaurant artisan details
-Container::make('post_meta', 'Restaurant half layout')
+Container::make('post_meta', 'Half layout')
     ->show_on_post_type($leeu_post_types)
-    ->show_on_template(array('template-hotel-listing.php' , 'template-restaurantlisting.php'))
+    ->show_on_template(array('template-hotel-listing.php' , 'template-restaurantlisting.php', 'template-facilities.php'))
     ->add_fields(array(
         Field::make('complex', 'crb_half_layout', '')->add_fields(array(
             Field::make('text', 'crb_half_layout_main_title', 'Title'),

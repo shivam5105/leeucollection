@@ -105,6 +105,7 @@ get_header(); ?>
 									}?>
 								</div>
 							</div>							
+							
 							<div class="listing-box listing-row">
 								<div class="follower">
 									<h2 class="ucase"><?php echo @$post_meta['_crb_explore_instagram_heading'][0]; ?></h2>

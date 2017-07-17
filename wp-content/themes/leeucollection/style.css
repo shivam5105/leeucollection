@@ -898,7 +898,7 @@ li.current.active .side-sub-menu li.current.active ~ li{
     position: relative;
     overflow: hidden;
 }
-.two-slide-carousel .desc-heading{
+.two-slide-carousel .desc-heading,.fac-heading{
     text-align: center;
     font-size: 24px;
     line-height: 1.25;
@@ -3084,5 +3084,25 @@ appearance: none;
 }
 .meetings-form .textarea_field{
     height: 147px;
+}
+.hotel-template-template-facilities .listing-row{
+    margin-bottom: 0;
+}
+.hotel-template-template-facilities .detail-row{
+    margin-top: 28px;
+}
+.hotel-template-template-facilities .summary_details{
+    margin-top: 15px;
+}
+.hotel-template-template-facilities .summary_details p{
+    font-size: 15px;
+    letter-spacing: 0.094em;
+    line-height: 1.533;
+}
+.half-layout-facility{
+    margin-top: 15px;
+}
+.half-layout-facility .desc-heading{
+    margin-top: 20px;
 }
 /** end **/
