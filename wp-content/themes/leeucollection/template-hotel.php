@@ -138,6 +138,7 @@ get_header(); ?>
 										<div class="text-center scroll-anim" data-anim="fade-up">
 											<h2 class="ucase"><?php echo $section_heading; ?></h2>
 										</div>
+										<?php if(!empty($section_link)){?>
 										<div class="text-right page-link"> 
 											<?php
 											if($section_show_link == 'yes')
@@ -148,6 +149,7 @@ get_header(); ?>
 											}
 											?>
 										</div>
+										<?php }?>
 										<div class="<?php echo $slider_wrapper_class; ?>  <?php if(!$has_slider){ echo "no_slider"; }?>">
 											<?php
 											if($has_slider)

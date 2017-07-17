@@ -3105,4 +3105,11 @@ appearance: none;
 .half-layout-facility .desc-heading{
     margin-top: 20px;
 }
+.hotel-template-template-hotel .page-link{
+    margin-bottom: 30px;
+    margin-top: -25px;
+}
+.no-page-link h2{
+    margin-bottom: 25px;
+}
 /** end **/
