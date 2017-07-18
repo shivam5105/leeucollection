@@ -70,6 +70,7 @@ get_header(); ?>
 				{
 					?>
 					<div class="prev"></div>
+					
 					<?php
 				}?>
 				<div class="banner-text text-center pos-abs-top">

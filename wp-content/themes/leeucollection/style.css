@@ -871,11 +871,11 @@ li.current.active .side-sub-menu li.current.active ~ li{
     transform: translateY(0px);
 } 
 .img-desc{
-    font-size: 21px;
+    font-size: 17px;
     font-family: 'BW Haas';
-    font-weight: 500;
     font-style: normal;
     line-height: 1.23;   
+    letter-spacing: 0.094em;
     margin-top: 18px; 
 }
 
@@ -3111,5 +3111,11 @@ appearance: none;
 }
 .no-page-link h2{
     margin-bottom: 25px;
+}
+.hotel-restautant .banner-img img{
+    width: 100%;
+}
+.hotel-restautant .listing-row{
+    margin-bottom: 52px
 }
 /** end **/
