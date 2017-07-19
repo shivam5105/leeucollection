@@ -109,6 +109,17 @@ get_header(); ?>
 												<div class="scroll-anim" data-anim="fade-up">
 													<img src="<?php echo $banner_url; ?>" alt="">
 												</div>
+												<div class="row detail-row">
+													<div class="col-3">
+														<div class="desc-heading"><?php echo $slide_data['crb_slider_bottom_heading']; ?></div>
+														<span class="anton_locat"><?php echo $slide_data['crb_slider_bottom_sub_heading']; ?></span>
+													</div>
+													<div class="col-9">
+														<div class="desc-content"> 
+															<?php echo nl2br($slide_data['crb_slider_bottom_description']); ?>
+														</div>
+													</div>
+												</div>
 											</div>
 											<?php
 										}
@@ -121,17 +132,6 @@ get_header(); ?>
 										<div class="prev"></div>
 										<?php
 									}?>
-								</div>
-							</div>
-							<div class="row detail-row">
-								<div class="col-3">
-									<div class="desc-heading"><?php echo @$post_meta['_crb_slider_bottom_heading_1'][0]; ?></div>
-									<span class="anton_locat"><?php echo @$post_meta['_crb_slider_bottom_sub_heading_1'][0]; ?></span>
-								</div>
-								<div class="col-9">
-									<div class="desc-content"> 
-										<?php echo nl2br(@$post_meta['_crb_slider_bottom_description_1'][0]); ?>
-									</div>
 								</div>
 							</div>
 						</div>

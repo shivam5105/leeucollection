@@ -91,13 +91,26 @@ Container::make('post_meta', 'Short Description')
 //Images Slider
 Container::make('post_meta', 'Slider Images')
     ->show_on_post_type($leeu_post_types)
-    ->show_on_template(array('template-hotel.php','template-room.php','template-restaurant.php','template-facilities.php','template-gym.php','template-spa-wellness.php','template-explore.php','template-artists-details.php', 'template-founder-and-team.php', 'template-location.php', 'template-work.php', 'template-hotel-wine.php','template-section-slider-with-header-banner.php','template-contact.php'))
+    ->show_on_template(array('template-hotel.php','template-room.php','template-restaurant.php','template-facilities.php','template-gym.php','template-spa-wellness.php','template-explore.php', 'template-founder-and-team.php', 'template-location.php', 'template-work.php', 'template-hotel-wine.php','template-section-slider-with-header-banner.php','template-contact.php'))
     ->add_fields(array(
         Field::make('complex', 'crb_slider_images', '')->add_fields(array(
             Field::make('image', 'crb_slide_image', 'Slide Image')->help_text('(Image Dimensions (WxH): 1240 x 600)'),
         )),
     ));
-    
+ 
+ // artist detail
+ Container::make('post_meta', 'Slider')
+    ->show_on_post_type($leeu_post_types)
+    ->show_on_template(array('template-artists-details.php'))
+    ->add_fields(array(
+        Field::make('complex', 'crb_slider_images', '')->add_fields(array(
+            Field::make('image', 'crb_slide_image', 'Slide Image')->help_text('(Image Dimensions (WxH): 1240 x 600)'),
+            Field::make('text', 'crb_slider_bottom_heading', 'Slider Heading')->help_text('This will come after slider (on bottom-left of slider).')->set_width('20'),
+            Field::make('text', 'crb_slider_bottom_sub_heading', 'Slider Sub-Heading')->help_text('This will come under "Slider Heading".')->set_width('20'),
+            Field::make('textarea', 'crb_slider_bottom_description', 'Slider Description')->help_text('This will come after slider (on bottom-right of slider).')->set_width('60'),
+        )),
+    ));   
+
 Container::make('post_meta', 'Slider Info')
     ->show_on_post_type($leeu_post_types)
     ->show_on_template(array('template-room.php','template-gym.php', 'template-work.php', 'template-hotel-wine.php'))
@@ -563,6 +576,7 @@ Container::make('post_meta', 'Instagram Feed Details')
         Field::make('text', 'crb_explore_instagram_access_token', 'Instagram Access Token')->set_width('50'),
     ));
 
+/*
 Container::make('post_meta', 'Slider Bottom Info')
     ->show_on_post_type($leeu_post_types)
     ->show_on_template(array('template-artists-details.php'))
@@ -571,7 +585,7 @@ Container::make('post_meta', 'Slider Bottom Info')
         Field::make('text', 'crb_slider_bottom_sub_heading_1', 'Slider Sub-Heading')->help_text('This will come under "Slider Heading".')->set_width('20'),
         Field::make('textarea', 'crb_slider_bottom_description_1', 'Slider Description')->help_text('This will come after slider (on bottom-right of slider).')->set_width('60'),
     ));
-
+*/
 //Maps image & link
 Container::make('post_meta', 'Small Map')
     ->show_on_post_type($leeu_post_types)
