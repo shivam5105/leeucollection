@@ -887,7 +887,7 @@ li.current.active .side-sub-menu li.current.active ~ li{
 .side-nav-contain.fix-pos{
     position: fixed;
     top:60px;
-    width: 300px;
+    width: 180px;
 }
 .home .side-nav-contain.fix-pos, 
 .page-template-template-hotel-listing .side-nav-contain.fix-pos, 
