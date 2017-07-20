@@ -73,7 +73,7 @@ get_header(); ?>
 														<div class="col-10 pd-0">
 															<div class="summer_paragaraph">
 																<p><?php echo $menu_item['crb_menu_item_name']; ?></p>
-																<?php if($menu_item['crb_menu_item_details']){?>
+																<?php if(!empty($menu_item['crb_menu_item_details'])){?>
 																	<div class="menu-details">
 																		<?php echo $menu_item['crb_menu_item_details']; ?>
 																	</div>
