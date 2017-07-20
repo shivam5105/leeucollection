@@ -163,19 +163,21 @@ get_header(); ?>
 		<?php
 		$section_loop = 0;
 		$res_sections = carbon_get_post_meta($post->ID, "crb_res_sections_new", 'complex');
+		if(is_array($res_sections) && !empty($res_sections)){
 		foreach ($res_sections as $res_key => $res_section)
 		{
 			$section_loop++;
 
 			$res_name 				= $res_section['crb_res_name'];
 			$res_logo 				= $res_section['crb_res_section_logo'];
-			$sub_heading 				= $res_section['crb_res_sub_heading'];
+			$sub_heading 			= $res_section['crb_res_sub_heading'];
 			$section_description 	= $res_section['crb_res_section_description'];
 			$more_button_link		= $res_section['crb_more_button_link'];
 			$more_button_text		= $res_section['crb_more_button_text'];
 			$booking_button_link 	= $res_section['crb_booking_button_link'];
 			$booking_button_text 	= $res_section['crb_booking_button_text'];
 			?>
+			<?php if(!empty($res_name) || !empty($res_logo) || !empty($sub_heading) || !empty($section_description) || !empty($more_button_link) || !empty($more_button_text) || !empty($booking_button_link) || !empty($booking_button_text)){?>
 			<div class="container">
 				<div class="home-hotel-wrap-<?php echo $section_loop; ?> pagination-slider" data-unique-class="home-hotel-wrap-<?php echo $section_loop; ?>">
 					<div class="text-center scroll-anim animate-custom" data-anim="fade-up">
@@ -242,7 +244,9 @@ get_header(); ?>
 							</div>
 							<div class="main-nav-slider for-desk">
 								<?php
-								if(is_array($res_section['crb_res_section_details']) && count($res_section['crb_res_section_details']) > 0)
+								$res_section_details = @$res_section['crb_res_section_details'];
+								if(is_array($res_section_details) || is_object($res_section_details)){
+								if(count($res_section['crb_res_section_details']) > 0)
 								{
 									$loop = 0;
 									foreach ($res_section['crb_res_section_details'] as $sd_key => $links_details)
@@ -270,6 +274,7 @@ get_header(); ?>
 										$loop++;
 									}
 								}
+								}
 								?>
 							</div>
 						</div>
@@ -279,7 +284,7 @@ get_header(); ?>
 						ob_start();
 
 						$has_slider = false;
-						$slider_data = $res_section['crb_res_section_slider'];
+						$slider_data = @$res_section['crb_res_section_slider'];
 						if(is_array($slider_data) && !empty($slider_data) && count($slider_data) > 1)
 						{
 							$has_slider = true;
@@ -301,6 +306,7 @@ get_header(); ?>
 								}?>
 								<div class="<?php echo $slider_wrapper_class; ?>">
 									<?php
+									if(is_array($slider_data)){
 									foreach ($slider_data as $slide_key => $slide)
 									{
 										$section_image = $slide['crb_res_section_image'];
@@ -315,6 +321,7 @@ get_header(); ?>
 											</div>
 											<?php
 										}
+									}
 									}
 									?>
 								</div>
@@ -338,10 +345,13 @@ get_header(); ?>
 			</div>
 			<?php
 		}
+		}
+		}
 		?>
 		<div class="container half-layout-section">
 			<?php
 			$half_layout = carbon_get_post_meta($post->ID, "crb_half_layout", 'complex');
+			if(is_array($half_layout) && !empty($half_layout)){
 			foreach ($half_layout as $re_key => $half_layout_section)
 			{	
 				$title 	= $half_layout_section['crb_half_layout_main_title'];
@@ -354,7 +364,7 @@ get_header(); ?>
 				$second_image_url = wp_get_attachment_image_src( $second_image, 'original' );
 				$second_image_link = $second_image_url[0];
 				?>
-
+			<?php if(!empty($title) || !empty($first_image_link) || !empty($first_heading) || !empty($second_image_link) || !empty($second_heading)){ ?>
 			<div class="row clearfix space-top">
 				<?php if(!empty($title)){?>
 					<div class="text-center scroll-anim animate-custom" data-anim="fade-up">
@@ -379,6 +389,8 @@ get_header(); ?>
 				<?php }?>
 		 	</div>
 			<?php }
+				}
+				}
 			?>
 		</div>								
 	</section>

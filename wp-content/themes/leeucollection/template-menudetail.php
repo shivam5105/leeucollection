@@ -68,11 +68,16 @@ get_header(); ?>
 												<?php
 												foreach ($menu['crb_menu_item_details'] as $mi_key => $menu_item)
 												{
-													?>
+													if(!empty($menu_item['crb_menu_item_name']) || !empty($menu_item['crb_menu_item_price'])){?>
 													<div class="row mgb-32">
 														<div class="col-10 pd-0">
 															<div class="summer_paragaraph">
 																<p><?php echo $menu_item['crb_menu_item_name']; ?></p>
+																<?php if($menu_item['crb_menu_item_details']){?>
+																	<div class="menu-details">
+																		<?php echo $menu_item['crb_menu_item_details']; ?>
+																	</div>
+																<?php } ?>
 															</div>
 														</div>
 														<div class="col-2">
@@ -82,6 +87,7 @@ get_header(); ?>
 														</div>
 													</div>
 													<?php
+												 }
 												}
 												?>
 											</div>

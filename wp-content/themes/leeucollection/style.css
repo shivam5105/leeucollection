@@ -3124,4 +3124,9 @@ appearance: none;
 .common-pages header.entry-header {
     display: none;
 }
+.menu-details {
+    font-size: 14px;
+    margin-top: 8px;
+    letter-spacing: 0.094em;
+}
 /** end **/

@@ -74,12 +74,14 @@ get_header(); ?>
 												$banner_url = wp_get_attachment_image_src( $slide_data['crb_slide_image'], '821x478' );
 												$banner_url = $banner_url[0];
 												?>
-												<div class="slide-item">
-													<div class="banner-img scroll-anim" data-anim="fade-up">
-														<img src="<?php echo $banner_url; ?>" alt="" />
+												<?php if(!empty($banner_url)){?>
+													<div class="slide-item">
+														<div class="banner-img scroll-anim" data-anim="fade-up">
+															<img src="<?php echo $banner_url; ?>" alt="" />
+														</div>
 													</div>
-												</div>
 												<?php
+											   }
 											}
 										}
 										else
@@ -88,12 +90,14 @@ get_header(); ?>
 											$banner_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), '821x478' );
 											$banner_url = $banner_url[0];
 											?>
-											<div class="slide-item">
-												<div class="banner-img scroll-anim" data-anim="fade-up">
-													<img src="<?php echo $banner_url; ?>" alt="" />
+											<?php if(!empty($banner_url)){?>
+												<div class="slide-item">
+													<div class="banner-img scroll-anim" data-anim="fade-up">
+														<img src="<?php echo $banner_url; ?>" alt="" />
+													</div>
 												</div>
-											</div>
 											<?php
+										}
 										}?>
 									</div>
 									<?php
@@ -104,11 +108,14 @@ get_header(); ?>
 										<?php
 									}?>
 								</div>
+								<?php if(!empty($post_meta['_crb_slider_bottom_description'][0])){?>
 								<div class="row detail-row">
 									<div class="col-9">
+										<?php if(!empty($post_meta['_crb_slider_bottom_description'][0])){?>
 										<div class="desc-content"> 
 											<?php echo nl2br(@$post_meta['_crb_slider_bottom_description'][0]); ?>
 										</div>
+										<?php } ?>
 									</div>
 									<div class="col-3">
 										<?php
@@ -122,6 +129,7 @@ get_header(); ?>
 										}?>
 									</div>
 								</div>
+								<?php } ?>
 								<div class="row detail-row hotel-info-row">
 									<div class="col-6">
 										<?php
@@ -134,16 +142,22 @@ get_header(); ?>
 										}
 										foreach ($hours_reservations as $hr_key => $hours_reservation)
 										{
+											if(!empty($hours_reservation['crb_reservation_for']) || !empty($hours_reservation['crb_reservation_time'])){
 											?>
 											<div class="hotel-food-info">
-												<div class="food-head">
-													<?php echo $hours_reservation['crb_reservation_for']; ?>:
-												</div>
-												<div class="foo-desc">
-													<?php echo nl2br($hours_reservation['crb_reservation_time']); ?>
-												</div>
+												<?php if(!empty($hours_reservation['crb_reservation_for'])){ ?>
+													<div class="food-head">
+														<?php echo $hours_reservation['crb_reservation_for']; ?>:
+													</div>
+												<?php }?>
+												<?php if(!empty($hours_reservation['crb_reservation_time'])){ ?>
+													<div class="foo-desc">
+														<?php echo nl2br($hours_reservation['crb_reservation_time']); ?>
+													</div>
+												<?php }?>
 											</div>
 											<?php
+										}
 										}
 										?>
 									</div>

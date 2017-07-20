@@ -561,6 +561,7 @@ Container::make('post_meta', 'Menu')
             Field::make('text', 'crb_menu_heading', 'Menu Heading'),
             Field::make('complex', 'crb_menu_item_details', 'Menu Items')->add_fields(array(
                 Field::make('text', 'crb_menu_item_name', 'Item Name')->set_width('50'),
+                Field::make('textarea', 'crb_menu_item_details', 'Item details')->set_width('50'),
                 Field::make('text', 'crb_menu_item_price', 'Item Price')->set_width('50'),
             )),
         )),
