@@ -105,54 +105,9 @@ get_header();
 				<?php
 			}?>
 		</div>
-
-		<div class="container booking-form-object">
-			<div class="scroll-anim" data-anim="fade-up">
-				<form action="#">
-					<div class="row booking-object-form-row">
-						<div class="col-3 rm-pad">
-							<div class="form-item select-item first-item">
-								<select>
-									<option value="volvo">Select a hotel</option>
-									<option value="saab">Leeu Estate</option>
-									<option value="mercedes">Leeu House</option>
-								</select>
-							</div>
-						</div>
-						<div class="col-3 rm-pad">
-							<div class="form-item input-item"> 
-								<input name="date" value="Sep 17, 2017 – Sep 18, 2017" placeholder="" required="required" type="text"> 
-							</div>
-						</div>
-						<div class="col-2 rm-pad">
-							<div class="form-item select-item">
-								<select>
-									<option value="volvo">1 room</option>
-									<option value="saab">2 room</option>
-									<option value="mercedes">3 room</option>
-									<option value="audi">4 room</option>
-								</select>
-							</div>
-						</div>
-						<div class="col-2 rm-pad">
-							<div class="form-item select-item">
-								<select>
-									<option value="volvo">2 guests</option>
-									<option value="saab">3 guests</option>
-								option value="mercedes">4 guests</option>
-								option value="audi">5 guests</option>
-								</select>
-							</div>
-						</div>
-						<div class="col-2 rm-pad">
-							<div class="form-item">
-								<button type="submit" class="submit-btn ucase">CHECK AVAILABILITY</button>
-							</div>
-						</div>
-					</div>
-				</form>
-			</div>
-		</div>
+		<?php
+		include_once("book-room-form.php");
+		?>
 		<div class="container"> 
 			<div class="row">
 				<div class="col-10 col-centered">

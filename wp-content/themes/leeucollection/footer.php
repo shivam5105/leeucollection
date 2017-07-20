@@ -101,79 +101,87 @@
 				<div class="one" id="content1" style="display:block;">
 					<div class="pops_on">
 						<div class="all_cat pd-l-r">
-							<div class="choose_hotel">
-								<div class="at extext pdb-20">AT</div>
-								<select class="lyon_font mgb-30">
-									<option>Select a hotel</option>
-									<?php
-									$args = array(
-										'posts_per_page' => '-1',
-										'orderby' => 'menu_order',
-										'order' => 'ASC',
-										'post_type' => 'hotel',
-										'post_parent' => '0',
-									);
+							<form action="https://gc.synxis.com/rez.aspx" method="get">
+								<input type="hidden" name="locale" value="en-GB" />
+								<input type="hidden" name="start" value="searchres" /><!-- Options: availresults, searchres -->
+								<input type="hidden" name="arrive" value="" />
+								<input type="hidden" name="nights" value="" />
+								<div class="choose_hotel">
+									<div class="at extext pdb-20">AT</div>
+									<select class="lyon_font mgb-30" name="Hotel">
+										<option>Select a hotel</option>
+										<?php
+										$args = array(
+											'posts_per_page' => '-1',
+											'orderby' => 'menu_order',
+											'order' => 'ASC',
+											'post_type' => 'hotel',
+											'post_parent' => '0',
+										);
 
-									$the_query = new WP_Query( $args );
-									if($the_query->have_posts())
-									{
-										while($the_query->have_posts())
+										$the_query = new WP_Query( $args );
+										if($the_query->have_posts())
 										{
-											$the_query->the_post();
-											$hotel_name = get_the_title();
-											?>
-											<option value="<?php echo $hotel_name; ?>"><?php echo $hotel_name; ?></option>
-											<?php
-										}
-									}
-									?>
-								</select>
-							</div>
-							<div class="choose_date mgb-30">
-								<div class="at extext pdb-20">ARRIVAL / DEPRATURE</div>
-								<input class="rangePicker lyon_font" type="text">
-							</div>
-							<div class="room_guest">
-								<div class="roomselect">
-									<div class="extext pdb-20">ROOMS</div>
-									<select class="lyon_font mgb-30">
-										<?php
-										for ($i = 1; $i <= 10; $i++)
-										{
-											?>
-											<option><?php echo $i; ?> room<?php if($i > 1){ echo "s"; } ?></option>
-											<?php
+											while($the_query->have_posts())
+											{
+												$the_query->the_post();
+												$hotel_name = get_the_title();
+												?>
+												<option value="<?php echo $hotel_name; ?>"><?php echo $hotel_name; ?></option>
+												<?php
+											}
 										}
 										?>
 									</select>
 								</div>
-								<div class="roomselect mgl-18">
-									<div class="extext pdb-20">GUESTS</div>
-									<select class="lyon_font mgb-30">
-										<?php
-										for ($i = 1; $i <= 10; $i++)
-										{
-											?>
-											<option><?php echo $i; ?> guest<?php if($i > 1){ echo "s"; } ?></option>
+								<div class="choose_date mgb-30">
+									<div class="at extext pdb-20">ARRIVAL / DEPRATURE</div>
+									<input class="rangePicker lyon_font" type="text">
+								</div>
+								<div class="room_guest">
+									<div class="roomselect">
+										<div class="extext pdb-20">ROOMS</div>
+										<select class="lyon_font mgb-30" name="rooms">
 											<?php
-										}
-										?>
-									</select>
+											for ($i = 1; $i <= 10; $i++)
+											{
+												?>
+												<option><?php echo $i; ?> room<?php if($i > 1){ echo "s"; } ?></option>
+												<?php
+											}
+											?>
+										</select>
+									</div>
+									<div class="roomselect mgl-18">
+										<div class="extext pdb-20">GUESTS</div>
+										<select class="lyon_font mgb-30" name="adult">
+											<?php
+											for ($i = 1; $i <= 10; $i++)
+											{
+												?>
+												<option><?php echo $i; ?> guest<?php if($i > 1){ echo "s"; } ?></option>
+												<?php
+											}
+											?>
+										</select>
+									</div>
 								</div>
-							</div>
-							<div class="verif_code">
-								<div class="promo_grcode lyon_font">
-									<div class="extext pdb-20">PROMO CODE</div>
-									<input type="text" name="fname" placeholder="Enter code(optional)" class="lyon_font">
+								<div class="verif_code">
+									<div class="promo_grcode lyon_font">
+										<div class="extext pdb-20">PROMO CODE</div>
+										<input type="text" name="Promo" placeholder="Enter code(optional)" class="lyon_font">
+									</div>
+									<div class="promo_grcode lyon_font mgl-18">
+										<div class="extext pdb-20">GROUP CODE</div>
+										<input type="text" name="GPromo" placeholder="Enter code(optional)" class="lyon_font">
+									</div>
 								</div>
-								<div class="promo_grcode lyon_font mgl-18">
-									<div class="extext pdb-20">GROUP CODE</div>
-									<input type="text" name="fname" placeholder="Enter code(optional)" class="lyon_font">
+								<div class="avaibility">
+									<div class="form-item rm-pad text-center rm-mar-left">
+										<button type="submit" class="submit-btn ucase width-200 white-color">CHECK AVAILABILITY</button>
+									</div>
 								</div>
-							</div>
-							<div class="avaibility"> 
-								<a href="#">CHECK AVAILABILITY</a>
-							</div>
+							</form>
 						</div>
 					</div>
 				</div>
@@ -281,7 +289,7 @@
 							</div>
 							<div class="number_of_people mgb-30">
 								<div class="at extext pdb-20">NUMBER OF PEOPLE</div>
-								<input type="number" name="quantity" class="lyon_font" min="1" placeholder="1 room">
+								<input type="number" name="room" class="lyon_font" min="1" step="1" placeholder="1 room">
 							</div>
 							<div class="info_msg">
 								<div class="at extext pdb-20">MESSAGE</div>

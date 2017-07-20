@@ -315,6 +315,12 @@ get_header(); ?>
 								</div>
 							</div>
 							<?php
+						}						
+							
+						$trip_advisor = carbon_get_post_meta($post->ID, "crb_trip_advisor_code");
+						if(!empty($trip_advisor))
+						{
+							echo $trip_advisor;
 						}
 						?>
 					</div>

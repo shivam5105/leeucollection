@@ -130,7 +130,7 @@ $page_template_file = basename(get_page_template());
 						<img src="<?php echo get_template_directory_uri() ?>/images/ipad-logo.svg" alt="">
 					</a>
 				</div>
-				<a href="#" class="meanmenu-book pos-r">BOOK</a>			
+				<a href="#" class="meanmenu-book pos-r popup-booking-button-anchor">BOOK</a>			
 			</nav>
 		</header>
 		

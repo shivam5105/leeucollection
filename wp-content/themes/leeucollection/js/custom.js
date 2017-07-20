@@ -352,13 +352,68 @@ var Blank ={
 		});
 	},
 	rangePicker: function(){
-		$('.rangePicker').datepick({ 
+		/*$('.rangePicker').datepick({ 
 			rangeSelect: true,
 			pickerClass: 'noPrevNext mandatory',
 			showTrigger: '#calImg',
 			dateFormat: 'M d, yyyy',
 			minDate: new Date(new Date().getTime() + (24 * 60 * 60 * 1000)),
+			onClose: function(dates){
+				console.debug(dates);
+			},
+			onSelect: function(dates){
+			},
+		});*/
+		$('.rangePicker').daterangepicker({
+			"autoApply": true,
+			"buttonClasses": "btn btn-sm cal-btn",
+			"applyClass": "btn-success cal-apply-btn",
+			"cancelClass": "btn-default cal-cancel-btn",
+			"locale": {
+				  	"format": 'MMMM D, YYYY',
+				},
+			}, function(start, end, label) {
+				//console.log("New date range selected: " + start.format('DD/MM/YYYY') + " to " + end.format('DD/MM/YYYY') + " (predefined range: " + label + ")");
 		});
+
+		$('.rangePicker').on('show.daterangepicker', function(ev, picker) {
+			/*console.log(picker.startDate.format('YYYY-MM-DD'));
+			console.log(picker.endDate.format('YYYY-MM-DD'));*/
+			Blank.fix_daterangepicker_pos();
+		});
+		$('.rangePicker').on('hide.daterangepicker', function(ev, picker) {
+			var arrive 	= picker.startDate.format('DD/MM/YYYY');
+			var endDate = picker.endDate.format('DD/MM/YYYY');
+			
+			var arrive_time 	= new Date(picker.startDate.format('MM/DD/YYYY')).getTime();
+			var endDate_time 	= new Date(picker.endDate.format('MM/DD/YYYY')).getTime();
+
+			var difference 	= 0;
+            var oneDay 		= 1000*60*60*24; 
+            var difference 	= Math.ceil((endDate_time - arrive_time) / oneDay);
+
+            if(difference > 0)
+            {
+				$(this).parents("form").find("[name='arrive']").val(arrive);
+				$(this).parents("form").find("[name='nights']").val(difference);
+			}
+			else
+			{
+				alert("End date should be greater than start date.");
+				$(this).val("");
+				$(this).parents("form").find("[name='arrive']").val("");
+				$(this).parents("form").find("[name='nights']").val("");
+			}
+		});
+		/******* Event Lists ******/
+		/******
+			show.daterangepicker: Triggered when the picker is shown
+			hide.daterangepicker: Triggered when the picker is hidden
+			showCalendar.daterangepicker: Triggered when the calendar(s) are shown
+			hideCalendar.daterangepicker: Triggered when the calendar(s) are hidden
+			apply.daterangepicker: Triggered when the apply button is clicked, or when a predefined range is clicked
+			cancel.daterangepicker: Triggered when the cancel button is clicked
+		******/
 	},
 	bookingPopupTabs: function(){
 		$('.hotel_dtls ul li').click(function(){
@@ -369,7 +424,7 @@ var Blank ={
 		})
 	},
 	openBookingPopup: function(){
-		$('.popup-booking-button a').click(function(e){
+		$(document).on("click",".popup-booking-button a, .popup-booking-button-anchor", function(e){
 			e.preventDefault();
 			$('.main_sec').fadeIn();
 		})
@@ -406,7 +461,24 @@ var Blank ={
 		e.preventDefault();	
 		$('.contact-slide-form').toggleClass('slide-in');
 	  });
-	}
+	},
+	fix_daterangepicker_pos: function(){
+		var site_header_height = 0;
+
+		if ($("#site-header").css("position") === "fixed")
+		{
+			site_header_height = $("#site-header").height();
+		}
+		$(".daterangepicker").each(function(){
+			var top = $(this).position().top;
+			
+			if(top > 0)
+			{
+				top = top - site_header_height;
+				$(this).css({"top":top});
+			}
+		});
+	},
 }
 $(document).ready(function(){
 	Blank.common_init();
