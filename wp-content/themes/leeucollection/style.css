@@ -239,6 +239,21 @@ h1.ucase-h1
     display: table;
     clear:both;
 }
+.rm-mar{
+    margin: 0;
+}
+.rm-mar-left{
+    margin-left:0;
+}
+.rm-mar-right{
+    margin-right:0;
+}
+.rm-mar-top{
+    margin-top:0;
+}
+.rm-mar-bottom{
+    margin-bottom:0;
+}
 .rm-pad{
     padding: 0;
 }
@@ -247,6 +262,12 @@ h1.ucase-h1
 }
 .rm-pad-right{
     padding-right:0;
+}
+.rm-pad-top{
+    padding-top:0;
+}
+.rm-pad-bottom{
+    padding-bottom:0;
 }
 
 img.img-responsive{
@@ -1459,6 +1480,9 @@ body.hotel-template-template-menudetail .side-sub-menu.child-2 li.current.active
 }
 .form-item{
     margin-left: 15px;
+}
+.form-item.rm-mar-left {
+    margin-left: 0;
 }
 .booking-form-object {
     margin-top: 42px;
@@ -3125,3 +3149,12 @@ appearance: none;
     display: none;
 }
 /** end **/
+.width-200
+{
+    width: 200px !important;
+}
+.submit-btn.white-color,
+.cstm-btn.white-color
+{
+    color: #fff;
+}

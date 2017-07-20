@@ -5,7 +5,7 @@ Template Name: Hotel Landing
 get_header(); ?>
 	<?php
 	the_post();
-	$post_id = $post->ID;
+	$post_id 		= $post->ID;
 	$hotel_location = get_hotel_location_list($post_id);
 	$hotel_id 		= get_hotel_id($post_id);
     $post_meta 		= ( $post ) ? get_post_meta( $post->ID ) : null;
@@ -224,6 +224,12 @@ get_header(); ?>
 									</div>
 									<?php
 								}
+							}
+							
+							$trip_advisor = carbon_get_post_meta($post->ID, "crb_trip_advisor_code");
+							if(!empty($trip_advisor))
+							{
+								echo $trip_advisor;
 							}
 							?>
 						</div>

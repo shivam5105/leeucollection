@@ -253,6 +253,7 @@ function leeucollection_scripts() {
 	wp_enqueue_style( 'jquery-datepick-css', get_template_directory_uri() . '/css/jquery.datepick.css' );
 	wp_enqueue_style( 'leeucollection-owl-css', get_template_directory_uri() . '/css/owl.carousel.min.css' );
 	wp_enqueue_style( 'leeucollection-meanmenu-css', get_template_directory_uri() . '/css/meanmenu.min.css' );
+	wp_enqueue_style( 'leeucollection-daterangepicker-css', get_template_directory_uri() . '/css/daterangepicker.css' );
 	// Theme stylesheet.
 	wp_enqueue_style( 'leeucollection-style', get_stylesheet_uri() );
 
@@ -268,7 +269,8 @@ function leeucollection_scripts() {
 	
 	wp_enqueue_script( 'leeucollection-ajaxchimp', get_template_directory_uri() . '/js/jquery.ajaxchimp.min.js');
 	wp_enqueue_script( 'jquery-datepick-plugin', get_template_directory_uri() . '/js/jquery.plugin.js');
-	wp_enqueue_script( 'jquery-datepick', get_template_directory_uri() . '/js/jquery.datepick.js');
+	wp_enqueue_script( 'jquery-moment', get_template_directory_uri() . '/js/moment.js');
+	wp_enqueue_script( 'jquery-daterangepicker', get_template_directory_uri() . '/js/daterangepicker.js');
 	wp_enqueue_script( 'jquery-instafeed', get_template_directory_uri() . '/js/instafeed.min.js');
 	wp_enqueue_script( 'bookatable-js', '//bda.bookatable.com/deploy/lbui.direct.js');
 	//wp_enqueue_script( 'leeucollection-mobile-js', get_template_directory_uri() . '/js/jquery-mobile.js');

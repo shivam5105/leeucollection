@@ -30,6 +30,7 @@ Container::make('post_meta', 'Left Menu Image')
         Field::make('image', 'crb_left_nav_image', '')->help_text('(Image Dimensions (WxH): 150 x 113)'),
     ));
 
+
 //Content Section Hotel Home Page
 Container::make('post_meta', 'Content Section')
     ->show_on_post_type('hotel')
@@ -888,3 +889,20 @@ Container::make('post_meta', 'The Chef Section')
         )),
     ));
 */
+
+
+//Trip Advisor
+Container::make('post_meta', 'Trip Advisor Code')
+    ->show_on_post_type($leeu_post_types)
+    ->add_fields(array(
+        Field::make('textarea', 'crb_trip_advisor_code', ''),
+    ));
+
+
+//Navarino Service Hotel ID
+Container::make('post_meta', 'Hotel ID - Navarino Service')
+    ->show_on_post_type('hotel')
+    ->show_on_level(1)
+    ->add_fields(array(
+        Field::make('text', 'crb_hotel_id', ''),
+    ));

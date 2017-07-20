@@ -105,61 +105,9 @@ get_header(); ?>
 				<?php
 			}?>
 		</div>
-		<div class="container booking-form-object">
-			<div class="scroll-anim" data-anim="fade-up">
-				<form action="#">
-					<div class="row booking-object-form-row">
-						<div class="col-3 rm-pad">
-							<div class="form-item select-item first-item">
-								<select>
-									<option value="volvo">Select a hotel</option>
-									<option value="saab">Leeu Estate</option>
-									<option value="mercedes">Leeu House</option>
-								</select>
-							</div>
-						</div>
-						<div class="col-3 rm-pad">
-							<div class="form-item input-item"> 
-								<input name="date" value="Sep 17, 2017 – Sep 18, 2017" placeholder="" required="required" type="text"> 
-							</div>
-						</div>
-						<div class="col-2 rm-pad">
-							<div class="form-item select-item">
-								<select>
-									<?php
-									for($i=2; $i<9; $i++)
-									{
-										?>
-										<option value="<?php echo $i; ?>"><?php echo $i; ?> room<?php if($i > 1){ echo "s"; }?></option>
-										<?php
-									}
-									?>
-								</select>
-							</div>
-						</div>
-						<div class="col-2 rm-pad">
-							<div class="form-item select-item">
-								<select>
-									<?php
-									for($i=2; $i<9; $i++)
-									{
-										?>
-										<option value="<?php echo $i; ?>"><?php echo $i; ?> guest<?php if($i > 1){ echo "s"; }?></option>
-										<?php
-									}
-									?>
-								</select>
-							</div>
-						</div>
-						<div class="col-2 rm-pad">
-							<div class="form-item">
-								<button type="submit" class="submit-btn ucase">CHECK AVAILABILITY</button>
-							</div>
-						</div>
-					</div>
-				</form>
-			</div>
-		</div>
+		<?php
+		include_once("book-room-form.php");
+		?>
 		<?php
 		$section_loop = 0;
 		$res_sections = carbon_get_post_meta($post->ID, "crb_res_sections_new", 'complex');
