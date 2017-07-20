@@ -48,21 +48,21 @@ get_header(); ?>
 						{
 							foreach ($content_sections as $section_key => $content_section)
 							{
-								$section_sliders	= $content_section['crb_guest_section_slider'];
+								$section_sliders	= (@$content_section['crb_guest_section_slider']);
 								$slide_title 		= $content_section['crb_guest_section_slide_title'];
-								$slide_desc 		= $content_section['crb_guest_section_slide_desc'];
-
+								$slide_desc 		= $content_section['crb_guest_section_slide_desc'];	
 								$has_slider 		= false;
 								if(is_array($section_sliders) && count($section_sliders) > 1)
-								{
-									$has_slider = true;
-								}
-								$slider_wrapper_class = "owl-carousel single_slider owl-theme";
-								if(!$has_slider)
-								{
-									$slider_wrapper_class = "";
-								}
+									{
+										$has_slider = true;
+									}
+									$slider_wrapper_class = "owl-carousel single_slider owl-theme";
+									if(!$has_slider)
+									{
+										$slider_wrapper_class = "";
+									}
 								?>
+								<?php if(is_array($section_sliders) || is_object($section_sliders)){ ?>
 								<div class="listing-box listing-row">
 									<div class="scroll-anim" data-anim="fade-up">
 										<div class="listing-box">
@@ -76,6 +76,7 @@ get_header(); ?>
 												}?>
 												<div class="<?php echo $slider_wrapper_class; ?>">
 													<?php
+													
 													foreach($section_sliders as $slider_key => $section_slider)
 													{
 														$slide_image 	= $section_slider['crb_guest_section_slide_image'];
@@ -89,6 +90,7 @@ get_header(); ?>
 														</div>
 														<?php
 													}
+												    
 													?>
 												</div>
 												<?php
@@ -116,6 +118,7 @@ get_header(); ?>
 									</div>
 								</div>
 								<?php
+								}
 							}
 						}
 						?>
