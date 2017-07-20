@@ -519,6 +519,7 @@ Container::make('post_meta', 'Restaurant Details')
         Field::make('complex', 'crb_res_sections_new', '')->add_fields(array(
             Field::make('text', 'crb_res_name', 'Restaurant Name'),
             Field::make('image', 'crb_res_section_logo', 'Restaurant Logo Image')->set_width('50'),
+            Field::make('text', 'crb_res_sub_heading', 'Restaurant sub heading')->set_width('50'),
             Field::make('textarea', 'crb_res_section_description', 'Short Description')->set_width('50'),
             Field::make('text', 'crb_more_button_text', 'Detail Button Text')->set_width('50'),
             Field::make('text', 'crb_more_button_link', 'Detail Button Link')->set_width('50'),
@@ -561,6 +562,7 @@ Container::make('post_meta', 'Menu')
             Field::make('text', 'crb_menu_heading', 'Menu Heading'),
             Field::make('complex', 'crb_menu_item_details', 'Menu Items')->add_fields(array(
                 Field::make('text', 'crb_menu_item_name', 'Item Name')->set_width('50'),
+                Field::make('textarea', 'crb_menu_item_details', 'Item details')->set_width('50'),
                 Field::make('text', 'crb_menu_item_price', 'Item Price')->set_width('50'),
             )),
         )),
