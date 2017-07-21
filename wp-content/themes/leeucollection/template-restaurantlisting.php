@@ -118,7 +118,7 @@ get_header(); ?>
 
 			$res_name 				= $res_section['crb_res_name'];
 			$res_logo 				= $res_section['crb_res_section_logo'];
-			$sub_heading 			= $res_section['crb_res_sub_heading'];
+			$sub_heading 			= @$res_section['crb_res_sub_heading'];
 			$section_description 	= $res_section['crb_res_section_description'];
 			$more_button_link		= $res_section['crb_more_button_link'];
 			$more_button_text		= $res_section['crb_more_button_text'];
