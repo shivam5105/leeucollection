@@ -369,7 +369,6 @@ var Blank ={
 			"buttonClasses": "btn btn-sm cal-btn",
 			"applyClass": "btn-success cal-apply-btn",
 			"cancelClass": "btn-default cal-cancel-btn",
-			"startDate": "07/21/2017",
 			"locale": {
 				  	"format": 'MMMM D, YYYY',
 				},
