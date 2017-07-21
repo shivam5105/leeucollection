@@ -369,6 +369,7 @@ var Blank ={
 			"buttonClasses": "btn btn-sm cal-btn",
 			"applyClass": "btn-success cal-apply-btn",
 			"cancelClass": "btn-default cal-cancel-btn",
+			"startDate": "07/21/2017",
 			"locale": {
 				  	"format": 'MMMM D, YYYY',
 				},
@@ -397,7 +398,7 @@ var Blank ={
 				$(this).parents("form").find("[name='arrive']").val(arrive);
 				$(this).parents("form").find("[name='nights']").val(difference);
 			}
-			else
+			else if(!$(this).hasClass("canBeSingleDay"))
 			{
 				alert("End date should be greater than start date.");
 				$(this).val("");
@@ -479,6 +480,12 @@ var Blank ={
 			}
 		});
 	},
+	updateRequestEventHotelName: function(){
+		$(document).on("change", "#request-event-hotel-dd", function(){
+			var hotel = $("#request-event-hotel-dd option:selected").text();
+			$("#request_event_hotel_name").val(hotel);
+		});
+	},
 }
 $(document).ready(function(){
 	Blank.common_init();
@@ -492,6 +499,7 @@ $(document).ready(function(){
 	Blank.roomGallerySlider();
 	Blank.thumbsClassAdded();
 	Blank.contactPopup();
+	Blank.updateRequestEventHotelName();
 	if(jQuery('#slide-menu').length){
 		jQuery('#site-header #slide-menu').meanmenu({
 			meanScreenWidth: "1140",

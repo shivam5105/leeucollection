@@ -2686,7 +2686,7 @@ select:focus {
 
 .avaibility,.book_table{
     text-align:center;
-    margin-top:40px;
+    margin-top:25px;
 }
 .avaibility a,.book_table a{
 display: inline-block;
@@ -3162,4 +3162,12 @@ appearance: none;
 .cstm-btn.white-color
 {
     color: #fff;
+}
+.request-event-message
+{
+    height: 100px;
+}
+.popup_wrapper div.wpcf7-response-output {
+    color: #fff;
+    margin: 10px 0 0 0 !important;
 }
