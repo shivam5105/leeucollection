@@ -126,7 +126,7 @@ get_header();
 		<div class="container">
 			<div class="home-hotel-wrap pagination-slider" data-unique-class="home-hotel-wrap">
 				<div class="text-center scroll-anim animate-custom" data-anim="fade-up">
-					<h2 class="home-heading ucase"><?php echo $hotel_section_heading; ?></h2>
+					<h1 class="home-heading ucase"><?php echo $hotel_section_heading; ?></h1>
 				</div>
 				<div class="row scroll-anim animate-custom flx" data-anim="fade-up">
 					<div class="col-9 rm-pad-right flx-right">

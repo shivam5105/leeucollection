@@ -126,7 +126,11 @@ get_header();
 			<div class="container">
 				<div class="home-hotel-wrap-<?php echo $section_loop; ?> pagination-slider " data-unique-class="home-hotel-wrap-<?php echo $section_loop; ?>">
 					<div class="text-center scroll-anim animate-custom" data-anim="fade-up">
-						<h2 class="home-heading ucase"><?php echo $hotel_name; ?></h2>
+						<?php if($section_loop == 1) {?>
+						<h1 class="home-heading ucase"><?php echo $hotel_name; ?></h1>
+						<?php }else {?>
+							<h2 class="home-heading ucase"><?php echo $hotel_name; ?></h2>
+						<?php }?>
 					</div>
 					<div class="row scroll-anim animate-custom flx" data-anim="fade-up">
 						<?php

@@ -153,7 +153,9 @@ get_header(); ?>
 											<div class="banner-img full_img scroll-anim" data-anim="fade-up">
 												<img src="<?php echo get_template_directory_uri(); ?>/images/gallery-image-main.jpg" alt="" />
 											</div>
-											<div class="img-desc">gallery</div>
+											<div class="img-desc">
+												
+											</div>
 										</div>
 										<div class="col-4 rm-pad">
 											<div class="banner-img full_img scroll-anim" data-anim="fade-up" data-anim-delay="100">
@@ -178,52 +180,45 @@ get_header(); ?>
 		<div class="slider-container popup-slider-1">
 			<a href="javascript:void(0);" class="close-gallery">Close</a>
 			<div class="gallery-slider owl-carousel owl-theme">
-				<div class="slides">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/delux-room.jpg" alt="" />
-				</div>
-				<div class="slides">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/delux-room.jpg" alt="" />
-				</div>
-				<div class="slides">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/delux-room.jpg" alt="" />
-				</div>
-				<div class="slides">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/delux-room.jpg" alt="" />
-				</div>
+				<?php $galleries = carbon_get_post_meta($post->ID, 'crb_room_gallery','complex'); 
+					foreach($galleries as $gallery_key => $gallery){
+						$gallery_img = wp_get_attachment_image_src( $gallery['crb_gallery_image'], '821x478' );
+						$gallery_img = $gallery_img[0];
+						?>
+					<div class="slides">
+						<img src="<?php echo $gallery_img;?>" alt="" />
+					</div>
+				<?php }	
+				?>
 			</div>
 		</div>
 		<div class="slider-container popup-slider-2">
 			<a href="javascript:void(0);" class="close-gallery">Close</a>
 			<div class="gallery-slider owl-carousel owl-theme">
-				<div class="slides">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/video-main.jpg" alt="" />
-				</div>
-				<div class="slides">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/delux-room.jpg" alt="" />
-				</div>
-				<div class="slides">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/delux-room.jpg" alt="" />
-				</div>
-				<div class="slides">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/delux-room.jpg" alt="" />
-				</div>
+				<?php $videos = carbon_get_post_meta($post->ID, 'crb_room_video','complex'); 
+					foreach($videos as $video_key => $video){
+						$video_text = $video['crb_room_video'];
+						?>
+					<div class="slides">
+						<iframe width="821" height="478" src="<?php echo $video_text; ?>" frameborder="0" allowfullscreen></iframe>
+					</div>
+				<?php }	
+				?>
 			</div>
 		</div>
 		<div class="slider-container popup-slider-3">
 			<a href="javascript:void(0);" class="close-gallery">Close</a>
 			<div class="gallery-slider owl-carousel owl-theme">
-				<div class="slides">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/floor-main.jpg" alt="" />
-				</div>
-				<div class="slides">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/delux-room.jpg" alt="" />
-				</div>
-				<div class="slides">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/delux-room.jpg" alt="" />
-				</div>
-				<div class="slides">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/delux-room.jpg" alt="" />
-				</div>
+				<?php $floors = carbon_get_post_meta($post->ID, 'crb_room_floor_layout','complex'); 
+					foreach($floors as $floor_key => $floor){
+						$floor_img = wp_get_attachment_image_src( $floor['crb_floor_image'], '821x478' );
+						$floor_img = $floor_img[0];
+						?>
+					<div class="slides">
+						<img src="<?php echo $floor_img;?>" alt="" />
+					</div>
+				<?php }	
+				?>
 			</div>
 		</div>	
 	</section>

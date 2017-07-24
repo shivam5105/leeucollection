@@ -75,7 +75,7 @@ get_header(); ?>
 				}?>
 				<div class="banner-text text-center pos-abs-top">
 					<div class="location-text ucase" itemprop="address"><?php echo $hotel_location; ?></div>
-					<h1 itemprop="legalName" class="ucase"><?php echo $post->post_title;?></h1>
+					<h2 itemprop="legalName" class="ucase"><?php echo $post->post_title;?></h2>
 				</div>
 			</div>
 			<div class="intro-blurb scroll-anim" data-anim="fade-up">
@@ -137,7 +137,11 @@ get_header(); ?>
 									?>
 									<div class="listing-box listing-row <?php if($section_link == '') { echo "no-page-link"; } ?>">
 										<div class="text-center scroll-anim" data-anim="fade-up">
-											<h2 class="ucase"><?php echo $section_heading; ?></h2>
+											<?php if($section_layout == 1){ ?>
+											<h1 class="ucase"><?php echo $section_heading; ?></h1>
+											<?php }else{ ?>
+											    <h2 class="ucase"><?php echo $section_heading; ?></h2>
+											<?php }?>
 										</div>
 										<?php if(!empty($section_link)){?>
 										<div class="text-right page-link"> 
