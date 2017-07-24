@@ -97,7 +97,7 @@ else if($post->post_type == 'page')
 			{
 				$li_menu_class = @implode(" ", $nav_item->classes);
 
-				echo "<li class='side-nav-li ".$li_class."'>";
+				echo "<li class='side-nav-li menu-item-has-no-children ".$li_class."'>";
 				echo "<a href='".$nav_item->url."'>".$nav_item->title."</a>";
 				echo "</li>";
 			}
@@ -111,7 +111,7 @@ else if($post->post_type == 'page')
 					$li_class = ($post_id_for_nav == $nav_item->object_id) ? "current" : "";
 					$li_menu_class = @implode(" ", $nav_item->classes);
 
-					echo "<li class='side-nav-li ".$li_class."'>";
+					echo "<li class='side-nav-li menu-item-has-no-children ".$li_class."'>";
 					echo "<a href='".$nav_item->url."'>".$nav_item->title."</a>";
 					echo "</li>";
 				}
@@ -126,7 +126,7 @@ else if($post->post_type == 'page')
 					$li_class = ($post_id_for_nav == $nav_item->object_id) ? "current" : "";
 					$li_menu_class = @implode(" ", $nav_item->classes);
 
-					echo "<li class='side-nav-li ".$li_class."'>";
+					echo "<li class='side-nav-li menu-item-has-no-children ".$li_class."'>";
 					echo "<a href='".$nav_item->url."'>".$nav_item->title."</a>";
 					echo "</li>";
 				}
