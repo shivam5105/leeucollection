@@ -1,5 +1,4 @@
 <?php
-
 $left_nav_logo = isset($post_meta['_crb_left_nav_image']) ? $post_meta['_crb_left_nav_image'] : null;
 
 if(empty($left_nav_logo) || $left_nav_logo == null || (is_array($left_nav_logo) && empty($left_nav_logo[0])))
@@ -33,7 +32,8 @@ if(!empty($post) && $post->post_parent > 0)
 		$post_id_for_nav = $post->ID;
 		$ancestors_ids[] = $post_id_for_nav;
 	}
-	$post1 = get_post($post_id_for_nav);
+	$ancestors_ids = array(); /* Remove this line to move current nav on the top. */
+	/*$post1 = get_post($post_id_for_nav); //Uncomment this line to move current nav on the top.
 	if(!empty($post1))
 	{
 		$depth = 0;
@@ -44,9 +44,10 @@ if(!empty($post) && $post->post_parent > 0)
 		echo "<a href='".$post1_link."'>".$post1->post_title."</a>";
 		left_sidebar_nav($post_id_for_nav,$post_id,array(),$depth,"side-sub-menu");
 		echo "</li>";
+		*/
 		/*echo "<li class='menu-view-all-link'><a href='".$post1_link."'>View All ".$post1->post_title."</a></li>";*/
-		echo "</ul>";
-	}
+		/*echo "</ul>";
+	}*/
 }
 $post_id_for_nav = ($top_most_parent_post == false) ? $post_id : $top_most_parent_post->ID;
 left_sidebar_nav($post_id_for_nav,$post_id,$ancestors_ids);
@@ -61,7 +62,7 @@ else if($post->post_type == 'page')
 	{
 		$depth 			= 0;
 		$menuLocations 	= get_nav_menu_locations();
-		
+
 		echo "<ul class='side-nav child-".$depth."'>";
 
 		if(has_nav_menu('footer_menu_right'))
@@ -69,27 +70,27 @@ else if($post->post_type == 'page')
 			$menu_id_right 		= $menuLocations['footer_menu_right'];
 			$menu_array_right 	= wp_get_nav_menu_items($menu_id_right);
 
-			$current_page_menu = wp_get_nav_menu_items($menu_id_right,array(
+			/*$current_page_menu = wp_get_nav_menu_items($menu_id_right,array(
 				'posts_per_page' => -1,
 				'meta_key' => '_menu_item_object_id',
 				'meta_value' => $post_id_for_nav
-			));
+			));*/
 		}
 		if(has_nav_menu('footer_menu_left'))
 		{
 			$menu_id_left 		= $menuLocations['footer_menu_left'];
 			$menu_array_left	= wp_get_nav_menu_items($menu_id_left);
 			
-			if(empty($current_page_menu))
+			/*if(empty($current_page_menu))
 			{
 				$current_page_menu = wp_get_nav_menu_items($menu_id_left,array(
 					'posts_per_page' => -1,
 					'meta_key' => '_menu_item_object_id',
 					'meta_value' => $post_id_for_nav
 				));
-			}
+			}*/
 		}
-		foreach ($current_page_menu as $nav_item)
+		/*foreach ($current_page_menu as $nav_item)
 		{
 			$li_class = ($post_id_for_nav == $nav_item->object_id) ? "current" : "";
 			if(!in_array("no-link", $nav_item->classes))
@@ -100,14 +101,14 @@ else if($post->post_type == 'page')
 				echo "<a href='".$nav_item->url."'>".$nav_item->title."</a>";
 				echo "</li>";
 			}
-		}
+		}*/
 		if(has_nav_menu('footer_menu_right'))
 		{
 			foreach ( $menu_array_right as $nav_item )
 			{
-				if(!in_array("no-link", $nav_item->classes) && $post_id_for_nav != $nav_item->object_id)
+				if(!in_array("no-link", $nav_item->classes))/* && $post_id_for_nav != $nav_item->object_id)*/
 				{
-					$li_class = "";
+					$li_class = ($post_id_for_nav == $nav_item->object_id) ? "current" : "";
 					$li_menu_class = @implode(" ", $nav_item->classes);
 
 					echo "<li class='side-nav-li ".$li_class."'>";
@@ -120,9 +121,9 @@ else if($post->post_type == 'page')
 		{
 			foreach ( $menu_array_left as $nav_item )
 			{
-				if(!in_array("no-link", $nav_item->classes) && $post_id_for_nav != $nav_item->object_id)
+				if(!in_array("no-link", $nav_item->classes))/* && $post_id_for_nav != $nav_item->object_id)*/
 				{
-					$li_class = "";
+					$li_class = ($post_id_for_nav == $nav_item->object_id) ? "current" : "";
 					$li_menu_class = @implode(" ", $nav_item->classes);
 
 					echo "<li class='side-nav-li ".$li_class."'>";
