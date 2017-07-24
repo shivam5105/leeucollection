@@ -839,19 +839,23 @@ color: #C19034;
 body.body-ready .side-nav {
     opacity:1;
 }
-body.body-ready  .side-nav li.active > a{
+body.body-ready .side-nav li.active > a {
     transition:all 0.6s ease-in 0.6s; 
 }
-body.body-ready  .side-nav li.active > a{
+/*body.body-ready .side-nav li.active > a {
     opacity: 0;
     visibility: hidden;
-}
-body.body-ready  .side-nav li.active > .side-sub-menu > li.active > a{
+}*/
+body.body-ready .side-nav li.active > .side-sub-menu > li.active > a,
+body.body-ready .side-nav li.active.menu-item-has-no-children a {
     opacity:1;
     color: #C19034;
     visibility: visible;
 }
-.side-sub-menu{
+body.body-ready .side-nav li.active > .side-sub-menu > li.active > a.menu-item-has-children {
+    color: #AC9E94;
+}
+.side-sub-menu {
     opacity:0;
     max-height:0;
     position: relative;
@@ -865,6 +869,15 @@ body.body-ready  .side-nav li.active > .side-sub-menu > li.active > a{
     opacity:1;
     visibility: visible;
     max-height:500px;
+    margin-top: 5px;
+}
+.side-nav li.active .side-sub-menu .side-sub-menu
+{
+    display: none;
+}
+.side-nav li.active .side-sub-menu > li.active .side-sub-menu
+{
+    display: block;
 }
 .side-nav li.current.active ~ li {
     -webkit-transform: translateY(10px); 
@@ -1240,11 +1253,11 @@ input:-moz-placeholder { /* Firefox 18- */
     z-index: 1;
 }
 /**left nav child fix**/
-.side-sub-menu.child-2,
+/*.side-sub-menu.child-2,
 .hotel-template-template-restaurant .side-sub-menu.child-1 li.current.active > a , 
 .hotel-template-template-menudetail .side-sub-menu.child-1 li.current.active > a {
     display: none;
-}
+}*/
 body.hotel-template-template-restaurant .side-sub-menu.child-2 , body.hotel-template-template-menudetail .side-sub-menu.child-2 , 
 body.hotel-template-template-menudetail .side-sub-menu.child-2 li.current.active > a{
     display: block;
@@ -2686,7 +2699,7 @@ select:focus {
 
 .avaibility,.book_table{
     text-align:center;
-    margin-top:40px;
+    margin-top:25px;
 }
 .avaibility a,.book_table a{
 display: inline-block;
@@ -3162,4 +3175,12 @@ appearance: none;
 .cstm-btn.white-color
 {
     color: #fff;
+}
+.request-event-message
+{
+    height: 100px;
+}
+.popup_wrapper div.wpcf7-response-output {
+    color: #fff;
+    margin: 10px 0 0 0 !important;
 }

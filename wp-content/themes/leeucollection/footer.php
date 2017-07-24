@@ -198,7 +198,7 @@
 									'orderby' => 'menu_order',
 									'order' => 'ASC',
 									'post_type' => 'leeu-restaurants',
-									'post_parent' => '0',
+									'post_parent' => '50',
 								);
 								$the_query = new WP_Query( $args );
 								$loop = 0;
@@ -257,7 +257,7 @@
 						<div class="all_cat pd-l-r">
 							<div class="choose_hotel">
 								<div class="at extext pdb-20">AT</div>
-								<select class="lyon_font mgb-30">
+								<select class="lyon_font mgb-30" name="request-event-hotel-dd" id="request-event-hotel-dd">
 									<option>Select a hotel</option>
 									<?php
 									$args = array(
@@ -283,21 +283,7 @@
 									?>
 								</select>
 							</div>
-							<div class="choose_date mgb-30">
-								<div class="at extext pdb-20">ARRIVAL / DEPRATURE</div>
-								<input class="rangePicker lyon_font" type="text">
-							</div>
-							<div class="number_of_people mgb-30">
-								<div class="at extext pdb-20">NUMBER OF PEOPLE</div>
-								<input type="number" name="room" class="lyon_font" min="1" step="1" placeholder="1 room">
-							</div>
-							<div class="info_msg">
-								<div class="at extext pdb-20">MESSAGE</div>
-								<textarea class="lyon_font" name="Text" value=""></textarea>
-							</div>
-							<div class="book_table"> 
-								<a href="#">SEND MESSAGE </a>
-							</div>
+							<?php echo do_shortcode('[contact-form-7 id="406" title="Event Request"]'); ?>
 						</div>
 					</div>
 				</div>
