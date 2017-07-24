@@ -441,7 +441,7 @@ get_header();
 							$section_image_url = $section_image_url[0];
 							$see_more_link = (null !== @$post_meta['_crb_two_cols_section_1_more_button_link_left'][0]) ? $post_meta['_crb_two_cols_section_1_more_button_link_left'][0] : "";
 							?>
-							<a href="<?php echo $see_more_link; ?>"><img src="<?php echo $section_image_url; ?>" alt="" /></a>
+							<img src="<?php echo $section_image_url; ?>" alt="" />
 							<div class="inner-detail-wrapper">
 								<div class="inner-detail">
 									<div class="row">
@@ -562,7 +562,8 @@ get_header();
 								$loop = 0;
 								foreach ($slider_data as $slider_key => $slide)
 								{
-									$wine_image = $slide['crb_wine_image'];
+									$wine_image 		= $slide['crb_wine_image'];
+									$more_button_link	= @$slide['crb_more_button_link'];
 
 									$active_slide = "";
 									if($loop == 0)
@@ -573,7 +574,7 @@ get_header();
 									$wine_image_url = $wine_image_url[0];
 									?>
 									<div class="slider-item" data-object="<?php echo $loop; ?>">
-										<img src="<?php echo $wine_image_url; ?>" alt="">
+										<a href="<?php echo $more_button_link; ?>"><img src="<?php echo $wine_image_url; ?>" alt=""></a>
 									</div>
 									<?php
 									$loop++;
