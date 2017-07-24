@@ -202,13 +202,13 @@ get_header();
 												if(!empty($more_button_link) && !empty($more_button_text))
 												{
 													?>
-													<a class="cstm-btn arrow-btn text-center" href="<?php echo $more_button_link; ?>"><?php echo $more_button_text; ?></a>
+													<a class="cstm-btn arrow-btn text-center popup-booking-button-anchor" href="<?php echo $more_button_link; ?>"><?php echo $more_button_text; ?></a>
 													<?php
 												}
 												if(!empty($booking_button_link) && !empty($booking_button_text))
 												{
 													?>
-													<a class="cstm-btn arrow-btn text-center" href="<?php echo $booking_button_link; ?>"><?php echo $booking_button_text; ?></a>
+													<a class="cstm-btn arrow-btn text-center popup-booking-button-anchor" href="<?php echo $booking_button_link; ?>"><?php echo $booking_button_text; ?></a>
 													<?php
 												}?>
 											</div>
@@ -237,7 +237,7 @@ get_header();
 												if(!empty($booking_button_link) && !empty($booking_button_text))
 												{
 													?>
-													<li class="book-link"><a href="<?php echo $booking_button_link; ?>"><?php echo $booking_button_text; ?></a></li>
+													<li class="book-link"><a href="<?php echo $booking_button_link; ?>" class="popup-booking-button-anchor"><?php echo $booking_button_text; ?></a></li>
 													<?php
 												}?>
 											</ul>
@@ -368,7 +368,7 @@ get_header();
 											if(!empty($booking_button_link) && !empty($booking_button_text))
 											{
 												?>
-												<a class="cstm-btn arrow-btn text-center" href="<?php echo $booking_button_link; ?>"><?php echo $booking_button_text; ?></a>
+												<a class="cstm-btn arrow-btn text-center" href="<?php echo $booking_button_link; ?>" ><?php echo $booking_button_text; ?></a>
 												<?php
 											}?>
 										</div>										
@@ -391,7 +391,7 @@ get_header();
 											if(!empty($booking_button_text) && !empty($booking_button_link))
 											{
 												?>
-												<li class="book-link"><a href="javascript:void(0);" data-connection-id="<?php echo $booking_button_link; ?>" id="booktable-<?php echo $loop; ?>" class="booktable"><?php echo $booking_button_text; ?></a></li>
+												<li class="book-link popup-booking-button-anchor"><a class="popup-booking-button-anchor" href="javascript:void(0);" data-connection-id="<?php echo $booking_button_link; ?>" id="booktable-<?php echo $loop; ?>" class="booktable"><?php echo $booking_button_text; ?></a></li>
 												<?php
 											}
 											?>
@@ -626,7 +626,7 @@ get_header();
 											if(!empty($booking_button_text) && !empty($booking_button_link))
 											{
 												?>
-												<li class="book-link"><a href="<?php echo $booking_button_link; ?>"><?php echo $booking_button_text; ?></a></li>
+												<li class="book-link "><a href="<?php echo $booking_button_link; ?>"><?php echo $booking_button_text; ?></a></li>
 												<?php
 											}
 											?>
