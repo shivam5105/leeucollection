@@ -871,6 +871,14 @@ body.body-ready .side-nav li.active > .side-sub-menu > li.active > a.menu-item-h
     max-height:500px;
     margin-top: 5px;
 }
+.side-nav li.active .side-sub-menu .side-sub-menu
+{
+    display: none;
+}
+.side-nav li.active .side-sub-menu > li.active .side-sub-menu
+{
+    display: block;
+}
 .side-nav li.current.active ~ li {
     -webkit-transform: translateY(10px); 
     -moz-transform: translateY(10px); 
