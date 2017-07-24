@@ -139,7 +139,8 @@ get_header();
 								{
 									foreach ($hotel_slider['crb_home_hotels'] as $slide_key => $slide)
 									{
-										$hotel_image = $slide['crb_hotel_image'];
+										$hotel_image 		= $slide['crb_hotel_image'];
+										$more_button_link	= $slide['crb_more_button_link'];
 
 										$active_slide = "";
 										if($loop == 0)
@@ -152,7 +153,7 @@ get_header();
 										{
 											?>
 											<div class="slider-item" data-object="<?php echo $loop; ?>">
-												<img src="<?php echo $hotel_image_url; ?>" alt="">
+												<a href="<?php echo $more_button_link; ?>"><img src="<?php echo $hotel_image_url; ?>" alt=""></a>
 											</div>
 											<?php
 										}
@@ -265,6 +266,7 @@ get_header();
 								foreach ($hotel_slider['crb_home_hotels'] as $slide_key => $slide)
 								{
 									$hotel_name = $slide['crb_hotel_name'];
+									$more_button_link	= $slide['crb_more_button_link'];
 									$active_slide = "";
 									if($loop == 0)
 									{
@@ -301,8 +303,8 @@ get_header();
 								$loop = 0;
 								foreach ($slider_data as $slider_key => $slide)
 								{
-									$restaurant_image = $slide['crb_restaurant_image'];
-
+									$restaurant_image 	= $slide['crb_restaurant_image'];
+									$more_button_link	= $slide['crb_more_button_link'];
 									$active_slide = "";
 									if($loop == 0)
 									{
@@ -314,7 +316,7 @@ get_header();
 									{
 										?>
 										<div class="slider-item" data-object="<?php echo $loop; ?>">
-											<img src="<?php echo $restaurant_image_url; ?>" alt="">
+											<a href="<?php echo $more_button_link; ?>"><img src="<?php echo $restaurant_image_url; ?>" alt=""></a>
 										</div>
 										<?php
 									}
@@ -437,8 +439,9 @@ get_header();
 							<?php
 							$section_image_url = wp_get_attachment_image_src( $post_meta['_crb_two_cols_section_1_image_left'][0], '621x386' );
 							$section_image_url = $section_image_url[0];
+							$see_more_link = (null !== @$post_meta['_crb_two_cols_section_1_more_button_link_left'][0]) ? $post_meta['_crb_two_cols_section_1_more_button_link_left'][0] : "";
 							?>
-							<img src="<?php echo $section_image_url; ?>" alt="" />
+							<a href="<?php echo $see_more_link; ?>"><img src="<?php echo $section_image_url; ?>" alt="" /></a>
 							<div class="inner-detail-wrapper">
 								<div class="inner-detail">
 									<div class="row">
