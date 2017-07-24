@@ -1199,6 +1199,10 @@ function left_sidebar_nav($post_id, $curr_post_id, $exclude_posts = array(), $de
 			{
 				$has_childern = "menu-item-has-children";
 			}
+			else
+			{
+				$has_childern = "menu-item-has-no-children";
+			}
 			?>
 			<li class="side-nav-li <?php echo $li_class." ".$has_childern; ?>">
 				<a href="<?php echo $child_post_link; ?>" class="<?php echo $has_childern; ?>"><?php echo $child_post->post_title; ?></a>
@@ -1291,6 +1295,10 @@ function left_sidebar_nav_not_hotel($exclude_posts, $post_type, $post_id = 0, $d
 			if($total_child_posts > 0)
 			{
 				$has_childern = "menu-item-has-children";
+			}
+			else
+			{
+				$has_childern = "menu-item-has-no-children";
 			}
 			?>
 			<li class="side-nav-li <?php echo $has_childern; ?>">

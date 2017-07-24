@@ -839,19 +839,20 @@ color: #C19034;
 body.body-ready .side-nav {
     opacity:1;
 }
-body.body-ready  .side-nav li.active > a {
+body.body-ready .side-nav li.active > a {
     transition:all 0.6s ease-in 0.6s; 
 }
-/*body.body-ready  .side-nav li.active > a {
+/*body.body-ready .side-nav li.active > a {
     opacity: 0;
     visibility: hidden;
 }*/
-body.body-ready  .side-nav li.active > .side-sub-menu > li.active > a {
+body.body-ready .side-nav li.active > .side-sub-menu > li.active > a,
+body.body-ready .side-nav li.active.menu-item-has-no-children a {
     opacity:1;
     color: #C19034;
     visibility: visible;
 }
-body.body-ready  .side-nav li.active > .side-sub-menu > li.active > a.menu-item-has-children {
+body.body-ready .side-nav li.active > .side-sub-menu > li.active > a.menu-item-has-children {
     color: #AC9E94;
 }
 .side-sub-menu {
