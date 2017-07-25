@@ -122,8 +122,10 @@ get_header(); ?>
 			$section_description 	= $res_section['crb_res_section_description'];
 			$more_button_link		= $res_section['crb_more_button_link'];
 			$more_button_text		= $res_section['crb_more_button_text'];
+			$booking_button_link 	= $res_section['crb_booking_button_link'];
+			$booking_button_text 	= $res_section['crb_booking_button_text'];
 			?>
-			<?php if(!empty($res_name) || !empty($res_logo) || !empty($sub_heading) || !empty($section_description) || !empty($more_button_link) || !empty($more_button_text)) {?>
+			<?php if(!empty($res_name) || !empty($res_logo) || !empty($sub_heading) || !empty($section_description) || !empty($more_button_link) || !empty($more_button_text) || !empty($booking_button_link) || !empty($booking_button_text)){?>
 			<div class="container">
 				<div class="home-hotel-wrap-<?php echo $section_loop; ?> pagination-slider" data-unique-class="home-hotel-wrap-<?php echo $section_loop; ?>">
 					<div class="text-center scroll-anim animate-custom" data-anim="fade-up">
@@ -154,14 +156,6 @@ get_header(); ?>
 											?>
 											<div class="detail-logo">
 												<img src="<?php echo $res_logo_url; ?>" alt="">
-												<?php
-												if(!empty($more_button_link) && !empty($more_button_text))
-												{
-													?>
-													<a href="<?php echo $more_button_link; ?>" class="main-link"></a>
-													<?php
-												}
-												?>
 											</div>
 											<?php
 										}?>
@@ -186,7 +180,12 @@ get_header(); ?>
 												<li class="see-more-link"><a href="<?php echo $more_button_link; ?>"><?php echo $more_button_text; ?></a></li>
 												<?php
 											}
-											?>
+											if(!empty($booking_button_link) && !empty($booking_button_text))
+											{
+												?>
+												<li class="book-link"><a href="<?php echo $booking_button_link; ?>"><?php echo $booking_button_text; ?></a></li>
+												<?php
+											}?>
 										</ul>
 									</div>
 								</div>
