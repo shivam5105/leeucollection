@@ -341,11 +341,16 @@ get_header(); ?>
 								$map_image = wp_get_attachment_image_src($map_image, '193x129');
 								$map_image = $map_image[0];
 							}
+							if(!empty(@$post_meta['_crb_small_map_link'][0]) && !empty($map_image))
+							{
+								?>
+								<a href="<?php echo @$post_meta['_crb_small_map_link'][0]; ?>" target="_blank"><img src="<?php echo $map_image; ?>" alt="map_controll"/></a>
+								<div class="locator">
+									<a href="<?php echo @$post_meta['_crb_small_map_link'][0]; ?>" target="_blank" class="ucase"><?php echo @$post_meta['_crb_small_map_heading'][0]; ?></a>
+								</div>
+								<?php
+							}
 							?>
-							<a href="<?php echo @$post_meta['_crb_small_map_link'][0]; ?>" target="_blank"><img src="<?php echo $map_image; ?>" alt="map_controll"/></a>
-							<div class="locator">
-								<a href="<?php echo @$post_meta['_crb_small_map_link'][0]; ?>" target="_blank" class="ucase"><?php echo @$post_meta['_crb_small_map_heading'][0]; ?></a>
-							</div>
 						</div>
 					</div>
 				</div>
