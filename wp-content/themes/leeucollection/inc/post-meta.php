@@ -522,8 +522,6 @@ Container::make('post_meta', 'Restaurant Details')
             Field::make('textarea', 'crb_res_section_description', 'Short Description')->set_width('50'),
             Field::make('text', 'crb_more_button_text', 'Detail Button Text')->set_width('50'),
             Field::make('text', 'crb_more_button_link', 'Detail Button Link')->set_width('50'),
-            Field::make('text', 'crb_booking_button_text', 'Booking Button Text')->set_width('50'),
-            Field::make('text', 'crb_booking_button_link', "Booking Button Link")->set_width('50'),
 
             Field::make('complex', 'crb_res_section_details', 'Section Links Details')->add_fields(array(
                 Field::make('text', 'crb_res_locations', 'Restaurant Location'),
