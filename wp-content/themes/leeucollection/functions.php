@@ -1157,8 +1157,7 @@ function left_sidebar_nav($post_id, $curr_post_id, $exclude_posts = array(), $de
 	$args = array(
 		'post_type' => 'hotel',
 		'numberposts' => -1,
-		'orderby' => 'order',
-		'order' => 'ASC',
+		'orderby' => array( 'menu_order' => 'ASC', 'order' => 'ASC' ),
 		'post_status' => 'publish',
 		'post_parent' => $post_id,
 		
@@ -1263,8 +1262,7 @@ function left_sidebar_nav_not_hotel($exclude_posts, $post_type, $post_id = 0, $d
 	$args = array(
 		'post_type' => $post_type,
 		'numberposts' => -1,
-		'orderby' => 'order',
-		'order' => 'ASC',
+		'orderby' => array( 'menu_order' => 'ASC', 'order' => 'ASC' ),
 		'post_status' => 'publish',
 		'post_parent' => $post_id,
 		'exclude' => $exclude_posts,
