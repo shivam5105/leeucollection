@@ -137,7 +137,7 @@ get_header(); ?>
 										{
 											?>
 											<div class="leeu-text"> SPECIAL FEATURES</div>
-											<div class="desc-content desc-content-two-col" itemprop="amenityFeature"> 
+											<div class="desc-content desc-content-two-col special-features" itemprop="amenityFeature"> 
 												<?php echo nl2br(@$post_meta['_crb_special_feature'][0]); ?>
 											</div>
 											<?php

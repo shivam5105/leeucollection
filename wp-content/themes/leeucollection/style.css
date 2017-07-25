@@ -3203,3 +3203,6 @@ appearance: none;
     right: 0;
     top: 40px;
 }
+.special-features.desc-content.desc-content-two-col {
+    line-height: 1.8;
+}
