@@ -401,8 +401,6 @@ Container::make('post_meta', 'Two Columns Section 1')
         Field::make('textarea', 'crb_two_cols_section_1_description_left', 'Short Description')->set_width('50'),
         Field::make('text', 'crb_two_cols_section_1_more_button_text_left', 'Detail Button Text')->set_width('50'),
         Field::make('text', 'crb_two_cols_section_1_more_button_link_left', 'Detail Button Link')->set_width('50'),
-        Field::make('text', 'crb_two_cols_section_1_booking_button_text_left', 'Booking Button Text')->set_width('50'),
-        Field::make('text', 'crb_two_cols_section_1_booking_button_link_left', 'Booking Button Link')->set_width('50'),
 
         Field::make("html", "crb_two_cols_section_1_info_text_right")->set_html('<h2>Right Side Content</h2>'),
 
@@ -411,8 +409,6 @@ Container::make('post_meta', 'Two Columns Section 1')
         Field::make('textarea', 'crb_two_cols_section_1_description_right', 'Short Description')->set_width('50'),
         Field::make('text', 'crb_two_cols_section_1_more_button_text_right', 'Detail Button Text')->set_width('50'),
         Field::make('text', 'crb_two_cols_section_1_more_button_link_right', 'Detail Button Link')->set_width('50'),
-        Field::make('text', 'crb_two_cols_section_1_booking_button_text_right', 'Booking Button Text')->set_width('50'),
-        Field::make('text', 'crb_two_cols_section_1_booking_button_link_right', 'Booking Button Link')->set_width('50'),
     ));
 
 //Home Page - Wine
@@ -451,8 +447,6 @@ Container::make('post_meta', 'Two Columns Section 2')
         Field::make('textarea', 'crb_two_cols_section_2_description_left', 'Short Description')->set_width('50'),
         Field::make('text', 'crb_two_cols_section_2_more_button_text_left', 'Detail Button Text')->set_width('50'),
         Field::make('text', 'crb_two_cols_section_2_more_button_link_left', 'Detail Button Link')->set_width('50'),
-        Field::make('text', 'crb_two_cols_section_2_booking_button_text_left', 'Booking Button Text')->set_width('50'),
-        Field::make('text', 'crb_two_cols_section_2_booking_button_link_left', 'Booking Button Link')->set_width('50'),
 
         Field::make("html", "crb_two_cols_section_2_info_text_right")->set_html('<h2>Right Side Content</h2>'),
 
@@ -461,8 +455,6 @@ Container::make('post_meta', 'Two Columns Section 2')
         Field::make('textarea', 'crb_two_cols_section_2_description_right', 'Short Description')->set_width('50'),
         Field::make('text', 'crb_two_cols_section_2_more_button_text_right', 'Detail Button Text')->set_width('50'),
         Field::make('text', 'crb_two_cols_section_2_more_button_link_right', 'Detail Button Link')->set_width('50'),
-        Field::make('text', 'crb_two_cols_section_2_booking_button_text_right', 'Booking Button Text')->set_width('50'),
-        Field::make('text', 'crb_two_cols_section_2_booking_button_link_right', 'Booking Button Link')->set_width('50'),
     ));
 
 //Home Page - Hotels

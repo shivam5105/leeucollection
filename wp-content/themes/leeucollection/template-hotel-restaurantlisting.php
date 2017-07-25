@@ -104,6 +104,7 @@ get_header(); ?>
 									?>
 									<div class="banner-img scroll-anim" data-anim="fade-up" <?php echo $data_anim_delay; ?>>
 										<img src="<?php echo $child_post_img_url; ?>" alt="" />
+										<a href="<?php echo get_permalink($child_post_id); ?>" class="main-link"></a>
 										<div class="inner-detail-wrapper">
 											<div class="inner-detail">
 												<div class="row">
@@ -114,13 +115,6 @@ get_header(); ?>
 															</div>
 															<ul class="list-inline linking-wrap">
 																<li class="see-more-link"><a href="<?php echo get_permalink($child_post_id); ?>" itemprop="url">SEE MORE</a></li>
-																<?php
-																if(is_array($child_post_meta['_crb_booking_buton_link']) && !empty($child_post_meta['_crb_booking_buton_link'][0]))
-																{
-																	?>
-																	<li class="book-link"><a href="javascript:void(0);" data-connection-id="<?php echo $child_post_meta['_crb_booking_buton_link'][0]; ?>" id="booktable-<?php echo $loop; ?>" class="booktable"><?php echo $child_post_meta['_crb_booking_buton_text'][0]; ?></a></li>
-																	<?php
-																}?>
 															</ul>
 														</div>
 													</div>

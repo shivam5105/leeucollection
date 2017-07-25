@@ -195,7 +195,15 @@ get_header(); ?>
 													?>
 													<div class="slide-item">
 														<div class="banner-img scroll-anim" data-anim="fade-up" <?php if($section_layout == 2 && $slide_counter > 1){ echo $data_anim_delay; }?>>
-															<a href="<?php echo $slide_link; ?>"><img src="<?php echo $slide_image_url; ?>" alt="" /></a>
+															<img src="<?php echo $slide_image_url; ?>" alt="" />
+															<?php
+															if($section_show_link == 'yes')
+															{
+																?>
+																<a href="<?php echo $section_link; ?>" class="main-link"></a>
+																<?php
+															}
+															?>
 														</div>
 														<?php
 														if($section_layout == 2)
