@@ -160,6 +160,14 @@ get_header(); ?>
 														<div class="slide-item">
 															<div class="banner-img scroll-anim" data-anim="fade-up">
 																<img src="<?php echo $slide_image_url; ?>" alt="" />
+																<?php
+																if(!empty($section_link) && !empty($section_link_text))
+																{
+																	?>
+																	<a href="<?php echo $section_link; ?>" class="main-link"></a>
+																	<?php
+																}
+																?>
 															</div>
 														</div>
 														<?php
@@ -187,13 +195,20 @@ get_header(); ?>
 													</div>
 												</div>
 												<div class="clearfix"></div>
-												<div class="see_option_wrapper">														
-													<ul class="list-inline linking-wrap">
-														<li class="see-more-link">
-															<a href="<?php echo $section_link; ?>"><?php echo $section_link_text; ?></a>
-														</li>
-													</ul>														
-												</div>												
+												<div class="see_option_wrapper">
+													<?php
+													if(!empty($section_link) && !empty($section_link_text))
+													{
+														?>
+														<ul class="list-inline linking-wrap">
+															<li class="see-more-link">
+																<a href="<?php echo $section_link; ?>"><?php echo $section_link_text; ?></a>
+															</li>
+														</ul>
+														<?php
+													}
+													?>
+												</div>
 											</div>
 										</div>
 									</div>

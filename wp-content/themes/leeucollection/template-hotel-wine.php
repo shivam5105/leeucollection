@@ -198,6 +198,14 @@ get_header(); ?>
 												<div class="slide-item">
 													<div class="banner-img scroll-anim" data-anim="fade-up">
 														<img src="<?php echo $slide_image_url; ?>" alt="" />
+														<?php
+														if(!empty($section_link) && !empty($section_link_text))
+														{
+															?>
+															<a href="<?php echo $section_link; ?>" class="main-link"></a>
+															<?php
+														}
+														?>
 													</div>
 													<div class="row detail-row">
 														<div class="col-3">
@@ -213,17 +221,17 @@ get_header(); ?>
 															<?php
 															if(!empty($section_link) && !empty($section_link_text))
 															{
-																?>															
-															<ul class="list-inline linking-wrap">
-																<li class="see-more-link">
-																	<a href="http://54.191.201.248/leeucollection/hotel/leeu-estates/eat-and-drink/">See More</a>
-																</li>
-															</ul>
+																?>
+																<ul class="list-inline linking-wrap">
+																	<li class="see-more-link">
+																		<a href="<?php echo $section_link; ?>"><?php echo $section_link_text; ?></a>
+																	</li>
+																</ul>
 																<?php
 															}
-															?>															
-														</div>														
-														<!--<<div class="see_option ucase">
+															?>
+														</div>
+														<!--<div class="see_option ucase">
 															<?php
 															if(!empty($section_link) && !empty($section_link_text))
 															{
@@ -232,7 +240,7 @@ get_header(); ?>
 																<?php
 															}
 															?>
-														</div>-->													
+														</div>-->
 													</div>
 												</div>
 												<?php

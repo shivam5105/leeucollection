@@ -440,8 +440,17 @@ get_header();
 							$section_image_url = wp_get_attachment_image_src( $post_meta['_crb_two_cols_section_1_image_left'][0], '621x386' );
 							$section_image_url = $section_image_url[0];
 							$see_more_link = (null !== @$post_meta['_crb_two_cols_section_1_more_button_link_left'][0]) ? $post_meta['_crb_two_cols_section_1_more_button_link_left'][0] : "";
+							$see_more_text = (null !== @$post_meta['_crb_two_cols_section_1_more_button_text_left'][0]) ? $post_meta['_crb_two_cols_section_1_more_button_text_left'][0] : "";
+
 							?>
 							<img src="<?php echo $section_image_url; ?>" alt="" />
+							<?php
+							if(!empty($see_more_text) && !empty($see_more_link))
+							{
+								?>
+								<a href="<?php echo $see_more_link; ?>" class="main-link"></a>
+								<?php
+							}?>
 							<div class="inner-detail-wrapper">
 								<div class="inner-detail">
 									<div class="row">
@@ -452,21 +461,10 @@ get_header();
 												</div>
 												<ul class="list-inline linking-wrap">
 													<?php
-													$see_more_link = (null !== @$post_meta['_crb_two_cols_section_1_more_button_link_left'][0]) ? $post_meta['_crb_two_cols_section_1_more_button_link_left'][0] : "";
-													$see_more_text = (null !== @$post_meta['_crb_two_cols_section_1_more_button_text_left'][0]) ? $post_meta['_crb_two_cols_section_1_more_button_text_left'][0] : "";
-
-													$booking_link = (null !== @$post_meta['_crb_two_cols_section_1_booking_button_link_left'][0]) ? $post_meta['_crb_two_cols_section_1_booking_button_link_left'][0] : "";
-													$booking_text = (null !== @$post_meta['_crb_two_cols_section_1_booking_button_text_left'][0]) ? $post_meta['_crb_two_cols_section_1_booking_button_text_left'][0] : "";
 													if(!empty($see_more_text) && !empty($see_more_link))
 													{
 														?>
 														<li class="see-more-link"><a href="<?php echo $see_more_link; ?>"><?php echo $see_more_text; ?></a></li>
-														<?php
-													}
-													if(!empty($booking_text) && !empty($booking_link))
-													{
-														?>
-														<li class="book-link"><a href="<?php echo $booking_link; ?>"><?php echo $booking_text; ?></a></li>
 														<?php
 													}
 													?>
@@ -488,8 +486,18 @@ get_header();
 							<?php
 							$section_image_url = wp_get_attachment_image_src( $post_meta['_crb_two_cols_section_1_image_right'][0], '621x386' );
 							$section_image_url = $section_image_url[0];
+
+							$see_more_link = (null !== @$post_meta['_crb_two_cols_section_1_more_button_link_right'][0]) ? $post_meta['_crb_two_cols_section_1_more_button_link_right'][0] : "";
+							$see_more_text = (null !== @$post_meta['_crb_two_cols_section_1_more_button_text_right'][0]) ? $post_meta['_crb_two_cols_section_1_more_button_text_right'][0] : "";
 							?>
 							<img src="<?php echo $section_image_url; ?>" alt="" />
+							<?php
+							if(!empty($see_more_text) && !empty($see_more_link))
+							{
+								?>
+								<a href="<?php echo $see_more_link; ?>" class="main-link"></a>
+								<?php
+							}?>
 							<div class="inner-detail-wrapper">
 								<div class="inner-detail">
 									<div class="row">
@@ -500,21 +508,10 @@ get_header();
 												</div>
 												<ul class="list-inline linking-wrap">
 													<?php
-													$see_more_link = (null !== @$post_meta['_crb_two_cols_section_1_more_button_link_right'][0]) ? $post_meta['_crb_two_cols_section_1_more_button_link_right'][0] : "";
-													$see_more_text = (null !== @$post_meta['_crb_two_cols_section_1_more_button_text_right'][0]) ? $post_meta['_crb_two_cols_section_1_more_button_text_right'][0] : "";
-
-													$booking_link = (null !== @$post_meta['_crb_two_cols_section_1_booking_button_link_right'][0]) ? $post_meta['_crb_two_cols_section_1_booking_button_link_right'][0] : "";
-													$booking_text = (null !== @$post_meta['_crb_two_cols_section_1_booking_button_text_right'][0]) ? $post_meta['_crb_two_cols_section_1_booking_button_text_right'][0] : "";
 													if(!empty($see_more_text) && !empty($see_more_link))
 													{
 														?>
 														<li class="see-more-link"><a href="<?php echo $see_more_link; ?>"><?php echo $see_more_text; ?></a></li>
-														<?php
-													}
-													if(!empty($booking_text) && !empty($booking_link))
-													{
-														?>
-														<li class="book-link"><a href="<?php echo $booking_link; ?>"><?php echo $booking_text; ?></a></li>
 														<?php
 													}
 													?>
@@ -663,12 +660,23 @@ get_header();
 						<div class="scroll-anim" data-anim="fade-up">
 							<div class="img-desc align_center"><?php echo @$post_meta['_crb_two_cols_section_2_heading_left'][0];?></div>
 						</div>
-						<div class="banner-img hover_anim scroll-anim img_full" data-anim="fade-up">
+						<div class="banner-img hover_anim scroll-anim img_full link-wrapper-box" data-anim="fade-up">
 							<?php
 							$section_image_url = wp_get_attachment_image_src( $post_meta['_crb_two_cols_section_2_image_left'][0], '621x386' );
 							$section_image_url = $section_image_url[0];
+
+							$see_more_link = (null !== @$post_meta['_crb_two_cols_section_2_more_button_link_left'][0]) ? $post_meta['_crb_two_cols_section_2_more_button_link_left'][0] : "";
+							$see_more_text = (null !== @$post_meta['_crb_two_cols_section_2_more_button_text_left'][0]) ? $post_meta['_crb_two_cols_section_2_more_button_text_left'][0] : "";
+
 							?>
 							<img src="<?php echo $section_image_url; ?>" alt="" />
+							<?php
+							if(!empty($see_more_text) && !empty($see_more_link))
+							{
+								?>
+								<a href="<?php echo $see_more_link; ?>" class="main-link"></a>
+								<?php
+							}?>
 							<div class="inner-detail-wrapper">
 								<div class="inner-detail">
 									<div class="row">
@@ -679,21 +687,10 @@ get_header();
 												</div>
 												<ul class="list-inline linking-wrap">
 													<?php
-													$see_more_link = (null !== @$post_meta['_crb_two_cols_section_2_more_button_link_left'][0]) ? $post_meta['_crb_two_cols_section_2_more_button_link_left'][0] : "";
-													$see_more_text = (null !== @$post_meta['_crb_two_cols_section_2_more_button_text_left'][0]) ? $post_meta['_crb_two_cols_section_2_more_button_text_left'][0] : "";
-
-													$booking_link = (null !== @$post_meta['_crb_two_cols_section_2_booking_button_link_left'][0]) ? $post_meta['_crb_two_cols_section_2_booking_button_link_left'][0] : "";
-													$booking_text = (null !== @$post_meta['_crb_two_cols_section_2_booking_button_text_left'][0]) ? $post_meta['_crb_two_cols_section_2_booking_button_text_right'][0] : "";
 													if(!empty($see_more_text) && !empty($see_more_link))
 													{
 														?>
 														<li class="see-more-link"><a href="<?php echo $see_more_link; ?>"><?php echo $see_more_text; ?></a></li>
-														<?php
-													}
-													if(!empty($booking_text) && !empty($booking_link))
-													{
-														?>
-														<li class="book-link"><a href="<?php echo $booking_link; ?>"><?php echo $booking_text; ?></a></li>
 														<?php
 													}
 													?>
@@ -709,12 +706,23 @@ get_header();
 						<div class="scroll-anim" data-anim="fade-up">
 							<div class="img-desc align_center"><?php echo @$post_meta['_crb_two_cols_section_2_heading_right'][0];?></div>
 						</div>
-						<div class="banner-img hover_anim scroll-anim img_full" data-anim="fade-up"data-anim-delay="100" >
+						<div class="banner-img hover_anim scroll-anim img_full link-wrapper-box" data-anim="fade-up"data-anim-delay="100" >
 							<?php
 							$section_image_url = wp_get_attachment_image_src( $post_meta['_crb_two_cols_section_2_image_right'][0], '621x386' );
 							$section_image_url = $section_image_url[0];
+
+							$see_more_link = (null !== @$post_meta['_crb_two_cols_section_2_more_button_link_right'][0]) ? $post_meta['_crb_two_cols_section_2_more_button_link_right'][0] : "";
+							$see_more_text = (null !== @$post_meta['_crb_two_cols_section_2_more_button_text_right'][0]) ? $post_meta['_crb_two_cols_section_2_more_button_text_right'][0] : "";
+
 							?>
 							<img src="<?php echo $section_image_url; ?>" alt="" />
+							<?php
+							if(!empty($see_more_text) && !empty($see_more_link))
+							{
+								?>
+								<a href="<?php echo $see_more_link; ?>" class="main-link"></a>
+								<?php
+							}?>
 							<div class="inner-detail-wrapper">
 								<div class="inner-detail">
 									<div class="row">
@@ -725,21 +733,10 @@ get_header();
 												</div>
 												<ul class="list-inline linking-wrap">
 													<?php
-													$see_more_link = (null !== @$post_meta['_crb_two_cols_section_2_more_button_link_right'][0]) ? $post_meta['_crb_two_cols_section_2_more_button_link_right'][0] : "";
-													$see_more_text = (null !== @$post_meta['_crb_two_cols_section_2_more_button_text_right'][0]) ? $post_meta['_crb_two_cols_section_2_more_button_text_right'][0] : "";
-
-													$booking_link = (null !== @$post_meta['_crb_two_cols_section_2_booking_button_link_right'][0]) ? $post_meta['_crb_two_cols_section_2_booking_button_link_right'][0] : "";
-													$booking_text = (null !== @$post_meta['_crb_two_cols_section_2_booking_button_text_right'][0]) ? $post_meta['_crb_two_cols_section_2_booking_button_text_right'][0] : "";
 													if(!empty($see_more_text) && !empty($see_more_link))
 													{
 														?>
 														<li class="see-more-link"><a href="<?php echo $see_more_link; ?>"><?php echo $see_more_text; ?></a></li>
-														<?php
-													}
-													if(!empty($booking_text) && !empty($booking_link))
-													{
-														?>
-														<li class="book-link"><a href="<?php echo $booking_link; ?>"><?php echo $booking_text; ?></a></li>
 														<?php
 													}
 													?>
