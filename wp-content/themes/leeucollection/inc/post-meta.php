@@ -71,6 +71,7 @@ Container::make('post_meta', 'Content Section')
                 Field::make('image', 'crb_section_slide_image', 'Image')->help_text('(Image Dimensions (WxH): 821 x 478)')->set_width('20'),
                 Field::make('text', 'crb_section_slide_title', 'Title')->set_width('25'),
                 Field::make('textarea', 'crb_section_slide_desc', 'Small Description')->set_width('55'),
+                Field::make('text', 'crb_section_slide_link', 'Link'),
             )),
         )),
     ));

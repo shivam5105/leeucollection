@@ -182,6 +182,7 @@ get_header(); ?>
 													$slide_image 	= $section_slider['crb_section_slide_image'];
 													$slide_title 	= $section_slider['crb_section_slide_title'];
 													$slide_desc 	= $section_slider['crb_section_slide_desc'];
+													$slide_link 	= @$section_slider['crb_section_slide_link'];
 													if($section_layout == 2)
 													{
 														$slide_image_url = wp_get_attachment_image_src( $slide_image, '411x258' );

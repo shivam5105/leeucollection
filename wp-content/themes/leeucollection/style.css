@@ -324,6 +324,7 @@ padding-top: 21px;
 }
 #main-navigation .sub-menu li > .sub-menu li {
     margin-right: 9px;
+    padding-right: 0;
 }
 #main-navigation .sub-menu li > .sub-menu  li:last-child{
     margin-right: 10px;
@@ -1849,6 +1850,7 @@ div.wpcf7-mail-sent-ok , div.wpcf7-validation-errors{
 }
 #main-navigation ul li.menu-item-has-children li.menu-item-has-children{
     margin-right: 0;
+    padding-right: 0;
 }
 .custom-logo-link , .bottom-logo{
     float:left;
@@ -2022,11 +2024,12 @@ margin:0;
     margin-bottom:42px;
 }
 .transformed .summer_heading h3{
-    font-weight: 300;
+    font-weight: normal;
     font-family: 'BW Haas';
-    font-size: 21px;
-    line-height: 1.23;  
+    font-size: 17px;
+    line-height: 1.533;  
     margin-bottom:5px;
+    letter-spacing:0.01em;
 }
 .transformed .summer_paragaraph p{
     margin-bottom:40px;
@@ -2038,8 +2041,8 @@ margin:0;
 .timing_func p, .transformed .summer_paragaraph p{
     font-weight: normal;
     font-family: 'BW Haas';
-    font-size: 18px;
-    line-height: 1.33;  
+    font-size: 15px;
+    line-height: 1.533;  
     letter-spacing:0.01em;
 }
 
@@ -3200,4 +3203,7 @@ appearance: none;
     position: absolute;
     right: 0;
     top: 40px;
+}
+.special-features.desc-content.desc-content-two-col {
+    line-height: 1.533;
 }
