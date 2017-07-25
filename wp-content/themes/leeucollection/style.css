@@ -2244,10 +2244,10 @@ span.session_rate{
 }
 .art_cat2{
     min-height:260px;   
-    background:#e4e4e4;
+    /*background:#e4e4e4;*/
     position:relative;
 }
-.art_cat a,.art_cat2 a{
+.art_cat a{
     position:absolute;
     top:0;
     left:0;
@@ -3206,4 +3206,7 @@ appearance: none;
 }
 .special-features.desc-content.desc-content-two-col {
     line-height: 1.533;
+}
+.description{
+    font-size: 15px;
 }

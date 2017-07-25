@@ -93,12 +93,12 @@ get_header(); ?>
 									<div class="col-6 <?php echo $col6_class; ?>">
 										<div class="<?php echo $scroll_anim_class; ?>" <?php echo $scroll_anim_attr; ?>>
 											<div class="<?php echo $art_cat_class; ?> full-img">
-												<a href="<?php echo get_permalink(); ?>"></a>
+												
 												<?php
 												if(!empty($image[0]))
 												{
 													?>
-													<img src="<?php echo $image[0]; ?>" alt="" />
+													<a href="<?php echo get_permalink(); ?>"><img src="<?php echo $image[0]; ?>" alt="" /></a>
 													<?php
 												}
 												?>
