@@ -113,7 +113,7 @@ get_header(); ?>
 							<div class="row detail-row">
 								<div class="col-12">
 									<div class="desc-heading"><?php echo @$post_meta['_crb_slider_bottom_heading'][0]; ?>
-										<span class="session_rate mgt-0"><?php echo nl2br(@$post_meta['_crb_slider_bottom_description'][0]); ?></span>
+										<span class="description mgt-0"><?php echo nl2br(@$post_meta['_crb_slider_bottom_description'][0]); ?></span>
 									</div>
 								</div>
 							</div>

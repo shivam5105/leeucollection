@@ -139,7 +139,7 @@ get_header(); ?>
 					<div class="col-2">
 						<div class="map_img">
 							<?php
-							$map_image = @$post_meta['_crb_small_map_image'][0];
+							$map_image = @($post_meta['_crb_small_map_image'][0]);
 							if($map_image)
 							{
 								$map_image = wp_get_attachment_image_src($map_image, '193x129');
