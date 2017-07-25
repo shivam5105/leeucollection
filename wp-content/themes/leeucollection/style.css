@@ -1850,6 +1850,7 @@ div.wpcf7-mail-sent-ok , div.wpcf7-validation-errors{
 }
 #main-navigation ul li.menu-item-has-children li.menu-item-has-children{
     margin-right: 0;
+    padding-right: 0;
 }
 .custom-logo-link , .bottom-logo{
     float:left;
