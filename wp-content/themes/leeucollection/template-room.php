@@ -153,7 +153,7 @@ get_header(); ?>
 										$galleries 	= carbon_get_post_meta($post->ID, 'crb_room_gallery','complex');
 										$videos 	= carbon_get_post_meta($post->ID, 'crb_room_video','complex'); 
 										$floors 	= carbon_get_post_meta($post->ID, 'crb_room_floor_layout','complex'); 
-										$total_cols = 0;
+										$total_cols = 0;	
 										if(!empty($galleries))
 										{
 											$total_cols++;
