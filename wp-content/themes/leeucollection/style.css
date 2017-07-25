@@ -284,6 +284,10 @@ a{
 .ucase{
     text-transform: uppercase;
 }
+.relative
+{
+    position: relative;
+}
 /***header styling***/
 .logo-wrapper{
     position: absolute;
@@ -3187,4 +3191,14 @@ appearance: none;
 .popup_wrapper div.wpcf7-response-output {
     color: #fff;
     margin: 10px 0 0 0 !important;
+}
+.section-heading-wrapper
+{
+    margin-bottom: 26px;
+}
+.view-all-link
+{
+    position: absolute;
+    right: 0;
+    top: 40px;
 }

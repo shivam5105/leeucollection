@@ -241,7 +241,8 @@ get_header();
 									<?php
 									foreach ($slider_data as $slide_key => $slide)
 									{
-										$section_image = $slide['crb_hotel_section_image'];
+										$section_image 		= $slide['crb_hotel_section_image'];
+										$more_button_link	= $hotel_section['crb_more_button_link'];
 
 										$section_image_url = wp_get_attachment_image_src( $section_image, '925x600' );
 										$section_image_url = $section_image_url[0];
@@ -249,7 +250,7 @@ get_header();
 										{
 											?>
 											<div class="slider-item">
-												<img src="<?php echo $section_image_url; ?>" alt="">
+												<a href="<?php echo $more_button_link; ?>"><img src="<?php echo $section_image_url; ?>" alt=""></a>
 											</div>
 											<?php
 										}

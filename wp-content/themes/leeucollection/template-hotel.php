@@ -135,16 +135,24 @@ get_header(); ?>
 										$slider_theme_class = "";
 									}
 									?>
-									<div class="listing-box listing-row <?php if($section_link == '') { echo "no-page-link"; } ?>">
-										<div class="text-center scroll-anim" data-anim="fade-up">
-											<?php if($section_layout == 1){ ?>
-											<h1 class="ucase"><?php echo $section_heading; ?></h1>
-											<?php }else{ ?>
+									<div class="listing-box listing-row relative <?php if($section_link == '') { echo "no-page-link"; } ?>">
+										<div class="text-center scroll-anim section-heading-wrapper" data-anim="fade-up">
+											<?php
+											if($section_layout == 1)
+											{
+												?>
+												<h1 class="ucase"><?php echo $section_heading; ?></h1>
+												<?php
+											}
+											else
+											{
+												?>
 											    <h2 class="ucase"><?php echo $section_heading; ?></h2>
-											<?php }?>
+												<?php
+											}?>
 										</div>
 										<?php if(!empty($section_link)){?>
-										<div class="text-right page-link"> 
+										<div class="text-right page-link view-all-link"> 
 											<?php
 											if($section_show_link == 'yes')
 											{
