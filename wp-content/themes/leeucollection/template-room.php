@@ -167,7 +167,7 @@ get_header(); ?>
 											$total_cols++;
 										}
 										$col_class = "";
-										if($total_cols) > 0)
+										if($total_cols > 0)
 										{
 											$col_class = "col-".(12/$total_cols);
 										}
