@@ -451,11 +451,6 @@ var Blank ={
 			});
 		}
 	},
-	thumbsClassAdded: function(){
-		$('.hotel-gallery-wrapper .banner-img').addClass(function(index){
-			return "gallery-thumb" + index;
-		});
-	},
 	contactPopup: function(){
 		$('.chat-wrapper').click(function(e){
 		e.preventDefault();	
@@ -496,7 +491,6 @@ $(document).ready(function(){
 	Blank.closeBookingPopup();
 	Blank.updatePopupBookTableButton();
 	Blank.roomGallerySlider();
-	Blank.thumbsClassAdded();
 	Blank.contactPopup();
 	Blank.updateRequestEventHotelName();
 	if(jQuery('#slide-menu').length){
@@ -510,17 +504,11 @@ $(document).ready(function(){
 			meanContract: " ",
 		});
 	}
-	$('.gallery-thumb0').on('click', function(e){
+	$('.gallery-thumb').on('click', function(e){
 		e.preventDefault();
-		$('.slider-container.popup-slider-1').addClass('popup-active');
-	});
-	$('.gallery-thumb1').on('click', function(e){
-		e.preventDefault();
-		$('.slider-container.popup-slider-2').addClass('popup-active');
-	});
-	$('.gallery-thumb2').on('click', function(e){
-		e.preventDefault();
-		$('.slider-container.popup-slider-3').addClass('popup-active');
+		var rel = $(this).data('rel');
+		var $rel = $('.' + rel);
+		$rel.addClass('popup-active');
 	});
 	$('.close-gallery').click(function(){
 		$('.slider-container').removeClass('popup-active');
