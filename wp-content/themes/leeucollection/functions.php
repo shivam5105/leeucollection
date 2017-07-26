@@ -1317,3 +1317,4 @@ function my_wpcf7_dropdown_form($html)
 	return $html;
 }
 add_filter('wpcf7_form_elements', 'my_wpcf7_dropdown_form');
+add_filter('jpeg_quality', function($arg){ return 100; });
