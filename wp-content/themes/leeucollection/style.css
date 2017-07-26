@@ -3225,7 +3225,11 @@ appearance: none;
 .description{
     font-size: 15px;
 }
-
-.side-log-wrap img[src*=".svg"] {
+.side-log-wrap img[src*=".svg"]
+{
    width: 131px;
+}
+img[src*=".svg"].bottom-logo
+{
+    width: 109px;
 }
