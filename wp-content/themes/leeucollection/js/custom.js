@@ -509,6 +509,10 @@ var Blank ={
 			var $rel = $('.' + rel);
 			$rel.addClass('popup-active');
 		});
+		$('.close-contact').click(function(e){
+			e.preventDefault();
+			$('.contact-slide-form').removeClass('slide-in');
+		})
 		$('.close-gallery').click(function(){
 			$('.slider-container').removeClass('popup-active');
 		})

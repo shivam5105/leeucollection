@@ -2863,6 +2863,18 @@ appearance: none;
     color: #222944;
     opacity: 1;
 }
+.close-contact{
+    color: #c19034;
+    font-family: GillSans;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-decoration: none;
+    position: absolute;
+    text-transform: uppercase;
+    right: 25px;
+    top: 25px;
+}
 .rm-margin-bottom{
     margin-bottom: 0 !important;
 }
@@ -3210,6 +3222,8 @@ appearance: none;
 .description{
     font-size: 15px;
 }
+
 .side-log-wrap img[src*=".svg"] {
    width: 130px;
 }
+
