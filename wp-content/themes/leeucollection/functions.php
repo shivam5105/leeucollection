@@ -1322,12 +1322,12 @@ add_filter('wpcf7_form_elements', 'my_wpcf7_dropdown_form');
 
 add_filter('jpeg_quality', function($arg){ return 100; });
 
-/*function add_attributes_to_script_tags($tag, $handle)
+function add_attributes_to_script_tags($tag, $handle)
 {
-	if('leeucollection-instantclick' !== $handle && 'leeucollection-custom' !== $handle)
+	if('leeucollection-instantclick' !== $handle && 'leeucollection-custom' !== $handle && 'contact-form-7' !== $handle)
 	{
 		return $tag;
 	}
-	return str_replace( ' src', ' async="async" src', $tag );
+	return str_replace( ' src', ' data-no-instant src', $tag );
 }
-add_filter('script_loader_tag', 'add_attributes_to_script_tags', 10, 2);*/
+add_filter('script_loader_tag', 'add_attributes_to_script_tags', 10, 2);

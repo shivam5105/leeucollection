@@ -1,4 +1,4 @@
-	var $ = jQuery.noConflict(),win_h,win_w,_wl,_wpos,_dh;
+var $ = jQuery.noConflict(),win_h,win_w,_wl,_wpos,_dh;
 var Blank ={	
 	win_prop : function(){
 		win_h = $(window).height();
@@ -480,75 +480,88 @@ var Blank ={
 			$("#request_event_hotel_name").val(hotel);
 		});
 	},
+	ready: function(){
+		Blank.common_init();
+		Blank.home_page_init();
+		Blank.hotel_listing_init();
+		Blank.rangePicker();
+		Blank.bookingPopupTabs();
+		Blank.openBookingPopup();
+		Blank.closeBookingPopup();
+		Blank.updatePopupBookTableButton();
+		Blank.roomGallerySlider();
+		Blank.contactPopup();
+		Blank.updateRequestEventHotelName();
+		if(jQuery('#slide-menu').length){
+			jQuery('#site-header #slide-menu').meanmenu({
+				meanScreenWidth: "1140",
+				meanMenuContainer : '#site-header',
+				meanRevealPosition : "left",
+				meanMenuOpen: "MENU",
+				meanMenuClose: "CLOSE",
+				meanExpand: " ",
+				meanContract: " ",
+			});
+		}
+		$('.gallery-thumb').on('click', function(e){
+			e.preventDefault();
+			var rel = $(this).data('rel');
+			var $rel = $('.' + rel);
+			$rel.addClass('popup-active');
+		});
+		$('.close-gallery').click(function(){
+			$('.slider-container').removeClass('popup-active');
+		})
+		jQuery('#mc-form').ajaxChimp({
+				url: '//builtbyblank.us14.list-manage.com/subscribe/post?u=35b52d4d999898495de700b6d&amp;id=707c0e74e6',
+				callback: callbackFunction
+		});	
+		
+		// Media popup
+		$(document).on('click', '.media-request', function(){
+			var buttons = $(this).parents('.media-box').find('.radio-buttons').clone(true);
+			$('.media-popup-content .wpcf7-form .radio-buttons').remove();
+			$('.media-popup-content .wpcf7-form .email_button').before(buttons);
+			$('.media-popup').fadeIn();	
+		 });
+
+		$('.close_popup').click(function(){
+			$('.media-popup').fadeOut();
+			
+		});
+		$("#uploadbrowsebutton").click(function() {
+			$('#fileuploadfield').click()
+		});
+		function callbackFunction (resp)
+		{
+		    if (resp.result === 'success')
+		    {
+		      	$("#mc-email").val("");
+		    }
+		}
+	},
+	resize: function(){
+		Blank.common_init_resize();
+	},
+	load: function(){		
+		Blank.common_init_window_load();
+		Blank.booktable();
+		$('body').addClass('body-loaded');
+	},
 }
 $(document).ready(function(){
-	Blank.common_init();
-	Blank.home_page_init();
-	Blank.hotel_listing_init();
-	Blank.rangePicker();
-	Blank.bookingPopupTabs();
-	Blank.openBookingPopup();
-	Blank.closeBookingPopup();
-	Blank.updatePopupBookTableButton();
-	Blank.roomGallerySlider();
-	Blank.contactPopup();
-	Blank.updateRequestEventHotelName();
-	if(jQuery('#slide-menu').length){
-		jQuery('#site-header #slide-menu').meanmenu({
-			meanScreenWidth: "1140",
-			meanMenuContainer : '#site-header',
-			meanRevealPosition : "left",
-			meanMenuOpen: "MENU",
-			meanMenuClose: "CLOSE",
-			meanExpand: " ",
-			meanContract: " ",
-		});
-	}
-	$('.gallery-thumb').on('click', function(e){
-		e.preventDefault();
-		var rel = $(this).data('rel');
-		var $rel = $('.' + rel);
-		$rel.addClass('popup-active');
-	});
-	$('.close-gallery').click(function(){
-		$('.slider-container').removeClass('popup-active');
-	})
-	jQuery('#mc-form').ajaxChimp({
-			url: '//builtbyblank.us14.list-manage.com/subscribe/post?u=35b52d4d999898495de700b6d&amp;id=707c0e74e6',
-			callback: callbackFunction
-	});	
-	
-	// Media popup
-	$(document).on('click', '.media-request', function(){
-		var buttons = $(this).parents('.media-box').find('.radio-buttons').clone(true);
-		$('.media-popup-content .wpcf7-form .radio-buttons').remove();
-		$('.media-popup-content .wpcf7-form .email_button').before(buttons);
-		$('.media-popup').fadeIn();	
-	 });
-
-	$('.close_popup').click(function(){
-		$('.media-popup').fadeOut();
-		
-	});
-	$("#uploadbrowsebutton").click(function() {
-		$('#fileuploadfield').click()
-	});
-	function callbackFunction (resp)
-	{
-	    if (resp.result === 'success')
-	    {
-	      	$("#mc-email").val("");
-	    }
-	}
+	Blank.ready();
 });
 $(window).resize(function(){
-	Blank.common_init_resize();
+	Blank.resize();
 });	
 $(window).scroll(function(){
 	Blank.scrl_anim();
 });
 $(window).on('load', function(){
-	Blank.common_init_window_load();
-	Blank.booktable();
-	$('body').addClass('body-loaded');
+	Blank.load();
+});
+InstantClick.on('change', function() {
+	Blank.ready();
+	Blank.load();
 });
