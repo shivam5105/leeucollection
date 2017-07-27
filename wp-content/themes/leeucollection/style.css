@@ -852,7 +852,7 @@ body.body-ready .side-nav li.active > a {
     visibility: hidden;
 }*/
 li.current-link ul li a,
-li.current-link.menu-item-has-no-children + li
+li.current-link.menu-item-has-no-children + li a
 {
     color: #222944;
 }
