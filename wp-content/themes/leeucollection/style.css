@@ -836,9 +836,6 @@ color: #C19034;
 .side-nav li .side-sub-menu li{
     list-style:none;
 }
-.side-nav li .side-sub-menu li a{
-    color: #222944;
-}
 /**side nav animation**/
 .side-nav {
     opacity:0;
@@ -855,7 +852,7 @@ body.body-ready .side-nav li.active > a {
     visibility: hidden;
 }*/
 li.current-link ul li a {
-    color: #000;
+    color: #222944;
 }
 body.body-ready .side-nav li a.current-link {
     opacity:1;
