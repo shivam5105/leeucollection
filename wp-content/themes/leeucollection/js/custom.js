@@ -565,7 +565,7 @@ $(window).scroll(function(){
 $(window).on('load', function(){
 	Blank.load();
 });
-InstantClick.on('change', function() {
+/*InstantClick.on('change', function() {
 	Blank.ready();
 	Blank.load();
-});
+});*/

@@ -291,23 +291,8 @@
 			</div>
 		</div>
 	</div>
-	<script data-no-instant>InstantClick.init();</script>
+	<!-- <script data-no-instant>InstantClick.init();</script> -->
 	<script type="text/javascript" data-no-instant>
-	InstantClick.on('receive', function(url, body, title) {
-  
-  console.debug("Tanmay");
-  console.debug(url);
-  console.debug(body);
-  console.debug(title);
-  
-  title += ' (loaded with InstantClick)';
-  
-  return {
-    body: body,
-    title: title
-  };
-});
-
 		function googleTranslateElementInit()
 		{
 			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,af,en,nl,pt,sv', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
