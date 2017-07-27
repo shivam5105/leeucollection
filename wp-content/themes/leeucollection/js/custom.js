@@ -151,6 +151,7 @@ var Blank ={
 	},
 	side_nav : function(){
 		$(".side-nav li.current").parents("li").addClass("current");
+		$(".ul-child-li-0 li.current-link.menu-item-has-no-children").siblings("li").addClass("current-link-sibling");
 		setTimeout(function(){ $('.side-nav .current').addClass('active'); }, 500);
 	},
 	home_logo_anim : function(){
