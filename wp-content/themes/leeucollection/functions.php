@@ -1155,6 +1155,12 @@ function get_hotel_id($post_id)
 }
 function left_sidebar_nav($post_id, $curr_post_id, $exclude_posts = array(), $depth = 0, $ul_class = "side-nav", $post_count = false)
 {
+	global $post;
+	$ancestors_ids = array();
+	if(!empty($post))
+	{
+		$ancestors_ids 	= get_post_ancestors($post->ID);
+	}
 	$args = array(
 		'post_type' => 'hotel',
 		'numberposts' => -1,
@@ -1182,6 +1188,7 @@ function left_sidebar_nav($post_id, $curr_post_id, $exclude_posts = array(), $de
 	if(!empty($child_post_array) && count($child_post_array) > 0)
 	{
 		echo "<ul class='".$ul_class." child-".$depth."'>";
+		$ul_depth_li_class = "ul-child-li-".$depth;
 		$depth++;
 		foreach($child_post_array as $child_key => $child_post)
 		{
@@ -1191,7 +1198,7 @@ function left_sidebar_nav($post_id, $curr_post_id, $exclude_posts = array(), $de
 				$depth = 0;
 			}
 			$child_post_link = get_permalink($post_id);
-			$li_class = ($curr_post_id == $post_id) ? "current" : "";
+			$current_class = ($post_id == $post->ID) ? "current current-link" : "";
 
 			$total_child_posts = left_sidebar_nav($post_id, $curr_post_id, $exclude_posts, $depth, "side-sub-menu", true);
 			$has_childern = "";
@@ -1203,9 +1210,14 @@ function left_sidebar_nav($post_id, $curr_post_id, $exclude_posts = array(), $de
 			{
 				$has_childern = "menu-item-has-no-children";
 			}
+			$open_sub_menu = "";
+			if(in_array($post_id, $ancestors_ids))
+			{
+				$open_sub_menu = "current active";
+			}
 			?>
-			<li class="side-nav-li <?php echo $li_class." ".$has_childern; ?>">
-				<a href="<?php echo $child_post_link; ?>" class="<?php echo $has_childern; ?>"><?php echo $child_post->post_title; ?></a>
+			<li class="side-nav-li <?php echo $current_class." ".$has_childern." ".$ul_depth_li_class." ".$open_sub_menu; ?>">
+				<a href="<?php echo $child_post_link; ?>" class="<?php echo $has_childern." ".$current_class; ?>"><?php echo $child_post->post_title; ?></a>
 				<?php
 				left_sidebar_nav($post_id, $curr_post_id, $exclude_posts, $depth, "side-sub-menu");
 				?>
@@ -1279,6 +1291,7 @@ function left_sidebar_nav_not_hotel($exclude_posts, $post_type, $post_id = 0, $d
 	if(!empty($child_post_array) && count($child_post_array) > 0)
 	{
 		echo "<ul class='".$ul_class." child-".$depth."'>";
+		$ul_depth_li_class = "ul-child-li-".$depth;
 		$depth++;
 		foreach($child_post_array as $child_key => $child_post)
 		{
@@ -1300,7 +1313,7 @@ function left_sidebar_nav_not_hotel($exclude_posts, $post_type, $post_id = 0, $d
 				$has_childern = "menu-item-has-no-children";
 			}
 			?>
-			<li class="side-nav-li <?php echo $has_childern; ?>">
+			<li class="side-nav-li <?php echo $has_childern." ".$ul_depth_li_class; ?>">
 				<a href="<?php echo $child_post_link." ".$has_childern; ?>"><?php echo $child_post->post_title; ?></a>
 				<?php
 				left_sidebar_nav_not_hotel($exclude_posts, $post_type, $post_id, $depth, "side-sub-menu");

@@ -828,7 +828,7 @@ div.sub-menu-wrapper{
     letter-spacing: 0.092em;
     font-weight: 600;
     font-family: GillSans;
-     transition:all 0.6s ease 0s; 
+    transition:all 0.6s ease 0s; 
 }
 .side-nav a:hover , .side-nav li .side-sub-menu li a:hover{
 color: #C19034;
@@ -854,8 +854,7 @@ body.body-ready .side-nav li.active > a {
     opacity: 0;
     visibility: hidden;
 }*/
-body.body-ready .side-nav li.active > .side-sub-menu > li.active > a,
-body.body-ready .side-nav li.active.menu-item-has-no-children a {
+body.body-ready .side-nav li a.current-link {
     opacity:1;
     color: #C19034;
     visibility: visible;
@@ -867,11 +866,14 @@ body.body-ready .side-nav li.active > .side-sub-menu > li.active > a.menu-item-h
     opacity:0;
     max-height:0;
     position: relative;
+    visibility: hidden;
+}
+.ul-child-li-0.active.current-link > .side-sub-menu
+{
     -webkit-transition:all 0.6s ease-in 1.2s; 
     -moz-transition:all 0.6s ease-in 1.2s; 
     -ms-transition:all 0.6s ease-in 1.2s;
     transition:all 0.6s ease-in 1.2s;
-    visibility: hidden;
 }
 .side-nav li.active .side-sub-menu{
     opacity:1;
