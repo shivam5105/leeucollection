@@ -201,10 +201,11 @@ get_header();
 												{
 													?>
 													<a class="cstm-btn arrow-btn text-center" href="<?php echo $more_button_link; ?>"><?php echo $more_button_text; ?></a>
+
+													<a class="cstm-btn arrow-btn text-center popup-booking-button-anchor" href="javascript:void(0);" data-booking-at="<?php echo addslashes($hotel_name); ?>" data-booking-for="hotel">Book</a>
 													<?php
 												}
 												?>
-												<a class="cstm-btn arrow-btn text-center popup-booking-button-anchor" href="javascript:void(0);" data-booking-at="<?php echo addslashes($hotel_name); ?>" data-booking-for="hotel">Book</a>
 											</div>
 										</div>
 										<div class="inner-detail-content for-desk">
@@ -226,10 +227,11 @@ get_header();
 												{
 													?>
 													<li class="see-more-link"><a href="<?php echo $more_button_link; ?>"><?php echo $more_button_text; ?></a></li>
+
+													<li class="book-link"><a class="popup-booking-button-anchor" href="javascript:void(0);" data-booking-at="<?php echo addslashes($hotel_name); ?>" data-booking-for="hotel">Book</a></li>
 													<?php
 												}
 												?>
-												<li class="book-link"><a class="popup-booking-button-anchor" href="javascript:void(0);" data-booking-at="<?php echo addslashes($hotel_name); ?>" data-booking-for="hotel">Book</a></li>
 											</ul>
 										</div>
 									</div>
@@ -516,7 +518,6 @@ get_header();
 				</div>
 			</div>
 		</div>
-
 		<?php
 		$wine_section_heading 	= carbon_get_post_meta($post->ID, "crb_wine_section_heading");
 		$slider_data 			= carbon_get_post_meta($post->ID, "crb_home_wines", 'complex');
