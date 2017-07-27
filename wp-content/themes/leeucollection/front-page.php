@@ -178,8 +178,6 @@ get_header();
 									$hotel_name 			= $slide['crb_hotel_name'];
 									$more_button_link		= $slide['crb_more_button_link'];
 									$more_button_text		= $slide['crb_more_button_text'];
-									$booking_button_link 	= $slide['crb_booking_button_link'];
-									$booking_button_text 	= $slide['crb_booking_button_text'];
 
 									$active_slide = "";
 									if($loop == 0)
@@ -202,15 +200,11 @@ get_header();
 												if(!empty($more_button_link) && !empty($more_button_text))
 												{
 													?>
-													<a class="cstm-btn arrow-btn text-center popup-booking-button-anchor" href="<?php echo $more_button_link; ?>"><?php echo $more_button_text; ?></a>
+													<a class="cstm-btn arrow-btn text-center" href="<?php echo $more_button_link; ?>"><?php echo $more_button_text; ?></a>
 													<?php
 												}
-												if(!empty($booking_button_link) && !empty($booking_button_text))
-												{
-													?>
-													<a class="cstm-btn arrow-btn text-center popup-booking-button-anchor" href="<?php echo $booking_button_link; ?>"><?php echo $booking_button_text; ?></a>
-													<?php
-												}?>
+												?>
+												<a class="cstm-btn arrow-btn text-center popup-booking-button-anchor" href="javascript:void(0);" data-hotel="<?php echo addslashes($hotel_name); ?>" data-booking-for="hotel">Book</a>
 											</div>
 										</div>
 										<div class="inner-detail-content for-desk">
@@ -234,12 +228,8 @@ get_header();
 													<li class="see-more-link"><a href="<?php echo $more_button_link; ?>"><?php echo $more_button_text; ?></a></li>
 													<?php
 												}
-												if(!empty($booking_button_link) && !empty($booking_button_text))
-												{
-													?>
-													<li class="book-link"><a href="<?php echo $booking_button_link; ?>" class="popup-booking-button-anchor"><?php echo $booking_button_text; ?></a></li>
-													<?php
-												}?>
+												?>
+												<li class="book-link"><a class="popup-booking-button-anchor" href="javascript:void(0);" data-hotel="<?php echo addslashes($hotel_name); ?>" data-booking-for="hotel">Book</a></li>
 											</ul>
 										</div>
 									</div>
@@ -368,7 +358,7 @@ get_header();
 											if(!empty($booking_button_link) && !empty($booking_button_text))
 											{
 												?>
-												<a class="cstm-btn arrow-btn text-center" href="<?php echo $booking_button_link; ?>" ><?php echo $booking_button_text; ?></a>
+												<a href="javascript:void(0);" class="cstm-btn arrow-btn text-center booktable" data-connection-id="<?php echo $booking_button_link; ?>"><?php echo $booking_button_text; ?></a>
 												<?php
 											}?>
 										</div>										
@@ -391,7 +381,7 @@ get_header();
 											if(!empty($booking_button_text) && !empty($booking_button_link))
 											{
 												?>
-												<li class="book-link popup-booking-button-anchor"><a class="popup-booking-button-anchor" href="javascript:void(0);" data-connection-id="<?php echo $booking_button_link; ?>" id="booktable-<?php echo $loop; ?>" class="booktable"><?php echo $booking_button_text; ?></a></li>
+												<li class="book-link"><a href="javascript:void(0);" class="cstm-btn arrow-btn text-center booktable" data-connection-id="<?php echo $booking_button_link; ?>"><?php echo $booking_button_text; ?></a></li>
 												<?php
 											}
 											?>
@@ -598,8 +588,6 @@ get_header();
 								$wine_name 				= $slide['crb_wine_name'];
 								$more_button_link		= $slide['crb_more_button_link'];
 								$more_button_text		= $slide['crb_more_button_text'];
-								$booking_button_link 	= $slide['crb_booking_button_link'];
-								$booking_button_text 	= $slide['crb_booking_button_text'];
 
 								$active_slide = "";
 								if($loop == 0)
@@ -619,12 +607,6 @@ get_header();
 											{
 												?>
 												<li class="see-more-link"><a href="<?php echo $more_button_link; ?>"><?php echo $more_button_text; ?></a></li>
-												<?php
-											}
-											if(!empty($booking_button_text) && !empty($booking_button_link))
-											{
-												?>
-												<li class="book-link "><a href="<?php echo $booking_button_link; ?>"><?php echo $booking_button_text; ?></a></li>
 												<?php
 											}
 											?>

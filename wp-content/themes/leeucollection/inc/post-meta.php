@@ -357,8 +357,6 @@ Container::make('post_meta', 'Hotels')
                 Field::make('textarea', 'crb_hotel_description', 'Short Description'),
                 Field::make('text', 'crb_more_button_text', 'Detail Button Text')->set_width('50'),
                 Field::make('text', 'crb_more_button_link', 'Detail Button Link')->set_width('50'),
-                Field::make('text', 'crb_booking_button_text', 'Booking Button Text')->set_width('50'),
-                Field::make('text', 'crb_booking_button_link', 'Booking Button Link')->set_width('50'),
             )),
         )),
     ));   
@@ -424,8 +422,6 @@ Container::make('post_meta', 'Wine')
             Field::make('textarea', 'crb_wine_description', 'Short Description')->set_width('50'),
             Field::make('text', 'crb_more_button_text', 'Detail Button Text')->set_width('50'),
             Field::make('text', 'crb_more_button_link', 'Detail Button Link')->set_width('50'),
-            Field::make('text', 'crb_booking_button_text', 'Booking Button Text')->set_width('50'),
-            Field::make('text', 'crb_booking_button_link', 'Booking Button Link')->set_width('50'),
         )),
 
         Field::make('complex', 'crb_wines_section_bottom_links', 'Bottom Links')->add_fields(array(

@@ -340,7 +340,8 @@ var Blank ={
 
 			if(connection_id != "" && connection_id != null)
 			{
-				$("#"+id).lbuiDirect({
+				/*$("#"+id).lbuiDirect({*/
+				$(this).lbuiDirect({
 					connectionid : connection_id,
 					style :{
 						baseColor : "D1A757"
