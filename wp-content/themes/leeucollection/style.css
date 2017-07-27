@@ -851,7 +851,9 @@ body.body-ready .side-nav li.active > a {
     opacity: 0;
     visibility: hidden;
 }*/
-li.current-link ul li a {
+li.current-link ul li a,
+li.current-link.menu-item-has-no-children + li
+{
     color: #222944;
 }
 body.body-ready .side-nav li a.current-link {
