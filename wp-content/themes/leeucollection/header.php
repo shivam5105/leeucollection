@@ -98,7 +98,7 @@ $page_template_file = basename(get_page_template());
 						if($has_logo_text_img)
 						{
 							?>
-							<a href="<?php echo home_url( '/' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logotype.png" class="bottom-logo" alt="" /></a>
+							<a href="<?php echo home_url( '/' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/Leeu-Collection-Text.svg" class="bottom-logo" alt="" /></a>
 							<?php
 						}
 						?>
