@@ -139,8 +139,6 @@ Container::make('post_meta', 'Room Rates')
         /*Field::make('complex', 'crb_rates', '')->add_fields(array(*/
              Field::make('text', 'crb_rate_amount', 'Amount')->help_text('Example: R9000.00')->set_width(20),
              Field::make('text', 'crb_rate_for', 'For')->set_default_value('per room/per night')->set_width(80)->help_text('Example: per room/per night'),
-             Field::make('text', 'crb_booking_buton_text', 'Booking Button Text')->set_default_value('Book')->set_width(20),
-             Field::make('text', 'crb_booking_buton_link', 'Booking Button Link')->set_width(80),
         /*)),*/
     ));
 
