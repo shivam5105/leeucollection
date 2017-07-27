@@ -268,7 +268,6 @@ function leeucollection_scripts() {
 	wp_enqueue_script( 'leeucollection-meanmenu-js', get_template_directory_uri() . '/js/jquery.meanmenu.min.js', array( 'jquery' ), '20160816', true );
 	
 	wp_enqueue_script( 'leeucollection-ajaxchimp', get_template_directory_uri() . '/js/jquery.ajaxchimp.min.js');
-	wp_enqueue_script( 'leeucollection-instantclick', get_template_directory_uri() . '/js/instantclick.min.js');
 
 	wp_enqueue_script( 'jquery-datepick-plugin', get_template_directory_uri() . '/js/jquery.plugin.js');
 	wp_enqueue_script( 'jquery-moment', get_template_directory_uri() . '/js/moment.js');
@@ -1321,13 +1320,3 @@ function my_wpcf7_dropdown_form($html)
 add_filter('wpcf7_form_elements', 'my_wpcf7_dropdown_form');
 
 add_filter('jpeg_quality', function($arg){ return 100; });
-
-function add_attributes_to_script_tags($tag, $handle)
-{
-	if('leeucollection-instantclick' !== $handle && 'leeucollection-custom' !== $handle && 'contact-form-7' !== $handle)
-	{
-		return $tag;
-	}
-	return str_replace( ' src', ' data-no-instant src', $tag );
-}
-add_filter('script_loader_tag', 'add_attributes_to_script_tags', 10, 2);

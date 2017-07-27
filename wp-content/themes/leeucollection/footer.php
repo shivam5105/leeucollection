@@ -291,7 +291,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- <script data-no-instant>InstantClick.init();</script> -->
 	<script type="text/javascript" data-no-instant>
 		function googleTranslateElementInit()
 		{
