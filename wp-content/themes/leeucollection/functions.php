@@ -1272,6 +1272,13 @@ function fix_svg_thumb_display() {
 add_action('admin_head', 'fix_svg_thumb_display');
 function left_sidebar_nav_not_hotel($exclude_posts, $post_type, $post_id = 0, $depth = 0, $ul_class = "side-nav", $post_count = false)
 {
+	global $post;
+	$ancestors_ids = array();
+	if(!empty($post))
+	{
+		$ancestors_ids 	= get_post_ancestors($post->ID);
+	}
+
 	$args = array(
 		'post_type' => $post_type,
 		'numberposts' => -1,
@@ -1301,6 +1308,8 @@ function left_sidebar_nav_not_hotel($exclude_posts, $post_type, $post_id = 0, $d
 				$depth = 0;
 			}
 			$child_post_link = get_permalink($post_id);
+			
+			$current_class = ($post_id == $post->ID) ? "current current-link" : "";
 
 			$total_child_posts = left_sidebar_nav_not_hotel($exclude_posts, $post_type, $post_id, $depth, "side-sub-menu", true);
 			$has_childern = "";
@@ -1312,9 +1321,14 @@ function left_sidebar_nav_not_hotel($exclude_posts, $post_type, $post_id = 0, $d
 			{
 				$has_childern = "menu-item-has-no-children";
 			}
+			$open_sub_menu = "";
+			if(in_array($post_id, $ancestors_ids))
+			{
+				$open_sub_menu = "current active";
+			}
 			?>
-			<li class="side-nav-li <?php echo $has_childern." ".$ul_depth_li_class; ?>">
-				<a href="<?php echo $child_post_link." ".$has_childern; ?>"><?php echo $child_post->post_title; ?></a>
+			<li class="side-nav-li <?php echo $current_class." ".$has_childern." ".$ul_depth_li_class; ?>">
+				<a href="<?php echo $child_post_link." ".$has_childern." ".$current_class; ?>"><?php echo $child_post->post_title; ?></a>
 				<?php
 				left_sidebar_nav_not_hotel($exclude_posts, $post_type, $post_id, $depth, "side-sub-menu");
 				?>
