@@ -204,7 +204,7 @@ get_header();
 													<?php
 												}
 												?>
-												<a class="cstm-btn arrow-btn text-center popup-booking-button-anchor" href="javascript:void(0);" data-hotel="<?php echo addslashes($hotel_name); ?>" data-booking-for="hotel">Book</a>
+												<a class="cstm-btn arrow-btn text-center popup-booking-button-anchor" href="javascript:void(0);" data-booking-at="<?php echo addslashes($hotel_name); ?>" data-booking-for="hotel">Book</a>
 											</div>
 										</div>
 										<div class="inner-detail-content for-desk">
@@ -229,7 +229,7 @@ get_header();
 													<?php
 												}
 												?>
-												<li class="book-link"><a class="popup-booking-button-anchor" href="javascript:void(0);" data-hotel="<?php echo addslashes($hotel_name); ?>" data-booking-for="hotel">Book</a></li>
+												<li class="book-link"><a class="popup-booking-button-anchor" href="javascript:void(0);" data-booking-at="<?php echo addslashes($hotel_name); ?>" data-booking-for="hotel">Book</a></li>
 											</ul>
 										</div>
 									</div>

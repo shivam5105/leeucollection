@@ -428,6 +428,26 @@ var Blank ={
 	openBookingPopup: function(){
 		$(document).on("click",".popup-booking-button a, .popup-booking-button-anchor", function(e){
 			e.preventDefault();
+			var booking_at 	= $.trim($(this).attr("data-booking-at"));
+			var booking_for = $.trim($(this).attr("data-booking-for"));
+			
+			if(booking_for != "" && booking_for != null && booking_at != "" && booking_at != null)
+			{
+				booking_at = booking_at.toLowerCase();
+				
+				if(booking_for == 'hotel')
+				{
+					$(".popup_wrapper #content1 [name='Hotel'] option").filter(function() {
+						return $.trim($(this).text()).toLowerCase() == booking_at;
+					}).attr('selected', true).trigger('change');
+
+					$(".hotel_dtls ul li").removeClass("add_hover special");
+					$(".hotel_dtls ul li[data-rel='content1']").addClass("add_hover special");
+					$(".popup_wrapper .one").hide();
+					$(".popup_wrapper #content1").show();
+				}
+			}
+
 			$('.main_sec').fadeIn();
 		})
 	},
