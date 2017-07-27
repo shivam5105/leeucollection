@@ -145,7 +145,7 @@ Container::make('post_meta', 'Room Rates')
                 ->add_options(array(
                     'yes' => 'Yes',
                     'no' => 'No',
-            ))->set_default_value('yes'),
+            ))->set_default_value('no'),
         /*)),*/
     ));
 
