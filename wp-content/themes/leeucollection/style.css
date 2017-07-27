@@ -3226,6 +3226,7 @@ appearance: none;
 }
 .description{
     font-size: 15px;
+    text-transform: none;
 }
 .side-log-wrap img[src*=".svg"]
 {
