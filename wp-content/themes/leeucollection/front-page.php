@@ -381,7 +381,7 @@ get_header();
 											if(!empty($booking_button_text) && !empty($booking_button_link))
 											{
 												?>
-												<li class="book-link"><a href="javascript:void(0);" class="cstm-btn arrow-btn text-center booktable" data-connection-id="<?php echo $booking_button_link; ?>"><?php echo $booking_button_text; ?></a></li>
+												<li class="book-link"><a href="javascript:void(0);" class="booktable" data-connection-id="<?php echo $booking_button_link; ?>"><?php echo $booking_button_text; ?></a></li>
 												<?php
 											}
 											?>
