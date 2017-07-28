@@ -407,7 +407,7 @@ get_header();
 							$loop = 0;
 							foreach ($slider_data as $slider_key => $res_slider)
 							{
-								$res_locations = $res_slider['crb_home_restaurants'];
+								$res_locations = $res_slider['crb_restaurant_locations'];
 								$location_class = "";
 								if($loop > 0)
 								{
