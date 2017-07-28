@@ -414,7 +414,7 @@ get_header();
 									$location_class = "spc-top";
 								}
 								?>
-								<div class="gotoslidehead <?php echo $location_class; ?> ucase"><?php echo $hotel_locations; ?></div>
+								<div class="gotoslidehead <?php echo $location_class; ?> ucase"><?php echo $res_locations; ?></div>
 								<?php
 								foreach ($res_slider['crb_home_restaurants'] as $slide_key => $slide)
 								{
