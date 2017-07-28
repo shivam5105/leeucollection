@@ -123,10 +123,10 @@ get_header(); ?>
 												<?php //echo @$post_meta['_crb_rate_for'][0]; ?>
 											</div> -->
 											<?php
-											if(is_array($post_meta['_crb_booking_buton_link']) && !empty($post_meta['_crb_booking_buton_link'][0]))
+											if(isset($post_meta['_crb_show_booking_button']) && is_array($post_meta['_crb_show_booking_button']) && $post_meta['_crb_show_booking_button'][0] == 'yes')
 											{
 												?>
-												<a href="<?php echo $post_meta['_crb_booking_buton_link'][0]; ?>" class="cstm-btn arrow-btn text-center" target="_blank"><?php echo $post_meta['_crb_booking_buton_text'][0]; ?></a>
+												<a class="cstm-btn arrow-btn text-center popup-booking-button-anchor" href="javascript:void(0);" data-booking-at="<?php echo addslashes($top_most_parent_post->post_title); ?>" data-booking-for="hotel">Book</a>
 												<?php
 											}?>
 										</div>
