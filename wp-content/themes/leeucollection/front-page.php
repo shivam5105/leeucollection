@@ -350,10 +350,10 @@ get_header();
 									<div class="sliding-detail <?php echo $active_slide; ?>" data-object="<?php echo $loop; ?>">
 										<div class="inner-detail-content for-ipad-mob"> 
 											<div class="content-part notranslate"> 
-												<?php echo $hotel_name; ?>
+												<?php echo $restaurant_name; ?>
 											</div>
 											<div class="gotoslidehead ucase notranslate"> 
-												<?php echo $hotel_slider['crb_hotel_locations']; ?>
+												<?php echo $restaurant_slider['crb_restaurant_locations']; ?>
 											</div>
 											<div class="cstm-btn-wrapper">
 												<?php
