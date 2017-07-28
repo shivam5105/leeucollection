@@ -1,0 +1,29 @@
+<?php
+							$loop = 0;
+							foreach ($slider_data as $slider_key => $res_slider)
+							{
+								$hotel_locations = $hotel_slider['crb_home_restaurants'];
+								$location_class = "";
+								if($loop > 0)
+								{
+									$location_class = "spc-top";
+								}
+								?>
+								<div class="gotoslidehead <?php echo $location_class; ?> ucase"><?php echo $hotel_locations; ?></div>
+								<?php
+								foreach ($hotel_slider['crb_home_hotels'] as $slide_key => $slide)
+								{
+									$hotel_name = $slide['crb_hotel_name'];
+									$more_button_link	= $slide['crb_more_button_link'];
+									$active_slide = "";
+									if($loop == 0)
+									{
+										$active_slide = "active-main-pagination";
+									}
+									?>
+									<div class="gotoslide <?php echo $active_slide; ?>" data-object="<?php echo $loop; ?>"><?php echo $hotel_name; ?></div>
+									<?php
+									$loop++;
+								}
+							}
+							?>
