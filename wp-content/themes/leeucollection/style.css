@@ -1641,7 +1641,7 @@ button{
     color: #AC9E94;
     font-weight: 600;   
     margin-top: 11px; 
-    display: block;
+    display: none;
 }
 div#wave { 
     position: relative; 
