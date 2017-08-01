@@ -135,7 +135,7 @@
 									</select>
 								</div>
 								<div class="choose_date mgb-30">
-									<div class="at extext pdb-20">ARRIVAL / DEPRATURE</div>
+									<div class="at extext pdb-20">ARRIVAL / DEPARTURE</div>
 									<input class="rangePicker lyon_font" type="text">
 								</div>
 								<div class="room_guest">
