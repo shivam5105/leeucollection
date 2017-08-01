@@ -3238,6 +3238,6 @@ img[src*=".svg"].bottom-logo
 {
     width: 109px;
 }
-.page-template-template-hotel-listing h2{
+.page-template-template-hotel-listing h2,.page-template-template-hotel-listing h1.ucase{
     font-size: 50px;
 }
