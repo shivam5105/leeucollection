@@ -1520,13 +1520,15 @@ body.hotel-template-template-menudetail .side-sub-menu.child-2 li.current.active
     font-family: 'BW Haas';
     font-weight: normal;
     font-style: normal;
-    font-size: 18px;
+    font-size: 15px;
     outline:none; 
     border-bottom:1px solid #c7beb6;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;  
     background: none;
+    color: #222944;
+    letter-spacing: 0.01em;
 }
 .form-item.select-item {
     padding-top: 26px;
@@ -1835,8 +1837,8 @@ div.wpcf7-mail-sent-ok , div.wpcf7-validation-errors{
     top: -20px;
 }
 .home-about-content {
-    font-size: 22px;
-    letter-spacing: 0.03em;
+    font-size: 22px;    
+    letter-spacing: 0.04em;
     line-height: 1.4;
     margin-top: 100px;
 }
