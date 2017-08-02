@@ -460,7 +460,7 @@ function custom_taxonomy($data)
 function location_taxonomy()
 {
 	$data = array(
-		'post-slug' => array('hotel'),
+		'post-slug' => array('hotel','leeu-restaurants'),
 		'name' => 'Locations',
 		'singular_name' => 'Location',
 		'slug' => 'hotel-locations',

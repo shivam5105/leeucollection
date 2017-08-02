@@ -1173,6 +1173,9 @@ input:-moz-placeholder { /* Firefox 18- */
   color: #222944;
   opacity:1;
 }
+input:focus::-webkit-input-placeholder {
+    opacity: 0;
+}
 .next-wrapper{
    position:absolute; 
    right:0; 
@@ -2644,7 +2647,9 @@ margin:0;
     background:url(images/book-form-arrow.png) no-repeat 360px 3px;
     border-radius: 0 !important;
 }
-
+select option{
+    background: rgba(34, 41, 69, 0.5);
+}
 .all_cat{
     margin-top:36px;
 }
