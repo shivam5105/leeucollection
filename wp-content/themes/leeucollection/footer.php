@@ -34,18 +34,20 @@
 						<div id="google_translate_element"></div>
 					</div>
 				   <div class="col-3">
-						<div class="trip-advisor-logo-wrapper">
-							<?php
-							if(!empty($post))
+						<?php
+						if(!empty($post))
+						{
+							$trip_advisor = carbon_get_post_meta($post->ID, "crb_trip_advisor_code");
+							if(!empty($trip_advisor))
 							{
-								$trip_advisor = carbon_get_post_meta($post->ID, "crb_trip_advisor_code");
-								if(!empty($trip_advisor))
-								{
-									echo $trip_advisor;
-								}
+								?>
+								<div class="trip-advisor-logo-wrapper">
+									<?php echo $trip_advisor; ?>
+								</div>
+								<?php
 							}
-							?>
-						</div>
+						}
+						?>
 				   </div>
 				   <div class="col-6">
 				      <div class="footer-head">SIGN UP TO LEARN ABOUT SPECIAL EVENTS AND OFFERS</div>
