@@ -26,6 +26,7 @@ $page_template_file = basename(get_page_template());
 ?>
 <body <?php body_class(); ?>>
 	<div itemscope itemtype="http://schema.org/Hotel">
+		
 		    <div class="cht-wthr">
 		      	<?php
 				$hide_weather_on_templates_array = array('template-hotel-listing.php');

@@ -51,9 +51,19 @@
 	.mean-container .mean-bar , .mean-container .mean-nav{
 		background: #fff;
 	}
+	#menu-mobile-menu {
+     line-height: 3;
+     margin-top: 30px;
+     overflow-y: scroll;
+    }
+    #menu-mobile-menu .sub-menu {
+	    line-height: 1;
+	}	
 	.mean-container .mean-nav ul li a{
 		color: #000;
 		text-align: center;
+		font-size: 12px;
+		letter-spacing: 0.12em;
 	}
 	.mean-nav .container.pos-rel{
 		padding:0;
@@ -106,7 +116,7 @@
 		height:8px;
 		position: absolute;
 		left: 0;
-		top: 23px;
+		top: 33px;
 		-webkit-transform: rotate(180deg); 
 		-moz-transform: rotate(180deg); 
 		-ms-transform: rotate(180deg);
@@ -134,6 +144,7 @@
 	.meanmenu-book.pos-r {
 	    color: #ac9e94;
 	    display: block;
+	    font-size: 9px;
 	    font-weight: 700;
 	    height: 22px;
 	    line-height: 22px;
@@ -153,24 +164,24 @@
 	}
 	/**change this for spacing**/
 	.mean-container .mean-bar{
-		min-height: 62px;
+		min-height: 44px;
 	}
 	.mobile-logo img{
 		display: block;
 		margin: 0 auto;
-		max-width:40%;
-		margin-top: 4px;
+		max-width: 27%;
+		margin-top: 1px;
 	}
 	#site-header.mean-container a.meanmenu-reveal {
-		padding-top: 21px;
-		padding-left: 25px;	
+		padding-top: 11px;
+		padding-left: 20px;	
 	}
 	.meanmenu-book.pos-r {
-		padding-top: 21px;
-		padding-right: 25px;
+		padding-top: 12px;
+		padding-right: 20px;
 	}
 	.mean-container .mean-nav{
-		margin-top: 62px;
+		margin-top: 44px;
 	}
 	/**change this for spacing end**/
 	/** small navigation end here **/	
@@ -186,7 +197,18 @@
 	.mean-nav .menu-header-menu-left-container > ul > li.menu-item > a + ul.sub-menu {
 	    max-height: 400px;
 	    overflow: scroll;
-	}	
+	}
+	a.meanmenu-reveal.meanclose:after{
+		background: url('../images/close.svg') no-repeat;
+		content: "";
+		width: 22px;
+		height: 22px;
+		display: block;
+		position: absolute;
+		top: 16px;
+		left: 22px;
+	}
+
 }
 @media only screen and (max-width: 1024px){
 	* { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
@@ -581,7 +603,7 @@
 		margin-top: 50px;
 	}
 	.home #site-main, .page-template-template-hotel-listing #site-main, .leeu-restaurants-template-template-restaurantlisting #site-main{
-		margin-top: 62px;
+		margin-top: 44px;
 	}	
 	/**hotel page template**/
 	.banner-text .location-text , .banner-text h1{ 
