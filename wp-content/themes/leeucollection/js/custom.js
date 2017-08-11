@@ -519,8 +519,7 @@ var Blank ={
 				meanScreenWidth: "1140",
 				meanMenuContainer : '#site-header',
 				meanRevealPosition : "left",
-				meanMenuOpen: "MENU",
-				meanMenuClose: "CLOSE",
+				meanMenuClose: "",
 				meanExpand: " ",
 				meanContract: " ",
 			});
@@ -577,6 +576,8 @@ var Blank ={
 }
 $(document).ready(function(){
 	Blank.ready();
+	win_h = $(window).height();
+	$('ul#menu-mobile-menu').css({'height': win_h});
 });
 $(window).resize(function(){
 	Blank.resize();

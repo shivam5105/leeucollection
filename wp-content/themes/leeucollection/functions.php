@@ -90,7 +90,7 @@ function leeucollection_setup() {
 		'header_menu_right' => __( 'Header Menu - Right', 'leeucollection' ),
 		'footer_menu_left' => __( 'Footer Menu - Left', 'leeucollection' ),
 		'footer_menu_right' => __( 'Footer Menu - Right', 'leeucollection' ),
-		'slide_menu' => __( 'Slide Menu', 'leeucollection' ),
+		'slide_menu' => __( 'Mobile Menu', 'leeucollection' ),
 	) );
 
 	/*

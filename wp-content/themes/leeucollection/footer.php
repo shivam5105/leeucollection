@@ -1,3 +1,8 @@
+		<?php
+			//date_default_timezone_set("Africa/Franschhoek");
+			//echo "The time in " . date_default_timezone_get() . " is " . date("H:i:s");
+
+			?>
 		<div class="clearfix"></div>
 		<footer id="footer" class="scroll-anim" data-anim="fade">
 			<div class="container">
