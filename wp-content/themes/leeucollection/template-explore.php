@@ -117,6 +117,7 @@ get_header(); ?>
 								$limit 			= @$post_meta['_crb_explore_instagram_limit'][0];
 								$userid 		= @$post_meta['_crb_explore_instagram_userid'][0];
 								$access_token 	= @$post_meta['_crb_explore_instagram_access_token'][0];
+								$hash_tag 		= @$post_meta['_crb_explore_instagram_hash_tag'][0];
 								if(empty($limit) || $limit < 1)
 								{
 									$limit = 6;
@@ -127,11 +128,26 @@ get_header(); ?>
 									<script type="text/javascript">
 										userFeed = new Instafeed({
 									        get:'user',
-											limit:"<?php echo $limit; ?>",
 									        userId:"<?php echo $userid; ?>",
 									        accessToken:"<?php echo $access_token; ?>",
 											resolution: 'standard_resolution',
 											template: '<a href="{{link}}" target="_blank"><img src="{{image}}" alt="{{location}}"/></a>',
+											<?php
+											if(isset($hash_tag) && !empty($hash_tag))
+											{
+												?>
+												filter: function(image) {
+											      return image.tags.indexOf("<?php echo $hash_tag; ?>") >= 0;
+											    }
+											    <?php
+											}
+											else
+											{
+												?>
+												limit:"<?php echo $limit; ?>",
+												<?php
+											}
+											?>
 										});
 									    userFeed.run();
 									</script>
