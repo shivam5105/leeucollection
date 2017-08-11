@@ -149,7 +149,8 @@ get_header(); ?>
 											    	if(image.tags.indexOf("<?php echo $hash_tag; ?>") >= 0)
 											    	{
 											    		image_count++;
-											    		if(image_count == insta_limit)
+											    		console.debug(image_count +" > "+ insta_limit);
+											    		if(image_count > insta_limit)
 											    		{
 											    			return false;
 											    		}
