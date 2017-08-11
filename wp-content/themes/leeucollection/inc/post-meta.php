@@ -580,7 +580,7 @@ Container::make('post_meta', 'Instagram Feed Details')
         Field::make('text', 'crb_explore_instagram_limit', 'Limit Feeds')->set_width('10'),
         Field::make('text', 'crb_explore_instagram_userid', 'Instagram User-ID')->set_width('20'),
         Field::make('text', 'crb_explore_instagram_access_token', 'Instagram Access Token')->set_width('50'),
-        Field::make('text', 'crb_explore_instagram_hash_tag', 'Hash Tag')->set_width('20')->help_text("Use only 1 Hash Tag."),
+        Field::make('text', 'crb_explore_instagram_hash_tag', 'Hash Tag')->set_width('20')->help_text("Use only 1 Hash Tag (without # sign)."),
     ));
 
 /*
