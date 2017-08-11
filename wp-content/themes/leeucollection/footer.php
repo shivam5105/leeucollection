@@ -310,7 +310,10 @@
 	<script type="text/javascript" data-no-instant>
 		function googleTranslateElementInit()
 		{
-			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,af,en,nl,pt,sv', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+			
+			/*new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,af,en,nl,pt,sv', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');*/
+
 			/*new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en-us,en-gb,nl-nl,de-de,en-za,de,nl,pt-br,sv-se,de-ch', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');*/
 		}
 	</script>
