@@ -126,6 +126,15 @@ get_header(); ?>
 								{
 									?>
 									<script type="text/javascript">
+										var insta_limit = "<?php echo $limit; ?>";
+										<?php
+										if(isset($hash_tag) && !empty($hash_tag))
+										{
+											?>
+											var image_count = 0;
+											<?php
+										}
+										?>
 										userFeed = new Instafeed({
 									        get:'user',
 									        userId:"<?php echo $userid; ?>",
@@ -137,14 +146,22 @@ get_header(); ?>
 											{
 												?>
 												filter: function(image) {
-											      return image.tags.indexOf("<?php echo $hash_tag; ?>") >= 0;
+											    	if(image.tags.indexOf("<?php echo $hash_tag; ?>") >= 0)
+											    	{
+											    		image_count++;
+											    		if(image_count == insta_limit)
+											    		{
+											    			return false;
+											    		}
+											    		return true;
+											    	}
 											    }
 											    <?php
 											}
 											else
 											{
 												?>
-												limit:"<?php echo $limit; ?>",
+												limit: insta_limit,
 												<?php
 											}
 											?>
