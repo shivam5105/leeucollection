@@ -577,9 +577,10 @@ Container::make('post_meta', 'Instagram Feed Details')
     ->show_on_template(array('template-explore.php'))
     ->add_fields(array(
         Field::make('text', 'crb_explore_instagram_heading', 'Heading'),
-        Field::make('text', 'crb_explore_instagram_limit', 'Limit Feeds')->set_width('20'),
-        Field::make('text', 'crb_explore_instagram_userid', 'Instagram User-ID')->set_width('30'),
+        Field::make('text', 'crb_explore_instagram_limit', 'Limit Feeds')->set_width('10'),
+        Field::make('text', 'crb_explore_instagram_userid', 'Instagram User-ID')->set_width('20'),
         Field::make('text', 'crb_explore_instagram_access_token', 'Instagram Access Token')->set_width('50'),
+        Field::make('text', 'crb_explore_instagram_hash_tag', 'Hash Tag')->set_width('20')->help_text("Use only 1 Hash Tag (without # sign)."),
     ));
 
 /*
