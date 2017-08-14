@@ -3252,3 +3252,6 @@ img[src*=".svg"].bottom-logo
 .page-template-template-hotel-listing h2,.page-template-template-hotel-listing h1.ucase{
     font-size: 50px;
 }
+.intro-blurb.restaurant-description{
+    padding-bottom: 0;
+}

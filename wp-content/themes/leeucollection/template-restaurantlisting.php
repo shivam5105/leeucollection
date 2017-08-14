@@ -5,6 +5,7 @@ Template Name: Restaurant Listing
 
 get_header(); ?>
 	<?php
+	the_post();
 	$post_id 	= $post->ID;
     $post_meta 	= ( $post ) ? get_post_meta( $post->ID ) : null;
 
@@ -105,9 +106,13 @@ get_header(); ?>
 				<?php
 			}?>
 		</div>
-		<?php
-		include_once("book-room-form.php");
-		?>
+			<div class="intro-blurb scroll-anim restaurant-description" data-anim="fade-up">
+				<div class="col-10 col-centered">
+					<div class="text-center" itemprop="description">
+						<?php the_content(); ?>
+					</div>
+				</div>
+			</div>
 		<?php
 		$section_loop = 0;
 		$res_sections = carbon_get_post_meta($post->ID, "crb_res_sections_new", 'complex');
