@@ -3255,3 +3255,20 @@ img[src*=".svg"].bottom-logo
 .intro-blurb.restaurant-description{
     padding-bottom: 0;
 }
+.container.error-404-page {
+    padding: 100px 0;
+    text-align: center;
+}
+.error-404-page h1.ucase {
+    font-size: 24px;
+}
+.error-404-page .page-content p {
+    font-size: 24px;
+    font-weight: 100;
+    font-family: 'GillSans';
+    text-transform: uppercase;
+    line-height: 1.2em;
+}
+.error-404-page .cstm-btn-wrapper {
+    margin-top: 30px;
+}

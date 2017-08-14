@@ -9,14 +9,17 @@
 
 get_header(); ?>
     <section id="site-main">
-		<div class="container">
-			<div class="text-center scroll-anim animate-custom" data-anim="fade-up">
-				<h1 class="ucase"><?php _e( 'Oops! That page can&rsquo;t be found.', 'leeucollection' ); ?></h1>
+		<div class="container error-404-page">
+			<div class="text-center">
+				<h1 class="ucase"><?php _e( '404', 'leeucollection' ); ?></h1>
 			</div>
 			<div class="page-content">
-				<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'leeucollection' ); ?></p>
+				<p>sorry this page does not exist</p>
+				<p>it might have been retired or moved</p>
 
-				<?php get_search_form(); ?>
+				<div class="cstm-btn-wrapper text-center">
+					<a href="<?php echo home_url(); ?>" class="cstm-btn arrow-btn">Home</a>
+				</div>
 			</div><!-- .page-content -->
 		</div>
 	</section>
