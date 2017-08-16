@@ -3292,8 +3292,8 @@ img[src*=".svg"].bottom-logo
     color: #000000;
 }
 .blk-btn.arrow-btn::after {
-    background: rgba(0, 0, 0, 0) url("images/arrow-icon.png") no-repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) url("images/arrow-icon-black.png") no-repeat scroll 0 0;
 }
 .blk-btn.arrow-btn:hover:after{
-     background: rgba(0, 0, 0, 0) url("images/arrow-icon-hover.png") no-repeat scroll 0 0;
- }
+     background: rgba(0, 0, 0, 0) url("images/arrow-icon-black-hover.png") no-repeat scroll 0 0;
+}
