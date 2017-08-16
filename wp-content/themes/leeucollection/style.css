@@ -3277,3 +3277,23 @@ img[src*=".svg"].bottom-logo
     text-align: center;
     margin: 18px 0;
 }
+.hotel-closed-reason {
+    font-size: 24px;
+    font-weight: 100;
+    font-family: GillSans;
+    margin-top: 38px;
+    line-height: 1.3em;
+}
+.hotel-closed-btn-wrapper {
+    margin-top: 32px;
+}
+.cstm-btn.blk-btn {
+    border: 1px solid #000000;
+    color: #000000;
+}
+.blk-btn.arrow-btn::after {
+    background: rgba(0, 0, 0, 0) url("images/arrow-icon.png") no-repeat scroll 0 0;
+}
+.blk-btn.arrow-btn:hover:after{
+     background: rgba(0, 0, 0, 0) url("images/arrow-icon-hover.png") no-repeat scroll 0 0;
+ }

@@ -938,3 +938,40 @@ Container::make('post_meta', 'Hotel ID & Chain ID - Navarino Service')
         Field::make('text', 'crb_hotel_id', 'Hotel ID - Navarino Service')->set_width(50),
         Field::make('text', 'crb_chain_id', 'Chain ID - Navarino Service')->set_width(50),
     ));
+
+//Hotel Closed Section - Hotel Individual Landing Page
+Container::make('post_meta', 'Hotel Closed?')
+    ->show_on_post_type('hotel')
+    ->show_on_level(1)
+    ->add_fields(array(
+            Field::make('radio', 'crb_hotel_closed', 'Hotel Closed?')
+                ->add_options(array(
+                    'yes' => 'Yes',
+                    'no' => 'No',
+                ))->set_default_value('no')->set_width('15'),
+
+            Field::make('textarea', 'crb_hotel_closed_reason', 'Hotel Closed Reason')->set_width('50')->help_text('This will come on the top of header banner.')->set_conditional_logic(array(
+                'relation' => 'AND', // Optional, defaults to "AND"
+                array(
+                    'field' => 'crb_hotel_closed',
+                    'value' => 'yes', // Optional, defaults to "". Should be an array if "IN" or "NOT IN" operators are used.
+                    'compare' => '=', // Optional, defaults to "=". Available operators: =, <, >, <=, >=, IN, NOT IN
+                )
+            )),
+            Field::make('text', 'crb_hotel_closed_button_text', 'Hotel Closed Button Text')->set_width('50')->help_text('This will come under "Hotel Closed Reason".')->set_conditional_logic(array(
+                'relation' => 'AND', // Optional, defaults to "AND"
+                array(
+                    'field' => 'crb_hotel_closed',
+                    'value' => 'yes', // Optional, defaults to "". Should be an array if "IN" or "NOT IN" operators are used.
+                    'compare' => '=', // Optional, defaults to "=". Available operators: =, <, >, <=, >=, IN, NOT IN
+                )
+            )),
+            Field::make('text', 'crb_hotel_closed_button_link', 'Hotel Closed Button Link')->set_width('50')->help_text('This will come under "Hotel Closed Reason".')->set_conditional_logic(array(
+                'relation' => 'AND', // Optional, defaults to "AND"
+                array(
+                    'field' => 'crb_hotel_closed',
+                    'value' => 'yes', // Optional, defaults to "". Should be an array if "IN" or "NOT IN" operators are used.
+                    'compare' => '=', // Optional, defaults to "=". Available operators: =, <, >, <=, >=, IN, NOT IN
+                )
+            )),
+        ));

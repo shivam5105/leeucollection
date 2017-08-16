@@ -15,6 +15,7 @@ get_header(); ?>
     <section id="site-main">
 		<div class="container">
 			<?php
+	    	$hotel_closed = carbon_get_post_meta($post->ID, "crb_hotel_closed");
 			$has_slider = false;
 	    	$slider_data = carbon_get_post_meta($post->ID, "crb_slider_images", 'complex');
 			if(is_array($slider_data) && !empty($slider_data) && count($slider_data) > 1)
@@ -76,182 +77,221 @@ get_header(); ?>
 				<div class="banner-text text-center pos-abs-top">
 					<div class="location-text ucase" itemprop="address"><?php echo $hotel_location; ?></div>
 					<h2 itemprop="legalName" class="ucase"><?php echo $post->post_title;?></h2>
+					<?php
+					if(!empty($hotel_closed) && $hotel_closed == 'yes')
+					{
+	    				$hotel_closed_reason 		= carbon_get_post_meta($post->ID, "crb_hotel_closed_reason");
+	    				$hotel_closed_button_text 	= carbon_get_post_meta($post->ID, "crb_hotel_closed_button_text");
+	    				$hotel_closed_button_link 	= carbon_get_post_meta($post->ID, "crb_hotel_closed_button_link");
+	    				
+	    				if(!empty($hotel_closed_reason))
+	    				{
+							?>
+							<div class="hotel-closed-reason">
+								<?php echo nl2br($hotel_closed_reason); ?>
+							</div>
+							<?php
+						}
+	    				if(!empty($hotel_closed_button_text) && !empty($hotel_closed_button_link))
+	    				{
+							?>
+							<div class="hotel-closed-btn-wrapper">
+								<a href="<?php echo $hotel_closed_button_link; ?>" class="cstm-btn arrow-btn text-center blk-btn"><?php echo $hotel_closed_button_text; ?></a>
+							</div>
+							<?php
+						}
+					}
+					?>
 				</div>
 			</div>
-			<div class="intro-blurb scroll-anim" data-anim="fade-up">
-				<div class="col-10 col-centered">
-					<div class="text-center" itemprop="description">
-						<?php the_content(); ?>
+			<?php
+			if(empty($hotel_closed) || $hotel_closed == 'no')
+			{
+				?>
+				<div class="intro-blurb scroll-anim" data-anim="fade-up">
+					<div class="col-10 col-centered">
+						<div class="text-center" itemprop="description">
+							<?php the_content(); ?>
+						</div>
 					</div>
 				</div>
-			</div>
+				<?php
+			}
+			?>
 		</div>
-		<div class="container">
-			<div class="col-12 rm-pad room-listing-contain">
-				<div class="row listing-row">
-					<div class="col-2 rm-pad-left">
-						<div class="side-nav-contain">
-							<div class="scroll-anim" data-anim="fade-up">
-								<div class="side-nav-wrap">
-									<?php
-									include_once("leeu_sidebar.php");
-									?>
+		<?php
+		if(empty($hotel_closed) || $hotel_closed == 'no')
+		{
+			?>
+			<div class="container">
+				<div class="col-12 rm-pad room-listing-contain">
+					<div class="row listing-row">
+						<div class="col-2 rm-pad-left">
+							<div class="side-nav-contain">
+								<div class="scroll-anim" data-anim="fade-up">
+									<div class="side-nav-wrap">
+										<?php
+										include_once("leeu_sidebar.php");
+										?>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="scroll-anim" data-anim="fade-up">
-						<div class="col-8">
-							<?php
-					    	$content_sections = carbon_get_post_meta($post->ID, "crb_content_section", 'complex');
-							if(is_array($content_sections) && !empty($content_sections))
-							{
-								foreach ($content_sections as $section_key => $content_section)
+						<div class="scroll-anim" data-anim="fade-up">
+							<div class="col-8">
+								<?php
+						    	$content_sections = carbon_get_post_meta($post->ID, "crb_content_section", 'complex');
+								if(is_array($content_sections) && !empty($content_sections))
 								{
-									$section_heading 	= $content_section['crb_section_heading'];
-									$section_layout 	= $content_section['crb_section_layout'];
-									$section_link_text 	= $content_section['crb_section_link_text'];
-									$section_link 		= $content_section['crb_section_link'];
-									$section_show_link	= $content_section['crb_section_show_link'];
-									$section_sliders	= $content_section['crb_section_slider'];
+									foreach ($content_sections as $section_key => $content_section)
+									{
+										$section_heading 	= $content_section['crb_section_heading'];
+										$section_layout 	= $content_section['crb_section_layout'];
+										$section_link_text 	= $content_section['crb_section_link_text'];
+										$section_link 		= $content_section['crb_section_link'];
+										$section_show_link	= $content_section['crb_section_show_link'];
+										$section_sliders	= $content_section['crb_section_slider'];
 
-									$has_slider = false;
-									if(is_array($section_sliders) && count($section_sliders) > 1)
-									{
-										$has_slider = true;
-									}
+										$has_slider = false;
+										if(is_array($section_sliders) && count($section_sliders) > 1)
+										{
+											$has_slider = true;
+										}
 
-									$slider_wrapper_class 	= "single_slider_wrapper";
-									$slider_theme_class 	= "owl-carousel single_slider owl-theme";
-									$data_anim_delay 		= "";
-									if($section_layout == 2)
-									{
-										$slider_wrapper_class 	= "two-slide-carousel two-img-col";
-										$slider_theme_class 	= "owl-carousel two_slider owl-theme";
-										$data_anim_delay 		= "data-anim-delay='100'";
-									}
-									if(!$has_slider)
-									{
-										$slider_theme_class = "";
-									}
-									?>
-									<div class="listing-box listing-row relative <?php if($section_link == '') { echo "no-page-link"; } ?>">
-										<div class="text-center scroll-anim section-heading-wrapper" data-anim="fade-up">
-											<?php
-											if($section_layout == 1)
-											{
-												?>
-												<h1 class="ucase"><?php echo $section_heading; ?></h1>
+										$slider_wrapper_class 	= "single_slider_wrapper";
+										$slider_theme_class 	= "owl-carousel single_slider owl-theme";
+										$data_anim_delay 		= "";
+										if($section_layout == 2)
+										{
+											$slider_wrapper_class 	= "two-slide-carousel two-img-col";
+											$slider_theme_class 	= "owl-carousel two_slider owl-theme";
+											$data_anim_delay 		= "data-anim-delay='100'";
+										}
+										if(!$has_slider)
+										{
+											$slider_theme_class = "";
+										}
+										?>
+										<div class="listing-box listing-row relative <?php if($section_link == '') { echo "no-page-link"; } ?>">
+											<div class="text-center scroll-anim section-heading-wrapper" data-anim="fade-up">
 												<?php
-											}
-											else
-											{
-												?>
-											    <h2 class="ucase"><?php echo $section_heading; ?></h2>
-												<?php
-											}?>
-										</div>
-										<?php if(!empty($section_link)){?>
-										<div class="text-right page-link view-all-link"> 
-											<?php
-											if($section_show_link == 'yes')
-											{
-												?>
-												<a href="<?php echo $section_link; ?>"><?php echo $section_link_text; ?></a>
-												<?php
-											}
-											?>
-										</div>
-										<?php }?>
-										<div class="<?php echo $slider_wrapper_class; ?>  <?php if(!$has_slider){ echo "no_slider"; }?>">
-											<?php
-											if($has_slider)
-											{
-												?>
-												<div class="next-wrapper">
-													<div class="next"></div>
-												</div>	
-												<?php
-											}?>
-											<div class="<?php echo $slider_theme_class; ?>">
-												<?php
-												$slide_counter = 0;
-												foreach($section_sliders as $slider_key => $section_slider)
+												if($section_layout == 1)
 												{
-													$slide_counter++;
-													$slide_image 	= $section_slider['crb_section_slide_image'];
-													$slide_title 	= $section_slider['crb_section_slide_title'];
-													$slide_desc 	= $section_slider['crb_section_slide_desc'];
-													$slide_link 	= @$section_slider['crb_section_slide_link'];
-													if($section_layout == 2)
-													{
-														$slide_image_url = wp_get_attachment_image_src( $slide_image, '411x258' );
-													}
-													else
-													{
-														$slide_image_url = wp_get_attachment_image_src( $slide_image, '821x478' );
-													}
-													$slide_image_url = $slide_image_url[0];
 													?>
-													<div class="slide-item">
-														<div class="banner-img scroll-anim" data-anim="fade-up" <?php if($section_layout == 2 && $slide_counter > 1){ echo $data_anim_delay; }?>>
-															<img src="<?php echo $slide_image_url; ?>" alt="" />
-															<?php
-															if(!empty($slide_link))
-															{
-																?>
-																<a href="<?php echo $slide_link; ?>" class="main-link"></a>
-																<?php
-															}
-															?>
-														</div>
-														<?php
-														if($section_layout == 2)
-														{
-															?>
-															<div class="desc-heading ucase"><?php echo $slide_title; ?></div>
-															<?php
-														}
-														else
-														{
-															?>
-															<div class="row detail-row">
-																<div class="col-3">
-																	<div class="desc-heading"><?php echo $slide_title; ?></div>
-																</div>
-																<div class="col-9">
-																	<div class="desc-content"> 
-																		<?php echo nl2br($slide_desc); ?>
-																	</div>
-																</div>
-															</div>
-															<?php
-														}?>
-													</div>
+													<h1 class="ucase"><?php echo $section_heading; ?></h1>
+													<?php
+												}
+												else
+												{
+													?>
+												    <h2 class="ucase"><?php echo $section_heading; ?></h2>
+													<?php
+												}?>
+											</div>
+											<?php if(!empty($section_link)){?>
+											<div class="text-right page-link view-all-link"> 
+												<?php
+												if($section_show_link == 'yes')
+												{
+													?>
+													<a href="<?php echo $section_link; ?>"><?php echo $section_link_text; ?></a>
 													<?php
 												}
 												?>
 											</div>
-											<?php
-											if($has_slider)
-											{
-												?>
-												<div class="prev-wrapper">
-													<div class="prev"></div>
+											<?php }?>
+											<div class="<?php echo $slider_wrapper_class; ?>  <?php if(!$has_slider){ echo "no_slider"; }?>">
+												<?php
+												if($has_slider)
+												{
+													?>
+													<div class="next-wrapper">
+														<div class="next"></div>
+													</div>	
+													<?php
+												}?>
+												<div class="<?php echo $slider_theme_class; ?>">
+													<?php
+													$slide_counter = 0;
+													foreach($section_sliders as $slider_key => $section_slider)
+													{
+														$slide_counter++;
+														$slide_image 	= $section_slider['crb_section_slide_image'];
+														$slide_title 	= $section_slider['crb_section_slide_title'];
+														$slide_desc 	= $section_slider['crb_section_slide_desc'];
+														$slide_link 	= @$section_slider['crb_section_slide_link'];
+														if($section_layout == 2)
+														{
+															$slide_image_url = wp_get_attachment_image_src( $slide_image, '411x258' );
+														}
+														else
+														{
+															$slide_image_url = wp_get_attachment_image_src( $slide_image, '821x478' );
+														}
+														$slide_image_url = $slide_image_url[0];
+														?>
+														<div class="slide-item">
+															<div class="banner-img scroll-anim" data-anim="fade-up" <?php if($section_layout == 2 && $slide_counter > 1){ echo $data_anim_delay; }?>>
+																<img src="<?php echo $slide_image_url; ?>" alt="" />
+																<?php
+																if(!empty($slide_link))
+																{
+																	?>
+																	<a href="<?php echo $slide_link; ?>" class="main-link"></a>
+																	<?php
+																}
+																?>
+															</div>
+															<?php
+															if($section_layout == 2)
+															{
+																?>
+																<div class="desc-heading ucase"><?php echo $slide_title; ?></div>
+																<?php
+															}
+															else
+															{
+																?>
+																<div class="row detail-row">
+																	<div class="col-3">
+																		<div class="desc-heading"><?php echo $slide_title; ?></div>
+																	</div>
+																	<div class="col-9">
+																		<div class="desc-content"> 
+																			<?php echo nl2br($slide_desc); ?>
+																		</div>
+																	</div>
+																</div>
+																<?php
+															}?>
+														</div>
+														<?php
+													}
+													?>
 												</div>
 												<?php
-											}?>
+												if($has_slider)
+												{
+													?>
+													<div class="prev-wrapper">
+														<div class="prev"></div>
+													</div>
+													<?php
+												}?>
+											</div>
 										</div>
-									</div>
-									<?php
+										<?php
+									}
 								}
-							}
-							?>
+								?>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+			<?php
+		}
+		?>
 	</section>
 
 <?php get_footer(); ?>
