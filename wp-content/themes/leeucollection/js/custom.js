@@ -502,8 +502,70 @@ var Blank ={
 			$("#request_event_hotel_name").val(hotel);
 		});
 	},
+	validate_book_room_form: function(){
+		$("#book_room_form").submit(function( event ){
+			/*event.preventDefault();*/
+			var error 		= "";
+			var $form 		= $("#book_room_form");
+			var hotel 		= $.trim($form.find("[name='Hotel']").val());
+			var chain_id 	= $.trim($form.find("[name='Hotel'] option:selected").attr("data-chain-id"));
+			var date 		= $.trim($form.find("[name='arrive']").val());
+
+			if(hotel == "" || hotel == null)
+			{
+				error += "Please select Hotel.\n";
+			}
+			if(date == "" || date == null)
+			{
+				error += "Please select Dates.\n";
+			}
+			if(error != "")
+			{
+				alert(error);
+				return false;
+			}
+			else
+			{
+				$form.find("[name='date']").val("");
+				$form.find("[name='Chain']").val(chain_id);
+				return true;
+			}
+		});
+	},
+	validate_book_room_form_popup: function(){
+		$("#book_room_form_popup").submit(function( event ){
+			/*event.preventDefault();*/
+			var error 		= "";
+			var $form 		= $("#book_room_form_popup");
+			var hotel 		= $.trim($form.find("[name='Hotel']").val());
+			var chain_id 	= $.trim($form.find("[name='Hotel'] option:selected").attr("data-chain-id"));
+			var date 		= $.trim($form.find("[name='arrive']").val());
+
+			if(hotel == "" || hotel == null)
+			{
+				error += "Please select Hotel.\n";
+			}
+			if(date == "" || date == null)
+			{
+				error += "Please select Dates.\n";
+			}
+			if(error != "")
+			{
+				alert(error);
+				return false;
+			}
+			else
+			{
+				$form.find("[name='date']").val("");
+				$form.find("[name='Chain']").val(chain_id);
+				return true;
+			}
+		});
+	},
 	ready: function(){
 		Blank.common_init();
+		Blank.validate_book_room_form();
+		Blank.validate_book_room_form_popup();
 		Blank.home_page_init();
 		Blank.hotel_listing_init();
 		Blank.rangePicker();

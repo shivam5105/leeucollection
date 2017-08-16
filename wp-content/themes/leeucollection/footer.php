@@ -122,15 +122,16 @@
 				<div class="one" id="content1" style="display:block;">
 					<div class="pops_on">
 						<div class="all_cat pd-l-r">
-							<form action="https://gc.synxis.com/rez.aspx" method="get">
+							<form action="https://gc.synxis.com/rez.aspx" method="get" id="book_room_form_popup">
 								<input type="hidden" name="locale" value="en-GB" />
-								<input type="hidden" name="start" value="searchres" /><!-- Options: availresults, searchres -->
-								<input type="hidden" name="arrive" value="" />
-								<input type="hidden" name="nights" value="" />
+								<!-- <input type="hidden" name="start" value="searchres" /> --> <!-- Options: availresults, searchres -->
+								<input type="hidden" name="arrive" value="<?php echo date('d/m/Y', time()); ?>" />
+								<input type="hidden" name="nights" value="1" />
+								<input type="hidden" name="Chain" value="" />
 								<div class="choose_hotel">
 									<div class="at extext pdb-20">AT</div>
 									<select class="lyon_font mgb-30" name="Hotel">
-										<option>Select a hotel</option>
+										<option value="">Select a hotel</option>
 										<?php
 										$args = array(
 											'posts_per_page' => '-1',
@@ -140,16 +141,21 @@
 											'post_parent' => '0',
 										);
 
-										$the_query = new WP_Query( $args );
-										if($the_query->have_posts())
+										$hotel_post_array = get_posts($args);
+										if(!empty($hotel_post_array))
 										{
-											while($the_query->have_posts())
+											foreach ($hotel_post_array as $key => $hotel_post)
 											{
-												$the_query->the_post();
-												$hotel_name = get_the_title();
-												?>
-												<option value="<?php echo $hotel_name; ?>"><?php echo $hotel_name; ?></option>
-												<?php
+												$hotel_name 	= $hotel_post->post_title;
+												$crb_hotel_id 	= carbon_get_post_meta($hotel_post->ID, "crb_hotel_id");
+												$crb_chain_id 	= carbon_get_post_meta($hotel_post->ID, "crb_chain_id");
+												
+												if(!empty($crb_hotel_id))
+												{
+													?>
+													<option value="<?php echo $crb_hotel_id; ?>" data-chain-id="<?php echo $crb_chain_id; ?>"><?php echo $hotel_name; ?></option>
+													<?php
+												}
 											}
 										}
 										?>
@@ -164,7 +170,7 @@
 										<div class="extext pdb-20">ROOMS</div>
 										<select class="lyon_font mgb-30" name="rooms">
 											<?php
-											for ($i = 1; $i <= 10; $i++)
+											for ($i = 1; $i <= 20; $i++)
 											{
 												?>
 												<option><?php echo $i; ?> room<?php if($i > 1){ echo "s"; } ?></option>
@@ -177,7 +183,7 @@
 										<div class="extext pdb-20">GUESTS</div>
 										<select class="lyon_font mgb-30" name="adult">
 											<?php
-											for ($i = 1; $i <= 10; $i++)
+											for ($i = 1; $i <= 20; $i++)
 											{
 												?>
 												<option><?php echo $i; ?> guest<?php if($i > 1){ echo "s"; } ?></option>
@@ -281,21 +287,11 @@
 								<select class="lyon_font mgb-30" name="request-event-hotel-dd" id="request-event-hotel-dd">
 									<option>Select a hotel</option>
 									<?php
-									$args = array(
-										'posts_per_page' => '-1',
-										'orderby' => 'menu_order',
-										'order' => 'ASC',
-										'post_type' => 'hotel',
-										'post_parent' => '0',
-									);
-
-									$the_query = new WP_Query( $args );
-									if($the_query->have_posts())
+									if(!empty($hotel_post_array))
 									{
-										while($the_query->have_posts())
+										foreach ($hotel_post_array as $key => $hotel_post)
 										{
-											$the_query->the_post();
-											$hotel_name = get_the_title();
+											$hotel_name 	= $hotel_post->post_title;
 											?>
 											<option value="<?php echo $hotel_name; ?>"><?php echo $hotel_name; ?></option>
 											<?php

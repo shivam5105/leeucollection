@@ -906,9 +906,10 @@ Container::make('post_meta', 'Trip Advisor Code')
 
 
 //Navarino Service Hotel ID
-Container::make('post_meta', 'Hotel ID - Navarino Service')
+Container::make('post_meta', 'Hotel ID & Chain ID - Navarino Service')
     ->show_on_post_type('hotel')
     ->show_on_level(1)
     ->add_fields(array(
-        Field::make('text', 'crb_hotel_id', ''),
+        Field::make('text', 'crb_hotel_id', 'Hotel ID - Navarino Service')->set_width(50),
+        Field::make('text', 'crb_chain_id', 'Chain ID - Navarino Service')->set_width(50),
     ));
