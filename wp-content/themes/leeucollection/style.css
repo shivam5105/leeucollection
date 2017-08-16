@@ -3272,3 +3272,8 @@ img[src*=".svg"].bottom-logo
 .error-404-page .cstm-btn-wrapper {
     margin-top: 30px;
 }
+.section-slider-heading-wrapper
+{
+    text-align: center;
+    margin: 18px 0;
+}

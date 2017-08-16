@@ -93,7 +93,7 @@ Container::make('post_meta', 'Short Description')
 //Images Slider
 Container::make('post_meta', 'Slider Images')
     ->show_on_post_type($leeu_post_types)
-    ->show_on_template(array('template-hotel.php','template-room.php','template-restaurant.php','template-facilities.php','template-gym.php','template-spa-wellness.php','template-explore.php', 'template-founder-and-team.php', 'template-location.php', 'template-work.php', 'template-hotel-wine.php','template-section-slider-with-header-banner.php','template-contact.php'))
+    ->show_on_template(array('template-hotel.php','template-room.php','template-restaurant.php','template-facilities.php','template-gym.php','template-spa-wellness.php','template-explore.php', 'template-founder-and-team.php', 'template-location.php', 'template-work.php', 'template-hotel-wine.php','template-section-slider-with-header-banner.php','template-contact.php', 'template-meetings-events.php'))
     ->add_fields(array(
         Field::make('complex', 'crb_slider_images', '')->add_fields(array(
             Field::make('image', 'crb_slide_image', 'Slide Image')->help_text('(Image Dimensions (WxH): 1240 x 600)'),
@@ -687,12 +687,37 @@ Container::make('post_meta', 'Slider')
     ->show_on_post_type($leeu_post_types)
     ->show_on_template(array('template-meetings-events.php'))
     ->add_fields(array(
-        Field::make('complex', 'crb_section_slider', 'Slider')->add_fields(array(
-            Field::make('image', 'crb_section_slide_image', 'Image')->help_text('(Image Dimensions (WxH): 821 x 478)')->set_width('20'),
-            Field::make('textarea', 'crb_section_slide_title', 'Title')->set_width('25'),
-            Field::make('textarea', 'crb_section_slide_desc', 'Small Description')->set_width('55'),
+        Field::make('complex', 'crb_section_slider', 'Slider Section')->add_fields(array(
+            Field::make('text', 'crb_section_slider_heading', 'Section Heading'),
+            Field::make('complex', 'crb_slider', 'Slider')->add_fields(array(
+                Field::make('image', 'crb_section_slide_image', 'Image')->help_text('(Image Dimensions (WxH): 821 x 478)')->set_width('20'),
+                Field::make('textarea', 'crb_section_slide_title', 'Title')->set_width('25'),
+                Field::make('textarea', 'crb_section_slide_desc', 'Small Description')->set_width('55'),
+            )),
         )),
-        Field::make('text', 'crb_form_heading', 'Form Heading'),
+    ));
+
+Container::make('post_meta', 'Bottom Slider (2 Columns)')
+    ->show_on_post_type($leeu_post_types)
+    ->show_on_template(array('template-meetings-events.php'))
+    ->add_fields(array(        
+        Field::make('complex', 'crb_2_col_content_section', '')->add_fields(array(
+            Field::make('text', 'crb_section_heading', 'Heading'),
+
+            Field::make('complex', 'crb_section_slider', 'Slider')->add_fields(array(
+                Field::make('image', 'crb_section_slide_image', 'Image')->help_text('(Image Dimensions (WxH): 821 x 478)')->set_width('20'),
+                Field::make('text', 'crb_section_slide_title', 'Title')->set_width('30'),
+                Field::make('text', 'crb_section_slide_link', 'Link')->set_width('50'),
+            )),
+        )),
+    ));
+
+Container::make('post_meta', 'Short Code')
+    ->show_on_post_type($leeu_post_types)
+    ->show_on_template(array('template-meetings-events.php'))
+    ->add_fields(array(
+        Field::make('text', 'crb_form_heading', 'Short Code Heading')->set_width(50),
+        Field::make('text', 'crb_short_code', 'Short Code')->set_width(50),
     ));
 
 Container::make('post_meta', 'Restaurant Details')
