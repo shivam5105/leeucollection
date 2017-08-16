@@ -173,7 +173,7 @@
 											for ($i = 1; $i <= 20; $i++)
 											{
 												?>
-												<option><?php echo $i; ?> room<?php if($i > 1){ echo "s"; } ?></option>
+												<option value="<?php echo $i; ?>"><?php echo $i; ?> room<?php if($i > 1){ echo "s"; } ?></option>
 												<?php
 											}
 											?>
@@ -186,7 +186,7 @@
 											for ($i = 1; $i <= 20; $i++)
 											{
 												?>
-												<option><?php echo $i; ?> guest<?php if($i > 1){ echo "s"; } ?></option>
+												<option value="<?php echo $i; ?>"><?php echo $i; ?> guest<?php if($i > 1){ echo "s"; } ?></option>
 												<?php
 											}
 											?>
@@ -200,7 +200,7 @@
 									</div>
 									<div class="promo_grcode lyon_font mgl-18">
 										<div class="extext pdb-20">GROUP CODE</div>
-										<input type="text" name="GPromo" placeholder="Enter code(optional)" class="lyon_font">
+										<input type="text" name="Group" placeholder="Enter code(optional)" class="lyon_font">
 									</div>
 								</div>
 								<div class="avaibility">
