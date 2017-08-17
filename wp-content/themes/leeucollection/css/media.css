@@ -597,6 +597,10 @@
 	.container.home-slider-container.hotel-slider-container.no_slider_wrapper {
 	    margin-bottom: 40px;
 	}
+	.container.home-slider-container.hotel-slider-container.no_slider_wrapper .slider-text {
+	    top: 15% !important;
+	    transform: translateY(-15%) !important;
+	}
 }
 
 @media only screen and (max-width: 767px){
