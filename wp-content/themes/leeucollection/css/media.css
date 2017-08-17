@@ -694,6 +694,7 @@
 	}
 	.desc-heading {
 	    font-size: 17px;
+	    font-weight: 500;
 	}
 	.desc-content,.content-part{
 		font-size: 15px;
