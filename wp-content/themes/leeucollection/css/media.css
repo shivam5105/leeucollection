@@ -581,6 +581,19 @@
 	{
 	    border: none !important;
 	}
+	#footer .container
+	{
+		text-align: center;
+	}
+	.footer-menu-row .menu-footer-menu-right-container li:first-child {
+	    display: block;
+	    border: 0;
+	    margin-bottom: 12px;
+	}
+	.footer-menu-row  li:first-child + li::before
+	{
+		content: "";
+	}
 }
 
 @media only screen and (max-width: 767px){
