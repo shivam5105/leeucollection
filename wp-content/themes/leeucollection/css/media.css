@@ -211,6 +211,9 @@
 	.leeu_logo {
 	    top: 6px;
 	}
+	.leeu_logo img {
+	    width: 51px;
+	}
 	.rel_wrap {
 	    min-height: 70px;
 	}
