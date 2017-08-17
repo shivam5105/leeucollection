@@ -194,6 +194,12 @@ get_header(); ?>
 
 												$slide_image_url = wp_get_attachment_image_src( $slide_image, '821x478' );
 												$slide_image_url = $slide_image_url[0];
+
+												$target = "";
+												if(strpos($section_link, "http://") !== false || strpos($section_link, "https://") !== false || strpos($section_link, "www.") !== false ||)
+												{
+													$target = "target='_blank'";
+												}
 												?>
 												<div class="slide-item">
 													<div class="banner-img scroll-anim" data-anim="fade-up">
@@ -202,7 +208,7 @@ get_header(); ?>
 														if(!empty($section_link) && !empty($section_link_text))
 														{
 															?>
-															<a href="<?php echo $section_link; ?>" class="main-link"></a>
+															<a href="<?php echo $section_link; ?>" <?php echo $target; ?> class="main-link"></a>
 															<?php
 														}
 														?>
@@ -224,7 +230,7 @@ get_header(); ?>
 																?>
 																<ul class="list-inline linking-wrap">
 																	<li class="see-more-link">
-																		<a href="<?php echo $section_link; ?>"><?php echo $section_link_text; ?></a>
+																		<a href="<?php echo $section_link; ?>" <?php echo $target; ?>><?php echo $section_link_text; ?></a>
 																	</li>
 																</ul>
 																<?php
@@ -236,7 +242,7 @@ get_header(); ?>
 															if(!empty($section_link) && !empty($section_link_text))
 															{
 																?>
-																<span><a href="<?php echo $section_link; ?>"><?php echo $section_link_text; ?></a></span>
+																<span><a href="<?php echo $section_link; ?>" <?php echo $target; ?>><?php echo $section_link_text; ?></a></span>
 																<?php
 															}
 															?>
