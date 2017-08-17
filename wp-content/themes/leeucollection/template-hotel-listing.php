@@ -126,12 +126,33 @@ get_header();
 			<div class="container">
 				<div class="home-hotel-wrap-<?php echo $section_loop; ?> pagination-slider " data-unique-class="home-hotel-wrap-<?php echo $section_loop; ?>">
 					<div class="text-center scroll-anim animate-custom" data-anim="fade-up">
-						<?php if($section_loop == 1) {?>
-						<h1 class="home-heading ucase"><?php echo $hotel_name; ?></h1>
-						<?php }else {?>
+						<?php
+						if($section_loop == 1)
+						{
+							?>
+							<h1 class="home-heading ucase"><?php echo $hotel_name; ?></h1>
+							<?php
+						}
+						else
+						{
+							?>
 							<h2 class="home-heading ucase"><?php echo $hotel_name; ?></h2>
-						<?php }?>
+							<?php
+						}
+						?>
 					</div>
+					<?php
+					foreach ($hotel_section['crb_hotel_section_details'] as $sd_key => $links_details)
+					{
+						$hotel_locations = $links_details['crb_hotel_locations'];
+						?>
+						<div class="mobile-only">
+							<div class="hotel-location-name"><?php echo $hotel_locations; ?></div>
+						</div>
+						<?php
+						break;
+					}
+					?>
 					<div class="row scroll-anim animate-custom flx" data-anim="fade-up">
 						<?php
 						$col3_class = "rm-pad-left";
