@@ -196,7 +196,7 @@ get_header(); ?>
 												$slide_image_url = $slide_image_url[0];
 
 												$target = "";
-												if(strpos($section_link, "http://") !== false || strpos($section_link, "https://") !== false || strpos($section_link, "www.") !== false ||)
+												if(strpos($section_link, "http://") !== false || strpos($section_link, "https://") !== false || strpos($section_link, "www.") !== false)
 												{
 													$target = "target='_blank'";
 												}
