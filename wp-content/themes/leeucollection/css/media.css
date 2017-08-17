@@ -258,7 +258,7 @@
 	.side-log-wrap {
 	    margin-bottom: 48px;
 	}
-	h2, h1.ucase{
+	h2, h1.ucase, .page-template-template-hotel-listing h2, .page-template-template-hotel-listing h1.ucase {
 		font-size: 30px;
 	}
 	.listing-row {
@@ -663,8 +663,12 @@
 	    font-size: 15px;
 	    padding-top: 28px;
 	}
-	h2, h1.ucase{
+	h2, h1.ucase {
 		font-size: 21px;
+	}
+	.page-template-template-hotel-listing h2, .page-template-template-hotel-listing h1.ucase
+	{
+		font-size: 30px;
 	}
 	.desc-heading {
 	    font-size: 17px;
