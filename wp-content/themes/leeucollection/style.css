@@ -3314,5 +3314,6 @@ img[src*=".svg"].bottom-logo
 }
 .current-tab-name {
     color: #ac9e94;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
+    font-size: 14px;
 }
