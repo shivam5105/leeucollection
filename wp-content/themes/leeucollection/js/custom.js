@@ -457,6 +457,7 @@ var Blank ={
 					$(".popup_wrapper #content1").show();
 				}
 			}
+			$('.hotel_dtls ul li[data-rel="content1"]').trigger("click");
 
 			$('.main_sec').fadeIn();
 		})
