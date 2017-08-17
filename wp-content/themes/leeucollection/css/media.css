@@ -238,6 +238,7 @@
 	}
 	.side-nav-contain.fix-pos{
 		position: static !important;
+		width: auto;
 	}
     [class*="col-"] {
         width: 100%;
