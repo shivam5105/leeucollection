@@ -75,8 +75,8 @@ get_header(); ?>
 					<?php
 				}?>
 				<div class="banner-text text-center pos-abs-top">
-					<div class="location-text ucase" itemprop="address"><?php echo $hotel_location; ?></div>
 					<h2 itemprop="legalName" class="ucase"><?php echo $post->post_title;?></h2>
+					<div class="location-text ucase" itemprop="address"><?php echo $hotel_location; ?></div>
 					<?php
 					if(!empty($hotel_closed) && $hotel_closed == 'yes')
 					{
