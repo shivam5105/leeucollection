@@ -3297,3 +3297,22 @@ img[src*=".svg"].bottom-logo
 .blk-btn.arrow-btn:hover:after{
      background: rgba(0, 0, 0, 0) url("images/arrow-icon-black-hover.png") no-repeat scroll 0 0;
 }
+.mobile-only
+{
+    display: none;
+}
+.mobile-check-availability-anchor-wrapper
+{
+    text-align: center;
+    margin-left: 0;
+    margin-top: 15px;
+}
+.mobile-check-availability-anchor
+{
+    padding-left: 50px !important;
+    padding-right: 20px !important;
+}
+.current-tab-name {
+    color: #ac9e94;
+    margin-bottom: 15px;
+}

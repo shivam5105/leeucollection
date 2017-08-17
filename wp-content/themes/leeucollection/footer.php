@@ -109,6 +109,7 @@
 		</div>
 		<div class="popup_wrapper">
 			<div class="event_disc">
+				<div class="mobile-only current-tab-name">BOOK A ROOM</div>
 				<div class="hotel_dtls extext">
 					<ul>
 						<li data-rel="content1" class="add_hover special">BOOK A ROOM</li>

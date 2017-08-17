@@ -83,3 +83,8 @@
 				</form>
 			</div>
 		</div>
+		<div class="mobile-only">
+			<div class="form-item mobile-check-availability-anchor-wrapper popup-booking-button">
+				<a href="javascript:void(0);" class="submit-btn ucase mobile-check-availability-anchor">CHECK AVAILABILITY</a>
+			</div>
+		</div>

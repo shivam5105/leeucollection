@@ -419,10 +419,20 @@ var Blank ={
 	},
 	bookingPopupTabs: function(){
 		$('.hotel_dtls ul li').click(function(){
+			var rel = $(this).data('rel');
 			$('.hotel_dtls ul li').removeClass('add_hover special');
 			$(this).addClass('add_hover special');
 			$('.content-container .one').hide();
-			$('#' + $(this).data('rel')).fadeIn('slow');
+			$('#'+rel).fadeIn('slow');
+			$(".current-tab-name").html($(this).text());
+			if(rel == 'content3')
+			{
+				$('[data-rel="content2"]').addClass("mobile-no-border");
+			}
+			else
+			{
+				$('[data-rel="content2"]').removeClass("mobile-no-border");
+			}
 		})
 	},
 	openBookingPopup: function(){

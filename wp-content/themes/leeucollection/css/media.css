@@ -361,7 +361,7 @@
 	.booking-object-form-row{
 		text-align: center;
 	}
-	.booking-object-form-row > div{
+	.booking-form-object {
 		display: none;
 	}	
 	.booking-object-form-row > div:last-child{
@@ -560,6 +560,26 @@
 	.container.error-404-page {
 	    padding-top: 50px;
 	    padding-bottom: 50px;
+	}
+	.mobile-only
+	{
+	    display: block;
+	}
+	.hotel_dtls ul li
+	{
+		border-color: #fff;
+		color: #fff;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	li.add_hover.special,
+	.hotel_dtls ul li:hover::before
+	{
+		display: none;
+	}
+	.mobile-no-border
+	{
+	    border: none !important;
 	}
 }
 
@@ -884,6 +904,37 @@
 	.leeu-discover-template-template-discover  .single_slider_wrapper.no_slider{
 		margin-bottom: 15px;
 	}
+	.popup_wrapper {
+	    width: 100%;
+	    left: 0;
+	    transform: translate(0);
+	}
+	.popup_wrapper .content-container .pd-l-r
+	{
+		padding: 0 15px;
+	}
+	.choose_hotel select,
+	.choose_date input,
+	.roomselect select
+	{
+		background-position-x: 99%;
+	}
+	.promo_grcode,
+	.roomselect {
+	    width: 48.3%;
+	}
+}
+@media only screen and (max-width: 687px){
+	.promo_grcode,
+	.roomselect {
+	    width: 48%;
+	}
+}
+@media only screen and (max-width: 585px){
+	.promo_grcode,
+	.roomselect {
+	    width: 47.5%;
+	}
 }
 @media only screen and (max-width: 500px){
 	.error-404-page h1.ucase,
@@ -891,10 +942,20 @@
 	    font-size: 20px;
 	}
 }
+@media only screen and (max-width: 485px){
+	.promo_grcode,
+	.roomselect {
+	    width: 47%;
+	}
+}
 @media only screen and (max-width: 400px){
 	.error-404-page h1.ucase,
 	.error-404-page .page-content p {
 	    font-size: 14px;
+	}
+	.promo_grcode,
+	.roomselect {
+	    width: 46.5%;
 	}
 }
 @media only screen and (max-width: 375px){
