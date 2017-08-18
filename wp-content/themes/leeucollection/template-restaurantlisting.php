@@ -271,6 +271,14 @@ get_header(); ?>
 											?>
 											<div class="slider-item">
 												<img src="<?php echo $section_image_url; ?>" alt="">
+												<?php
+												if(!empty($more_button_link))
+												{
+													?>
+													<a href="<?php echo $more_button_link; ?>" class="main-link"></a>
+													<?php
+												}
+												?>
 											</div>
 											<?php
 										}

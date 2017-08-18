@@ -973,6 +973,10 @@
 	.trip-advisor-logo-wrapper .cdsROW {
 	    margin: 0 auto;
 	}
+	.desktop-only
+	{
+		display: none;
+	}
 }
 @media only screen and (max-width: 687px){
 	.promo_grcode,
