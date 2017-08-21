@@ -153,7 +153,7 @@ get_header(); ?>
 											</div>
 											<div class="col-6 rm-pad">
 												<?php
-												if(is_array($post_meta['_crb_special_feature_second']) && !empty($post_meta['_crb_special_feature_second'][0]))
+												if(isset($post_meta['_crb_special_feature_second']) && is_array($post_meta['_crb_special_feature_second']) && !empty($post_meta['_crb_special_feature_second'][0]))
 												{
 													?>
 													<div class="desc-content special-features" itemprop="amenityFeature"> 
