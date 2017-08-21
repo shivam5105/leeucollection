@@ -138,7 +138,7 @@ get_header(); ?>
 									?>
 									<div class="scroll-anim full_img animate-custom" data-anim="fade-up">
 										<div class="row detail-row">
-											<div class="mgb-30 clearfix">
+											<div class="mgb-30 clearfix art-temp">
 									<?php
 								}
 								if($artist_image)

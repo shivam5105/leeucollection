@@ -272,7 +272,7 @@
 	    padding-bottom: 20px; 	
 	}
 	.side-log-wrap {
-	    margin-bottom: 48px;
+	    margin-bottom: 0;
 	}
 	h2, h1.ucase, .page-template-template-hotel-listing h2, .page-template-template-hotel-listing h1.ucase {
 		font-size: 30px;
