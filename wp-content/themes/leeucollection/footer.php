@@ -7,7 +7,7 @@
 		<footer id="footer" class="scroll-anim" data-anim="fade">
 			<div class="container">
 				<div class="row mail-social-box">
-				   <div class="col-3">
+				   <div class="col-6">
 						<div class="footer-head"> 
 						 CONNECT WITH US
 						</div>
@@ -20,40 +20,38 @@
 							if($fb != "")
 							{
 								?>
-								<li><a target="blank" href="<?php echo $fb; ?>"><?php include('facebook-svg.php'); ?></a></li>
+								<li class="facebook-icon"><a target="blank" href="<?php echo $fb; ?>"><?php include('facebook-svg.php'); ?></a></li>
 								<?php
 							}
 							if($twt != "")
 							{
 								?>
-								<li><a target="blank" href="<?php echo $twt; ?>"><?php include('twitter-svg.php'); ?></a></li>
+								<li class="twitter-icon"><a target="blank" href="<?php echo $twt; ?>"><?php include('twitter-svg.php'); ?></a></li>
 								<?php
 							}
 							if($insta != "")
 							{
 								?>
-								<li><a target="blank" href="<?php echo $insta; ?>"><?php include('instagram-svg.php'); ?></a></li>
+								<li class="instagram-icon"><a target="blank" href="<?php echo $insta; ?>"><?php include('instagram-svg.php'); ?></a></li>
 								<?php
 							}?>
+							<?php
+							if(!empty($post))
+							{
+								$trip_advisor = carbon_get_post_meta($post->ID, "crb_trip_advisor_code");
+								if(!empty($trip_advisor))
+								{
+									?>
+									<li class="trip-advisor-logo-wrapper">
+										<?php echo $trip_advisor; ?>
+									</li>
+									<?php
+								}
+							}
+							?>
 						</ul>
 						<div id="google_translate_element"></div>
 					</div>
-				   <div class="col-3">
-						<?php
-						if(!empty($post))
-						{
-							$trip_advisor = carbon_get_post_meta($post->ID, "crb_trip_advisor_code");
-							if(!empty($trip_advisor))
-							{
-								?>
-								<div class="trip-advisor-logo-wrapper">
-									<?php echo $trip_advisor; ?>
-								</div>
-								<?php
-							}
-						}
-						?>
-				   </div>
 				   <div class="col-6">
 				      <div class="footer-head">SIGN UP TO LEARN ABOUT SPECIAL EVENTS AND OFFERS</div>
 				      <div class="newsleter-form">
@@ -73,6 +71,17 @@
 				</div>
 				<div class="row footer-menu-row ">
 				   <div class="row">
+				   	  <div class="col-6 pull-right">
+						<?php
+						if(has_nav_menu('footer_menu_right'))
+						{
+							wp_nav_menu( array(
+								'theme_location' => 'footer_menu_right',
+								'menu_class'     => 'list-inline pull-right',
+							 ) );
+						}
+						?>
+				      </div>
 				      <div class="col-6">
 						<?php
 						if(has_nav_menu('footer_menu_left'))
@@ -84,22 +93,11 @@
 						}
 						?>
 				      </div>
-				      <div class="col-6">
-						<?php
-						if(has_nav_menu('footer_menu_right'))
-						{
-							wp_nav_menu( array(
-								'theme_location' => 'footer_menu_right',
-								'menu_class'     => 'list-inline pull-right',
-							 ) );
-						}
-						?>
-				      </div>
 				   </div>
 				</div>
 			</div>
 		</footer>
-	</div>
+	</div> <!-- schema.org/Hotel div closed -->
 	<?php wp_footer(); ?>
 	<!-- popup -->
 	<div class="main_sec">

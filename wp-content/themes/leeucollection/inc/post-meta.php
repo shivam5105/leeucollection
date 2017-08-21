@@ -155,7 +155,8 @@ Container::make('post_meta', 'Special Features')
     ->show_on_template('template-room.php')
     ->add_fields(array(
         /*Field::make('complex', 'crb_special_features', '')->add_fields(array(*/
-             Field::make('textarea', 'crb_special_feature', ''),
+             Field::make('textarea', 'crb_special_feature', 'Left special features'),
+             Field::make('textarea', 'crb_special_feature_second', 'Right special features'),
         /*)),*/
     ));
 
