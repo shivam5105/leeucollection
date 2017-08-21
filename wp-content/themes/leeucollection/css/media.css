@@ -174,11 +174,11 @@
 	}
 	#site-header.mean-container a.meanmenu-reveal {
 		padding-top: 11px;
-		padding-left: 20px;	
+		padding-left: 25px;	
 	}
 	.meanmenu-book.pos-r {
 		padding-top: 12px;
-		padding-right: 20px;
+		padding-right: 25px;
 	}
 	.mean-container .mean-nav{
 		margin-top: 44px;
@@ -245,9 +245,12 @@
         float: none;
         padding: 0;
     }
+    .home #site-main, .page-template-template-hotel-listing #site-main, .leeu-restaurants-template-template-restaurantlisting #site-main{
+		margin-top: 44px;
+	}
 	#footer {
 	    margin-top: 50px;
-	    padding-bottom: 47px;
+	    padding-bottom: 35px;
 	    padding-top: 36px;
 	}
 	.menu-footer-menu-right-container .pull-right{
@@ -599,10 +602,8 @@
 	{
 		text-align: center;
 	}
-	.footer-menu-row .menu-footer-menu-right-container li:first-child {
-	    display: block;
-	    border: 0;
-	    margin-bottom: 12px;
+	.footer-menu-row .menu-footer-menu-right-container li {
+	    margin-bottom: 30px;
 	}
 	.footer-menu-row  li:first-child + li::before
 	{
@@ -622,6 +623,10 @@
 	    text-transform: uppercase;
 		font-size: 10px;
 		letter-spacing: 1px;
+	}
+	.newsleter-form {
+ 	   max-width: 540px;
+    	margin: 0 auto;
 	}
 }
 
@@ -670,9 +675,7 @@
 		font-size: 15px;
 		margin-top: 50px;
 	}
-	.home #site-main, .page-template-template-hotel-listing #site-main, .leeu-restaurants-template-template-restaurantlisting #site-main{
-		margin-top: 44px;
-	}	
+		
 	/**hotel page template**/
 	.banner-text .location-text , .banner-text h1{ 
 
@@ -1002,7 +1005,7 @@
    	  display: inline-block;
    }
    .footer-menu-row{
-   		margin-top: 0;
+   		margin-top: 0px;
    }
 }
 @media only screen and (max-width: 687px){
