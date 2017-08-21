@@ -94,7 +94,7 @@ get_header();
 									if(!empty($artisan_drink_image2) || !empty($artisan_drink_image3) || !empty($artisan_drinks_section_left_heading) || !empty($artisan_drinks_section_right_heading) || !empty($crb_artisan_drinks_section_left_description) || !empty($crb_artisan_drinks_section_right_description))
 									{
 										?>
-										<div class="row">
+										<div class="row space-top half-layouts">
 											<?php
 											if(!empty($artisan_drink_image2))
 											{
