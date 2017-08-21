@@ -260,7 +260,7 @@
 	    margin-bottom: 30px;
 	}
 	.trip-advisor-logo-wrapper {
-	    margin-bottom: 30px;
+	    margin-bottom: 0;
 	}
 	.menu-footer-menu-right-container {
 	    margin-top: 30px;
@@ -627,6 +627,9 @@
 	.newsleter-form {
  	   max-width: 540px;
     	margin: 0 auto;
+	}
+	.home-about-content{
+		margin-top: 60px;
 	}
 }
 
