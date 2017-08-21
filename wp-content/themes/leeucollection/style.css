@@ -3317,7 +3317,7 @@ img[src*=".svg"].bottom-logo
     margin-bottom: 12px;
     font-size: 14px;
 }
-.two-slide-carousel,.half-layouts,.two-img-col{
+.two-slide-carousel,.half-layouts,.two-img-col,.three-img-col{
     margin-left: -2px;
     margin-right: -2px;
 }
@@ -3325,7 +3325,7 @@ img[src*=".svg"].bottom-logo
     margin-left: 2px;
     margin-right: 2px;
 }
-.half-layouts .col-6.rm-pad,.two-img-col .col-6.rm-pad {
+.half-layouts .col-6.rm-pad,.two-img-col .col-6.rm-pad,.three-img-col .col-4.rm-pad{
     padding-left: 2px;
     padding-right: 2px;
 }
