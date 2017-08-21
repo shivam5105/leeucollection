@@ -20,7 +20,7 @@ get_header(); ?>
 					<div class="col-2 rm-pad"></div>
 					<div class="col-8 rm-pad">
 						<div class="text-center">
-							<div class="leeu-text ucase" itemprop="legalName">								
+							<div class="leeu-text ucase" itemprop="legalname name">								
 								<?php
 								$page_small_heading = @$post_meta['_crb_page_small_heading'][0];
 								if(!empty($page_small_heading))
@@ -59,6 +59,7 @@ get_header(); ?>
 					<div class="col-8">
 						<div class="scroll-anim" data-anim="fade-up">
 							<?php
+							$propImage = false;
 					    	$accolades = carbon_get_post_meta($post->ID, "crb_accolades", 'complex');
 							if(is_array($accolades) && !empty($accolades))
 							{
@@ -104,7 +105,7 @@ get_header(); ?>
 													?>
 													<div class="slide-item">
 														<div class="scroll-anim" data-anim="fade-up">
-															<img src="<?php echo $slide_image_url; ?>" alt="">
+															<img src="<?php echo $slide_image_url; ?>" alt="" <?php if(!$propImage){ echo 'itemprop="image"'; $propImage = true; } ?>>
 														</div>
 													</div>
 													<?php

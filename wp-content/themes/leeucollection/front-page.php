@@ -32,6 +32,7 @@ get_header();
 				}?>
 				<div class="<?php echo $slider_wrapper_class; ?>">
 					<?php
+					$propImage = false;
 					if(is_array($slider_data) && !empty($slider_data))
 					{
 						foreach ($slider_data as $slide_key => $slide_data)
@@ -46,7 +47,7 @@ get_header();
 							$banner_url = $banner_url[0];
 							?>
 							<div class="slide-img notranslate">
-								<img class="for-mob-hide" src="<?php echo $banner_url; ?>" alt="">
+								<img class="for-mob-hide" src="<?php echo $banner_url; ?>" <?php if(!$propImage){ echo 'itemprop="image"'; $propImage = true; } ?> alt="">
 								<div class="banner-img for-mob mht_homebanner" style="background-image:url('<?php echo $banner_url; ?>')"> </div>
 								<div class="slider-text text-center ucase <?php echo $header_text_position; ?>">
 									<div class="slider-txt-head">
@@ -79,7 +80,7 @@ get_header();
 						$banner_url = $banner_url[0];
 						?>
 						<div class="slide-img">
-							<img src="<?php echo $banner_url; ?>" alt="">
+							<img src="<?php echo $banner_url; ?>" alt="" <?php if(!$propImage){ echo 'itemprop="image"'; $propImage = true; } ?>>
 						</div>
 						<?php
 					}?>
