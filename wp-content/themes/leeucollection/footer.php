@@ -236,18 +236,22 @@
 										$the_query->the_post();
 										$hotel_name = get_the_title();
 										$restaurant_location_popup = carbon_get_post_meta($post->ID, "crb_restaurant_location_popup");
+										$booking_buton_link = carbon_get_post_meta($post->ID, "crb_booking_buton_link");
 										$checked = "";
 										if($loop == 1)
 										{
 											$checked = "checked='checked'";
 										}
-										?>
-										<div class="choose_rest lyon_font mgb-15"> 
-											<input type="radio" id="radio-res-<?php echo $loop; ?>" data-button-wrapper-id="book_table_button_<?php echo $loop; ?>" name="radio-res" class="regular-radio popup-book-table-radio" <?php echo $checked; ?> />
-											<label for="radio-res-<?php echo $loop; ?>"><span></span><?php echo $hotel_name; ?></label>
-											<label for="radio-res-<?php echo $loop; ?>"><span></span><span class="extext"><?php echo $restaurant_location_popup; ?></span></label>
-										</div>
-										<?php
+										if(!empty($booking_buton_link))
+										{
+											?>
+											<div class="choose_rest lyon_font mgb-15"> 
+												<input type="radio" id="radio-res-<?php echo $loop; ?>" data-button-wrapper-id="book_table_button_<?php echo $loop; ?>" name="radio-res" class="regular-radio popup-book-table-radio" <?php echo $checked; ?> />
+												<label for="radio-res-<?php echo $loop; ?>"><span></span><?php echo $hotel_name; ?></label>
+												<label for="radio-res-<?php echo $loop; ?>"><span></span><span class="extext"><?php echo $restaurant_location_popup; ?></span></label>
+											</div>
+											<?php
+										}
 									}
 								}
 								$loop = 0;
@@ -264,11 +268,14 @@
 										{
 											$hide = "";
 										}
-										?>
-										<div class="book_table book_table_button_wrapper" id="book_table_button_<?php echo $loop; ?>" <?php echo $hide; ?>>
-											<a href="#" id="booktable-popup-<?php echo $loop; ?>" class="booktable" data-connection-id="<?php echo $booking_buton_link; ?>">BOOK A TABLE </a>
-										</div>
-										<?php
+										if(!empty($booking_buton_link))
+										{
+											?>
+											<div class="book_table book_table_button_wrapper" id="book_table_button_<?php echo $loop; ?>" <?php echo $hide; ?>>
+												<a href="#" id="booktable-popup-<?php echo $loop; ?>" class="booktable" data-connection-id="<?php echo $booking_buton_link; ?>">BOOK A TABLE </a>
+											</div>
+											<?php
+										}
 									}
 								}
 								?>
