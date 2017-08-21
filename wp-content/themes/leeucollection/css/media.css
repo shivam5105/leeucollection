@@ -420,8 +420,11 @@
 	.linking-wrap li.see-more-link a:before{
 		display: none;
 	}	
-	.pagination-slider , .two-img-col > div:last-child , .mgt-topp{
+	.pagination-slider, .mgt-topp{
     	margin-top: 67px;
+	}
+	.two-img-col > div:last-child{
+		margin-top: 25px;
 	}
 	.gotoslidehead {
     	margin-bottom: 19px;
