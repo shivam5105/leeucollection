@@ -21,7 +21,7 @@ get_header(); ?>
 					<div class="col-2 rm-pad"></div>
 					<div class="col-8 rm-pad">
 						<div class="text-center">
-							<div class="leeu-text ucase" itemprop="legalName">
+							<div class="leeu-text ucase" itemprop="legalname name">
 								<?php
 								if($top_most_parent_post)
 								{
@@ -55,11 +55,12 @@ get_header(); ?>
 								<div class="anton">
 									<div class="grey_bg">
 										<?php
+										$propImage = false;
 										$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), '411x258' );
 										if(!empty($image[0]))
 										{
 											?>
-											<img src="<?php echo $image[0]; ?>" alt="" />
+											<img src="<?php echo $image[0]; ?>" alt="" <?php if(!$propImage){ echo 'itemprop="image"'; $propImage = true; } ?> />
 											<?php
 										}
 										?>

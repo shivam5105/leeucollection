@@ -20,7 +20,7 @@ get_header(); ?>
 					<div class="col-2 rm-pad"></div>
 					<div class="col-8 rm-pad">
 						<div class="text-center">
-							<!-- <div class="leeu-text ucase" itemprop="legalName"><?php echo $top_most_parent_post->post_title;?></div> -->
+							<!-- <div class="leeu-text ucase" itemprop="legalname name"><?php echo $top_most_parent_post->post_title;?></div> -->
 							<h1 class="ucase" itemprop="name"><?php echo $page_heading; ?></h1>
 						</div>
 					</div>
@@ -56,6 +56,7 @@ get_header(); ?>
 								{
 									$slider_wrapper_class = "";
 								}
+								$propImage = false;
 								?>
 								<div class="listing-box">
 									<div class="single_slider_wrapper <?php if(!$has_slider){ echo "no_slider"; }?>">
@@ -77,7 +78,7 @@ get_header(); ?>
 													?>
 													<div class="slide-item">
 														<div class="banner-img scroll-anim" data-anim="fade-up">
-															<img src="<?php echo $banner_url; ?>" alt="" />
+															<img src="<?php echo $banner_url; ?>" alt="" <?php if(!$propImage){ echo 'itemprop="image"'; $propImage = true; } ?> />
 														</div>
 													</div>
 													<?php

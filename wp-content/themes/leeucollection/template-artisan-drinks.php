@@ -19,7 +19,7 @@ get_header();
 					<div class="col-2 rm-pad"></div>
 					<div class="col-8 rm-pad">
 						<div class="text-center">
-							<div class="leeu-text ucase" itemprop="legalName">
+							<div class="leeu-text ucase" itemprop="legalname name">
 								<?php
 								$page_small_heading = @$post_meta['_crb_page_small_heading'][0];
 								if(!empty($page_small_heading))
@@ -57,6 +57,7 @@ get_header();
 		            </div>
 		            <div class="col-8">
 		            	<?php
+		            	$propImage = false;
 					    $artisan_drinks_contents = carbon_get_post_meta($post->ID, "crb_artisan_drinks_content", 'complex');
 					    foreach ($artisan_drinks_contents as $adc_key => $artisan_drinks_content)
 					    {
@@ -87,7 +88,7 @@ get_header();
 				            		{
 					            		?>
 										<div class="scroll-anim animate-custom" data-anim="fade-up">
-											<img src="<?php echo $artisan_drink_image1; ?>" alt="">
+											<img src="<?php echo $artisan_drink_image1; ?>" alt="" <?php if(!$propImage){ echo 'itemprop="image"'; $propImage = true; } ?>>
 										</div>
 										<?php
 									}
@@ -101,7 +102,7 @@ get_header();
 												?>
 												<div class="col-6 rm-pad">
 													<div class="scroll-anim animate-custom" data-anim="fade-up">
-														<img src="<?php echo $artisan_drink_image2; ?>" alt="">
+														<img src="<?php echo $artisan_drink_image2; ?>" alt="" <?php if(!$propImage){ echo 'itemprop="image"'; $propImage = true; } ?>>
 														<div class="left-content">
 															<div class="desc-heading">
 																<?php echo $artisan_drinks_section_left_heading; ?>
@@ -119,7 +120,7 @@ get_header();
 												?>
 												<div class="col-6 rm-pad">
 													<div class="scroll-anim animate-custom" data-anim="fade-up" data-anim-delay="100">
-														<img src="<?php echo $artisan_drink_image3; ?>" alt="">
+														<img src="<?php echo $artisan_drink_image3; ?>" alt="" <?php if(!$propImage){ echo 'itemprop="image"'; $propImage = true; } ?>>
 														<div class="right-content">
 															<div class="desc-heading">
 																<?php echo $artisan_drinks_section_right_heading; ?>

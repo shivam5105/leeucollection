@@ -12,11 +12,6 @@ get_header(); ?>
 
 	$page_heading = (@$post_meta['_crb_page_heading'][0]) ? $post_meta['_crb_page_heading'][0] : $post->post_title;
     ?>
-    <div class="mobile-only">
-    	<div class="mobile-page-heading-wrapper">
-    		<h2 itemprop="legalName" class="ucase"><?php echo $post->post_title;?></h2>
-    	</div>
-    </div>
 	<section id="site-main">
 		<div class="container desktop-only">
 			<div class="leeu-heading-wrap scroll-anim" data-anim="fade-up">
@@ -24,7 +19,7 @@ get_header(); ?>
 					<div class="col-2 rm-pad"></div>
 					<div class="col-8 rm-pad">
 						<div class="text-center">
-							<!-- <div class="leeu-text ucase" itemprop="legalName"><?php echo $top_most_parent_post->post_title;?></div> -->
+							<!-- <div class="leeu-text ucase" itemprop="legalname name"><?php echo $top_most_parent_post->post_title;?></div> -->
 							<h1 class="ucase" itemprop="name"><?php echo $page_heading; ?></h1>
 						</div>
 					</div>
