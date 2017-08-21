@@ -20,19 +20,19 @@
 							if($fb != "")
 							{
 								?>
-								<li><a target="blank" href="<?php echo $fb; ?>"><?php include('facebook-svg.php'); ?></a></li>
+								<li class="facebook-icon"><a target="blank" href="<?php echo $fb; ?>"><?php include('facebook-svg.php'); ?></a></li>
 								<?php
 							}
 							if($twt != "")
 							{
 								?>
-								<li><a target="blank" href="<?php echo $twt; ?>"><?php include('twitter-svg.php'); ?></a></li>
+								<li class="twitter-icon"><a target="blank" href="<?php echo $twt; ?>"><?php include('twitter-svg.php'); ?></a></li>
 								<?php
 							}
 							if($insta != "")
 							{
 								?>
-								<li><a target="blank" href="<?php echo $insta; ?>"><?php include('instagram-svg.php'); ?></a></li>
+								<li class="instagram-icon"><a target="blank" href="<?php echo $insta; ?>"><?php include('instagram-svg.php'); ?></a></li>
 								<?php
 							}?>
 							<?php
@@ -71,6 +71,17 @@
 				</div>
 				<div class="row footer-menu-row ">
 				   <div class="row">
+				   	  <div class="col-6 pull-right">
+						<?php
+						if(has_nav_menu('footer_menu_right'))
+						{
+							wp_nav_menu( array(
+								'theme_location' => 'footer_menu_right',
+								'menu_class'     => 'list-inline pull-right',
+							 ) );
+						}
+						?>
+				      </div>
 				      <div class="col-6">
 						<?php
 						if(has_nav_menu('footer_menu_left'))
@@ -78,17 +89,6 @@
 							wp_nav_menu( array(
 								'theme_location' => 'footer_menu_left',
 								'menu_class'     => 'list-inline',
-							 ) );
-						}
-						?>
-				      </div>
-				      <div class="col-6">
-						<?php
-						if(has_nav_menu('footer_menu_right'))
-						{
-							wp_nav_menu( array(
-								'theme_location' => 'footer_menu_right',
-								'menu_class'     => 'list-inline pull-right',
 							 ) );
 						}
 						?>

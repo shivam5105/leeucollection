@@ -326,7 +326,7 @@ get_header(); ?>
 				$second_image_link = $second_image_url[0];
 				?>
 			<?php if(!empty($title) || !empty($first_image_link) || !empty($first_heading) || !empty($second_image_link) || !empty($second_heading)){ ?>
-			<div class="row clearfix space-top">
+			<div class="row clearfix space-top half-layouts">
 				<?php if(!empty($title)){?>
 					<div class="text-center scroll-anim animate-custom" data-anim="fade-up">
 						<h2 class="text-center home-heading ucase"><?php echo $title; ?></h2>

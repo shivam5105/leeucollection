@@ -703,7 +703,7 @@
     	margin-top: 18px;
 	}	
 	#footer,#footer a{
-		font-size: 10px;
+		font-size: 9px;
 	}
 	.form-group.form-input-wrap{
 		width: 58%;
@@ -977,6 +977,33 @@
 	{
 		display: none;
 	}
+	.social-links .facebook-icon svg{
+		width: 10px;
+		height: 18px;
+	}
+	.social-links .twitter-icon svg{
+		width: 20px;
+		vertical-align: bottom;
+	}
+	.social-links .instagram-icon svg{
+		width: 17px;
+		vertical-align: bottom;
+	}
+	.social-links li {
+      margin-left: 9px;
+   }
+   .form-group input{
+   	 font-size: 13px;
+   }
+   #footer{
+   	padding-bottom: 35px;
+   }
+   .footer-menu-row .menu-footer-menu-right-container li:first-child{
+   	  display: inline-block;
+   }
+   .footer-menu-row{
+   		margin-top: 0;
+   }
 }
 @media only screen and (max-width: 687px){
 	.promo_grcode,
