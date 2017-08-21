@@ -97,7 +97,7 @@
 				</div>
 			</div>
 		</footer>
-	</div>
+	</div> <!-- schema.org/Hotel div closed -->
 	<?php wp_footer(); ?>
 	<!-- popup -->
 	<div class="main_sec">
