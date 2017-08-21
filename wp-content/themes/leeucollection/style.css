@@ -333,6 +333,8 @@ padding-top: 21px;
 } 
 #main-navigation .menu-right-wrap ul li:last-child{
     margin-right: 0px;
+    float: right;
+    padding-right: 0;
 }
 #main-navigation ul li a , .leeu-text{
     text-decoration: none;
