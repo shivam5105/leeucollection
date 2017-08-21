@@ -3343,3 +3343,9 @@ img[src*=".svg"].bottom-logo
 .spl-features .col-6{
     padding: 0 10px;
 }
+.detail-logo{
+    width: 131px;
+}
+.detail-logo img{
+    width: 100%;
+}
