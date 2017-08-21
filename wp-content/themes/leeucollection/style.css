@@ -3335,3 +3335,9 @@ img[src*=".svg"].bottom-logo
 .leeu-discover-template-template-founder-and-team .detail-row .pdl-0{
     padding-left: 2px;
 }
+.spl-features{
+    margin: 0 -10px;
+}
+.spl-features .col-6{
+    padding: 0 10px;
+}
