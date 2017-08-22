@@ -142,8 +142,8 @@ $page_template_file = basename(get_page_template());
 	{
 		$schema_itemtype = "http://schema.org/Restaurant";
 	}
-	else if(stripos($page_template_file, "hotel") !== false)
-	/*else if($page_template_file == "template-hotel")*/
+	/*else if(stripos($page_template_file, "hotel") !== false)*/
+	else if($page_template_file == "template-hotel")
 	{
 		$schema_itemtype = "http://schema.org/Hotel";
 	}
