@@ -303,6 +303,7 @@
 	    font-size: 18px;
 	    letter-spacing: 0.01em;
 	    line-height: 1.3;
+	    margin-bottom: 25px;
 	}
 	.page-link {
 	    bottom: 0;
@@ -661,6 +662,9 @@
 	}
 	.pagination-slider,.space-top{
     	margin-top: 70px;
+	}
+	.cstm-btn-wrapper.pull-right.text-center {
+	    float: none;
 	}
 }
 
