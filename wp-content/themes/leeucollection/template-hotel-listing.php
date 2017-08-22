@@ -122,6 +122,12 @@ get_header();
 			$more_button_text		= $hotel_section['crb_more_button_text'];
 			$booking_button_link 	= $hotel_section['crb_booking_button_link'];
 			$booking_button_text 	= $hotel_section['crb_booking_button_text'];
+
+
+			$schema_data 				= array();
+			$schema_data['@type'] 		= "Hotel";
+			$schema_data['name'] 		= $hotel_name;
+			$schema_data['description']	= $section_description;
 			?>
 			<div class="container">
 				<div class="home-hotel-wrap-<?php echo $section_loop; ?> pagination-slider " data-unique-class="home-hotel-wrap-<?php echo $section_loop; ?>">
@@ -130,13 +136,13 @@ get_header();
 						if($section_loop == 1)
 						{
 							?>
-							<h1 class="home-heading ucase"><?php echo $hotel_name; ?></h1>
+							<h1 class="home-heading ucase notranslation"><?php echo $hotel_name; ?></h1>
 							<?php
 						}
 						else
 						{
 							?>
-							<h2 class="home-heading ucase"><?php echo $hotel_name; ?></h2>
+							<h2 class="home-heading ucase notranslation"><?php echo $hotel_name; ?></h2>
 							<?php
 						}
 						?>
@@ -145,6 +151,7 @@ get_header();
 					foreach ($hotel_section['crb_hotel_section_details'] as $sd_key => $links_details)
 					{
 						$hotel_locations = $links_details['crb_hotel_locations'];
+						$schema_data['address'] = $hotel_locations;
 						?>
 						<div class="mobile-only">
 							<div class="hotel-location-name"><?php echo $hotel_locations; ?></div>
@@ -175,6 +182,7 @@ get_header();
 										$hotel_logo_url = $hotel_logo_url[0];
 										if(!empty($hotel_logo_url))
 										{
+											$schema_data['logo'] = $hotel_logo_url;
 											?>
 											<div class="detail-logo">
 												<img src="<?php echo $hotel_logo_url; ?>" alt="">
@@ -188,6 +196,12 @@ get_header();
 											<?php
 											if(!empty($more_button_link) && !empty($more_button_text))
 											{
+												if(!empty($more_button_link) && $more_button_link != "#")
+												{
+
+													$schema_data['@id'] = $more_button_link;
+													$schema_data['url'] = $more_button_link;
+												}
 												?>
 												<li class="see-more-link"><a href="<?php echo $more_button_link; ?>"><?php echo $more_button_text; ?></a></li>
 												<?php
@@ -269,6 +283,7 @@ get_header();
 										$section_image_url = $section_image_url[0];
 										if(!empty($section_image_url))
 										{
+											$schema_data['image'] = $section_image_url;
 											?>
 											<div class="slider-item">
 												<a href="<?php echo $more_button_link; ?>"><img src="<?php echo $section_image_url; ?>" alt=""></a>
@@ -291,6 +306,7 @@ get_header();
 						$col9_content = ob_get_clean();	
 						echo $col9_content;
 						echo $col3_content;
+						$schema_array[] = $schema_data;
 						?>
 					</div>
 				</div>
