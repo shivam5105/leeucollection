@@ -279,9 +279,8 @@
 		font-size: 30px;
 	}
 	.listing-row {
-	    margin-bottom: 73px;
 	    padding-bottom: 0;
-	    margin-bottom: 25px;
+	    margin-bottom: 35px;
 	    position: relative;
 	}
 	.page-template-template-hotel-listing .listing-row , .hotel-template-template-hotel .listing-row{
@@ -668,6 +667,19 @@
 	}
 	.sliding-detail .linking-wrap{
 		display: none;
+	}
+	.menu-head{
+		margin-bottom: 20px;
+	}
+	.hotel-menu .img-desc{
+		font-size: 16px;
+		margin-top: 12px;
+	}
+	.hotel-menu .two-img-col > div:last-child {
+		 margin-top: 0;
+	}
+	.hotel-menu .three-img-col .col-4.rm-pad{
+		margin-bottom: 30px;
 	}
 }
 
