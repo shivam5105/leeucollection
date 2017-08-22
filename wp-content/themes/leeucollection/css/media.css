@@ -656,6 +656,9 @@
 	.hotel-info-desc{
 		padding-right: 0;
 	}
+	.hotel-closed-reason{
+		font-size: 19px;
+	}
 }
 
 @media only screen and (max-width: 767px){

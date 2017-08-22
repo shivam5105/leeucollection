@@ -106,6 +106,9 @@ get_header(); ?>
 				<?php
 			}?>
 		</div>
+		<?php 
+			$theContent = get_the_content();
+			if(!empty($theContent)){?>
 			<div class="intro-blurb scroll-anim restaurant-description" data-anim="fade-up">
 				<div class="col-10 col-centered">
 					<div class="text-center" itemprop="description">
@@ -113,6 +116,7 @@ get_header(); ?>
 					</div>
 				</div>
 			</div>
+			<?php }?>
 		<?php
 		$section_loop = 0;
 		$res_sections = carbon_get_post_meta($post->ID, "crb_res_sections_new", 'complex');
