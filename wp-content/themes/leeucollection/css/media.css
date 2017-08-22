@@ -702,7 +702,10 @@
 		margin-bottom: 20px;
 	}
 	.leeu-discover-template-template-founder-and-team .mgt-25 {
-	    margin-top: 15px;
+	    margin-top: 10px;
+	}
+	.leeu-discover-template-template-founder-and-team .desc-heading{
+		font-size: 15px;
 	}
 }
 
