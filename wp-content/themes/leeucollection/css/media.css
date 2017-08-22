@@ -681,6 +681,14 @@
 	.hotel-menu .three-img-col .col-4.rm-pad{
 		margin-bottom: 30px;
 	}
+	.hotel-menu .col-6 {
+	    width: 50% !important;
+	    float: left !important;
+	}
+	.hotel-menu .col-4 {
+	    width: 33.33% !important;
+	    float: left !important;
+	}
 }
 
 @media only screen and (max-width: 767px){
