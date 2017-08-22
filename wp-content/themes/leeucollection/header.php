@@ -26,9 +26,23 @@ $page_template_file = basename(get_page_template());
 ?>
 <body <?php body_class(); ?>>
 	<?php
+	$schema_itemtype = "http://schema.org/Organization";
+	if(is_front_page())
+	{
+		$schema_itemtype = "http://schema.org/Organization";
+	}
+	else if(stripos($page_template_file, "restaurant") !== false)
+	{
+		$schema_itemtype = "http://schema.org/Restaurant";
+	}
+	else if(stripos($page_template_file, "hotel") !== false)
+	{
+		$schema_itemtype = "http://schema.org/Hotel";
+	}
+	$schema_array = array();
 	$schema_array = array();
 	?>
-	<div itemscope itemtype="http://schema.org/Hotel">
+	<div itemscope itemtype="<?php echo $schema_itemtype; ?>">
 	    <div class="cht-wthr">
 	      	<?php
 			$hide_weather_on_templates_array = array('template-hotel-listing.php');
