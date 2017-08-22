@@ -666,6 +666,9 @@
 	.cstm-btn-wrapper.pull-right.text-center {
 	    float: none;
 	}
+	.sliding-detail .linking-wrap{
+		display: none;
+	}
 }
 
 @media only screen and (max-width: 767px){
