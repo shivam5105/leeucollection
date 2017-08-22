@@ -422,7 +422,7 @@
 		display: none;
 	}	
 	.pagination-slider, .mgt-topp{
-    	margin-top: 67px;
+    	margin-top: 70px;
 	}
 	.two-img-col > div:last-child{
 		margin-top: 62px;
@@ -658,6 +658,9 @@
 	}
 	.hotel-closed-reason{
 		font-size: 19px;
+	}
+	.pagination-slider,.space-top{
+    	margin-top: 70px;
 	}
 }
 
