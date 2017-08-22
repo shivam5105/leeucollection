@@ -1,8 +1,3 @@
-		<?php
-			//date_default_timezone_set("Africa/Franschhoek");
-			//echo "The time in " . date_default_timezone_get() . " is " . date("H:i:s");
-
-			?>
 		<div class="clearfix"></div>
 		<footer id="footer" class="scroll-anim" data-anim="fade">
 			<div class="container">
@@ -314,6 +309,24 @@
 			</div>
 		</div>
 	</div>
+	<?php
+	global $schema_array;
+	if(count($schema_array) > 0)
+	{
+		$main_schema_array["@context"] = "https://schema.org/";
+		$main_schema_array["@graph"] = $schema_array;
+		// echo "<pre>";
+		// print_r($main_schema_array);
+		// echo "</pre>";
+		?>
+		<script type="application/ld+json">
+			<?php
+			echo json_encode($main_schema_array);
+			?>
+		</script>
+		<?php
+	}
+	?>
 	<script type="text/javascript" data-no-instant>
 		function googleTranslateElementInit()
 		{

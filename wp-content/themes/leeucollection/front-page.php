@@ -140,24 +140,54 @@ get_header();
 								{
 									foreach ($hotel_slider['crb_home_hotels'] as $slide_key => $slide)
 									{
-										$hotel_image 		= $slide['crb_hotel_image'];
-										$more_button_link	= $slide['crb_more_button_link'];
+										$hotel_image 			= $slide['crb_hotel_image'];
+										$more_button_link		= $slide['crb_more_button_link'];
+										$hotel_description 		= $slide['crb_hotel_description'];
+										$hotel_logo 			= $slide['crb_hotel_logo'];
+										$hotel_name 			= $slide['crb_hotel_name'];
+										$more_button_link		= $slide['crb_more_button_link'];
+										$more_button_text		= $slide['crb_more_button_text'];
+
+										$schema_data 				= array();
+										$schema_data['@type'] 		= "Hotel";
+										$schema_data['name'] 		= $hotel_name;
+										$schema_data['address']		= $hotel_slider['crb_hotel_locations'];
+										$schema_data['description']	= $hotel_description;
+
+										if(!empty($more_button_link) && $more_button_link != "#")
+										{
+
+											$schema_data['@id'] = $more_button_link;
+											$schema_data['url'] = $more_button_link;
+
+											$hotel_logo_url = wp_get_attachment_image_src( $hotel_logo, 'original' );
+											$hotel_logo_url = $hotel_logo_url[0];
+											if(!empty($hotel_logo_url))
+											{
+
+												$schema_data['logo'] = $hotel_logo_url;
+											}
+										}
 
 										$active_slide = "";
 										if($loop == 0)
 										{
 											$active_slide = "active-detail-slide";
 										}
+										
+
 										$hotel_image_url = wp_get_attachment_image_src( $hotel_image, '925x600' );
 										$hotel_image_url = $hotel_image_url[0];
 										if(!empty($hotel_image_url))
 										{
+											$schema_data['image'] = $hotel_image_url;
 											?>
 											<div class="slider-item" data-object="<?php echo $loop; ?>">
 												<a href="<?php echo $more_button_link; ?>"><img src="<?php echo $hotel_image_url; ?>" alt=""></a>
 											</div>
 											<?php
 										}
+										$schema_array[] = $schema_data;
 										$loop++;
 									}
 								}
@@ -190,7 +220,7 @@ get_header();
 									?>
 									<div class="sliding-detail <?php echo $active_slide; ?>" data-object="<?php echo $loop; ?>">
 										<div class="inner-detail-content for-ipad-mob"> 
-											<div class="content-part"> 
+											<div class="content-part notranslate"> 
 												<?php echo $hotel_name; ?>
 											</div>
 											<div class="gotoslidehead ucase"> 
@@ -266,7 +296,7 @@ get_header();
 										$active_slide = "active-main-pagination";
 									}
 									?>
-									<div class="gotoslide <?php echo $active_slide; ?>" data-object="<?php echo $loop; ?>"><?php echo $hotel_name; ?></div>
+									<div class="gotoslide <?php echo $active_slide; ?> notranslate" data-object="<?php echo $loop; ?>"><?php echo $hotel_name; ?></div>
 									<?php
 									$loop++;
 								}
@@ -277,7 +307,6 @@ get_header();
 				</div>
 			</div>
 		</div>
-
 		<?php
 		$restaurant_section_heading = carbon_get_post_meta($post->ID, "crb_restaurant_section_heading");
 		$slider_data = carbon_get_post_meta($post->ID, "crb_home_restaurants", 'complex');
@@ -298,8 +327,36 @@ get_header();
 								{
 								   foreach ($restaurant_slider['crb_home_restaurants'] as $slider_key => $slide)
 									{
-										$restaurant_image 	= $slide['crb_restaurant_image'];
-										$more_button_link	= $slide['crb_more_button_link'];
+										$restaurant_image 		= $slide['crb_restaurant_image'];
+										$more_button_link		= $slide['crb_more_button_link'];
+										$restaurant_description = $slide['crb_restaurant_description'];
+										$restaurant_logo 		= $slide['crb_restaurant_logo'];
+										$restaurant_name 		= $slide['crb_restaurant_name'];
+										$more_button_link		= $slide['crb_more_button_link'];
+										$more_button_text		= $slide['crb_more_button_text'];
+										$booking_button_link 	= $slide['crb_booking_button_link'];
+										$booking_button_text 	= $slide['crb_booking_button_text'];
+
+										$schema_data 				= array();
+										$schema_data['@type'] 		= "Restaurant";
+										$schema_data['name'] 		= $restaurant_name;
+										$schema_data['address']		= $restaurant_slider['crb_restaurant_locations'];
+										$schema_data['description']	= $restaurant_description;
+
+										if(!empty($more_button_link) && $more_button_link != "#")
+										{
+
+											$schema_data['@id'] = $more_button_link;
+											$schema_data['url'] = $more_button_link;
+
+											$restaurant_logo_url = wp_get_attachment_image_src( $restaurant_logo, 'original' );
+											$restaurant_logo_url = $restaurant_logo_url[0];
+											if(!empty($restaurant_logo_url))
+											{
+												$schema_data['logo'] = $restaurant_logo_url;
+											}
+										}
+
 										$active_slide = "";
 										if($loop == 0)
 										{
@@ -309,12 +366,14 @@ get_header();
 										$restaurant_image_url = $restaurant_image_url[0];
 										if(!empty($restaurant_image_url))
 										{
+											$schema_data['image'] = $restaurant_image_url;
 											?>
 											<div class="slider-item" data-object="<?php echo $loop; ?>">
 												<a href="<?php echo $more_button_link; ?>"><img src="<?php echo $restaurant_image_url; ?>" alt=""></a>
 											</div>
 											<?php
 										}
+										$schema_array[] = $schema_data;
 										$loop++;
 									 }
 								  }	
@@ -331,7 +390,6 @@ get_header();
 							{
 								foreach ($restaurant_slider['crb_home_restaurants'] as $slider_key => $slide)
 								{
-
 									$restaurant_description = $slide['crb_restaurant_description'];
 									$restaurant_logo 		= $slide['crb_restaurant_logo'];
 									$restaurant_name 		= $slide['crb_restaurant_name'];
@@ -427,7 +485,7 @@ get_header();
 										$active_slide = "active-main-pagination";
 									}
 									?>
-									<div class="gotoslide <?php echo $active_slide; ?>" data-object="<?php echo $loop; ?>"><?php echo $restaurant_name; ?></div>
+									<div class="gotoslide <?php echo $active_slide; ?> notranslate" data-object="<?php echo $loop; ?>"><?php echo $restaurant_name; ?></div>
 									<?php
 									$loop++;
 								}
