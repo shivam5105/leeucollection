@@ -273,6 +273,7 @@
 	}
 	.side-log-wrap {
 	    margin-bottom: 0;
+	    display: none;
 	}
 	h2, h1.ucase, .page-template-template-hotel-listing h2, .page-template-template-hotel-listing h1.ucase {
 		font-size: 30px;
@@ -424,7 +425,7 @@
     	margin-top: 67px;
 	}
 	.two-img-col > div:last-child{
-		margin-top: 25px;
+		margin-top: 62px;
 	}
 	.gotoslidehead {
     	margin-bottom: 19px;
@@ -483,7 +484,7 @@
 		text-align: center;
 	}
 	.align_center{
-		margin-bottom: 38px;
+		margin-bottom: 20px;
 		margin-top: 0;
 	}
 	.two-img-col .content-part{
@@ -633,6 +634,7 @@
 	}
 	.home-about-content{
 		margin-top: 60px;
+		font-size: 18px;
 	}
 	.half-layout-section .sub-heading {
 	    margin-top: 20px;
@@ -640,6 +642,19 @@
 	}
 	.half-layout-section .sub-heading h2 {
 	    font-size: 20px;
+	}
+	.hotel-template-template-hotel .intro-blurb {
+ 	   margin-bottom: 45px;
+	}
+	.home-heading {
+	    margin-bottom: 20px;
+	}
+	.leeu-heading-wrap {
+	    padding-top: 40px;
+	    padding-bottom: 20px;
+	}
+	.hotel-info-desc{
+		padding-right: 0;
 	}
 }
 
