@@ -12,6 +12,7 @@ get_header(); ?>
     
 	$top_most_parent_post = ($hotel_id == false) ? false : get_post($hotel_id);
     ?>
+    <a href="<?php echo get_permalink($post_id); ?>" style="display:none" itemprop="url"><?php the_title(); ?></a>
     <section id="site-main">
 		<div class="container">
 			<?php
