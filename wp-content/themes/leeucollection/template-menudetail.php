@@ -52,7 +52,7 @@ get_header(); ?>
 					</div>
 					<div class="col-8">
 						<div class="listing-box listing-row">
-							<div class="scroll-anim" data-anim="fade-up">
+							<div class="scroll-anim" data-anim="fade-up" itemprop="description">
 								<?php
 								$menus = carbon_get_post_meta($post->ID, "crb_menus", 'complex');
 								if(is_array($menus) && !empty($menus))
