@@ -732,7 +732,7 @@
 		font-size: 15px;
 	}
 	.home-heading, .align_center{
-		margin-bottom: 20px;
+		margin-bottom: 25px;
 	}
 	/**homepage**/
 	.home-slider-container .slider-txt-con{
@@ -1103,6 +1103,10 @@
 	{
 		content: "";
 		padding: 0;
+	}
+	.side-log-wrap {
+ 	   margin-bottom: 25px;
+    	display: block;
 	}
 }
 @media only screen and (max-width: 687px){
