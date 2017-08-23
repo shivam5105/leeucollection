@@ -155,6 +155,10 @@ $page_template_file = basename(get_page_template());
 	{
 		$schema_itemtype = "http://schema.org/Organization";
 	}
+	if(in_array($page_template_file, array("template-meetings-events.php")))
+	{
+		$schema_itemtype = "http://schema.org/MeetingRoom";
+	}
 
 	$schema_array = array();
 	$schema_array = array();
