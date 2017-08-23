@@ -13,7 +13,7 @@ if($left_nav_logo != null)
 	$left_nav_logo_url 	= wp_get_attachment_image_src($left_nav_logo);
 	?>
 	<div class="side-log-wrap">
-		<img src="<?php echo $left_nav_logo_url[0]; ?>">
+		<img src="<?php echo $left_nav_logo_url[0]; ?>" itemprop="logo">
 	</div>
 	<?php
 }

@@ -134,13 +134,13 @@ get_header(); ?>
 										</div>
 										<div class="col-9">
 											<div class="leeu-text"> SPECIAL FEATURES</div>
-											<div class="row spl-features">
+											<div class="row spl-features" itemprop="amenityFeature">
 												<div class="col-6 rm-pad">
 													<?php
 													if(is_array($post_meta['_crb_special_feature']) && !empty($post_meta['_crb_special_feature'][0]))
 													{
 														?>
-														<div class="desc-content special-features" itemprop="amenityFeature"> 
+														<div class="desc-content special-features"> 
 															<?php echo nl2br(@$post_meta['_crb_special_feature'][0]); ?>
 														</div>
 														<?php
@@ -152,7 +152,7 @@ get_header(); ?>
 													if(isset($post_meta['_crb_special_feature_second']) && is_array($post_meta['_crb_special_feature_second']) && !empty($post_meta['_crb_special_feature_second'][0]))
 													{
 														?>
-														<div class="desc-content special-features" itemprop="amenityFeature"> 
+														<div class="desc-content special-features"> 
 															<?php echo nl2br(@$post_meta['_crb_special_feature_second'][0]); ?>
 														</div>
 														<?php

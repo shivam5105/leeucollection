@@ -77,7 +77,7 @@ get_header(); ?>
 												<?php if(!empty($banner_url)){?>
 													<div class="slide-item">
 														<div class="banner-img scroll-anim" data-anim="fade-up">
-															<img src="<?php echo $banner_url; ?>" alt="" />
+															<img src="<?php echo $banner_url; ?>" alt="" itemprop="image" />
 														</div>
 													</div>
 												<?php
@@ -93,7 +93,7 @@ get_header(); ?>
 											<?php if(!empty($banner_url)){?>
 												<div class="slide-item">
 													<div class="banner-img scroll-anim" data-anim="fade-up">
-														<img src="<?php echo $banner_url; ?>" alt="" />
+														<img src="<?php echo $banner_url; ?>" alt="" itemprop="image" />
 													</div>
 												</div>
 											<?php
@@ -112,7 +112,7 @@ get_header(); ?>
 								<div class="row detail-row">
 									<div class="col-9">
 										<?php if(!empty($post_meta['_crb_slider_bottom_description'][0])){?>
-										<div class="desc-content"> 
+										<div class="desc-content" itemprop="description"> 
 											<?php echo nl2br(@$post_meta['_crb_slider_bottom_description'][0]); ?>
 										</div>
 										<?php } ?>
@@ -144,7 +144,7 @@ get_header(); ?>
 										{
 											if(!empty($hours_reservation['crb_reservation_for']) || !empty($hours_reservation['crb_reservation_time'])){
 											?>
-											<div class="hotel-food-info">
+											<div class="hotel-food-info" itemprop="openingHours">
 												<?php if(!empty($hours_reservation['crb_reservation_for'])){ ?>
 													<div class="food-head">
 														<?php echo $hours_reservation['crb_reservation_for']; ?>:
