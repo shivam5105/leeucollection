@@ -609,10 +609,7 @@
 	.footer-menu-row .menu-footer-menu-right-container li {
 	    margin-bottom: 30px;
 	}
-	.footer-menu-row  li:first-child + li::before
-	{
-		content: "";
-	}
+
 	.container.home-slider-container.hotel-slider-container.no_slider_wrapper {
 	    margin-bottom: 40px;
 	}
@@ -707,6 +704,7 @@
 	.leeu-discover-template-template-founder-and-team .desc-heading{
 		font-size: 15px;
 	}
+	
 }
 
 @media only screen and (max-width: 767px){
@@ -1086,6 +1084,26 @@
    .footer-menu-row{
    		margin-top: 0px;
    }
+   #menu-footer-menu-left li:first-child{
+		display: block;
+		margin-bottom: 12px;
+	}
+	ul#menu-footer-menu-right {
+	    margin: 0 auto 20px;
+	    max-width: 240px;
+	}
+	.footer-menu-row .menu-footer-menu-right-container li {
+	    margin-bottom: 12px;
+	}
+	.footer-menu-row .menu-footer-menu-right-container li:nth-child(2) + li::before
+	{
+		content: "";
+	}
+	.footer-menu-row .menu-footer-menu-left-container li:first-child + li::before
+	{
+		content: "";
+		padding: 0;
+	}
 }
 @media only screen and (max-width: 687px){
 	.promo_grcode,
