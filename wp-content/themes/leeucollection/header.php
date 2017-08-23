@@ -142,13 +142,13 @@ $page_template_file = basename(get_page_template());
 	{
 		$schema_itemtype = "http://schema.org/Restaurant";
 	}
-	/*else if(stripos($page_template_file, "hotel") !== false)*/
-	else if($page_template_file == "template-hotel")
+	else if(in_array($page_template_file, array("template-hotel.php")))
 	{
 		$schema_itemtype = "http://schema.org/Hotel";
 	}
 	$schema_array = array();
 	$schema_array = array();
+	echo $page_template_file;
 	?>
 	<div itemscope itemtype="<?php echo $schema_itemtype; ?>">
 		
