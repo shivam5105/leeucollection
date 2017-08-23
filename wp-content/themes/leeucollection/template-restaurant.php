@@ -168,7 +168,7 @@ get_header(); ?>
 										{
 											?>
 											<div class="leeu-text">Policy</div>
-											<div class="hotel-info-desc"> 
+											<div class="hotel-info-desc" itemprop="unnamedSourcesPolicy"> 
 												<?php echo nl2br($post_meta['_crb_policy'][0]); ?>
 											</div>
 											<?php
@@ -258,7 +258,7 @@ get_header(); ?>
 											?>
 											<div class="<?php echo $item_col_class; ?> rm-pad">
 												<div class="link-wrapper-box">
-													<a class="main-link" href="<?php echo get_permalink($child_post_id); ?>"></a>
+													<a class="main-link" href="<?php echo get_permalink($child_post_id); ?>" itemprop="menu"></a>
 													<div class="banner-img scroll-anim" data-anim="fade-up" <?php echo $data_anim_delay; ?>>
 														<img src="<?php echo $child_post_img_url; ?>" alt="" />
 													</div>

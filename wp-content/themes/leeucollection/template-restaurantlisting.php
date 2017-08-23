@@ -20,7 +20,7 @@ get_header(); ?>
 	{
 		$slider_wrapper_class = "active";
 	}
-	?>	
+	?>
 	<section id="site-main"> 
 		<div class="container home-slider-container res-slider-container <?php if(!$has_slider){ echo "no_slider_wrapper"; }?>">
 			<div class="single_slider_wrapper scroll-anim <?php if(!$has_slider){ echo "no_slider"; }?>" data-anim="fade-up">
