@@ -246,6 +246,15 @@ get_header(); ?>
 														}
 														?>
 														<div itemscope itemtype="<?php echo $schema_for; ?>" class="slide-item">
+															<?php
+															if(stripos($section_heading, "eat") !== false || stripos($section_heading, "food") !== false)
+															{
+																/* Used for schema only. Please do not delete it. */
+																?>
+																<div style="display:none" itemprop="address"><?php echo $hotel_location; ?></div>
+																<?php
+															}
+															?>
 															<div class="banner-img scroll-anim" data-anim="fade-up" <?php if($section_layout == 2 && $slide_counter > 1){ echo $data_anim_delay; }?>>
 																<img src="<?php echo $slide_image_url; ?>" alt="" itemprop="image" />
 																<?php
