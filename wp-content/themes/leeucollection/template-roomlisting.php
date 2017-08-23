@@ -107,27 +107,29 @@ get_header(); ?>
 								<?php
 							}
 							?>
-							<div class="banner-img scroll-anim full_img" data-anim="fade-up"<?php echo $data_anim_delay; ?>>
-								<img src="<?php echo $child_post_img_url; ?>" alt="" />
-								<a href="<?php echo get_permalink($child_post_id); ?>" class="main-link"></a>
-								<div class="inner-detail-wrapper">
-									<div class="inner-detail">
-										<div class="row">
-											<div class="col-11 col-centered">
-												<div class="inner-detail-content">
-													<div class="content-part">
-														<?php echo nl2br(@$child_post_meta['_crb_short_description'][0]); ?>
+							<div itemscope itemtype="http://schema.org/HotelRoom">
+								<div class="banner-img scroll-anim full_img" data-anim="fade-up"<?php echo $data_anim_delay; ?>>
+									<img src="<?php echo $child_post_img_url; ?>" alt="" itemprop="image" />
+									<a href="<?php echo get_permalink($child_post_id); ?>" itemprop="url" class="main-link"></a>
+									<div class="inner-detail-wrapper">
+										<div class="inner-detail">
+											<div class="row">
+												<div class="col-11 col-centered">
+													<div class="inner-detail-content">
+														<div class="content-part" itemprop="description">
+															<?php echo nl2br(@$child_post_meta['_crb_short_description'][0]); ?>
+														</div>
+														<ul class="list-inline linking-wrap">
+															<li class="see-more-link"><a href="<?php echo get_permalink($child_post_id); ?>" itemprop="url">SEE MORE</a></li>
+														</ul>
 													</div>
-													<ul class="list-inline linking-wrap">
-														<li class="see-more-link"><a href="<?php echo get_permalink($child_post_id); ?>" itemprop="url">SEE MORE</a></li>
-													</ul>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
+								<div class="img-desc" itemprop="name"><?php echo $child_post->post_title; ?></div>
 							</div>
-							<div class="img-desc"><?php echo $child_post->post_title; ?></div>
 							<?php
 							if($logic_loop > 1)
 							{
