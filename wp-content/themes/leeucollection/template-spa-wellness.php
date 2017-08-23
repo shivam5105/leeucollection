@@ -164,7 +164,7 @@ get_header(); ?>
 																if(!empty($section_link) && !empty($section_link_text))
 																{
 																	?>
-																	<a href="<?php echo $section_link; ?>" class="main-link" itemprop="url"></a>
+																	<a href="<?php echo $section_link; ?>" class="main-link"></a>
 																	<?php
 																}
 																?>
@@ -202,7 +202,7 @@ get_header(); ?>
 														?>
 														<ul class="list-inline linking-wrap">
 															<li class="see-more-link">
-																<a href="<?php echo $section_link; ?>"><?php echo $section_link_text; ?></a>
+																<a href="<?php echo $section_link; ?>" itemprop="url"><?php echo $section_link_text; ?></a>
 															</li>
 														</ul>
 														<?php
