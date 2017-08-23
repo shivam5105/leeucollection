@@ -13,7 +13,6 @@ get_header(); ?>
 
 	$page_heading = (@$post_meta['_crb_page_heading'][0]) ? $post_meta['_crb_page_heading'][0] : $post->post_title;
     ?>
-    <a href="<?php echo get_permalink($post_id); ?>" style="display:none" itemprop="url"><?php the_title(); ?></a> <!-- used for schema only please do not remove it. -->
 	<section id="site-main">
 		<div class="container">
 			<div class="leeu-heading-wrap scroll-anim" data-anim="fade-up">
