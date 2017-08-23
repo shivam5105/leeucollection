@@ -173,19 +173,19 @@ get_header(); ?>
 											$slider_theme_class = "";
 										}
 										?>
-										<div class="listing-box listing-row relative <?php if($section_link == '') { echo "no-page-link"; } ?>">
+										<div itemscope itemtype="http://schema.org/Place" class="listing-box listing-row relative <?php if($section_link == '') { echo "no-page-link"; } ?>">
 											<div class="text-center scroll-anim section-heading-wrapper" data-anim="fade-up">
 												<?php
 												if($section_layout == 1)
 												{
 													?>
-													<h1 class="ucase"><?php echo $section_heading; ?></h1>
+													<h1 class="ucase" itemprop="name"><?php echo $section_heading; ?></h1>
 													<?php
 												}
 												else
 												{
 													?>
-												    <h2 class="ucase"><?php echo $section_heading; ?></h2>
+												    <h2 class="ucase" itemprop="name"><?php echo $section_heading; ?></h2>
 													<?php
 												}?>
 											</div>
@@ -195,7 +195,7 @@ get_header(); ?>
 												if($section_show_link == 'yes')
 												{
 													?>
-													<a href="<?php echo $section_link; ?>"><?php echo $section_link_text; ?></a>
+													<a href="<?php echo $section_link; ?>" itemprop="url"><?php echo $section_link_text; ?></a>
 													<?php
 												}
 												?>
@@ -230,15 +230,25 @@ get_header(); ?>
 															$slide_image_url = wp_get_attachment_image_src( $slide_image, '821x478' );
 														}
 														$slide_image_url = $slide_image_url[0];
+
+														$schema_for = "http://schema.org/Place";
+														if(stripos($section_heading, "meeting"))
+														{
+															$schema_for = "http://schema.org/MeetingRoom";
+														}
+														else if(stripos($section_heading, "room"))
+														{
+															$schema_for = "http://schema.org/HotelRoom";
+														}
 														?>
-														<div class="slide-item">
+														<div itemscope itemtype="<?php echo $schema_for; ?>" class="slide-item">
 															<div class="banner-img scroll-anim" data-anim="fade-up" <?php if($section_layout == 2 && $slide_counter > 1){ echo $data_anim_delay; }?>>
-																<img src="<?php echo $slide_image_url; ?>" alt="" />
+																<img src="<?php echo $slide_image_url; ?>" alt="" itemprop="image" />
 																<?php
 																if(!empty($slide_link))
 																{
 																	?>
-																	<a href="<?php echo $slide_link; ?>" class="main-link"></a>
+																	<a href="<?php echo $slide_link; ?>" class="main-link" itemprop="url"></a>
 																	<?php
 																}
 																?>
@@ -247,7 +257,7 @@ get_header(); ?>
 															if($section_layout == 2)
 															{
 																?>
-																<div class="desc-heading ucase"><?php echo $slide_title; ?></div>
+																<div class="desc-heading ucase" itemprop="name"><?php echo $slide_title; ?></div>
 																<?php
 															}
 															else
@@ -255,10 +265,10 @@ get_header(); ?>
 																?>
 																<div class="row detail-row">
 																	<div class="col-3">
-																		<div class="desc-heading"><?php echo $slide_title; ?></div>
+																		<div class="desc-heading" itemprop="name"><?php echo $slide_title; ?></div>
 																	</div>
 																	<div class="col-9">
-																		<div class="desc-content"> 
+																		<div class="desc-content" itemprop="description">
 																			<?php echo nl2br($slide_desc); ?>
 																		</div>
 																	</div>
