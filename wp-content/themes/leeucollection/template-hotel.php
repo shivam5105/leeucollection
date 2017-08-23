@@ -240,6 +240,10 @@ get_header(); ?>
 														{
 															$schema_for = "http://schema.org/HotelRoom";
 														}
+														else if(stripos($section_heading, "eat") !== false || stripos($section_heading, "food") !== false)
+														{
+															$schema_for = "http://schema.org/Restaurant";
+														}
 														?>
 														<div itemscope itemtype="<?php echo $schema_for; ?>" class="slide-item">
 															<div class="banner-img scroll-anim" data-anim="fade-up" <?php if($section_layout == 2 && $slide_counter > 1){ echo $data_anim_delay; }?>>
