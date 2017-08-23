@@ -171,19 +171,19 @@ get_header(); ?>
 								</div>
 							<?php }?>
 							<?php if(!empty($first_image_link) || !empty($first_heading)) {?>
-								<div class="col-6 rm-pad">
+								<div class="col-6 rm-pad" itemscope itemtype="http://schema.org/Product">
 									<div class="half-layout-image scroll-anim animate-custom" data-anim="fade-up">
-										<img src="<?php echo $first_image_link;?>" alt="<?php echo $first_heading; ?>">
+										<img src="<?php echo $first_image_link;?>" alt="<?php echo $first_heading; ?>" itempro="image">
 									</div>
-									<div class="desc-heading ucase"><?php echo $first_heading; ?></div>
+									<div class="desc-heading ucase" itemprop="name"><?php echo $first_heading; ?></div>
 								</div>
 							<?php }?>
 							<?php if(!empty($second_image_link) || !empty($second_heading)) {?>
-								<div class="col-6 rm-pad">
+								<div class="col-6 rm-pad" itemscope itemtype="http://schema.org/Product">
 									<div class="half-layout-image scroll-anim animate-custom" data-anim="fade-up">
-										<img src="<?php echo $second_image_link;?>" alt="<?php echo $second_heading; ?>">
+										<img src="<?php echo $second_image_link;?>" alt="<?php echo $second_heading; ?>" itemprop="image">
 									</div>
-									<div class="desc-heading ucase"><?php echo $second_heading; ?></div>
+									<div class="desc-heading ucase" itemprop="name"><?php echo $second_heading; ?></div>
 								</div>
 							<?php }?>
 					 	</div>
