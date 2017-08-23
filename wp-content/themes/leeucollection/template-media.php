@@ -42,7 +42,7 @@ get_header(); ?>
 					</div>
 					<div class="col-8">
 						<div class="scroll-anim" data-anim="fade-up">
-							<div class="content-part-section career-content">
+							<div class="content-part-section career-content" itemprop="description">
 								<div class="row media-container">
 									<?php
 									$args = array(
@@ -62,7 +62,7 @@ get_header(); ?>
 											$second_dpi = carbon_get_post_meta($post->ID,'crb_second_dpi');
 										?>	
 											<div class="col-6 rm-pad"> 
-												<div class="content-part" itemprop="address">
+												<div class="content-part">
 													<?php the_post_thumbnail('411x258');?>
 													<div class="content-box media-box clearfix">
 														<div class="media-content-left">
