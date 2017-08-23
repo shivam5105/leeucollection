@@ -63,7 +63,7 @@ get_header(); ?>
 									}
 								?>
 								<?php if(is_array($section_sliders) || is_object($section_sliders)){ ?>
-								<div class="listing-box listing-row">
+								<div class="listing-box listing-row" itemscope itemtype="http://schema.org/Place">
 									<div class="scroll-anim" data-anim="fade-up">
 										<div class="listing-box">
 											<div class="single_slider_wrapper <?php if(!$has_slider){ echo "no_slider"; }?>">
@@ -85,7 +85,7 @@ get_header(); ?>
 														?>
 														<div class="slide-item">
 															<div class="banner-img scroll-anim" data-anim="fade-up">
-																<img src="<?php echo $slide_image_url; ?>" alt="" />
+																<img src="<?php echo $slide_image_url; ?>" alt="" itemprop="image" />
 															</div>
 														</div>
 														<?php
@@ -103,13 +103,13 @@ get_header(); ?>
 											</div>
 											<div class="row detail-row spa-wellness-row">
 												<div class="col-3">
-													<div class="desc-heading-guest"><?php echo $slide_title; ?></div>
+													<div class="desc-heading-guest" itemprop="name"><?php echo $slide_title; ?></div>
 													<!--<div class="see_option"> 
 														<span><a href="<?php echo $section_link; ?>"><?php echo $section_link_text; ?></a></span>
 													</div>-->
 												</div>
 												<div class="col-9">
-													<div class="desc-content"> 
+													<div class="desc-content" itemprop="description"> 
 														<?php echo nl2br($slide_desc); ?>
 													</div>
 												</div>										
