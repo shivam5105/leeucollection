@@ -56,7 +56,6 @@ get_header(); ?>
 								{
 									$slider_wrapper_class = "";
 								}
-								$propImage = false;
 								?>
 								<div class="listing-box">
 									<div class="single_slider_wrapper <?php if(!$has_slider){ echo "no_slider"; }?>">
@@ -78,7 +77,7 @@ get_header(); ?>
 													?>
 													<div class="slide-item">
 														<div class="banner-img scroll-anim" data-anim="fade-up">
-															<img src="<?php echo $banner_url; ?>" alt="" <?php if(!$propImage){ echo 'itemprop="image"'; $propImage = true; } ?> />
+															<img src="<?php echo $banner_url; ?>" alt="" itemprop="image" />
 														</div>
 													</div>
 													<?php
@@ -92,7 +91,7 @@ get_header(); ?>
 												?>
 												<div class="slide-item">
 													<div class="banner-img scroll-anim" data-anim="fade-up">
-														<img src="<?php echo $banner_url; ?>" alt="" />
+														<img src="<?php echo $banner_url; ?>" itemprop="image" alt="" />
 													</div>
 												</div>
 												<?php
@@ -108,7 +107,7 @@ get_header(); ?>
 									</div>
 									<div class="row detail-row">
 										<div class="col-12">
-											<div class="desc-content text-center"> 
+											<div class="desc-content text-center" itemprop="description"> 
 												<?php echo nl2br(@$post_meta['_crb_short_description'][0]); ?>
 											</div>
 										</div>
@@ -139,7 +138,7 @@ get_header(); ?>
 									$slider_wrapper_class = "";
 								}
 								?>
-								<div class="listing-box listing-row">
+								<div class="listing-box listing-row" itemscope itemtype="http://schema.org/Place">
 									<div class="scroll-anim" data-anim="fade-up">
 										<div class="listing-box">
 											<div class="single_slider_wrapper <?php if(!$has_slider){ echo "no_slider"; }?>">
@@ -160,12 +159,12 @@ get_header(); ?>
 														?>
 														<div class="slide-item">
 															<div class="banner-img scroll-anim" data-anim="fade-up">
-																<img src="<?php echo $slide_image_url; ?>" alt="" />
+																<img src="<?php echo $slide_image_url; ?>" alt="" itemprop="image" />
 																<?php
 																if(!empty($section_link) && !empty($section_link_text))
 																{
 																	?>
-																	<a href="<?php echo $section_link; ?>" class="main-link"></a>
+																	<a href="<?php echo $section_link; ?>" class="main-link" itemprop="url"></a>
 																	<?php
 																}
 																?>
@@ -185,13 +184,13 @@ get_header(); ?>
 											</div>
 											<div class="row detail-row spa-wellness-row">
 												<div class="col-3">
-													<div class="desc-heading"><?php echo $slide_title; ?></div>
+													<div class="desc-heading" itemprop="name"><?php echo $slide_title; ?></div>
 													<!--<div class="see_option"> 
 														<span><a href="<?php echo $section_link; ?>"><?php echo $section_link_text; ?></a></span>
 													</div>-->
 												</div>
 												<div class="col-9">
-													<div class="desc-content"> 
+													<div class="desc-content" itemprop="description"> 
 														<?php echo nl2br($slide_desc); ?>
 													</div>
 												</div>
