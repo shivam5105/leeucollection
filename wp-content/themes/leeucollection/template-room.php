@@ -12,7 +12,7 @@ get_header(); ?>
 
 	$page_heading = (@$post_meta['_crb_page_heading'][0]) ? $post_meta['_crb_page_heading'][0] : $post->post_title;
     ?>
-	<section id="site-main">
+	<section itemscope itemtype="http://schema.org/HotelRoom" id="site-main">
 		<div class="container desktop-only">
 			<div class="leeu-heading-wrap scroll-anim" data-anim="fade-up">
 				<div class="row">
