@@ -76,7 +76,7 @@ get_header(); ?>
 												?>
 												<div class="slide-item">
 													<div class="banner-img scroll-anim" data-anim="fade-up">
-														<img src="<?php echo $banner_url; ?>" alt="" />
+														<img src="<?php echo $banner_url; ?>" alt="" itemprop="image" />
 													</div>
 												</div>
 												<?php
@@ -90,7 +90,7 @@ get_header(); ?>
 											?>
 											<div class="slide-item">
 												<div class="banner-img scroll-anim" data-anim="fade-up">
-													<img src="<?php echo $banner_url; ?>" alt="" />
+													<img src="<?php echo $banner_url; ?>" alt="" itemprop="image" />
 												</div>
 											</div>
 											<?php
@@ -130,11 +130,11 @@ get_header(); ?>
 						    			$col_div_class = "col-3 contact-pad-left";
 						    		}
 						    		?>
-									<div class="<?php echo $col_div_class; ?> rm-pad"> 
-										<div class="contact-sub-head"><?php echo $contact_section['crb_contact_heading']; ?></div>
+									<div class="<?php echo $col_div_class; ?> rm-pad"  itemscope itemtype="http://schema.org/Place"> 
+										<div class="contact-sub-head" itemprop="name"><?php echo $contact_section['crb_contact_heading']; ?></div>
 										<div class="address-contact contact-spacer">
 											<div class="leeu-text">ADDRESS</div>
-											<div class="content-part"> 
+											<div class="content-part" itemprop="address"> 
 												<?php echo nl2br($contact_info['crb_contact_address']); ?>
 											</div>
 										</div>
@@ -144,7 +144,7 @@ get_header(); ?>
 											?>
 											<div class="phone-contact contact-spacer">
 												<div class="leeu-text">PHONE</div>
-												<div class="content-part"> 
+												<div class="content-part" itemprop="telephone"> 
 													<?php echo $contact_info['crb_contact_phone']; ?>
 												</div>
 											</div>
@@ -155,7 +155,7 @@ get_header(); ?>
 											?>
 											<div class="fax-contact contact-spacer">
 												<div class="leeu-text">FACSIMILE</div>
-												<div class="content-part"> 
+												<div class="content-part" itemprop="faxNumber"> 
 													<?php echo $contact_info['crb_contact_fax']; ?>
 												</div>
 											</div>
@@ -165,7 +165,7 @@ get_header(); ?>
 										{
 											?>
 											<div class="cstm-btn-wrapper contact-email contact-spacer">
-												<a href="mailto:<?php echo $contact_info['crb_contact_email']; ?>"  class="booktable cstm-btn arrow-btn text-center">Email</a>
+												<a href="mailto:<?php echo $contact_info['crb_contact_email']; ?>" itemprop="email" class="booktable cstm-btn arrow-btn text-center">Email</a>
 											</div>
 											<?php
 										}
