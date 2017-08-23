@@ -66,11 +66,11 @@ get_header(); ?>
 											$service_heading 	= $services_section['crb_service_heading'];
 											$remove_bottom_margin 	= @$services_section['crb_remove_bottom_margin'];
 											?>
-											<div class="service-wrapper clearfix <?php if($remove_bottom_margin == 'yes'){ echo 'rm-margin-bottom'; } ?>">
+											<div itemscope itemtype="http://schema.org/Product" class="service-wrapper clearfix <?php if($remove_bottom_margin == 'yes'){ echo 'rm-margin-bottom'; } ?>">
 												<div class="col-10 pd-0">
 													<div class="transformed">
 														<div class="summer_heading">
-															<h3><?php echo $service_heading; ?></h3>
+															<h3 itemprop="name"><?php echo $service_heading; ?></h3>
 														</div>
 													</div>
 												</div>
@@ -87,13 +87,13 @@ get_header(); ?>
 														?>
 														<div class="col-10 pd-0">
 															<div class="transformed">
-																<div class="summer_paragaraph">
+																<div class="summer_paragaraph" itemprop="description">
 																	<p><?php echo $services['crb_service_details']; ?></p>
 																</div>
 															</div>
 														</div>
 														<div class="col-2">
-															<div class="timing_func">
+															<div class="timing_func" itemprop="priceRange">
 																<p><?php echo $services['crb_service_price']; ?></p>
 															</div>
 														</div>
