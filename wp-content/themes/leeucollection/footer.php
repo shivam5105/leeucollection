@@ -95,7 +95,7 @@
 	</div> <!-- schema.org/Hotel div closed -->
 	<?php wp_footer(); ?>
 	<!-- popup -->
-	<div class="main_sec" itemscope itemtype="http://schema.org/Organization">
+	<div class="main_sec">
 		<div class="rel_wrap">
 			<div class="leeu_logo"><?php leeucollection_the_custom_logo(); ?></div>
 			<div class="close_popup extext">CLOSE</div>

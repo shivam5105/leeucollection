@@ -168,7 +168,7 @@ get_header(); ?>
 										{
 											?>
 											<div class="leeu-text">Policy</div>
-											<div class="hotel-info-desc" itemprop="unnamedSourcesPolicy"> 
+											<div class="hotel-info-desc"> 
 												<?php echo nl2br($post_meta['_crb_policy'][0]); ?>
 											</div>
 											<?php
