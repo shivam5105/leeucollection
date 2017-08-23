@@ -149,9 +149,9 @@ $page_template_file = basename(get_page_template());
 	
 	if(in_array($page_template_file, array("template-hotel-restaurantlisting.php")))
 	{
-		$schema_itemtype = "http://schema.org/Organization";
+		$schema_itemtype = "http://schema.org/Place";
 	}
-	
+
 	$schema_array = array();
 	$schema_array = array();
 	?>
