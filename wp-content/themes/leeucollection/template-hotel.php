@@ -46,7 +46,7 @@ get_header(); ?>
 							$banner_url = $banner_url[0];
 							?>
 							<div class="banner-img-wrapper">
-								<img  class="for-mob-hide" src="<?php echo $banner_url; ?>" alt="" />
+								<img class="for-mob-hide" src="<?php echo $banner_url; ?>" alt="" itemprop="image" />
 								<div class="banner-img for-mob mht_homebanner" style="background-image:url('<?php echo $banner_url; ?>')"> </div>
 							</div>
 							<?php
@@ -59,7 +59,7 @@ get_header(); ?>
 						$banner_url = $banner_url[0];
 						?>
 						<div class="banner-img-wrapper">
-							<img class="for-mob-hide" src="<?php echo $banner_url; ?>" alt="" />
+							<img class="for-mob-hide" src="<?php echo $banner_url; ?>" alt="" itemprop="image" />
 							<div class="banner-img for-mob mht_homebanner" style="background-image:url('<?php echo $banner_url; ?>')"> </div>
 						</div>
 						<?php
