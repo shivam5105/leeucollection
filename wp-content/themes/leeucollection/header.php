@@ -161,7 +161,6 @@ $page_template_file = basename(get_page_template());
 	}
 
 	$schema_array = array();
-	$schema_array = array();
 	?>
 	<div itemscope itemtype="<?php echo $schema_itemtype; ?>">
 		<a href="<?php echo get_permalink($post->ID); ?>" style="display:none" itemprop="url"></a> <!-- used for schema only please do not remove it. -->
