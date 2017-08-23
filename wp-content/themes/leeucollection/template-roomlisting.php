@@ -12,7 +12,8 @@ get_header(); ?>
 	$top_most_parent_post = ($hotel_id == false) ? false : get_post($hotel_id);
 
 	$page_heading = (@$post_meta['_crb_page_heading'][0]) ? $post_meta['_crb_page_heading'][0] : $post->post_title;
-    ?>
+    ?>    
+    <a href="<?php echo get_permalink($post_id); ?>" style="display:none" itemprop="url"><?php the_title(); ?></a> <!-- used for schema only please do not remove it. -->
 	<section id="site-main" class="room-listing-page">
 		<div class="container">
 			<div class="leeu-heading-wrap scroll-anim" data-anim="fade-up">
