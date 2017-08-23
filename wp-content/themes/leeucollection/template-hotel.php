@@ -232,11 +232,11 @@ get_header(); ?>
 														$slide_image_url = $slide_image_url[0];
 
 														$schema_for = "http://schema.org/Place";
-														if(stripos($section_heading, "meeting"))
+														if(stripos($section_heading, "meeting") !== false)
 														{
 															$schema_for = "http://schema.org/MeetingRoom";
 														}
-														else if(stripos($section_heading, "room"))
+														else if(stripos($section_heading, "room") !== false)
 														{
 															$schema_for = "http://schema.org/HotelRoom";
 														}
