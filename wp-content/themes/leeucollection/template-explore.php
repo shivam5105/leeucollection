@@ -76,7 +76,7 @@ get_header(); ?>
 												?>
 												<div class="slide-item">
 													<div class="banner-img scroll-anim" data-anim="fade-up">
-														<img src="<?php echo $banner_url; ?>" alt="" />
+														<img src="<?php echo $banner_url; ?>" alt="" itemprop="image" />
 													</div>
 												</div>
 												<?php
@@ -90,7 +90,7 @@ get_header(); ?>
 											?>
 											<div class="slide-item">
 												<div class="banner-img scroll-anim" data-anim="fade-up">
-													<img src="<?php echo $banner_url; ?>" alt="" />
+													<img src="<?php echo $banner_url; ?>" alt="" itemprop="name" />
 												</div>
 											</div>
 											<?php
