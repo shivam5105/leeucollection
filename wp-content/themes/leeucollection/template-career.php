@@ -43,7 +43,7 @@ get_header(); ?>
 					</div>
 					<div class="col-8">
 						<div class="scroll-anim" data-anim="fade-up">
-							<div class="content-part-section career-content">
+							<div class="content-part-section career-content" itemprop="description">
 								<?php
 								$args = array(
 								    'post_type' => 'hotel',
@@ -98,7 +98,7 @@ get_header(); ?>
 												<div class="detail-content-career"> 
 													<div class="row"> 
 														<div class="col-3 rm-pad"> 
-															<div class="content-part" itemprop="address">
+															<div class="content-part">
 																<?php echo $hotel_location; ?>
 															</div>
 														</div>
