@@ -148,7 +148,6 @@ $page_template_file = basename(get_page_template());
 	}
 	$schema_array = array();
 	$schema_array = array();
-	echo $page_template_file;
 	?>
 	<div itemscope itemtype="<?php echo $schema_itemtype; ?>">
 		
