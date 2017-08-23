@@ -77,7 +77,7 @@ get_header(); ?>
 													?>
 													<div class="slide-item">
 														<div class="banner-img scroll-anim" data-anim="fade-up">
-															<img src="<?php echo $banner_url; ?>" alt="" />
+															<img src="<?php echo $banner_url; ?>" alt="" itemprop="image" />
 														</div>
 													</div>
 													<?php
@@ -91,7 +91,7 @@ get_header(); ?>
 												?>
 												<div class="slide-item">
 													<div class="banner-img scroll-anim" data-anim="fade-up">
-														<img src="<?php echo $banner_url; ?>" alt="" />
+														<img src="<?php echo $banner_url; ?>" alt="" itemprop="image" />
 													</div>
 												</div>
 												<?php
@@ -127,7 +127,7 @@ get_header(); ?>
 							{
 								?>
 								<div class="<?php if($both_given){ echo "col-9"; }else{ echo "col-12"; } ?>">
-									<div class="desc-content <?php if(!$both_given){ echo "text-center"; }?>"> 
+									<div class="desc-content <?php if(!$both_given){ echo "text-center"; }?>" itemprop="description"> 
 										<?php echo nl2br(@$post_meta['_crb_slider_bottom_description'][0]); ?>
 									</div>
 								</div>
@@ -157,7 +157,7 @@ get_header(); ?>
 									$slider_theme_class = "";
 								}
 								?>
-								<div class="listing-box listing-row">
+								<div class="listing-box listing-row" itemscope itemtype="http://schema.org/Place">
 									<div class="text-center scroll-anim" data-anim="fade-up">
 										<?php
 										if(!empty($section_heading))
@@ -203,22 +203,22 @@ get_header(); ?>
 												?>
 												<div class="slide-item">
 													<div class="banner-img scroll-anim" data-anim="fade-up">
-														<img src="<?php echo $slide_image_url; ?>" alt="" />
+														<img src="<?php echo $slide_image_url; ?>" alt="" itemprop="image" />
 														<?php
 														if(!empty($section_link) && !empty($section_link_text))
 														{
 															?>
-															<a href="<?php echo $section_link; ?>" <?php echo $target; ?> class="main-link"></a>
+															<a href="<?php echo $section_link; ?>" <?php echo $target; ?> class="main-link" itemprop="url"></a>
 															<?php
 														}
 														?>
 													</div>
 													<div class="row detail-row">
 														<div class="col-3">
-															<div class="desc-heading mg-l-20"><?php echo $slide_title; ?></div>
+															<div class="desc-heading mg-l-20" itemprop="name"><?php echo $slide_title; ?></div>
 														</div>
 														<div class="col-9">
-															<div class="desc-content"> 
+															<div class="desc-content" itemprop="description"> 
 																<?php echo nl2br($slide_desc); ?>
 															</div>
 														</div>
@@ -274,11 +274,11 @@ get_header(); ?>
 						if(!empty($wine_section_heading) && !empty($wine_slider_details))
 						{
 							?>
-							<div class="listing-box listing-row wine-slider-section-wrapper">
+							<div class="listing-box listing-row wine-slider-section-wrapper" itemscope itemtype="http://schema.org/Product">
 								<div class="text-center scroll-anim animate-custom" data-anim="fade-up">
 									<h2 class="ucase small_heading"><?php echo $wine_section_heading; ?></h2>
 								</div>
-								<div class="wine-section-description col-12 col-centered"><?php echo $wine_section_description; ?></div>
+								<div class="wine-section-description col-12 col-centered" itemprop="description"><?php echo $wine_section_description; ?></div>
 								<div class="two-slide-carousel two-img-col">
 									<?php
 									if(count($wine_slider_details) > 2)
@@ -305,10 +305,10 @@ get_header(); ?>
 											?>
 											<div class="slide-item">
 												<div class="banner-img scroll-anim animate-custom" data-anim="fade-up" <?php if($loop == 1) { echo 'data-anim-delay="100"'; } ?>>
-													<img src="<?php echo $wine_image; ?>" alt="">
+													<img src="<?php echo $wine_image; ?>" alt="" itemprop="image">
 												</div>
 												<div class="wine-name-date-wrapper">
-													<span class="wine-name"><?php echo $wine_name; ?></span>
+													<span class="wine-name" itemprop="name"><?php echo $wine_name; ?></span>
 													<span class="wine-type"><?php echo $wine_type; ?>,</span>
 													<span class="wine-date"><?php echo $wine_date; ?></span>
 												</div>
