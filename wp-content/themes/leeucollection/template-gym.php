@@ -77,7 +77,7 @@ get_header(); ?>
 													?>
 													<div class="slide-item">
 														<div class="banner-img scroll-anim" data-anim="fade-up">
-															<img src="<?php echo $banner_url; ?>" alt="" />
+															<img src="<?php echo $banner_url; ?>" alt="" itemprop="image" />
 														</div>
 													</div>
 													<?php
@@ -91,7 +91,7 @@ get_header(); ?>
 												?>
 												<div class="slide-item">
 													<div class="banner-img scroll-anim" data-anim="fade-up">
-														<img src="<?php echo $banner_url; ?>" alt="" />
+														<img src="<?php echo $banner_url; ?>" alt="" itemprop="image" />
 													</div>
 												</div>
 												<?php
@@ -113,7 +113,7 @@ get_header(); ?>
 								<div class="desc-heading"><?php echo @$post_meta['_crb_slider_bottom_heading'][0]; ?></div>
 							</div>
 							<div class="col-9">
-								<div class="desc-content"> 
+								<div class="desc-content" itemprop="description"> 
 									<?php echo nl2br(@$post_meta['_crb_slider_bottom_description'][0]); ?>
 								</div>
 							</div>
@@ -131,15 +131,15 @@ get_header(); ?>
 							$rate_for 		= $rates_section['crb_rate_for'];
 							$rate_details	= $rates_section['crb_rate_details'];
 							?>							
-							<div class="row detail-row">
+							<div class="row detail-row" itemscope itemtype="http://schema.org/Product">
 								<div class="col-3">
 									<div class="price_value">
 										<p><?php echo $rate_amount?></p>
-										<p><?php echo $rate_for?></p>
+										<p itemprop="name"><?php echo $rate_for?></p>
 									</div>
 								</div>
 								<div class="col-9">
-									<div class="desc-content"> 
+									<div class="desc-content" itemprop="description"> 
 										<?php echo $rate_details?>
 									</div>
 								</div>
@@ -158,8 +158,6 @@ get_header(); ?>
 							</div>
 							<?php
 						}?>
-
-
 					</div>
 				</div>
 			</div>

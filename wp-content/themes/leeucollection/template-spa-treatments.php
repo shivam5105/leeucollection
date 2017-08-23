@@ -93,7 +93,7 @@ get_header(); ?>
 															</div>
 														</div>
 														<div class="col-2">
-															<div class="timing_func" itemprop="priceRange">
+															<div class="timing_func">
 																<p><?php echo $services['crb_service_price']; ?></p>
 															</div>
 														</div>
