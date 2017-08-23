@@ -147,9 +147,13 @@ $page_template_file = basename(get_page_template());
 		$schema_itemtype = "http://schema.org/Hotel";
 	}
 	
-	if(in_array($page_template_file, array("template-hotel-restaurantlisting.php","template-hotel-wine.php")))
+	if(in_array($page_template_file, array("template-hotel-restaurantlisting.php")))
 	{
 		$schema_itemtype = "http://schema.org/Place";
+	}
+	if(in_array($page_template_file, array("template-hotel-wine.php")))
+	{
+		$schema_itemtype = "http://schema.org/Organization";
 	}
 
 	$schema_array = array();
