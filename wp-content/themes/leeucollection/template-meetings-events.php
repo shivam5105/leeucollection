@@ -75,8 +75,8 @@ get_header(); ?>
 					<?php
 				}?>
 				<div class="banner-text text-center pos-abs-top">
-					<!-- <div class="location-text ucase" itemprop="legalname name"><?php echo $top_most_parent_post->post_title;?></div> -->
-					<h2 itemprop="legalname name" class="ucase"><?php echo $page_heading; ?></h2>
+					<!-- <div class="location-text ucase" itemprop="name"><?php echo $top_most_parent_post->post_title;?></div> -->
+					<h2 itemprop="name" class="ucase"><?php echo $page_heading; ?></h2>
 				</div>
 			</div>
 			<div class="intro-blurb scroll-anim" data-anim="fade-up">

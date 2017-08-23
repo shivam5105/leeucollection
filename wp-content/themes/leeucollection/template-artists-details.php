@@ -21,7 +21,7 @@ get_header(); ?>
 					<div class="col-2 rm-pad"></div>
 					<div class="col-8 rm-pad">
 						<div class="text-center">
-							<div class="leeu-text ucase" itemprop="legalname name">
+							<div class="leeu-text ucase" itemprop="name">
 								<?php
 								if($top_most_parent_post)
 								{

@@ -75,7 +75,7 @@ get_header(); ?>
 				}?>
 				<div class="banner-text text-center pos-abs-top">
 					<div class="location-text ucase" itemprop="address"><?php echo $hotel_location; ?></div>
-					<h1 itemprop="legalname name" class="ucase-h1"><?php echo $post->post_title;?></h1>
+					<h1 itemprop="name" class="ucase-h1"><?php echo $post->post_title;?></h1>
 				</div>
 			</div>
 			<div class="intro-blurb scroll-anim" data-anim="fade-up">
