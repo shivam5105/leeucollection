@@ -12,7 +12,7 @@ get_header(); ?>
     
 	$top_most_parent_post = ($hotel_id == false) ? false : get_post($hotel_id);
     ?>
-    <a href="<?php echo get_permalink($post_id); ?>" style="display:none" itemprop="url"><?php the_title(); ?></a>
+    <a href="<?php echo get_permalink($post_id); ?>" style="display:none" itemprop="url"><?php the_title(); ?></a> <!-- used for schema only please do not remove it. -->
     <section id="site-main">
 		<div class="container">
 			<?php
