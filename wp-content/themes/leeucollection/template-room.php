@@ -14,6 +14,7 @@ get_header(); ?>
     ?>
 	<section id="site-main">
 		<div itemscope itemtype="http://schema.org/HotelRoom">
+			<a href="<?php echo get_permalink($post->ID); ?>" style="display:none" itemprop="url"><?php the_title(); ?></a> <!-- used for schema only please do not remove it. -->
 			<div class="container desktop-only">
 				<div class="leeu-heading-wrap scroll-anim" data-anim="fade-up">
 					<div class="row">
