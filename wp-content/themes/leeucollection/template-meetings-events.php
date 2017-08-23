@@ -46,7 +46,7 @@ get_header(); ?>
 							$banner_url = $banner_url[0];
 							?>
 							<div class="banner-img-wrapper">
-								<img  class="for-mob-hide" src="<?php echo $banner_url; ?>" alt="" />
+								<img  class="for-mob-hide" src="<?php echo $banner_url; ?>" alt="" itemprop="image" />
 								<div class="banner-img for-mob mht_homebanner" style="background-image:url('<?php echo $banner_url; ?>')"> </div>
 							</div>
 							<?php
@@ -59,7 +59,7 @@ get_header(); ?>
 						$banner_url = $banner_url[0];
 						?>
 						<div class="banner-img-wrapper">
-							<img class="for-mob-hide" src="<?php echo $banner_url; ?>" alt="" />
+							<img class="for-mob-hide" src="<?php echo $banner_url; ?>" alt="" itemprop="image" />
 							<div class="banner-img for-mob mht_homebanner" style="background-image:url('<?php echo $banner_url; ?>')"> </div>
 						</div>
 						<?php
@@ -124,7 +124,7 @@ get_header(); ?>
 									$slider_theme_class = "";
 								}
 								?>
-								<div class="scroll-anim" data-anim="fade-up">
+								<div class="scroll-anim" data-anim="fade-up" itemscope itemtype="http://schema.org/Place">
 									<div class="section-slider-heading-wrapper">
 										<h2 class="ucase"><?php echo $section_slider['crb_section_slider_heading']; ?></h2>
 									</div>
@@ -154,14 +154,14 @@ get_header(); ?>
 														?>
 														<div class="slide-item">
 															<div class="scroll-anim" data-anim="fade-up">
-																<img src="<?php echo $slide_image_url; ?>" alt="">
+																<img src="<?php echo $slide_image_url; ?>" alt="" itemprop="image">
 															</div>
 															<div class="row detail-row">
 																<div class="col-3">
-																	<div class="desc-heading"><?php echo nl2br($slide_title); ?></div>
+																	<div class="desc-heading" itemprop="name"><?php echo nl2br($slide_title); ?></div>
 																</div>
 																<div class="col-9">
-																	<div class="desc-content"> 
+																	<div class="desc-content" itemprop="description"> 
 																		<?php echo nl2br($slide_desc); ?>
 																	</div>
 																</div>
@@ -233,7 +233,7 @@ get_header(); ?>
 										$slider_theme_class = "";
 									}
 									?>
-									<div class="listing-box listing-row relative <?php if($section_link == '') { echo "no-page-link"; } ?>">
+									<div itemscope itemtype="http://schema.org/Place" class="listing-box listing-row relative <?php if($section_link == '') { echo "no-page-link"; } ?>">
 										<div class="text-center scroll-anim section-heading-wrapper" data-anim="fade-up">
 											<h2 class="ucase"><?php echo $section_heading; ?></h2>
 										</div>
@@ -261,17 +261,17 @@ get_header(); ?>
 													?>
 													<div class="slide-item">
 														<div class="banner-img scroll-anim" data-anim="fade-up" <?php if($slide_counter > 1){ echo $data_anim_delay; }?>>
-															<img src="<?php echo $slide_image_url; ?>" alt="" />
+															<img src="<?php echo $slide_image_url; ?>" alt="" itemprop="image" />
 															<?php
 															if(!empty($slide_link))
 															{
 																?>
-																<a href="<?php echo $slide_link; ?>" class="main-link"></a>
+																<a href="<?php echo $slide_link; ?>" itemprop="url" class="main-link"></a>
 																<?php
 															}
 															?>
 														</div>
-														<div class="desc-heading ucase"><?php echo $slide_title; ?></div>
+														<div class="desc-heading ucase" itemprop="name"><?php echo $slide_title; ?></div>
 													</div>
 													<?php
 												}
