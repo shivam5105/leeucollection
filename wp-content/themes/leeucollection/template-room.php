@@ -110,7 +110,7 @@ get_header(); ?>
 											<div class="desc-heading"><?php echo @$post_meta['_crb_slider_bottom_heading'][0]; ?></div>
 										</div>
 										<div class="col-9">
-											<div class="desc-content"> 
+											<div class="desc-content" itemprop="description"> 
 												<?php echo nl2br(@$post_meta['_crb_slider_bottom_description'][0]); ?>
 											</div>
 										</div>
