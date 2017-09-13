@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Accolades
+Template Name: Press
 */
 
 get_header(); ?>
