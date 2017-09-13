@@ -3353,5 +3353,5 @@ img[src*=".svg"].bottom-logo
     padding: 0 2px;
 }
 .hotel-template-template-facilities .half-layout-facility .row {
-    padding: 0 -2px;
+    margin: 0 -2px;
 }
