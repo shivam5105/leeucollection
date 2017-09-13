@@ -249,6 +249,7 @@ function leeucollection_scripts() {
 	//wp_enqueue_style( 'leeucollection-google-fonts', leeucollection_fonts_url(), array(), null );
 
 	// Add Genericons, used in the main stylesheet.
+	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css' );
 	wp_enqueue_style( 'leeucollection-fonts', get_template_directory_uri() . '/fonts/stylesheet.css' );
 	wp_enqueue_style( 'jquery-datepick-css', get_template_directory_uri() . '/css/jquery.datepick.css' );
 	wp_enqueue_style( 'leeucollection-owl-css', get_template_directory_uri() . '/css/owl.carousel.min.css' );

@@ -383,6 +383,11 @@ var Blank ={
 			console.log(picker.endDate.format('YYYY-MM-DD'));*/
 			Blank.fix_daterangepicker_pos();
 		});
+		$('.rangePicker').on('showCalendar.daterangepicker', function(ev, picker) {
+			/*console.log(picker.startDate.format('YYYY-MM-DD'));
+			console.log(picker.endDate.format('YYYY-MM-DD'));*/
+			Blank.fix_daterangepicker_pos();
+		});
 		$('.rangePicker').on('hide.daterangepicker', function(ev, picker) {
 			var arrive 	= picker.startDate.format('DD/MM/YYYY');
 			var endDate = picker.endDate.format('DD/MM/YYYY');
