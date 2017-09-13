@@ -3349,7 +3349,7 @@ img[src*=".svg"].bottom-logo
 .detail-logo img{
     width: 100%;
 }
-.hotel-template-template-facilities .half-layout-facility .col-6
+.hotel-template-template-facilities .half-layout-facility .col-6,
 .page-template-template-media .media-container .col-6
 {
     padding: 0 2px;
