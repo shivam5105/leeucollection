@@ -1347,3 +1347,9 @@ function my_wpcf7_dropdown_form($html)
 add_filter('wpcf7_form_elements', 'my_wpcf7_dropdown_form');
 
 add_filter('jpeg_quality', function($arg){ return 100; });
+
+
+
+// REMOVE WP EMOJI
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+add_action( 'wp_footer', 'print_emoji_detection_script' );

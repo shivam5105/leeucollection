@@ -118,7 +118,7 @@
 						<div class="all_cat pd-l-r">
 							<form action="https://gc.synxis.com/rez.aspx" method="get" id="book_room_form_popup">
 								<input type="hidden" name="locale" value="en-GB" />
-								<!-- <input type="hidden" name="start" value="searchres" /> --> <!-- Options: availresults, searchres -->
+								<input type="hidden" name="start" value="availresults" /> <!-- Options: availresults, searchres -->
 								<input type="hidden" name="arrive" value="<?php echo date('d/m/Y', time()); ?>" />
 								<input type="hidden" name="nights" value="1" />
 								<input type="hidden" name="Chain" value="" />

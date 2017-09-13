@@ -165,7 +165,7 @@ get_header(); ?>
 										{
 											?>
 											<div class="cstm-btn-wrapper contact-email contact-spacer">
-												<a href="mailto:<?php echo $contact_info['crb_contact_email']; ?>" itemprop="email" class="booktable cstm-btn arrow-btn text-center">Email</a>
+												<a href="mailto:<?php echo $contact_info['crb_contact_email']; ?>" class="booktable cstm-btn arrow-btn text-center">Email</a>
 											</div>
 											<?php
 										}
