@@ -3349,3 +3349,9 @@ img[src*=".svg"].bottom-logo
 .detail-logo img{
     width: 100%;
 }
+.hotel-template-template-facilities .half-layout-facility .col-6 {
+    padding: 0 2px;
+}
+.hotel-template-template-facilities .half-layout-facility .row {
+    padding: 0 -2px;
+}
