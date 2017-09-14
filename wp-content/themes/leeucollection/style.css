@@ -2349,7 +2349,10 @@ margin-top:16px;
     width: 80%;
 }
 
-.inside_pd .name_opt,.form_field .enquiry_opt{
+.inside_pd .name_opt,
+.form_field .enquiry_opt,
+.form_field .country_opt
+{
     width:48%;
     display:inline-block;
     text-decoration: none;
@@ -2371,8 +2374,12 @@ margin-top:16px;
     float: right;
     width: 48%;
 }
-
-.form_field .inside_pd .email_sec .name_field input,.form_field .inside_pd .enq_sec .opt_field select,.message_field .textarea_field textarea{
+.country_list {
+    margin-top: 30px;
+}
+.form_field .inside_pd .email_sec .name_field input,.form_field .inside_pd .enq_sec .opt_field select,.message_field .textarea_field textarea,
+.form_field .inside_pd .country_list .opt_field select
+{
     color: #222944;
     font-size: 15px;
     letter-spacing: 0.094em;
@@ -2385,7 +2392,9 @@ margin-top:16px;
     margin-top:25px;
 }
 
-.form_field .inside_pd .enq_sec .opt_field select{
+.form_field .inside_pd .enq_sec .opt_field select,
+.form_field .inside_pd .country_list .opt_field select
+{
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance:none;
@@ -3349,7 +3358,7 @@ img[src*=".svg"].bottom-logo
 .detail-logo img{
     width: 100%;
 }
-.hotel-template-template-facilities .half-layout-facility .col-6,
+.hotel-template-template-facilities .half-layout-facility .col-6,blank
 .page-template-template-media .media-container .col-6
 {
     padding: 0 2px;
