@@ -2378,7 +2378,8 @@ margin-top:16px;
     margin-top: 30px;
 }
 .form_field .inside_pd .email_sec .name_field input,.form_field .inside_pd .enq_sec .opt_field select,.message_field .textarea_field textarea,
-.form_field .inside_pd .country_list .opt_field select
+.form_field .inside_pd .country_list .opt_field select,
+.contact-slide-form select
 {
     color: #222944;
     font-size: 15px;
@@ -2393,7 +2394,8 @@ margin-top:16px;
 }
 
 .form_field .inside_pd .enq_sec .opt_field select,
-.form_field .inside_pd .country_list .opt_field select
+.form_field .inside_pd .country_list .opt_field select,
+.contact-slide-form select
 {
       -webkit-appearance: none;
       -moz-appearance: none;
