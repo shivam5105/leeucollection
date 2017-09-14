@@ -606,7 +606,7 @@ Container::make('post_meta', 'Small Map')
 
 Container::make('post_meta', 'Page Small Heading')
     ->show_on_post_type($leeu_post_types)
-    ->show_on_template(array('template-founder-and-team.php', 'template-accolades.php','template-artisan-drinks.php'))
+    ->show_on_template(array('template-founder-and-team.php', 'template-news.php','template-artisan-drinks.php'))
     ->add_fields(array(
         Field::make('text', 'crb_page_small_heading', 'Page Small Heading (Overwrite Default Heading)'),
     ));
@@ -670,17 +670,17 @@ Container::make('post_meta', 'Location Page Content')
         )),
     ));
 
-Container::make('post_meta', 'Accolades')
+Container::make('post_meta', 'News')
     ->show_on_post_type($leeu_post_types)
-    ->show_on_template(array('template-accolades.php'))
+    ->show_on_template(array('template-news.php'))
     ->add_fields(array(
-        Field::make('complex', 'crb_accolades', 'Accolades')->add_fields(array(
-            Field::make('complex', 'crb_accolade_images', 'Accolade Images')->add_fields(array(
+        Field::make('complex', 'crb_accolades', 'News')->add_fields(array(
+            Field::make('complex', 'crb_accolade_images', 'News Images')->add_fields(array(
                 Field::make('image', 'crb_image', 'Image')->help_text('(Image Dimensions (WxH): 821 x 478)'),
             )),
-            Field::make('text', 'crb_accolade_title', 'Accolade Title')->set_width('50'),
-            Field::make('text', 'crb_accolade_link_text', 'Accolade Link Text')->set_width('20'),
-            Field::make('text', 'crb_accolade_link', 'Accolade Link')->set_width('30'),
+            Field::make('text', 'crb_accolade_title', 'News Title')->set_width('50'),
+            Field::make('text', 'crb_accolade_link_text', 'News Link Text')->set_width('20'),
+            Field::make('text', 'crb_accolade_link', 'News Link')->set_width('30'),
         )),
     ));
 
