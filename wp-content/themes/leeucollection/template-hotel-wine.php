@@ -203,9 +203,9 @@ get_header(); ?>
 												?>
 												<div class="slide-item">
 													<div class="banner-img scroll-anim" data-anim="fade-up">
-														<img src="<?php echo $slide_image_url; ?>" alt="" itemprop="image" />
+														<img src="<?php echo $slide_image_url; ?>" alt="" itemprop="image" url="<?php echo $section_link; ?>" />
 														<?php
-														if(!empty($section_link) && !empty($section_link_text))
+														if(!empty($section_link))
 														{
 															?>
 															<a href="<?php echo $section_link; ?>" <?php echo $target; ?> class="main-link" itemprop="url"></a>
