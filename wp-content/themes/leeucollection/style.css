@@ -2392,7 +2392,10 @@ margin-top:16px;
     width:100%;
     margin-top:25px;
 }
-
+.contact-slide-form select
+{
+    border-bottom:1px solid #ac9e94;
+}
 .form_field .inside_pd .enq_sec .opt_field select,
 .form_field .inside_pd .country_list .opt_field select,
 .contact-slide-form select
