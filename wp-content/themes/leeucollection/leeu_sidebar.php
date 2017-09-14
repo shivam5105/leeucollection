@@ -1,6 +1,11 @@
 <?php
 $left_nav_logo = isset($post_meta['_crb_left_nav_image']) ? $post_meta['_crb_left_nav_image'] : null;
+$left_sidebar_visibility = isset($post_meta['_crb_left_sidebar_visibility']) ? $post_meta['_crb_left_sidebar_visibility'][0] : "show";
 
+if($left_sidebar_visibility == 'hide')
+{
+	return true;
+}
 if(empty($left_nav_logo) || $left_nav_logo == null || (is_array($left_nav_logo) && empty($left_nav_logo[0])))
 {
 	$top_most_parent_post_meta = ( $top_most_parent_post ) ? get_post_meta( $top_most_parent_post->ID ) : null;
@@ -22,7 +27,6 @@ if(!empty($post) && $post->post_parent > 0)
 {
 	$ancestors_ids 		= get_post_ancestors($post_id);
 	$total_ancestors 	= count($ancestors_ids);
-	
 	if($total_ancestors > 1)
 	{
 		$post_id_for_nav = $ancestors_ids[$total_ancestors - 2];

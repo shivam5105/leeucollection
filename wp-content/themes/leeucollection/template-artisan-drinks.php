@@ -66,6 +66,7 @@ get_header();
 					    	$artisan_drink_image3 = @$artisan_drinks_content['crb_artisan_drink_image3'];
 
 					    	$artisan_drinks_section_heading = @$artisan_drinks_content['crb_artisan_drinks_section_heading'];
+					    	$artisan_drinks_section_link = @$artisan_drinks_content['crb_artisan_drinks_section_link'];
 					    	$artisan_drinks_section_left_heading = @$artisan_drinks_content['crb_artisan_drinks_section_left_heading'];
 					    	$artisan_drinks_section_right_heading = @$artisan_drinks_content['crb_artisan_drinks_section_right_heading'];
 					    	$crb_artisan_drinks_section_description = @$artisan_drinks_content['crb_artisan_drinks_section_description'];
@@ -89,6 +90,14 @@ get_header();
 					            		?>
 										<div class="scroll-anim animate-custom" data-anim="fade-up">
 											<img src="<?php echo $artisan_drink_image1; ?>" alt="" <?php if(!$propImage){ echo 'itemprop="image"'; $propImage = true; } ?>>
+											<?php
+											if(!empty($artisan_drinks_section_link))
+											{
+												?>
+												<a href="<?php echo $artisan_drinks_section_link; ?>" class="main-link" itemprop="url"></a>
+												<?php
+											}
+											?>
 										</div>
 										<?php
 									}
@@ -103,6 +112,14 @@ get_header();
 												<div class="col-6 rm-pad">
 													<div class="scroll-anim animate-custom" data-anim="fade-up">
 														<img src="<?php echo $artisan_drink_image2; ?>" alt="" <?php if(!$propImage){ echo 'itemprop="image"'; $propImage = true; } ?>>
+														<?php
+														if(!empty($artisan_drinks_section_link))
+														{
+															?>
+															<a href="<?php echo $artisan_drinks_section_link; ?>" class="main-link" itemprop="url"></a>
+															<?php
+														}
+														?>
 														<div class="left-content">
 															<div class="desc-heading">
 																<?php echo $artisan_drinks_section_left_heading; ?>

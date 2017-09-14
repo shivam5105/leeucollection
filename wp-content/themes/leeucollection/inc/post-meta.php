@@ -788,7 +788,8 @@ Container::make('post_meta', 'Artisan Drinks Content Section')
     ->add_fields(array(
         Field::make('complex', 'crb_artisan_drinks_content', '')->add_fields(array(
             Field::make('image', 'crb_artisan_drink_image1', 'Full Image')->help_text('(Image Dimensions (WxH): 821 x 478)'),
-            Field::make('text', 'crb_artisan_drinks_section_heading', 'Heading'),
+            Field::make('text', 'crb_artisan_drinks_section_heading', 'Heading')->set_width(50),
+            Field::make('text', 'crb_artisan_drinks_section_link', 'Link')->set_width(50),
             Field::make('textarea', 'crb_artisan_drinks_section_description', 'Content'),
             Field::make('image', 'crb_artisan_drink_image2', 'Half Left Image')->help_text('(Image Dimensions (WxH): 411 x 258)')->set_width('50'),
             Field::make('text', 'crb_artisan_drinks_section_left_heading', 'Half left heading'),
@@ -976,3 +977,17 @@ Container::make('post_meta', 'Hotel Closed?')
                 )
             )),
         ));
+
+//Show/Hide Left Sidebar
+Container::make('post_meta', 'Show left sidebar?')
+    ->show_on_post_type($leeu_post_types)
+    ->set_context('side')
+    ->set_priority('low')
+    ->add_fields(array(
+        Field::make('radio', 'crb_left_sidebar_visibility', '')
+                ->add_options(array(
+                    'show' => 'Show',
+                    'hide' => 'Hide',
+                ))->set_default_value('show')
+    ));
+

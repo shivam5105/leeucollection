@@ -8,9 +8,8 @@
  */
 
 get_header(); ?>
-
-<div id="primary" class="content-area">
-	<main id="main" class="site-main" role="main">
+<section id="site-main">
+	<div class="container">
 		<?php
 		// Start the loop.
 		while ( have_posts() ) : the_post();
@@ -44,11 +43,8 @@ get_header(); ?>
 		endwhile;
 		?>
 
-	</main><!-- .site-main -->
-
-	<?php get_sidebar( 'content-bottom' ); ?>
-
-</div><!-- .content-area -->
+	</div>
+</section>
 
 
 <?php get_footer(); ?>
