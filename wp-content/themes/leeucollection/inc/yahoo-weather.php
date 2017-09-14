@@ -69,7 +69,7 @@ class Display_Weather extends Yahoo_Weather
 		{
 			echo '<div class="wthr-wrapper text-center">';
 	        /*echo '<div class="chat-icon-wrap"><img src="'.get_template_directory_uri().'/images/weather-icons/'.$this->current->code.'.png" /></div>';*/
-	        echo '<div class="chat-icon-wrap"></div>';
+	        echo '<div class="chat-icon-wrap wi wi-icon-'.$this->current->code.'"></div>';
 	        echo '<span class="text-cht-wthr">'.$this->getTemp($this->current->temp).'</span>';
 	        echo '</div>';
 		}

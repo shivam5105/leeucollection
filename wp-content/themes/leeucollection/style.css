@@ -13,6 +13,14 @@ Text Domain: leeucollection
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+
+@font-face {
+  font-family: 'weathericons';
+  src: url('fonts/weathericons-regular-webfont.eot');
+  src: url('fonts/weathericons-regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/weathericons-regular-webfont.woff2') format('woff2'), url('fonts/weathericons-regular-webfont.woff') format('woff'), url('fonts/weathericons-regular-webfont.ttf') format('truetype'), url('fonts/weathericons-regular-webfont.svg#weather_iconsregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 * {
     box-sizing: border-box;
 }
@@ -1670,11 +1678,169 @@ div#wave .dot {
     margin-right: 1px; 
     background: #AC9E94; 
 } 
-.chat-icon-wrap{
-   background: url('images/global-weather.png') no-repeat; 
-   height: 24px;
-   width: 36px;
+.chat-icon-wrap {
+    /*background: url('images/global-weather.png') no-repeat;*/
+    min-height: 24px;
+    width: 36px;
 }
+.wi {
+    font-family: 'weathericons';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 20px;
+    color: #ab9e94;
+}
+.wi-icon-0:before {
+  content: "\f056";
+}
+.wi-icon-1:before {
+  content: "\f01d";
+}
+.wi-icon-2:before {
+  content: "\f073";
+}
+.wi-icon-3:before {
+  content: "\f01e";
+}
+.wi-icon-4:before {
+  content: "\f01e";
+}
+.wi-icon-5:before {
+  content: "\f01a";
+}
+.wi-icon-6:before {
+  content: "\f0b5";
+}
+.wi-icon-7:before {
+  content: "\f0b5";
+}
+.wi-icon-8:before {
+  content: "\f04e";
+}
+.wi-icon-9:before {
+  content: "\f04e";
+}
+.wi-icon-10:before {
+  content: "\f019";
+}
+.wi-icon-11:before {
+  content: "\f01a";
+}
+.wi-icon-12:before {
+  content: "\f01a";
+}
+.wi-icon-13:before {
+  content: "\f01b";
+}
+.wi-icon-14:before {
+  content: "\f01b";
+}
+.wi-icon-15:before {
+  content: "\f064";
+}
+.wi-icon-16:before {
+  content: "\f01b";
+}
+.wi-icon-17:before {
+  content: "\f015";
+}
+.wi-icon-18:before {
+  content: "\f0b5";
+}
+.wi-icon-19:before {
+  content: "\f063";
+}
+.wi-icon-20:before {
+  content: "\f014";
+}
+.wi-icon-21:before {
+  content: "\f0b6";
+}
+.wi-icon-22:before {
+  content: "\f062";
+}
+.wi-icon-23:before {
+  content: "\f050";
+}
+.wi-icon-24:before {
+  content: "\f021";
+}
+.wi-icon-25:before {
+  content: "\f076";
+}
+.wi-icon-26:before {
+  content: "\f013";
+}
+.wi-icon-27:before {
+  content: "\f081";
+}
+.wi-icon-28:before {
+  content: "\f002";
+}
+.wi-icon-29:before {
+  content: "\f083";
+}
+.wi-icon-30:before {
+  content: "\f00c";
+}
+.wi-icon-31:before {
+  content: "\f02e";
+}
+.wi-icon-32:before {
+  content: "\f00d";
+}
+.wi-icon-33:before {
+  content: "\f02e";
+}
+.wi-icon-34:before {
+  content: "\f00d";
+}
+.wi-icon-35:before {
+  content: "\f015";
+}
+.wi-icon-36:before {
+  content: "\f072";
+}
+.wi-icon-37:before {
+  content: "\f01e";
+}
+.wi-icon-38:before {
+  content: "\f01e";
+}
+.wi-icon-39:before {
+  content: "\f01e";
+}
+.wi-icon-40:before {
+  content: "\f01a";
+}
+.wi-icon-41:before {
+  content: "\f01b";
+}
+.wi-icon-42:before {
+  content: "\f01b";
+}
+.wi-icon-43:before {
+  content: "\f01b";
+}
+.wi-icon-44:before {
+  content: "\f013";
+}
+.wi-icon-45:before {
+  content: "\f01e";
+}
+.wi-icon-46:before {
+  content: "\f01b";
+}
+.wi-icon-47:before {
+  content: "\f01d";
+}
+.wi-icon-3200:before {
+  content: "\f075";
+}
+
 div.chat-wrapper:hover .dot { 
     -webkit-animation: wave 1s linear infinite; 
     animation: wave 1s linear infinite; 
