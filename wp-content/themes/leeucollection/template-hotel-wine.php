@@ -111,7 +111,7 @@ get_header(); ?>
 						<div class="row detail-row listing-row">
 							<?php
 							$both_given = true;
-							if(empty(@$post_meta['_crb_slider_bottom_heading'][0]) || empty(@$post_meta['_crb_slider_bottom_description'][0]))
+							if(trim(@$post_meta['_crb_slider_bottom_heading'][0]) == "" || trim(@$post_meta['_crb_slider_bottom_description'][0]) == "")
 							{
 								$both_given = false;
 							}
