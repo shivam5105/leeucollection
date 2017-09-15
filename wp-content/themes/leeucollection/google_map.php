@@ -1,6 +1,5 @@
 <?php
 include_once("../../../wp-load.php");
-$api_key = 'AIzaSyCB8T03ecuTp9K5Q3Mi82RMyCeaLhhVYus';
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,7 +12,7 @@ $api_key = 'AIzaSyCB8T03ecuTp9K5Q3Mi82RMyCeaLhhVYus';
 			padding: 0;
 		}
 	</style>
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<?=$api_key?>"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCB8T03ecuTp9K5Q3Mi82RMyCeaLhhVYus"></script>
 	<script type="text/javascript">
 		var map, marker = {}, bounds = new google.maps.LatLngBounds();
 
