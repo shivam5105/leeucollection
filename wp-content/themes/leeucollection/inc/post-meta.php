@@ -599,9 +599,23 @@ Container::make('post_meta', 'Small Map')
     ->show_on_post_type($leeu_post_types)
     ->show_on_template(array('template-artists-details.php', 'template-hotel-wine.php'))
     ->add_fields(array(
-        Field::make('text', 'crb_small_map_heading', 'Map Heading')->set_width('30'),
-        Field::make('text', 'crb_small_map_link', 'Map Link')->set_width('40'),
-        Field::make('image', 'crb_small_map_image', 'Map Image')->help_text('(Image Dimensions (WxH): 193 x 129)')->set_width('30'),
+        Field::make('text', 'crb_small_map_heading', 'Map Heading')->set_width('50'),
+        Field::make('image', 'crb_small_map_image', 'Map Image')->help_text('(Image Dimensions (WxH): 193 x 129)')->set_width('50'),
+
+        Field::make('radio', 'crb_small_map_link_type', 'Read Locations From "CSV" File?')
+                ->add_options(array(
+                    'csv' => 'Yes',
+                    'link' => 'No',
+                ))->set_default_value('csv')->set_width('50')->help_text("'<b style=\"color:red\">google_map_data.csv</b>' file should be saved in current theme folder.<br />Fields should be in following order: <b style=\"color:red\">Title, Content, Lat, Long, Icon</b>"),
+
+        Field::make('text', 'crb_small_map_link', 'Map Link')->set_width('50')->set_conditional_logic(array(
+                'relation' => 'AND', // Optional, defaults to "AND"
+                array(
+                    'field' => 'crb_small_map_link_type',
+                    'value' => 'link', // Optional, defaults to "". Should be an array if "IN" or "NOT IN" operators are used.
+                    'compare' => '=', // Optional, defaults to "=". Available operators: =, <, >, <=, >=, IN, NOT IN
+                )
+            )),
     ));
 
 Container::make('post_meta', 'Page Small Heading')

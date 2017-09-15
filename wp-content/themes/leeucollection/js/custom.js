@@ -578,6 +578,16 @@ var Blank ={
 			}
 		});
 	},
+	close_google_map_popup: function(){
+		$("document").on("click",".google-map-close-popup",function(){
+			$(".google-map-popup-wrapper").hide();
+		});
+	},
+	show_google_map_popup: function(){
+		$("document").on("click",".launch-google-map-popup",function(){
+			$(".google-map-popup-wrapper").show();
+		});
+	},
 	ready: function(){
 		Blank.common_init();
 		Blank.validate_book_room_form();
@@ -592,6 +602,8 @@ var Blank ={
 		Blank.roomGallerySlider();
 		Blank.contactPopup();
 		Blank.updateRequestEventHotelName();
+		Blank.show_google_map_popup();
+		Blank.close_google_map_popup();
 		if(jQuery('#slide-menu').length){
 			jQuery('#site-header #slide-menu').meanmenu({
 				meanScreenWidth: "1140",

@@ -2718,7 +2718,10 @@ margin:0;
 }
 
 /** pop-up css goes here **/
-.main_sec,.media-popup{
+.main_sec,
+.media-popup,
+.google-map-popup-wrapper
+{
     position:fixed;
     top:0;
     left:0;
@@ -2740,7 +2743,9 @@ margin:0;
     transform:translate(-50%,0)
 }
 
-.close_popup{
+.close_popup,
+.google-map-close-popup
+{
     display:inline-block;
     color:#fff;
     position:absolute;
@@ -2748,7 +2753,9 @@ margin:0;
     top: 46px;
 }
 
-.close_popup{
+.close_popup,
+.google-map-close-popup
+{
     cursor:pointer;
 }
 .extext{
@@ -2760,7 +2767,8 @@ margin:0;
     text-decoration: none;
     text-transform: uppercase;
 }
-.popup_wrapper{
+.popup_wrapper,
+.google-map-popup-content {
     position:absolute;
     width:600px;
     left:50%;
@@ -3538,4 +3546,9 @@ img[src*=".svg"].bottom-logo
 .page-template-template-media .media-container .row
 {
     margin: 0 -2px;
+}
+.google-map-popup-content iframe
+{
+    width: 100%;
+    height: 500px;
 }

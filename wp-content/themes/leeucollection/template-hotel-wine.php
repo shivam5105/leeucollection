@@ -41,7 +41,7 @@ get_header(); ?>
 							</div>
 						</div>
 					</div>
-					<div class="col-8">						
+					<div class="col-8">
 						<div class="listing-box mgt-0">
 							<div class="scroll-anim" data-anim="fade-up">
 								<?php
@@ -335,20 +335,33 @@ get_header(); ?>
 					<div class="col-2">
 						<div class="map_img">
 							<?php
+							$map_link_type = @$post_meta['_crb_small_map_link_type'][0];
 							$map_image = @$post_meta['_crb_small_map_image'][0];
-							if($map_image)
+							if(!empty($map_image))
 							{
 								$map_image = wp_get_attachment_image_src($map_image, '193x129');
 								$map_image = $map_image[0];
 							}
-							if(isset($post_meta['_crb_small_map_link'][0]) && !empty($post_meta['_crb_small_map_link'][0]) && !empty($map_image))
+							if(!empty($map_link_type) && $map_link_type == 'csv')
 							{
 								?>
-								<a href="<?php echo @$post_meta['_crb_small_map_link'][0]; ?>" target="_blank"><img src="<?php echo $map_image; ?>" alt="map_controll"/></a>
+								<a href="javascript:void(0);" class="launch-google-map-popup"><img src="<?php echo $map_image; ?>" alt="map_controll"/></a>
 								<div class="locator">
-									<a href="<?php echo @$post_meta['_crb_small_map_link'][0]; ?>" target="_blank" class="ucase"><?php echo @$post_meta['_crb_small_map_heading'][0]; ?></a>
+									<a href="javascript:void(0);" class="launch-google-map-popup ucase"><?php echo @$post_meta['_crb_small_map_heading'][0]; ?></a>
 								</div>
 								<?php
+							}
+							else
+							{
+								if(isset($post_meta['_crb_small_map_link'][0]) && !empty($post_meta['_crb_small_map_link'][0]) && !empty($map_image))
+								{
+									?>
+									<a href="<?php echo @$post_meta['_crb_small_map_link'][0]; ?>" target="_blank"><img src="<?php echo $map_image; ?>" alt="map_controll"/></a>
+									<div class="locator">
+										<a href="<?php echo @$post_meta['_crb_small_map_link'][0]; ?>" target="_blank" class="ucase"><?php echo @$post_meta['_crb_small_map_heading'][0]; ?></a>
+									</div>
+									<?php
+								}
 							}
 							?>
 						</div>
