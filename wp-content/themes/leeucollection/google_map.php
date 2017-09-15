@@ -65,7 +65,7 @@ $api_key = 'AIzaSyCB8T03ecuTp9K5Q3Mi82RMyCeaLhhVYus';
 				var image = '';
 				if(markers['m'+i].icon != "" && markers['m'+i].icon != null)
 				{
-					image = "<?php echo get_template_directory_uri(); ?>/google-map-icons/"+markers['m'+i].icon;
+					image = "<?php echo get_template_directory_uri(); ?>/images/google-map-icons/"+markers['m'+i].icon;
 				}
 				marker['c'+i] = new google.maps.Marker({
 					position: new google.maps.LatLng(markers['m'+i].lat,markers['m'+i].lon),

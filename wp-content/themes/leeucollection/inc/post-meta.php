@@ -606,7 +606,7 @@ Container::make('post_meta', 'Small Map')
                 ->add_options(array(
                     'csv' => 'Yes',
                     'link' => 'No',
-                ))->set_default_value('csv')->set_width('50')->help_text("'<b style=\"color:red\">google_map_data.csv</b>' file should be saved in current theme folder.<br />Fields should be in following order: <b style=\"color:red\">Title, Content, Lat, Long, Icon</b>"),
+                ))->set_default_value('csv')->set_width('50')->help_text("'<b style=\"color:red\">google_map_data.csv</b>' file should be saved in current theme folder.<br />Fields should be in following order: <b style=\"color:red\">Title, Content, Lat, Long, Icon</b><br />Marker icons should be saved in <b style=\"color:red\">current theme >> 'images' >> 'google-map-icons'</b>"),
 
         Field::make('text', 'crb_small_map_link', 'Map Link')->set_width('50')->set_conditional_logic(array(
                 'relation' => 'AND', // Optional, defaults to "AND"
