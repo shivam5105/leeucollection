@@ -48,7 +48,7 @@ include_once("../../../wp-load.php");
 			}
 			fclose($file);
 			?>
-			var totalMarkers = "<?=$counter?>", i = 0, infowindow, contentString;
+			var totalMarkers = "<?php echo $counter?>", i = 0, infowindow, contentString;
 
 			for (var i = 0; i<totalMarkers; i++)
 			{
