@@ -597,7 +597,7 @@ Container::make('post_meta', 'Slider Bottom Info')
 //Maps image & link
 Container::make('post_meta', 'Small Map')
     ->show_on_post_type($leeu_post_types)
-    ->show_on_template(array('template-artists-details.php', 'template-hotel-wine.php'))
+    ->show_on_template(array('template-artists-details.php', 'template-hotel-wine.php','template-location.php'))
     ->add_fields(array(
         Field::make('text', 'crb_small_map_heading', 'Map Heading')->set_width('50'),
         Field::make('image', 'crb_small_map_image', 'Map Image')->help_text('(Image Dimensions (WxH): 193 x 129)')->set_width('50'),
