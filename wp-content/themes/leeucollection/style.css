@@ -2731,6 +2731,15 @@ margin:0;
     background:#222945;
     display:none;
 }
+.google-map-popup-wrapper
+{
+    display: block;
+}
+.google-map-popup-wrapper.hide-map
+{
+    /* Do this so that google map loads properly */
+    top: -99999999px;
+}
 .rel_wrap{
     min-height:100px;
     position:relative;  

@@ -491,9 +491,9 @@ var Blank ={
 	},
 	contactPopup: function(){
 		$('.chat-wrapper').click(function(e){
-		e.preventDefault();	
-		$('.contact-slide-form').toggleClass('slide-in');
-	  });
+			e.preventDefault();	
+			$('.contact-slide-form').toggleClass('slide-in');
+	  	});
 	},
 	fix_daterangepicker_pos: function(){
 		var site_header_height = 0;
@@ -579,13 +579,13 @@ var Blank ={
 		});
 	},
 	close_google_map_popup: function(){
-		$("document").on("click",".google-map-close-popup",function(){
-			$(".google-map-popup-wrapper").hide();
+		$(document).on("click",".google-map-close-popup",function(){
+			$(".google-map-popup-wrapper").addClass("hide-map");
 		});
 	},
 	show_google_map_popup: function(){
-		$("document").on("click",".launch-google-map-popup",function(){
-			$(".google-map-popup-wrapper").show();
+		$(document).on("click",".launch-google-map-popup",function(){
+			$(".google-map-popup-wrapper").removeClass("hide-map");
 		});
 	},
 	ready: function(){

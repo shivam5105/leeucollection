@@ -316,7 +316,7 @@
 	if(!empty($map_link_type) && $map_link_type == 'csv')
 	{
 		?>
-		<div class="google-map-popup-wrapper">
+		<div class="google-map-popup-wrapper hide-map">
 			<div class="rel_wrap">
 				<div class="leeu_logo"><?php leeucollection_the_custom_logo(); ?></div>
 				<div class="google-map-close-popup extext">CLOSE</div>
