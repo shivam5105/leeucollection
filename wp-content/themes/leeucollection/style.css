@@ -2562,6 +2562,7 @@ margin-top:16px;
 .contact-slide-form select
 {
     border-bottom:1px solid #ac9e94;
+    padding-bottom: 10px;
 }
 .form_field .inside_pd .enq_sec .opt_field select,
 .form_field .inside_pd .country_list .opt_field select,
