@@ -274,6 +274,7 @@ get_header(); ?>
 												$X = 0;
 											}
 								        }
+								        wp_reset_postdata();
 								    }
 								    $prev_menu_type_id = $menu_type->term_id;
 								}

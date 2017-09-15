@@ -249,6 +249,7 @@
 										}
 									}
 								}
+								wp_reset_postdata();
 								$loop = 0;
 								if($the_query->have_posts())
 								{
@@ -273,6 +274,7 @@
 										}
 									}
 								}
+								wp_reset_postdata();
 								?>
 							</div>
 						</div>
@@ -310,6 +312,7 @@
 		</div>
 	</div>
 	<?php
+	$map_link_type = carbon_get_post_meta($post->ID, "crb_small_map_link_type");
 	if(!empty($map_link_type) && $map_link_type == 'csv')
 	{
 		?>

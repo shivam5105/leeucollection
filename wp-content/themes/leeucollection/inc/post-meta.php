@@ -902,6 +902,7 @@ while ( $loop->have_posts() ) {
 
     $hotels_list[$ID] = $loop->post->post_title;
 }
+wp_reset_postdata();
 
 $hotels_list_fields[] = Field::make('select', 'crb_career_hotel', 'Select Hotel')->add_options($hotels_list);
 $hotels_list_fields[] = Field::make('text', 'crb_career_form_shortcode', 'Career Form Shortcode');
