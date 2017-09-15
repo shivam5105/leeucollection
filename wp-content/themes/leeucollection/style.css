@@ -3561,3 +3561,8 @@ img[src*=".svg"].bottom-logo
     width: 100%;
     height: 500px;
 }
+.socialWidgetCore img
+{
+    -webkit-filter: grayscale(100%) !important; /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%) !important;
+}
