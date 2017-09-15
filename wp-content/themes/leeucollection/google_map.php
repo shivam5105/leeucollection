@@ -49,7 +49,7 @@ $api_key = 'AIzaSyCB8T03ecuTp9K5Q3Mi82RMyCeaLhhVYus';
 			}
 			fclose($file);
 			?>
-			var totalMarkers = <?=$counter?>, i = 0, infowindow, contentString;
+			var totalMarkers = "<?=$counter?>", i = 0, infowindow, contentString;
 
 			for (var i = 0; i<totalMarkers; i++)
 			{
