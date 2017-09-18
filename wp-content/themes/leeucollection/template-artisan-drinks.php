@@ -169,7 +169,7 @@ get_header();
 							</div>
 			            	<?php
 				        }
-				        
+
 					    $artisan_drinks_contents2 = carbon_get_post_meta($post->ID, "crb_artisan_drinks_content2", 'complex');
 					    foreach ($artisan_drinks_contents2 as $adc_key => $artisan_drinks_content2)
 					    {
@@ -180,6 +180,7 @@ get_header();
 					    	$crb_artisan_drinks_section_description = @$artisan_drinks_content2['crb_artisan_drinks_section_description'];
 
 							$artisan_drink_image1 = wp_get_attachment_image_src( $artisan_drink_image1, '821x478' );
+							print_r($artisan_drink_image1);
 			            	?>
 			            	<div class="listing-row">
 				            	<div class="no_slider rm_line_height">
