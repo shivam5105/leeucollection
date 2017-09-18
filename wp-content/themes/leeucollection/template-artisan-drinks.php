@@ -180,7 +180,6 @@ get_header();
 					    	$crb_artisan_drinks_section_description = @$artisan_drinks_content2['crb_artisan_drinks_section_description'];
 
 							$artisan_drink_image1 = wp_get_attachment_image_src( $artisan_drink_image1, '821x478' );
-							print_r($artisan_drink_image1);
 			            	?>
 			            	<div class="listing-row">
 				            	<div class="no_slider rm_line_height">
@@ -193,7 +192,7 @@ get_header();
 				            		{
 					            		?>
 										<div class="scroll-anim animate-custom" data-anim="fade-up">
-											<img src="<?php echo $artisan_drink_image1; ?>" alt="" <?php if(!$propImage){ echo 'itemprop="image"'; $propImage = true; } ?>>
+											<img src="<?php echo $artisan_drink_image1[0]; ?>" alt="" <?php if(!$propImage){ echo 'itemprop="image"'; $propImage = true; } ?>>
 											<?php
 											if(!empty($artisan_drinks_section_link))
 											{
