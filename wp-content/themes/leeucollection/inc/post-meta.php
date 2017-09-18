@@ -820,7 +820,7 @@ Container::make('post_meta', 'Artisan Drinks Bottom Content Section (Header & De
     ->add_fields(array(
         Field::make('complex', 'crb_artisan_drinks_content2', '')->add_fields(array(
             Field::make('text', 'crb_artisan_drinks_section_heading', 'Heading')->set_width(50),
-            Field::make('textarea', 'crb_artisan_drinks_section_description', 'Content'),
+            Field::make('textarea', 'crb_artisan_drinks_section_description', 'Content')->set_width(50),
             Field::make('image', 'crb_artisan_drink_image1', 'Full Image')->help_text('(Image Dimensions (WxH): 821 x 478)')->set_width(50),
             Field::make('text', 'crb_artisan_drinks_section_link', 'Link')->set_width(50),
         )),
