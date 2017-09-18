@@ -3565,6 +3565,13 @@ img[src*=".svg"].bottom-logo
 }
 .socialWidgetCore img
 {
-    -webkit-filter: grayscale(100%) !important; /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%) !important;
+    display: none !important;
+}
+.socialWidgetCore:before
+{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 16px;
+    background: url("images/tripadvisor_logo.png") no-repeat;
 }
