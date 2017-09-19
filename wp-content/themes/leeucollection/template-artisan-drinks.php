@@ -59,6 +59,14 @@ get_header();
 		            	<?php
 		            	$propImage = false;
 					    $artisan_drinks_contents = carbon_get_post_meta($post->ID, "crb_artisan_drinks_content", 'complex');
+					    if(isset($_GET['d']) && $_GET['d'] == 1)
+					    {
+					    	?>
+					    	<pre style="text-align:left;">
+					    		<?php print_r($artisan_drinks_contents); ?>
+					    	</pre>
+					    	<?php
+					    }
 					    foreach ($artisan_drinks_contents as $adc_key => $artisan_drinks_content)
 					    {
 					    	$artisan_drink_image1 = @$artisan_drinks_content['crb_artisan_drink_image1'];

@@ -440,6 +440,32 @@ function registerMyCustomPost()
 	$parent = new multiLevelCustomPosts($parentSlug, $labels, $args);
 	
 	/********* Media & trades Post Type ***********/
+
+	/********* Press Post Type ***********/
+
+	$labels = array(
+		"name" => "Press",
+		"singular_name" => "Press",
+	);
+	$args = array(
+		"label" => "Press",
+		"labels" => $labels,
+		'menu_position' => 12,
+		'show_in_admin_bar' => true,
+		/*'taxonomies' 	=> array('category'),*/
+		"supports" => array(
+			"title",
+			"revisions",
+			"thumbnail",
+			/*"editor",*/
+			"page-attributes",
+			"custom-fields" /*, "post-formats"*/
+		)
+	);
+	$parentSlug = "leeu-press";
+	$parent = new multiLevelCustomPosts($parentSlug, $labels, $args);
+	
+	/********* Press Post Type ***********/
 }
 
 add_action("init", "registerMyCustomPost");
