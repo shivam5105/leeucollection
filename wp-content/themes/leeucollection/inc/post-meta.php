@@ -818,7 +818,7 @@ Container::make('post_meta', 'Artisan Drinks Bottom Content Section (Header & De
     ->show_on_post_type($leeu_post_types)
     ->show_on_template('template-artisan-drinks.php')
     ->add_fields(array(
-        Field::make('complex', 'crb_artisan_drinks_content2', '')->add_fields(array(
+        Field::make('complex', 'crb_artisan_drinks_bottom_content', '')->add_fields(array(
             Field::make('text', 'crb_artisan_drinks_section_heading', 'Heading')->set_width(50),
             Field::make('textarea', 'crb_artisan_drinks_section_description', 'Content')->set_width(50),
             Field::make('image', 'crb_artisan_drink_image1', 'Full Image')->help_text('(Image Dimensions (WxH): 821 x 478)')->set_width(50),
