@@ -3560,6 +3560,10 @@ img[src*=".svg"].bottom-logo
 {
     margin: 0 -2px;
 }
+.google-map-popup-content
+{
+    width: auto;
+}
 .google-map-popup-content iframe
 {
     width: 100%;
