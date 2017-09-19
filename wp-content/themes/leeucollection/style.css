@@ -3562,7 +3562,7 @@ img[src*=".svg"].bottom-logo
 }
 .google-map-popup-content
 {
-    width: auto;
+    width: 100%;
 }
 .google-map-popup-content iframe
 {
