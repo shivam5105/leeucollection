@@ -178,7 +178,7 @@ get_header();
 			            	<?php
 				        }
 
-					    $artisan_drinks_contents2 = carbon_get_post_meta($post->ID, "crb_artisan_drinks_content2", 'complex');
+					    $artisan_drinks_contents2 = carbon_get_post_meta($post->ID, "crb_artisan_drinks_bottom_content", 'complex');
 					    foreach ($artisan_drinks_contents2 as $adc_key => $artisan_drinks_content2)
 					    {
 					    	$artisan_drink_image1 = @$artisan_drinks_content2['crb_artisan_drink_image1'];
