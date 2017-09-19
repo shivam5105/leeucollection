@@ -74,7 +74,7 @@ include_once("../../../wp-load.php");
 					icon: image
 				});
 
-				bounds.extend(marker['c'+i].position);
+				/*bounds.extend(marker['c'+i].position);*/
 
 				google.maps.event.addListener(marker['c'+i], 'click', function() {
 					for (var key in marker)
@@ -84,8 +84,8 @@ include_once("../../../wp-load.php");
 					this.infowindow.open(map, this);
 				});
 			}
-			map.fitBounds(bounds);
-			map.panToBounds(bounds);
+			/*map.fitBounds(bounds);
+			map.panToBounds(bounds);*/
 		}
 		function panMap(la,lo)
 		{
