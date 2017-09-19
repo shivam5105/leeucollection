@@ -585,6 +585,9 @@ var Blank ={
 	},
 	show_google_map_popup: function(){
 		$(document).on("click",".launch-google-map-popup",function(){
+			var wind_height = $(window).height();
+			var header_height = $(".google-map-popup-wrapper .rel_wrap").outerHeight();
+			$(".google-map-popup-content iframe").height(wind_height - header_height);
 			$(".google-map-popup-wrapper").removeClass("hide-map");
 		});
 	},
