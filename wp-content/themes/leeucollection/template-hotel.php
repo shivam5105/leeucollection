@@ -77,31 +77,6 @@ get_header(); ?>
 				<div class="banner-text text-center pos-abs-top">
 					<h2 itemprop="name" class="ucase"><?php echo $post->post_title;?></h2>
 					<div class="location-text ucase" itemprop="address"><?php echo $hotel_location; ?></div>
-					<?php
-					if(!empty($hotel_closed) && $hotel_closed == 'yes')
-					{
-	    				$hotel_closed_reason 		= carbon_get_post_meta($post->ID, "crb_hotel_closed_reason");
-	    				$hotel_closed_button_text 	= carbon_get_post_meta($post->ID, "crb_hotel_closed_button_text");
-	    				$hotel_closed_button_link 	= carbon_get_post_meta($post->ID, "crb_hotel_closed_button_link");
-	    				
-	    				if(!empty($hotel_closed_reason))
-	    				{
-							?>
-							<div class="hotel-closed-reason">
-								<?php echo nl2br($hotel_closed_reason); ?>
-							</div>
-							<?php
-						}
-	    				if(!empty($hotel_closed_button_text) && !empty($hotel_closed_button_link))
-	    				{
-							?>
-							<div class="hotel-closed-btn-wrapper">
-								<a href="<?php echo $hotel_closed_button_link; ?>" class="cstm-btn arrow-btn text-center blk-btn"><?php echo $hotel_closed_button_text; ?></a>
-							</div>
-							<?php
-						}
-					}
-					?>
 				</div>
 			</div>
 			<?php
@@ -311,6 +286,55 @@ get_header(); ?>
 						</div>
 					</div>
 				</div>
+			</div>
+			<?php
+		}
+		else if(!empty($hotel_closed) && $hotel_closed == 'yes')
+		{
+			$hotel_closed_reason 		= carbon_get_post_meta($post->ID, "crb_hotel_closed_reason");
+			$hotel_closed_button_text 	= carbon_get_post_meta($post->ID, "crb_hotel_closed_button_text");
+			$hotel_closed_button_link 	= carbon_get_post_meta($post->ID, "crb_hotel_closed_button_link");
+			$form_heading 				= carbon_get_post_meta($post->ID, "crb_form_heading");
+			$short_code 				= carbon_get_post_meta($post->ID, "crb_short_code");
+			?>
+			<div class="container">
+				<?php
+				if(!empty($hotel_closed_reason))
+				{
+					?>
+					<div class="hotel-closed-reason">
+						<?php echo nl2br($hotel_closed_reason); ?>
+					</div>
+					<?php
+				}
+				if(!empty($hotel_closed_button_text) && !empty($hotel_closed_button_link))
+				{
+					?>
+					<div class="hotel-closed-btn-wrapper">
+						<a href="<?php echo $hotel_closed_button_link; ?>" class="cstm-btn arrow-btn text-center"><?php echo $hotel_closed_button_text; ?></a>
+					</div>
+					<?php
+				}
+				if(!empty($form_heading) && !empty($short_code))
+				{
+					?>
+					<div class="scroll-anim" data-anim="fade-up">
+						<div class="listing-box listing-row">
+							<div class="row detail-row meetings-form">
+								<div class="the_founder">
+									<h2 class="ucase"><?php echo @$form_heading; ?></h2>
+								</div>
+								<div class="form_field">
+									<div class="inside_pd">
+										<?php echo do_shortcode($short_code); ?>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<?php
+				}
+				?>
 			</div>
 			<?php
 		}
