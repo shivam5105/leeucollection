@@ -20,7 +20,7 @@ include_once("../../../wp-load.php");
 		{
 			var mapOptions = {
 				/*center: { lat: 51.1788823, lng: -1.8262155},*/
-				zoom: 2
+				zoom: 13
 			};
 			map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
 
