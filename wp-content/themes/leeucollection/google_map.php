@@ -14,13 +14,13 @@ include_once("../../../wp-load.php");
 	</style>
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCB8T03ecuTp9K5Q3Mi82RMyCeaLhhVYus"></script>
 	<script type="text/javascript">
-		var map, marker = {}, bounds = new google.maps.LatLngBounds();
+		var map, marker = {}/*, bounds = new google.maps.LatLngBounds()*/;
 
 		function initialize()
 		{
 			var mapOptions = {
-				/*center: { lat: 51.1788823, lng: -1.8262155},*/
-				zoom: 13
+				center: { lat: -33.9072996, lng: 19.0907277},
+				zoom: 15
 			};
 			map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
 
