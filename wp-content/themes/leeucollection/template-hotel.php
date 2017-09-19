@@ -318,7 +318,7 @@ get_header(); ?>
 				if(!empty($form_heading) && !empty($short_code))
 				{
 					?>
-					<div class="scroll-anim" data-anim="fade-up">
+					<div class="scroll-anim hotel-closed-enquiry-form-wrapper" data-anim="fade-up">
 						<div class="listing-box listing-row">
 							<div class="row detail-row meetings-form">
 								<div class="the_founder">
