@@ -177,46 +177,6 @@ get_header();
 							</div>
 			            	<?php
 				        }
-
-					    $artisan_drinks_contents2 = carbon_get_post_meta($post->ID, "crb_artisan_drinks_content2", 'complex');
-					    foreach ($artisan_drinks_contents2 as $adc_key => $artisan_drinks_content2)
-					    {
-					    	$artisan_drink_image1 = @$artisan_drinks_content2['crb_artisan_drink_image1'];
-
-					    	$artisan_drinks_section_heading = @$artisan_drinks_content2['crb_artisan_drinks_section_heading'];
-					    	$artisan_drinks_section_link = @$artisan_drinks_content2['crb_artisan_drinks_section_link'];
-					    	$crb_artisan_drinks_section_description = @$artisan_drinks_content2['crb_artisan_drinks_section_description'];
-
-							$artisan_drink_image1 = wp_get_attachment_image_src( $artisan_drink_image1, '821x478' );
-			            	?>
-			            	<div class="listing-row">
-				            	<div class="no_slider rm_line_height">
-					            	<div class="text-center scroll-anim animate-custom" data-anim="fade-up">
-										<h2 class="ucase small_heading"><?php echo $artisan_drinks_section_heading; ?></h2>
-									</div>
-									<div class="wine-section-description col-12 col-centered" itemprop="description"><?php echo $crb_artisan_drinks_section_description; ?></div>
-				            		<?php
-				            		if(!empty($artisan_drink_image1))
-				            		{
-					            		?>
-										<div class="scroll-anim animate-custom" data-anim="fade-up">
-											<img src="<?php echo $artisan_drink_image1[0]; ?>" alt="" <?php if(!$propImage){ echo 'itemprop="image"'; $propImage = true; } ?>>
-											<?php
-											if(!empty($artisan_drinks_section_link))
-											{
-												?>
-												<a href="<?php echo $artisan_drinks_section_link; ?>" class="main-link" itemprop="url"></a>
-												<?php
-											}
-											?>
-										</div>
-										<?php
-									}
-									?>
-								</div>
-							</div>
-			            	<?php
-				        }
 				        ?>
 			        </div>
 				</div>
