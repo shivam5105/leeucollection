@@ -1123,6 +1123,13 @@
  	   margin-bottom: 25px;
     	display: block;
 	}
+	body.home .two-img-col .content-part {
+	    display: none;
+	}
+	body.home .sliding-detail .linking-wrap
+	{
+		display: block;
+	}
 }
 @media only screen and (max-width: 687px){
 	.promo_grcode,
