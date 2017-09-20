@@ -13,6 +13,9 @@ get_header(); ?>
 	$top_most_parent_post = ($hotel_id == false) ? false : get_post($hotel_id);
     ?>
     <section id="site-main">
+	    <div class="mobile-page-heading">
+	    	<?php echo $post->post_title;?>
+	    </div>
 		<div class="container">
 			<?php
 	    	$hotel_closed = carbon_get_post_meta($post->ID, "crb_hotel_closed");

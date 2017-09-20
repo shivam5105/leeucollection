@@ -3615,7 +3615,7 @@ img[src*=".svg"].bottom-logo
     top: 50%;
     transform: translate(-50%, -50%);
     letter-spacing: 0;
-    color: #000;
+    color: #222944;
     font-size: 28px;
     text-align: center;
     text-transform: uppercase;
@@ -3629,7 +3629,7 @@ img[src*=".svg"].bottom-logo
     bottom: 16px;
     width: 100%;
     letter-spacing: 1px;
-    color: #000;
+    color: #222944;
     font-size: 14px;
     text-align: center;
     text-transform: uppercase;
@@ -3670,7 +3670,7 @@ a.press-detail-close
 a.press-detail-title
 {
     letter-spacing: 0;
-    color: #000;
+    color: #222944;
     font-size: 28px;
     text-align: center;
     text-transform: uppercase;
@@ -3685,7 +3685,7 @@ a.press-detail-title
 .press-detail-content-wrapper  .press-release-date
 {
     letter-spacing: 1px;
-    color: #000;
+    color: #222944;
     font-size: 14px;
     text-align: center;
     text-transform: uppercase;
