@@ -258,6 +258,9 @@ get_header(); ?>
 																		<div class="desc-content" itemprop="description">
 																			<?php echo nl2br($slide_desc); ?>
 																		</div>
+																		<ul class="list-inline linking-wrap slide-links-list">
+																			<li class="see-more-link"><a href="<?php echo $slide_link; ?>">See More</a></li>
+																		</ul>
 																	</div>
 																</div>
 																<?php

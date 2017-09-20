@@ -1126,7 +1126,8 @@
 	    display: none;
 	}
 	body.home .sliding-detail .linking-wrap,
-	.sliding-detail .linking-wrap
+	.sliding-detail .linking-wrap,
+	.slide-links-list
 	{
 		display: block;
 	}
