@@ -1121,7 +1121,8 @@
 	}
 	body.home .two-img-col .content-part,
 	body.home .home-wine-wrap .inner-detail-content2 .content-part,
-	.sliding-detail .content-part
+	.sliding-detail .content-part,
+	.room-listing-contain .view-all-link
 	{
 	    display: none;
 	}
