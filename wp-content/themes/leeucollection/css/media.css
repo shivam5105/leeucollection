@@ -1128,9 +1128,14 @@
 	}
 	body.home .sliding-detail .linking-wrap,
 	.sliding-detail .linking-wrap,
-	.slide-links-list
+	.slide-links-list,
+	.mobile-page-heading
 	{
 		display: block;
+	}
+	.hotel-template-template-hotel #site-header
+	{
+	    border-bottom: 1px solid #AC9E94;
 	}
 }
 @media only screen and (max-width: 687px){
