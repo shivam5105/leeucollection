@@ -591,6 +591,26 @@ var Blank ={
 			$(".google-map-popup-wrapper").removeClass("hide-map");
 		});
 	},
+	hide_press_detail_slide: function(){
+		$(document).on("click", "a.press-detail-close", function(){
+			$(".press-detail-wrapper").slideUp();
+			$(".press-cols.has-featured-image").removeClass("active");
+		});
+	},
+	show_press_detail_slide: function(){
+		$(document).on("click", ".press-cols.has-featured-image:not(.active)", function(){
+			var id = $(this).attr("data-id");
+			$(".press-cols.has-featured-image").removeClass("active");
+			$(".press-detail-wrapper").slideUp();
+			$(".press-detail-"+id).slideDown();
+			$(this).addClass("active");
+		});
+		$(document).on("click", ".press-cols.has-featured-image.active", function(){
+			$(".press-cols.has-featured-image").removeClass("active");
+			var id = $(this).attr("data-id");
+			$(".press-detail-wrapper").slideUp();
+		});
+	},
 	ready: function(){
 		Blank.common_init();
 		Blank.validate_book_room_form();
@@ -607,6 +627,8 @@ var Blank ={
 		Blank.updateRequestEventHotelName();
 		Blank.show_google_map_popup();
 		Blank.close_google_map_popup();
+		Blank.hide_press_detail_slide();
+		Blank.show_press_detail_slide();
 		if(jQuery('#slide-menu').length){
 			jQuery('#site-header #slide-menu').meanmenu({
 				meanScreenWidth: "1140",

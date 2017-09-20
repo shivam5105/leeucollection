@@ -704,7 +704,22 @@
 	.leeu-discover-template-template-founder-and-team .desc-heading{
 		font-size: 15px;
 	}
-	
+	.row.press-cols-row
+	{
+		margin: 0;
+	}
+	.press-cols
+	{
+	    padding: 15px 0;
+	}
+	.row.press-detail-row
+	{
+		display: none;
+	}
+	.press-cols.has-featured-image a.main-link
+	{
+	    display: block;
+	}
 }
 
 @media only screen and (max-width: 767px){
@@ -1151,4 +1166,3 @@
 		margin-top: 15px;
 	}
 }
-

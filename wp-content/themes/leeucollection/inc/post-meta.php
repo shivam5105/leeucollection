@@ -2,7 +2,7 @@
 use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
-$leeu_post_types = array('hotel', 'leeu-discover', 'leeu-restaurants', 'leeu-wine', 'page', 'leeu-artisan-drinks');
+$leeu_post_types = array('hotel', 'leeu-discover', 'leeu-restaurants', 'leeu-wine', 'page', 'leeu-artisan-drinks', 'leeu-press');
 
 // Theme Option
 Container::make('theme_options', 'Theme Options')
@@ -1034,3 +1034,11 @@ Container::make('post_meta', 'Show left sidebar?')
                 ))->set_default_value('show')
     ));
 
+// Press page
+Container::make('post_meta', 'Press Content')
+    ->show_on_post_type('leeu-press')
+    ->add_fields(array(
+        Field::make('image', 'crb_press_thumb_image', 'Thumb Image')->set_width('25'),
+        Field::make('date', 'crb_press_release_date', 'Release Date')->set_width('25'),
+        Field::make('text', 'crb_press_detail_link', 'Link')->set_width('50'),
+    )); 
