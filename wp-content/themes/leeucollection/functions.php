@@ -134,6 +134,7 @@ function leeucollection_setup() {
 	add_image_size( '925x600', 925, 600, true );
 	add_image_size( '621x386', 621, 386, true );
 	add_image_size( '821x478', 821, 478, true );
+	add_image_size( '588x380', 588, 380, true ); 
 	add_image_size( '500x334', 500, 334, true );
 	add_image_size( '411x258', 411, 258, true );
 	add_image_size( '275x173', 275, 173, true );

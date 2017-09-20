@@ -3550,7 +3550,7 @@ img[src*=".svg"].bottom-logo
 .detail-logo img{
     width: 100%;
 }
-.hotel-template-template-facilities .half-layout-facility .col-6,blank
+.hotel-template-template-facilities .half-layout-facility .col-6,
 .page-template-template-media .media-container .col-6
 {
     padding: 0 2px;
@@ -3587,4 +3587,114 @@ img[src*=".svg"].bottom-logo
     margin: 0 auto;
     margin-top: 70px;
     max-width: 800px;
+}
+.row.press-cols-row
+{
+    margin: 15px -15px;
+}
+.press-cols
+{
+    position: relative;
+}
+.press-cols-content-wrapper
+{
+    position: relative;
+    background-color: #d7cec5;
+    min-height: 120px;
+    cursor: pointer;
+}
+.press-cols img
+{
+    width: 100%;
+    display: block;
+}
+.press-cols a.press-title
+{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    letter-spacing: 0;
+    color: #000;
+    font-size: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'GillSans';
+    font-weight: 300;
+}
+.press-cols .press-release-date
+{
+    position: absolute;
+    left: 0;
+    bottom: 16px;
+    width: 100%;
+    letter-spacing: 1px;
+    color: #000;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'GillSans';
+    font-weight: 400;
+}
+.row.press-detail-row
+{
+    background-color: #d7cec5;
+}
+.press-detail-wrapper
+{
+    position: relative;
+    padding: 50px 0;
+    display: none;
+}
+.press-detail-content-wrapper
+{
+    text-align: center;
+}
+a.press-detail-close
+{
+    color: #c19034;
+    font-family: GillSans;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: absolute;
+    right: 0;
+    top: 50px;
+}
+.press-detail-content-wrapper img
+{
+    width: 100%;
+}
+a.press-detail-title
+{
+    letter-spacing: 0;
+    color: #000;
+    font-size: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'GillSans';
+    font-weight: 300;
+}
+.press-detail-content-wrapper .row
+{
+    display: flex;
+    align-items: center;
+}
+.press-detail-content-wrapper  .press-release-date
+{
+    letter-spacing: 1px;
+    color: #000;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'GillSans';
+    font-weight: 400;
+    margin-top: 20px;
+}
+.press-cols.has-featured-image a.main-link
+{
+    display: none;
 }
