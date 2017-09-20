@@ -3611,10 +3611,9 @@ img[src*=".svg"].bottom-logo
 .press-cols a.press-title
 {
     position: absolute;
-    left: 0;
+    left: 50%;
     top: 50%;
-    width: 100%;
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
     letter-spacing: 0;
     color: #000;
     font-size: 28px;
