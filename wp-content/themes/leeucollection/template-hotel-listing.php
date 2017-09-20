@@ -204,12 +204,13 @@ get_header();
 												}
 												?>
 												<li class="see-more-link"><a href="<?php echo $more_button_link; ?>"><?php echo $more_button_text; ?></a></li>
+												<li class="book-link"><a class="popup-booking-button-anchor" href="javascript:void(0);" data-booking-at="<?php echo addslashes($hotel_name); ?>" data-booking-for="hotel">Book</a></li>
 												<?php
 											}
 											if(!empty($booking_button_link) && !empty($booking_button_text))
 											{
 												?>
-												<li class="book-link"><a href="<?php echo $booking_button_link; ?>"><?php echo $booking_button_text; ?></a></li>
+												<!-- <li class="book-link"><a href="<?php echo $booking_button_link; ?>"><?php echo $booking_button_text; ?></a></li> -->
 												<?php
 											}?>
 										</ul>
