@@ -176,6 +176,7 @@ get_header(); ?>
 											</div>
 											<?php
 										}?>
+										<div class="section-title-mobile"><?php echo $res_name; ?></div>
 										<?php if(!empty($section_description)){?>
 											<div class="content-part">
 												<?php echo nl2br($section_description); ?>
