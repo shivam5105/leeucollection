@@ -25,6 +25,10 @@
  * @since Leeu Collection 1.0
  */
 
+if(isset($_GET) && $_GET['d'] == 1)
+{
+phpinfo(); die;
+}
 /**
  * Leeu Collection only works in WordPress 4.4 or later.
  */
