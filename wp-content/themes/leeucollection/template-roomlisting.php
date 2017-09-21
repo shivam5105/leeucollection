@@ -15,6 +15,14 @@ get_header(); ?>
     ?>
 	<section id="site-main" class="room-listing-page">
 	    <div class="mobile-page-heading">
+	    	<?php
+	    	if(!empty($post) && $post->post_parent > 0)
+	    	{
+		    	?>
+		    	<a href="<?php echo get_permalink($post->post_parent); ?>" class="mobile-prev-page fa fa-angle-left"></a>
+		    	<?php
+		    }
+		    ?>
 	    	<?php echo $post->post_title;?>
 	    </div>
 		<div class="container">

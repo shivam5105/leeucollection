@@ -13,6 +13,17 @@ get_header(); ?>
 	$page_heading = (@$post_meta['_crb_page_heading'][0]) ? $post_meta['_crb_page_heading'][0] : $post->post_title;
     ?>
 	<section id="site-main">
+	    <div class="mobile-page-heading">
+	    	<?php
+	    	if(!empty($post) && $post->post_parent > 0)
+	    	{
+		    	?>
+		    	<a href="<?php echo get_permalink($post->post_parent); ?>" class="mobile-prev-page fa fa-angle-left"></a>
+		    	<?php
+		    }
+		    ?>
+	    	<?php echo $post->post_title;?>
+	    </div>
 		<div itemscope itemtype="http://schema.org/HotelRoom">
 			<a href="<?php echo get_permalink($post->ID); ?>" style="display:none" itemprop="url"><?php the_title(); ?></a> <!-- used for schema only please do not remove it. -->
 			<div class="container desktop-only">

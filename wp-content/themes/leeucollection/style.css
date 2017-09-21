@@ -655,7 +655,8 @@ padding-top: 21px;
 .home #site-header, 
 .page-template-template-hotel-listing #site-header,
 .leeu-restaurants-template-template-restaurantlisting #site-header,
-.hotel-template-template-hotel #site-header
+.hotel-template-template-hotel #site-header,
+.hotel-template-template-room #site-header
 {
     box-shadow: none;
 }
@@ -3716,7 +3717,7 @@ a.press-detail-title
     letter-spacing: 0.1em;
     font-family: 'GillSans';
     line-height: 26px;
-    padding: 15px 5px 11px 5px;
+    padding: 15px 40px 11px 40px;
     border-bottom: 1px solid #AC9E94;
     display: none;
 }
@@ -3729,4 +3730,9 @@ a.press-detail-title
     margin-top: 25px;
     margin-bottom: 20px;
     font-weight: 500;
+}
+.mobile-prev-page
+{
+    position: absolute;
+    left: 25px;
 }
