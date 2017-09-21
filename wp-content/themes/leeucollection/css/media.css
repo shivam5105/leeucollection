@@ -1145,6 +1145,10 @@
 	    border-bottom: 1px solid #AC9E94;
     	box-shadow: none;
 	}
+	.room-listing-contain
+	{
+		margin-top: 20px;
+	}
 }
 @media only screen and (max-width: 687px){
 	.promo_grcode,
