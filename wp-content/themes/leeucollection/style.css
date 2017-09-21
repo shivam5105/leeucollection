@@ -654,10 +654,7 @@ padding-top: 21px;
 }
 .home #site-header, 
 .page-template-template-hotel-listing #site-header,
-.leeu-restaurants-template-template-restaurantlisting #site-header,
-.hotel-template-template-hotel #site-header,
-.hotel-template-template-room #site-header,
-.hotel-template-template-roomlisting #site-header
+.leeu-restaurants-template-template-restaurantlisting #site-header
 {
     box-shadow: none;
 }
