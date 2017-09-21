@@ -1122,14 +1122,16 @@
 	body.home .two-img-col .content-part,
 	body.home .home-wine-wrap .inner-detail-content2 .content-part,
 	.sliding-detail .content-part,
-	.room-listing-contain .view-all-link
+	.room-listing-contain .view-all-link,
+	.hotel-template-template-roomlisting .inner-detail-wrapper .content-part
 	{
 	    display: none;
 	}
 	body.home .sliding-detail .linking-wrap,
 	.sliding-detail .linking-wrap,
 	.slide-links-list,
-	.mobile-page-heading
+	.mobile-page-heading,
+	.section-title-mobile
 	{
 		display: block;
 	}

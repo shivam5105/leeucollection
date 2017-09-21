@@ -14,6 +14,9 @@ get_header(); ?>
 	$page_heading = (@$post_meta['_crb_page_heading'][0]) ? $post_meta['_crb_page_heading'][0] : $post->post_title;
     ?>
 	<section id="site-main" class="room-listing-page">
+	    <div class="mobile-page-heading">
+	    	<?php echo $post->post_title;?>
+	    </div>
 		<div class="container">
 			<div class="leeu-heading-wrap scroll-anim" data-anim="fade-up">
 				<div class="row">
@@ -119,6 +122,7 @@ get_header(); ?>
 														<div class="content-part" itemprop="description">
 															<?php echo nl2br(@$child_post_meta['_crb_short_description'][0]); ?>
 														</div>
+														<div class="section-title-mobile"><?php echo $child_post->post_title; ?></div>
 														<ul class="list-inline linking-wrap">
 															<li class="see-more-link"><a href="<?php echo get_permalink($child_post_id); ?>">SEE MORE</a></li>
 														</ul>

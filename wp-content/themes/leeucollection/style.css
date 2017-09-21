@@ -3695,11 +3695,10 @@ a.press-detail-title
     font-weight: 400;
     margin-top: 20px;
 }
-.press-cols.has-featured-image a.main-link
-{
-    display: none;
-}
-.slide-links-list
+.press-cols.has-featured-image a.main-link,
+.slide-links-list,
+.hotel-template-template-hotel .main_slider .banner-text,
+.section-title-mobile
 {
     display: none;
 }
