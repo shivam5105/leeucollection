@@ -335,6 +335,7 @@ padding-top: 21px;
 #main-navigation .sub-menu li > .sub-menu li {
     margin-right: 9px;
     padding-right: 0;
+    width: 190px;
 }
 #main-navigation .sub-menu li > .sub-menu  li:last-child{
     margin-right: 10px;
