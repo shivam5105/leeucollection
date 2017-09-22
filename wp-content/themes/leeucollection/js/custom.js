@@ -168,7 +168,7 @@ var Blank ={
 		var dots_wrap; 
 			if ($(window).width() > 1025){
 				dots_wrap = '#customDots';
-				autoplay_wrap = false; 
+				autoplay_wrap = true; 
 			}else{
 				dots_wrap = "";
 				autoplay_wrap = true; 
