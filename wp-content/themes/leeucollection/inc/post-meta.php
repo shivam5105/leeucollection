@@ -312,7 +312,8 @@ Container::make('post_meta', 'Content Section')
             )),
         )),
     ));
-   //Content Section Spa & Wellness Page
+
+//Content Section Spa & Wellness Page
 Container::make('post_meta', 'Content Section')
     ->show_on_post_type($leeu_post_types)
     ->show_on_template(array('template-guest-area.php'))
@@ -326,7 +327,7 @@ Container::make('post_meta', 'Content Section')
             Field::make('textarea', 'crb_guest_section_slide_desc', 'Small Description')->set_width('70'),
             
         )),
-    )); 
+    ));
 
 //Home Page && Hotel Listing
 Container::make('post_meta', 'Header Slider')
@@ -1048,4 +1049,21 @@ Container::make('post_meta', 'Sub Heading')
     ->show_on_level(1)
     ->add_fields(array(
         Field::make('textarea', 'crb_sub_heading', '')->help_text("This will come under large header."),
+    ));
+
+//Spa & Wellness Leeu House Page
+Container::make('post_meta', 'Content Section')
+    ->show_on_post_type($leeu_post_types)
+    ->show_on_template(array('template-spa-wellness-leeu-house.php'))
+    ->add_fields(array(
+        Field::make('complex', 'crb_spa_content_section', '')->add_fields(array(
+
+            Field::make('complex', 'crb_spa_section_slider', 'Slider')->add_fields(array(
+              Field::make('image', 'crb_spa_section_slide_image', 'Image')->help_text('(Image Dimensions (WxH): 821 x 478)')->set_width('20'),
+            )),
+            Field::make('textarea', 'crb_spa_section_slide_desc', 'Small Description')->set_width('50'),
+            Field::make('text', 'crb_spa_section_slide_link_text', 'Link Text')->set_width('20'),
+            Field::make('text', 'crb_spa_section_slide_link_url', 'Link')->set_width('30'),
+            
+        )),
     ));
