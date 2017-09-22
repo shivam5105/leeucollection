@@ -958,7 +958,6 @@ Container::make('post_meta', 'Trip Advisor Code')
         Field::make('textarea', 'crb_trip_advisor_code', ''),
     ));
 
-
 //Navarino Service Hotel ID
 Container::make('post_meta', 'Hotel ID & Chain ID - Navarino Service')
     ->show_on_post_type('hotel')
@@ -1041,4 +1040,12 @@ Container::make('post_meta', 'Press Content')
         Field::make('image', 'crb_press_thumb_image', 'Thumb Image')->set_width('25'),
         Field::make('date', 'crb_press_release_date', 'Release Date')->set_width('25'),
         Field::make('text', 'crb_press_detail_link', 'Link')->set_width('50'),
-    )); 
+    ));
+
+//Sub Heading
+Container::make('post_meta', 'Sub Heading')
+    ->show_on_post_type('hotel')
+    ->show_on_level(1)
+    ->add_fields(array(
+        Field::make('textarea', 'crb_sub_heading', '')->help_text("This will come under large header."),
+    ));

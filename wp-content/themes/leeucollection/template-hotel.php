@@ -85,9 +85,21 @@ get_header(); ?>
 			<?php
 			if(empty($hotel_closed) || $hotel_closed == 'no')
 			{
-				?>
+				$sub_heading = carbon_get_post_meta($post->ID, "crb_sub_heading");
+				if(!empty($sub_heading))
+				{
+					?>
+					<div class="large-header-sub-heading scroll-anim" data-anim="fade-up">
+						<div class="col-8 col-centered">
+							<div class="text-center">
+								<?php echo $sub_heading; ?>
+							</div>
+						</div>
+					</div>
+					<?php
+				}?>
 				<div class="intro-blurb scroll-anim" data-anim="fade-up">
-					<div class="col-10 col-centered">
+					<div class="col-8 col-centered">
 						<div class="text-center" itemprop="description">
 							<?php the_content(); ?>
 						</div>

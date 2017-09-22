@@ -3731,3 +3731,7 @@ a.press-detail-title
     position: absolute;
     left: 25px;
 }
+.hotel-template-template-hotel .intro-blurb {
+    font-size: 14px;
+    line-height: 1.6;
+}
