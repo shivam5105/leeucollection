@@ -372,7 +372,8 @@ var Blank ={
 			"applyClass": "btn-success cal-apply-btn",
 			"cancelClass": "btn-default cal-cancel-btn",
 			"locale": {
-				  	"format": 'MMMM D, YYYY',
+				  	/*"format": 'MMMM D, YYYY',*/
+				  	"format": 'MMM D, YYYY',
 				},
 			}, function(start, end, label) {
 				//console.log("New date range selected: " + start.format('DD/MM/YYYY') + " to " + end.format('DD/MM/YYYY') + " (predefined range: " + label + ")");

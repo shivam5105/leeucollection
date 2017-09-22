@@ -43,7 +43,7 @@
 						</div>
 						<div class="col-3 rm-pad">
 							<div class="form-item input-item"> 
-								<input placeholder="" value="<?php echo date("F d, Y",time())." - ".date("F d, Y",(time() + 86400)); ?>" type="text" class="rangePicker">
+								<input placeholder="" value="<?php echo date("M d, Y",time())." - ".date("M d, Y",(time() + 86400)); ?>" type="text" class="rangePicker">
 							</div>
 						</div>
 						<div class="col-2 rm-pad">
