@@ -798,6 +798,7 @@ div.sub-menu-wrapper{
     padding-top: 16px;
     padding-bottom: 27px;
     display: block;
+    line-height: 1.4;
 }
 /**animation classes**/
 [data-anim="fade-up"] {
