@@ -127,6 +127,7 @@ get_header(); ?>
 									?>
 									<script type="text/javascript">
 										var insta_limit = "<?php echo $limit; ?>";
+										console.debug("dd = "+(insta_limit * insta_limit));
 										<?php
 										if(isset($hash_tag) && !empty($hash_tag))
 										{
