@@ -141,7 +141,7 @@ get_header(); ?>
 									        accessToken:"<?php echo $access_token; ?>",
 											resolution: 'standard_resolution',
 											/*template: '<a href="{{link}}" target="_blank"><img src="{{image}}" alt="{{location}}"/></a>',*/
-											template: '<a href="{{link}}" target="_blank"><div style="background: url({{image}}) no-repeat;background-size: cover;height: 240px;"></div></a>'
+											template: '<a href="{{link}}" target="_blank"><div style="background: url({{image}}) no-repeat;background-size: cover;height: 240px;"></div></a>',
 											<?php
 											if(isset($hash_tag) && !empty($hash_tag))
 											{
