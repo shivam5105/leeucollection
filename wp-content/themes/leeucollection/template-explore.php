@@ -154,7 +154,7 @@ get_header(); ?>
 											    		image_count++;
 											    		if(image_count > insta_limit)
 											    		{
-											    			return false;
+											    			//return false;
 											    		}
 											    		return true;
 											    	}
