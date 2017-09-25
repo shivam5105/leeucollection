@@ -120,7 +120,7 @@ get_header(); ?>
 								$hash_tag 		= @$post_meta['_crb_explore_instagram_hash_tag'][0];
 								if(empty($limit) || $limit < 1)
 								{
-									$limit = 6;
+									$limit = 9;
 								}
 								if(!empty($limit) && !empty($userid) && !empty($access_token))
 								{
@@ -140,7 +140,8 @@ get_header(); ?>
 									        userId:"<?php echo $userid; ?>",
 									        accessToken:"<?php echo $access_token; ?>",
 											resolution: 'standard_resolution',
-											template: '<a href="{{link}}" target="_blank"><img src="{{image}}" alt="{{location}}"/></a>',
+											/*template: '<a href="{{link}}" target="_blank"><img src="{{image}}" alt="{{location}}"/></a>',*/
+											template: '<a href="{{link}}" target="_blank"><div style="background: url({{image}}) no-repeat;background-size: cover;height: 240px;"></div></a>'
 											<?php
 											if(isset($hash_tag) && !empty($hash_tag))
 											{
