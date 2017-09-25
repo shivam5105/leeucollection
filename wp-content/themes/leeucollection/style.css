@@ -644,7 +644,10 @@ a{
 }
 .home #site-main , 
 .page-template-template-hotel-listing #site-main,
-.leeu-restaurants-template-template-restaurantlisting #site-main{
+.leeu-restaurants-template-template-restaurantlisting #site-main,
+.leeu-discover-template-template-discover #site-main,
+.page-template-template-meetings-events #site-main
+{
     margin-top: 101px;
 }
 /**header animation**/
