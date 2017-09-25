@@ -312,15 +312,21 @@ a{
 }
 .home .logo-wrapper, 
 .page-template-template-hotel-listing .logo-wrapper , 
-.leeu-restaurants-template-template-restaurantlisting .logo-wrapper{ 
-   margin-top: 6px;
+.leeu-restaurants-template-template-restaurantlisting .logo-wrapper,
+.leeu-discover-template-template-discover .logo-wrapper,
+.page-template-template-meetings-events .logo-wrapper
+{ 
+   margin-top: 8px;
 }
 #main-navigation ul{
     padding-top: 21px;
 }
 .home #main-navigation ul , 
 .page-template-template-hotel-listing #main-navigation ul, 
-.leeu-restaurants-template-template-restaurantlisting #main-navigation ul{
+.leeu-restaurants-template-template-restaurantlisting #main-navigation ul,
+.leeu-discover-template-template-discover  #main-navigation ul,
+.page-template-template-meetings-events  #main-navigation ul
+{
     padding-top: 41px;
 }
 #main-navigation ul li {
@@ -423,7 +429,9 @@ a{
 }
 .home #main-navigation , 
 .page-template-template-hotel-listing #main-navigation,
-.leeu-restaurants-template-template-restaurantlisting #main-navigation
+.leeu-restaurants-template-template-restaurantlisting #main-navigation,
+.leeu-discover-template-template-discover #main-navigation,
+.page-template-template-meetings-events #main-navigation
 {
     min-height:101px;
 }
