@@ -666,7 +666,10 @@ a{
 }
 .home #site-header, 
 .page-template-template-hotel-listing #site-header,
-.leeu-restaurants-template-template-restaurantlisting #site-header
+.leeu-restaurants-template-template-restaurantlisting #site-header,
+.leeu-discover-template-template-discover #site-header,
+.page-template-template-meetings-events #site-header
+
 {
     box-shadow: none;
 }
