@@ -145,6 +145,7 @@ get_header(); ?>
 											if(isset($hash_tag) && !empty($hash_tag))
 											{
 												?>
+												limit: insta_limit,
 												filter: function(image) {
 													console.debug(image);
 											    	if(image.tags.indexOf("<?php echo $hash_tag; ?>") >= 0)
