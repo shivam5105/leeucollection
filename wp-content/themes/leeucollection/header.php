@@ -91,7 +91,7 @@ $page_template_file = basename(get_page_template());
 				}
 				?>
 				<div class="logo-wrapper <?php if($has_logo_text_img){ /*echo "has_logo_text_img";*/ } ?>">
-					<?php //leeucollection_the_custom_logo(); ?>
+					<?php leeucollection_the_custom_logo(); ?>
 
 					<a href="<?php echo home_url(); ?>" class="custom-logo-link2" rel="home" itemprop="url"><img src="<?php echo get_template_directory_uri(); ?>/images/LeeuLogo.svg" class="custom-logo2" alt="Leeu Collections" itemprop="logo"></a>
 
@@ -99,7 +99,7 @@ $page_template_file = basename(get_page_template());
 					if($has_logo_text_img)
 					{
 						?>
-						<!-- <a href="<?php echo home_url( '/' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/Leeu-Collection-Text.svg" class="bottom-logo" alt="" /></a> -->
+						<a href="<?php echo home_url( '/' ); ?>" class="logo-text-wrapper"><img src="<?php echo get_template_directory_uri(); ?>/images/Leeu-Collection-Text.svg" class="bottom-logo" alt="" /></a>
 						<?php
 					}
 					?>

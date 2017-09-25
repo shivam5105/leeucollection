@@ -3756,3 +3756,28 @@ a.press-detail-title
     max-width: 100%;
     width: 70px;
 }
+.custom-logo-link2
+{
+    display: none;
+}
+.home .custom-logo-link, 
+.page-template-template-hotel-listing .custom-logo-link, 
+.leeu-restaurants-template-template-restaurantlisting .custom-logo-link,
+.leeu-discover-template-template-discover .custom-logo-link,
+.page-template-template-meetings-events .custom-logo-link,
+.home .logo-text-wrapper, 
+.page-template-template-hotel-listing .logo-text-wrapper, 
+.leeu-restaurants-template-template-restaurantlisting .logo-text-wrapper,
+.leeu-discover-template-template-discover .logo-text-wrapper,
+.page-template-template-meetings-events .logo-text-wrapper
+{
+    display: none;
+}
+.home .custom-logo-link2, 
+.page-template-template-hotel-listing .custom-logo-link2, 
+.leeu-restaurants-template-template-restaurantlisting .custom-logo-link2,
+.leeu-discover-template-template-discover .custom-logo-link2,
+.page-template-template-meetings-events .custom-logo-link2
+{
+    display: block;
+}
