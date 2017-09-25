@@ -146,6 +146,7 @@ get_header(); ?>
 											{
 												?>
 												filter: function(image) {
+													console.debug(image.tags);
 											    	if(image.tags.indexOf("<?php echo $hash_tag; ?>") >= 0)
 											    	{
 											    		image_count++;
