@@ -3747,14 +3747,16 @@ a.press-detail-title
     left: 25px;
 }
 .hotel-template-template-hotel .intro-blurb {
-    font-size: 14px;
-    line-height: 1.6;
+    font-size: 15px;
+    letter-spacing: 0.06em;
+    line-height: 1.5;
 }
 .large-header-sub-heading {
     font-size: 24px;
     text-align: center;
     line-height: 1.3;
     margin-bottom: 15px;
+    font-weight: 300;
 }
 .logo-wrapper img.custom-logo2
 {
