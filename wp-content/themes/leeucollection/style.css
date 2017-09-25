@@ -3787,3 +3787,17 @@ a.press-detail-title
 {
     display: block;
 }
+.banner-text h2
+{
+    color: #fff;
+    font-size: 50px;
+    font-family: 'GillSans';
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+}
+.banner-text.pos-abs-top
+{
+    top: 121px;
+    padding-top: 0;
+}
