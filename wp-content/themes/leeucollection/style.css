@@ -3802,3 +3802,7 @@ a.press-detail-title
     top: 121px;
     padding-top: 0;
 }
+.page-template-template-meetings-events .banner-text h2
+{
+    color: #fff;
+}
