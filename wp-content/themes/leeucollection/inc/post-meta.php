@@ -1038,9 +1038,9 @@ Container::make('post_meta', 'Show left sidebar?')
 Container::make('post_meta', 'Press Content')
     ->show_on_post_type('leeu-press')
     ->add_fields(array(
-        Field::make('image', 'crb_press_thumb_image', 'Thumb Image'),
-        Field::make('date', 'crb_press_release_date', 'Release Date')->set_width('30'),
-        Field::make('text', 'crb_press_detail_link', 'Link')->set_width('70'),
+        Field::make('image', 'crb_press_thumb_image', 'Thumb Image')->set_width('25'),
+        Field::make('date', 'crb_press_release_date', 'Release Date')->set_width('25'),
+        Field::make('text', 'crb_press_detail_link', 'Link')->set_width('50'),
         Field::make('complex', 'crb_press_slider', 'Slider')->add_fields(array(
           Field::make('image', 'crb_press_slide_image', 'Image')->help_text('(Image Dimensions (WxH): 821 x 478)')->set_width('20'),
         )),
