@@ -166,7 +166,7 @@ get_header(); ?>
 													<?php
 													foreach ($crb_press_slider as $key => $slide)
 													{
-														$slide_image = wp_get_attachment_image_src( $slide['crb_press_slide_image'], '588x380' );
+														$slide_image = wp_get_attachment_image_src( $slide['crb_press_slide_image'], 'full' );
 														$slide_image_url = isset($slide_image) ? $slide_image[0] : "";
 														if(!empty($slide_image_url))
 														{
