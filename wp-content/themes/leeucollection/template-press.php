@@ -70,7 +70,7 @@ get_header(); ?>
 						for($j = (($row - 1) * $col); $j < ($row * $col) && $col_loop <= $press_num; $j++, $col_loop++)
 						{
 							$post = $post_data[$j];
-							
+
 							$press_thumb_image = carbon_get_post_meta($post->ID,'crb_press_thumb_image');
 							$crb_press_slider = carbon_get_post_meta($post->ID,'crb_press_slider', 'complex');
 							$press_release_date = carbon_get_post_meta($post->ID,'crb_press_release_date');
@@ -78,6 +78,8 @@ get_header(); ?>
 
 							$featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full');
 							$featured_image_url = isset($featured_image[0]) ? $featured_image[0] : '';
+
+							$press_thumb_image = wp_get_attachment_image_src( $press_thumb_image, '588x380' );
 							$press_thumb_image_url = $press_thumb_image[0];
 
 							$press_release_date_str = !empty($press_release_date) ? date('F Y', strtotime($press_release_date)) : "";
