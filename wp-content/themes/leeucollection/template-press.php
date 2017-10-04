@@ -150,7 +150,7 @@ get_header(); ?>
 								$slider_wrapper_class = "owl-carousel single_slider owl-theme";
 							}
 							?>
-							<div class="press-detail-<?php echo $post->ID; ?> press-detail-wrapper">
+							<div id="press-detail-<?php echo $post->ID; ?>" class="press-detail-<?php echo $post->ID; ?> press-detail-wrapper">
 								<div class="press-detail-content-wrapper">
 									<div class="row">
 										<div class="col-6">

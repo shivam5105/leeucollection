@@ -605,12 +605,24 @@ var Blank ={
 			$(".press-detail-wrapper").slideUp();
 			$(".press-detail-"+id).slideDown();
 			$(this).addClass("active");
+			Blank.scrollToDiv("#press-detail-"+id);
 		});
 		$(document).on("click", ".press-cols.has-slider-images.active", function(){
 			$(".press-cols.has-slider-images").removeClass("active");
 			var id = $(this).attr("data-id");
 			$(".press-detail-wrapper").slideUp();
 		});
+	},
+	scrollToDiv: function(selector)
+	{
+		var div_offset=$(selector).offset().top;
+		var header_height = $("#site-header").height();
+
+		var header_offset = div_offset - header_height;
+
+		$('body,html').animate({
+			scrollTop: header_offset
+		}, 1500);
 	},
 	ready: function(){
 		Blank.common_init();
