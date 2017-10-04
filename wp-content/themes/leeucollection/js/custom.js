@@ -603,9 +603,10 @@ var Blank ={
 			var id = $(this).attr("data-id");
 			$(".press-cols.has-slider-images").removeClass("active");
 			$(".press-detail-wrapper").slideUp();
-			$(".press-detail-"+id).slideDown();
+			$(".press-detail-"+id).slideDown(function(){
+				Blank.scrollToDiv("#press-detail-"+id);
+			});
 			$(this).addClass("active");
-			Blank.scrollToDiv("#press-detail-"+id);
 		});
 		$(document).on("click", ".press-cols.has-slider-images.active", function(){
 			$(".press-cols.has-slider-images").removeClass("active");
