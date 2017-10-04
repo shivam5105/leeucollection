@@ -3626,7 +3626,8 @@ img[src*=".svg"].bottom-logo
     width: 100%;
     display: block;
 }
-.press-cols a.press-title
+.press-cols a.press-title,
+.press-cols .press-title
 {
     position: absolute;
     left: 50%;
@@ -3634,7 +3635,7 @@ img[src*=".svg"].bottom-logo
     transform: translate(-50%, -50%);
     letter-spacing: 0;
     color: #222944;
-    font-size: 28px;
+    font-size: 20px;
     text-align: center;
     text-transform: uppercase;
     font-family: 'GillSans';
@@ -3711,7 +3712,7 @@ a.press-detail-title
     font-weight: 400;
     margin-top: 20px;
 }
-.press-cols.has-featured-image a.main-link,
+.press-cols.has-slider-images a.main-link,
 .slide-links-list,
 .section-title-mobile
 {

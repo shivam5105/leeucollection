@@ -595,19 +595,19 @@ var Blank ={
 	hide_press_detail_slide: function(){
 		$(document).on("click", "a.press-detail-close", function(){
 			$(".press-detail-wrapper").slideUp();
-			$(".press-cols.has-featured-image").removeClass("active");
+			$(".press-cols.has-slider-images").removeClass("active");
 		});
 	},
 	show_press_detail_slide: function(){
-		$(document).on("click", ".press-cols.has-featured-image:not(.active)", function(){
+		$(document).on("click", ".press-cols.has-slider-images:not(.active)", function(){
 			var id = $(this).attr("data-id");
-			$(".press-cols.has-featured-image").removeClass("active");
+			$(".press-cols.has-slider-images").removeClass("active");
 			$(".press-detail-wrapper").slideUp();
 			$(".press-detail-"+id).slideDown();
 			$(this).addClass("active");
 		});
-		$(document).on("click", ".press-cols.has-featured-image.active", function(){
-			$(".press-cols.has-featured-image").removeClass("active");
+		$(document).on("click", ".press-cols.has-slider-images.active", function(){
+			$(".press-cols.has-slider-images").removeClass("active");
 			var id = $(this).attr("data-id");
 			$(".press-detail-wrapper").slideUp();
 		});
