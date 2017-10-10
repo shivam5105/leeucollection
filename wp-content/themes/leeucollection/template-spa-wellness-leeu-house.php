@@ -43,7 +43,7 @@ get_header(); ?>
 					</div>
 					<div class="col-8">
 						<?php
-						$content_sections = carbon_get_post_meta($post->ID, "crb_spa_content_section", 'complex');
+						$content_sections = carbon_get_post_meta($post->ID, "crb_spa_content_section2", 'complex');
 						if(is_array($content_sections) && !empty($content_sections))
 						{
 							foreach ($content_sections as $section_key => $content_section)

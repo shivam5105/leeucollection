@@ -1059,7 +1059,7 @@ Container::make('post_meta', 'Content Section')
     ->show_on_post_type($leeu_post_types)
     ->show_on_template(array('template-spa-wellness-leeu-house.php'))
     ->add_fields(array(
-        Field::make('complex', 'crb_spa_content_section', '')->add_fields(array(
+        Field::make('complex', 'crb_spa_content_section2', '')->add_fields(array(
 
             Field::make('complex', 'crb_spa_section_slider', 'Slider')->add_fields(array(
               Field::make('image', 'crb_spa_section_slide_image', 'Image')->help_text('(Image Dimensions (WxH): 821 x 478)')->set_width('20'),
