@@ -403,7 +403,7 @@ a{
 #main-navigation ul.menu-right li:last-child:hover a{
     color: #c19034;
 }
-#main-navigation ul.menu-right li:last-child a::after{
+#main-navigation ul.menu-right > li:last-child a::after{
     background: #c19034 none repeat scroll 0 0;
     bottom: -1px;
     content: "";
