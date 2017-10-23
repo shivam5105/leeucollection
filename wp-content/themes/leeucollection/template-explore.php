@@ -127,6 +127,7 @@ get_header(); ?>
 									?>
 									<script type="text/javascript">
 										var insta_limit = "<?php echo $limit; ?>";
+										console.debug("insta_limit = "+(insta_limit * insta_limit));
 										<?php
 										if(isset($hash_tag) && !empty($hash_tag))
 										{
@@ -140,16 +141,14 @@ get_header(); ?>
 									        userId:"<?php echo $userid; ?>",
 									        accessToken:"<?php echo $access_token; ?>",
 											resolution: 'standard_resolution',
-
 											/*template: '<a href="{{link}}" target="_blank"><img src="{{image}}" alt="{{location}}"/></a>',*/
 											template: '<a href="{{link}}" target="_blank"><div style="background: url({{image}}) no-repeat;background-size: cover;height: 240px;"></div></a>',
 											<?php
 											if(isset($hash_tag) && !empty($hash_tag))
 											{
 												?>
-												limit: (insta_limit * insta_limit * insta_limit * insta_limit),
-												/*filter: function(image) {
-													console.debug(image.tags);
+												limit: (insta_limit * insta_limit),
+												filter: function(image) {
 											    	if(image.tags.indexOf("<?php echo $hash_tag; ?>") >= 0)
 											    	{
 											    		image_count++;
@@ -159,7 +158,7 @@ get_header(); ?>
 											    		}
 											    		return true;
 											    	}
-											    }*/
+											    }
 											    <?php
 											}
 											else
