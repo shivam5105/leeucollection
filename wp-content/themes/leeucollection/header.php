@@ -111,6 +111,7 @@ $page_template_file = basename(get_page_template());
 						wp_nav_menu( array(
 							'theme_location' => 'header_menu_right',
 							'menu_class'     => 'menu-right list-inline',
+						    'walker' => new TV_Main_Menu_Walker()
 						 ) );
 					}
 					?>
