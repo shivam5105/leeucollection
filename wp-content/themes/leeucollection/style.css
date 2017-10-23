@@ -2762,7 +2762,11 @@ margin:0;
 }
 .rel_wrap{
     min-height:100px;
-    position:relative;  
+    position:relative;
+}
+.google-map-popup-wrapper .rel_wrap
+{
+    z-index: 1;
 }
 .leeu_logo{
     position:absolute;
