@@ -138,7 +138,7 @@ function leeucollection_setup() {
 	add_image_size( '500x334', 500, 334, true );
 	add_image_size( '411x258', 411, 258, true );
 	add_image_size( '275x173', 275, 173, true );
-	add_image_size( '190x120', 380, 240, true );
+	add_image_size( '380x240', 380, 240, true );
 	add_image_size( '193x129', 193, 129, true );
 }
 endif; // leeucollection_setup
@@ -1078,8 +1078,7 @@ class TV_Main_Menu_Walker extends Walker_Nav_Menu {
         $nav_image_span = "";
         if($nav_menu_image)
         {
-        	/*$nav_image_url 	= wp_get_attachment_image_src( $nav_menu_image, '190x120' );*/
-        	$nav_image_url 	= wp_get_attachment_image_src( $nav_menu_image, 'full' );
+        	$nav_image_url 	= wp_get_attachment_image_src( $nav_menu_image, '380x240' );
 			$nav_image_url 	= $nav_image_url[0];
 			$has_sub_heading = "";
 			if($nav_menu_sub_heading)
