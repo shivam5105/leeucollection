@@ -137,7 +137,7 @@ get_header(); ?>
 										if(is_array($hours_reservations) && count($hours_reservations) > 0)
 										{
 											?>
-											<div class="leeu-text">HOURS & RESERVATIONS</div>
+											<div class="leeu-text">OPENING HOURS</div>
 											<?php
 										}
 										foreach ($hours_reservations as $hr_key => $hours_reservation)
