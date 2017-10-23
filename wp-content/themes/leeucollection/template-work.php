@@ -172,8 +172,8 @@ get_header(); ?>
 										</div>
 										<div class="desc-heading mgt-25"><?php echo $artist_name; ?>
 											<span class="session_rate mgt-0 ucase">
-												<?php echo $artist_date; ?>,
-												<?php echo $artist_location; ?>
+												<?php echo $artist_date; ?>
+												<?php if(!empty($artist_location)){ echo ", "; } echo $artist_location; ?>
 											</span>
 										</div>
 									</div>
