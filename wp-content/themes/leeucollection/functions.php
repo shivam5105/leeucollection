@@ -1349,8 +1349,13 @@ function my_wpcf7_dropdown_form($html)
 }
 add_filter('wpcf7_form_elements', 'my_wpcf7_dropdown_form');
 
-add_filter('jpeg_quality', function($arg){ return 100; });
+add_filter( 'jpeg_quality', 'custom_image_quality' );
+add_filter( 'wp_editor_set_quality', 'custom_image_quality' );
+function custom_image_quality( $quality ) {
 
+    return 100;
+
+}
 
 
 // REMOVE WP EMOJI
