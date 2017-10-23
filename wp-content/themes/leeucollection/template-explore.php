@@ -127,7 +127,6 @@ get_header(); ?>
 									?>
 									<script type="text/javascript">
 										var insta_limit = "<?php echo $limit; ?>";
-										console.debug("dd = "+(insta_limit * insta_limit));
 										<?php
 										if(isset($hash_tag) && !empty($hash_tag))
 										{
@@ -147,7 +146,7 @@ get_header(); ?>
 											if(isset($hash_tag) && !empty($hash_tag))
 											{
 												?>
-												limit: (insta_limit * insta_limit),
+												limit: (insta_limit * insta_limit * insta_limit * insta_limit),
 												filter: function(image) {
 											    	if(image.tags.indexOf("<?php echo $hash_tag; ?>") >= 0)
 											    	{
