@@ -140,8 +140,6 @@ get_header(); ?>
 									        userId:"<?php echo $userid; ?>",
 									        accessToken:"<?php echo $access_token; ?>",
 											resolution: 'standard_resolution',
-											get: 'popular',
-											tagName: '<?php echo $hash_tag; ?>',
 
 											/*template: '<a href="{{link}}" target="_blank"><img src="{{image}}" alt="{{location}}"/></a>',*/
 											template: '<a href="{{link}}" target="_blank"><div style="background: url({{image}}) no-repeat;background-size: cover;height: 240px;"></div></a>',
