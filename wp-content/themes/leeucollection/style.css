@@ -376,7 +376,7 @@ a{
 #main-navigation ul.menu-right li:last-child{
     position: relative;
 }
-#main-navigation ul.menu-right li:last-child::before  , #main-navigation ul.menu-right li:last-child::after {
+#main-navigation ul.menu-right > li:last-child::before  , #main-navigation ul.menu-right > li:last-child::after {
     background: rgba(0, 0, 0, 0) url("images/book-icon.png") no-repeat scroll 0 0;
     content: "";
     height: 25px;
