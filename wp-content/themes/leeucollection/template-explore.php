@@ -140,6 +140,9 @@ get_header(); ?>
 									        userId:"<?php echo $userid; ?>",
 									        accessToken:"<?php echo $access_token; ?>",
 											resolution: 'standard_resolution',
+											get: 'popular',
+											tagName: '<?php echo $hash_tag; ?>',
+
 											/*template: '<a href="{{link}}" target="_blank"><img src="{{image}}" alt="{{location}}"/></a>',*/
 											template: '<a href="{{link}}" target="_blank"><div style="background: url({{image}}) no-repeat;background-size: cover;height: 240px;"></div></a>',
 											<?php
@@ -147,7 +150,7 @@ get_header(); ?>
 											{
 												?>
 												limit: (insta_limit * insta_limit * insta_limit * insta_limit),
-												filter: function(image) {
+												/*filter: function(image) {
 													console.debug(image.tags);
 											    	if(image.tags.indexOf("<?php echo $hash_tag; ?>") >= 0)
 											    	{
@@ -158,7 +161,7 @@ get_header(); ?>
 											    		}
 											    		return true;
 											    	}
-											    }
+											    }*/
 											    <?php
 											}
 											else
