@@ -3807,3 +3807,6 @@ a.press-detail-title
     top: 121px;
     padding-top: 0;
 }
+#site-header .sub-menu img {
+    width: 190px;
+}
