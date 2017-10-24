@@ -60,6 +60,7 @@ get_header(); ?>
 								{
 								    $loop->the_post();
 								    $hotel_ID  = $loop->post->ID;
+									$hotel_location = get_hotel_location_list($hotel_ID);
 
 									$args = array(
 										'post_type' => 'leeu-careers',
@@ -79,6 +80,7 @@ get_header(); ?>
 											<div class="contact-sub-head">
 												<?php echo $loop->post->post_title; ?>
 											</div>
+											<div class="career-location"><?php echo $hotel_location; ?></div>
 											<div class="detail-head-career">
 												<div class="row">
 													<div class="col-3 rm-pad">
@@ -96,7 +98,6 @@ get_header(); ?>
 											while ($career_loop->have_posts())
 											{
 												$career_loop->the_post();
-												$hotel_location = get_hotel_location_list($hotel_ID);
 												?>
 												<div class="detail-content-career"> 
 													<div class="row"> 

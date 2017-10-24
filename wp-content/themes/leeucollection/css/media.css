@@ -805,6 +805,10 @@
 	{
 		margin-top: 20px;
 	}
+	.career-location
+	{
+		display: block;
+	}
 }
 
 @media only screen and (max-width: 767px){
