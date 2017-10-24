@@ -332,6 +332,7 @@ var Blank ={
 		Blank.scrl_anim();
 		Blank.header_anim();
 		Blank.side_nav_fix();
+		Blank.media_col_equal_height();
 	},
 	booktable: function(){
 		$('.booktable').each(function(){

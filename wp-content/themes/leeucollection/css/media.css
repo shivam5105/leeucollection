@@ -764,6 +764,23 @@
 	    width: 100%;
 	    height: auto;
 	}
+	.media-container .media-content-left {
+	    float: none;
+	    clear: both;
+	    width: auto;
+	    text-align: center;
+	    font-size: 12px;
+	}
+	.media-container .room-name {
+	    font-size: 9px;
+	}
+	.media-container .media-content-right {
+	    text-align: center;
+	    margin-top: 10px;
+	}
+	.media-container .content-box {
+	    margin-top: 10px;
+	}
 }
 
 @media only screen and (max-width: 767px){
