@@ -290,6 +290,7 @@ add_action( 'wp_enqueue_scripts', 'leeucollection_scripts' );
  * @return array (Maybe) filtered body classes.
  */
 function leeucollection_body_classes( $classes ) {
+    global $wp_query;
 	// Adds a class of custom-background-image to sites with a custom background image.
 	if ( get_background_image() ) {
 		$classes[] = 'custom-background-image';
