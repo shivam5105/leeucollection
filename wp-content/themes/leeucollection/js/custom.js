@@ -627,6 +627,10 @@ var Blank ={
 	},
 	media_col_equal_height: function()
 	{
+		if(!$(".media-container .col-6").length)
+		{
+			return true;
+		}
 		var max_height = 0;
 		$(".media-container .col-6").each(function(){
 			var height = $(this).height();
@@ -658,6 +662,8 @@ var Blank ={
 		Blank.close_google_map_popup();
 		Blank.hide_press_detail_slide();
 		Blank.show_press_detail_slide();
+		Blank.media_col_equal_height();
+
 		if(jQuery('#slide-menu').length){
 			jQuery('#site-header #slide-menu').meanmenu({
 				meanScreenWidth: "1140",
