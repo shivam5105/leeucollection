@@ -309,6 +309,15 @@ function leeucollection_body_classes( $classes ) {
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
 	}
+    if ( isset( $post ) ) {
+        $classes[] = $post->post_type.'-'.$post->post_name;
+    }
+    if(is_page())
+    {
+        $classes[] = 'page-'.$wp_query->query_vars["pagename"];
+        $classes[] = $wp_query->query_vars["pagename"].'-page';
+        $classes[] = $wp_query->query_vars["pagename"];
+    }
 
 	return $classes;
 }
