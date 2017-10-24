@@ -720,6 +720,50 @@
 	{
 	    display: block;
 	}
+	.contact-detail {
+	    text-align: center;
+	}
+	.contact-sub-head {
+	    font-size: 12px;
+	    font-weight: 600;
+	    margin-bottom: 0;
+	}
+	.contact-spacer {
+	    margin-top: 10px;
+	}
+	.address-contact .leeu-text
+	{
+		display: none;
+	}
+	.phone-contact,
+	.fax-contact {
+	    display: flex;
+	    width: 170px;
+	    margin: 0 auto;
+	    margin-top: 10px;
+	    align-items: center;
+	}
+	.fax-contact {
+	    width: 190px;
+	}
+	.phone-contact .leeu-text,
+	.fax-contact .leeu-text {
+	    margin: 5px 5px 0 0;
+	}
+	.contact-detail [class*="col-"] {
+	    margin-bottom: 30px;
+	}
+	.media-container .col-6 {
+	    width: 50%;
+	    float: left;
+	}
+	.media-container .content-part {
+	    margin-bottom: 10px;
+	}
+	.media-container .wp-post-image {
+	    width: 100%;
+	    height: auto;
+	}
 }
 
 @media only screen and (max-width: 767px){
@@ -1154,50 +1198,6 @@
 	}
 	.large-header-sub-heading {
 	    font-size: 20px;
-	}
-	.contact-detail {
-	    text-align: center;
-	}
-	.contact-sub-head {
-	    font-size: 12px;
-	    font-weight: 600;
-	    margin-bottom: 0;
-	}
-	.contact-spacer {
-	    margin-top: 10px;
-	}
-	.address-contact .leeu-text
-	{
-		display: none;
-	}
-	.phone-contact,
-	.fax-contact {
-	    display: flex;
-	    width: 170px;
-	    margin: 0 auto;
-	    margin-top: 10px;
-	    align-items: center;
-	}
-	.fax-contact {
-	    width: 190px;
-	}
-	.phone-contact .leeu-text,
-	.fax-contact .leeu-text {
-	    margin: 5px 5px 0 0;
-	}
-	.contact-detail [class*="col-"] {
-	    margin-bottom: 30px;
-	}
-	.media-container .col-6 {
-	    width: 50%;
-	    float: left;
-	}
-	.media-container .content-part {
-	    margin-bottom: 10px;
-	}
-	.media-container .wp-post-image {
-	    width: 100%;
-	    height: auto;
 	}
 }
 @media only screen and (max-width: 687px){
