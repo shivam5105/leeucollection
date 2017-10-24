@@ -551,10 +551,14 @@ Container::make('post_meta', 'Half layout')
     ->add_fields(array(
         Field::make('complex', 'crb_half_layout', '')->add_fields(array(
             Field::make('text', 'crb_half_layout_main_title', 'Title'),
-            Field::make('image', 'crb_half_layout_first_image', 'First image')->help_text('(Image Dimensions (WxH): 620 x 385)'),
-            Field::make('textarea', 'crb_half_layout_first_heading', 'Heading')->set_width('50'),
-            Field::make('image', 'crb_half_layout_second_image', 'Image')->help_text('(Image Dimensions (WxH): 620 x 385)'),
-            Field::make('textarea', 'crb_half_layout_second_heading', 'Heading')->set_width('50'),
+
+            Field::make('image', 'crb_half_layout_first_image', 'First image')->help_text('(Image Dimensions (WxH): 620 x 385)')->set_width('30'),
+            Field::make('textarea', 'crb_half_layout_first_heading', 'Heading')->set_width('30'),
+            Field::make('text', 'crb_half_layout_first_link', 'Link')->set_width('30'),
+
+            Field::make('image', 'crb_half_layout_second_image', 'Image')->help_text('(Image Dimensions (WxH): 620 x 385)')->set_width('30'),
+            Field::make('textarea', 'crb_half_layout_second_heading', 'Heading')->set_width('30'),
+            Field::make('text', 'crb_half_layout_second_link', 'Link')->set_width('30'),
         )),
     ));
 

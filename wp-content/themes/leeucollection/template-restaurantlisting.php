@@ -322,6 +322,8 @@ get_header(); ?>
 			{	
 				$title 	= $half_layout_section['crb_half_layout_main_title'];
 				$first_image 	= $half_layout_section['crb_half_layout_first_image'];
+				$first_link 	= $half_layout_section['crb_half_layout_first_link'];
+				$second_link 	= $half_layout_section['crb_half_layout_second_link'];
 				$second_image 	= $half_layout_section['crb_half_layout_second_image'];
 				$first_heading = $half_layout_section['crb_half_layout_first_heading'];
 				$second_heading = $half_layout_section['crb_half_layout_second_heading'];
@@ -341,6 +343,14 @@ get_header(); ?>
 					<div class="col-6 rm-pad">
 						<div class="half-layout-image scroll-anim animate-custom" data-anim="fade-up">
 							<img src="<?php echo $first_image_link;?>" alt="<?php echo $first_heading; ?>">
+							<?php
+							if(!empty($first_link))
+							{
+								?>
+								<a href="<?php echo $first_link; ?>" class="main-link"></a>
+								<?php
+							}
+							?>
 						</div>
 						<div class="sub-heading"><h2 class="text-center ucase"><?php echo $first_heading; ?></h2></div>
 					</div>
@@ -349,6 +359,14 @@ get_header(); ?>
 					<div class="col-6 rm-pad">
 						<div class="half-layout-image scroll-anim animate-custom" data-anim="fade-up">
 							<img src="<?php echo $second_image_link;?>" alt="<?php echo $second_heading; ?>">
+							<?php
+							if(!empty($first_link))
+							{
+								?>
+								<a href="<?php echo $first_link; ?>" class="main-link"></a>
+								<?php
+							}
+							?>
 						</div>
 						<div class="sub-heading"><h2 class="text-center ucase"><?php echo $second_heading; ?></h2></div>
 					</div>
