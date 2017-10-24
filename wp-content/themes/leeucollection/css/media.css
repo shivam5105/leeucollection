@@ -1179,10 +1179,6 @@
 	.footer-menu-row .menu-footer-menu-right-container li {
 	    margin-bottom: 12px;
 	}
-	.footer-menu-row .menu-footer-menu-right-container li:nth-child(2) + li::before
-	{
-		content: "";
-	}
 	.footer-menu-row .menu-footer-menu-left-container li:first-child + li::before
 	{
 		content: "";
