@@ -146,7 +146,7 @@ get_header(); ?>
 										{
 											?>
 											<div class="phone-contact contact-spacer">
-												<div class="leeu-text">PHONE</div>
+												<div class="leeu-text">Phone</div>
 												<div class="content-part" itemprop="telephone"> 
 													<?php echo $contact_info['crb_contact_phone']; ?>
 												</div>
@@ -157,7 +157,7 @@ get_header(); ?>
 										{
 											?>
 											<div class="fax-contact contact-spacer">
-												<div class="leeu-text">FACSIMILE</div>
+												<div class="leeu-text">Facsimile</div>
 												<div class="content-part" itemprop="faxNumber"> 
 													<?php echo $contact_info['crb_contact_fax']; ?>
 												</div>

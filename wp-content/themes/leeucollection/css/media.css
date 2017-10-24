@@ -1155,6 +1155,33 @@
 	.large-header-sub-heading {
 	    font-size: 20px;
 	}
+	.contact-detail {
+	    text-align: center;
+	}
+	.contact-sub-head {
+	    font-size: 12px;
+	    font-weight: 600;
+	    margin-bottom: 0;
+	}
+	.contact-spacer {
+	    margin-top: 10px;
+	}
+	.address-contact .leeu-text
+	{
+		display: none;
+	}
+	.phone-contact,
+	.fax-contact {
+	    display: flex;
+	    width: 170px;
+	    margin: 0 auto;
+	    margin-top: 10px;
+	    align-items: center;
+	}
+	.phone-contact .leeu-text,
+	.fax-contact .leeu-text {
+	    margin: 5px 5px 0 0;
+	}
 }
 @media only screen and (max-width: 687px){
 	.promo_grcode,
