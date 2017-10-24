@@ -1140,9 +1140,10 @@
 	{
 		display: block;
 	}
-	.hotel-template-template-hotel #site-header,
+	/*.hotel-template-template-hotel #site-header,
 	.hotel-template-template-room #site-header,
-	.hotel-template-template-roomlisting #site-header
+	.hotel-template-template-roomlisting #site-header,*/
+	#site-header
 	{
 	    border-bottom: 1px solid #AC9E94;
     	box-shadow: none;
