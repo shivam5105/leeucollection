@@ -756,6 +756,7 @@
 	.media-container .col-6 {
 	    width: 50%;
 	    float: left;
+	    margin-bottom: 10px;
 	}
 	.media-container .content-part {
 	    margin-bottom: 10px;
