@@ -1135,7 +1135,8 @@
 	.slide-links-list,
 	.mobile-page-heading,
 	.section-title-mobile,
-	.leeu-restaurants-template-template-restaurantlisting .sliding-detail .content-part
+	.leeu-restaurants-template-template-restaurantlisting .sliding-detail .content-part,
+	.page-template-front-page .sliding-detail .content-part
 	{
 		display: block;
 	}
