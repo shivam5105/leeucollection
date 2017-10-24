@@ -128,7 +128,18 @@ get_header(); ?>
 												<div class="desc-heading"><?php echo $accolade_title; ?></div>
 											</div>
 											<div class="col-3">
-												<div class="dwnldlink"><a href="<?php echo $link; ?>" target="_blank"><?php echo $link_text; ?></a></div>
+												<?php
+												if(!empty($link_text) && !empty($link))
+												{
+													?>
+													<div class="dwnldlink desktop-only"><a href="<?php echo $link; ?>" target="_blank"><?php echo $link_text; ?></a></div>
+
+													<div class="cstm-btn-wrapper mobile-only">
+														<a class="cstm-btn arrow-btn text-center" href="<?php echo $link; ?>" target="_blank"><?php echo $link_text; ?></a>
+													</div>
+													<?php
+												}
+												?>
 											</div>
 										</div>
 									</div>
