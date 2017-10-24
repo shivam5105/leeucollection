@@ -9,6 +9,9 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <div class="mobile-page-heading">
+    	<?php echo $page_heading;?>
+    </div>
 	<header class="entry-header">
 		<div class="leeu-heading-wrap scroll-anim" data-anim="fade-up">
 			<div class="text-center">

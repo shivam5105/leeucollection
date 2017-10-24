@@ -15,7 +15,7 @@ get_header(); ?>
     ?>
 	<section id="site-main">
 	    <div class="mobile-page-heading">
-	    	<?php echo $post->post_title;?>
+	    	<?php echo $page_heading;?>
 	    </div>
 		<div class="container">
 			<div class="leeu-heading-wrap scroll-anim" data-anim="fade-up">

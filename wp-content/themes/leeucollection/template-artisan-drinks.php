@@ -12,7 +12,10 @@ get_header();
 	$top_most_parent_post = ($hotel_id == false) ? false : get_post($hotel_id);
 	$page_heading = (@$post_meta['_crb_page_heading'][0]) ? $post_meta['_crb_page_heading'][0] : $post->post_title;
 	?>
-	<section id="site-main"> 
+	<section id="site-main">
+	    <div class="mobile-page-heading">
+	    	<?php echo $page_heading;?>
+	    </div> 
 		<div class="container"> 
 			<div class="leeu-heading-wrap scroll-anim" data-anim="fade-up">
 				<div class="row">
