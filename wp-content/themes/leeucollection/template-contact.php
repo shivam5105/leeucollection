@@ -14,6 +14,9 @@ get_header(); ?>
 	$page_heading = (@$post_meta['_crb_page_heading'][0]) ? $post_meta['_crb_page_heading'][0] : $post->post_title;
     ?>
 	<section id="site-main">
+	    <div class="mobile-page-heading">
+	    	<?php echo $post->post_title;?>
+	    </div>
 		<div class="container">
 			<div class="leeu-heading-wrap scroll-anim" data-anim="fade-up">
 				<div class="row">
