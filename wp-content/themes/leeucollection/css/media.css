@@ -1201,4 +1201,8 @@
 	.sliding-detail .cstm-btn-wrapper a.cstm-btn:first-child {
 	    margin-right: 2px;
 	}
+	.linking-wrap li.see-more-link a, .linking-wrap li.book-link a
+	{
+		max-width: 130px;
+	}
 }
