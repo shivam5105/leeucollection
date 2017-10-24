@@ -1188,6 +1188,10 @@
 	.contact-detail [class*="col-"] {
 	    margin-bottom: 30px;
 	}
+	.media-container .col-6 {
+	    width: 50%;
+	    float: left;
+	}
 }
 @media only screen and (max-width: 687px){
 	.promo_grcode,
