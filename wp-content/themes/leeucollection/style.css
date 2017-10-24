@@ -767,7 +767,8 @@ div.sub-menu-wrapper{
     width: 100%; 
     opacity:0;
     z-index: 0;
-    visibility: hidden;           
+    visibility: hidden;
+    transition: all 0.3s ease;
 }
 #main-navigation ul li:hover a + div.sub-menu-wrapper{
     opacity:1;
@@ -904,6 +905,9 @@ body.body-ready .side-nav li a.current-link {
     -moz-transition:all 0.6s ease-in 1.2s; 
     -ms-transition:all 0.6s ease-in 1.2s;
     transition:all 0.6s ease-in 1.2s;
+}
+.ul-child-li-0 ul {
+    margin-left: 18px;
 }
 .side-nav li.active .side-sub-menu{
     opacity:1;
