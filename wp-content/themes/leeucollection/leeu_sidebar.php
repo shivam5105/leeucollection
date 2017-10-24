@@ -110,7 +110,7 @@ else if($post->post_type == 'page')
 		{
 			foreach ( $menu_array_right as $nav_item )
 			{
-				if(!in_array("no-link", $nav_item->classes) && !in_array("hide-from-side", $nav_item->classes))/* && $post_id_for_nav != $nav_item->object_id)*/
+				if(!in_array("no-link", $nav_item->classes) && !in_array("hide-from-sidebar", $nav_item->classes))/* && $post_id_for_nav != $nav_item->object_id)*/
 				{
 					$li_class = ($post_id_for_nav == $nav_item->object_id) ? "current" : "";
 					$li_menu_class = @implode(" ", $nav_item->classes);
@@ -125,7 +125,7 @@ else if($post->post_type == 'page')
 		{
 			foreach ( $menu_array_left as $nav_item )
 			{
-				if(!in_array("no-link", $nav_item->classes) && !in_array("hide-from-side", $nav_item->classes))/* && $post_id_for_nav != $nav_item->object_id)*/
+				if(!in_array("no-link", $nav_item->classes) && !in_array("hide-from-sidebar", $nav_item->classes))/* && $post_id_for_nav != $nav_item->object_id)*/
 				{
 					$li_class = ($post_id_for_nav == $nav_item->object_id) ? "current" : "";
 					$li_menu_class = @implode(" ", $nav_item->classes);
