@@ -1178,6 +1178,9 @@
 	    margin-top: 10px;
 	    align-items: center;
 	}
+	.fax-contact {
+	    width: 190px;
+	}
 	.phone-contact .leeu-text,
 	.fax-contact .leeu-text {
 	    margin: 5px 5px 0 0;
