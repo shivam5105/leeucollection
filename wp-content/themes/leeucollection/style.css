@@ -3818,3 +3818,12 @@ a.press-detail-title
 #site-header .sub-menu img {
     width: 190px;
 }
+.popup-heading {
+    text-align: center;
+    text-transform: uppercase;
+    color: #AC9E94;
+    font-family: 'GillSans';
+    font-size: 14px;
+    letter-spacing: 0.12em;
+    margin-bottom: 40px;
+}

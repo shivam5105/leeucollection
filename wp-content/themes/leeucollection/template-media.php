@@ -100,6 +100,7 @@ get_header(); ?>
 				<div class="close_popup extext">Close</div>
 			</div>
 			<div class="media-popup-content">
+				<div class="popup-heading">Request Form</div>
 				<div class="header-text">REQUESTED IMAGE LINK WILL BE EMAILED TO</div>
 				<?php dynamic_sidebar( 'request-form' ); ?>
 			</div>
