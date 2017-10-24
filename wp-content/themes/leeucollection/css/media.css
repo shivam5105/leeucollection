@@ -1192,6 +1192,13 @@
 	    width: 50%;
 	    float: left;
 	}
+	.media-container .content-part {
+	    margin-bottom: 10px;
+	}
+	.media-container .wp-post-image {
+	    width: 100%;
+	    height: auto;
+	}
 }
 @media only screen and (max-width: 687px){
 	.promo_grcode,
