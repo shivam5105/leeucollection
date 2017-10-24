@@ -127,7 +127,7 @@ get_header(); ?>
 											<div class="col-9">
 												<div class="desc-heading"><?php echo $accolade_title; ?></div>
 											</div>
-											<div class="col-3">
+											<div class="col-3 dwnldlink-wrapper">
 												<?php
 												if(!empty($link_text) && !empty($link))
 												{

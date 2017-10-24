@@ -801,6 +801,10 @@
 	{
 		display: none;
 	}
+	.dwnldlink-wrapper
+	{
+		margin-top: 20px;
+	}
 }
 
 @media only screen and (max-width: 767px){
