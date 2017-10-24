@@ -625,6 +625,21 @@ var Blank ={
 			scrollTop: header_offset
 		}, 1500);
 	},
+	media_col_equal_height: function()
+	{
+		var max_height = 0;
+		$(".media-container .col-6").each(function(){
+			var height = $(this).height();
+			if(max_height < height)
+			{
+				max_height = height;
+			}
+		});
+		if(max_height > 0)
+		{
+			$(".media-container .col-6").height(max_height);
+		}
+	},
 	ready: function(){
 		Blank.common_init();
 		Blank.validate_book_room_form();
