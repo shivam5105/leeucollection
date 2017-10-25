@@ -49,6 +49,14 @@ get_header();
 								<div class="banner-img-wrapper">
 									<div class="banner-img for-mob mht_homebanner" style="background-image:url('<?php echo $banner_url; ?>')"> </div>
 									<img class="for-mob-hide" src="<?php echo $banner_url; ?>" alt="" />
+									<?php
+									if(!empty($header_button_link))
+									{
+										?>
+										<a href="<?php echo $header_button_link; ?>" class="main-link"></a>
+										<?php
+									}
+									?>
 								</div>	
 							</div>							
 								<div class="slider-text text-center ucase <?php echo $header_text_position; ?>">
