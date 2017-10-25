@@ -143,26 +143,39 @@ get_header(); ?>
 											<div class="leeu-text">OPENING HOURS</div>
 											<?php
 										}
-										foreach ($hours_reservations as $hr_key => $hours_reservation)
+										if(!empty($hours_reservations))
 										{
-											if(!empty($hours_reservation['crb_reservation_for']) || !empty($hours_reservation['crb_reservation_time'])){
 											?>
-											<div class="hotel-food-info" itemprop="openingHours">
-												<?php if(!empty($hours_reservation['crb_reservation_for'])){ ?>
-													<div class="food-head">
-														<?php echo $hours_reservation['crb_reservation_for']; ?>:
-													</div>
-												<?php }?>
-												<?php if(!empty($hours_reservation['crb_reservation_time'])){ ?>
-													<div class="foo-desc">
-														<?php echo nl2br($hours_reservation['crb_reservation_time']); ?>
-													</div>
-												<?php }?>
-											</div>
+											<table border="0">
+												<?php
+												foreach ($hours_reservations as $hr_key => $hours_reservation)
+												{
+													if(!empty($hours_reservation['crb_reservation_for']) || !empty($hours_reservation['crb_reservation_time']))
+													{
+														?>
+														<tr class="hotel-food-info" itemprop="openingHours">
+															<td align="right" valign="top">
+																<?php if(!empty($hours_reservation['crb_reservation_for'])){ ?>
+																	<div class="food-head">
+																		<?php echo $hours_reservation['crb_reservation_for']; ?>:
+																	</div>
+																<?php }?>
+															</td>
+															<td align="left" valign="top">
+																<?php if(!empty($hours_reservation['crb_reservation_time'])){ ?>
+																	<div class="foo-desc">
+																		<?php echo nl2br($hours_reservation['crb_reservation_time']); ?>
+																	</div>
+																<?php }?>
+															</td>
+														</tr>
+														<?php
+													}
+												}
+												?>
+											</table>
 											<?php
-										}
-										}
-										?>
+										}?>
 									</div>
 									<div class="col-6">
 										<?php
