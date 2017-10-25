@@ -146,7 +146,7 @@ get_header(); ?>
 										if(!empty($hours_reservations))
 										{
 											?>
-											<table border="0">
+											<table border="0" class="align-center-mobile">
 												<?php
 												foreach ($hours_reservations as $hr_key => $hours_reservation)
 												{
@@ -185,7 +185,7 @@ get_header(); ?>
 										if(is_array($post_meta['_crb_policy']) && !empty($post_meta['_crb_policy'][0]))
 										{
 											?>
-											<div class="leeu-text">Policy</div>
+											<div class="leeu-text policy-heading">Policy</div>
 											<div class="hotel-info-desc"> 
 												<?php echo nl2br($post_meta['_crb_policy'][0]); ?>
 											</div>
