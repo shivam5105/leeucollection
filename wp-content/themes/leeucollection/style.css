@@ -3831,3 +3831,11 @@ a.press-detail-title
 {
     display: none;
 }
+.spl-features-heading
+{
+    margin-bottom: 15px;
+}
+.spl-features-footer
+{
+    margin: 15px 0;
+}
