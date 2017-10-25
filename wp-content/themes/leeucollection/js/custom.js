@@ -615,7 +615,7 @@ var Blank ={
 			else
 			{
 				$(".press-detail-"+id).parents(".press-detail-row").addClass("popup").show();
-				var height = $(window).height() - parseInt($(".press-detail-wrapper").css("paddingTop")) - parseInt($(".press-detail-wrapper").css("paddingBottom"));
+				var height = $(window).height() - parseInt($(".press-detail-wrapper").css("paddingTop"));
 
 				$(".popup.press-detail-row .press-detail-content-wrapper").height(height);
 				$(".press-detail-"+id).show();
