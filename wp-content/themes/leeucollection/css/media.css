@@ -1253,7 +1253,7 @@
 	}
 	.inside_pd .name_opt, .form_field .enquiry_opt, .form_field .country_opt
 	{
-		width: auto;
+		width: 100%;
 		text-align: left;
 	}
 }
