@@ -145,7 +145,7 @@ get_header(); ?>
 											</div>
 										</div>
 										<div class="col-9">
-											<div class="leeu-text"> SPECIAL FEATURES</div>
+											<div class="leeu-text"> ROOM FACILITIES</div>
 											<div class="row spl-features" itemprop="amenityFeature">
 												<div class="col-6 rm-pad">
 													<?php
