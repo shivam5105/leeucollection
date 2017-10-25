@@ -597,6 +597,7 @@ var Blank ={
 		$(document).on("click", "a.press-detail-close", function(){
 			$(".press-detail-wrapper").slideUp();
 			$(".press-cols.has-slider-images").removeClass("active");
+			$(this).parents(".press-detail-row").removeClass("popup").hide();
 		});
 	},
 	show_press_detail_slide: function(){

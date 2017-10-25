@@ -3857,3 +3857,7 @@ a.press-detail-title
 {
     display: block;
 }
+.popup.press-detail-row a.press-detail-close
+{
+    top: 12px;
+}
