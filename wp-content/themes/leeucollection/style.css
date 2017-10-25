@@ -3839,3 +3839,17 @@ a.press-detail-title
 {
     margin: 15px 0;
 }
+.popup.press-detail-row
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+}
+.popup.press-detail-row .press-detail-content-wrapper
+{
+    text-align: center;
+    overflow: scroll;
+}

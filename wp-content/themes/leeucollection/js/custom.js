@@ -602,12 +602,23 @@ var Blank ={
 	show_press_detail_slide: function(){
 		$(document).on("click", ".press-cols.has-slider-images:not(.active)", function(){
 			var id = $(this).attr("data-id");
-			$(".press-cols.has-slider-images").removeClass("active");
-			$(".press-detail-wrapper").slideUp();
-			$(".press-detail-"+id).slideDown(function(){
-				Blank.scrollToDiv("#press-detail-"+id);
-			});
-			$(this).addClass("active");
+			if($(window).width() > 1024)
+			{
+				$(".press-cols.has-slider-images").removeClass("active");
+				$(".press-detail-wrapper").slideUp();
+				$(".press-detail-"+id).slideDown(function(){
+					Blank.scrollToDiv("#press-detail-"+id);
+				});
+				$(this).addClass("active");
+			}
+			else
+			{
+				$(".press-detail-"+id).parents(".press-detail-row").addClass("popup");
+				var height = $(window).height() - parseInt($(".press-detail-wrapper").css("paddingTop")) - parseInt($(".press-detail-wrapper").css("paddingBottom"));
+				
+				$(".popup.press-detail-row .press-detail-content-wrapper").height(height);
+				 
+			}
 		});
 		$(document).on("click", ".press-cols.has-slider-images.active", function(){
 			$(".press-cols.has-slider-images").removeClass("active");
