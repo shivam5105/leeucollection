@@ -177,12 +177,6 @@ get_header(); ?>
 										</div>
 
 										<div class="row detail-row">
-
-											<div class="col-9 pull-right">
-												<div class="desc-content"> 
-													<?php echo nl2br($section_desc); ?>
-												</div>
-											</div>
 											<div class="col-3">
 												<?php
 												if($show_links == 'yes')
@@ -209,6 +203,11 @@ get_header(); ?>
 													<?php
 												}
 												?>
+											</div>
+											<div class="col-9 pull-right">
+												<div class="desc-content"> 
+													<?php echo nl2br($section_desc); ?>
+												</div>
 											</div>
 										</div>
 									</div>
