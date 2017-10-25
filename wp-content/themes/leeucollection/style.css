@@ -3869,3 +3869,7 @@ a.press-detail-title
 .popup.press-detail-row .owl-theme .owl-dots .owl-dot:hover span {
     background: #222944;
 }
+.popup.press-detail-row .press-detail-wrapper
+{
+    padding-bottom: 0;
+}
