@@ -14,7 +14,7 @@
 									foreach ($slider_content['crb_section_detail'] as $slide_key => $slide)
 									{
 										$page_section_image 	= $slide['crb_page_image'];
-										$booking_button_link 	= $slide['crb_booking_button_link'];
+										$more_button_link		= $slide['crb_more_button_link'];
 
 										$active_slide = "";
 										if($loop == 0)
@@ -29,10 +29,10 @@
 											<div class="slider-item" data-object="<?php echo $loop; ?>">
 												<img src="<?php echo $page_section_image_url; ?>" alt="">
 												<?php
-												if(!empty($booking_button_link))
+												if(!empty($more_button_link))
 												{
 													?>
-													<a href="<?php echo $booking_button_link; ?>" class="main-link"></a>
+													<a href="<?php echo $more_button_link; ?>" class="main-link"></a>
 													<?php
 												}?>
 											</div>
