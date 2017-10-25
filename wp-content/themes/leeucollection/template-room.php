@@ -153,7 +153,7 @@ get_header(); ?>
 												?>
 												<div class="row">
 													<div class="col-2 rm-pad">
-														<?php $special_feature_heading; ?>
+														<?php echo $special_feature_heading; ?>
 													</div>
 												</div>
 												<?php
@@ -192,7 +192,7 @@ get_header(); ?>
 												?>
 												<div class="row">
 													<div class="col-2 rm-pad">
-														<?php $special_feature_footer; ?>
+														<?php echo $special_feature_footer; ?>
 													</div>
 												</div>
 												<?php
