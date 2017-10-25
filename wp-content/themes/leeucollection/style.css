@@ -3861,3 +3861,7 @@ a.press-detail-title
 {
     top: 12px;
 }
+.popup.press-detail-row .owl-theme .owl-dots .owl-dot span
+{
+    background: #a09484;
+}
