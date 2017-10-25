@@ -114,6 +114,11 @@ get_header(); ?>
 
 						<div class="listing-box listing-row">
 							<div class="text-right page-link"> </div>
+							<div class="page-content">
+								<div class="text-center" itemprop="description">
+									<?php the_content(); ?>
+								</div>
+							</div>
 							<?php
 							$col = 2;
 							$x = 0;
