@@ -3865,3 +3865,7 @@ a.press-detail-title
 {
     background: #a09484;
 }
+.popup.press-detail-row .owl-theme .owl-dots .owl-dot.active span,
+.popup.press-detail-row .owl-theme .owl-dots .owl-dot:hover span {
+    background: #222944;
+}
