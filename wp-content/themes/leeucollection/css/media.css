@@ -1248,6 +1248,14 @@
 	.large-header-sub-heading {
 	    font-size: 20px;
 	}
+	.meetings-form .form_field .inside_pd {
+	    padding: 50px 20px 50px;
+	}
+	.inside_pd .name_opt, .form_field .enquiry_opt, .form_field .country_opt
+	{
+		width: auto;
+		text-align: left;
+	}
 }
 @media only screen and (max-width: 687px){
 	.promo_grcode,
