@@ -150,13 +150,15 @@ Container::make('post_meta', 'Room Rates')
     ));
 
 //Special Features
-Container::make('post_meta', 'Special Features')
+Container::make('post_meta', 'Room Facilities')
     ->show_on_post_type($leeu_post_types)
     ->show_on_template('template-room.php')
     ->add_fields(array(
         /*Field::make('complex', 'crb_special_features', '')->add_fields(array(*/
-             Field::make('textarea', 'crb_special_feature', 'Left special features'),
-             Field::make('textarea', 'crb_special_feature_second', 'Right special features'),
+             Field::make('rich_text', 'crb_special_feature_heading', 'Facilities Heading'),
+             Field::make('textarea', 'crb_special_feature', 'Left Facilities'),
+             Field::make('textarea', 'crb_special_feature_second', 'Right Facilities'),
+             Field::make('rich_text', 'crb_special_feature_footer', 'Facilities Footer'),
         /*)),*/
     ));
 

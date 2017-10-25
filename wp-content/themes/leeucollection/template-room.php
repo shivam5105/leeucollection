@@ -146,6 +146,19 @@ get_header(); ?>
 										</div>
 										<div class="col-9">
 											<div class="leeu-text"> ROOM FACILITIES</div>
+											<?php
+											$special_feature_heading = carbon_get_post_meta($post->ID, "crb_special_feature_heading");
+											if(!empty($special_feature_heading))
+											{
+												?>
+												<div class="row">
+													<div class="col-2 rm-pad">
+														<?php $special_feature_heading; ?>
+													</div>
+												</div>
+												<?php
+											}
+											?>
 											<div class="row spl-features" itemprop="amenityFeature">
 												<div class="col-6 rm-pad">
 													<?php
@@ -172,6 +185,19 @@ get_header(); ?>
 													?>
 											   </div> 	
 											</div>
+											<?php
+											$special_feature_footer = carbon_get_post_meta($post->ID, "crb_special_feature_footer");
+											if(!empty($special_feature_footer))
+											{
+												?>
+												<div class="row">
+													<div class="col-2 rm-pad">
+														<?php $special_feature_footer; ?>
+													</div>
+												</div>
+												<?php
+											}
+											?>
 										</div>
 									</div>
 								</div>
