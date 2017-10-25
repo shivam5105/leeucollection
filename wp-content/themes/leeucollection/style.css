@@ -3853,3 +3853,7 @@ a.press-detail-title
     text-align: center;
     overflow: scroll;
 }
+.popup.press-detail-row .press-detail-content-wrapper .row
+{
+    display: block;
+}
