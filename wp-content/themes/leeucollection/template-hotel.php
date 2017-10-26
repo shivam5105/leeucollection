@@ -58,7 +58,8 @@ get_header(); ?>
 					else
 					{
 						/*$banner_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );*/
-						$banner_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), '1240x600' );
+						/*$banner_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), '1240x600' );*/
+						$banner_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
 						$banner_url = $banner_url[0];
 						?>
 						<div class="banner-img-wrapper">
@@ -210,11 +211,13 @@ get_header(); ?>
 														$slide_link 	= @$section_slider['crb_section_slide_link'];
 														if($section_layout == 2)
 														{
-															$slide_image_url = wp_get_attachment_image_src( $slide_image, '411x258' );
+															/*$slide_image_url = wp_get_attachment_image_src( $slide_image, '411x258' );*/
+															$slide_image_url = wp_get_attachment_image_src( $slide_image, 'full' );
 														}
 														else
 														{
-															$slide_image_url = wp_get_attachment_image_src( $slide_image, '821x478' );
+															/*$slide_image_url = wp_get_attachment_image_src( $slide_image, '821x478' );*/
+															$slide_image_url = wp_get_attachment_image_src( $slide_image, 'full' );
 														}
 														$slide_image_url = $slide_image_url[0];
 
