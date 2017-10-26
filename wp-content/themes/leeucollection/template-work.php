@@ -4,6 +4,16 @@ Template Name: Work
 */
 
 get_header(); ?>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var $grid = $('.work-masonry-grid').masonry({
+		});
+		// layout Masonry after each image loads
+		$grid.imagesLoaded().progress( function() {
+			$grid.masonry('layout');
+		});
+	});
+</script>
 	<?php
 	$post_id 	= $post->ID;
 	$hotel_id 	= get_hotel_id($post_id);
