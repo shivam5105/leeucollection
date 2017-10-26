@@ -3900,3 +3900,7 @@ a.press-detail-title
 {
     cursor: pointer;
 }
+.no-text-transform
+{
+    text-transform: none;
+}

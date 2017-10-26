@@ -260,7 +260,7 @@ get_header(); ?>
 															if($section_layout == 2)
 															{
 																?>
-																<div class="desc-heading" itemprop="name"><?php echo $slide_title; ?></div>
+																<div class="desc-heading no-text-transform" itemprop="name"><?php echo $slide_title; ?></div>
 																<?php
 															}
 															else
