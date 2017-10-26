@@ -681,7 +681,7 @@ a{
     -moz-transition: transform 0.6s ease 0s; 
     -ms-transition: transform 0.6s ease 0s;
     transition: transform 0.6s ease 0s;
-    box-shadow: 0px 3px 5px #ccc;
+    box-shadow: 0px 1px 5px #ccc;
 }
 .home #site-header, 
 .page-template-template-hotel-listing #site-header,
