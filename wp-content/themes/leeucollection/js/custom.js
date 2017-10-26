@@ -669,7 +669,7 @@ var Blank ={
 	},
 	contact_page_equal_height: function()
 	{
-		if(!$(".media-container .col-6").length)
+		if(!$(".page-template-template-contact .contact-detail .equal-height-wrapper").length)
 		{
 			return true;
 		}
