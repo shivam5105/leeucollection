@@ -720,7 +720,9 @@ get_header();
 				<div class="two-img-col mgt-topp">
 					<div class="col-6 rm-pad">
 						<div class="scroll-anim" data-anim="fade-up">
-							<div class="img-desc align_center"><?php echo @$post_meta['_crb_two_cols_section_2_heading_left'][0];?></div>
+							<div class="img-desc align_center">
+								<h2><?php echo @$post_meta['_crb_two_cols_section_2_heading_left'][0];?></h2>
+							</div>
 						</div>
 						<div class="banner-img hover_anim scroll-anim img_full link-wrapper-box" data-anim="fade-up">
 							<?php
@@ -766,7 +768,9 @@ get_header();
 					</div>
 					<div class="col-6 rm-pad">
 						<div class="scroll-anim" data-anim="fade-up">
-							<div class="img-desc align_center"><?php echo @$post_meta['_crb_two_cols_section_2_heading_right'][0];?></div>
+							<div class="img-desc align_center">
+								<h2><?php echo @$post_meta['_crb_two_cols_section_2_heading_right'][0];?></h2>
+							</div>
 						</div>
 						<div class="banner-img hover_anim scroll-anim img_full link-wrapper-box" data-anim="fade-up"data-anim-delay="100" >
 							<?php
