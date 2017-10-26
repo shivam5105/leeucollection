@@ -839,11 +839,11 @@
 		border-top: 1px solid #d1cac4;
 	}
 	.detail-content-career [class*='col-']:last-child {
-	    width: 25%;
+	    width: 43%;
 	    float: right;
 	}
 	.detail-content-career [class*='col-']:nth-child(2) {
-	    width: 75%;
+	    width: 57%;
 	    float: left;
 	    padding: 16px 0 16px 25px;
 	    box-sizing: border-box;
