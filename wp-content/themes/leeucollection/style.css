@@ -3930,3 +3930,7 @@ a.press-detail-title
 {
     font-size: 9px;
 }
+.work-masonry-grid .desc-heading
+{
+    margin-top: 3px;
+}
