@@ -665,7 +665,8 @@ a{
 .page-template-template-hotel-listing #site-main,
 .leeu-restaurants-template-template-restaurantlisting #site-main,
 .leeu-discover-template-template-discover #site-main,
-.page-template-template-meetings-events #site-main
+.page-template-template-meetings-events #site-main,
+.leeu-wine-template-template-restaurantlisting #site-main
 {
     margin-top: 101px;
 }
@@ -687,8 +688,8 @@ a{
 .page-template-template-hotel-listing #site-header,
 .leeu-restaurants-template-template-restaurantlisting #site-header,
 .leeu-discover-template-template-discover #site-header,
-.page-template-template-meetings-events #site-header
-
+.page-template-template-meetings-events #site-header,
+.leeu-wine-template-template-restaurantlisting #site-header
 {
     box-shadow: none;
 }
@@ -3805,7 +3806,8 @@ a.press-detail-title
 .page-template-template-hotel-listing .logo-text-wrapper, 
 .leeu-restaurants-template-template-restaurantlisting .logo-text-wrapper,
 .leeu-discover-template-template-discover .logo-text-wrapper,
-.page-template-template-meetings-events .logo-text-wrapper
+.page-template-template-meetings-events .logo-text-wrapper,
+.leeu-wine-template-template-restaurantlisting .logo-text-wrapper
 {
     display: none;
 }
@@ -3813,7 +3815,8 @@ a.press-detail-title
 .page-template-template-hotel-listing .custom-logo-link2, 
 .leeu-restaurants-template-template-restaurantlisting .custom-logo-link2,
 .leeu-discover-template-template-discover .custom-logo-link2,
-.page-template-template-meetings-events .custom-logo-link2
+.page-template-template-meetings-events .custom-logo-link2,
+.leeu-wine-template-template-restaurantlisting .custom-logo-link2
 {
     display: block;
 }
