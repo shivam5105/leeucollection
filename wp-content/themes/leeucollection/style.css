@@ -3807,7 +3807,8 @@ a.press-detail-title
 .leeu-restaurants-template-template-restaurantlisting .logo-text-wrapper,
 .leeu-discover-template-template-discover .logo-text-wrapper,
 .page-template-template-meetings-events .logo-text-wrapper,
-.leeu-wine-template-template-restaurantlisting .logo-text-wrapper
+.leeu-wine-template-template-restaurantlisting .logo-text-wrapper,
+.leeu-wine-template-template-restaurantlisting .custom-logo-link
 {
     display: none;
 }
