@@ -298,6 +298,25 @@ a{
 {
     position: relative;
 }
+.page-blocker {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    background-color: #fff;
+    z-index: 99999999999;
+}
+.screen-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.page-blocker .logo-loader
+{
+    width: 100px;
+}
 /***header styling***/
 .logo-wrapper{
     position: absolute;

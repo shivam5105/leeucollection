@@ -25,6 +25,11 @@
 $page_template_file = basename(get_page_template());
 ?>
 <body <?php body_class(); ?>>
+	<div class="page-blocker">
+		<div class="screen-center">
+			<div class="logo-loader"><img src="<?php echo get_template_directory_uri(); ?>/images/ripple.gif" alt="Leeu Collection" border="0" /></div>
+		</div>
+	</div>
     <div class="cht-wthr">
       	<?php
 		$hide_weather_on_templates_array = array('template-hotel-listing.php');

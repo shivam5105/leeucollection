@@ -1,5 +1,13 @@
 var $ = jQuery.noConflict(),win_h,win_w,_wl,_wpos,_dh;
-var Blank ={	
+var Blank ={
+	block_page: function()
+	{
+		$(".page-blocker").show();
+	},
+	unblock_page: function()
+	{
+		$(".page-blocker").fadeOut();
+	},
 	win_prop : function(){
 		win_h = $(window).height();
 		win_w = $(window).width();
@@ -732,7 +740,8 @@ var Blank ={
 	resize: function(){
 		Blank.common_init_resize();
 	},
-	load: function(){		
+	load: function(){
+		Blank.unblock_page();
 		Blank.common_init_window_load();
 		Blank.booktable();
 		$('body').addClass('body-loaded');
