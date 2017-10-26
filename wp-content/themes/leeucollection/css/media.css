@@ -1348,6 +1348,14 @@
 		width: 100%;
 		text-align: left;
 	}
+	.work-masonry-grid .desc-heading
+	{
+	    font-size: 11px;
+	}
+	.work-masonry-grid span.session_rate
+	{
+	    font-size: 9px;
+	}
 }
 @media only screen and (max-width: 687px){
 	.promo_grcode,
