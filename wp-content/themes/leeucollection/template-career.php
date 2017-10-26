@@ -111,7 +111,8 @@ get_header(); ?>
 														</div>
 														<div class="col-4 rm-pad"> 
 															<div class="content-part"> 
-																<?php echo nl2br(carbon_get_post_meta($post->ID, "crb_career_position"));?>
+																<?php /*echo nl2br(carbon_get_post_meta($post->ID, "crb_career_position"));*/ ?>
+																<?php echo $post->post_title; ?>
 															</div>
 														</div>
 														<div class="col-4 rm-pad"> 
