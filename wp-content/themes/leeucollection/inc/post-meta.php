@@ -925,7 +925,7 @@ wp_reset_postdata();
 
 $hotels_list_fields[] = Field::make('select', 'crb_career_hotel', 'Select Hotel')->add_options($hotels_list);
 $hotels_list_fields[] = Field::make('text', 'crb_career_form_shortcode', 'Career Form Shortcode');
-$hotels_list_fields[] = Field::make('textarea', 'crb_career_position', 'Position');
+/*$hotels_list_fields[] = Field::make('textarea', 'crb_career_position', 'Position');*/
 
 Container::make('post_meta', 'Career Info')
     ->show_on_post_type("leeu-careers")
