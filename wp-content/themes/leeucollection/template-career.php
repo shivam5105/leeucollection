@@ -83,13 +83,13 @@ get_header(); ?>
 											<div class="career-location"><?php echo $hotel_location; ?></div>
 											<div class="detail-head-career">
 												<div class="row">
-													<div class="col-3 rm-pad">
+													<div class="col-4 rm-pad">
 														<div class="head-text-career">Location</div>
 													</div>
-													<div class="col-6 rm-pad">
+													<div class="col-4 rm-pad">
 														<div class="head-text-career">Position</div>
 													</div>	
-													<div class="col-3 rm-pad">
+													<div class="col-4 rm-pad">
 														<div class="head-text-career"></div>
 													</div>
 												</div>
@@ -101,17 +101,17 @@ get_header(); ?>
 												?>
 												<div class="detail-content-career"> 
 													<div class="row"> 
-														<div class="col-3 rm-pad"> 
+														<div class="col-4 rm-pad"> 
 															<div class="content-part">
 																<?php echo $hotel_location; ?>
 															</div>
 														</div>
-														<div class="col-6 rm-pad"> 
+														<div class="col-4 rm-pad"> 
 															<div class="content-part"> 
 																<?php echo nl2br(carbon_get_post_meta($post->ID, "crb_career_position"));?>
 															</div>
 														</div>
-														<div class="col-3 rm-pad"> 
+														<div class="col-4 rm-pad"> 
 															<div class="cstm-btn-wrapper contact-email carrer-spacer-left">
 																<a href="<?php echo get_permalink($post->ID); ?>" class="cstm-btn arrow-btn text-center">Apply</a>
 															</div>
