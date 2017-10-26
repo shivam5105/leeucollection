@@ -845,15 +845,18 @@
 	.detail-content-career [class*='col-']:nth-child(2) {
 	    width: 75%;
 	    float: left;
-	    padding: 16px 0 16px 16px;
+	    padding: 16px 0 16px 25px;
 	    box-sizing: border-box;
 	}
 	.detail-content-career [class*='col-']:nth-child(2) .content-part {
 	    margin: 0;
 	}
 	.detail-content-career .row .submit-btn, .detail-content-career .row .cstm-btn {
-	    border: 0;
-	    padding: 18px 0;
+		border: 0;
+		padding: 18px 0;
+		min-width: auto;
+		float: right;
+		margin-right: 25px;
 	}
 	.career-content .contact-sub-head
 	{
