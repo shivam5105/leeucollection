@@ -32,17 +32,17 @@ get_header(); ?>
 								</div>
 								<?php
 							}
-							else
+							/*else
 							{
 								if($top_most_parent_post)
 								{
 									?>
 									<div class="leeu-text ucase">
-										<?php //echo $top_most_parent_post->post_title; ?>
+										<?php echo $top_most_parent_post->post_title; ?>
 									</div>
 									<?php
 								}
-							}
+							}*/
 							?>
 							<h1 class="ucase" itemprop="name"><?php echo $page_heading; ?></h1>
 						</div>
