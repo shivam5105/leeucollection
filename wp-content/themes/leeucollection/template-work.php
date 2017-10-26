@@ -124,7 +124,7 @@ get_header(); ?>
 						</div>
 
 
-						<div class="listing-box listing-row">
+						<div class="listing-box listing-row work-masonry-grid">
 							<?php
 							$artists_details = carbon_get_post_meta($post->ID, "crb_artists_details", 'complex');
 							$cols = 2;
@@ -136,20 +136,21 @@ get_header(); ?>
 								$artist_date 	= $artists_detail['crb_artist_date'];
 								$artist_location= $artists_detail['crb_artist_location'];
 
-								if($x == 0)
+								/*if($x == 0)
 								{
 									?>
 									<div class="scroll-anim full_img animate-custom" data-anim="fade-up">
 										<div class="row detail-row">
 											<div class="mgb-30 clearfix art-temp">
 									<?php
-								}
+								}*/
 								if($artist_image)
 								{
-									$artist_image = wp_get_attachment_image_src($artist_image, '411x258');
+									/*$artist_image = wp_get_attachment_image_src($artist_image, '411x258');*/
+									$artist_image = wp_get_attachment_image_src($artist_image, 'full');
 									$artist_image = $artist_image[0];
 								}
-								$col6_class 		= "pdr-0";
+								/*$col6_class 		= "pdr-0";
 								$scroll_anim_class 	= "";
 								$scroll_anim_attr 	= "";
 								$art_cat_class 		= "art_cat";
@@ -159,9 +160,9 @@ get_header(); ?>
 									$scroll_anim_class 	= "scroll-anim animate-custom";
 									$scroll_anim_attr 	= 'data-anim="fade-up" data-anim-delay="100"';
 									$art_cat_class 		= "art_cat2";
-								}
+								}*/
 								?>
-								<div class="col-6 <?php echo $col6_class; ?>">
+								<div class="col-6 <?php echo $col6_class; ?> grid-item">
 									<div class="<?php echo $scroll_anim_class; ?>" <?php echo $scroll_anim_attr; ?>>
 										<div class="<?php echo $art_cat_class; ?> full-img">
 											<?php
@@ -181,7 +182,7 @@ get_header(); ?>
 									</div>
 								</div>
 								<?php
-								$x++;
+								/*$x++;
 								if($x == $cols)
 								{
 									$x = 0;
@@ -190,10 +191,8 @@ get_header(); ?>
 										</div>
 									</div>
 									<?php
-								}
+								}*/
 							}?>
-
-
 						</div>
 					</div>
 				</div>
