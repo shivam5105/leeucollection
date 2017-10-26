@@ -52,8 +52,8 @@ get_header(); ?>
 									$hotel_name 	= get_the_title($hotel_ID);
 									$career_form_shortcode = carbon_get_post_meta($post->ID, "crb_career_form_shortcode");
 									?>
-									<div class="contact-sub-head career-main-heading"><?php echo $hotel_name; ?></div>
 									<div class="h1 ucase"><?php echo get_the_title(); ?></div>
+									<div class="contact-sub-head career-main-heading"><?php echo $hotel_name; ?></div>
 									<div class="head-text-career"><?php echo $hotel_name." ".$hotel_location; ?></div>
 									<div class="career-description"><?php the_content(); ?></div>
 									<div class="career-form">
