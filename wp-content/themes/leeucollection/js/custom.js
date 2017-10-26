@@ -82,7 +82,7 @@ var Blank ={
 				$(main_parent).find('.prev-wrapper').css({"height":main_parent_height});			    
 			});				
 			owl.owlCarousel({
-			    loop:false,
+			    loop:true,
 			    nav:false,
 			    dots:dots_condition,
 			    smartSpeed:1000,
@@ -128,7 +128,7 @@ var Blank ={
 				$(main_parent).find('.prev-wrapper').css({"height":main_parent_height});			    
 			});				
 			owl.owlCarousel({
-			    loop:true,
+			    loop:false,
 			    nav:false,
 			    dots:dots_condition,
 			    autoplay:autoplay_wrap,
