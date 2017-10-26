@@ -3934,3 +3934,6 @@ a.press-detail-title
 {
     margin-top: 3px;
 }
+li.see-more-link {
+    min-width: 100px;
+}
