@@ -160,6 +160,12 @@ get_header(); ?>
 									$artist_image = wp_get_attachment_image_src($artist_image, 'full');
 									$artist_image = $artist_image[0];
 								}
+
+								$col6_class 		= "";
+								$scroll_anim_class 	= "";
+								$scroll_anim_attr 	= "";
+								$art_cat_class 		= "";
+
 								/*$col6_class 		= "pdr-0";
 								$scroll_anim_class 	= "";
 								$scroll_anim_attr 	= "";
