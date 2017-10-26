@@ -28,7 +28,7 @@ get_header();
 							{
 								?>
 								<div class="leeu-text ucase">
-									<?php echo echo $page_small_heading; ?>
+									<?php echo $page_small_heading; ?>
 								</div>
 								<?php
 							}
