@@ -135,35 +135,39 @@ get_header(); ?>
 						    		?>
 									<div class="<?php echo $col_div_class; ?> rm-pad"  itemscope itemtype="http://schema.org/Place"> 
 										<div class="contact-sub-head" itemprop="name"><?php echo $contact_section['crb_contact_heading']; ?></div>
-										<div class="address-contact contact-spacer">
-											<div class="leeu-text">ADDRESS</div>
-											<div class="content-part" itemprop="address"> 
-												<?php echo nl2br($contact_info['crb_contact_address']); ?>
+										<div class="equal-height-wrapper">
+											<div class="address-contact contact-spacer">
+												<div class="leeu-text">ADDRESS</div>
+												<div class="content-part" itemprop="address"> 
+													<?php echo nl2br($contact_info['crb_contact_address']); ?>
+												</div>
 											</div>
+											<?php
+											if(!empty($contact_info['crb_contact_phone']))
+											{
+												?>
+												<div class="phone-contact contact-spacer">
+													<div class="leeu-text">Phone</div>
+													<div class="content-part" itemprop="telephone"> 
+														<?php echo $contact_info['crb_contact_phone']; ?>
+													</div>
+												</div>
+												<?php
+											}
+											if(!empty($contact_info['crb_contact_fax']))
+											{
+												?>
+												<div class="fax-contact contact-spacer">
+													<div class="leeu-text">Facsimile</div>
+													<div class="content-part" itemprop="faxNumber"> 
+														<?php echo $contact_info['crb_contact_fax']; ?>
+													</div>
+												</div>
+												<?php
+											}
+											?>
 										</div>
 										<?php
-										if(!empty($contact_info['crb_contact_phone']))
-										{
-											?>
-											<div class="phone-contact contact-spacer">
-												<div class="leeu-text">Phone</div>
-												<div class="content-part" itemprop="telephone"> 
-													<?php echo $contact_info['crb_contact_phone']; ?>
-												</div>
-											</div>
-											<?php
-										}
-										if(!empty($contact_info['crb_contact_fax']))
-										{
-											?>
-											<div class="fax-contact contact-spacer">
-												<div class="leeu-text">Facsimile</div>
-												<div class="content-part" itemprop="faxNumber"> 
-													<?php echo $contact_info['crb_contact_fax']; ?>
-												</div>
-											</div>
-											<?php
-										}
 										if(!empty($contact_info['crb_contact_email']))
 										{
 											?>
