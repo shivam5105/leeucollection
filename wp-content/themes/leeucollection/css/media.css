@@ -1386,6 +1386,14 @@
 	.form-group .submit-btn{
 		margin-top: 15px;
 	}
+	.career-form #uploadbrowsebutton
+	{
+	    padding: 0 10px;
+	    width: 100px;
+	}
+	.upload-file:after {
+	    right: 10px;
+	}
 }
 @media only screen and (max-width: 320px){
 	.sliding-detail .cstm-btn-wrapper a.cstm-btn:first-child {
