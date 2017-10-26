@@ -3922,3 +3922,11 @@ a.press-detail-title
   display: block;
   clear: both;
 }
+.work-masonry-grid .desc-heading
+{
+    font-size: 11px;
+}
+.work-masonry-grid span.session_rate
+{
+    font-size: 9px;
+}
