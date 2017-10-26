@@ -831,6 +831,7 @@
 	.detail-content-career
 	{
 		margin-bottom: 0;
+		border-bottom: 1px solid #d1cac4;
 	}
 	.detail-content-career [class*='col-']:last-child {
 	    width: 25%;
@@ -863,6 +864,10 @@
 	.locations-career-wrapper
 	{
 		margin: 10px 0;
+	}
+	.content-part-section.career-content {
+	    margin-left: -20px;
+	    margin-right: -20px;
 	}
 }
 
