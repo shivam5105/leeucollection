@@ -157,12 +157,9 @@ get_header(); ?>
 															<td align="left" valign="top">
 																<?php if(!empty($hours_reservation['crb_reservation_for'])){ ?>
 																	<div class="food-head">
-																		<?php echo $hours_reservation['crb_reservation_for']; ?>
+																		<?php echo $hours_reservation['crb_reservation_for']; ?>&nbsp;:&nbsp;
 																	</div>
 																<?php }?>
-															</td>
-															<td align="center" valign="top">
-																&nbsp;:&nbsp;
 															</td>
 															<td align="left" valign="top">
 																<?php if(!empty($hours_reservation['crb_reservation_time'])){ ?>
