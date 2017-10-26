@@ -905,6 +905,10 @@
 	.career-form {
 	    padding: 50px 20px;
 	}
+	.work-masonry-grid .grid-item
+	{
+	    width: 50%;
+	}
 }
 
 @media only screen and (max-width: 767px){
