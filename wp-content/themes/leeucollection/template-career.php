@@ -95,11 +95,14 @@ get_header(); ?>
 												</div>
 											</div>
 											<?php
+											$location_career_loop = 0;
 											while ($career_loop->have_posts())
 											{
+												$location_career_loop++;
+
 												$career_loop->the_post();
 												?>
-												<div class="detail-content-career"> 
+												<div class="detail-content-career detail-content-career-<?php echo $location_career_loop; ?>"> 
 													<div class="row"> 
 														<div class="col-4 rm-pad"> 
 															<div class="content-part">
