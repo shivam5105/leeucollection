@@ -189,7 +189,7 @@
 
 	/**global changes**/
 	#site-main {
-	    margin-top: 44px;
+	    margin-top: 44px !important;
 	}	
 	.detail-logo{
 		display: none;
