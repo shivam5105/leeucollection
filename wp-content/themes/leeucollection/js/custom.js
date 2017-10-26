@@ -452,6 +452,12 @@ var Blank ={
 		})
 	},
 	openBookingPopup: function(){
+		$(document).on("click",".popup-booking-button.menu-item", function(e){
+			e.preventDefault();
+			$('.hotel_dtls ul li[data-rel="content1"]').trigger("click");
+
+			$('.main_sec').fadeIn();
+		});
 		$(document).on("click",".popup-booking-button a, .popup-booking-button-anchor", function(e){
 			e.preventDefault();
 			var booking_at 	= $.trim($(this).attr("data-booking-at"));
@@ -476,7 +482,7 @@ var Blank ={
 			$('.hotel_dtls ul li[data-rel="content1"]').trigger("click");
 
 			$('.main_sec').fadeIn();
-		})
+		});
 	},
 	closeBookingPopup: function(){
 		$('.close_popup').click(function(){

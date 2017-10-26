@@ -3896,3 +3896,7 @@ a.press-detail-title
 {
     padding-bottom: 0;
 }
+.popup-booking-button.menu-item
+{
+    cursor: pointer;
+}
