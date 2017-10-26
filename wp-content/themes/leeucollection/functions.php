@@ -246,6 +246,7 @@ add_action( 'wp_head', 'leeucollection_javascript_detection', 0 );
  * @since Leeu Collection 1.0
  */
 function leeucollection_scripts() {
+	global $post;
 	// Add custom fonts, used in the main stylesheet.
 	//wp_enqueue_style( 'leeucollection-google-fonts', leeucollection_fonts_url(), array(), null );
 
@@ -276,6 +277,14 @@ function leeucollection_scripts() {
 	wp_enqueue_script( 'jquery-daterangepicker', get_template_directory_uri() . '/js/daterangepicker.js');
 	wp_enqueue_script( 'jquery-instafeed', get_template_directory_uri() . '/js/instafeed.min.js');
 	wp_enqueue_script( 'bookatable-js', '//bda.bookatable.com/deploy/lbui.direct.js');
+	
+	/*$page_template_file = basename(get_page_template());
+
+    if (in_array($page_template_file, $hide_weather_on_templates_array))
+    {
+    	wp_enqueue_script( 'masonry-js', 'https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js');
+    }*/
+
 	//wp_enqueue_script( 'leeucollection-mobile-js', get_template_directory_uri() . '/js/jquery-mobile.js');
 	wp_enqueue_script( 'leeucollection-custom', get_template_directory_uri() . '/js/custom.js', array(), '1.0');
 }
