@@ -877,6 +877,34 @@
 	    margin-left: -20px;
 	    margin-right: -20px;
 	}
+	.single .career-content .h1
+	{
+		text-align: center;
+		text-transform: uppercase;
+		color: #222944;
+		font-size: 23px;
+		font-weight: 300;
+		letter-spacing: 0.1em;
+		font-family: 'GillSans';
+		line-height: 26px;
+		margin: 0;
+	}
+	.single .career-content .contact-sub-head
+	{
+		text-align: center;
+	    text-transform: uppercase;
+	    color: #222944;
+	    font-size: 12px;
+	    letter-spacing: 0.1em;
+	    font-family: 'GillSans';
+	}
+	.single .head-text-career
+	{
+		display: none;
+	}
+	.career-form {
+	    padding: 50px 20px;
+	}
 }
 
 @media only screen and (max-width: 767px){
