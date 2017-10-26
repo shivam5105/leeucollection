@@ -67,7 +67,7 @@ else if($post->post_type == 'page')
 		$depth 			= 0;
 		$menuLocations 	= get_nav_menu_locations();
 
-		echo "<ul class='side-nav child-".$depth." post-type-".$post->post_type."'>";
+		echo "<ul class='side-nav child-".$depth."'>";
 
 		if(has_nav_menu('footer_menu_right'))
 		{

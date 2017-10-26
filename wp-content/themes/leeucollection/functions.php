@@ -1340,7 +1340,7 @@ function left_sidebar_nav_not_hotel($exclude_posts, $post_type, $post_id = 0, $d
 			}
 			?>
 			<li class="side-nav-li <?php echo $current_class." ".$has_childern." ".$ul_depth_li_class; ?>">
-				<a href="<?php echo $child_post_link." ".$has_childern." ".$current_class; ?>"><?php echo $child_post->post_title; ?></a>
+				<a href="<?php echo $child_post_link; ?>" class="<?php echo $has_childern." ".$current_class; ?>"><?php echo $child_post->post_title; ?></a>
 				<?php
 				left_sidebar_nav_not_hotel($exclude_posts, $post_type, $post_id, $depth, "side-sub-menu");
 				?>
