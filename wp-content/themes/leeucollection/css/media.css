@@ -808,6 +808,12 @@
 	.career-location
 	{
 		display: block;
+		text-align: center;
+		text-transform: uppercase;
+		color: #222944;
+		font-size: 12px;
+		letter-spacing: 0.1em;
+		font-family: 'GillSans';
 	}
 	.align-center-mobile
 	{
@@ -816,6 +822,47 @@
 	.policy-heading
 	{
 		margin-top: 20px;
+	}
+	.detail-head-career,
+	.detail-content-career [class*='col-']:first-child
+	{
+	    display: none;
+	}
+	.detail-content-career
+	{
+		margin-bottom: 0;
+	}
+	.detail-content-career [class*='col-']:last-child {
+	    width: 25%;
+	    float: right;
+	}
+	.detail-content-career [class*='col-']:nth-child(2) {
+	    width: 75%;
+	    float: left;
+	    padding: 16px 0 16px 16px;
+	    box-sizing: border-box;
+	}
+	.detail-content-career [class*='col-']:nth-child(2) .content-part {
+	    margin: 0;
+	}
+	.detail-content-career .row .submit-btn, .detail-content-career .row .cstm-btn {
+	    border: 0;
+	    padding: 18px 0;
+	}
+	.career-content .contact-sub-head
+	{
+		text-align: center;
+		text-transform: uppercase;
+		color: #222944;
+		font-size: 23px;
+		font-weight: 300;
+		letter-spacing: 0.1em;
+		font-family: 'GillSans';
+		line-height: 26px;
+	}
+	.locations-career-wrapper
+	{
+		margin: 10px 0;
 	}
 }
 

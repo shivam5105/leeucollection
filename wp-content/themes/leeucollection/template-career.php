@@ -76,7 +76,7 @@ get_header(); ?>
 									if($career_loop->have_posts())
 									{
 										?>
-										<div>
+										<div class="locations-career-wrapper">
 											<div class="contact-sub-head">
 												<?php echo $loop->post->post_title; ?>
 											</div>
