@@ -22,22 +22,28 @@ get_header();
 					<div class="col-2 rm-pad"></div>
 					<div class="col-8 rm-pad">
 						<div class="text-center">
-							<div class="leeu-text ucase" itemprop="name">
-								<?php
-								$page_small_heading = @$post_meta['_crb_page_small_heading'][0];
-								if(!empty($page_small_heading))
-								{
-									echo $page_small_heading;
-								}
-								else
-								{
-									if($top_most_parent_post)
-									{
-										echo $top_most_parent_post->post_title;
-									}
-								}
+							<?php
+							$page_small_heading = @$post_meta['_crb_page_small_heading'][0];
+							if(!empty($page_small_heading))
+							{
 								?>
-							</div>
+								<div class="leeu-text ucase">
+									<?php echo echo $page_small_heading; ?>
+								</div>
+								<?php
+							}
+							else
+							{
+								if($top_most_parent_post)
+								{
+									?>
+									<div class="leeu-text ucase">
+										<?php //echo $top_most_parent_post->post_title; ?>
+									</div>
+									<?php
+								}
+							}
+							?>
 							<h1 class="ucase" itemprop="name"><?php echo $page_heading; ?></h1>
 						</div>
 					</div>
