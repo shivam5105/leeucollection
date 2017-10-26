@@ -3904,3 +3904,10 @@ a.press-detail-title
 {
     text-transform: none;
 }
+.work-masonry-grid .grid-item
+{
+    float: left;
+    padding: 0 15px;
+    min-height: 1px;
+    width: 33.33%;
+}

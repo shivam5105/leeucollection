@@ -178,7 +178,7 @@ get_header(); ?>
 									$art_cat_class 		= "art_cat2";
 								}*/
 								?>
-								<div class="col-6 <?php echo $col6_class; ?> grid-item">
+								<div class="<?php echo $col6_class; ?> grid-item">
 									<div class="<?php echo $scroll_anim_class; ?>" <?php echo $scroll_anim_attr; ?>>
 										<div class="<?php echo $art_cat_class; ?> full-img">
 											<?php
