@@ -747,6 +747,7 @@
 	    margin: 0 auto;
 	    margin-top: 10px;
 	    align-items: center;
+	    white-space: nowrap;
 	}
 	.fax-contact {
 	    width: 190px;
