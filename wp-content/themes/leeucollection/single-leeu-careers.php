@@ -11,6 +11,7 @@ get_header(); ?>
     ?>
 	<section id="site-main">
 	    <div class="mobile-page-heading">
+		    <a href="<?php echo home_url('careers/'); ?>" class="mobile-prev-page fa fa-angle-left"></a>
 	    	<?php echo $page_heading;?>
 	    </div>
 		<div class="container">

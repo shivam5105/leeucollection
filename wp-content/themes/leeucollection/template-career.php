@@ -15,14 +15,6 @@ get_header(); ?>
     ?>
 	<section id="site-main">
 	    <div class="mobile-page-heading">
-	    	<?php
-	    	if(!empty($post) && $post->post_parent > 0)
-	    	{
-		    	?>
-		    	<a href="<?php echo get_permalink($post->post_parent); ?>" class="mobile-prev-page fa fa-angle-left"></a>
-		    	<?php
-		    }
-		    ?>
 	    	<?php echo $page_heading;?>
 	    </div>
 		<div class="container">
