@@ -683,7 +683,7 @@
 	.hotel-menu .three-img-col .col-4.rm-pad{
 		margin-bottom: 30px;
 	}
-	.hotel-menu .col-6,.leeu-discover-template-template-founder-and-team .col-6{
+	.hotel-menu .col-6/*,.leeu-discover-template-template-founder-and-team .col-6*/{
 	    width: 50% !important;
 	    float: left !important;
 	}
