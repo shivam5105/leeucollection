@@ -3934,3 +3934,6 @@ a.press-detail-title
 li.see-more-link {
     min-width: 100px;
 }
+.trip-advisor-logo-wrapper img {
+    display: block;
+}
