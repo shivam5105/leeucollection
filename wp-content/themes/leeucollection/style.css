@@ -313,10 +313,6 @@ a{
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.page-blocker .logo-loader
-{
-    width: 100px;
-}
 /***header styling***/
 .logo-wrapper{
     position: absolute;
