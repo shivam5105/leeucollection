@@ -788,7 +788,7 @@ div.sub-menu-wrapper{
     opacity:0;
     z-index: 0;
     visibility: hidden;
-    transition: all 0.3s ease;
+    /*transition: all 0.3s ease;*/
 }
 #main-navigation ul li:hover a + div.sub-menu-wrapper{
     opacity:1;
