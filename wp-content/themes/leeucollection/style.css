@@ -3966,7 +3966,7 @@ li.see-more-link {
     background-color: #fff;
     left: 0;
     right: 0;
-    top: 0;
+    top: -1px;
     height: 46px;
     border-bottom: 1px solid #AC9E94;
     box-shadow: none;
