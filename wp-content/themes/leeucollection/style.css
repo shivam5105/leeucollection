@@ -4080,3 +4080,6 @@ li.see-more-link {
 #slide-menu {
     display: block !important;
 }
+.room-listing-contain .desc-heading {
+    text-transform: none;
+}
