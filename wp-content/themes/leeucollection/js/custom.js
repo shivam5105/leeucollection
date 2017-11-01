@@ -342,6 +342,7 @@ var Blank ={
 		Blank.side_nav_fix();
 		Blank.media_col_equal_height();
 		Blank.contact_page_equal_height();
+		Blank.fix_mobile_menu_height();
 	},
 	booktable: function(){
 		$('.booktable').each(function(){
@@ -699,6 +700,49 @@ var Blank ={
 			$(".page-template-template-contact .contact-detail .equal-height-wrapper").css({'height': 'auto'});	
 		}
 	},
+	fix_mobile_menu_height: function()
+	{
+		var win_height = parseInt($(window).height());
+		var win_width = parseInt($(window).width());
+		var mob_header_height = parseInt($(".mobile-header-wrapper").outerHeight());
+		$(".tv-mobile-menu-wrapper").height(win_height - mob_header_height);
+		$(".tv-mobile-menu-wrapper").css({'left' : win_width});
+	},
+	mobile_next_menu: function()
+	{
+		$(document).on("click", ".tv-mobile-menu-wrapper .next-menu", function(){
+			var next_menu_id = $(this).closest("li").attr("next-menu-id");
+			$(".tv-mobile-menu-wrapper.menu-item-parent-"+next_menu_id).addClass('open');
+		});
+	},
+	mobile_prev_menu: function()
+	{
+		$(document).on("click", ".tv-mobile-menu-wrapper .prev-menu", function(){
+			//var prev_menu_id = $(this).closest("li").attr("prev-menu-id");
+			$(this).closest(".tv-mobile-menu-wrapper").removeClass("open");
+		});
+	},
+	show_hide_mobile_menu: function()
+	{
+		$(document).on("click", ".tv-meanmenu-reveal", function(e){
+			e.preventDefault();
+
+			if($(this).hasClass("tv-meanclose"))
+			{
+				$(".mobile-menu-wrapper").hide();
+				$(this).removeClass("tv-meanclose");
+				$(this).html("<span></span><span></span><span></span>");
+				$(".tv-mobile-menu-wrapper, .mobile-header-wrapper").removeClass("open");
+			}
+			else
+			{
+				$(this).addClass("tv-meanclose");
+				$(".mobile-header-wrapper").addClass("open");
+				$(this).html("");
+				$(".mobile-menu-wrapper").show();
+			}
+		});
+	},
 	ready: function(){
 		Blank.common_init();
 		Blank.validate_book_room_form();
@@ -719,16 +763,20 @@ var Blank ={
 		Blank.show_press_detail_slide();
 		Blank.media_col_equal_height();
 		Blank.contact_page_equal_height();
+		Blank.fix_mobile_menu_height();
+		Blank.mobile_next_menu();
+		Blank.mobile_prev_menu();
+		Blank.show_hide_mobile_menu();
 
 		if(jQuery('#slide-menu').length){
-			jQuery('#site-header #slide-menu').meanmenu({
+			/*jQuery('#site-header #slide-menu').meanmenu({
 				meanScreenWidth: "1140",
 				meanMenuContainer : '#site-header',
 				meanRevealPosition : "left",
 				meanMenuClose: "",
 				meanExpand: " ",
 				meanContract: " ",
-			});
+			});*/
 		}
 		$('.gallery-thumb').on('click', function(e){
 			e.preventDefault();
@@ -779,6 +827,7 @@ var Blank ={
 		Blank.common_init_window_load();
 		Blank.booktable();
 		$('body').addClass('body-loaded');
+		Blank.fix_mobile_menu_height();
 	},
 }
 $(document).ready(function(){

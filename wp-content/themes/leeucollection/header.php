@@ -123,22 +123,196 @@ $page_template_file = basename(get_page_template());
 				</div>
 			</div>
 		</nav>
-		<nav id="slide-menu"> 
-			<?php
-			if(has_nav_menu('slide_menu'))
-			{
-				wp_nav_menu( array(
-					'theme_location' => 'slide_menu',
-					'mobile_menu'     => 'slide-menu-class',
-				 ) );
-			}
-			?>	
-			<div class="mobile-logo"> 
-				<a href="<?php echo home_url(); ?>">
-					<img src="<?php echo get_template_directory_uri() ?>/images/ipad-logo.svg" alt="">
-				</a>
+		<nav id="slide-menu">
+			<div class="mobile-menu-wrapper">
+				<?php
+				if(has_nav_menu('slide_menu'))
+				{
+					/*wp_nav_menu( array(
+						'theme_location' 	=> 'slide_menu',
+						'mobile_menu'    	=> 'slide-menu-class',
+					 ) );*/
+					$menu_name 	= 'slide_menu';
+					$locations 	= get_nav_menu_locations();
+					$menu 		= wp_get_nav_menu_object( $locations[ $menu_name ] );
+					$menuitems 	= wp_get_nav_menu_items( $menu->term_id, array( 'order' => 'DESC' ) );
+					$menus_arr 	= array();
+					$all_menus_arr 	= array();
+
+					foreach ( $menuitems as $item )
+					{
+						$menus_arr[$item->menu_item_parent][$item->ID] = $item;
+						$all_menus_arr[$item->ID] = $item;
+					}
+
+					function get_menu_li($menu_id, $menu_arr)
+					{
+						$item = $menu_arr[$menu_id];
+						if(!isset($menu_arr[$menu_id]))
+						{
+							return true;
+						}
+						$classes = empty( $item->classes ) ? array() : (array) $item->classes;
+						$classes[] = 'menu-item-' . $item->ID.' menu-item menu-item-type-'.$item->type.' menu-item-object-'.$item->object." has-parent";
+
+				        $prev_menu = "<span class='prev-menu'>Prev</span>";
+
+						$args = (object)array(
+									'before' => '',
+									'after' => '',
+									'link_before' => '',
+									'link_after' => '',
+								);
+						$depth = 0;
+
+						$args = apply_filters( 'nav_menu_item_args', $args, $item, $depth );
+
+						$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args, $depth ) );
+						$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
+
+						$id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args, $depth );
+						$id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
+
+						/** This filter is documented in wp-includes/post-template.php */
+						$title = apply_filters( 'the_title', $item->title, $item->ID );
+
+						$title = apply_filters( 'nav_menu_item_title', $title, $item, $args, $depth );
+
+						$atts = array();
+						$atts['title']  = ! empty( $item->attr_title ) ? $item->attr_title : '';
+						$atts['target'] = ! empty( $item->target )     ? $item->target     : '';
+						$atts['rel']    = ! empty( $item->xfn )        ? $item->xfn        : '';
+						$atts['href']   = ! empty( $item->url )        ? $item->url        : '';
+						$atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args, $depth );
+
+						$attributes = '';
+						foreach ( $atts as $attr => $value )
+						{
+							if ( ! empty( $value ) )
+							{
+								$value = ( 'href' === $attr ) ? esc_url( $value ) : esc_attr( $value );
+								$attributes .= ' ' . $attr . '="' . $value . '"';
+							}
+						}
+
+				        $nav_menu_sub_heading = carbon_get_post_meta($item->ID, 'nav_menu_sub_heading');
+				        $nav_menu_sub_heading_html = "";
+				        if($nav_menu_sub_heading)
+				        {
+				        	$nav_menu_sub_heading_html = "<span class='parent-menu-sub-heading'>".$nav_menu_sub_heading."</span>";
+				        }
+
+						$item_output = $args->before;
+						$item_output .= '<a'. $attributes .'>';
+						$item_output .= $args->link_before.$nav_menu_sub_heading_html.$title.$args->link_after;
+						$item_output .= '</a>';
+						$item_output .= $args->after;
+						?>
+						<li prev-menu-id="<?php echo $menu_id; ?>" <?php echo $id . $class_names; ?>><?php echo $prev_menu.$item_output; ?></li>
+						<?php
+					}
+					$prev_menu_item = false;
+					foreach ($menus_arr as $menu_item_parent => $menu_arr)
+					{
+						?>
+						<div class="tv-mobile-menu-wrapper menu-item-parent-<?php echo $menu_item_parent; ?>">
+							<ul>
+							<?php
+							if($menu_item_parent > 0)
+							{
+								get_menu_li($menu_item_parent, $all_menus_arr);
+							}
+							$prev_menu_item = $menu_arr;
+							foreach ($menu_arr as $key => $item)
+							{
+								$item = (object)$item;
+								$classes = empty( $item->classes ) ? array() : (array) $item->classes;
+								$classes[] = 'parent-menu-item-' . $item->ID.' parent-menu-item parent-menu-item-type-'.$item->type.' parent-menu-item-object-'.$item->object
+								;
+
+						        $next_menu = "";
+						        if(isset($menus_arr[$item->ID]))
+						        {
+						        	$next_menu = "<span class='next-menu'>Next</span>";
+						        }
+						        if(!empty($next_menu))
+						        {
+						        	$classes[] = 'has-childern';
+						        }
+
+								$args = (object)array(
+											'before' => '',
+											'after' => '',
+											'link_before' => '',
+											'link_after' => '',
+										);
+								$depth = 0;
+
+								$args = apply_filters( 'nav_menu_item_args', $args, $item, $depth );
+
+								$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args, $depth ) );
+								$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
+
+								$id = 'parent-menu-item-'. $item->ID;
+								$id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
+
+								/** This filter is documented in wp-includes/post-template.php */
+								$title = apply_filters( 'the_title', $item->title, $item->ID );
+
+								$title = apply_filters( 'nav_menu_item_title', $title, $item, $args, $depth );
+
+								$atts = array();
+								$atts['title']  = ! empty( $item->attr_title ) ? $item->attr_title : '';
+								$atts['target'] = ! empty( $item->target )     ? $item->target     : '';
+								$atts['rel']    = ! empty( $item->xfn )        ? $item->xfn        : '';
+								$atts['href']   = ! empty( $item->url )        ? $item->url        : '';
+								$atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args, $depth );
+
+								$attributes = '';
+								foreach ( $atts as $attr => $value )
+								{
+									if ( ! empty( $value ) )
+									{
+										$value = ( 'href' === $attr ) ? esc_url( $value ) : esc_attr( $value );
+										$attributes .= ' ' . $attr . '="' . $value . '"';
+									}
+								}
+
+						        $nav_menu_sub_heading = carbon_get_post_meta($item->ID, 'nav_menu_sub_heading');
+						        $nav_menu_sub_heading_html = "";
+						        if($nav_menu_sub_heading)
+						        {
+						        	$nav_menu_sub_heading_html = "<span class='menu-sub-heading'>".$nav_menu_sub_heading."</span>";
+						        }
+
+								$item_output = $args->before;
+								$item_output .= '<a'. $attributes .'>';
+								$item_output .= $args->link_before. $title.$nav_menu_sub_heading_html. $args->link_after;
+								$item_output .= '</a>';
+								$item_output .= $args->after;
+								?>
+								<li next-menu-id="<?php echo $item->ID; ?>" <?php echo $id . $class_names; ?>><?php echo $item_output.$next_menu; ?></li>
+								<?php
+							}
+							?>
+							</ul>
+						</div>
+						<?php
+					}
+				}
+				?>
 			</div>
-			<a href="#" class="meanmenu-book pos-r popup-booking-button-anchor">BOOK</a>			
+			<div class="mobile-header-wrapper">
+				<div class="tv-mean-container">
+					<a href="javascript:void(0);" class="tv-meanmenu-reveal" style="left: 0px; right: auto; text-align: center; text-indent: 0px; font-size: 18px;"><span></span><span></span><span></span></a>
+				</div>
+				<div class="mobile-logo"> 
+					<a href="<?php echo home_url(); ?>">
+						<img src="<?php echo get_template_directory_uri() ?>/images/ipad-logo.svg" alt="">
+					</a>
+				</div>
+				<a href="#" class="meanmenu-book pos-r popup-booking-button-anchor">BOOK</a>
+			</div>
 		</nav>
 	</header>
 	<?php
