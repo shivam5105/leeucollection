@@ -4034,6 +4034,12 @@ li.see-more-link {
     font-size: 0px;
     border: 1px solid red;
 }
+
+.tv-mobile-menu-wrapper ul li .next-menu:hover,
+.tv-mobile-menu-wrapper ul li .next-menu:active
+{
+    border: 1px solid blue;
+}
 .tv-mobile-menu-wrapper ul li .next-menu:after {
     content: "\f105";
     display: block;
