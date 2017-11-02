@@ -141,6 +141,19 @@ get_header(); ?>
 									</div>
 								</div>
 								<?php } ?>
+								<?php
+								$get_directions = carbon_get_post_meta($post->ID, "crb_get_directions");
+								if(!empty($get_directions))
+								{
+									?>
+									<div class="row detail-row">
+										<div class="col-12">
+											<a href="https://www.google.co.in/maps/place/<?php echo rawurlencode($get_directions); ?>" target="_blank" class="get_direction_link">Get directions</a>
+										</div>
+									</div>
+									<?php
+								}
+								?>
 								<div class="row detail-row hotel-info-row">
 									<div class="col-6">
 										<?php

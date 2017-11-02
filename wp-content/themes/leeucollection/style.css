@@ -4091,6 +4091,9 @@ li.see-more-link {
 {
     margin-bottom: 15px;
 }
+a.get_direction_link {
+    text-transform: uppercase;
+}
 .menu-buttons-wrapper .cstm-btn-wrapper .cstm-btn
 {
     padding-left: 8px;
