@@ -4032,7 +4032,6 @@ li.see-more-link {
     width: 50px;
     font-family: FontAwesome;
     font-size: 0px;
-    border: 1px solid red;
     cursor: pointer;
 }
 
@@ -4055,6 +4054,7 @@ li.see-more-link {
     width: 50px;
     font-family: FontAwesome;
     font-size: 0px;
+    cursor: pointer;
 }
 .tv-mobile-menu-wrapper ul li .prev-menu:after {
     content: "\f104";
