@@ -4033,13 +4033,9 @@ li.see-more-link {
     font-family: FontAwesome;
     font-size: 0px;
     border: 1px solid red;
+    cursor: pointer;
 }
 
-.tv-mobile-menu-wrapper ul li .next-menu:hover,
-.tv-mobile-menu-wrapper ul li .next-menu:active
-{
-    border: 1px solid blue;
-}
 .tv-mobile-menu-wrapper ul li .next-menu:after {
     content: "\f105";
     display: block;

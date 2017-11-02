@@ -712,7 +712,6 @@ var Blank ={
 	{
 		$(document).on("click", ".tv-mobile-menu-wrapper .next-menu", function(){
 			var next_menu_id = $(this).closest("li").attr("next-menu-id");
-			alert(" ffff "+next_menu_id);
 			$(".tv-mobile-menu-wrapper.menu-item-parent-"+next_menu_id).addClass('open');
 		});
 	},
@@ -727,7 +726,6 @@ var Blank ={
 	{
 		$(document).on("click", ".tv-meanmenu-reveal", function(e){
 			e.preventDefault();
-			
 			if($(this).hasClass("tv-meanclose"))
 			{
 				$(".mobile-menu-wrapper").hide();
