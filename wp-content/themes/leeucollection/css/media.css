@@ -1358,6 +1358,32 @@
 	{
 	    font-size: 9px;
 	}
+	.menu-buttons-wrapper
+	{
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.hotel-menu .menu-buttons-wrapper .col-4 {
+	    width: 100% !important;
+	    float: none !important;
+	}
+	.hotel-menu .menu-buttons-wrapper .cstm-btn-wrapper {
+	    float: none;
+	    margin-bottom: 15px;
+	}
+	.menu-buttons-wrapper .row {
+	    margin-bottom: 0;
+	}
+	.hotel-menu .menu-buttons-wrapper .cstm-btn-wrapper a.cstm-btn {
+		width: 100%;
+	}
+	.hotel-menu .menu-buttons-wrapper .cstm-btn-wrapper a.cstm-btn:after {
+	    display: block;
+	    position: absolute;
+	    top: 50%;
+	    right: 10px;
+	    transform: translateY(-50%);
+	}
 }
 @media only screen and (max-width: 687px){
 	.promo_grcode,

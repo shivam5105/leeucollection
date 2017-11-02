@@ -198,11 +198,124 @@ get_header(); ?>
 										}
 										?>
 									</div>
-								</div>																
+								</div>
 							</div>
-							<div class="hotel-menu">
+							<div class="hotel-menu scroll-anim" data-anim="fade-up">
 								<?php
-								$menu_types_terms = get_terms(array(
+						    	$slider_data = carbon_get_post_meta($post->ID, "crb_menu_slider_images", 'complex');
+						    	$menu_links = carbon_get_post_meta($post->ID, "crb_menu_links", 'complex');
+
+								if(!empty($slider_data) || !empty($menu_links))
+								{
+									?>
+									<div class="text-center">
+										<div class="menu-head">MENU</div>
+									</div>
+									<?php
+								}
+								$has_slider = false;
+								if(is_array($slider_data) && !empty($slider_data) && count($slider_data) > 1)
+								{
+									$has_slider = true;
+								}
+								$slider_wrapper_class = "owl-carousel single_slider owl-theme";
+								if(!$has_slider)
+								{
+									$slider_wrapper_class = "";
+								}
+								?>
+								<div class="listing-box listing-row">
+									<div class="single_slider_wrapper <?php if(!$has_slider){ echo "no_slider"; }?>">
+										<?php
+										if($has_slider == true)
+										{
+											?>
+											<div class="next"></div>
+											<?php
+										}?>
+										<div class="<?php echo $slider_wrapper_class; ?>">
+											<?php
+											if(is_array($slider_data) && !empty($slider_data))
+											{
+												foreach ($slider_data as $slide_key => $slide_data)
+												{
+													$banner_url = wp_get_attachment_image_src( $slide_data['crb_slide_image'], '821x478' );
+													$banner_url = $banner_url[0];
+													?>
+													<?php if(!empty($banner_url)){?>
+														<div class="slide-item">
+															<div class="banner-img scroll-anim" data-anim="fade-up">
+																<img src="<?php echo $banner_url; ?>" alt="" itemprop="image" />
+															</div>
+														</div>
+													<?php
+												   }
+												}
+											}
+											?>
+										</div>
+										<?php
+										if($has_slider == true)
+										{
+											?>
+											<div class="prev"></div>
+											<?php
+										}?>
+									</div>
+								</div>
+								<div class="menu-buttons-wrapper">
+									<?php
+									$col = 3;
+							    	if(!empty($menu_links))
+							    	{
+							    		$x = 0;
+							    		foreach ($menu_links as $key => $menu_link)
+							    		{
+							    			$link 		= $menu_link['crb_menu_link'];
+							    			$link_text 	= $menu_link['crb_menu_link_text'];
+
+							    			if(!empty($link) && !empty($link_text))
+							    			{
+							    				$classes = "";
+							    				if($x == 0)
+							    				{
+							    					$classes = "pull-left";
+							    					?>
+							    					<div class="row">
+							    					<?php
+							    				}
+							    				if($x == ($col - 1))
+							    				{
+							    					$classes = "pull-right";
+							    				}
+							    				?>
+							    				<div class="col-<?php echo (12/$col); ?>">
+													<div class="cstm-btn-wrapper text-center <?php echo $classes; ?>">
+														<a href="<?php echo $link; ?>" class="cstm-btn arrow-btn"><?php echo $link_text; ?></a>
+													</div>
+												</div>
+							    				<?php
+							    				$x++;
+							    				if($x == $col)
+							    				{
+							    					$x = 0;
+							    					?>
+							    					</div>
+							    					<?php
+							    				}
+							    			}
+							    		}
+							    		if($x > 0)
+							    		{
+							    			?>
+							    			</div>
+							    			<?php
+							    		}
+							    	}
+							    	?>
+							    </div>
+							    <?php
+								/*$menu_types_terms = get_terms(array(
 									'taxonomy' => 'menu-types',
 									'orderby' => 'name',
 									'order' => 'DESC',
@@ -219,7 +332,6 @@ get_header(); ?>
 										'order' => 'ASC',
 										'post_parent' => $post_id,
 										'post_status' => 'publish',
-										/*'post_type' => 'hotel',*/
 								        'tax_query' => array(
 								            array(
 								                'taxonomy' => 'menu-types',
@@ -301,7 +413,7 @@ get_header(); ?>
 								        wp_reset_postdata();
 								    }
 								    $prev_menu_type_id = $menu_type->term_id;
-								}
+								}*/
 								?>
 							</div>
 						</div>

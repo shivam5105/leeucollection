@@ -4083,3 +4083,17 @@ li.see-more-link {
 .room-listing-contain .desc-heading {
     text-transform: none;
 }
+.menu-buttons-wrapper
+{
+    margin: 0 -15px;
+}
+.menu-buttons-wrapper .row
+{
+    margin-bottom: 15px;
+}
+.menu-buttons-wrapper .cstm-btn-wrapper .cstm-btn
+{
+    padding-left: 8px;
+    padding-right: 8px;
+    white-space: nowrap;
+}

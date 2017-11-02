@@ -1076,3 +1076,17 @@ Container::make('post_meta', 'Content Section')
             
         )),
     ));
+
+//Menu Images Slider
+Container::make('post_meta', 'Restaurant Menu')
+    ->show_on_post_type($leeu_post_types)
+    ->show_on_template(array('template-restaurant.php'))
+    ->add_fields(array(
+        Field::make('complex', 'crb_menu_slider_images', 'Menu Slider Images')->add_fields(array(
+            Field::make('image', 'crb_slide_image', 'Menu Slide Image')->help_text('(Image Dimensions (WxH): 1240 x 600)'),
+        )),
+        Field::make('complex', 'crb_menu_links', 'Menu Links')->add_fields(array(
+            Field::make('text', 'crb_menu_link_text', 'Menu Link Text')->set_width('30'),
+            Field::make('text', 'crb_menu_link', 'Menu Link')->set_width('70'),
+        )),
+    ));
