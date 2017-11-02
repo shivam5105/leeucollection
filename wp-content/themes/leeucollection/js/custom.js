@@ -727,7 +727,7 @@ var Blank ={
 	{
 		$(document).on("click", ".tv-meanmenu-reveal", function(e){
 			e.preventDefault();
-			alert("ddd "+$(this).hasClass("tv-meanclose"));
+			
 			if($(this).hasClass("tv-meanclose"))
 			{
 				$(".mobile-menu-wrapper").hide();
