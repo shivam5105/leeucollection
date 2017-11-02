@@ -1077,6 +1077,14 @@ Container::make('post_meta', 'Content Section')
         )),
     ));
 
+//Get Directions
+Container::make('post_meta', 'Get Directions')
+    ->show_on_post_type($leeu_post_types)
+    ->show_on_template(array('template-restaurant.php'))
+    ->add_fields(array(
+        Field::make('text', 'crb_get_directions', ''),
+    ));
+
 //Menu Images Slider
 Container::make('post_meta', 'Restaurant Menu')
     ->show_on_post_type($leeu_post_types)
