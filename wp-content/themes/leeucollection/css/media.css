@@ -911,6 +911,22 @@
 	{
 	    width: 50%;
 	}
+	.menu-buttons-wrapper
+	{
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.hotel-menu .menu-buttons-wrapper .col-4 {
+	    width: 100% !important;
+	    float: none !important;
+	}
+	.hotel-menu .menu-buttons-wrapper .cstm-btn-wrapper {
+	    float: none;
+	    margin-bottom: 15px;
+	}
+	.menu-buttons-wrapper .row {
+	    margin-bottom: 0;
+	}
 }
 
 @media only screen and (max-width: 767px){
@@ -1357,22 +1373,6 @@
 	.work-masonry-grid span.session_rate
 	{
 	    font-size: 9px;
-	}
-	.menu-buttons-wrapper
-	{
-		margin-left: 0;
-		margin-right: 0;
-	}
-	.hotel-menu .menu-buttons-wrapper .col-4 {
-	    width: 100% !important;
-	    float: none !important;
-	}
-	.hotel-menu .menu-buttons-wrapper .cstm-btn-wrapper {
-	    float: none;
-	    margin-bottom: 15px;
-	}
-	.menu-buttons-wrapper .row {
-	    margin-bottom: 0;
 	}
 }
 @media only screen and (max-width: 687px){
