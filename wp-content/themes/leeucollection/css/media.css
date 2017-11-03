@@ -1374,16 +1374,6 @@
 	.menu-buttons-wrapper .row {
 	    margin-bottom: 0;
 	}
-	.hotel-menu .menu-buttons-wrapper .cstm-btn-wrapper a.cstm-btn {
-		width: 100%;
-	}
-	.hotel-menu .menu-buttons-wrapper .cstm-btn-wrapper a.cstm-btn:after {
-	    display: block;
-	    position: absolute;
-	    top: 50%;
-	    right: 10px;
-	    transform: translateY(-50%);
-	}
 }
 @media only screen and (max-width: 687px){
 	.promo_grcode,

@@ -4102,4 +4102,26 @@ a.get_direction_link {
     padding-left: 8px;
     padding-right: 8px;
     white-space: nowrap;
+    width: 100%;
+    text-align: left;
+}
+.menu-buttons-wrapper .cstm-btn-wrapper
+{
+    width: 100%;
+}
+.hotel-menu .menu-buttons-wrapper .cstm-btn-wrapper a.cstm-btn:after
+{
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+.hotel-menu .menu-buttons-wrapper .cstm-btn-wrapper a.cstm-btn:hover:after
+{
+    transform: translateY(-50%) translateX(5px);
+}
+.hotel-menu-slider
+{
+    margin-bottom: 40px;
 }
