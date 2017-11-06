@@ -263,7 +263,7 @@ get_header(); ?>
 																<div class="desc-heading no-text-transform" itemprop="name"><?php echo $slide_title; ?></div>
 																<?php
 															}
-															else
+															else if(!empty($slide_title) || !empty($slide_desc))
 															{
 																?>
 																<div class="row detail-row">
