@@ -935,6 +935,9 @@
 	.hotel-template-template-facilities .summary_details {
 	    text-align: left;
 	}
+	.spa-wellness-row .desc-content {
+	    margin-top: 10px;
+	}
 }
 
 @media only screen and (max-width: 767px){
