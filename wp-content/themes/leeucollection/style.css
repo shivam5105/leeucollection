@@ -2596,6 +2596,7 @@ margin-top:16px;
     border-bottom:2px solid #ac9e94;
     width:100%;
     margin-top:25px;
+    border-radius: 0;
 }
 .contact-slide-form select
 {
@@ -4124,4 +4125,9 @@ a.get_direction_link {
 .hotel-menu-slider
 {
     margin-bottom: 40px;
+}
+.meetings-form .submit-btn.submit-form-btn
+{
+    border-right: none;
+    border-bottom: none;
 }

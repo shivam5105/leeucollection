@@ -932,6 +932,9 @@
 	    margin: 0;
 	    text-align: left;
 	}
+	.hotel-template-template-facilities .summary_details {
+	    text-align: left;
+	}
 }
 
 @media only screen and (max-width: 767px){
