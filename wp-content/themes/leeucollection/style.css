@@ -4131,3 +4131,6 @@ a.get_direction_link {
     border-right: none;
     border-bottom: none;
 }
+.meetings-form form {
+    text-align: left;
+}
