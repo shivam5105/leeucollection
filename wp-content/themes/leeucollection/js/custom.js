@@ -764,7 +764,6 @@ var Blank ={
 		Blank.close_google_map_popup();
 		Blank.hide_press_detail_slide();
 		Blank.show_press_detail_slide();
-		Blank.media_col_equal_height();
 		Blank.contact_page_equal_height();
 		Blank.fix_mobile_menu_height();
 		Blank.mobile_next_menu();
@@ -831,6 +830,7 @@ var Blank ={
 		Blank.booktable();
 		$('body').addClass('body-loaded');
 		Blank.fix_mobile_menu_height();
+		Blank.media_col_equal_height();
 	},
 }
 $(document).ready(function(){
