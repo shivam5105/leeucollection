@@ -121,6 +121,8 @@ get_header(); ?>
 												<div class="inner-detail">
 													<div class="row">
 														<div class="col-11 col-centered">
+															<div class="hotel-restaurant-name mobile-only"><?php echo $child_post->post_title; ?></div>
+
 															<div class="inner-detail-content">
 																<div class="content-part" itemprop="description">
 																	<?php echo nl2br(@$child_post_meta['_crb_short_description'][0]); ?>
@@ -134,7 +136,7 @@ get_header(); ?>
 												</div>
 											</div>
 										</div>
-										<div class="img-desc" itemprop="name"><?php echo $child_post->post_title; ?></div>
+										<div class="img-desc desktop-only" itemprop="name"><?php echo $child_post->post_title; ?></div>
 									</div>
 									<?php
 									if($logic_loop > 1)
