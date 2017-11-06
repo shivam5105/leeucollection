@@ -938,6 +938,10 @@
 	.spa-wellness-row .desc-content {
 	    margin-top: 10px;
 	}
+	.slide-links-list
+	{
+		display: block;
+	}
 }
 
 @media only screen and (max-width: 767px){
@@ -1346,7 +1350,6 @@
 	}
 	body.home .sliding-detail .linking-wrap,
 	.sliding-detail .linking-wrap,
-	.slide-links-list,
 	.mobile-page-heading,
 	.section-title-mobile,
 	.leeu-restaurants-template-template-restaurantlisting .sliding-detail .content-part,
