@@ -535,7 +535,7 @@
 		position: relative;
 	}
 
-	.linking-wrap, .content-part {
+	.linking-wrap{
 	    margin-top: 30px;
 	}
 	.room-listing-page .banner-img {
@@ -658,6 +658,7 @@
 	}
 	.hotel-info-desc{
 		padding-right: 0;
+		text-align: left;
 	}
 	.hotel-closed-reason{
 		font-size: 19px;
@@ -926,6 +927,10 @@
 	}
 	.menu-buttons-wrapper .row {
 	    margin-bottom: 0;
+	}
+	.spl-features {
+	    margin: 0;
+	    text-align: left;
 	}
 }
 
