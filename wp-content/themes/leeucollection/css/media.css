@@ -942,6 +942,9 @@
 	{
 		display: block;
 	}
+	.hotel-template-template-gym .desc-content {
+	    text-align: left;
+	}
 }
 
 @media only screen and (max-width: 767px){
