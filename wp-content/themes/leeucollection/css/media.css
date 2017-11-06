@@ -945,6 +945,12 @@
 	.hotel-template-template-gym .desc-content {
 	    text-align: left;
 	}
+	.inner-detail-wrapper .content-part {
+	    margin-top: 15px;
+	}
+	.two-img-col .content-part {
+	    font-size: inherit;
+	}
 }
 
 @media only screen and (max-width: 767px){

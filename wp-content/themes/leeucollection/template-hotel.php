@@ -268,15 +268,34 @@ get_header(); ?>
 																?>
 																<div class="row detail-row">
 																	<div class="col-3">
-																		<div class="desc-heading" itemprop="name"><?php echo $slide_title; ?></div>
+																		<?php
+																		if(!empty($slide_title))
+																		{
+																			?>
+																			<div class="desc-heading" itemprop="name"><?php echo $slide_title; ?></div>
+																			<?php
+																		}
+																		?>
 																	</div>
 																	<div class="col-9">
-																		<div class="desc-content" itemprop="description">
-																			<?php echo nl2br($slide_desc); ?>
-																		</div>
-																		<ul class="list-inline linking-wrap slide-links-list">
-																			<li class="see-more-link"><a href="<?php echo $slide_link; ?>">See More</a></li>
-																		</ul>
+																		<?php
+																		if(!empty($slide_desc))
+																		{
+																			?>
+																			<div class="desc-content" itemprop="description">
+																				<?php echo nl2br($slide_desc); ?>
+																			</div>
+																			<?php
+																		}
+																		if(!empty($slide_link))
+																		{
+																			?>
+																			<ul class="list-inline linking-wrap slide-links-list">
+																				<li class="see-more-link"><a href="<?php echo $slide_link; ?>">See More</a></li>
+																			</ul>
+																			<?php
+																		}
+																		?>
 																	</div>
 																</div>
 																<?php
