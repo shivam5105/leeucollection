@@ -88,6 +88,7 @@ var Blank ={
 			    smartSpeed:1000,
 			    autoplay:autoplay_wrap,
 			    margin:1,
+			    adaptiveHeight: true,
 			    responsive:{
 			        0:{
 			            items:1
@@ -134,6 +135,7 @@ var Blank ={
 			    autoplay:autoplay_wrap,
 			    smartSpeed:1000,
 			    margin:1,
+			    adaptiveHeight: true,
 			    responsive:{
 			        0:{
 			            items:1
@@ -190,6 +192,7 @@ var Blank ={
 			    dotsContainer: dots_wrap,
 			    smartSpeed:1000,
 			    autoplay:autoplay_wrap,
+			    adaptiveHeight: true,
 			    responsive:{
 			        0:{
 			            items:1
@@ -247,6 +250,7 @@ var Blank ={
 				dotsContainer: dots_wrap,
 				autoplay:autoplay_wrap,
 			    smartSpeed:1000,
+			    adaptiveHeight: true,
 			    margin:1,
 			    responsive:{
 			        0:{
