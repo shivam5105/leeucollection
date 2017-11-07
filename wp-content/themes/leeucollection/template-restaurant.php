@@ -167,7 +167,7 @@ get_header(); ?>
 										if(!empty($hours_reservations))
 										{
 											?>
-											<table border="0" class="align-center-mobile">
+											<table border="0" class="restaurant-opening-hrs-table">
 												<?php
 												foreach ($hours_reservations as $hr_key => $hours_reservation)
 												{

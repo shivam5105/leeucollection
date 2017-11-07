@@ -818,10 +818,6 @@
 		letter-spacing: 0.1em;
 		font-family: 'GillSans';
 	}
-	.align-center-mobile
-	{
-		margin: 0 auto;
-	}
 	.policy-heading
 	{
 		margin-top: 20px;
@@ -966,6 +962,10 @@
 	.spl-features-footer
 	{
 		text-align: left;
+	}
+	.restaurant-opening-hrs-table
+	{
+		margin: 0;
 	}
 }
 
@@ -1412,6 +1412,10 @@
 	.work-masonry-grid span.session_rate
 	{
 	    font-size: 9px;
+	}
+	.restaurant-opening-hrs-table
+	{
+		margin: 0 auto;
 	}
 }
 @media only screen and (max-width: 687px){
