@@ -753,7 +753,7 @@
 	}
 	.phone-contact
 	{
-	    margin-top: 10px;
+	    margin-top: 15px;
 	}
 	.fax-contact {
 	    width: 190px;
@@ -970,6 +970,9 @@
 	.restaurant-opening-hrs-table
 	{
 		margin: 0;
+	}
+	.hotel-template-template-hotel-restaurantlisting .desktop-only {
+	    display: none;
 	}
 }
 
