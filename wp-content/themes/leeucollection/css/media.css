@@ -747,9 +747,13 @@
 	    display: flex;
 	    width: 170px;
 	    margin: 0 auto;
-	    margin-top: 10px;
+	    margin-top: 0;
 	    align-items: center;
 	    white-space: nowrap;
+	}
+	.phone-contact
+	{
+	    margin-top: 10px;
 	}
 	.fax-contact {
 	    width: 190px;
