@@ -958,6 +958,15 @@
 	.desc-heading {
 	    font-weight: 500;
 	}
+	.room-feature-wrapper
+	{
+		margin-top: 15px;
+	}
+	.spl-features-heading,
+	.spl-features-footer
+	{
+		text-align: left;
+	}
 }
 
 @media only screen and (max-width: 767px){

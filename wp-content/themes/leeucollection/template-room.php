@@ -146,7 +146,7 @@ get_header(); ?>
 												}?>
 											</div>
 										</div>
-										<div class="col-9">
+										<div class="col-9 room-feature-wrapper">
 											<div class="leeu-text"> ROOM FACILITIES</div>
 											<?php
 											$special_feature_heading = carbon_get_post_meta($post->ID, "crb_special_feature_heading");
