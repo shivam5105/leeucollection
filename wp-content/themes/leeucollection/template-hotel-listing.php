@@ -9,7 +9,7 @@ get_header();
     $post_meta 	= ( $post ) ? get_post_meta( $post->ID ) : null;
 
 	$has_slider = false;
- style="<?php if(!empty($header_button_text_color)){ echo "color: ".$header_button_text_color.";"." border-color: ".$header_button_text_color.";" ; }?>"	$slider_data = carbon_get_post_meta($post->ID, "crb_header_images", 'complex');
+	$slider_data = carbon_get_post_meta($post->ID, "crb_header_images", 'complex');
 	if(is_array($slider_data) && !empty($slider_data) && count($slider_data) > 1)
 	{
 		$has_slider = true;
