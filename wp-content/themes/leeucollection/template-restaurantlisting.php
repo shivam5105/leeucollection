@@ -43,6 +43,10 @@ get_header(); ?>
 							$header_heading 		= $slide_data['crb_header_heading'];
 							$header_text_position 	= $slide_data['crb_header_text_position'];
 
+							$header_button_text_color 	= @$slide_data['crb_header_button_text_color'];
+							$header_description_color 	= @$slide_data['crb_header_description_color'];
+							$header_heading_color 		= @$slide_data['crb_header_heading_color'];
+
 							$banner_url = wp_get_attachment_image_src( $slide_data['crb_header_image'], '1240x600' );
 							$banner_url = $banner_url[0];
 							?>
@@ -50,10 +54,10 @@ get_header(); ?>
 								<div class="banner-img for-mob mht_homebanner" style="background-image:url('<?php echo $banner_url; ?>'); background-position: center center;"> </div>
 								<img class="for-mob-hide" src="<?php echo $banner_url; ?>" alt="">
 								<div class="slider-text text-center ucase <?php echo $header_text_position; ?>">
-									<div class="slider-txt-head">
+									<div class="slider-txt-head" style="<?php if(!empty($header_heading_color)){ echo "color: ".$header_heading_color.";"; }?>">
 										<?php echo nl2br($header_heading); ?>
 									</div>
-									<div class="slider-txt-con" >
+									<div class="slider-txt-con" style="<?php if(!empty($header_description_color)){ echo "color: ".$header_description_color.";"; }?>">
 										<?php echo nl2br($header_description); ?>
 									</div>
 									<?php
@@ -62,7 +66,7 @@ get_header(); ?>
 										?>
 										<div class="slider-txt-link">
 											<div class="cstm-btn-wrapper">
-												<a href="<?php echo $header_button_link; ?>" class="cstm-btn arrow-btn text-center"><?php echo $header_button_text; ?></a>
+												<a href="<?php echo $header_button_link; ?>" class="cstm-btn arrow-btn text-center" style="<?php if(!empty($header_button_text_color)){ echo "color: ".$header_button_text_color.";"." border-color: ".$header_button_text_color.";" ; }?>"><?php echo $header_button_text; ?></a>
 											</div>
 										</div>
 										<?php
