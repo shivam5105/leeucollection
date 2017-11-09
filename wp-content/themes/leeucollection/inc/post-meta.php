@@ -338,10 +338,13 @@ Container::make('post_meta', 'Header Slider')
     ->add_fields(array(
         Field::make('complex', 'crb_header_images', '')->add_fields(array(
             Field::make('image', 'crb_header_image', 'Header Image')->help_text('(Image Dimensions (WxH): 1240 x 600)'),
-            Field::make('textarea', 'crb_header_heading', 'Heading')->set_width('50'),
-            Field::make('textarea', 'crb_header_description', 'Description')->set_width('50'),
-            Field::make('text', 'crb_header_button_text', 'Button Text')->set_width('50'),
-            Field::make('text', 'crb_header_button_link', 'Button Link')->set_width('50'),
+            Field::make('textarea', 'crb_header_heading', 'Heading')->set_width('50')->set_rows(3),
+            Field::make('color', 'crb_header_heading_color', 'Heading Color')->set_width('50'),
+            Field::make('textarea', 'crb_header_description', 'Description')->set_width('50')->set_rows(3),
+            Field::make('color', 'crb_header_description_color', 'Description Color')->set_width('50'),
+            Field::make('text', 'crb_header_button_text', 'Button Text')->set_width('30'),
+            Field::make('text', 'crb_header_button_link', 'Button Link')->set_width('40'),
+            Field::make('color', 'crb_header_button_text_color', 'Button Text Color')->set_width('30'),
             Field::make('radio', 'crb_header_text_position', 'Header Text Position')
                 ->add_options(array(
                     'top-position'      => 'Top Position',
