@@ -45,7 +45,7 @@
 							}
 							?>
 						</ul>
-						<div id="google_translate_element"></div>
+						<!-- <div id="google_translate_element"></div> -->
 					</div>
 				   <div class="col-6">
 				      <div class="footer-head">SIGN UP TO LEARN ABOUT SPECIAL EVENTS AND OFFERS</div>
@@ -347,7 +347,7 @@
 	<script type="text/javascript" data-no-instant>
 		function googleTranslateElementInit()
 		{
-			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+			/*new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');*/
 			
 			/*new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,af,en,nl,pt,sv', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');*/
 

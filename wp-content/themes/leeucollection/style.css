@@ -1117,6 +1117,9 @@ li.current.active .side-sub-menu li.current.active:not(.menu-item-has-no-childre
 .footer-head{
     margin-bottom: 28px;
 }
+.social-links {
+    margin-bottom: 30px;
+}
 .social-links li:first-child{
     margin-left: 0;
 }
