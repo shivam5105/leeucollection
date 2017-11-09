@@ -126,6 +126,7 @@ hr {
 
 input, select {
     vertical-align:middle;
+    border-radius: 0;
 }
 /***custom grid***/
 body{
