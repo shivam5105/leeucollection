@@ -974,6 +974,9 @@
 	.hotel-template-template-hotel-restaurantlisting .desktop-only {
 	    display: none;
 	}
+	.special-features {
+	    margin-bottom: 0;
+	}
 }
 
 @media only screen and (max-width: 767px){
