@@ -1991,7 +1991,7 @@ body.short-header .slider-text.top-position {
     height: 10px;
     margin-left: 15px;
     right: 11px;
-    transform: translateY(-50%) translateX(-3px);
+    transform: translateY(-50%) translateX(-8px);
     transition: all 0.2s ease 0s;
     width: 29px; 
     top:50%;   
