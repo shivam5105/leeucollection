@@ -760,7 +760,7 @@
 	}
 	.phone-contact .leeu-text,
 	.fax-contact .leeu-text {
-	    margin: 5px 5px 0 0;
+	    margin: 0 5px 0 0;
 	}
 	.contact-detail [class*="col-"] {
 	    margin-bottom: 30px;
@@ -984,6 +984,9 @@
 	.send_button::after,
 	.send_msg::after{
 	    transform: translateY(-50%) translateX(0px);
+	}
+	.contact-spacer .content-part {
+	    margin-top: 0;
 	}
 }
 
