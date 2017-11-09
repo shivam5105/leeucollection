@@ -977,6 +977,10 @@
 	.special-features {
 	    margin-bottom: 0;
 	}
+	.spl-features .col-6
+	{
+		padding: 0;
+	}
 }
 
 @media only screen and (max-width: 767px){
