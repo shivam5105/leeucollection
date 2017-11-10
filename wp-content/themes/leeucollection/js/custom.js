@@ -831,6 +831,8 @@ var Blank ={
 		$('body').addClass('body-loaded');
 		Blank.fix_mobile_menu_height();
 		Blank.media_col_equal_height();
+
+		$(".active-onload").addClass("active");
 	},
 }
 $(document).ready(function(){

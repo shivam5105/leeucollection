@@ -17,7 +17,7 @@ get_header();
 	$slider_wrapper_class = "owl-carousel single_slider_home owl-theme";
 	if(!$has_slider)
 	{
-		$slider_wrapper_class = "active";
+		$slider_wrapper_class = "active-onload";
 	}
 	?>
 	<section id="site-main">
