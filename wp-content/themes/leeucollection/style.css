@@ -4015,7 +4015,7 @@ li.see-more-link {
     background-color: #fff;
 }
 .tv-mobile-menu-wrapper ul li.has-parent,
-.tv-mobile-menu-wrapper ul li.has-childern
+.tv-mobile-menu-wrapper.menu-item-parent-0 ul li 
 {
     background-color: #f3f0ed;
 }
