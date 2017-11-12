@@ -326,7 +326,7 @@ a{
     text-align: center;
     margin-top: 0px;
 }
-.home .logo-wrapper, 
+.home .logo-wrapper, .logo-wrapper, 
 .page-template-template-hotel-listing .logo-wrapper , 
 .leeu-restaurants-template-template-restaurantlisting .logo-wrapper,
 .leeu-discover-template-template-discover .logo-wrapper,
@@ -337,7 +337,7 @@ a{
 #main-navigation ul{
     padding-top: 11px;
 }
-.home #main-navigation ul , 
+.home #main-navigation ul , #main-navigation ul,
 .page-template-template-hotel-listing #main-navigation ul, 
 .leeu-restaurants-template-template-restaurantlisting #main-navigation ul,
 .leeu-discover-template-template-discover  #main-navigation ul,
@@ -443,6 +443,7 @@ a{
 }
 #main-navigation{
     min-height:55px;
+    min-height: 101px;
 }
 .home #main-navigation , 
 .page-template-template-hotel-listing #main-navigation,
@@ -982,7 +983,7 @@ li.current.active .side-sub-menu li.current.active:not(.menu-item-has-no-childre
 /**side fix nav**/
 .side-nav-contain.fix-pos{
     position: fixed;
-    top:60px;
+    top:160px;
     width: 180px;
 }
 .home .side-nav-contain.fix-pos, 
@@ -1389,13 +1390,52 @@ body.hotel-template-template-menudetail .side-sub-menu.child-2 li.current.active
     -ms-transition:all 0.6s ease-in 0.6s;
     transition:all 0.6s ease-in 0.6s;
 }    
-.active .slider-txt-link , .active .slider-txt-con , .active .slider-txt-head{
+.active .slider-txt-link , .active .slider-txt-con , .active .slider-txt-head {
     -webkit-transform:translateY(0px); 
     -moz-transform:translateY(0px);
     -ms-transform:translateY(0px);
     transform:translateY(0px);
     opacity:1;
 }
+
+.banner-text.pos-abs-top {
+    transform: translateY(20px);
+    -webkit-transform: translateY(20px);
+    transition: all 0.6s ease-in 0.6s;
+    -webkit-transition: all 0.6s ease-in 0.6s;
+    opacity: 0;
+}
+.banner-text.active {
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    opacity: 1;
+}
+
+@keyframes textmove {
+    from {-webkit-transform:translateY(20px); 
+    -moz-transform:translateY(20px);
+    -ms-transform:translateY(20px);
+    transform:translateY(20px);
+    opacity: 0;}
+}
+    to {-webkit-transform:translateY(0px); 
+    -moz-transform:translateY(0px);
+    -ms-transform:translateY(0px);
+    transform:translateY(0px);
+    opacity: 1;
+    }
+}
+@-webkit-keyframes textmove {
+    from {-webkit-transform:translateY(20px); 
+    -moz-transform:translateY(20px);
+    -ms-transform:translateY(20px);
+    transform:translateY(20px);}
+    to {-webkit-transform:translateY(0px); 
+    -moz-transform:translateY(0px);
+    -ms-transform:translateY(0px);
+    transform:translateY(0px);}
+}
+
 .active .slider-txt-link {
     -webkit-transition-delay:800ms; 
     -moz-transition-delay:800ms; 
@@ -3670,6 +3710,9 @@ img[src*=".svg"].bottom-logo
     font-family: 'GillSans';
     font-weight: 300;
 }
+.press-cols .press-title {
+    min-width: 300px;
+}
 .press-cols .press-release-date
 {
     position: absolute;
@@ -3678,7 +3721,7 @@ img[src*=".svg"].bottom-logo
     width: 100%;
     letter-spacing: 1px;
     color: #222944;
-    font-size: 14px;
+    font-size: 11px;
     text-align: center;
     text-transform: uppercase;
     font-family: 'GillSans';

@@ -990,7 +990,39 @@
 	}
 }
 
+@media only screen and (max-width: 768px){
+  .room-listing-page .img-desc, .hotel-template-template-roomlisting .inner-detail-wrapper .content-part, .leeu-heading-wrap {
+  	display: none;
+  }
+  .section-title-mobile, .mobile-page-heading {
+  	display: block;
+  }
+  .room-listing-page .banner-img {
+  	padding-top: 30px;
+  }
+  .banner-text {
+  	display: none;
+  }
+  .detail-row.hotel-info-row .col-6 {
+  	width: 50%;
+  	float: left;
+  }
+  .detail-row.hotel-info-row .col-6:last-child {
+  	padding-left: 50px;
+  }
+
+}
 @media only screen and (max-width: 767px){
+	.detail-row.hotel-info-row .col-6 {
+  	width: 100%;
+  	float: none;
+  }
+  .detail-row.hotel-info-row .col-6:last-child {
+  	padding-left: 0px;
+  }
+	.press-cols .press-title {
+       min-width: auto;
+	}
 	.container{
 		padding: 0 20px;
 	}

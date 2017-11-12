@@ -27,7 +27,7 @@ var Blank ={
 			$(window).scroll(function(){
 				var footer_overlay_fix = $(_footer).offset().top - $(side_nav_selector).height() - $(_header).height() - 30;
 
-				var _wpos_check = _wpos + $(_header).height();	
+				var _wpos_check = _wpos + $(_header).height()+100;	
 					
 				if(_wpos_check > side_nav){
 					$('.side-nav-contain').addClass('fix-pos');
@@ -833,6 +833,8 @@ var Blank ={
 		Blank.media_col_equal_height();
 
 		$(".active-onload").addClass("active");
+		$(".banner-text").addClass("active");
+
 	},
 }
 $(document).ready(function(){
