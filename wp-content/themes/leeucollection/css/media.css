@@ -1013,6 +1013,11 @@
 
 }
 @media only screen and (max-width: 767px){
+	.mobile-check-availability-anchor {
+		font-size: 9px;
+		padding-left: 61px!important;
+		padding-right: 31px!important;
+	}
 	.detail-row.hotel-info-row .col-6 {
   	width: 100%;
   	float: none;
@@ -1037,8 +1042,16 @@
 		font-size: 13px;
 	}
 	.sliding-detail .content-part{
-		font-size: 15px;
+		font-size: 13px;
 		margin-top: 16px;
+		font-family: 'GillSans';
+		font-weight: 300;
+	}
+	.linking-wrap li a {
+		font-size: 9px;
+	}
+	.linking-wrap li.see-more-link a, .linking-wrap li.book-link a {
+		min-width: 135px;
 	}
 	.home-wine-wrap .desc-heading{
 		margin-top: 16px;
@@ -1081,7 +1094,7 @@
 	    padding-top: 28px;
 	}
 	h2, h1.ucase {
-		font-size: 21px;
+		font-size: 23px;
 	}
 	.page-template-template-hotel-listing h2, .page-template-template-hotel-listing h1.ucase
 	{
